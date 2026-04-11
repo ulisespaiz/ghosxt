@@ -1,0 +1,2 @@
+# ghosxt
+Ghosxt's webiste
