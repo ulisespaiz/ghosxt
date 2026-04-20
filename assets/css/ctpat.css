@@ -1,0 +1,1170 @@
+/* ═══════════════════════════════════════════════════════
+   CTPAT.CSS — Ghosxt C-TPAT Compliance Page
+   Follows the --ghosxt- design system from main.css
+   ═══════════════════════════════════════════════════════ */
+
+/* ── HERO ─────────────────────────────────────────────── */
+.ctpat-hero-section {
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--ghosxt-white);
+  border-bottom: 1px solid var(--ghosxt-black);
+}
+
+.ctpat-hero-container {
+  padding: 5rem 0;
+  max-width: 1200px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.ctpat-hero-left {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+/* Badge */
+.ctpat-hero-badge {
+  background: var(--ghosxt-white);
+  display: flex;
+  border: 1px solid var(--ghosxt-black);
+  width: fit-content;
+}
+
+.ctpat-hero-badge .badge-container {
+  display: flex;
+  gap: 5px;
+  padding: 0.375rem;
+  align-items: center;
+}
+
+.ctpat-hero-badge .badge-lines:first-child {
+  border-right: 1px solid var(--ghosxt-black);
+}
+.ctpat-hero-badge .badge-lines:last-child {
+  border-left: 1px solid var(--ghosxt-black);
+}
+
+.ctpat-hero-badge .badge-line {
+  margin-top: 3px;
+  height: 1px;
+  width: 10px;
+  border-bottom: 1px solid var(--ghosxt-black);
+}
+
+.ctpat-hero-badge-text {
+  color: var(--ghosxt-black);
+  font-size: 1rem;
+  font-family: var(--font-family-2);
+}
+
+.ctpat-hero-badge i {
+  display: flex;
+  align-items: center;
+  color: var(--ghosxt-red-0);
+}
+
+.ctpat-hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.ctpat-hero-title .title-red {
+  color: var(--ghosxt-red-0);
+}
+.ctpat-hero-title .title-black {
+  color: var(--ghosxt-black);
+}
+
+.ctpat-hero-subtitle {
+  color: var(--ghosxt-black);
+  font-family: var(--font-family-2);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  opacity: 0.75;
+}
+
+/* Entity type tags */
+.ctpat-hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.ctpat-hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--ghosxt-white);
+  color: var(--ghosxt-black);
+  border: 1px solid var(--ghosxt-black);
+  padding: 0.3rem 0.875rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-family: var(--font-family-2);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.ctpat-hero-tag i {
+  display: flex;
+  font-size: 0.72rem;
+  color: var(--ghosxt-red-0);
+}
+
+.ctpat-hero-cta-row {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.ctpat-hero-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--ghosxt-red-0);
+  color: var(--ghosxt-white);
+  font-family: var(--font-family-2);
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  border: 1px solid var(--ghosxt-black);
+  box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.ctpat-hero-btn-primary:hover {
+  box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+  color: var(--ghosxt-white);
+}
+
+.ctpat-hero-btn-primary i {
+  display: flex;
+  font-size: 1rem;
+}
+
+.ctpat-hero-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--ghosxt-black);
+  font-family: var(--font-family-2);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid var(--ghosxt-black);
+  padding-bottom: 2px;
+  transition: opacity 0.2s ease;
+  white-space: nowrap;
+}
+
+.ctpat-hero-btn-secondary:hover {
+  opacity: 0.6;
+  color: var(--ghosxt-black);
+}
+.ctpat-hero-btn-secondary i {
+  display: flex;
+}
+
+/* ── HERO RIGHT — COMPLIANCE PANEL ──────────────────── */
+.ctpat-hero-right {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.ctpat-compliance-panel {
+  width: 100%;
+  max-width: 460px;
+  border: 1px solid var(--ghosxt-black);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 4px 4px 0 0 rgba(0, 0, 0, 0.08);
+}
+
+.ctpat-panel-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.65rem 1rem;
+  background: var(--ghosxt-white);
+  border-bottom: 1px solid var(--ghosxt-black);
+}
+
+.ctpat-panel-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.ctpat-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--ghosxt-red-0);
+  opacity: 0.5;
+}
+
+.ctpat-dot:nth-child(2) {
+  background: #fbbf24;
+}
+.ctpat-dot:nth-child(3) {
+  background: #22c55e;
+}
+
+.ctpat-panel-label {
+  font-size: 0.72rem;
+  font-family: var(--font-family-2);
+  font-weight: 700;
+  color: var(--ghosxt-black);
+  opacity: 0.6;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.ctpat-panel-body {
+  background: var(--ghosxt-white);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.ctpat-check-row {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  padding: 0.625rem 0.75rem;
+  border-radius: 10px;
+  border: 1px solid transparent;
+}
+
+.ctpat-check-pass {
+  background: rgba(22, 163, 74, 0.05);
+  border-color: rgba(22, 163, 74, 0.15);
+}
+.ctpat-check-warn {
+  background: rgba(234, 179, 8, 0.05);
+  border-color: rgba(234, 179, 8, 0.2);
+}
+.ctpat-check-fail {
+  background: rgba(220, 38, 38, 0.05);
+  border-color: rgba(220, 38, 38, 0.15);
+}
+
+.ctpat-check-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  flex-shrink: 0;
+}
+
+.ctpat-check-icon i {
+  display: flex;
+}
+
+.ctpat-icon-pass {
+  background: #16a34a;
+  color: #fff;
+}
+.ctpat-icon-warn {
+  background: #ca8a04;
+  color: #fff;
+}
+.ctpat-icon-fail {
+  background: var(--ghosxt-red-0);
+  color: #fff;
+}
+
+.ctpat-check-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+  gap: 0.5rem;
+}
+
+.ctpat-check-label {
+  font-size: 0.82rem;
+  font-family: var(--font-family-2);
+  font-weight: 600;
+  color: var(--ghosxt-black);
+}
+
+.ctpat-check-status {
+  font-size: 0.72rem;
+  font-family: var(--font-family-2);
+  font-weight: 700;
+  white-space: nowrap;
+  border-radius: 20px;
+  padding: 0.15rem 0.625rem;
+}
+
+.ctpat-status-pass {
+  background: rgba(22, 163, 74, 0.1);
+  color: #16a34a;
+}
+.ctpat-status-warn {
+  background: rgba(234, 179, 8, 0.1);
+  color: #ca8a04;
+}
+.ctpat-status-fail {
+  background: rgba(220, 38, 38, 0.1);
+  color: var(--ghosxt-red-0);
+}
+
+.ctpat-panel-divider {
+  height: 1px;
+  background: rgba(0, 0, 0, 0.08);
+  margin: 0.25rem 0;
+}
+
+.ctpat-panel-cta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 0.625rem 0.75rem;
+}
+
+.ctpat-panel-cta-text {
+  font-size: 0.8rem;
+  font-family: var(--font-family-2);
+  color: var(--ghosxt-black);
+  opacity: 0.6;
+}
+
+.ctpat-panel-cta-action {
+  font-size: 0.85rem;
+  font-family: var(--font-family-2);
+  font-weight: 700;
+  color: var(--ghosxt-red-0);
+}
+
+/* ── PROBLEM/SECTION BADGE (self-contained, not in main.css) ── */
+.problem-badge {
+  background: var(--ghosxt-white);
+  display: flex;
+  margin-bottom: 2rem;
+  border: 1px solid var(--ghosxt-black);
+  position: relative;
+  width: fit-content;
+  z-index: 1000;
+}
+
+.problem-badge .badge-container {
+  display: flex;
+  gap: 5px;
+  padding: 0.375rem;
+  align-items: center;
+}
+
+.problem-badge .badge-lines {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0.375rem 0.25rem;
+}
+
+.problem-badge .badge-lines:first-child {
+  border-right: 1px solid var(--ghosxt-black);
+}
+
+.problem-badge .badge-lines:last-child {
+  border-left: 1px solid var(--ghosxt-black);
+}
+
+.problem-badge .badge-line {
+  height: 1px;
+  width: 10px;
+  border-bottom: 1px solid var(--ghosxt-black);
+  margin-top: 3px;
+}
+
+.problem-badge .badge-line:first-child {
+  margin-top: 0;
+}
+
+.problem-badge-text {
+  color: var(--ghosxt-black);
+  font-size: 1rem;
+  font-family: var(--font-family-2);
+}
+
+.problem-badge i {
+  display: flex;
+  align-items: center;
+  color: var(--ghosxt-red-0);
+}
+
+/* Same fix for page-specific hero badge */
+.ctpat-hero-badge .badge-lines {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0.375rem 0.25rem;
+}
+
+/* ── WHAT IS C-TPAT SECTION ──────────────────────── */
+.ctpat-what-section {
+  padding: 0 24px;
+  display: flex;
+  justify-content: center;
+  background: var(--ghosxt-gray, #f5f5f5);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.ctpat-what-container {
+  padding: 5rem 0;
+  max-width: 1200px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+.ctpat-what-left {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.ctpat-what-title {
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: var(--ghosxt-black);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.ctpat-what-text {
+  font-size: 1rem;
+  color: var(--ghosxt-black);
+  font-family: var(--font-family-2);
+  line-height: 1.65;
+  opacity: 0.75;
+}
+
+/* Replaced black callout with dashed bordered card */
+.ctpat-what-callout {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background: var(--ghosxt-white);
+  border: 1px dashed var(--ghosxt-black);
+  border-radius: 16px;
+  padding: 1.25rem 1.5rem;
+  font-size: 0.9rem;
+  font-family: var(--font-family-2);
+  line-height: 1.6;
+  color: var(--ghosxt-black);
+}
+
+.ctpat-what-callout i {
+  display: flex;
+  font-size: 1.35rem;
+  color: var(--ghosxt-red-0);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.ctpat-what-callout strong {
+  display: block;
+  font-size: 0.95rem;
+  margin-bottom: 0.4rem;
+  font-family: var(--font-family-1, "Roboto", sans-serif);
+  color: var(--ghosxt-black);
+}
+
+/* Benefits card */
+.ctpat-what-right {
+  display: flex;
+  justify-content: center;
+}
+
+.ctpat-benefits-card {
+  background: var(--ghosxt-white);
+  border: 1px solid var(--ghosxt-black);
+  border-radius: 20px;
+  overflow: hidden;
+  width: 100%;
+  box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.06);
+}
+
+/* Replaced black header with white + border-bottom */
+.ctpat-benefits-header {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 0.875rem 1.25rem;
+  border-bottom: 1px solid var(--ghosxt-black);
+  background: var(--ghosxt-white);
+  font-size: 0.85rem;
+  font-family: var(--font-family-2);
+  font-weight: 700;
+  color: var(--ghosxt-black);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.ctpat-benefits-header i {
+  display: flex;
+  color: var(--ghosxt-red-0);
+}
+
+.ctpat-benefits-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ctpat-benefits-list li {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 1.25rem;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+}
+
+.ctpat-benefits-list li:last-child {
+  border-bottom: none;
+}
+
+.ctpat-benefit-icon {
+  width: 36px;
+  height: 36px;
+  background: var(--ghosxt-black);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ghosxt-white);
+  font-size: 0.95rem;
+  flex-shrink: 0;
+}
+
+.ctpat-benefit-icon i {
+  display: flex;
+}
+
+.ctpat-benefits-list li > div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ctpat-benefit-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--ghosxt-black);
+}
+
+.ctpat-benefit-desc {
+  font-size: 0.875rem;
+  font-family: var(--font-family-2);
+  color: var(--ghosxt-black);
+  line-height: 1.5;
+  opacity: 0.65;
+}
+
+/* ── CRITERIA SECTION ──────────────────────────── */
+.ctpat-criteria-section {
+  padding: 0 24px;
+  display: flex;
+  justify-content: center;
+  background: var(--ghosxt-white);
+}
+
+.ctpat-criteria-container {
+  padding: 5rem 0;
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.ctpat-criteria-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  text-align: center;
+  align-items: center;
+}
+
+.ctpat-criteria-title {
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: var(--ghosxt-black);
+  line-height: 1.2;
+}
+
+.ctpat-criteria-subtitle {
+  font-size: 1.05rem;
+  color: var(--ghosxt-black);
+  font-family: var(--font-family-2);
+  opacity: 0.7;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+.ctpat-criteria-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.ctpat-criterion-card {
+  background: var(--ghosxt-white);
+  border: 1px solid var(--ghosxt-black);
+  border-radius: 20px;
+  padding: 2rem;
+  display: flex;
+  gap: 1.25rem;
+  transition:
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.ctpat-criterion-card:hover {
+  box-shadow: 4px 4px 0 0 rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.ctpat-criterion-num {
+  display: none;
+}
+
+.ctpat-criterion-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+  flex: 1;
+}
+
+.ctpat-criterion-top {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.ctpat-criterion-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--ghosxt-black);
+  line-height: 1.3;
+}
+
+.ctpat-criterion-badge {
+  background: rgba(220, 38, 38, 0.08);
+  color: var(--ghosxt-red-0);
+  border: 1px solid rgba(220, 38, 38, 0.2);
+  border-radius: 20px;
+  padding: 0.15rem 0.625rem;
+  font-size: 0.7rem;
+  font-family: var(--font-family-2);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.ctpat-criterion-text {
+  font-size: 0.9rem;
+  color: var(--ghosxt-black);
+  font-family: var(--font-family-2);
+  line-height: 1.6;
+  opacity: 0.65;
+}
+
+.ctpat-criterion-how {
+  background: rgba(0, 0, 0, 0.03);
+  border: 1px dashed rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  padding: 0.875rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.ctpat-criterion-how-label {
+  font-size: 0.72rem;
+  font-family: var(--font-family-2);
+  font-weight: 700;
+  color: var(--ghosxt-red-0);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.ctpat-criterion-how-text {
+  font-size: 0.875rem;
+  font-family: var(--font-family-2);
+  color: var(--ghosxt-black);
+  line-height: 1.55;
+  opacity: 0.75;
+}
+
+/* ── WHO WE SERVE ──────────────────────────────── */
+.ctpat-serve-section {
+  padding: 0 24px;
+  display: flex;
+  justify-content: center;
+  background: var(--ghosxt-gray, #f5f5f5);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.ctpat-serve-container {
+  padding: 5rem 0;
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.ctpat-serve-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  text-align: center;
+  align-items: center;
+}
+
+.ctpat-serve-title {
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--ghosxt-black);
+  line-height: 1.2;
+}
+
+.ctpat-serve-subtitle {
+  font-size: 1.05rem;
+  color: var(--ghosxt-black);
+  font-family: var(--font-family-2);
+  opacity: 0.7;
+  line-height: 1.6;
+  max-width: 620px;
+}
+
+.ctpat-serve-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.ctpat-serve-card {
+  background: var(--ghosxt-white);
+  border: 1px solid var(--ghosxt-black);
+  border-radius: 20px;
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+  transition:
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.ctpat-serve-card:hover {
+  box-shadow: 4px 4px 0 0 rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.ctpat-serve-icon {
+  width: 46px;
+  height: 46px;
+  background: var(--ghosxt-black);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ghosxt-white);
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.ctpat-serve-icon i {
+  display: flex;
+}
+
+.ctpat-serve-title-sm {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--ghosxt-black);
+  line-height: 1.3;
+}
+
+.ctpat-serve-text {
+  font-size: 0.9rem;
+  color: var(--ghosxt-black);
+  font-family: var(--font-family-2);
+  line-height: 1.6;
+  opacity: 0.65;
+}
+
+/* ── PROCESS SECTION ───────────────────────────── */
+.ctpat-process-section {
+  padding: 0 24px;
+  display: flex;
+  justify-content: center;
+  background: var(--ghosxt-white);
+}
+
+.ctpat-process-container {
+  padding: 5rem 0;
+  max-width: 1200px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+.ctpat-process-left {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  position: sticky;
+  top: 5rem;
+}
+
+.ctpat-process-title {
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: var(--ghosxt-black);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.ctpat-process-subtitle {
+  font-size: 1rem;
+  color: var(--ghosxt-black);
+  font-family: var(--font-family-2);
+  line-height: 1.65;
+  opacity: 0.7;
+}
+
+.ctpat-process-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.875rem;
+  background: var(--ghosxt-gray, #f5f5f5);
+  border: 1px dashed rgba(0, 0, 0, 0.15);
+  border-radius: 14px;
+  padding: 1.25rem;
+}
+
+.ctpat-process-note i {
+  display: flex;
+  font-size: 1.25rem;
+  color: var(--ghosxt-red-0);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.ctpat-process-note p {
+  font-size: 0.9rem;
+  font-family: var(--font-family-2);
+  color: var(--ghosxt-black);
+  line-height: 1.6;
+  opacity: 0.75;
+  margin: 0;
+}
+
+/* Steps */
+.ctpat-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.ctpat-step {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.ctpat-step-num {
+  width: 48px;
+  height: 48px;
+  background: var(--ghosxt-black);
+  color: var(--ghosxt-white);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+  font-family: var(--font-family-2);
+  letter-spacing: 0.05em;
+  flex-shrink: 0;
+}
+
+.ctpat-step-content {
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.ctpat-step-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--ghosxt-black);
+}
+
+.ctpat-step-text {
+  font-size: 0.9rem;
+  color: var(--ghosxt-black);
+  font-family: var(--font-family-2);
+  line-height: 1.6;
+  opacity: 0.7;
+}
+
+.ctpat-step-divider {
+  width: 1px;
+  height: 1.5rem;
+  background: var(--ghosxt-black);
+  opacity: 0.15;
+  margin-left: 23px;
+  flex-shrink: 0;
+}
+
+/* ── FAQ override ──────────────────────────────── */
+.ctpat-faq-section {
+  background: var(--ghosxt-gray, #f5f5f5);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  min-height: auto;
+}
+
+/* ── CTA SECTION — white with dashed border ─────── */
+.ctpat-cta-section {
+  padding: 0 24px;
+  display: flex;
+  justify-content: center;
+  background: var(--ghosxt-white);
+  border-top: 1px solid var(--ghosxt-black);
+}
+
+.ctpat-cta-container {
+  padding: 5rem 0;
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.ctpat-cta-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.75rem;
+  max-width: 680px;
+}
+
+.ctpat-cta-icon {
+  width: 64px;
+  height: 64px;
+  background: var(--ghosxt-white);
+  border: 1px solid var(--ghosxt-black);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ghosxt-red-0);
+  font-size: 1.75rem;
+  box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.08);
+}
+
+.ctpat-cta-icon i {
+  display: flex;
+}
+
+.ctpat-cta-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--ghosxt-black);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.ctpat-cta-subtitle {
+  font-size: 1.05rem;
+  color: var(--ghosxt-black);
+  font-family: var(--font-family-2);
+  opacity: 0.7;
+  line-height: 1.6;
+}
+
+.ctpat-cta-buttons {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.ctpat-cta-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--ghosxt-black);
+  font-family: var(--font-family-2);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid var(--ghosxt-black);
+  padding-bottom: 2px;
+  transition: opacity 0.2s ease;
+  white-space: nowrap;
+}
+
+.ctpat-cta-btn-secondary i {
+  display: flex;
+}
+.ctpat-cta-btn-secondary:hover {
+  opacity: 0.65;
+  color: var(--ghosxt-black);
+}
+
+/* ── RESPONSIVE ──────────────────────────────── */
+@media (max-width: 1024px) {
+  .ctpat-process-left {
+    position: static;
+  }
+  .ctpat-what-container {
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 968px) {
+  .ctpat-hero-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    padding: 3rem 0;
+  }
+  .ctpat-hero-title {
+    font-size: 2.75rem;
+  }
+  .ctpat-what-container {
+    grid-template-columns: 1fr;
+  }
+  .ctpat-what-title {
+    font-size: 2.25rem;
+  }
+  .ctpat-criteria-grid {
+    grid-template-columns: 1fr;
+  }
+  .ctpat-criteria-title {
+    font-size: 2.25rem;
+  }
+  .ctpat-serve-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .ctpat-serve-title {
+    font-size: 2.5rem;
+  }
+  .ctpat-process-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .ctpat-process-title {
+    font-size: 2.25rem;
+  }
+  .ctpat-cta-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .ctpat-hero-title {
+    font-size: 2.25rem;
+  }
+  .ctpat-hero-section {
+    padding: 0 16px;
+  }
+  .ctpat-what-section {
+    padding: 0 16px;
+  }
+  .ctpat-criteria-section {
+    padding: 0 16px;
+  }
+  .ctpat-serve-section {
+    padding: 0 16px;
+  }
+  .ctpat-process-section {
+    padding: 0 16px;
+  }
+  .ctpat-cta-section {
+    padding: 0 16px;
+  }
+  .ctpat-serve-grid {
+    grid-template-columns: 1fr;
+  }
+  .ctpat-hero-container {
+    padding: 2.5rem 0;
+  }
+  .ctpat-cta-title {
+    font-size: 2rem;
+  }
+  .ctpat-what-container {
+    padding: 3rem 0;
+  }
+  .ctpat-criteria-container {
+    padding: 3rem 0;
+  }
+  .ctpat-serve-container {
+    padding: 3rem 0;
+  }
+  .ctpat-process-container {
+    padding: 3rem 0;
+  }
+  .ctpat-cta-container {
+    padding: 3rem 0;
+  }
+  .ctpat-criterion-card {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .ctpat-criterion-num {
+    font-size: 1.75rem;
+    min-width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .ctpat-hero-title {
+    font-size: 2rem;
+  }
+  .ctpat-cta-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .ctpat-cta-btn-secondary {
+    justify-content: center;
+  }
+  .ctpat-hero-container {
+    padding: 2rem 0;
+  }
+}

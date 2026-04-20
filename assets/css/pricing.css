@@ -1,0 +1,1772 @@
+/* ═══════════════════════════════════════════════════════
+   PRICING.CSS — Ghosxt Pricing Page
+   Follows the --ghosxt- design system from main.css
+   Variables: --ghosxt-black, --ghosxt-white, --ghosxt-red-0,
+              --ghosxt-gray, --font-family-2, Roboto
+   ═══════════════════════════════════════════════════════ */
+
+/* ── HERO ─────────────────────────────────────────────── */
+.pricing-hero-section {
+    padding: 0 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--ghosxt-white);
+}
+
+.pricing-hero-container {
+    padding: 5rem 0;
+    max-width: 1200px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.pricing-hero-left {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+}
+
+/* Badge — matches the services hero badge pattern */
+.pricing-hero-badge {
+    background: var(--ghosxt-white);
+    display: flex;
+    border: 1px solid var(--ghosxt-black);
+    width: fit-content;
+}
+
+.pricing-hero-badge .badge-container {
+    display: flex;
+    gap: 5px;
+    padding: .375rem;
+    align-items: center;
+}
+
+.pricing-hero-badge .badge-lines:first-child { border-right: 1px solid var(--ghosxt-black); }
+.pricing-hero-badge .badge-lines:last-child  { border-left:  1px solid var(--ghosxt-black); }
+
+.pricing-hero-badge .badge-line {
+    margin-top: 3px;
+    height: 1px;
+    width: 10px;
+    border-bottom: 1px solid var(--ghosxt-black);
+}
+
+.pricing-hero-badge-text {
+    color: var(--ghosxt-black);
+    font-size: 1rem;
+    font-family: var(--font-family-2);
+}
+
+.pricing-hero-badge i {
+    display: flex;
+    align-items: center;
+    color: var(--ghosxt-black);
+}
+
+.pricing-hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--ghosxt-red-0);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+}
+
+.pricing-hero-title .title-black {
+    color: var(--ghosxt-black);
+}
+
+.pricing-hero-subtitle {
+    color: var(--ghosxt-black);
+    font-family: var(--font-family-2);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    opacity: 0.75;
+}
+
+.pricing-hero-cta-row {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+}
+
+.pricing-hero-btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--ghosxt-red-0);
+    color: var(--ghosxt-white);
+    font-family: var(--font-family-2);
+    font-size: 0.95rem;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    border: 1px solid var(--ghosxt-black);
+    box-shadow: 2px 2px 0 0 rgba(0,0,0,0.3);
+    text-decoration: none;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.pricing-hero-btn-primary:hover {
+    box-shadow: 3px 3px 0 0 rgba(0,0,0,0.3);
+    transform: translateY(-2px);
+    color: var(--ghosxt-white);
+}
+
+.pricing-hero-btn-primary i { display: flex; font-size: 1rem; }
+
+.pricing-hero-btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--ghosxt-black);
+    font-family: var(--font-family-2);
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid var(--ghosxt-black);
+    padding-bottom: 2px;
+    transition: opacity 0.2s ease;
+    white-space: nowrap;
+}
+
+.pricing-hero-btn-secondary:hover { opacity: 0.6; color: var(--ghosxt-black); }
+.pricing-hero-btn-secondary i { display: flex; font-size: 0.9rem; }
+
+/* Right stat cluster */
+.pricing-hero-right {
+    display: flex;
+    justify-content: center;
+}
+
+.pricing-stat-cluster {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    width: 100%;
+    max-width: 440px;
+}
+
+.pricing-stat-card {
+    background: var(--ghosxt-white);
+    border: 1px solid var(--ghosxt-black);
+    border-radius: 16px;
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    box-shadow: 3px 3px 0 0 var(--ghosxt-black);
+}
+
+.stat-main {
+    grid-column: span 2;
+    background: var(--ghosxt-black);
+    color: var(--ghosxt-white);
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.stat-wide {
+    grid-column: span 2;
+}
+
+.stat-label {
+    font-family: var(--font-family-2);
+    font-size: 0.8rem;
+    opacity: 0.6;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.stat-main .stat-label { color: var(--ghosxt-white); opacity: 0.7; }
+
+.stat-value {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--ghosxt-red-0);
+    line-height: 1;
+    letter-spacing: -0.03em;
+}
+
+.stat-sub {
+    font-family: var(--font-family-2);
+    font-size: 0.85rem;
+    color: var(--ghosxt-white);
+    opacity: 0.75;
+}
+
+.stat-value-sm {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--ghosxt-black);
+    line-height: 1.1;
+}
+
+.stat-value-sm span {
+    font-size: 0.8rem;
+    font-family: var(--font-family-2);
+    font-weight: 400;
+    opacity: 0.6;
+}
+
+.stat-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 6px;
+}
+
+.stat-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    border: 1px dashed var(--ghosxt-black);
+    border-radius: 20px;
+    padding: 0.25rem 0.625rem;
+    font-size: 0.78rem;
+    font-family: var(--font-family-2);
+    font-weight: 600;
+    color: var(--ghosxt-black);
+    white-space: nowrap;
+}
+
+.stat-pill i { display: flex; font-size: 0.75rem; }
+
+/* ══════════════════════════════════════════════════════════════
+   CALCULATOR SECTION — Ghosxt pricing.css
+   Rebuilt to match the sharp brutalist aesthetic of the rest
+   of the site: 1px solid borders, 4px border-radius on inputs,
+   2-3px offset box-shadows, Roboto, tight spacing, red accents.
+   ══════════════════════════════════════════════════════════════ */
+
+/* ── CALCULATOR ───────────────────────────────────────────── */
+.calc-section {
+    padding: 0 24px;
+    display: flex;
+    justify-content: center;
+    background: var(--ghosxt-white);
+}
+
+.calc-outer {
+    padding: 5rem 0;
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.calc-header {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    text-align: center;
+    align-items: center;
+}
+
+.calc-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--ghosxt-red-0);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+}
+
+.calc-subtitle {
+    font-size: 1.05rem;
+    color: var(--ghosxt-black);
+    font-family: var(--font-family-2);
+    opacity: 0.7;
+    line-height: 1.6;
+    max-width: 560px;
+}
+
+.calc-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: start;
+    z-index: 100;
+}
+
+/* ── CARDS (left panel) ───────────────────────────────────── */
+.calc-card {
+    background: var(--ghosxt-white);
+    border: 1px solid var(--ghosxt-black);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.calc-card:last-child { margin-bottom: 0; }
+
+.calc-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.875rem 1.25rem;
+    border-bottom: 1px dashed var(--ghosxt-black);
+    background: var(--ghosxt-white);
+}
+
+.calc-card-title {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--ghosxt-black);
+    font-family: var(--font-family-2);
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+}
+
+.calc-card-title i {
+    display: flex;
+    font-size: 0.875rem;
+    color: var(--ghosxt-red-0);
+}
+
+.calc-card-note {
+    font-size: 0.72rem;
+    font-family: var(--font-family-2);
+    color: var(--ghosxt-black);
+    opacity: 0.45;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+/* Add-on breakdown rows */
+.breakdown-addon {
+    padding-left: 0.75rem;
+}
+
+.breakdown-addon .breakdown-label {
+    font-size: 0.78rem;
+    opacity: 0.7;
+}
+
+.breakdown-addon .breakdown-value {
+    font-weight: 600;
+    color: var(--ghosxt-black);
+}
+
+/* ── USER STEPPER ─────────────────────────────────────────── */
+.user-stepper {
+    display: flex;
+    align-items: center;
+    gap: 0.875rem;
+    padding: 1.125rem 1.25rem;
+}
+
+.stepper-btn {
+    width: 38px;
+    height: 38px;
+    border: 1px solid var(--ghosxt-black);
+    border-radius: 4px;
+    background: var(--ghosxt-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
+    flex-shrink: 0;
+}
+
+.stepper-btn:hover {
+    background: var(--ghosxt-black);
+    color: var(--ghosxt-white);
+}
+
+.stepper-btn i { display: flex; }
+
+.stepper-display {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 6px;
+    padding: 0.4rem 0.875rem;
+}
+
+.stepper-display input[type="number"] {
+    border: none;
+    background: transparent;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--ghosxt-black);
+    width: 45px;
+    outline: none;
+    -moz-appearance: textfield;
+}
+
+.stepper-display input[type="number"]::-webkit-inner-spin-button,
+.stepper-display input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+.stepper-label {
+    font-family: var(--font-family-2);
+    font-size: 0.8rem;
+    color: var(--ghosxt-black);
+    opacity: 0.5;
+    font-weight: 500;
+}
+
+/* ── USER SLIDER ──────────────────────────────────────────── */
+.user-slider-track {
+    padding: 0 1.25rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.user-slider-track input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 3px;
+    background: var(--ghosxt-black);
+    border-radius: 2px;
+    outline: none;
+    cursor: pointer;
+}
+
+.user-slider-track input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--ghosxt-red-0);
+    border: 2px solid var(--ghosxt-black);
+    box-shadow: 1px 1px 0 0 rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: transform 0.12s ease;
+}
+
+.user-slider-track input[type="range"]::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+}
+
+.user-slider-track input[type="range"]::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--ghosxt-red-0);
+    border: 2px solid var(--ghosxt-black);
+    cursor: pointer;
+}
+
+.slider-labels {
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--font-family-2);
+    font-size: 0.7rem;
+    color: var(--ghosxt-black);
+    letter-spacing: 0.02em;
+}
+
+/* ── TIER SELECTOR ────────────────────────────────────────── */
+.tier-selector {
+    padding: 0.875rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.tier-option {
+    display: flex;
+    cursor: pointer;
+}
+
+.tier-option input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.tier-option-inner {
+    width: 100%;
+    border: 1px dashed rgba(0,0,0,0.3);
+    border-radius: 6px;
+    padding: 0.75rem 1rem;
+    transition: border-color 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.tier-option input:checked ~ .tier-option-inner {
+    border-style: solid;
+    border-color: var(--ghosxt-black);
+    background: var(--ghosxt-black);
+}
+
+.tier-option input:checked ~ .tier-option-inner .tier-option-name,
+.tier-option input:checked ~ .tier-option-inner .tier-option-price,
+.tier-option input:checked ~ .tier-option-inner .tier-option-desc {
+    color: var(--ghosxt-white);
+}
+
+.tier-option input:checked ~ .tier-option-inner .tier-option-price em {
+    color: rgba(255,255,255,0.9);
+}
+
+.tier-option input:checked ~ .tier-option-inner .tier-option-desc {
+    opacity: 0.65;
+}
+
+.tier-option-top {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.tier-check {
+    width: 20px;
+    height: 20px;
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 0.6rem;
+    background: var(--ghosxt-white);
+    color: transparent;
+    transition: all 0.15s ease;
+}
+
+.tier-option input:checked ~ .tier-option-inner .tier-check {
+    background: var(--ghosxt-red-0);
+    border-color: var(--ghosxt-red-0);
+    color: var(--ghosxt-white);
+}
+
+.tier-option-info {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex: 1;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.tier-option-name {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--ghosxt-black);
+    font-family: var(--font-family-2);
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.tier-popular-badge {
+    font-size: 0.6rem;
+    font-weight: 700;
+    background: var(--ghosxt-red-0);
+    color: var(--ghosxt-white);
+    padding: 2px 6px;
+    border-radius: 3px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.tier-option-price {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--ghosxt-black);
+}
+
+.tier-option-price em {
+    font-style: normal;
+    font-size: 0.72rem;
+    font-weight: 400;
+    font-family: var(--font-family-2);
+    color: var(--ghosxt-black);
+    opacity: 0.5;
+}
+
+.tier-option-desc {
+    font-size: 0.78rem;
+    font-family: var(--font-family-2);
+    color: var(--ghosxt-black);
+    opacity: 0.55;
+    line-height: 1.45;
+    padding-left: 30px;
+}
+
+/* ── ADD-ONS ──────────────────────────────────────────────── */
+.addon-list {
+    padding: 0.875rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.addon-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px dashed rgba(0,0,0,0.25);
+    border-radius: 6px;
+    padding: 0.625rem 0.875rem;
+    cursor: pointer;
+    transition: border-color 0.12s ease, background 0.12s ease, box-shadow 0.12s ease;
+    gap: 10px;
+}
+
+.addon-left {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    flex: 1;
+}
+
+.addon-item input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.addon-check {
+    width: 18px;
+    height: 18px;
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 0.6rem;
+    color: transparent;
+    background: var(--ghosxt-white);
+    transition: all 0.12s ease;
+}
+
+.addon-check i {display: flex;}
+
+
+.addon-item:has(input:checked) .addon-check {
+    background: var(--ghosxt-black);
+    border-color: var(--ghosxt-black);
+    color: var(--ghosxt-white);
+}
+
+.addon-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+.addon-name {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--ghosxt-black);
+    font-family: var(--font-family-2);
+    line-height: 1.3;
+}
+
+.addon-name em {
+    font-style: normal;
+    font-weight: 400;
+    opacity: 0.5;
+    font-size: 0.77rem;
+}
+
+.addon-price {
+    font-size: 0.72rem;
+    color: var(--ghosxt-black);
+    font-family: var(--font-family-2);
+    opacity: 0.45;
+    letter-spacing: 0.01em;
+}
+
+.addon-qty-wrap {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border-radius: 4px;
+    padding: 2px 7px;
+    background: var(--ghosxt-white);
+    flex-shrink: 0;
+}
+
+.addon-qty-wrap.hidden { display: none; }
+
+.addon-qty-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--ghosxt-black);
+    line-height: 1;
+    padding: 1px 4px;
+    transition: color 0.1s ease;
+}
+
+.addon-qty-btn:hover { color: var(--ghosxt-red-0); }
+
+.addon-qty {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--ghosxt-black);
+    font-family: var(--font-family-2);
+    min-width: 14px;
+    text-align: center;
+}
+
+/* ══════════════════════════════════════════════════════════
+   RIGHT PANEL — RESULTS
+   ══════════════════════════════════════════════════════════ */
+.calc-right {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: sticky;
+    top: 100px;
+}
+
+/* ── MONTHLY COST CARD ────────────────────────────────────── */
+.result-card {
+    background: var(--ghosxt-white);
+    border: 1px solid var(--ghosxt-black);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.result-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.875rem 1.25rem;
+    border-bottom: 1px dashed var(--ghosxt-black);
+}
+
+.result-card-title {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--ghosxt-black);
+    font-family: var(--font-family-2);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.result-live-badge {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-family: var(--font-family-2);
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--ghosxt-black);
+    opacity: 1;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.live-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #16a34a;
+    animation: pulse-dot 2s infinite;
+    flex-shrink: 0;
+}
+
+@keyframes pulse-dot {
+    0%, 100% { transform: scale(1); }
+    50%       { transform: scale(0.75); }
+}
+
+.result-main-number {
+    display: flex;
+    align-items: baseline;
+    gap: 3px;
+    padding: 1.25rem 1.25rem 0.75rem;
+}
+
+.result-currency {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--ghosxt-black);
+    line-height: 1;
+}
+
+.result-amount {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--ghosxt-black);
+    letter-spacing: -0.04em;
+    line-height: 1;
+}
+
+.result-per {
+    font-size: 0.875rem;
+    font-family: var(--font-family-2);
+    color: var(--ghosxt-black);
+    opacity: 0.45;
+    align-self: flex-end;
+    padding-bottom: 4px;
+}
+
+.result-breakdown {
+    padding: 0 1.25rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border-top: 1px dashed rgba(0,0,0,0.12);
+    margin-top: 2px;
+}
+
+.breakdown-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--font-family-2);
+    font-size: 0.82rem;
+    color: var(--ghosxt-black);
+    padding: 0.5rem 0;
+    border-bottom: 1px dashed rgba(0,0,0,0.08);
+}
+
+.breakdown-row:last-child { border-bottom: none; }
+
+/* ← THIS WAS MISSING — breakdown-label was unstyled */
+.breakdown-label {
+    opacity: 1;
+}
+
+.breakdown-row-total {
+    opacity: 1;
+    font-weight: 700;
+    padding-top: 0.625rem;
+    border-top: 1px dashed rgba(0,0,0,0.15);
+    border-bottom: none;
+    margin-top: 4px;
+}
+
+.breakdown-value {
+    font-weight: 700;
+    color: var(--ghosxt-black);
+}
+
+/* ── VS. HIRING CARD ──────────────────────────────────────── */
+.savings-card {
+    background: var(--ghosxt-white);
+    border: 1px solid var(--ghosxt-black);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.savings-card-header {
+    display: flex;
+    align-items: center;
+    padding: 0.875rem 1.25rem;
+    border-bottom: 1px dashed var(--ghosxt-black);
+}
+
+.savings-card-title {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--ghosxt-black);
+    font-family: var(--font-family-2);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.savings-card-title i {
+    display: flex;
+    color: var(--ghosxt-red-0);
+    font-size: 0.875rem;
+}
+
+.savings-compare {
+    padding: 0.875rem 1.25rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.compare-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--font-family-2);
+    font-size: 0.82rem;
+    color: var(--ghosxt-black);
+    padding: 0.3rem 0;
+}
+
+/* ← THIS WAS ALSO MISSING — compare-label was unstyled */
+.compare-label {
+    font-size: 0.78rem;
+}
+
+.compare-value {
+    font-weight: 700;
+    font-size: 0.875rem;
+}
+
+/* The internal hire cost — shown strikethrough only when there ARE savings */
+.compare-value-hire {
+    text-decoration: line-through;
+}
+
+/* Ghosxt cost — red accent, always visible */
+.compare-value-ghosxt {
+    color: var(--ghosxt-red-0);
+}
+
+/* ── SAVINGS HIGHLIGHT BOX ────────────────────────────────── */
+.savings-highlight {
+    padding: 0.875rem 1.25rem;
+}
+
+.savings-highlight-inner {
+    background: var(--ghosxt-white);
+    border-radius: 6px;
+    padding: 1.125rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
+}
+
+.savings-numbers {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto 1fr;
+    align-items: center;
+    gap: 0;
+}
+
+.savings-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+}
+
+.savings-divider {
+    width: 1px;
+    height: 36px;
+    background: rgba(255,255,255,0.15);
+    flex-shrink: 0;
+}
+
+.savings-stat-val {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--ghosxt-black);
+    letter-spacing: -0.02em;
+    line-height: 1;
+}
+
+.savings-stat-label {
+    font-family: var(--font-family-2);
+    font-size: 0.65rem;
+    color: var(--ghosxt-black);
+    text-align: center;
+    line-height: 1.3;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+/* Bar */
+.savings-bar-track {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.savings-bar-label-row {
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--font-family-2);
+    font-size: 0.65rem;
+    color: rgba(255,255,255,0.4);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.savings-bar-bg {
+    height: 6px;
+    background: rgba(0,0,0,0.12);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.savings-bar-fill {
+    height: 100%;
+    background: var(--ghosxt-red-0);
+    border-radius: 3px;
+    transition: width 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    min-width: 3px;
+}
+
+/* Footnote */
+.savings-note {
+    padding: 0.75rem 1.25rem;
+    font-family: var(--font-family-2);
+    font-size: 0.7rem;
+    color: var(--ghosxt-black);
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+    line-height: 1.5;
+    border-top: 1px dashed var(--ghosxt-black);
+    opacity: 0.6;
+}
+
+.savings-note i {
+    display: flex;
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+
+/* CTA card */
+.calc-cta-card {
+    background: var(--ghosxt-white);
+    border: 1px solid var(--ghosxt-black);
+    border-radius: 8px;
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.calc-cta-text {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.calc-cta-text strong {
+    font-size: 0.95rem;
+    color: var(--ghosxt-black);
+}
+
+.calc-cta-text span {
+    font-family: var(--font-family-2);
+    font-size: 0.8rem;
+    color: var(--ghosxt-black);
+    opacity: 0.6;
+    line-height: 1.4;
+}
+
+.calc-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--ghosxt-red-0);
+    color: var(--ghosxt-white);
+    font-family: var(--font-family-2);
+    font-size: 0.875rem;
+    font-weight: 600;
+    padding: 0.65rem 1.25rem;
+    border-radius: 4px;
+    border: 1px solid var(--ghosxt-black);
+    box-shadow: 2px 2px 0 0 rgba(0,0,0,0.3);
+    text-decoration: none;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.calc-cta-btn:hover {
+    box-shadow: 3px 3px 0 0 rgba(0,0,0,0.3);
+    transform: translateY(-2px);
+    color: var(--ghosxt-white);
+}
+
+.calc-cta-btn i { display: flex; }
+
+/* ── PLAN COMPARISON TABLE ────────────────────────────── */
+.plans-section {
+    padding: 0 24px;
+    display: flex;
+    justify-content: center;
+}
+
+.plans-outer {
+    padding: 5rem 0;
+    max-width: 1100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.plans-header {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    text-align: center;
+    align-items: center;
+}
+
+.plans-title {
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--ghosxt-red-0);
+    line-height: 1.2;
+}
+
+.plans-subtitle {
+    font-size: 1.1rem;
+    color: var(--ghosxt-black);
+    font-family: var(--font-family-2);
+    opacity: 0.75;
+    line-height: 1.6;
+    max-width: 600px;
+}
+
+.plans-table-wrap {
+    overflow-x: auto;
+    border: 1px solid var(--ghosxt-black);
+    border-radius: 8px;
+    z-index: 100;
+}
+
+.plans-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--ghosxt-white);
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.plans-table thead tr {
+    border-bottom: 1px solid var(--ghosxt-black);
+}
+
+.feature-col {
+    width: 40%;
+    padding: 1.25rem 1.5rem;
+    text-align: left;
+    font-size: 1rem;
+    font-family: var(--font-family-2);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--ghosxt-black);
+}
+
+.plan-col {
+    width: 20%;
+    padding: 1.25rem 1rem;
+    text-align: center;
+    vertical-align: bottom;
+    border-left: 1px dashed var(--ghosxt-black);
+}
+
+.plan-col-featured {
+    background: var(--ghosxt-red-0);
+    position: relative;
+}
+
+.plan-featured-tag {
+    font-family: var(--font-family-2);
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: var(--ghosxt-red-0);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 8px;
+}
+
+.plan-col-name {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--ghosxt-black);
+}
+
+.plan-col-featured .plan-col-name { color: var(--ghosxt-white); }
+
+.plan-col-price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--ghosxt-red-0);
+    margin-top: 4px;
+}
+
+.plan-col-price span {
+    font-size: 0.75rem;
+    font-family: var(--font-family-2);
+    font-weight: 400;
+    color: var(--ghosxt-black);
+    opacity: 0.9;
+}
+.plan-col-featured .plan-col-price {color: var(--ghosxt-white); }
+.plan-col-featured .plan-col-price span { color: rgba(255,255,255,0.9); }
+
+/* Table body rows */
+.plans-table tbody tr {
+    border-bottom: 1px dashed rgba(0,0,0,0.12);
+    transition: background 0.15s ease;
+}
+
+.plans-table tbody tr:last-child { border-bottom: none; }
+
+.feature-group-row td {
+    padding: 0.625rem 1.5rem;
+    font-size: 0.75rem;
+    font-family: var(--font-family-2);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--ghosxt-black);
+    border-bottom: 1px solid rgba(0,0,0,0.08) !important;
+}
+
+.feature-name {
+    padding: 0.875rem 1.5rem;
+    font-size: 0.875rem;
+    font-family: var(--font-family-2);
+    color: var(--ghosxt-black);
+    line-height: 1.4;
+    border-right: 1px dashed rgba(0, 0, 0, 0.12);;
+}
+
+.check-cell {
+    text-align: center;
+    padding: 0.875rem 0.5rem;
+    vertical-align: middle;
+}
+
+.check-cell.plan-col-featured {
+    background: var(--ghosxt-white);
+}
+
+.check-yes {
+    font-size: 1.1rem;
+    color: #22c55e;
+}
+
+.check-no {
+    font-size: 1.1rem;
+    color: rgba(0,0,0,0.18);
+}
+
+.check-cell.plan-col-featured .check-no { color: rgba(0,0,0,0.15); }
+
+/* CTA row in table */
+.plans-cta-row td {
+    padding: 1.25rem 0.75rem;
+    border-top: 2px solid var(--ghosxt-black);
+    border-bottom: none !important;
+}
+
+.plans-cta-row td.plan-col-featured {
+    background: var(--ghosxt-black);
+}
+
+.plan-cta-cell { text-align: center; }
+
+.plan-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6rem 1.25rem;
+    border-radius: 4px;
+    font-family: var(--font-family-2);
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.plan-cta-btn-outline {
+    border: 1px solid var(--ghosxt-black);
+    color: var(--ghosxt-black);
+    background: var(--ghosxt-white);
+    box-shadow: 2px 2px 0 0 rgba(0,0,0,0.15);
+}
+
+.plan-cta-btn-outline:hover {
+    background: var(--ghosxt-black);
+    color: var(--ghosxt-white);
+    box-shadow: 3px 3px 0 0 rgba(0,0,0,0.25);
+    transform: translateY(-2px);
+}
+
+.plan-cta-btn-solid {
+    border: 1px solid var(--ghosxt-red-0);
+    background: var(--ghosxt-red-0);
+    color: var(--ghosxt-white);
+    box-shadow: 2px 2px 0 0 rgba(0,0,0,0.3);
+}
+
+.plan-cta-btn-solid:hover {
+    box-shadow: 3px 3px 0 0 rgba(0,0,0,0.35);
+    transform: translateY(-2px);
+    color: var(--ghosxt-white);
+}
+
+/* ── RATES SECTION ────────────────────────────────────── */
+.rates-section {
+    padding: 0 24px;
+    display: flex;
+    justify-content: center;
+}
+
+.rates-outer {
+    padding: 5rem 0;
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.rates-header {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    text-align: center;
+    align-items: center;
+}
+
+.rates-title {
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--ghosxt-red-0);
+    line-height: 1.2;
+}
+
+.rates-subtitle {
+    font-size: 1.1rem;
+    color: var(--ghosxt-black);
+    font-family: var(--font-family-2);
+    opacity: 0.75;
+    line-height: 1.6;
+    max-width: 620px;
+}
+
+.rates-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+}
+
+.rate-card {
+    background: var(--ghosxt-white);
+    border: 1px dashed var(--ghosxt-black);
+    border-radius: 16px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    transition: all 0.2s ease;
+}
+
+.rate-card-alert {
+    border-color: var(--ghosxt-red-0);
+}
+
+.rate-card-assessment {
+    border-color: var(--ghosxt-black);
+}
+
+.rate-card-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: var(--ghosxt-black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.rate-card-icon i {
+    display: flex;
+    font-size: 1rem;
+    color: var(--ghosxt-white);
+}
+
+.rate-card-alert .rate-card-icon { background: var(--ghosxt-red-0); }
+
+.rate-card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.rate-card-name {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--ghosxt-black);
+    line-height: 1.3;
+    margin: 0;
+}
+
+.rate-card-desc {
+    font-size: 0.8rem;
+    font-family: var(--font-family-2);
+    color: var(--ghosxt-black);
+    opacity: 0.55;
+    margin: 0;
+}
+
+.rate-card-price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--ghosxt-black);
+    line-height: 1;
+}
+
+.rate-card-price span {
+    font-size: 0.8rem;
+    font-weight: 400;
+    font-family: var(--font-family-2);
+    opacity: 0.55;
+}
+
+.rate-card-alert .rate-card-price { color: var(--ghosxt-red-0); }
+
+/* ── RESPONSIVE ───────────────────────────────────────── */
+@media (max-width: 1024px) {
+    .calc-body {
+        grid-template-columns: 1fr;
+    }
+
+    .calc-right {
+        position: static;
+    }
+
+    .rates-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 968px) {
+    .pricing-hero-container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        padding: 3rem 0;
+    }
+
+    .pricing-hero-title { font-size: 2.75rem; }
+
+    .pricing-stat-cluster { max-width: 100%; }
+
+    .calc-title { font-size: 2.5rem; }
+    .plans-title { font-size: 2.5rem; }
+    .rates-title { font-size: 2.5rem; }
+
+    .feature-col { width: 35%; }
+}
+
+@media (max-width: 768px) {
+    .plans-table-wrap { border-radius: 12px; }
+    .feature-col { padding: 1rem; font-size: 0.72rem; }
+    .feature-name { padding: 0.75rem 1rem; font-size: 0.82rem; }
+    .plan-col { padding: 1rem 0.625rem; }
+    .plan-col-name { font-size: 0.875rem; }
+    .plan-col-price { font-size: 1.25rem; }
+    .check-cell { padding: 0.75rem 0.25rem; }
+}
+
+@media (max-width: 640px) {
+
+    .pricing-hero-container { padding: 2.5rem 0; gap: 2rem; }
+    .pricing-hero-title { font-size: 2.25rem; }
+    .pricing-hero-subtitle { font-size: 1rem; }
+
+    .pricing-stat-cluster { grid-template-columns: 1fr 1fr; }
+    .stat-main { padding: 1.5rem; }
+    .stat-value { font-size: 2.75rem; }
+
+    .calc-outer { padding: 3rem 0; gap: 2rem; }
+    .calc-title { font-size: 2rem; }
+
+    .plans-outer { padding: 3rem 0; }
+    .plans-title { font-size: 2rem; }
+
+    .rates-outer { padding: 3rem 0; gap: 2rem; }
+    .rates-title { font-size: 2rem; }
+    .rates-grid { grid-template-columns: 1fr; }
+
+    .savings-numbers { grid-template-columns: 1fr; gap: 0.75rem; }
+    .savings-divider { display: none; }
+
+    .calc-cta-card { flex-direction: column; align-items: flex-start; }
+
+    .result-amount { font-size: 2.5rem; }
+    .savings-stat-val { font-size: 1.1rem; }
+}
+
+@media (max-width: 480px) {
+    .pricing-hero-title { font-size: 1.875rem; }
+    .pricing-stat-cluster { grid-template-columns: 1fr; }
+    .stat-main { grid-column: span 1; }
+    .stat-wide { grid-column: span 1; }
+
+    .stepper-display input[type="number"] { font-size: 1.25rem; }
+
+    .plan-col-name { font-size: 0.8rem; }
+    .plan-col-price { font-size: 1rem; }
+}
+
+/* Animate total on change */
+@keyframes numFlash {
+    0% { opacity: 0.3; transform: scale(0.96); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+.result-amount.updating,
+.savings-stat-val.updating {
+    animation: numFlash 0.25s ease forwards;
+}
+
+.footer-visible { display: flex !important; }
+
+
+
+/* ------ CTA SECTION ------ */
+.cta-section {
+    padding: 0 24px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cta-section.unlocked {
+    display: flex;
+}
+
+.cta-container {
+    padding: 3rem 0;
+    max-width: 1200px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.cta-left {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.cta-title {
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--ghosxt-red-0);
+    line-height: 1.2;
+    max-width: 600px;
+}
+
+.cta-text {
+    font-size: 1.125rem;
+    color: var(--ghosxt-black);
+    font-family: var(--font-family-2);
+    line-height: 1.6;
+    max-width: 600px;
+}
+
+.cta-primary-btn {
+    width: fit-content;
+    padding: 1rem;
+    border: 1px solid var(--ghosxt-black);
+    border-radius: 4px;
+    background: var(--ghosxt-black);
+    color: var(--ghosxt-white);
+    font-size: 1rem;
+    font-family: var(--font-family-2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    z-index: 1000;
+}
+
+.cta-primary-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.3);
+}
+
+.cta-right {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+}
+
+/* Floating Animation Keyframes */
+@keyframes float {
+    0%, 100% {
+        transform: rotate(-8deg) translateY(0px);
+    }
+    50% {
+        transform: rotate(-8deg) translateY(-20px);
+    }
+}
+
+@keyframes floatShadow {
+    0%, 100% {
+        opacity: 0.3;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.15;
+        transform: scale(0.9);
+    }
+}
+
+.cta-image {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    border-radius: 20px;
+    transform: rotate(-8deg);
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    animation: float 3s ease-in-out infinite;
+    filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.2));
+}
+
+.cta-image:hover {
+    animation-play-state: paused;
+    transform: rotate(-8deg) translateY(-5px);
+}
+
+/* Optional: Add a subtle shadow element below the image */
+.cta-right::before {
+    content: '';
+    position: absolute;
+    bottom: 20px;
+    width: 80%;
+    height: 20px;
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.3) 0%, transparent 70%);
+    border-radius: 50%;
+    animation: floatShadow 3s ease-in-out infinite;
+    z-index: -1;
+}
+
+
+/* ------ RESPONSIVE STYLES ------ */
+@media (max-width: 968px) {
+    .cta-title {
+        font-size: 2.5rem;
+    }
+
+    .cta-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 2rem 0;
+    }
+
+    .cta-right {
+        min-height: 300px;
+    }
+
+    .cta-image {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 640px) {
+    .cta-section {
+        min-height: auto;
+        padding: 3rem 24px;
+    }
+
+    .cta-container {
+        padding: 1rem 0;
+        gap: 1.5rem;
+    }
+
+    .cta-title {
+        font-size: 2rem;
+    }
+
+    .cta-text {
+        font-size: 1rem;
+    }
+
+    .cta-primary-btn {
+        padding: 0.875rem 1.25rem !important;
+        font-size: 0.95rem !important;
+    }
+    
+    .cta-right {
+        min-height: 250px;
+    }
+
+    .cta-image {
+        border-radius: 15px;
+    }
+    
+    /* Reduce floating effect on mobile */
+    @keyframes float {
+        0%, 100% {
+            transform: rotate(-8deg) translateY(0px);
+        }
+        50% {
+            transform: rotate(-8deg) translateY(-12px);
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .cta-section {
+        min-height: auto;
+        padding: 2rem 24px;
+    }
+
+    .cta-title {
+        font-size: 1.5rem;
+    }
+
+    .cta-text {
+        font-size: 0.95rem;
+    }
+
+    .cta-right {
+        min-height: 200px;
+    }
+
+    .cta-image {
+        border-radius: 12px;
+    }
+
+    .cta-primary-btn {
+        padding: 0.75rem 1rem !important;
+        font-size: 0.9rem !important;
+    }
+    
+    /* Further reduce floating effect on smaller screens */
+    @keyframes float {
+        0%, 100% {
+            transform: rotate(-8deg) translateY(0px);
+        }
+        50% {
+            transform: rotate(-8deg) translateY(-8px);
+        }
+    }
+}

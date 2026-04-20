@@ -1,0 +1,631 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- PRIMARY SEO -->
+    <title>
+      Ghosxt Cares – Free IT Foundations for Monterey County Nonprofits
+    </title>
+    <meta
+      name="description"
+      content="Ghosxt Cares donates IT expertise to local 501(c)(3) nonprofits in Monterey County — Microsoft 365 setup, custom domain & email, basic website, DNS configuration, and onboarding. No labor cost."
+    />
+    <link rel="canonical" href="https://ghosxt.com/cares.html" />
+
+    <!-- FAVICON -->
+    <link rel="icon" href="assets/img/favicon.ico" sizes="any" />
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
+
+    <!-- PRECONNECT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+    <link rel="preconnect" href="https://cdn-uicons.flaticon.com" />
+
+    <!-- FONTS -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/ghosxt-cares.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css"
+    />
+  </head>
+
+  <body>
+    <!-- ACCESSIBILITY -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
+      <i class="fi fi-rs-angle-up" aria-hidden="true"></i>
+    </button>
+
+    <div class="cookie-banner" id="cookieBanner">
+      <div class="cookie-banner-container">
+        <div class="cookie-content">
+          <div class="cookie-icon">
+            <i class="fi fi-rs-cookie"></i>
+          </div>
+          <div class="cookie-text">
+            <p class="cookie-message">
+              We use cookies to enhance your browsing experience, serve
+              personalized content, and analyze our traffic. By clicking "Accept
+              All", you consent to our use of cookies.
+            </p>
+            <a href="privacy-policy.html" class="cookie-link"
+              >Learn more about our Privacy Policy</a
+            >
+          </div>
+        </div>
+        <div class="cookie-actions">
+          <button class="cookie-btn cookie-btn-secondary" id="cookieDecline">
+            Decline
+          </button>
+          <button class="cookie-btn cookie-btn-primary" id="cookieAccept">
+            Accept All
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- TOP BANNER -->
+    <div class="top-banner" id="topBanner">
+      <div class="banner-container">
+        <div class="banner-content">
+          <span class="banner-text">Need Remote Support? ►</span>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://ticket.ghosxt.com/"
+            class="banner-btn"
+          >
+            <i class="fi fi-rs-ticket-alt"></i>
+            <span>Visit Client Portal</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" aria-label="Main navigation">
+      <div class="navbar-container">
+        <div class="navbar-left">
+          <a href="index.html" class="navbar-logo">
+            <img
+              src="assets/img/ghosxt logo.webp"
+              alt="Ghosxt logo"
+              width="48"
+              height="48"
+            />
+            <span>GHOSXT</span>
+          </a>
+        </div>
+        <div class="navbar-right">
+          <div class="navbar-menu">
+            <a href="index.html" class="navbar-link">Home</a>
+            <a href="about.html" class="navbar-link">About</a>
+            <a href="services.html" class="navbar-link">Services</a>
+            <a href="pricing.html" class="navbar-link">Pricing</a>
+            <a href="website-development.html" class="navbar-link"
+              >Website Development</a
+            >
+            <a href="contact.html" class="navbar-link">Contact</a>
+          </div>
+          <button
+            class="navbar-mobile-toggle"
+            id="mobileToggle"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="mobileMenu"
+          >
+            <i class="fi fi-rs-burger-menu" aria-hidden="true"></i>
+          </button>
+          <div class="navbar-buttons">
+            <a
+              href="https://calendly.com/ulises-ghosxt"
+              class="navbar-btn btn-demo"
+            >
+              <i class="fi fi-rs-calendar-day"></i>
+              <span>Book a Call</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="navbar-overlay" id="navbarOverlay"></div>
+      <div class="navbar-mobile-menu" id="mobileMenu">
+        <a href="index.html" class="mobile-link">Home</a>
+        <a href="about.html" class="mobile-link">About</a>
+        <a href="services.html" class="mobile-link">Services</a>
+        <a href="pricing.html" class="mobile-link">Pricing</a>
+        <a href="website-development.html" class="mobile-link"
+          >Website Development</a
+        >
+        <a href="contact.html" class="mobile-link">Contact</a>
+        <div class="mobile-actions">
+          <a
+            href="https://calendly.com/ulises-ghosxt"
+            class="mobile-btn btn-demo"
+          >
+            <i class="fi fi-rs-calendar-day"></i>
+            <span>Book a Call</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <main id="main-content">
+      <!-- ── HERO ──────────────────────────────────────────────── -->
+      <section class="cares-hero-section" aria-label="Ghosxt Cares hero">
+        <div class="cares-hero-topline"></div>
+        <div class="cares-hero-grid" aria-hidden="true"></div>
+
+        <div class="cares-hero-container">
+          <div class="cares-hero-badge">
+            <div class="badge-lines">
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+            </div>
+            <div class="badge-container">
+              <i class="fi fi-rs-heart" aria-hidden="true"></i>
+              <div class="badge-text">Community Initiative</div>
+            </div>
+            <div class="badge-lines">
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+            </div>
+          </div>
+
+          <h1 class="cares-hero-title">Ghosxt <span>Cares</span></h1>
+
+          <p class="cares-hero-subtitle">
+            Free IT foundations for Monterey County nonprofits. We donate our
+            time and expertise to help local 501(c)(3) organizations build a
+            modern IT foundation — at no cost for our labor.
+          </p>
+
+          <a href="mailto:cares@ghosxt.com" class="cares-hero-cta">
+            <i class="fi fi-rs-envelope" aria-hidden="true"></i>
+            Apply at cares@ghosxt.com
+          </a>
+        </div>
+      </section>
+
+      <!-- ── WHAT WE PROVIDE ──────────────────────────────────── -->
+      <section class="provides-section" aria-label="What we provide">
+        <div class="provides-container">
+          <div class="provides-badge">
+            <div class="badge-lines">
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+            </div>
+            <div class="badge-container">
+              <i class="fi fi-rs-gift" aria-hidden="true"></i>
+              <div class="badge-text">What we provide</div>
+            </div>
+            <div class="badge-lines">
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+            </div>
+          </div>
+
+          <h2 class="provides-title">
+            Everything to get your<br />org online — done right.
+          </h2>
+          <p class="provides-subtitle">
+            Ghosxt is a Salinas-based managed IT provider. Through Ghosxt Cares,
+            we set your organization up with the tools it needs from day one.
+          </p>
+
+          <div class="provides-grid">
+            <div class="provides-card">
+              <div class="provides-card-icon">
+                <i class="fi fi-rs-cloud" aria-hidden="true"></i>
+              </div>
+              <div class="provides-card-title">Microsoft 365 Tenant Setup</div>
+              <p class="provides-card-desc">
+                We walk you through Microsoft's Nonprofit program and configure
+                your tenant, admin accounts, and security defaults.
+              </p>
+            </div>
+
+            <div class="provides-card">
+              <div class="provides-card-icon">
+                <i class="fi fi-rs-envelope" aria-hidden="true"></i>
+              </div>
+              <div class="provides-card-title">Custom Domain + Email</div>
+              <p class="provides-card-desc">
+                Professional email on your domain (e.g., you@yourorg.org). We
+                handle DNS records and mail flow configuration.
+              </p>
+            </div>
+
+            <div class="provides-card">
+              <div class="provides-card-icon">
+                <i class="fi fi-rs-globe" aria-hidden="true"></i>
+              </div>
+              <div class="provides-card-title">Basic Website</div>
+              <p class="provides-card-desc">
+                A clean single-page website deployed on your hosting — enough to
+                establish your online presence.
+              </p>
+            </div>
+
+            <div class="provides-card">
+              <div class="provides-card-icon">
+                <i class="fi fi-rs-settings" aria-hidden="true"></i>
+              </div>
+              <div class="provides-card-title">DNS Configuration</div>
+              <p class="provides-card-desc">
+                Domain routing, MX records, SPF/DKIM/DMARC — configured
+                correctly from day one.
+              </p>
+            </div>
+
+            <div class="provides-card">
+              <div class="provides-card-icon">
+                <i class="fi fi-rs-users" aria-hidden="true"></i>
+              </div>
+              <div class="provides-card-title">Onboarding Session</div>
+              <p class="provides-card-desc">
+                A 1-hour walkthrough so your team knows how to use what we
+                built.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── WHAT YOUR ORG COVERS ─────────────────────────────── -->
+      <section class="covers-section" aria-label="What your org covers">
+        <div class="covers-container">
+          <div class="covers-badge">
+            <div class="badge-lines">
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+            </div>
+            <div class="badge-container">
+              <i class="fi fi-rs-file-invoice-dollar" aria-hidden="true"></i>
+              <div class="badge-text">What your org covers</div>
+            </div>
+            <div class="badge-lines">
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+            </div>
+          </div>
+
+          <h2 class="covers-title">Your costs, kept minimal.</h2>
+          <p class="covers-subtitle">
+            Our labor is free. You only cover the third-party costs we have no
+            control over.
+          </p>
+
+          <div class="covers-list">
+            <div class="covers-item">
+              <div class="covers-item-dot"></div>
+              <span class="covers-item-text"
+                >Domain registration fees (~$12/year)</span
+              >
+            </div>
+            <div class="covers-item">
+              <div class="covers-item-dot"></div>
+              <span class="covers-item-text">
+                Microsoft 365 Nonprofit licensing (free or discounted via
+                Microsoft)
+              </span>
+            </div>
+            <div class="covers-item">
+              <div class="covers-item-dot"></div>
+              <span class="covers-item-text">Any web hosting costs</span>
+            </div>
+            <div class="covers-item">
+              <div class="covers-item-dot"></div>
+              <span class="covers-item-text">
+                Ongoing maintenance and support after setup
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── ELIGIBILITY ──────────────────────────────────────── -->
+      <section class="eligibility-section" aria-label="Eligibility">
+        <div class="eligibility-container">
+          <div class="eligibility-badge">
+            <div class="badge-lines">
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+            </div>
+            <div class="badge-container">
+              <i class="fi fi-rs-shield-check" aria-hidden="true"></i>
+              <div class="badge-text">Eligibility</div>
+            </div>
+            <div class="badge-lines">
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+            </div>
+          </div>
+
+          <h2 class="eligibility-title">Do you qualify?</h2>
+          <p class="eligibility-subtitle">
+            Ghosxt Cares is limited to keep quality high. Here's what's
+            required.
+          </p>
+
+          <div class="eligibility-box">
+            <ul class="eligibility-list">
+              <li>
+                <i class="fi fi-rs-check" aria-hidden="true"></i>
+                Active 501(c)(3) organization based in Monterey County
+              </li>
+              <li>
+                <i class="fi fi-rs-check" aria-hidden="true"></i>
+                Limited to 1 organization per quarter
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── APPLY / GET STARTED ──────────────────────────────── -->
+      <section class="apply-section" aria-label="Apply">
+        <div class="apply-container">
+          <h2 class="apply-title">
+            Ready to get<br /><span>your org online?</span>
+          </h2>
+          <p class="apply-text">
+            Send us an email and we'll follow up to confirm eligibility and
+            schedule your setup. Spots are limited to one organization per
+            quarter.
+          </p>
+          <a href="mailto:cares@ghosxt.com" class="apply-cta">
+            <i class="fi fi-rs-envelope" aria-hidden="true"></i>
+            Apply at cares@ghosxt.com
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="footerSection">
+      <div class="footer-container">
+        <div class="footer-brand-row">
+          <div class="footer-brand">
+            <img
+              src="assets/img/ghosxt logo.webp"
+              alt="Ghosxt logo"
+              width="80"
+              height="80"
+              loading="lazy"
+            />
+            <div class="footer-brand-text">
+              <span class="footer-brand-name">GHOSXT</span>
+              <span class="footer-brand-tagline"
+                >Government-grade IT for small business.</span
+              >
+            </div>
+          </div>
+          <div class="footer-cta-block">
+            <a
+              href="https://calendly.com/ulises-ghosxt"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="footer-cta-btn"
+            >
+              <i class="fi fi-rs-calendar-day" aria-hidden="true"></i>
+              Schedule Free Assessment
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-grid">
+          <div class="footer-column">
+            <h3 class="footer-column-title">Company</h3>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="pricing.html">Pricing</a></li>
+              <li>
+                <a href="website-development.html">Website Development</a>
+              </li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-column-title">Services</h3>
+            <ul class="footer-links">
+              <li>
+                <a href="services.html#managed-it">Managed IT Services</a>
+              </li>
+              <li><a href="services.html#cybersecurity">Cybersecurity</a></li>
+              <li><a href="services.html#cloud">Cloud Services</a></li>
+              <li><a href="website-development.html">Web Development</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-column-title">Resources</h3>
+            <ul class="footer-links">
+              <li><a href="privacy-policy.html">Privacy Policy</a></li>
+              <li>
+                <a
+                  href="https://ticket.ghosxt.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Client Portal
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://calendly.com/ulises-ghosxt"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Free IT Assessment
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-column-title">Connect</h3>
+            <ul class="footer-links footer-social-links">
+              <li>
+                <a
+                  href="https://www.linkedin.com/company/ghosxt/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.facebook.com/GhosxtTech"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fab fa-facebook" aria-hidden="true"></i> Facebook
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/ghosxttech/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fab fa-instagram" aria-hidden="true"></i> Instagram
+                </a>
+              </li>
+              <li>
+                <a href="mailto:info@ghosxt.com">
+                  <i class="fi fi-rs-envelope" aria-hidden="true"></i>
+                  info@ghosxt.com
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <div class="footer-bottom">
+          <p class="footer-copyright">
+            &copy; 2026 Ghosxt. All rights reserved. Built by a cleared DoD
+            engineer.
+          </p>
+          <div class="footer-bottom-links">
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <span aria-hidden="true">&middot;</span>
+            <a
+              href="https://ticket.ghosxt.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Client Portal
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/main.js" defer></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Scroll to top button
+        const scrollBtn = document.getElementById("scrollToTop");
+        if (scrollBtn) {
+          window.addEventListener("scroll", function () {
+            if (window.scrollY > 400) {
+              scrollBtn.classList.add("visible");
+            } else {
+              scrollBtn.classList.remove("visible");
+            }
+          });
+          scrollBtn.addEventListener("click", function () {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          });
+        }
+
+        // Mobile nav toggle
+        const mobileToggle = document.getElementById("mobileToggle");
+        const mobileMenu = document.getElementById("mobileMenu");
+        const navbarOverlay = document.getElementById("navbarOverlay");
+
+        if (mobileToggle && mobileMenu) {
+          mobileToggle.addEventListener("click", function () {
+            const isOpen = mobileMenu.classList.contains("open");
+            mobileMenu.classList.toggle("open");
+            mobileToggle.setAttribute("aria-expanded", !isOpen);
+          });
+        }
+
+        if (navbarOverlay) {
+          navbarOverlay.addEventListener("click", function () {
+            mobileMenu.classList.remove("open");
+            mobileToggle.setAttribute("aria-expanded", false);
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
