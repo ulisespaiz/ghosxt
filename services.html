@@ -1,994 +1,1402 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- PRIMARY SEO -->
-    <title>IT Services: Managed IT, Cybersecurity, Cloud & Web Dev | Ghosxt</title>
-    <meta name="description" content="Explore Ghosxt's full range of IT services for California small businesses — managed IT, cybersecurity, Microsoft 365, cloud migrations, and professional web development.">
-    <link rel="canonical" href="https://ghosxt.com/services.html">
+    <title>
+      IT Services: Managed IT, Cybersecurity, Cloud & Web Dev | Ghosxt
+    </title>
+    <meta
+      name="description"
+      content="Explore Ghosxt's full range of IT services for California small businesses — managed IT, cybersecurity, Microsoft 365, cloud migrations, and professional web development."
+    />
+    <link rel="canonical" href="https://ghosxt.com/services.html" />
 
     <!-- OPEN GRAPH -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ghosxt.com/services.html">
-    <meta property="og:title" content="IT Services: Managed IT, Cybersecurity, Cloud & Web Dev | Ghosxt">
-    <meta property="og:description" content="Managed IT, cybersecurity, Microsoft 365, cloud migrations, and web development for California small businesses.">
-    <meta property="og:image" content="https://ghosxt.com/assets/img/og-image.png">
-    <meta property="og:site_name" content="Ghosxt">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ghosxt.com/services.html" />
+    <meta
+      property="og:title"
+      content="IT Services: Managed IT, Cybersecurity, Cloud & Web Dev | Ghosxt"
+    />
+    <meta
+      property="og:description"
+      content="Managed IT, cybersecurity, Microsoft 365, cloud migrations, and web development for California small businesses."
+    />
+    <meta
+      property="og:image"
+      content="https://ghosxt.com/assets/img/og-image.png"
+    />
+    <meta property="og:site_name" content="Ghosxt" />
 
     <!-- TWITTER CARD -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="IT Services | Ghosxt – California">
-    <meta name="twitter:description" content="Managed IT, cybersecurity, Microsoft 365, cloud migrations, and web development for California small businesses.">
-    <meta name="twitter:image" content="https://ghosxt.com/assets/img/og-image.png">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="IT Services | Ghosxt – California" />
+    <meta
+      name="twitter:description"
+      content="Managed IT, cybersecurity, Microsoft 365, cloud migrations, and web development for California small businesses."
+    />
+    <meta
+      name="twitter:image"
+      content="https://ghosxt.com/assets/img/og-image.png"
+    />
 
     <!-- ROBOTS -->
-    <meta name="robots" content="index, follow">
+    <meta name="robots" content="index, follow" />
 
     <!-- FAVICON -->
-    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon.png">
-    <link rel="icon" href="assets/img/favicon.ico" sizes="any"> <!-- Fallback for older browsers -->
-    <link rel="apple-touch-icon" href="assets/img/ghosxt logo.png"> <!-- For iOS home screen -->
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/img/favicon.png"
+    />
+    <link rel="icon" href="assets/img/favicon.ico" sizes="any" />
+    <!-- Fallback for older browsers -->
+    <link rel="apple-touch-icon" href="assets/img/ghosxt logo.png" />
+    <!-- For iOS home screen -->
 
     <!-- PERFORMANCE: Preconnect -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    <link rel="preconnect" href="https://cdn-uicons.flaticon.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+    <link rel="preconnect" href="https://cdn-uicons.flaticon.com" />
 
     <!-- FONTS -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- STYLESHEETS -->
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/services.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css">
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/services.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css"
+    />
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js" defer></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"
+      defer
+    ></script>
 
     <!-- STRUCTURED DATA: Service page — ProfessionalService + ItemList + BreadcrumbList -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://ghosxt.com/"},
-            {"@type": "ListItem", "position": 2, "name": "Services", "item": "https://ghosxt.com/services.html"}
-          ]
-        },
-        {
-          "@type": "ProfessionalService",
-          "@id": "https://ghosxt.com/#business",
-          "name": "Ghosxt",
-          "url": "https://ghosxt.com/",
-          "logo": "https://ghosxt.com/assets/img/ghosxt-logo.webp",
-          "description": "Ghosxt provides managed IT services, cybersecurity, Microsoft 365 management, and cloud infrastructure for small and medium-sized businesses across California.",
-          "areaServed": {
-            "@type": "State",
-            "name": "California"
-          },
-          "serviceType": [
-            "Managed IT Services",
-            "Cybersecurity",
-            "Endpoint Detection and Response",
-            "Network Monitoring",
-            "Patch Management",
-            "Microsoft 365 Management",
-            "Backup and Disaster Recovery",
-            "Cloud Migration",
-            "IT Infrastructure Management"
-          ],
-          "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "Ghosxt Managed IT Service Plans",
-            "itemListElement": [
-              {
-                "@type": "Offer",
-                "name": "Core IT Management",
-                "description": "Managed IT for businesses with 15–30 employees. Includes infrastructure management, proactive monitoring, help desk support, security management, and quarterly strategic IT planning.",
-                "url": "https://ghosxt.com/services.html#service-plans"
-              },
-              {
-                "@type": "Offer",
-                "name": "Advanced Infrastructure Services",
-                "description": "Everything in Core IT Management plus advanced network architecture, cloud and hybrid environments, custom automation, and priority response for businesses with 30–50 employees.",
-                "url": "https://ghosxt.com/services.html#service-plans"
-              },
-              {
-                "@type": "Offer",
-                "name": "Strategic IT Partnership",
-                "description": "Fully customized IT management for 50+ employee businesses, including dedicated strategic planning, multi-site architecture, compliance-focused infrastructure (HIPAA, SOC 2), and custom SLAs.",
-                "url": "https://ghosxt.com/services.html#service-plans"
-              }
-            ]
-          },
-          "founder": {
-            "@type": "Person",
-            "name": "Ulises Paiz",
-            "jobTitle": "Founder & CEO",
-            "url": "https://ulisespaiz.com/"
-          },
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "contactType": "Customer Support",
-            "url": "https://calendly.com/ulises-ghosxt"
-          }
-        },
-        {
-          "@type": "WebPage",
-          "@id": "https://ghosxt.com/services.html",
-          "url": "https://ghosxt.com/services.html",
-          "name": "IT Services: Managed IT, Cybersecurity, Cloud & Web Dev | Ghosxt",
-          "description": "Explore Ghosxt's full range of IT services for California small businesses — managed IT, cybersecurity, Microsoft 365, cloud migrations, and professional web development.",
-          "isPartOf": {"@id": "https://ghosxt.com/#business"},
-          "about": {"@id": "https://ghosxt.com/#business"},
-          "breadcrumb": {
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
             "@type": "BreadcrumbList",
             "itemListElement": [
-              {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://ghosxt.com/"},
-              {"@type": "ListItem", "position": 2, "name": "Services", "item": "https://ghosxt.com/services.html"}
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://ghosxt.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Services",
+                "item": "https://ghosxt.com/services.html"
+              }
+            ]
+          },
+          {
+            "@type": "ProfessionalService",
+            "@id": "https://ghosxt.com/#business",
+            "name": "Ghosxt",
+            "url": "https://ghosxt.com/",
+            "logo": "https://ghosxt.com/assets/img/ghosxt-logo.webp",
+            "description": "Ghosxt provides managed IT services, cybersecurity, Microsoft 365 management, and cloud infrastructure for small and medium-sized businesses across California.",
+            "areaServed": {
+              "@type": "State",
+              "name": "California"
+            },
+            "serviceType": [
+              "Managed IT Services",
+              "Cybersecurity",
+              "Endpoint Detection and Response",
+              "Network Monitoring",
+              "Patch Management",
+              "Microsoft 365 Management",
+              "Backup and Disaster Recovery",
+              "Cloud Migration",
+              "IT Infrastructure Management"
+            ],
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Ghosxt Managed IT Service Plans",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "name": "Core IT Management",
+                  "description": "Managed IT for businesses with 15–30 employees. Includes infrastructure management, proactive monitoring, help desk support, security management, and quarterly strategic IT planning.",
+                  "url": "https://ghosxt.com/services.html#service-plans"
+                },
+                {
+                  "@type": "Offer",
+                  "name": "Advanced Infrastructure Services",
+                  "description": "Everything in Core IT Management plus advanced network architecture, cloud and hybrid environments, custom automation, and priority response for businesses with 30–50 employees.",
+                  "url": "https://ghosxt.com/services.html#service-plans"
+                },
+                {
+                  "@type": "Offer",
+                  "name": "Strategic IT Partnership",
+                  "description": "Fully customized IT management for 50+ employee businesses, including dedicated strategic planning, multi-site architecture, compliance-focused infrastructure (HIPAA, SOC 2), and custom SLAs.",
+                  "url": "https://ghosxt.com/services.html#service-plans"
+                }
+              ]
+            },
+            "founder": {
+              "@type": "Person",
+              "name": "Ulises Paiz",
+              "jobTitle": "Founder & CEO",
+              "url": "https://ulisespaiz.com/"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "contactType": "Customer Support",
+              "url": "https://calendly.com/ulises-ghosxt"
+            }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://ghosxt.com/services.html",
+            "url": "https://ghosxt.com/services.html",
+            "name": "IT Services: Managed IT, Cybersecurity, Cloud & Web Dev | Ghosxt",
+            "description": "Explore Ghosxt's full range of IT services for California small businesses — managed IT, cybersecurity, Microsoft 365, cloud migrations, and professional web development.",
+            "isPartOf": { "@id": "https://ghosxt.com/#business" },
+            "about": { "@id": "https://ghosxt.com/#business" },
+            "breadcrumb": {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://ghosxt.com/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Services",
+                  "item": "https://ghosxt.com/services.html"
+                }
+              ]
+            }
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is included in every Ghosxt managed IT plan?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Every Ghosxt plan includes Endpoint Detection & Response (Huntress EDR), network monitoring, automated patch management, Microsoft 365 management, and verified backup monitoring — plus a direct line to Uli with no ticket queues."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What size business does Ghosxt serve?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Ghosxt serves small and medium-sized businesses, typically 15 to 50+ employees, across California. Service tiers are tailored for businesses at different sizes and complexity levels."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does Ghosxt offer cybersecurity services?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. Ghosxt provides comprehensive cybersecurity including Endpoint Detection & Response with Huntress EDR, real-time network monitoring, patch management, incident response, and compliance support for HIPAA and SOC 2."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How does Ghosxt handle Microsoft 365?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Ghosxt fully manages Microsoft 365 environments including mailboxes, licenses, security defaults, user access, Azure AD, hybrid identity, and ongoing optimization to ensure you get maximum value from your subscription."
+                }
+              }
             ]
           }
-        },
-        {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "What is included in every Ghosxt managed IT plan?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Every Ghosxt plan includes Endpoint Detection & Response (Huntress EDR), network monitoring, automated patch management, Microsoft 365 management, and verified backup monitoring — plus a direct line to Uli with no ticket queues."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "What size business does Ghosxt serve?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Ghosxt serves small and medium-sized businesses, typically 15 to 50+ employees, across California. Service tiers are tailored for businesses at different sizes and complexity levels."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Does Ghosxt offer cybersecurity services?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes. Ghosxt provides comprehensive cybersecurity including Endpoint Detection & Response with Huntress EDR, real-time network monitoring, patch management, incident response, and compliance support for HIPAA and SOC 2."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "How does Ghosxt handle Microsoft 365?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Ghosxt fully manages Microsoft 365 environments including mailboxes, licenses, security defaults, user access, Azure AD, hybrid identity, and ongoing optimization to ensure you get maximum value from your subscription."
-              }
-            }
-          ]
-        }
-      ]
-    }
+        ]
+      }
     </script>
-</head>
-<body>
-
+  </head>
+  <body>
     <!-- ACCESSIBILITY: Skip link -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <div class="grain-overlay"></div> 
+    <div class="grain-overlay"></div>
 
     <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
-        <i class="fi fi-rs-angle-up" aria-hidden="true"></i>
+      <i class="fi fi-rs-angle-up" aria-hidden="true"></i>
     </button>
 
     <div class="cookie-banner" id="cookieBanner">
-        <div class="cookie-banner-container">
-            <div class="cookie-content">
-                <div class="cookie-icon">
-                    <i class="fi fi-rs-cookie"></i>
-                </div>
-                <div class="cookie-text">
-                    <p class="cookie-message">We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.</p>
-                    <a href="privacy-policy.html" class="cookie-link">Learn more about our Privacy Policy</a>
-                </div>
-            </div>
-            <div class="cookie-actions">
-                <button class="cookie-btn cookie-btn-secondary" id="cookieDecline">
-                    Decline
-                </button>
-                <button class="cookie-btn cookie-btn-primary" id="cookieAccept">
-                    Accept All
-                </button>
-            </div>
+      <div class="cookie-banner-container">
+        <div class="cookie-content">
+          <div class="cookie-icon">
+            <i class="fi fi-rs-cookie"></i>
+          </div>
+          <div class="cookie-text">
+            <p class="cookie-message">
+              We use cookies to enhance your browsing experience, serve
+              personalized content, and analyze our traffic. By clicking "Accept
+              All", you consent to our use of cookies.
+            </p>
+            <a href="privacy-policy.html" class="cookie-link"
+              >Learn more about our Privacy Policy</a
+            >
+          </div>
         </div>
+        <div class="cookie-actions">
+          <button class="cookie-btn cookie-btn-secondary" id="cookieDecline">
+            Decline
+          </button>
+          <button class="cookie-btn cookie-btn-primary" id="cookieAccept">
+            Accept All
+          </button>
+        </div>
+      </div>
     </div>
 
     <div class="top-banner" id="topBanner">
-        <div class="banner-container">
-            <div class="banner-content">
-                <span class="banner-text">Need Remote Support? ►</span>
-                <a target="_blank" href="https://ticket.ghosxt.com/" class="banner-btn"><i class="fi fi-rs-ticket-alt"></i> <span>Visit Client Portal</span></a>
-            </div>
-            <!--
+      <div class="banner-container">
+        <div class="banner-content">
+          <span class="banner-text">Need Remote Support? ►</span>
+          <a
+            target="_blank"
+            href="https://ticket.ghosxt.com/"
+            class="banner-btn"
+            ><i class="fi fi-rs-ticket-alt"></i>
+            <span>Visit Client Portal</span></a
+          >
+        </div>
+        <!--
             <button class="banner-close" id="bannerClose" aria-label="Close announcement banner">
                 <i class="fi fi-rs-cross" aria-hidden="true"></i>
             </button>
             -->
-        </div>
+      </div>
     </div>
 
     <nav class="navbar" aria-label="Main navigation">
-        <div class="navbar-container">
-            <div class="navbar-left">
-                <a href="index.html" class="navbar-logo">
-                    <img src="assets/img/ghosxt logo.webp" alt="Ghosxt logo" width="48" height="48">
-                    <span>GHOSXT</span>
-                </a>
-            </div>
-            <div class="navbar-right">
-                <div class="navbar-menu">
-                    <a href="index.html" class="navbar-link">Home</a>
-                    <a href="about.html" class="navbar-link">About</a>
-                    <a href="services.html" class="navbar-link">Services</a>
-                    <a href="pricing.html" class="navbar-link">Pricing</a>
-                    <a href="website-development.html" class="navbar-link">Website Development</a>
-                    <a href="contact.html" class="navbar-link">Contact</a>
-                </div>
-                <button class="navbar-mobile-toggle" id="mobileToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu">
-                    <i class="fi fi-rs-burger-menu" aria-hidden="true"></i>
-                </button>
-                <div class="navbar-buttons">
-                    <a href="https://calendly.com/ulises-ghosxt" class="navbar-btn btn-demo">
-                        <i class="fi fi-rs-calendar-day"></i>
-                        <span>Book a Call</span>
-                    </a>
-                </div>
-            </div>
+      <div class="navbar-container">
+        <div class="navbar-left">
+          <a href="index.html" class="navbar-logo">
+            <img
+              src="assets/img/ghosxt logo.webp"
+              alt="Ghosxt logo"
+              width="48"
+              height="48"
+            />
+            <span>GHOSXT</span>
+          </a>
         </div>
-        <div class="navbar-overlay" id="navbarOverlay"></div>
-        <div class="navbar-mobile-menu" id="mobileMenu">
-            <a href="index.html" class="mobile-link">Home</a>
-            <a href="about.html" class="mobile-link">About</a>
-            <a href="services.html" class="mobile-link">Services</a>
-            <a href="pricing.html" class="mobile-link">Pricing</a>
-            <a href="website-development.html" class="navbar-link">Website Development</a>
-            <a href="contact.html" class="mobile-link">Contact</a>
-            <div class="mobile-actions">
-                <a href="https://calendly.com/ulises-ghosxt" class="mobile-btn btn-demo">
-                    <i class="fi fi-rs-calendar-day"></i>
-                    <span>Book a Call</span>
-                </a>
-            </div>
+        <div class="navbar-right">
+          <div class="navbar-menu">
+            <a href="index.html" class="navbar-link">Home</a>
+            <a href="about.html" class="navbar-link">About</a>
+            <a href="services.html" class="navbar-link">Services</a>
+            <a href="pricing.html" class="navbar-link">Pricing</a>
+            <a href="website-development.html" class="navbar-link"
+              >Website Development</a
+            >
+            <a href="contact.html" class="navbar-link">Contact</a>
+          </div>
+          <button
+            class="navbar-mobile-toggle"
+            id="mobileToggle"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="mobileMenu"
+          >
+            <i class="fi fi-rs-burger-menu" aria-hidden="true"></i>
+          </button>
+          <div class="navbar-buttons">
+            <a
+              href="https://calendly.com/ulises-ghosxt"
+              target="_blank"
+              class="navbar-btn btn-demo"
+            >
+              <i class="fi fi-rs-calendar-day"></i>
+              <span>Book a Call</span>
+            </a>
+          </div>
         </div>
+      </div>
+      <div class="navbar-overlay" id="navbarOverlay"></div>
+      <div class="navbar-mobile-menu" id="mobileMenu">
+        <a href="index.html" class="mobile-link">Home</a>
+        <a href="about.html" class="mobile-link">About</a>
+        <a href="services.html" class="mobile-link">Services</a>
+        <a href="pricing.html" class="mobile-link">Pricing</a>
+        <a href="website-development.html" class="navbar-link"
+          >Website Development</a
+        >
+        <a href="contact.html" class="mobile-link">Contact</a>
+        <div class="mobile-actions">
+          <a
+            href="https://calendly.com/ulises-ghosxt"
+            target="_blank"
+            class="mobile-btn btn-demo"
+          >
+            <i class="fi fi-rs-calendar-day"></i>
+            <span>Book a Call</span>
+          </a>
+        </div>
+      </div>
     </nav>
 
     <main id="main-content">
-    <div class="services-hero-section">
+      <div class="services-hero-section">
         <div class="services-hero-container">
-
-            <!-- Left -->
-            <div class="services-hero-left">
-
-                <div class="services-hero-badge" role="note" aria-label="Page section: Our Services">
-                    <div class="badge-lines" aria-hidden="true">
-                        <div class="badge-line"></div>
-                        <div class="badge-line"></div>
-                        <div class="badge-line"></div>
-                        <div class="badge-line"></div>
-                        <div class="badge-line"></div>
-                        <div class="badge-line"></div>
-                        <div class="badge-line"></div>
-                    </div>
-                    <div class="badge-container">
-                        <i class="fi fi-rs-user-headset" aria-hidden="true"></i>
-                        <div class="services-hero-badge-text">Our Services</div>
-                    </div>
-                    <div class="badge-lines" aria-hidden="true">
-                        <div class="badge-line"></div>
-                        <div class="badge-line"></div>
-                        <div class="badge-line"></div>
-                        <div class="badge-line"></div>
-                        <div class="badge-line"></div>
-                        <div class="badge-line"></div>
-                        <div class="badge-line"></div>
-                    </div>
-                </div>
-
-                <h1 class="services-hero-title">IT that works<br><span class="title-black">before you have to ask.</span></h1>
-
-                <p class="services-hero-subtitle">Most small businesses don't find out their IT is broken until something stops working. Ghosxt fixes that. We monitor, patch, and secure your systems around the clock so problems get caught before they turn into downtime.</p>
-
-                <p class="services-hero-subtitle">You get a dedicated engineer who knows your setup by name, not a ticket queue and a stranger every time. We bring the tools and discipline of enterprise IT at a price that makes sense for a business your size.</p>
-
-                <div class="services-hero-cta-row">
-                    <a class="services-hero-btn-primary" href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer" aria-label="Book a free IT consultation call with Ghosxt">
-                        <i class="fi fi-rs-calendar-day" aria-hidden="true"></i>
-                        Book a Free Call
-                    </a>
-                    <a class="services-hero-btn-secondary" href="#service-plans" aria-label="Jump to Ghosxt service plan tiers">
-                        See Our Plans
-                        <i class="fi fi-rs-arrow-down" aria-hidden="true"></i>
-                    </a>
-                </div>
-
+          <!-- Left -->
+          <div class="services-hero-left">
+            <div
+              class="services-hero-badge"
+              role="note"
+              aria-label="Page section: Our Services"
+            >
+              <div class="badge-lines" aria-hidden="true">
+                <div class="badge-line"></div>
+                <div class="badge-line"></div>
+                <div class="badge-line"></div>
+                <div class="badge-line"></div>
+                <div class="badge-line"></div>
+                <div class="badge-line"></div>
+                <div class="badge-line"></div>
+              </div>
+              <div class="badge-container">
+                <i class="fi fi-rs-user-headset" aria-hidden="true"></i>
+                <div class="services-hero-badge-text">Our Services</div>
+              </div>
+              <div class="badge-lines" aria-hidden="true">
+                <div class="badge-line"></div>
+                <div class="badge-line"></div>
+                <div class="badge-line"></div>
+                <div class="badge-line"></div>
+                <div class="badge-line"></div>
+                <div class="badge-line"></div>
+                <div class="badge-line"></div>
+              </div>
             </div>
 
-            <!-- Right: Service Checklist Card -->
-            <div class="services-hero-right">
-                <div class="service-checklist-card" role="region" aria-label="What is included in every Ghosxt managed IT plan">
+            <h1 class="services-hero-title">
+              IT that works<br /><span class="title-black"
+                >before you have to ask.</span
+              >
+            </h1>
 
-                    <div class="checklist-card-header">
-                        <div class="checklist-card-title">What's included in every plan</div>
-                        <div class="checklist-card-badge" aria-label="Status: Active">
-                            <i class="fi fi-rs-shield-check" aria-hidden="true"></i>
-                            Active
-                        </div>
-                    </div>
+            <p class="services-hero-subtitle">
+              Most small businesses don't find out their IT is broken until
+              something stops working. Ghosxt fixes that. We monitor, patch, and
+              secure your systems around the clock so problems get caught before
+              they turn into downtime.
+            </p>
 
-                    <ul class="checklist-items" aria-label="Included services">
+            <p class="services-hero-subtitle">
+              You get a dedicated engineer who knows your setup by name, not a
+              ticket queue and a stranger every time. We bring the tools and
+              discipline of enterprise IT at a price that makes sense for a
+              business your size.
+            </p>
 
-                        <li class="checklist-item">
-                            <div class="checklist-item-icon" aria-hidden="true"><i class="fi fi-rs-shield-exclamation"></i></div>
-                            <div class="checklist-item-body">
-                                <div class="checklist-item-name">Endpoint Detection &amp; Response</div>
-                                <div class="checklist-item-desc">Huntress EDR watches every device 24/7 and kills threats before they spread.</div>
-                            </div>
-                        </li>
-
-                        <li class="checklist-item">
-                            <div class="checklist-item-icon" aria-hidden="true"><i class="fi fi-rs-network"></i></div>
-                            <div class="checklist-item-body">
-                                <div class="checklist-item-name">Network Monitoring</div>
-                                <div class="checklist-item-desc">UniFi infrastructure with proactive alerts. We see outages before you do.</div>
-                            </div>
-                        </li>
-
-                        <li class="checklist-item">
-                            <div class="checklist-item-icon" aria-hidden="true"><i class="fi fi-rs-settings"></i></div>
-                            <div class="checklist-item-body">
-                                <div class="checklist-item-name">Patch Management</div>
-                                <div class="checklist-item-desc">Automated OS and app updates across all your endpoints. No stragglers.</div>
-                            </div>
-                        </li>
-
-                        <li class="checklist-item">
-                            <div class="checklist-item-icon" aria-hidden="true"><i class="fi fi-rs-cloud-check"></i></div>
-                            <div class="checklist-item-body">
-                                <div class="checklist-item-name">Microsoft 365 Management</div>
-                                <div class="checklist-item-desc">Mailboxes, licenses, security defaults, and user access handled for you.</div>
-                            </div>
-                        </li>
-
-                        <li class="checklist-item">
-                            <div class="checklist-item-icon" aria-hidden="true"><i class="fi fi-rs-backup"></i></div>
-                            <div class="checklist-item-body">
-                                <div class="checklist-item-name">Verified Backup Monitoring</div>
-                                <div class="checklist-item-desc">Backups that actually get checked. We confirm recovery works, not just that files exist.</div>
-                            </div>
-                        </li>
-
-                    </ul>
-
-                    <div class="checklist-card-footer">
-                        <i class="fi fi-rs-phone-call" aria-hidden="true"></i>
-                        Direct line to Uli. No tickets. No hold music.
-                    </div>
-
-                </div>
+            <div class="services-hero-cta-row">
+              <a
+                class="services-hero-btn-primary"
+                href="https://calendly.com/ulises-ghosxt"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Book a free IT consultation call with Ghosxt"
+              >
+                <i class="fi fi-rs-calendar-day" aria-hidden="true"></i>
+                Book a Free Call
+              </a>
+              <a
+                class="services-hero-btn-secondary"
+                href="#service-plans"
+                aria-label="Jump to Ghosxt service plan tiers"
+              >
+                See Our Plans
+                <i class="fi fi-rs-arrow-down" aria-hidden="true"></i>
+              </a>
             </div>
+          </div>
 
+          <!-- Right: Service Checklist Card -->
+          <div class="services-hero-right">
+            <div
+              class="service-checklist-card"
+              role="region"
+              aria-label="What is included in every Ghosxt managed IT plan"
+            >
+              <div class="checklist-card-header">
+                <div class="checklist-card-title">
+                  What's included in every plan
+                </div>
+                <div class="checklist-card-badge" aria-label="Status: Active">
+                  <i class="fi fi-rs-shield-check" aria-hidden="true"></i>
+                  Active
+                </div>
+              </div>
+
+              <ul class="checklist-items" aria-label="Included services">
+                <li class="checklist-item">
+                  <div class="checklist-item-icon" aria-hidden="true">
+                    <i class="fi fi-rs-shield-exclamation"></i>
+                  </div>
+                  <div class="checklist-item-body">
+                    <div class="checklist-item-name">
+                      Endpoint Detection &amp; Response
+                    </div>
+                    <div class="checklist-item-desc">
+                      Huntress EDR watches every device 24/7 and kills threats
+                      before they spread.
+                    </div>
+                  </div>
+                </li>
+
+                <li class="checklist-item">
+                  <div class="checklist-item-icon" aria-hidden="true">
+                    <i class="fi fi-rs-network"></i>
+                  </div>
+                  <div class="checklist-item-body">
+                    <div class="checklist-item-name">Network Monitoring</div>
+                    <div class="checklist-item-desc">
+                      UniFi infrastructure with proactive alerts. We see outages
+                      before you do.
+                    </div>
+                  </div>
+                </li>
+
+                <li class="checklist-item">
+                  <div class="checklist-item-icon" aria-hidden="true">
+                    <i class="fi fi-rs-settings"></i>
+                  </div>
+                  <div class="checklist-item-body">
+                    <div class="checklist-item-name">Patch Management</div>
+                    <div class="checklist-item-desc">
+                      Automated OS and app updates across all your endpoints. No
+                      stragglers.
+                    </div>
+                  </div>
+                </li>
+
+                <li class="checklist-item">
+                  <div class="checklist-item-icon" aria-hidden="true">
+                    <i class="fi fi-rs-cloud-check"></i>
+                  </div>
+                  <div class="checklist-item-body">
+                    <div class="checklist-item-name">
+                      Microsoft 365 Management
+                    </div>
+                    <div class="checklist-item-desc">
+                      Mailboxes, licenses, security defaults, and user access
+                      handled for you.
+                    </div>
+                  </div>
+                </li>
+
+                <li class="checklist-item">
+                  <div class="checklist-item-icon" aria-hidden="true">
+                    <i class="fi fi-rs-backup"></i>
+                  </div>
+                  <div class="checklist-item-body">
+                    <div class="checklist-item-name">
+                      Verified Backup Monitoring
+                    </div>
+                    <div class="checklist-item-desc">
+                      Backups that actually get checked. We confirm recovery
+                      works, not just that files exist.
+                    </div>
+                  </div>
+                </li>
+              </ul>
+
+              <div class="checklist-card-footer">
+                <i class="fi fi-rs-phone-call" aria-hidden="true"></i>
+                Direct line to Uli. No tickets. No hold music.
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
+      </div>
 
-    <div class="slider-section">
+      <div class="slider-section">
         <div class="slider-track">
-            <div class="slider-item"><i class="fi fi-rs-flame" aria-hidden="true"></i> Website Development</div>
-            <div class="slider-item"><i class="fi fi-rs-flame" aria-hidden="true"></i> Data Recovery</div>
-            <div class="slider-item"><i class="fi fi-rs-flame" aria-hidden="true"></i> Penetration Testing</div>
-            <div class="slider-item"><i class="fi fi-rs-flame" aria-hidden="true"></i> Fraud Detection</div>
-            <div class="slider-item"><i class="fi fi-rs-flame" aria-hidden="true"></i> 24/7 Monitoring</div>
-            <div class="slider-item"><i class="fi fi-rs-flame" aria-hidden="true"></i> Compliance Audits</div>
-            <div class="slider-item"><i class="fi fi-rs-flame" aria-hidden="true"></i> Data Backup</div>
-            <div class="slider-item"><i class="fi fi-rs-flame" aria-hidden="true"></i> Cloud Migration</div>
-            <!-- Duplicates for seamless loop -->
-            <div class="slider-item"><i class="fi fi-rs-flame" aria-hidden="true"></i> Website Development</div>
-            <div class="slider-item"><i class="fi fi-rs-flame" aria-hidden="true"></i> Data Recovery</div>
-            <div class="slider-item"><i class="fi fi-rs-flame" aria-hidden="true"></i> Penetration Testing</div>
-            <div class="slider-item"><i class="fi fi-rs-flame" aria-hidden="true"></i> Fraud Detection</div>
-            <div class="slider-item"><i class="fi fi-rs-flame" aria-hidden="true"></i> 24/7 Monitoring</div>
-            <div class="slider-item"><i class="fi fi-rs-flame" aria-hidden="true"></i> Compliance Audits</div>
-            <div class="slider-item"><i class="fi fi-rs-flame" aria-hidden="true"></i> Data Backup</div>
-            <div class="slider-item"><i class="fi fi-rs-flame" aria-hidden="true"></i> Cloud Migration</div>
+          <div class="slider-item">
+            <i class="fi fi-rs-flame" aria-hidden="true"></i> Website
+            Development
+          </div>
+          <div class="slider-item">
+            <i class="fi fi-rs-flame" aria-hidden="true"></i> Data Recovery
+          </div>
+          <div class="slider-item">
+            <i class="fi fi-rs-flame" aria-hidden="true"></i> Penetration
+            Testing
+          </div>
+          <div class="slider-item">
+            <i class="fi fi-rs-flame" aria-hidden="true"></i> Fraud Detection
+          </div>
+          <div class="slider-item">
+            <i class="fi fi-rs-flame" aria-hidden="true"></i> 24/7 Monitoring
+          </div>
+          <div class="slider-item">
+            <i class="fi fi-rs-flame" aria-hidden="true"></i> Compliance Audits
+          </div>
+          <div class="slider-item">
+            <i class="fi fi-rs-flame" aria-hidden="true"></i> Data Backup
+          </div>
+          <div class="slider-item">
+            <i class="fi fi-rs-flame" aria-hidden="true"></i> Cloud Migration
+          </div>
+          <!-- Duplicates for seamless loop -->
+          <div class="slider-item">
+            <i class="fi fi-rs-flame" aria-hidden="true"></i> Website
+            Development
+          </div>
+          <div class="slider-item">
+            <i class="fi fi-rs-flame" aria-hidden="true"></i> Data Recovery
+          </div>
+          <div class="slider-item">
+            <i class="fi fi-rs-flame" aria-hidden="true"></i> Penetration
+            Testing
+          </div>
+          <div class="slider-item">
+            <i class="fi fi-rs-flame" aria-hidden="true"></i> Fraud Detection
+          </div>
+          <div class="slider-item">
+            <i class="fi fi-rs-flame" aria-hidden="true"></i> 24/7 Monitoring
+          </div>
+          <div class="slider-item">
+            <i class="fi fi-rs-flame" aria-hidden="true"></i> Compliance Audits
+          </div>
+          <div class="slider-item">
+            <i class="fi fi-rs-flame" aria-hidden="true"></i> Data Backup
+          </div>
+          <div class="slider-item">
+            <i class="fi fi-rs-flame" aria-hidden="true"></i> Cloud Migration
+          </div>
         </div>
-    </div>
+      </div>
 
-    <div class="tiers-section" id="service-plans">
+      <div class="tiers-section" id="service-plans">
         <div class="tiers-container">
-            <!-- Header -->
-            <div class="tiers-header">
-                <div class="center-badge">
-                    <div class="badge-lines">
-                        <div class="badge-line"></div>
-                        <div class="badge-line"></div>
-                        <div class="badge-line"></div>
-                        <div class="badge-line"></div>
-                        <div class="badge-line"></div>
-                        <div class="badge-line"></div>
-                        <div class="badge-line"></div>
-                    </div>
-                    <div class="badge-container">
-                        <i class="fi fi-rs-layers"></i>
-                        <div class="solutions-badge-text">Service Tiers</div>
-                    </div>
-                    <div class="badge-lines">
-                        <div class="badge-line"></div>
-                        <div class="badge-line"></div>
-                        <div class="badge-line"></div>
-                        <div class="badge-line"></div>
-                        <div class="badge-line"></div>
-                        <div class="badge-line"></div>
-                        <div class="badge-line"></div>
-                    </div>
-                </div>
-                
-                <h2 class="tiers-title">Choose Your <span class="title-span-text">Service Level</span></h2>
-                <p class="tiers-subtitle">We offer three tiers of managed IT services, each designed for different business sizes and complexity levels. All tiers include our core commitment to proper infrastructure, proactive monitoring, and transparent communication.</p>
+          <!-- Header -->
+          <div class="tiers-header">
+            <div class="center-badge">
+              <div class="badge-lines">
+                <div class="badge-line"></div>
+                <div class="badge-line"></div>
+                <div class="badge-line"></div>
+                <div class="badge-line"></div>
+                <div class="badge-line"></div>
+                <div class="badge-line"></div>
+                <div class="badge-line"></div>
+              </div>
+              <div class="badge-container">
+                <i class="fi fi-rs-layers"></i>
+                <div class="solutions-badge-text">Service Tiers</div>
+              </div>
+              <div class="badge-lines">
+                <div class="badge-line"></div>
+                <div class="badge-line"></div>
+                <div class="badge-line"></div>
+                <div class="badge-line"></div>
+                <div class="badge-line"></div>
+                <div class="badge-line"></div>
+                <div class="badge-line"></div>
+              </div>
             </div>
 
-            <!-- Tier 1: Core IT Management -->
-            <div class="tier-block">
-                <div class="tier-block-header">
-                    <div class="tier-block-left">
-                        <div class="tier-number">01</div>
-                        <div class="tier-info">
-                            <h3 class="tier-block-title">Core IT Management</h3>
-                            <p class="tier-block-subtitle">Best for: 15-30 employee businesses that need reliable IT infrastructure</p>
-                        </div>
-                    </div>
-                    <a href="https://calendly.com/ulises-ghosxt" class="tier-block-btn">
-                        <i class="fi fi-rs-calendar"></i>
-                        <span>Schedule a Consultation</span>
-                    </a>
+            <h2 class="tiers-title">
+              Choose Your <span class="title-span-text">Service Level</span>
+            </h2>
+            <p class="tiers-subtitle">
+              We offer three tiers of managed IT services, each designed for
+              different business sizes and complexity levels. All tiers include
+              our core commitment to proper infrastructure, proactive
+              monitoring, and transparent communication.
+            </p>
+          </div>
+
+          <!-- Tier 1: Core IT Management -->
+          <div class="tier-block">
+            <div class="tier-block-header">
+              <div class="tier-block-left">
+                <div class="tier-number">01</div>
+                <div class="tier-info">
+                  <h3 class="tier-block-title">Core IT Management</h3>
+                  <p class="tier-block-subtitle">
+                    Best for: 15-30 employee businesses that need reliable IT
+                    infrastructure
+                  </p>
                 </div>
-
-                <div class="tier-block-content">
-                    <div class="tier-feature-group">
-                        <div class="tier-feature">
-                            <div class="tier-feature-icon">
-                                <i class="fi fi-rs-network"></i>
-                            </div>
-                            <div class="tier-feature-content">
-                                <h4 class="tier-feature-title">Infrastructure Management</h4>
-                                <ul class="tier-feature-list">
-                                    <li>Network architecture and configuration</li>
-                                    <li>Server management (on-premises or cloud)</li>
-                                    <li>Firewall security and rule management</li>
-                                    <li>Regular infrastructure reviews and optimization</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="tier-feature">
-                            <div class="tier-feature-icon">
-                                <i class="fi fi-rs-time-fast"></i>
-                            </div>
-                            <div class="tier-feature-content">
-                                <h4 class="tier-feature-title">Proactive Monitoring & Maintenance</h4>
-                                <ul class="tier-feature-list">
-                                    <li>24/7 automated system monitoring with custom alert systems</li>
-                                    <li>Regular security patching and updates</li>
-                                    <li>Performance monitoring and optimization</li>
-                                    <li>Automated backup verification</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="tier-feature">
-                            <div class="tier-feature-icon">
-                                <i class="fi fi-rs-headset"></i>
-                            </div>
-                            <div class="tier-feature-content">
-                                <h4 class="tier-feature-title">Help Desk Support</h4>
-                                <ul class="tier-feature-list">
-                                    <li>Business hours support (8am-6pm Pacific, Monday-Friday)</li>
-                                    <li>Direct access for urgent issues and strategic decisions</li>
-                                    <li>Ticketing system for tracking and accountability</li>
-                                    <li>Remote and on-site support when needed</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="tier-feature">
-                            <div class="tier-feature-icon">
-                                <i class="fi fi-rs-lock"></i>
-                            </div>
-                            <div class="tier-feature-content">
-                                <h4 class="tier-feature-title">Security Management</h4>
-                                <ul class="tier-feature-list">
-                                    <li>Custom event log monitoring for suspicious activity</li>
-                                    <li>Endpoint protection management</li>
-                                    <li>Security configuration reviews</li>
-                                    <li>Regular security assessments and recommendations</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="tier-feature">
-                            <div class="tier-feature-icon">
-                                <i class="fi fi-rs-chart-tree"></i>
-                            </div>
-                            <div class="tier-feature-content">
-                                <h4 class="tier-feature-title">Strategic IT Planning</h4>
-                                <ul class="tier-feature-list">
-                                    <li>Quarterly IT planning sessions</li>
-                                    <li>Technology roadmap development</li>
-                                    <li>Budget planning for infrastructure improvements</li>
-                                    <li>Vendor management and licensing optimization</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              </div>
+              <a
+                href="https://calendly.com/ulises-ghosxt"
+                class="tier-block-btn"
+              >
+                <i class="fi fi-rs-calendar"></i>
+                <span>Schedule a Consultation</span>
+              </a>
             </div>
 
-            <!-- Tier 2: Advanced Infrastructure -->
-            <div class="tier-block tier-block-featured">
-                <div class="tier-block-header">
-                    <div class="tier-block-left">
-                        <div class="tier-number">02</div>
-                        <div class="tier-info">
-                            <h3 class="tier-block-title">Advanced Infrastructure Services</h3>
-                            <p class="tier-block-subtitle">Best for: 30-50 employee businesses or complex IT environments</p>
-                        </div>
-                    </div>
-                    <a href="https://calendly.com/ulises-ghosxt" class="tier-block-btn tier-block-btn-featured">
-                        <i class="fi fi-rs-meeting"></i>
-                        <span>Discuss Your Requirements</span>
-                    </a>
+            <div class="tier-block-content">
+              <div class="tier-feature-group">
+                <div class="tier-feature">
+                  <div class="tier-feature-icon">
+                    <i class="fi fi-rs-network"></i>
+                  </div>
+                  <div class="tier-feature-content">
+                    <h4 class="tier-feature-title">
+                      Infrastructure Management
+                    </h4>
+                    <ul class="tier-feature-list">
+                      <li>Network architecture and configuration</li>
+                      <li>Server management (on-premises or cloud)</li>
+                      <li>Firewall security and rule management</li>
+                      <li>Regular infrastructure reviews and optimization</li>
+                    </ul>
+                  </div>
                 </div>
 
-                <div class="tier-block-content">
-                    <div class="tier-included-banner">
-                        <i class="fi fi-rs-check-circle"></i>
-                        <p><strong>Everything in Core IT Management, plus:</strong></p>
-                    </div>
-
-                    <div class="tier-feature-group">
-                        <div class="tier-feature">
-                            <div class="tier-feature-icon">
-                                <i class="fi fi-rs-network-cloud"></i>
-                            </div>
-                            <div class="tier-feature-content">
-                                <h4 class="tier-feature-title">Advanced Network Architecture</h4>
-                                <ul class="tier-feature-list">
-                                    <li>VLAN segmentation for security and performance</li>
-                                    <li>Multi-site connectivity (VPN, SD-WAN)</li>
-                                    <li>Enterprise firewall configurations (pfSense, SonicWall, Sophos, WatchGuard)</li>
-                                    <li>Network performance optimization</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="tier-feature">
-                            <div class="tier-feature-icon">
-                                <i class="fi fi-rs-cloud"></i>
-                            </div>
-                            <div class="tier-feature-content">
-                                <h4 class="tier-feature-title">Cloud & Hybrid Environments</h4>
-                                <ul class="tier-feature-list">
-                                    <li>Microsoft 365 architecture and management</li>
-                                    <li>Azure infrastructure design and deployment</li>
-                                    <li>Hybrid Active Directory integration</li>
-                                    <li>Cloud migration planning and execution</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="tier-feature">
-                            <div class="tier-feature-icon">
-                                <i class="fi fi-rs-code-simple"></i>
-                            </div>
-                            <div class="tier-feature-content">
-                                <h4 class="tier-feature-title">Custom Automation</h4>
-                                <ul class="tier-feature-list">
-                                    <li>PowerShell scripting for automated deployments</li>
-                                    <li>Custom monitoring scripts for business-specific needs</li>
-                                    <li>Automated compliance reporting</li>
-                                    <li>System integration automation</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="tier-feature">
-                            <div class="tier-feature-icon">
-                                <i class="fi fi-rs-bolt"></i>
-                            </div>
-                            <div class="tier-feature-content">
-                                <h4 class="tier-feature-title">Priority Response</h4>
-                                <ul class="tier-feature-list">
-                                    <li>Priority ticket routing</li>
-                                    <li>2-hour response time for critical issues</li>
-                                    <li>After-hours emergency support</li>
-                                    <li>Dedicated capacity for urgent projects</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                <div class="tier-feature">
+                  <div class="tier-feature-icon">
+                    <i class="fi fi-rs-time-fast"></i>
+                  </div>
+                  <div class="tier-feature-content">
+                    <h4 class="tier-feature-title">
+                      Proactive Monitoring & Maintenance
+                    </h4>
+                    <ul class="tier-feature-list">
+                      <li>
+                        24/7 automated system monitoring with custom alert
+                        systems
+                      </li>
+                      <li>Regular security patching and updates</li>
+                      <li>Performance monitoring and optimization</li>
+                      <li>Automated backup verification</li>
+                    </ul>
+                  </div>
                 </div>
+
+                <div class="tier-feature">
+                  <div class="tier-feature-icon">
+                    <i class="fi fi-rs-headset"></i>
+                  </div>
+                  <div class="tier-feature-content">
+                    <h4 class="tier-feature-title">Help Desk Support</h4>
+                    <ul class="tier-feature-list">
+                      <li>
+                        Business hours support (8am-6pm Pacific, Monday-Friday)
+                      </li>
+                      <li>
+                        Direct access for urgent issues and strategic decisions
+                      </li>
+                      <li>Ticketing system for tracking and accountability</li>
+                      <li>Remote and on-site support when needed</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="tier-feature">
+                  <div class="tier-feature-icon">
+                    <i class="fi fi-rs-lock"></i>
+                  </div>
+                  <div class="tier-feature-content">
+                    <h4 class="tier-feature-title">Security Management</h4>
+                    <ul class="tier-feature-list">
+                      <li>
+                        Custom event log monitoring for suspicious activity
+                      </li>
+                      <li>Endpoint protection management</li>
+                      <li>Security configuration reviews</li>
+                      <li>Regular security assessments and recommendations</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="tier-feature">
+                  <div class="tier-feature-icon">
+                    <i class="fi fi-rs-chart-tree"></i>
+                  </div>
+                  <div class="tier-feature-content">
+                    <h4 class="tier-feature-title">Strategic IT Planning</h4>
+                    <ul class="tier-feature-list">
+                      <li>Quarterly IT planning sessions</li>
+                      <li>Technology roadmap development</li>
+                      <li>Budget planning for infrastructure improvements</li>
+                      <li>Vendor management and licensing optimization</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tier 2: Advanced Infrastructure -->
+          <div class="tier-block tier-block-featured">
+            <div class="tier-block-header">
+              <div class="tier-block-left">
+                <div class="tier-number">02</div>
+                <div class="tier-info">
+                  <h3 class="tier-block-title">
+                    Advanced Infrastructure Services
+                  </h3>
+                  <p class="tier-block-subtitle">
+                    Best for: 30-50 employee businesses or complex IT
+                    environments
+                  </p>
+                </div>
+              </div>
+              <a
+                href="https://calendly.com/ulises-ghosxt"
+                class="tier-block-btn tier-block-btn-featured"
+              >
+                <i class="fi fi-rs-meeting"></i>
+                <span>Discuss Your Requirements</span>
+              </a>
             </div>
 
-            <!-- Tier 3: Strategic Partnership -->
-            <div class="tier-block">
-                <div class="tier-block-header">
-                    <div class="tier-block-left">
-                        <div class="tier-number">03</div>
-                        <div class="tier-info">
-                            <h3 class="tier-block-title">Strategic IT Partnership</h3>
-                            <p class="tier-block-subtitle">Best for: 50+ employees or unique infrastructure requirements</p>
-                        </div>
-                    </div>
-                    <a href="https://calendly.com/ulises-ghosxt" class="tier-block-btn">
-                        <i class="fi fi-rs-business-deal"></i>
-                        <span>Let's Discuss Your Needs</span>
-                    </a>
+            <div class="tier-block-content">
+              <div class="tier-included-banner">
+                <i class="fi fi-rs-check-circle"></i>
+                <p><strong>Everything in Core IT Management, plus:</strong></p>
+              </div>
+
+              <div class="tier-feature-group">
+                <div class="tier-feature">
+                  <div class="tier-feature-icon">
+                    <i class="fi fi-rs-network-cloud"></i>
+                  </div>
+                  <div class="tier-feature-content">
+                    <h4 class="tier-feature-title">
+                      Advanced Network Architecture
+                    </h4>
+                    <ul class="tier-feature-list">
+                      <li>VLAN segmentation for security and performance</li>
+                      <li>Multi-site connectivity (VPN, SD-WAN)</li>
+                      <li>
+                        Enterprise firewall configurations (pfSense, SonicWall,
+                        Sophos, WatchGuard)
+                      </li>
+                      <li>Network performance optimization</li>
+                    </ul>
+                  </div>
                 </div>
 
-                <div class="tier-block-content">
-                    <div class="tier-description-block">
-                        <p>For larger businesses or those with complex infrastructure needs, we provide fully customized IT management including:</p>
-                    </div>
-
-                    <div class="tier-feature-group tier-feature-group-simple">
-                        <ul class="tier-feature-list-large">
-                            <li>Dedicated strategic IT planning and executive-level reporting</li>
-                            <li>Complex multi-site infrastructure architecture</li>
-                            <li>Integration with specialized industry systems</li>
-                            <li>Compliance-focused infrastructure (HIPAA, SOC 2, industry-specific requirements)</li>
-                            <li>Custom SLA agreements tailored to your business needs</li>
-                            <li>Scalable support as your business grows</li>
-                        </ul>
-                    </div>
-
-                    <div class="tier-custom-banner">
-                        <i class="fi fi-rs-info"></i>
-                        <p>Every strategic partnership is unique. We'll work with you to understand your specific requirements and build a service package that matches your needs and budget.</p>
-                    </div>
+                <div class="tier-feature">
+                  <div class="tier-feature-icon">
+                    <i class="fi fi-rs-cloud"></i>
+                  </div>
+                  <div class="tier-feature-content">
+                    <h4 class="tier-feature-title">
+                      Cloud & Hybrid Environments
+                    </h4>
+                    <ul class="tier-feature-list">
+                      <li>Microsoft 365 architecture and management</li>
+                      <li>Azure infrastructure design and deployment</li>
+                      <li>Hybrid Active Directory integration</li>
+                      <li>Cloud migration planning and execution</li>
+                    </ul>
+                  </div>
                 </div>
+
+                <div class="tier-feature">
+                  <div class="tier-feature-icon">
+                    <i class="fi fi-rs-code-simple"></i>
+                  </div>
+                  <div class="tier-feature-content">
+                    <h4 class="tier-feature-title">Custom Automation</h4>
+                    <ul class="tier-feature-list">
+                      <li>PowerShell scripting for automated deployments</li>
+                      <li>
+                        Custom monitoring scripts for business-specific needs
+                      </li>
+                      <li>Automated compliance reporting</li>
+                      <li>System integration automation</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="tier-feature">
+                  <div class="tier-feature-icon">
+                    <i class="fi fi-rs-bolt"></i>
+                  </div>
+                  <div class="tier-feature-content">
+                    <h4 class="tier-feature-title">Priority Response</h4>
+                    <ul class="tier-feature-list">
+                      <li>Priority ticket routing</li>
+                      <li>2-hour response time for critical issues</li>
+                      <li>After-hours emergency support</li>
+                      <li>Dedicated capacity for urgent projects</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
+
+          <!-- Tier 3: Strategic Partnership -->
+          <div class="tier-block">
+            <div class="tier-block-header">
+              <div class="tier-block-left">
+                <div class="tier-number">03</div>
+                <div class="tier-info">
+                  <h3 class="tier-block-title">Strategic IT Partnership</h3>
+                  <p class="tier-block-subtitle">
+                    Best for: 50+ employees or unique infrastructure
+                    requirements
+                  </p>
+                </div>
+              </div>
+              <a
+                href="https://calendly.com/ulises-ghosxt"
+                class="tier-block-btn"
+              >
+                <i class="fi fi-rs-business-deal"></i>
+                <span>Let's Discuss Your Needs</span>
+              </a>
+            </div>
+
+            <div class="tier-block-content">
+              <div class="tier-description-block">
+                <p>
+                  For larger businesses or those with complex infrastructure
+                  needs, we provide fully customized IT management including:
+                </p>
+              </div>
+
+              <div class="tier-feature-group tier-feature-group-simple">
+                <ul class="tier-feature-list-large">
+                  <li>
+                    Dedicated strategic IT planning and executive-level
+                    reporting
+                  </li>
+                  <li>Complex multi-site infrastructure architecture</li>
+                  <li>Integration with specialized industry systems</li>
+                  <li>
+                    Compliance-focused infrastructure (HIPAA, SOC 2,
+                    industry-specific requirements)
+                  </li>
+                  <li>Custom SLA agreements tailored to your business needs</li>
+                  <li>Scalable support as your business grows</li>
+                </ul>
+              </div>
+
+              <div class="tier-custom-banner">
+                <i class="fi fi-rs-info"></i>
+                <p>
+                  Every strategic partnership is unique. We'll work with you to
+                  understand your specific requirements and build a service
+                  package that matches your needs and budget.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
+      </div>
 
-    <div class="services-deep-section">
+      <div class="services-deep-section">
         <div class="services-deep-container">
-            <!-- Header -->
-            <div class="services-deep-header">
-                <div class="center-badge">
-                    <div class="badge-lines">
-                        <div class="badge-line"></div>
-                        <div class="badge-line"></div>
-                        <div class="badge-line"></div>
-                        <div class="badge-line"></div>
-                        <div class="badge-line"></div>
-                        <div class="badge-line"></div>
-                        <div class="badge-line"></div>
-                    </div>
-                    <div class="badge-container">
-                        <i class="fi fi-rs-settings-sliders"></i>
-                        <div class="solutions-badge-text">Our Expertise</div>
-                    </div>
-                    <div class="badge-lines">
-                        <div class="badge-line"></div>
-                        <div class="badge-line"></div>
-                        <div class="badge-line"></div>
-                        <div class="badge-line"></div>
-                        <div class="badge-line"></div>
-                        <div class="badge-line"></div>
-                        <div class="badge-line"></div>
-                    </div>
-                </div>
-                
-                <h2 class="services-deep-title">Core <span class="title-span-text">Services</span></h2>
-                <p class="services-deep-subtitle">Comprehensive IT services built on enterprise-grade practices, delivered with the responsiveness and cost-efficiency small businesses need.</p>
+          <!-- Header -->
+          <div class="services-deep-header">
+            <div class="center-badge">
+              <div class="badge-lines">
+                <div class="badge-line"></div>
+                <div class="badge-line"></div>
+                <div class="badge-line"></div>
+                <div class="badge-line"></div>
+                <div class="badge-line"></div>
+                <div class="badge-line"></div>
+                <div class="badge-line"></div>
+              </div>
+              <div class="badge-container">
+                <i class="fi fi-rs-settings-sliders"></i>
+                <div class="solutions-badge-text">Our Expertise</div>
+              </div>
+              <div class="badge-lines">
+                <div class="badge-line"></div>
+                <div class="badge-line"></div>
+                <div class="badge-line"></div>
+                <div class="badge-line"></div>
+                <div class="badge-line"></div>
+                <div class="badge-line"></div>
+                <div class="badge-line"></div>
+              </div>
             </div>
 
-            <!-- Service Cards - New Vertical Layout -->
-            <div class="services-stack">
-                
-                <!-- Service 1: Network Infrastructure -->
-                <div class="service-item">
-                    <div class="service-item-header">
-                        <div class="service-header-content">
-                            <h3 class="service-item-title">Network Infrastructure Management</h3>
-                            <p class="service-item-description">Your network is the foundation of everything your business does digitally. We design and maintain enterprise-grade network infrastructure that's reliable, secure, and built to scale with your business.</p>
-                        </div>
-                    </div>
+            <h2 class="services-deep-title">
+              Core <span class="title-span-text">Services</span>
+            </h2>
+            <p class="services-deep-subtitle">
+              Comprehensive IT services built on enterprise-grade practices,
+              delivered with the responsiveness and cost-efficiency small
+              businesses need.
+            </p>
+          </div>
 
-                    <div class="service-item-body">
-                        <div class="service-highlights">
-                            <div class="highlight-tag">VLAN Segmentation</div>
-                            <div class="highlight-tag">Enterprise Firewalls</div>
-                            <div class="highlight-tag">Complete Documentation</div>
-                            <div class="highlight-tag">24/7 Monitoring</div>
-                        </div>
+          <!-- Service Cards - New Vertical Layout -->
+          <div class="services-stack">
+            <!-- Service 1: Network Infrastructure -->
+            <div class="service-item">
+              <div class="service-item-header">
+                <div class="service-header-content">
+                  <h3 class="service-item-title">
+                    Network Infrastructure Management
+                  </h3>
+                  <p class="service-item-description">
+                    Your network is the foundation of everything your business
+                    does digitally. We design and maintain enterprise-grade
+                    network infrastructure that's reliable, secure, and built to
+                    scale with your business.
+                  </p>
+                </div>
+              </div>
 
-                        <button class="service-expand-btn">
-                            <span>View Full Details</span>
-                            <i class="fi fi-rs-angle-small-down"></i>
-                        </button>
-
-                        <div class="service-details">
-                            <div class="service-detail-section">
-                                <h4 class="service-detail-label">Why It Matters</h4>
-                                <p class="service-detail-text">Poor network design creates constant problems: slow performance, security vulnerabilities, and systems that don't work together properly. Good architecture prevents these issues and makes everything else—from cloud applications to local servers—work better.</p>
-                            </div>
-
-                            <div class="service-detail-section">
-                                <h4 class="service-detail-label">Our Approach</h4>
-                                <ul class="service-details-list">
-                                    <li>Enterprise architecture principles: VLAN segmentation, proper DHCP configuration, DNS architecture that actually works</li>
-                                    <li>Custom configurations optimized for your specific business needs and applications</li>
-                                    <li>Complete documentation so you're never locked into a single provider</li>
-                                    <li>Experience with all major vendors: pfSense, SonicWall, Sophos, WatchGuard firewalls; Aruba and UniFi networking equipment</li>
-                                    <li>Proactive monitoring catches network issues before they impact your business</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+              <div class="service-item-body">
+                <div class="service-highlights">
+                  <div class="highlight-tag">VLAN Segmentation</div>
+                  <div class="highlight-tag">Enterprise Firewalls</div>
+                  <div class="highlight-tag">Complete Documentation</div>
+                  <div class="highlight-tag">24/7 Monitoring</div>
                 </div>
 
-                <!-- Service 2: Cloud & M365 -->
-                <div class="service-item">
-                    <div class="service-item-header">
-                        <div class="service-header-content">
-                            <h3 class="service-item-title">Cloud & Microsoft 365 Services</h3>
-                            <p class="service-item-description">Cloud services and Microsoft 365 provide flexibility, reliability, and capabilities that on-premises infrastructure can't match. We handle migrations, management, and optimization so you get the benefits without the complexity.</p>
-                        </div>
-                    </div>
+                <button class="service-expand-btn">
+                  <span>View Full Details</span>
+                  <i class="fi fi-rs-angle-small-down"></i>
+                </button>
 
-                    <div class="service-item-body">
-                        <div class="service-highlights">
-                            <div class="highlight-tag">Microsoft 365</div>
-                            <div class="highlight-tag">Azure Infrastructure</div>
-                            <div class="highlight-tag">Hybrid Identity</div>
-                            <div class="highlight-tag">Cloud Migration</div>
-                        </div>
+                <div class="service-details">
+                  <div class="service-detail-section">
+                    <h4 class="service-detail-label">Why It Matters</h4>
+                    <p class="service-detail-text">
+                      Poor network design creates constant problems: slow
+                      performance, security vulnerabilities, and systems that
+                      don't work together properly. Good architecture prevents
+                      these issues and makes everything else—from cloud
+                      applications to local servers—work better.
+                    </p>
+                  </div>
 
-                        <button class="service-expand-btn">
-                            <span>View Full Details</span>
-                            <i class="fi fi-rs-angle-small-down"></i>
-                        </button>
-
-                        <div class="service-details">
-                            <div class="service-detail-section">
-                                <h4 class="service-detail-label">Why It Matters</h4>
-                                <p class="service-detail-text">Cloud migrations done wrong create months of problems. Done right, they improve reliability, reduce costs, and give your team better tools. The difference is in the planning and execution.</p>
-                            </div>
-
-                            <div class="service-detail-section">
-                                <h4 class="service-detail-label">Our Approach</h4>
-                                <ul class="service-details-list">
-                                    <li>Thorough planning before migration—understanding your workflows and requirements</li>
-                                    <li>Phased migrations that minimize disruption to daily operations</li>
-                                    <li>Proper tenant configuration and security settings</li>
-                                    <li>Azure AD and hybrid identity management</li>
-                                    <li>Ongoing optimization to ensure you're using cloud services efficiently</li>
-                                    <li>Training and support so your team actually uses the new capabilities</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                  <div class="service-detail-section">
+                    <h4 class="service-detail-label">Our Approach</h4>
+                    <ul class="service-details-list">
+                      <li>
+                        Enterprise architecture principles: VLAN segmentation,
+                        proper DHCP configuration, DNS architecture that
+                        actually works
+                      </li>
+                      <li>
+                        Custom configurations optimized for your specific
+                        business needs and applications
+                      </li>
+                      <li>
+                        Complete documentation so you're never locked into a
+                        single provider
+                      </li>
+                      <li>
+                        Experience with all major vendors: pfSense, SonicWall,
+                        Sophos, WatchGuard firewalls; Aruba and UniFi networking
+                        equipment
+                      </li>
+                      <li>
+                        Proactive monitoring catches network issues before they
+                        impact your business
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-
-                <!-- Service 3: Security & Compliance -->
-                <div class="service-item">
-                    <div class="service-item-header">
-                        <div class="service-header-content">
-                            <h3 class="service-item-title">Security & Compliance</h3>
-                            <p class="service-item-description">Comprehensive security management that protects your business from threats while meeting compliance requirements. Security isn't an add-on—it's built into everything we do.</p>
-                        </div>
-                    </div>
-
-                    <div class="service-item-body">
-                        <div class="service-highlights">
-                            <div class="highlight-tag">Real-time Monitoring</div>
-                            <div class="highlight-tag">Endpoint Protection</div>
-                            <div class="highlight-tag">HIPAA/SOC 2</div>
-                            <div class="highlight-tag">Incident Response</div>
-                        </div>
-
-                        <button class="service-expand-btn">
-                            <span>View Full Details</span>
-                            <i class="fi fi-rs-angle-small-down"></i>
-                        </button>
-
-                        <div class="service-details">
-                            <div class="service-detail-section">
-                                <h4 class="service-detail-label">Why It Matters</h4>
-                                <p class="service-detail-text">Security breaches cost businesses an average of $200,000 in direct costs, plus reputation damage and potential regulatory fines. Proper security prevents breaches before they happen.</p>
-                            </div>
-
-                            <div class="service-detail-section">
-                                <h4 class="service-detail-label">Our Approach</h4>
-                                <ul class="service-details-list">
-                                    <li>Custom monitoring scripts that detect suspicious activity in real-time</li>
-                                    <li>Automated security patching and updates</li>
-                                    <li>Endpoint protection across all devices</li>
-                                    <li>Network segmentation to contain potential breaches</li>
-                                    <li>Regular security assessments and vulnerability testing</li>
-                                    <li>Compliance support (HIPAA, SOC 2, industry-specific requirements)</li>
-                                    <li>Incident response planning and execution</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Service 4: Backup & DR -->
-                <div class="service-item">
-                    <div class="service-item-header">
-                        <div class="service-header-content">
-                            <h3 class="service-item-title">Backup & Disaster Recovery</h3>
-                            <p class="service-item-description">Reliable backup systems and tested disaster recovery procedures. When something goes wrong, you need backups that actually work—not ones that fail when you need them most.</p>
-                        </div>
-                    </div>
-
-                    <div class="service-item-body">
-                        <div class="service-highlights">
-                            <div class="highlight-tag">Automated Backups</div>
-                            <div class="highlight-tag">Regular Testing</div>
-                            <div class="highlight-tag">Cloud Redundancy</div>
-                            <div class="highlight-tag">Fast Recovery</div>
-                        </div>
-
-                        <button class="service-expand-btn">
-                            <span>View Full Details</span>
-                            <i class="fi fi-rs-angle-small-down"></i>
-                        </button>
-
-                        <div class="service-details">
-                            <div class="service-detail-section">
-                                <h4 class="service-detail-label">Why It Matters</h4>
-                                <p class="service-detail-text">60% of businesses that lose their data shut down within 6 months. Backups are insurance—you hope you never need them, but when you do, they need to work perfectly.</p>
-                            </div>
-
-                            <div class="service-detail-section">
-                                <h4 class="service-detail-label">Our Approach</h4>
-                                <ul class="service-details-list">
-                                    <li>Automated backup systems with verification</li>
-                                    <li>Regular backup testing (not just hoping they work)</li>
-                                    <li>Off-site and cloud backup redundancy</li>
-                                    <li>Documented recovery procedures</li>
-                                    <li>Recovery time objectives that match your business needs</li>
-                                    <li>Regular disaster recovery testing</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+              </div>
             </div>
+
+            <!-- Service 2: Cloud & M365 -->
+            <div class="service-item">
+              <div class="service-item-header">
+                <div class="service-header-content">
+                  <h3 class="service-item-title">
+                    Cloud & Microsoft 365 Services
+                  </h3>
+                  <p class="service-item-description">
+                    Cloud services and Microsoft 365 provide flexibility,
+                    reliability, and capabilities that on-premises
+                    infrastructure can't match. We handle migrations,
+                    management, and optimization so you get the benefits without
+                    the complexity.
+                  </p>
+                </div>
+              </div>
+
+              <div class="service-item-body">
+                <div class="service-highlights">
+                  <div class="highlight-tag">Microsoft 365</div>
+                  <div class="highlight-tag">Azure Infrastructure</div>
+                  <div class="highlight-tag">Hybrid Identity</div>
+                  <div class="highlight-tag">Cloud Migration</div>
+                </div>
+
+                <button class="service-expand-btn">
+                  <span>View Full Details</span>
+                  <i class="fi fi-rs-angle-small-down"></i>
+                </button>
+
+                <div class="service-details">
+                  <div class="service-detail-section">
+                    <h4 class="service-detail-label">Why It Matters</h4>
+                    <p class="service-detail-text">
+                      Cloud migrations done wrong create months of problems.
+                      Done right, they improve reliability, reduce costs, and
+                      give your team better tools. The difference is in the
+                      planning and execution.
+                    </p>
+                  </div>
+
+                  <div class="service-detail-section">
+                    <h4 class="service-detail-label">Our Approach</h4>
+                    <ul class="service-details-list">
+                      <li>
+                        Thorough planning before migration—understanding your
+                        workflows and requirements
+                      </li>
+                      <li>
+                        Phased migrations that minimize disruption to daily
+                        operations
+                      </li>
+                      <li>Proper tenant configuration and security settings</li>
+                      <li>Azure AD and hybrid identity management</li>
+                      <li>
+                        Ongoing optimization to ensure you're using cloud
+                        services efficiently
+                      </li>
+                      <li>
+                        Training and support so your team actually uses the new
+                        capabilities
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Service 3: Security & Compliance -->
+            <div class="service-item">
+              <div class="service-item-header">
+                <div class="service-header-content">
+                  <h3 class="service-item-title">Security & Compliance</h3>
+                  <p class="service-item-description">
+                    Comprehensive security management that protects your
+                    business from threats while meeting compliance requirements.
+                    Security isn't an add-on—it's built into everything we do.
+                  </p>
+                </div>
+              </div>
+
+              <div class="service-item-body">
+                <div class="service-highlights">
+                  <div class="highlight-tag">Real-time Monitoring</div>
+                  <div class="highlight-tag">Endpoint Protection</div>
+                  <div class="highlight-tag">HIPAA/SOC 2</div>
+                  <div class="highlight-tag">Incident Response</div>
+                </div>
+
+                <button class="service-expand-btn">
+                  <span>View Full Details</span>
+                  <i class="fi fi-rs-angle-small-down"></i>
+                </button>
+
+                <div class="service-details">
+                  <div class="service-detail-section">
+                    <h4 class="service-detail-label">Why It Matters</h4>
+                    <p class="service-detail-text">
+                      Security breaches cost businesses an average of $200,000
+                      in direct costs, plus reputation damage and potential
+                      regulatory fines. Proper security prevents breaches before
+                      they happen.
+                    </p>
+                  </div>
+
+                  <div class="service-detail-section">
+                    <h4 class="service-detail-label">Our Approach</h4>
+                    <ul class="service-details-list">
+                      <li>
+                        Custom monitoring scripts that detect suspicious
+                        activity in real-time
+                      </li>
+                      <li>Automated security patching and updates</li>
+                      <li>Endpoint protection across all devices</li>
+                      <li>
+                        Network segmentation to contain potential breaches
+                      </li>
+                      <li>
+                        Regular security assessments and vulnerability testing
+                      </li>
+                      <li>
+                        Compliance support (HIPAA, SOC 2, industry-specific
+                        requirements)
+                      </li>
+                      <li>Incident response planning and execution</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Service 4: Backup & DR -->
+            <div class="service-item">
+              <div class="service-item-header">
+                <div class="service-header-content">
+                  <h3 class="service-item-title">Backup & Disaster Recovery</h3>
+                  <p class="service-item-description">
+                    Reliable backup systems and tested disaster recovery
+                    procedures. When something goes wrong, you need backups that
+                    actually work—not ones that fail when you need them most.
+                  </p>
+                </div>
+              </div>
+
+              <div class="service-item-body">
+                <div class="service-highlights">
+                  <div class="highlight-tag">Automated Backups</div>
+                  <div class="highlight-tag">Regular Testing</div>
+                  <div class="highlight-tag">Cloud Redundancy</div>
+                  <div class="highlight-tag">Fast Recovery</div>
+                </div>
+
+                <button class="service-expand-btn">
+                  <span>View Full Details</span>
+                  <i class="fi fi-rs-angle-small-down"></i>
+                </button>
+
+                <div class="service-details">
+                  <div class="service-detail-section">
+                    <h4 class="service-detail-label">Why It Matters</h4>
+                    <p class="service-detail-text">
+                      60% of businesses that lose their data shut down within 6
+                      months. Backups are insurance—you hope you never need
+                      them, but when you do, they need to work perfectly.
+                    </p>
+                  </div>
+
+                  <div class="service-detail-section">
+                    <h4 class="service-detail-label">Our Approach</h4>
+                    <ul class="service-details-list">
+                      <li>Automated backup systems with verification</li>
+                      <li>
+                        Regular backup testing (not just hoping they work)
+                      </li>
+                      <li>Off-site and cloud backup redundancy</li>
+                      <li>Documented recovery procedures</li>
+                      <li>
+                        Recovery time objectives that match your business needs
+                      </li>
+                      <li>Regular disaster recovery testing</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
-    </main><!-- /#main-content -->
+      </div>
+    </main>
+    <!-- /#main-content -->
 
     <footer class="footer" id="footerSection">
-        <div class="footer-container">
-
-            <div class="footer-brand-row">
-                <div class="footer-brand">
-                    <img src="assets/img/ghosxt logo.webp" alt="Ghosxt logo" width="80" height="80" loading="lazy">
-                    <div class="footer-brand-text">
-                        <span class="footer-brand-name">GHOSXT</span>
-                        <span class="footer-brand-tagline">Government-grade IT for small business.</span>
-                    </div>
-                </div>
-                <div class="footer-cta-block">
-                    <a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer" class="footer-cta-btn">
-                        <i class="fi fi-rs-calendar-day" aria-hidden="true"></i>
-                        Schedule Free Assessment
-                    </a>
-                </div>
+      <div class="footer-container">
+        <div class="footer-brand-row">
+          <div class="footer-brand">
+            <img
+              src="assets/img/ghosxt logo.webp"
+              alt="Ghosxt logo"
+              width="80"
+              height="80"
+              loading="lazy"
+            />
+            <div class="footer-brand-text">
+              <span class="footer-brand-name">GHOSXT</span>
+              <span class="footer-brand-tagline"
+                >Government-grade IT for small business.</span
+              >
             </div>
-
-            <div class="footer-grid">
-                <div class="footer-column">
-                    <h3 class="footer-column-title">Company</h3>
-                    <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="pricing.html">Pricing</a></li>
-                        <li><a href="website-development.html">Website Development</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-column">
-                    <h3 class="footer-column-title">Services</h3>
-                    <ul class="footer-links">
-                        <li><a href="services.html#managed-it">Managed IT Services</a></li>
-                        <li><a href="services.html#cybersecurity">Cybersecurity</a></li>
-                        <li><a href="services.html#cloud">Cloud Services</a></li>
-                        <li><a href="website-development.html">Web Development</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-column">
-                    <h3 class="footer-column-title">Resources</h3>
-                    <ul class="footer-links">
-                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                        <li><a href="https://ticket.ghosxt.com/" target="_blank" rel="noopener noreferrer">Client Portal</a></li>
-                        <li><a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer">Free IT Assessment</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-column">
-                    <h3 class="footer-column-title">Connect</h3>
-                    <ul class="footer-links footer-social-links">
-                        <li><a href="https://www.linkedin.com/company/ghosxt/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
-                        <li><a href="https://www.facebook.com/GhosxtTech" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook" aria-hidden="true"></i> Facebook</a></li>
-                        <li><a href="https://www.instagram.com/ghosxttech/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram" aria-hidden="true"></i> Instagram</a></li>
-                        <li><a href="mailto:info@ghosxt.com"><i class="fi fi-rs-envelope" aria-hidden="true"></i> info@ghosxt.com</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="footer-divider"></div>
-
-            <div class="footer-bottom">
-                <p class="footer-copyright">&copy; 2026 Ghosxt. All rights reserved. Built by a cleared DoD engineer.</p>
-                <div class="footer-bottom-links">
-                    <a href="privacy-policy.html">Privacy Policy</a>
-                    <span aria-hidden="true">&middot;</span>
-                    <a href="https://ticket.ghosxt.com/" target="_blank" rel="noopener noreferrer">Client Portal</a>
-                </div>
-            </div>
-
+          </div>
+          <div class="footer-cta-block">
+            <a
+              href="https://calendly.com/ulises-ghosxt"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="footer-cta-btn"
+            >
+              <i class="fi fi-rs-calendar-day" aria-hidden="true"></i>
+              Schedule Free Assessment
+            </a>
+          </div>
         </div>
+
+        <div class="footer-grid">
+          <div class="footer-column">
+            <h3 class="footer-column-title">Company</h3>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="pricing.html">Pricing</a></li>
+              <li>
+                <a href="website-development.html">Website Development</a>
+              </li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-column-title">Services</h3>
+            <ul class="footer-links">
+              <li>
+                <a href="services.html#managed-it">Managed IT Services</a>
+              </li>
+              <li><a href="services.html#cybersecurity">Cybersecurity</a></li>
+              <li><a href="services.html#cloud">Cloud Services</a></li>
+              <li><a href="website-development.html">Web Development</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-column-title">Resources</h3>
+            <ul class="footer-links">
+              <li><a href="privacy-policy.html">Privacy Policy</a></li>
+              <li>
+                <a
+                  href="https://ticket.ghosxt.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Client Portal</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://calendly.com/ulises-ghosxt"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Free IT Assessment</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-column-title">Connect</h3>
+            <ul class="footer-links footer-social-links">
+              <li>
+                <a
+                  href="https://www.linkedin.com/company/ghosxt/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fab fa-linkedin" aria-hidden="true"></i>
+                  LinkedIn</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.facebook.com/GhosxtTech"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fab fa-facebook" aria-hidden="true"></i>
+                  Facebook</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/ghosxttech/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fab fa-instagram" aria-hidden="true"></i>
+                  Instagram</a
+                >
+              </li>
+              <li>
+                <a href="mailto:info@ghosxt.com"
+                  ><i class="fi fi-rs-envelope" aria-hidden="true"></i>
+                  info@ghosxt.com</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <div class="footer-bottom">
+          <p class="footer-copyright">
+            &copy; 2026 Ghosxt. All rights reserved. Built by a cleared DoD
+            engineer.
+          </p>
+          <div class="footer-bottom-links">
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <span aria-hidden="true">&middot;</span>
+            <a
+              href="https://ticket.ghosxt.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Client Portal</a
+            >
+          </div>
+        </div>
+      </div>
     </footer>
 
     <script src="assets/js/main.js" defer></script>
 
-    
-
     <script>
-        // Service Expansion Functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const serviceItems = document.querySelectorAll('.service-item');
-            serviceItems.forEach(item => {
-                const expandBtn = item.querySelector('.service-expand-btn');
-                if (!expandBtn) return;
-                expandBtn.addEventListener('click', () => {
-                    item.classList.toggle('expanded');
-                    const isExpanded = item.classList.contains('expanded');
-                    expandBtn.querySelector('span').textContent = isExpanded ? 'Hide Details' : 'View Full Details';
-                });
-            });
+      // Service Expansion Functionality
+      document.addEventListener("DOMContentLoaded", function () {
+        const serviceItems = document.querySelectorAll(".service-item");
+        serviceItems.forEach((item) => {
+          const expandBtn = item.querySelector(".service-expand-btn");
+          if (!expandBtn) return;
+          expandBtn.addEventListener("click", () => {
+            item.classList.toggle("expanded");
+            const isExpanded = item.classList.contains("expanded");
+            expandBtn.querySelector("span").textContent = isExpanded
+              ? "Hide Details"
+              : "View Full Details";
+          });
         });
+      });
     </script>
 
     <script>
-        // Services Accordion Functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const accordionItems = document.querySelectorAll('.service-accordion-item');
-            accordionItems.forEach(item => {
-                const trigger = item.querySelector('.service-accordion-trigger');
-                if (!trigger) return;
-                trigger.addEventListener('click', () => {
-                    accordionItems.forEach(otherItem => {
-                        if (otherItem !== item) otherItem.classList.remove('active');
-                    });
-                    item.classList.toggle('active');
-                });
+      // Services Accordion Functionality
+      document.addEventListener("DOMContentLoaded", function () {
+        const accordionItems = document.querySelectorAll(
+          ".service-accordion-item",
+        );
+        accordionItems.forEach((item) => {
+          const trigger = item.querySelector(".service-accordion-trigger");
+          if (!trigger) return;
+          trigger.addEventListener("click", () => {
+            accordionItems.forEach((otherItem) => {
+              if (otherItem !== item) otherItem.classList.remove("active");
             });
+            item.classList.toggle("active");
+          });
         });
+      });
     </script>
-
-</body>
+  </body>
 </html>
