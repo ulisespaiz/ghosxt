@@ -1870,3 +1870,38 @@ a[target="_blank"]:not(.navbar-btn):not(.button-primary):not(.cta-primary-btn)::
   /* Ensure decline is not visually suppressed vs accept */
   opacity: 1;
 }
+
+/* ------ FOOTER: Service Areas block ------ */
+.service-areas-footer {
+  padding: 1.5rem 0 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 1.5rem;
+}
+
+.service-areas-footer h3 {
+  color: var(--ghosxt-white, #fff);
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.75rem;
+}
+
+.service-areas-footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.875rem;
+}
+
+.service-areas-footer a {
+  color: rgba(255, 255, 255, 0.78);
+  text-decoration: none;
+  font-size: 0.875rem;
+}
+
+.service-areas-footer a:hover {
+  color: var(--ghosxt-white, #fff);
+  text-decoration: underline;
+}

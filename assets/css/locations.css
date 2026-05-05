@@ -1,0 +1,327 @@
+/* Shared styles for /location/[city].html pages */
+
+.location-hero {
+  padding: 4rem 24px 3rem;
+  background: var(--ghosxt-white);
+  border-bottom: 1px solid var(--ghosxt-black);
+}
+
+.location-hero .container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.location-breadcrumbs {
+  font-size: 0.875rem;
+  color: rgba(0, 0, 0, 0.6);
+  margin-bottom: 1.5rem;
+  font-family: var(--font-family-2);
+}
+
+.location-breadcrumbs a {
+  color: rgba(0, 0, 0, 0.6);
+  text-decoration: none;
+}
+
+.location-breadcrumbs a:hover {
+  color: var(--ghosxt-black);
+}
+
+.location-breadcrumbs .sep {
+  margin: 0 0.4rem;
+  opacity: 0.5;
+}
+
+.location-hero h1 {
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  line-height: 1.1;
+  margin-bottom: 1rem;
+  color: var(--ghosxt-black);
+}
+
+.location-hero .lead {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: rgba(0, 0, 0, 0.78);
+  margin-bottom: 2rem;
+  max-width: 720px;
+}
+
+.location-hero-ctas {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.location-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-family: var(--font-family-2);
+  font-weight: 600;
+  font-size: 1rem;
+  border: 1px solid var(--ghosxt-black);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.location-btn-primary {
+  background: var(--ghosxt-red-0, #e63946);
+  color: var(--ghosxt-white);
+  box-shadow: 3px 3px 0 0 var(--ghosxt-black);
+}
+
+.location-btn-primary:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0 0 var(--ghosxt-black);
+}
+
+.location-btn-secondary {
+  background: var(--ghosxt-white);
+  color: var(--ghosxt-black);
+  box-shadow: 3px 3px 0 0 var(--ghosxt-black);
+}
+
+.location-btn-secondary:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0 0 var(--ghosxt-black);
+}
+
+.location-section {
+  padding: 3.5rem 24px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.location-section .container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.location-section h2 {
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  margin-bottom: 1.5rem;
+  color: var(--ghosxt-black);
+}
+
+.location-section p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: rgba(0, 0, 0, 0.78);
+  margin-bottom: 1rem;
+  max-width: 800px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+
+.service-card {
+  border: 1px solid var(--ghosxt-black);
+  border-radius: 8px;
+  padding: 1.5rem;
+  background: var(--ghosxt-white);
+  box-shadow: 3px 3px 0 0 var(--ghosxt-black);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.service-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0 0 var(--ghosxt-black);
+}
+
+.service-card h3 {
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+  color: var(--ghosxt-black);
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  margin-bottom: 0.75rem;
+  color: rgba(0, 0, 0, 0.72);
+}
+
+.service-card a {
+  color: var(--ghosxt-black);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.service-card a:hover {
+  text-decoration: underline;
+}
+
+.industries-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.industries-list li {
+  padding: 0.875rem 1rem;
+  background: var(--ghosxt-white);
+  border: 1px solid var(--ghosxt-black);
+  border-radius: 6px;
+  font-family: var(--font-family-2);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.industries-list li::before {
+  content: "▸";
+  color: var(--ghosxt-red-0, #e63946);
+  font-weight: 700;
+}
+
+.location-cta {
+  background: var(--ghosxt-black);
+  color: var(--ghosxt-white);
+  text-align: center;
+  padding: 4rem 24px;
+}
+
+.location-cta .container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.location-cta h2 {
+  color: var(--ghosxt-white);
+  margin-bottom: 1rem;
+}
+
+.location-cta p {
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0 auto 2rem;
+}
+
+.location-cta .location-btn-primary {
+  background: var(--ghosxt-white);
+  color: var(--ghosxt-black);
+  box-shadow: 3px 3px 0 0 rgba(255, 255, 255, 0.4);
+}
+
+.location-faq details {
+  border: 1px solid var(--ghosxt-black);
+  border-radius: 6px;
+  margin-bottom: 0.75rem;
+  background: var(--ghosxt-white);
+}
+
+.location-faq summary {
+  padding: 1rem 1.25rem;
+  cursor: pointer;
+  font-weight: 600;
+  font-family: var(--font-family-2);
+  list-style: none;
+  position: relative;
+}
+
+.location-faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.location-faq summary::after {
+  content: "+";
+  position: absolute;
+  right: 1.25rem;
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+.location-faq details[open] summary::after {
+  content: "−";
+}
+
+.location-faq details[open] summary {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.location-faq .answer {
+  padding: 1rem 1.25rem 1.25rem;
+  line-height: 1.6;
+  color: rgba(0, 0, 0, 0.78);
+}
+
+.nearby-locations {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.nearby-locations h3 {
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.nearby-locations ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.nearby-locations a {
+  display: inline-block;
+  padding: 0.4rem 0.875rem;
+  border: 1px solid var(--ghosxt-black);
+  border-radius: 4px;
+  text-decoration: none;
+  color: var(--ghosxt-black);
+  font-size: 0.875rem;
+  font-family: var(--font-family-2);
+  transition: background 0.15s ease;
+}
+
+.nearby-locations a:hover {
+  background: var(--ghosxt-black);
+  color: var(--ghosxt-white);
+}
+
+/* Footer Service Areas block */
+.service-areas-footer {
+  padding: 1.5rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 1.5rem;
+}
+
+.service-areas-footer h3 {
+  color: var(--ghosxt-white);
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.75rem;
+}
+
+.service-areas-footer ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.875rem;
+}
+
+.service-areas-footer a {
+  color: rgba(255, 255, 255, 0.78);
+  text-decoration: none;
+  font-size: 0.875rem;
+}
+
+.service-areas-footer a:hover {
+  color: var(--ghosxt-white);
+  text-decoration: underline;
+}
