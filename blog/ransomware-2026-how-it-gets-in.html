@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ransomware in 2026: How It Actually Gets In, and What Stops It | Ghosxt</title>
+    <meta name="description" content="A DoD-cleared engineer's plain-talk breakdown of how ransomware actually gets into small business networks in 2026, and the controls that actually stop it." />
+    <link rel="canonical" href="https://ghosxt.com/blog/ransomware-2026-how-it-gets-in.html" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://ghosxt.com/blog/ransomware-2026-how-it-gets-in.html" />
+    <meta property="og:title" content="Ransomware in 2026: How It Actually Gets In, and What Stops It" />
+    <meta property="og:description" content="How ransomware actually gets into small business networks in 2026, and the controls that actually stop it." />
+    <meta property="og:image" content="https://ghosxt.com/assets/img/og-image.png" />
+    <meta property="og:site_name" content="Ghosxt" />
+    <meta property="article:published_time" content="2026-05-05" />
+    <meta property="article:author" content="Ulises Paiz" />
+    <meta name="robots" content="index, follow" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Ransomware in 2026: How It Actually Gets In, and What Stops It" />
+    <meta name="twitter:description" content="How ransomware actually gets in, and what actually stops it." />
+    <meta name="twitter:image" content="https://ghosxt.com/assets/img/og-image.png" />
+    <link rel="icon" href="../assets/img/favicon.ico" sizes="any" />
+    <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdn-uicons.flaticon.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="../assets/css/blog.css" />
+    <link rel="stylesheet" media="print" onload="this.media='all'" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" />
+    <noscript><link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" /></noscript>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage": { "@type": "WebPage", "@id": "https://ghosxt.com/blog/ransomware-2026-how-it-gets-in.html" },
+        "headline": "Ransomware in 2026: How It Actually Gets In, and What Stops It",
+        "description": "How ransomware actually gets into small business networks in 2026, and the controls that actually stop it.",
+        "image": "https://ghosxt.com/assets/img/og-image.png",
+        "author": { "@type": "Person", "name": "Ulises Paiz", "url": "https://ghosxt.com/about.html" },
+        "publisher": { "@type": "Organization", "name": "Ghosxt", "logo": { "@type": "ImageObject", "url": "https://ghosxt.com/assets/img/ghosxt logo.webp" } },
+        "datePublished": "2026-05-05",
+        "dateModified": "2026-05-05",
+        "articleSection": "Cybersecurity",
+        "keywords": "ransomware, ransomware 2026, small business ransomware, ransomware prevention, MFA, EDR, immutable backups"
+      }
+    </script>
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top"><i class="fi fi-rs-angle-up" aria-hidden="true"></i></button>
+    <div class="cookie-banner" id="cookieBanner"><div class="cookie-banner-container"><div class="cookie-content"><div class="cookie-icon"><i class="fi fi-rs-cookie"></i></div><div class="cookie-text"><p class="cookie-message">We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.</p><a href="../privacy-policy.html" class="cookie-link">Learn more about our Privacy Policy</a></div></div><div class="cookie-actions"><button class="cookie-btn cookie-btn-secondary" id="cookieDecline">Decline</button><button class="cookie-btn cookie-btn-primary" id="cookieAccept">Accept All</button></div></div></div>
+    <div class="top-banner" id="topBanner"><div class="banner-container"><div class="banner-content"><span class="banner-text">Need Remote Support? ►</span><a target="_blank" rel="noopener noreferrer" href="https://ticket.ghosxt.com/" class="banner-btn"><i class="fi fi-rs-ticket-alt"></i><span>Visit Client Portal</span></a></div></div></div>
+    <nav class="navbar" aria-label="Main navigation">
+      <div class="navbar-container">
+        <div class="navbar-left"><a href="../index.html" class="navbar-logo"><img src="../assets/img/ghosxt logo.webp" alt="Ghosxt logo" width="48" height="48" /><span>GHOSXT</span></a></div>
+        <div class="navbar-right">
+          <div class="navbar-menu">
+            <a href="../index.html" class="navbar-link">Home</a>
+            <div class="navbar-dropdown"><a href="../about.html" class="navbar-link dropdown-trigger" aria-haspopup="menu">About <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></a><div class="dropdown-menu" role="menu"><a href="../about.html" class="dropdown-item" role="menuitem">About Ghosxt</a><a href="../ghosxt-cares.html" class="dropdown-item" role="menuitem">Ghosxt Cares</a></div></div>
+            <div class="navbar-dropdown"><a href="../services.html" class="navbar-link dropdown-trigger" aria-haspopup="menu">Services <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></a><div class="dropdown-menu" role="menu"><a href="../services.html" class="dropdown-item" role="menuitem">All Services</a><a href="../cybersecurity.html" class="dropdown-item" role="menuitem">Cybersecurity</a><a href="../website-development.html" class="dropdown-item" role="menuitem">Web Development</a><a href="../ctpat.html" class="dropdown-item" role="menuitem">C-TPAT Compliance</a></div></div>
+            <a href="../pricing.html" class="navbar-link">Pricing</a>
+            <a href="index.html" class="navbar-link">Blog</a>
+            <a href="../contact.html" class="navbar-link">Contact</a>
+          </div>
+          <button class="navbar-mobile-toggle" id="mobileToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu"><i class="fi fi-rs-burger-menu" aria-hidden="true"></i></button>
+          <div class="navbar-buttons"><a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer" class="navbar-btn btn-demo"><i class="fi fi-rs-calendar-day"></i><span>Book a Call</span></a></div>
+        </div>
+      </div>
+      <div class="navbar-overlay" id="navbarOverlay"></div>
+      <div class="navbar-mobile-menu" id="mobileMenu">
+        <a href="../index.html" class="mobile-link">Home</a>
+        <div class="mobile-accordion"><button class="mobile-accordion-trigger" aria-expanded="false">About <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></button><div class="mobile-accordion-content"><a href="../about.html" class="mobile-dropdown-item">About Ghosxt</a><a href="../ghosxt-cares.html" class="mobile-dropdown-item">Ghosxt Cares</a></div></div>
+        <div class="mobile-accordion"><button class="mobile-accordion-trigger" aria-expanded="false">Services <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></button><div class="mobile-accordion-content"><a href="../services.html" class="mobile-dropdown-item">All Services</a><a href="../cybersecurity.html" class="mobile-dropdown-item">Cybersecurity</a><a href="../website-development.html" class="mobile-dropdown-item">Web Development</a><a href="../ctpat.html" class="mobile-dropdown-item">C-TPAT Compliance</a></div></div>
+        <a href="../pricing.html" class="mobile-link">Pricing</a>
+        <a href="index.html" class="mobile-link">Blog</a>
+        <a href="../contact.html" class="mobile-link">Contact</a>
+        <div class="mobile-actions"><a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer" class="mobile-btn btn-demo"><i class="fi fi-rs-calendar-day"></i><span>Book a Call</span></a></div>
+      </div>
+    </nav>
+    <main id="main-content" class="blog-post">
+      <header class="blog-post-header">
+        <div class="container">
+          <nav class="blog-post-breadcrumbs" aria-label="Breadcrumb">
+            <a href="../index.html">Home</a><span class="sep">›</span><a href="index.html">Blog</a><span class="sep">›</span><span aria-current="page">Ransomware in 2026</span>
+          </nav>
+          <div class="blog-post-meta">
+            <time datetime="2026-05-05">May 5, 2026</time>
+            <span>·</span>
+            <span>8 min read</span>
+            <span>·</span>
+            <span class="blog-card-tag">Cybersecurity</span>
+          </div>
+          <h1>Ransomware in 2026: How It Actually Gets In, and What Stops It</h1>
+          <div class="blog-post-author">
+            <strong>Ulises Paiz</strong>, Founder, Ghosxt
+          </div>
+        </div>
+      </header>
+      <div class="blog-post-body">
+        <div class="container">
+          <p>It usually starts on a Tuesday morning at 4:17am. Someone in accounting walks in at 7am and the printers are spitting out a ransom note. The file shares are gone. The ERP is down. The phones still work because the ransomware crew did not bother with the VoIP, but everything else is encrypted, and there is a Bitcoin address on every screen.</p>
+
+          <p>By the time anyone calls me, the attackers have been inside for somewhere between 3 days and 3 months. Encryption is the last act, not the first one. By then it is mostly cleanup.</p>
+
+          <p>Here is what 2026 ransomware actually looks like, in the order it actually happens, and the controls that actually stop it. No fearmongering, no "you need our magic AI tool." Just what works, based on the small business networks I have helped clean up and the DoD networks I trained on before that.</p>
+
+          <h2>How they actually get in</h2>
+
+          <p>Five vectors account for almost every ransomware case I see in small business right now. None of them are exotic.</p>
+
+          <h3>1. Stolen email credentials, no MFA</h3>
+
+          <p>The most common path in 2026 is still the most boring one. An employee's email password ends up in a credential dump because they reused it on some site that got breached. The attacker logs into the email account. There is no multi-factor authentication. They sit in the inbox for a few weeks, learn the business, and pivot from there.</p>
+
+          <p>From an inbox an attacker can set up forwarding rules, intercept invoices to redirect wire transfers, harvest more credentials from internal emails, and impersonate the user to ask other employees to open attachments. Plain inbox access is enough to ruin a small business. I have watched it happen.</p>
+
+          <h3>2. Phishing with a payload (or a fake login page)</h3>
+
+          <p>Modern phishing is not the Nigerian-prince era anymore. It is a perfect-looking Microsoft 365 login page hosted on a domain that looks like yours, sent from a vendor whose email account got popped last month. The user types their password. Now the attacker has it. If MFA is on, they may try a "MFA fatigue" attack where they hammer the user's phone with prompts at 11pm hoping someone clicks Approve to make it stop.</p>
+
+          <p>Some of these emails carry malware. Most do not. The credentials are the prize.</p>
+
+          <h3>3. Unpatched edge devices</h3>
+
+          <p>Your firewall, your VPN, your Remote Desktop Gateway, the device that lets your remote workers in. Every one of those has had at least one critical vulnerability published in the last 18 months, and a lot of small businesses have not patched. CISA publishes a list of actively exploited vulnerabilities and the same names show up over and over: Fortinet, SonicWall, Citrix, Ivanti, ConnectWise. If your edge device has not been touched since you bought it, an attacker probably already has a way in. They just have not gotten around to using it yet.</p>
+
+          <h3>4. Compromised vendors and supply chain</h3>
+
+          <p>Sometimes the attacker does not get in through your front door. They get in through a vendor you trust. Maybe your IT provider's RMM tool. Maybe your accounting software's auto-updater. Maybe a contractor's laptop that connects to your VPN. The 2024 Kaseya and 2024 ConnectWise incidents made this mainstream. In 2026, the attackers know small businesses do not audit their vendors, so this lane is wide open.</p>
+
+          <h3>5. Misconfigured cloud, mostly Microsoft 365</h3>
+
+          <p>A fresh Microsoft 365 tenant out of the box is not secure. Default settings allow legacy authentication protocols that bypass MFA, give every user the ability to install applications that can read mail, leave guest sharing wide open, and skip conditional access entirely. Most small businesses sign up, get email working, and never touch the security settings. Attackers know this and target the gaps directly.</p>
+
+          <h2>What happens after they get in</h2>
+
+          <p>Once an attacker has any foothold, the same playbook plays out. It takes anywhere from 24 hours to several months. They are patient because they have to be: the longer they sit, the more they learn, the bigger the eventual payday.</p>
+
+          <ul>
+            <li><strong>Reconnaissance.</strong> They map your network, identify your domain controllers, find your file shares, locate your backup system.</li>
+            <li><strong>Privilege escalation.</strong> They find a service account with too many permissions, a help-desk admin with a weak password, or an unpatched server with a known privilege escalation bug. Now they are domain admin.</li>
+            <li><strong>Persistence.</strong> They install backdoors. Multiple. So that even if you find one, the others stay. Often they create new admin accounts with names that look legitimate.</li>
+            <li><strong>Data exfiltration.</strong> Before encrypting, they steal your data. This is the leverage. Even if you restore from backups, they will threaten to publish your client list, your financials, your employee records. Welcome to "double extortion."</li>
+            <li><strong>Backup destruction.</strong> They go after your backups specifically. They delete shadow copies, wipe the backup server, sign into your cloud backup admin panel with stolen creds.</li>
+            <li><strong>Encryption.</strong> Last. Always last. By the time the printers are spitting ransom notes, the actual attack happened weeks ago.</li>
+          </ul>
+
+          <h2>What actually stops it</h2>
+
+          <p>Here is where most cybersecurity vendors lose me: they will sell you 12 tools to stop ransomware and skip the 5 that actually matter. I am going to flip that. Here are the controls that actually move the needle, in the order I would deploy them at a small business.</p>
+
+          <h3>1. MFA everywhere, with phishing-resistant factors where you can</h3>
+
+          <p>Number one with a bullet. MFA on email, MFA on VPN, MFA on RDP, MFA on every cloud admin console. Use the Microsoft Authenticator or Google Authenticator app, not SMS. Even better: deploy FIDO2 hardware keys (Yubikey or built-in Windows Hello for Business) for admins and high-risk users. Phishing-resistant MFA cannot be socially engineered. The attacker would need physical access to your security key.</p>
+
+          <h3>2. Modern EDR with behavioral detection</h3>
+
+          <p>Not legacy antivirus. EDR (Endpoint Detection and Response) watches for ransomware behavior in real time: rapid file modifications, suspicious encryption, lateral movement attempts, command-and-control traffic. When it sees the pattern, it isolates the device automatically. The attack stops mid-execution. This is the single biggest "you got in but did not get to encrypt" defense.</p>
+
+          <h3>3. Immutable, off-account backups</h3>
+
+          <p>Backups that the attacker cannot delete or encrypt, even with domain admin credentials. The backup data lives in a separate cloud account or storage that the production network cannot reach. Daily snapshots, retention you actually control, and tested restores on a schedule. Without immutable backups, paying the ransom is sometimes the only way to recover. With them, you wipe the affected systems and rebuild.</p>
+
+          <p>This is where most small businesses get caught flat-footed. They have backups, but they live on the same network, share the same credentials, and get encrypted along with everything else. <a href="small-business-cybersecurity-mistakes.html">I covered this in detail in the cybersecurity mistakes post</a>.</p>
+
+          <h3>4. Patch everything, especially the edge</h3>
+
+          <p>You do not need to be perfect. You need to not be the slowest gazelle. Patch your firewall, your VPN, your Remote Desktop Gateway within a week of a critical CVE. Patch your servers monthly. Patch your endpoints automatically. The attackers shopping for victims look for low-hanging fruit. Even moderate patch hygiene moves you off that list.</p>
+
+          <h3>5. Network segmentation</h3>
+
+          <p>Once they are in, you want to slow them down. Segmented networks mean they cannot just hop from a receptionist's PC to your domain controller in one step. They have to break through additional walls. Each wall buys you time, and time is what your detection tools need to catch them.</p>
+
+          <h3>6. Email security beyond the default</h3>
+
+          <p>Inbound filtering, attachment sandboxing, impersonation protection, and DMARC, SPF, and DKIM configured properly. Microsoft 365 Defender or a dedicated email security gateway. The default M365 settings do less than people assume. Enable the protections that are off by default, configure transport rules for your specific risks, and block legacy authentication entirely.</p>
+
+          <h3>7. Security awareness training (the human layer)</h3>
+
+          <p>Short, practical, recurring. Simulated phishing campaigns to measure improvement. Not annual compliance theater. The human layer is your largest attack surface; you cannot fix it without training. But trained users plus the technical controls above means an attacker has to beat both layers, and that is how ransomware campaigns die.</p>
+
+          <h2>What to do this week if none of this is in place</h2>
+
+          <p>If you read this and realized your business has gaps, here is the order to fix them.</p>
+
+          <ol>
+            <li><strong>Today:</strong> Turn on MFA for every email account. Use the authenticator app, not SMS. Force a password reset on any account without MFA right now.</li>
+            <li><strong>This week:</strong> Audit your edge devices. Make a list. Check the vendor's CVE page. Patch anything critical.</li>
+            <li><strong>This week:</strong> Confirm your backups are real. Try a restore. If you cannot restore, you do not have backups.</li>
+            <li><strong>This month:</strong> Deploy real EDR, not legacy antivirus. Common picks for small business include CrowdStrike, SentinelOne, Microsoft Defender for Business, and Huntress.</li>
+            <li><strong>This month:</strong> Move backups to an immutable, off-account location.</li>
+            <li><strong>This quarter:</strong> Run a written incident response plan exercise with your team. 60 minutes. You will find the gaps fast.</li>
+          </ol>
+
+          <h2>What to do if you actually get hit</h2>
+
+          <p>If you are reading this with a ransom note on your screen, stop and take a breath.</p>
+
+          <ul>
+            <li><strong>Do not pay yet.</strong> Paying does not guarantee recovery. It funds the next attack. It often makes you a target for the same crew six months later.</li>
+            <li><strong>Disconnect, do not power off.</strong> Pull network cables. Disable Wi-Fi. But do not power off, because forensic evidence lives in memory and you will lose it.</li>
+            <li><strong>Call your cyber insurance carrier first.</strong> They have an incident response panel. Many have specific requirements about what you do and do not do.</li>
+            <li><strong>Then call us, or your IR firm.</strong> The faster a real responder is on it, the more options you have.</li>
+            <li><strong>Preserve evidence.</strong> Do not start "fixing" things until someone qualified has documented what happened. You will need this for insurance, for legal, and possibly for law enforcement.</li>
+          </ul>
+
+          <h2>The honest truth about small business and ransomware</h2>
+
+          <p>Most small business ransomware victims I have worked with were not targeted specifically. They were swept up in opportunistic campaigns that found a weak point and walked through it. The attackers do not care about your industry, your size, or whether you have something worth stealing. They care that they got in. That is the whole bar.</p>
+
+          <p>The good news: the controls above are not expensive, not exotic, and not rocket science. They require discipline and a partner who actually deploys them properly. Done correctly, you become a hard target, and hard targets get skipped because the attackers have a list of soft ones below you.</p>
+
+          <p>If you want a second pair of eyes on whether your business is hard or soft, that is what our <a href="../cybersecurity.html">free cybersecurity assessment</a> is for. 30 minutes, no sales pitch, written punch list of what to fix in priority order. You can read more about <a href="../cybersecurity.html">our cybersecurity services</a> or just <a href="../contact.html">get in touch</a>.</p>
+
+          <div class="blog-post-cta">
+            <h3>Want a real cybersecurity assessment?</h3>
+            <p>30 minutes, DoD-cleared engineer on the call, written list of what to fix first. No sales script.</p>
+            <a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer">
+              <i class="fi fi-rs-calendar-day" aria-hidden="true"></i>
+              Book your free assessment
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer footer-visible" id="footerSection">
+      <div class="footer-container">
+        <div class="footer-grid">
+          <div class="footer-column"><h3 class="footer-column-title">Main Menu</h3><ul class="footer-links"><li><a href="../index.html">Home</a></li><li><a href="../about.html">About</a></li><li><a href="../services.html">Services</a></li><li><a href="../pricing.html">Pricing</a></li><li><a href="../contact.html">Contact</a></li></ul></div>
+          <div class="footer-column"><h3 class="footer-column-title">Services</h3><ul class="footer-links"><li><a href="../services.html">Managed IT</a></li><li><a href="../cybersecurity.html">Cybersecurity</a></li><li><a href="../services.html">Cloud Services</a></li><li><a href="../website-development.html">Web Development</a></li><li><a href="../ctpat.html">C-TPAT Compliance</a></li></ul></div>
+          <div class="footer-column"><h3 class="footer-column-title">Resources</h3><ul class="footer-links"><li><a href="index.html">Blog</a></li><li><a href="../privacy-policy.html">Privacy Policy</a></li><li><a href="https://ticket.ghosxt.com/" target="_blank" rel="noopener noreferrer">Client Portal</a></li><li><a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer">Schedule Free IT Assessment</a></li></ul></div>
+        </div>
+        <div class="service-areas-footer">
+          <h3>Service Areas</h3>
+          <ul><li><a href="../salinas.html">Salinas</a></li><li><a href="../monterey.html">Monterey</a></li><li><a href="../watsonville.html">Watsonville</a></li><li><a href="../hollister.html">Hollister</a></li><li><a href="../santa-cruz.html">Santa Cruz</a></li><li><a href="../gilroy.html">Gilroy</a></li><li><a href="../san-jose.html">San Jose</a></li><li><a href="../pacific-grove.html">Pacific Grove</a></li><li><a href="../carmel.html">Carmel</a></li><li><a href="../seaside.html">Seaside</a></li><li><a href="../marina.html">Marina</a></li></ul>
+        </div>
+      </div>
+    </footer>
+    <script src="../assets/js/main.js" defer></script>
+  </body>
+</html>
