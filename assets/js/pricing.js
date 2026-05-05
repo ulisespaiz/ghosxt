@@ -7,11 +7,18 @@
   'use strict';
 
   /* ── CONSTANTS ───────────────────────────────────────────── */
-  const TIER_PRICES  = { essential: 125, professional: 175, premium: 250, engineer: 400 };
-  const TIER_LABELS  = { essential: 'Essential', professional: 'Professional', premium: 'Premium', engineer: 'Engineer' };
-  const USERS_PER_HIRE = 18;
-  const COST_PER_HIRE  = 8333;   // $100k/yr ÷ 12, CA fully loaded
+  const TIER_PRICES  = { essential: 125, professional: 175, premium: 250 };
+  const TIER_LABELS  = { essential: 'Essential', professional: 'Professional', premium: 'Premium' };
   const MIN_USERS      = 5;
+
+  /* Loaded monthly cost for each role (CA salary + 30% benefits/overhead, ÷12).
+     IT Support scales with users (~1 hire per 18). Systems and Network Engineers
+     scale slower (1 per 30 / 1 per 45 respectively). */
+  const ROLES = [
+    { key: 'itSupport', label: 'IT Support',       baseCount: 1, ratio: 18, monthly: 8333  },  // ~$77k loaded
+    { key: 'sysEng',    label: 'Systems Engineer', baseCount: 1, ratio: 30, monthly: 10833 }, // ~$100k loaded
+    { key: 'netEng',    label: 'Network Engineer', baseCount: 1, ratio: 45, monthly: 12083 }  // ~$112k loaded
+  ];
 
   /* ── ADD-ON CONFIGURATION (for display names) ────────────── */
   const ADDON_CONFIG = {
@@ -61,8 +68,28 @@
     return (state.users * TIER_PRICES[state.tier]) + addonTotal();
   }
 
-  function hireCount(users)    { return Math.max(1, Math.floor(users / USERS_PER_HIRE)); }
-  function internalCost(users) { return hireCount(users) * COST_PER_HIRE; }
+  function roleCounts(users) {
+    return ROLES.reduce((acc, r) => {
+      acc[r.key] = Math.max(r.baseCount, Math.floor(users / r.ratio));
+      return acc;
+    }, {});
+  }
+
+  function roleCost(users, key) {
+    const r = ROLES.find(x => x.key === key);
+    if (!r) return 0;
+    const count = Math.max(r.baseCount, Math.floor(users / r.ratio));
+    return count * r.monthly;
+  }
+
+  function internalCost(users) {
+    return ROLES.reduce((sum, r) => sum + roleCost(users, r.key), 0);
+  }
+
+  function totalHireCount(users) {
+    const counts = roleCounts(users);
+    return Object.values(counts).reduce((a, b) => a + b, 0);
+  }
 
   function fmtDollar(n) { return '$' + Math.round(n).toLocaleString('en-US'); }
   function setEl(id, txt) { const el = document.getElementById(id); if (el) el.textContent = txt; }
@@ -104,9 +131,8 @@
     const tier     = state.tier;
     const ghosxt   = ghosxtCost();
     const internal = internalCost(users);
-    const hires    = hireCount(users);
+    const counts   = roleCounts(users);
     const base     = users * TIER_PRICES[tier];
-    const infra    = addonTotal();
     const savedMo  = Math.max(0, internal - ghosxt);
     const savedYr  = savedMo * 12;
     const pct      = internal > 0 ? Math.round((savedMo / internal) * 100) : 0;
@@ -125,14 +151,15 @@
     setEl('bTotal',  fmtDollar(ghosxt));
     setEl('bAnnual', fmtDollar(ghosxt * 12));
 
-    /* Savings card */
-    setEl('hireCostLabel',
-      hires === 1
-        ? 'Internal IT hire × 1 (avg. CA)'
-        : `Internal IT team × ${hires} hires (avg. CA)`
-    );
-    setEl('hireCost',          fmtDollar(internal) + '/mo');
-    setEl('ghosxtCostCompare', fmtDollar(ghosxt)   + '/mo');
+    /* Savings card: per-role line items */
+    setEl('itSupportLabel', `IT Support × ${counts.itSupport} (avg. CA)`);
+    setEl('itSupportCost',  fmtDollar(roleCost(users, 'itSupport')) + '/mo');
+    setEl('sysEngLabel',    `Systems Engineer × ${counts.sysEng} (avg. CA)`);
+    setEl('sysEngCost',     fmtDollar(roleCost(users, 'sysEng'))    + '/mo');
+    setEl('netEngLabel',    `Network Engineer × ${counts.netEng} (avg. CA)`);
+    setEl('netEngCost',     fmtDollar(roleCost(users, 'netEng'))    + '/mo');
+    setEl('hireCost',       fmtDollar(internal) + '/mo');
+    setEl('ghosxtCostCompare', fmtDollar(ghosxt) + '/mo');
     setEl('sTier', TIER_LABELS[tier]);
 
     const savMoEl  = document.getElementById('savingsPerMonth');
@@ -140,16 +167,14 @@
     const savPctEl = document.getElementById('savingsPct');
     if (savMoEl)  { savMoEl.textContent  = savedMo > 0 ? fmtDollar(savedMo) : '$0'; flash(savMoEl); }
     if (savYrEl)  { savYrEl.textContent  = savedYr > 0 ? fmtDollar(savedYr) : '$0'; flash(savYrEl); }
-    if (savPctEl) { savPctEl.textContent = pct > 0     ? pct + '%'           : '—';  flash(savPctEl); }
+    if (savPctEl) { savPctEl.textContent = pct > 0     ? pct + '%'          : '—';  flash(savPctEl); }
 
     const barEl = document.getElementById('savingsBar');
     if (barEl) barEl.style.width = (internal > 0 ? Math.min(100, Math.round((ghosxt / internal) * 100)) : 100) + '%';
 
     const noteEl = document.getElementById('savingsNoteText');
     if (noteEl) {
-      noteEl.textContent = hires > 1
-        ? `At ${users} users, most CA businesses need ~${hires} IT hires (1:18 industry ratio). Each fully loaded at ~$100k/yr. Ghosxt replaces the entire team with one predictable monthly fee.`
-        : `Internal IT hire estimate based on avg. CA salary + benefits + overhead (~$77k/yr + 30% burden). At ${users} users, 1 hire is the SMB industry benchmark.`;
+      noteEl.textContent = `Salary estimates are CA averages plus 30% for benefits and overhead. Most small businesses cannot afford the full team and end up with one IT generalist who cannot do the engineering or network work properly. Ghosxt replaces the full skillset with one predictable monthly fee.`;
     }
 
     const heroEl = document.getElementById('heroSavingsPct');

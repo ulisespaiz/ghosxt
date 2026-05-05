@@ -10,7 +10,7 @@
     </title>
     <meta
       name="description"
-      content="Transparent managed IT pricing. Foundation $750/mo flat (1-4 users). Essential $125, Professional $175, Premium $250, Engineer $400 per user/month."
+      content="Transparent managed IT pricing. Foundation $600/mo flat (1-4 users). Essential $125, Professional $175, Premium $250 per user/month."
     />
     <link rel="canonical" href="https://ghosxt.com/pricing.html" />
 
@@ -126,11 +126,11 @@
                   "@type": "Offer",
                   "name": "Foundation Plan (Tiny Teams)",
                   "description": "Flat-rate managed IT for teams of 1 to 4 users. Includes 24/7 monitoring, helpdesk, patching, EDR, MFA, Microsoft 365 baseline security, email security, vulnerability management, and security awareness training. Backups and hardware management sold separately.",
-                  "price": "750",
+                  "price": "600",
                   "priceCurrency": "USD",
                   "priceSpecification": {
                     "@type": "UnitPriceSpecification",
-                    "price": "750",
+                    "price": "600",
                     "priceCurrency": "USD",
                     "unitText": "month"
                   },
@@ -196,23 +196,6 @@
                     "name": "Premium Managed IT Services"
                   }
                 },
-                {
-                  "@type": "Offer",
-                  "name": "Engineer Plan",
-                  "description": "Per user per month. Engineering-led managed IT for businesses with complex infrastructure. Includes everything in Premium plus a dedicated engineer, multi-site and multi-VLAN network design and management, included project engineering hours, custom automation, vCIO services, compliance program management, and a 5-minute response SLA on critical issues.",
-                  "price": "400",
-                  "priceCurrency": "USD",
-                  "priceSpecification": {
-                    "@type": "UnitPriceSpecification",
-                    "price": "400",
-                    "priceCurrency": "USD",
-                    "unitText": "user/month"
-                  },
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Engineer-Level Managed IT Services"
-                  }
-                }
               ]
             }
           }
@@ -398,7 +381,7 @@
 
                 <h1 class="pricing-hero-title">No guessing.<br><span class="title-black">Just numbers.</span></h1>
                 <p class="pricing-hero-subtitle">Per-user, per-month pricing with no hidden fees. Use the calculator to see exactly what your team costs and how much you save compared to hiring in-house.</p>
-                <p class="pricing-hero-subtitle">Teams of 1 to 4 users? Start with our <a href="#foundation" class="pricing-link">Foundation flat-rate tier at $750/mo</a>. 5+ users use the per-user pricing below. 12-month agreement. Month-to-month available at +15%.</p>
+                <p class="pricing-hero-subtitle">Teams of 1 to 4 users? Start with our <a href="#foundation" class="pricing-link">Foundation flat-rate tier at $600/mo</a>. 5+ users use the per-user pricing below. 12-month agreement. Month-to-month available at +15%.</p>
 
                 <div class="pricing-hero-cta-row">
                     <a class="pricing-hero-btn-primary" href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer" aria-label="Book a free call with Ghosxt">
@@ -481,7 +464,7 @@
             <header class="foundation-card-header">
               <h3 class="foundation-card-name">Foundation</h3>
               <div class="foundation-card-price">
-                $750<em>/month flat</em>
+                $600<em>/month flat</em>
               </div>
               <div class="foundation-card-sub">
                 For 1 to 4 users · 12-month engagement
@@ -718,32 +701,6 @@
                       <div class="tier-option-desc">
                         Full coverage + SIEM, vCIO, compliance support &amp;
                         15-min priority SLA.
-                      </div>
-                    </div>
-                  </label>
-
-                  <label class="tier-option" data-tier="engineer">
-                    <input
-                      type="radio"
-                      name="tier"
-                      value="engineer"
-                      aria-label="Engineer tier, $400 per user per month"
-                    />
-                    <div class="tier-option-inner">
-                      <div class="tier-option-top">
-                        <div class="tier-check">
-                          <i class="fi fi-rs-check" aria-hidden="true"></i>
-                        </div>
-                        <div class="tier-option-info">
-                          <span class="tier-option-name">Engineer</span>
-                          <span class="tier-option-price"
-                            >$400<em>/user/mo</em></span
-                          >
-                        </div>
-                      </div>
-                      <div class="tier-option-desc">
-                        Dedicated engineer, multi-site network design, included
-                        project hours, vCIO &amp; 5-min critical SLA.
                       </div>
                     </div>
                   </label>
@@ -1038,15 +995,26 @@
                 </div>
 
                 <div class="savings-compare">
-                  <div class="compare-row">
-                    <span class="compare-label" id="hireCostLabel"
-                      >Internal IT hire × 1 (avg. CA)</span
-                    >
-                    <span class="compare-value compare-value-hire" id="hireCost"
-                      >$8,333/mo</span
-                    >
+                  <div class="compare-subhead">
+                    Full skillset cost on the open market
                   </div>
-                  <div class="compare-row">
+                  <div class="compare-row compare-row-role">
+                    <span class="compare-label" id="itSupportLabel">IT Support &times; 1 (avg. CA)</span>
+                    <span class="compare-value compare-value-hire" id="itSupportCost">$8,333/mo</span>
+                  </div>
+                  <div class="compare-row compare-row-role">
+                    <span class="compare-label" id="sysEngLabel">Systems Engineer &times; 1 (avg. CA)</span>
+                    <span class="compare-value compare-value-hire" id="sysEngCost">$10,833/mo</span>
+                  </div>
+                  <div class="compare-row compare-row-role">
+                    <span class="compare-label" id="netEngLabel">Network Engineer &times; 1 (avg. CA)</span>
+                    <span class="compare-value compare-value-hire" id="netEngCost">$12,083/mo</span>
+                  </div>
+                  <div class="compare-row compare-row-total">
+                    <span class="compare-label"><strong>In-house team total</strong></span>
+                    <span class="compare-value compare-value-hire" id="hireCost">$31,250/mo</span>
+                  </div>
+                  <div class="compare-row compare-row-ghosxt">
                     <span class="compare-label"
                       >Ghosxt (<span id="sTier">Professional</span>)</span
                     >
@@ -1158,7 +1126,7 @@
               <p class="onboarding-card-price">First month covers it</p>
               <p class="onboarding-card-desc">
                 For tiny teams (1 to 4 users), your first monthly payment of
-                $750 covers all setup work: documenting your environment,
+                $600 covers all setup work: documenting your environment,
                 deploying agents, configuring MFA, M365 hardening, and getting
                 your team trained. No separate fee.
               </p>

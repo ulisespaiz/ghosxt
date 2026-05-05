@@ -2096,3 +2096,42 @@
   line-height: 1.55;
   color: rgba(0, 0, 0, 0.75);
 }
+
+/* ============================================================
+   SAVINGS CARD: Multi-role comparison rows
+   ============================================================ */
+.compare-subhead {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.55);
+  margin-bottom: 0.6rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.12);
+}
+
+.compare-row-role {
+  font-size: 0.9375rem;
+}
+
+.compare-row-role .compare-label {
+  color: rgba(0, 0, 0, 0.78);
+}
+
+.compare-row-total {
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  padding-top: 0.5rem;
+  margin-top: 0.3rem;
+}
+
+.compare-row-total .compare-label strong {
+  color: var(--ghosxt-black, #000);
+  font-weight: 700;
+}
+
+.compare-row-ghosxt {
+  border-top: 2px solid var(--ghosxt-black, #000);
+  padding-top: 0.6rem;
+  margin-top: 0.5rem;
+}
