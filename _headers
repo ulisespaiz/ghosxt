@@ -1,0 +1,25 @@
+# Cache rules: long cache for fingerprintable static assets,
+# short revalidating cache for HTML, and a baseline security
+# header set on every response.
+
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.css
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.js
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.html
+  Cache-Control: public, max-age=300, must-revalidate
+
+/
+  Cache-Control: public, max-age=300, must-revalidate
+
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), interest-cohort=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  X-Frame-Options: SAMEORIGIN

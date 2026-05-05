@@ -62,6 +62,7 @@
     <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
 
     <!-- PERFORMANCE -->
+    <link rel="preload" as="image" href="assets/img/hero-webdev.webp" fetchpriority="high" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://cdn-uicons.flaticon.com" />
@@ -536,8 +537,12 @@
               <div class="stat-main-img">
                 <img
                   src="assets/img/hero-webdev.webp"
-                  alt="Custom web development for US small businesses — WordPress and React websites by Ghosxt"
+                  alt="Custom web development for US small businesses, WordPress and React websites by Ghosxt"
                   loading="eager"
+                  fetchpriority="high"
+                  decoding="async"
+                  width="900"
+                  height="600"
                 />
               </div>
             </div>
