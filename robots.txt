@@ -2,7 +2,8 @@ User-agent: *
 Allow: /
 Disallow: /admin/
 Disallow: /staging/
-Disallow: /assets/js/
-# Note: Do NOT disallow /assets/css/ — Googlebot needs CSS to render pages
+Disallow: /blank-template.html
+# Note: /assets/css/ and /assets/js/ are intentionally crawlable —
+# Googlebot needs both to render pages correctly.
 
 Sitemap: https://ghosxt.com/sitemap.xml
