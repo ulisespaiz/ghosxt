@@ -736,7 +736,8 @@ body:has(.top-banner.hidden) .hero-section {
   transition: transform 0.2s ease;
 }
 
-.navbar-dropdown:hover .dropdown-trigger i {
+.navbar-dropdown:hover .dropdown-trigger i,
+.navbar-dropdown:focus-within .dropdown-trigger i {
   transform: rotate(180deg);
 }
 
@@ -754,9 +755,11 @@ body:has(.top-banner.hidden) .hero-section {
   visibility: hidden;
   transition: all 0.2s ease;
   box-shadow: 2px 2px 0 0 var(--ghosxt-black);
+  z-index: 1000;
 }
 
-.navbar-dropdown:hover .dropdown-menu {
+.navbar-dropdown:hover .dropdown-menu,
+.navbar-dropdown:focus-within .dropdown-menu {
   opacity: 1;
   visibility: visible;
 }

@@ -89,15 +89,18 @@ document.addEventListener('DOMContentLoaded', function() {
         trigger.addEventListener('click', () => {
             const accordion = trigger.parentElement;
             const isActive = accordion.classList.contains('active');
-            
+
             // Close all accordions
             document.querySelectorAll('.mobile-accordion').forEach(acc => {
                 acc.classList.remove('active');
+                const t = acc.querySelector('.mobile-accordion-trigger');
+                if (t) t.setAttribute('aria-expanded', 'false');
             });
-            
+
             // Open clicked accordion if it wasn't active
             if (!isActive) {
                 accordion.classList.add('active');
+                trigger.setAttribute('aria-expanded', 'true');
             }
         });
     });
