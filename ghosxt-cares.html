@@ -599,25 +599,6 @@
           });
         }
 
-        // Mobile nav toggle
-        const mobileToggle = document.getElementById("mobileToggle");
-        const mobileMenu = document.getElementById("mobileMenu");
-        const navbarOverlay = document.getElementById("navbarOverlay");
-
-        if (mobileToggle && mobileMenu) {
-          mobileToggle.addEventListener("click", function () {
-            const isOpen = mobileMenu.classList.contains("open");
-            mobileMenu.classList.toggle("open");
-            mobileToggle.setAttribute("aria-expanded", !isOpen);
-          });
-        }
-
-        if (navbarOverlay) {
-          navbarOverlay.addEventListener("click", function () {
-            mobileMenu.classList.remove("open");
-            mobileToggle.setAttribute("aria-expanded", false);
-          });
-        }
       });
     </script>
   </body>

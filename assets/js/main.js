@@ -1,7 +1,8 @@
 // Scroll to Top Button Functionality
 document.addEventListener('DOMContentLoaded', function() {
     const scrollToTopBtn = document.getElementById('scrollToTop');
-    
+    if (!scrollToTopBtn) return;
+
     // Show/hide button based on scroll position
     window.addEventListener('scroll', () => {
         if (window.pageYOffset > 300) {
@@ -26,7 +27,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const cookieBanner = document.getElementById('cookieBanner');
     const cookieAccept = document.getElementById('cookieAccept');
     const cookieDecline = document.getElementById('cookieDecline');
-    
+    if (!cookieBanner || !cookieAccept || !cookieDecline) return;
+
     // Check if user has already responded to cookies
     const cookieConsent = localStorage.getItem('cookieConsent');
     
@@ -62,6 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const mobileMenu = document.getElementById('mobileMenu');
     const navbarOverlay = document.getElementById('navbarOverlay');
     const body = document.body;
+    if (!mobileToggle || !mobileMenu || !navbarOverlay) return;
 
     mobileToggle.addEventListener('click', () => {
         mobileMenu.classList.toggle('active');
