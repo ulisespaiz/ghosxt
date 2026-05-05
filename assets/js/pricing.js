@@ -12,13 +12,14 @@
   const MIN_USERS      = 5;
 
   /* Loaded monthly cost for each role (CA salary + 30% benefits/overhead, ÷12).
-     Staffing ratios reflect industry SMB benchmarks where one hire "covers
-     up to N endpoints" before a second is required. We use ceil() so the
-     transition is sharp: 150 endpoints = 1 sys eng, 151 = 2, etc. */
+     `threshold` = endpoint count below which the role is not yet realistic
+     for an in-house team. Below threshold the role is "blanked out" in the
+     comparison so we don't claim a 5-user shop needs a Network Engineer.
+     `ratio` = how many endpoints one hire can cover before a second is needed. */
   const ROLES = [
-    { key: 'itTech', label: 'IT Tech',          baseCount: 1, ratio: 75,  monthly: 8333  },  // ~$77k loaded, 1 per 75 endpoints
-    { key: 'sysEng', label: 'Systems Engineer', baseCount: 1, ratio: 150, monthly: 10833 }, // ~$100k loaded, 1 per 150
-    { key: 'netEng', label: 'Network Engineer', baseCount: 1, ratio: 250, monthly: 12083 }  // ~$112k loaded, 1 per 250
+    { key: 'itTech', label: 'IT Tech',          baseCount: 1, ratio: 75,  threshold: 0,  monthly: 8333  },  // ~$77k loaded, always active
+    { key: 'sysEng', label: 'Systems Engineer', baseCount: 1, ratio: 150, threshold: 30, monthly: 10833 }, // ~$100k loaded, needed at 30+
+    { key: 'netEng', label: 'Network Engineer', baseCount: 1, ratio: 250, threshold: 75, monthly: 12083 }  // ~$112k loaded, needed at 75+
   ];
 
   /* ── ADD-ON CONFIGURATION (for display names) ────────────── */
@@ -69,9 +70,13 @@
     return (state.users * TIER_PRICES[state.tier]) + addonTotal();
   }
 
+  function roleActive(users, role) {
+    return users >= role.threshold;
+  }
+
   function roleCounts(users) {
     return ROLES.reduce((acc, r) => {
-      acc[r.key] = Math.max(r.baseCount, Math.ceil(users / r.ratio));
+      acc[r.key] = roleActive(users, r) ? Math.max(r.baseCount, Math.ceil(users / r.ratio)) : 0;
       return acc;
     }, {});
   }
@@ -79,6 +84,7 @@
   function roleCost(users, key) {
     const r = ROLES.find(x => x.key === key);
     if (!r) return 0;
+    if (!roleActive(users, r)) return 0;
     const count = Math.max(r.baseCount, Math.ceil(users / r.ratio));
     return count * r.monthly;
   }
@@ -152,13 +158,27 @@
     setEl('bTotal',  fmtDollar(ghosxt));
     setEl('bAnnual', fmtDollar(ghosxt * 12));
 
-    /* Savings card: per-role line items */
-    setEl('itTechLabel', `IT Tech × ${counts.itTech} (avg. CA)`);
-    setEl('itTechCost',  fmtDollar(roleCost(users, 'itTech')) + '/mo');
-    setEl('sysEngLabel', `Systems Engineer × ${counts.sysEng} (avg. CA)`);
-    setEl('sysEngCost',  fmtDollar(roleCost(users, 'sysEng')) + '/mo');
-    setEl('netEngLabel', `Network Engineer × ${counts.netEng} (avg. CA)`);
-    setEl('netEngCost',  fmtDollar(roleCost(users, 'netEng')) + '/mo');
+    /* Savings card: per-role line items. Roles below their threshold are
+       blanked out with a "not yet needed" message and a — for the cost. */
+    function renderRole(role, labelId, costId) {
+      const labelEl = document.getElementById(labelId);
+      const costEl  = document.getElementById(costId);
+      const row     = labelEl ? labelEl.closest('.compare-row') : null;
+      const active  = roleActive(users, role);
+      if (active) {
+        const count = counts[role.key];
+        if (labelEl) labelEl.textContent = `${role.label} × ${count} (avg. CA)`;
+        if (costEl)  costEl.textContent  = fmtDollar(roleCost(users, role.key)) + '/mo';
+        if (row)     row.classList.remove('compare-row-inactive');
+      } else {
+        if (labelEl) labelEl.textContent = `${role.label} (not yet needed at ${users} endpoints)`;
+        if (costEl)  costEl.textContent  = '—';
+        if (row)     row.classList.add('compare-row-inactive');
+      }
+    }
+    renderRole(ROLES[0], 'itTechLabel', 'itTechCost');
+    renderRole(ROLES[1], 'sysEngLabel', 'sysEngCost');
+    renderRole(ROLES[2], 'netEngLabel', 'netEngCost');
     setEl('hireCost',       fmtDollar(internal) + '/mo');
     setEl('ghosxtCostCompare', fmtDollar(ghosxt) + '/mo');
     setEl('sTier', TIER_LABELS[tier]);
@@ -175,7 +195,7 @@
 
     const noteEl = document.getElementById('savingsNoteText');
     if (noteEl) {
-      noteEl.textContent = `Staffing ratios use industry SMB benchmarks: 1 IT tech per 75 endpoints, 1 systems engineer per 150 endpoints, 1 network engineer per 250 endpoints. Salaries are CA averages plus 30% for benefits and overhead. Most small businesses cannot afford the full team and end up with one IT generalist who cannot do the engineering or network work properly. Ghosxt replaces the full skillset with one predictable monthly fee.`;
+      noteEl.textContent = `Roles unlock as your business grows: a Systems Engineer becomes realistic around 30 endpoints, a Network Engineer around 75. Below those thresholds, one IT generalist usually carries everything (and the engineering and security work suffers). Staffing ratios are industry SMB benchmarks (1 IT tech per 75, 1 sys engineer per 150, 1 network engineer per 250). Salaries are CA averages plus 30% for benefits and overhead.`;
     }
 
     const heroEl = document.getElementById('heroSavingsPct');

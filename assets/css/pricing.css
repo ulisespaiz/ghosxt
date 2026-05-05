@@ -2171,3 +2171,45 @@
   line-height: 1.4;
   font-family: var(--font-family-2);
 }
+
+/* ============================================================
+   SAVINGS CARD: Inactive (blanked) role row
+   Shown when an in-house role isn't yet realistic for this size.
+   ============================================================ */
+.compare-row-inactive {
+  opacity: 0.5;
+}
+
+.compare-row-inactive .compare-label {
+  font-style: italic;
+}
+
+.compare-row-inactive .compare-value {
+  color: rgba(0, 0, 0, 0.4);
+  text-decoration: none;
+}
+
+.compare-row-inactive .compare-role-desc {
+  display: none;
+}
+
+/* ============================================================
+   FOUNDATION HEADER: enforce centered badge with explicit fit-content
+   The Tiny Teams badge was rendering left-aligned in some browsers
+   because .center-badge defaults to flex-shrink: 1 inside a column
+   container. Force fit-content so it never stretches.
+   ============================================================ */
+.foundation-header {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.foundation-header .center-badge {
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 0 1.5rem;
+  align-self: center;
+}
