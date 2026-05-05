@@ -1770,3 +1770,212 @@
         }
     }
 }
+/* ============================================================
+   FOUNDATION TIER (Tiny Teams, 1-4 users)
+   Flat-rate offer above the per-user calculator
+   ============================================================ */
+.foundation-tier-section {
+  padding: 4rem 24px 1rem;
+  background: var(--ghosxt-white, #fff);
+}
+
+.foundation-container {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.foundation-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.foundation-header .center-badge {
+  margin: 0 auto 1.5rem;
+}
+
+.foundation-title {
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  line-height: 1.15;
+  color: var(--ghosxt-black, #000);
+  margin-bottom: 0.75rem;
+}
+
+.foundation-subtitle {
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: rgba(0, 0, 0, 0.78);
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.foundation-card {
+  border: 1px solid var(--ghosxt-black, #000);
+  border-radius: 10px;
+  background: var(--ghosxt-white, #fff);
+  box-shadow: 6px 6px 0 0 var(--ghosxt-black, #000);
+  overflow: hidden;
+}
+
+.foundation-card-header {
+  padding: 2rem 2rem 1.5rem;
+  text-align: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.02), transparent);
+}
+
+.foundation-card-name {
+  font-size: 1.125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+  color: var(--ghosxt-black, #000);
+  margin-bottom: 0.5rem;
+}
+
+.foundation-card-price {
+  font-size: clamp(2.5rem, 6vw, 3.75rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--ghosxt-black, #000);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.foundation-card-price em {
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.65);
+  margin-left: 0.4rem;
+}
+
+.foundation-card-sub {
+  font-family: var(--font-family-2);
+  font-size: 0.9375rem;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.foundation-card-body {
+  padding: 1.75rem 2rem 2rem;
+}
+
+.foundation-list-title {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+  color: var(--ghosxt-black, #000);
+  margin-bottom: 0.875rem;
+}
+
+.foundation-includes {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.foundation-includes li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.85);
+}
+
+.foundation-includes li i {
+  color: var(--ghosxt-red-0, #e63946);
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+  display: flex;
+}
+
+.foundation-excludes {
+  background: rgba(0, 0, 0, 0.04);
+  border-left: 3px solid var(--ghosxt-black, #000);
+  padding: 0.875rem 1rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.78);
+  border-radius: 4px;
+}
+
+.foundation-excludes strong {
+  color: var(--ghosxt-black, #000);
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.foundation-cta-row {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.foundation-cta-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--ghosxt-red-0, #e63946);
+  color: var(--ghosxt-white, #fff);
+  padding: 0.875rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: var(--font-family-2);
+  font-size: 0.9375rem;
+  border: 1px solid var(--ghosxt-black, #000);
+  box-shadow: 3px 3px 0 0 var(--ghosxt-black, #000);
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.foundation-cta-primary:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0 0 var(--ghosxt-black, #000);
+}
+
+.foundation-cta-secondary {
+  color: var(--ghosxt-black, #000);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-family: var(--font-family-2);
+  font-weight: 500;
+  font-size: 0.9375rem;
+}
+
+.foundation-link {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.9375rem;
+  color: rgba(0, 0, 0, 0.7);
+  font-family: var(--font-family-2);
+}
+
+.foundation-link a {
+  color: var(--ghosxt-black, #000);
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .foundation-card-header,
+  .foundation-card-body {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+  .foundation-cta-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .foundation-cta-primary {
+    justify-content: center;
+  }
+  .foundation-cta-secondary {
+    text-align: center;
+  }
+}
