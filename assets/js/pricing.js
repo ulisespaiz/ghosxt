@@ -7,8 +7,8 @@
   'use strict';
 
   /* ── CONSTANTS ───────────────────────────────────────────── */
-  const TIER_PRICES  = { essential: 125, professional: 175, premium: 250 };
-  const TIER_LABELS  = { essential: 'Essential', professional: 'Professional', premium: 'Premium' };
+  const TIER_PRICES  = { essential: 125, professional: 175, premium: 250, engineer: 400 };
+  const TIER_LABELS  = { essential: 'Essential', professional: 'Professional', premium: 'Premium', engineer: 'Engineer' };
   const USERS_PER_HIRE = 18;
   const COST_PER_HIRE  = 8333;   // $100k/yr ÷ 12, CA fully loaded
   const MIN_USERS      = 5;

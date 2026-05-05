@@ -10,7 +10,7 @@
     </title>
     <meta
       name="description"
-      content="Transparent managed IT pricing. Foundation $750/mo flat for tiny teams (1-4 users). Essential $125, Professional $175, Premium $250 per user/month."
+      content="Transparent managed IT pricing. Foundation $750/mo flat (1-4 users). Essential $125, Professional $175, Premium $250, Engineer $400 per user/month."
     />
     <link rel="canonical" href="https://ghosxt.com/pricing.html" />
 
@@ -194,6 +194,23 @@
                   "itemOffered": {
                     "@type": "Service",
                     "name": "Premium Managed IT Services"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "name": "Engineer Plan",
+                  "description": "Per user per month. Engineering-led managed IT for businesses with complex infrastructure. Includes everything in Premium plus a dedicated engineer, multi-site and multi-VLAN network design and management, included project engineering hours, custom automation, vCIO services, compliance program management, and a 5-minute response SLA on critical issues.",
+                  "price": "400",
+                  "priceCurrency": "USD",
+                  "priceSpecification": {
+                    "@type": "UnitPriceSpecification",
+                    "price": "400",
+                    "priceCurrency": "USD",
+                    "unitText": "user/month"
+                  },
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Engineer-Level Managed IT Services"
                   }
                 }
               ]
@@ -704,6 +721,32 @@
                       </div>
                     </div>
                   </label>
+
+                  <label class="tier-option" data-tier="engineer">
+                    <input
+                      type="radio"
+                      name="tier"
+                      value="engineer"
+                      aria-label="Engineer tier, $400 per user per month"
+                    />
+                    <div class="tier-option-inner">
+                      <div class="tier-option-top">
+                        <div class="tier-check">
+                          <i class="fi fi-rs-check" aria-hidden="true"></i>
+                        </div>
+                        <div class="tier-option-info">
+                          <span class="tier-option-name">Engineer</span>
+                          <span class="tier-option-price"
+                            >$400<em>/user/mo</em></span
+                          >
+                        </div>
+                      </div>
+                      <div class="tier-option-desc">
+                        Dedicated engineer, multi-site network design, included
+                        project hours, vCIO &amp; 5-min critical SLA.
+                      </div>
+                    </div>
+                  </label>
                 </div>
               </div>
 
@@ -1084,6 +1127,75 @@
                 </a>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════════════════════ ONBOARDING & ENGAGEMENT TERMS -->
+      <section
+        class="onboarding-section"
+        id="onboarding"
+        aria-label="Onboarding fees and engagement terms"
+      >
+        <div class="onboarding-container">
+          <div class="onboarding-header">
+            <h2 class="onboarding-title">
+              Onboarding &amp;
+              <span class="title-span-text">Engagement</span>
+            </h2>
+            <p class="onboarding-subtitle">
+              No surprise fees. Here's exactly what onboarding costs and what
+              the engagement looks like at every tier.
+            </p>
+          </div>
+
+          <div class="onboarding-grid">
+            <article class="onboarding-card">
+              <h3 class="onboarding-card-title">
+                <i class="fi fi-rs-rocket-lunch" aria-hidden="true"></i>
+                Foundation onboarding
+              </h3>
+              <p class="onboarding-card-price">First month covers it</p>
+              <p class="onboarding-card-desc">
+                For tiny teams (1 to 4 users), your first monthly payment of
+                $750 covers all setup work: documenting your environment,
+                deploying agents, configuring MFA, M365 hardening, and getting
+                your team trained. No separate fee.
+              </p>
+            </article>
+
+            <article class="onboarding-card">
+              <h3 class="onboarding-card-title">
+                <i class="fi fi-rs-settings-sliders" aria-hidden="true"></i>
+                Per-user tier onboarding
+              </h3>
+              <p class="onboarding-card-price">$1,500 – $4,000 one-time</p>
+              <ul class="onboarding-card-list">
+                <li><strong>5 to 15 users:</strong> $1,500</li>
+                <li><strong>15 to 30 users:</strong> $2,500</li>
+                <li><strong>30 to 50 users:</strong> $4,000</li>
+                <li><strong>50+ users:</strong> Custom quote</li>
+              </ul>
+              <p class="onboarding-card-desc">
+                Covers environment audit, agent deployment, identity hardening,
+                migration work where needed, security baseline setup, and team
+                training. Charged once at the start of the engagement.
+              </p>
+            </article>
+
+            <article class="onboarding-card">
+              <h3 class="onboarding-card-title">
+                <i class="fi fi-rs-document-signed" aria-hidden="true"></i>
+                Engagement terms
+              </h3>
+              <ul class="onboarding-card-list">
+                <li><strong>12-month standard agreement</strong> on all tiers</li>
+                <li><strong>Month-to-month available</strong> at +15%</li>
+                <li><strong>Cancel anytime</strong> with 30 days written notice</li>
+                <li><strong>No price increases</strong> within your initial term</li>
+                <li><strong>You own your data</strong>, exported on request</li>
+              </ul>
+            </article>
           </div>
         </div>
       </section>

@@ -1979,3 +1979,120 @@
     text-align: center;
   }
 }
+
+/* ============================================================
+   ONBOARDING & ENGAGEMENT
+   ============================================================ */
+.onboarding-section {
+  padding: 4rem 24px;
+  background: rgba(0, 0, 0, 0.02);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.onboarding-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.onboarding-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.onboarding-title {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  line-height: 1.2;
+  color: var(--ghosxt-black, #000);
+  margin-bottom: 0.75rem;
+}
+
+.onboarding-subtitle {
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: rgba(0, 0, 0, 0.78);
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.onboarding-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+.onboarding-card {
+  background: var(--ghosxt-white, #fff);
+  border: 1px solid var(--ghosxt-black, #000);
+  border-radius: 8px;
+  padding: 1.75rem;
+  box-shadow: 4px 4px 0 0 var(--ghosxt-black, #000);
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.onboarding-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 0 var(--ghosxt-black, #000);
+}
+
+.onboarding-card-title {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: var(--ghosxt-black, #000);
+  margin-bottom: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.onboarding-card-title i {
+  color: var(--ghosxt-red-0, #e63946);
+  display: flex;
+  font-size: 1.25rem;
+}
+
+.onboarding-card-price {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--ghosxt-black, #000);
+  margin-bottom: 0.875rem;
+  letter-spacing: -0.01em;
+}
+
+.onboarding-card-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.onboarding-card-list li {
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.85);
+  padding-left: 1.1rem;
+  position: relative;
+}
+
+.onboarding-card-list li::before {
+  content: "▸";
+  color: var(--ghosxt-red-0, #e63946);
+  position: absolute;
+  left: 0;
+  font-weight: 700;
+}
+
+.onboarding-card-list li strong {
+  color: var(--ghosxt-black, #000);
+}
+
+.onboarding-card-desc {
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  color: rgba(0, 0, 0, 0.75);
+}
