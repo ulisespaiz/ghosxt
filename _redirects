@@ -1,2 +1,18 @@
 # Legacy URL fix: ghosxt-cares page was previously linked as /cares.html
 /cares.html   /ghosxt-cares.html   301
+
+# WordPress legacy URLs (site was previously WordPress; these still appear in
+# Google's index and need to be redirected to the equivalent new-site pages).
+/sample-page/                                                              /                          301
+/hello-world/                                                              /blog/                     301
+/hello-world/*                                                             /blog/                     301
+/cybersecurity-and-data-protection/                                        /cybersecurity.html        301
+/cybersecurity-and-data-protection/*                                       /cybersecurity.html        301
+/custom-website-development-building-your-digital-foundation-for-success/  /website-development.html  301
+/custom-website-development-building-your-digital-foundation-for-success/* /website-development.html  301
+/category/it-support/*                                                     /services.html             301
+/category/web-development/*                                                /website-development.html  301
+/category/uncategorized/*                                                  /blog/                     301
+/category/*                                                                /blog/                     301
+/feed/                                                                     /blog/                     301
+/*/feed/                                                                   /blog/                     301
