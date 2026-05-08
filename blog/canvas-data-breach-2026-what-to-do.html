@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Canvas Data Breach: What Happened and How to Protect Your Information | Ghosxt</title>
+    <meta name="description" content="A plain-talk breakdown of the May 2026 Instructure Canvas data breach by ShinyHunters, what was exposed, and the steps students, parents, and staff should take this week to protect their information." />
+    <link rel="canonical" href="https://ghosxt.com/blog/canvas-data-breach-2026-what-to-do.html" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://ghosxt.com/blog/canvas-data-breach-2026-what-to-do.html" />
+    <meta property="og:title" content="The Canvas Data Breach: What Happened and How to Protect Your Information" />
+    <meta property="og:description" content="What the May 2026 Canvas (Instructure) breach actually exposed, what it didn't, and what to do this week to protect yourself." />
+    <meta property="og:image" content="https://ghosxt.com/assets/img/og-image.png" />
+    <meta property="og:site_name" content="Ghosxt" />
+    <meta property="article:published_time" content="2026-05-08" />
+    <meta property="article:author" content="Ulises Paiz" />
+    <meta name="robots" content="index, follow" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="The Canvas Data Breach: What Happened and How to Protect Your Information" />
+    <meta name="twitter:description" content="What the May 2026 Canvas breach exposed, and what to do this week to protect yourself." />
+    <meta name="twitter:image" content="https://ghosxt.com/assets/img/og-image.png" />
+    <link rel="icon" href="../assets/img/favicon.ico" sizes="any" />
+    <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdn-uicons.flaticon.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="../assets/css/blog.css" />
+    <link rel="stylesheet" media="print" onload="this.media='all'" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" />
+    <noscript><link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" /></noscript>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage": { "@type": "WebPage", "@id": "https://ghosxt.com/blog/canvas-data-breach-2026-what-to-do.html" },
+        "headline": "The Canvas Data Breach: What Happened and How to Protect Your Information",
+        "description": "What the May 2026 Instructure Canvas breach exposed, what it didn't, and the steps students, parents, and staff should take this week.",
+        "image": "https://ghosxt.com/assets/img/og-image.png",
+        "author": { "@type": "Person", "name": "Ulises Paiz", "url": "https://ghosxt.com/about.html" },
+        "publisher": { "@type": "Organization", "name": "Ghosxt", "logo": { "@type": "ImageObject", "url": "https://ghosxt.com/assets/img/ghosxt logo.webp" } },
+        "datePublished": "2026-05-08",
+        "dateModified": "2026-05-08",
+        "articleSection": "Cybersecurity",
+        "keywords": "canvas data breach, instructure breach, shinyhunters, canvas hack 2026, student data breach, how to protect information, MFA, password manager"
+      }
+    </script>
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top"><i class="fi fi-rs-angle-up" aria-hidden="true"></i></button>
+    <div class="cookie-banner" id="cookieBanner"><div class="cookie-banner-container"><div class="cookie-content"><div class="cookie-icon"><i class="fi fi-rs-cookie"></i></div><div class="cookie-text"><p class="cookie-message">We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.</p><a href="../privacy-policy.html" class="cookie-link">Learn more about our Privacy Policy</a></div></div><div class="cookie-actions"><button class="cookie-btn cookie-btn-secondary" id="cookieDecline">Decline</button><button class="cookie-btn cookie-btn-primary" id="cookieAccept">Accept All</button></div></div></div>
+    <div class="top-banner" id="topBanner"><div class="banner-container"><div class="banner-content"><span class="banner-text">Need Remote Support? ►</span><a target="_blank" rel="noopener noreferrer" href="https://ticket.ghosxt.com/" class="banner-btn"><i class="fi fi-rs-ticket-alt"></i><span>Visit Client Portal</span></a></div></div></div>
+    <nav class="navbar" aria-label="Main navigation">
+      <div class="navbar-container">
+        <div class="navbar-left"><a href="../index.html" class="navbar-logo"><img src="../assets/img/ghosxt logo.webp" alt="Ghosxt logo" width="48" height="48" /><span>GHOSXT</span></a></div>
+        <div class="navbar-right">
+          <div class="navbar-menu">
+            <a href="../index.html" class="navbar-link">Home</a>
+            <div class="navbar-dropdown"><a href="../about.html" class="navbar-link dropdown-trigger" aria-haspopup="menu">About <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></a><div class="dropdown-menu" role="menu"><a href="../about.html" class="dropdown-item" role="menuitem">About Ghosxt</a><a href="../ghosxt-cares.html" class="dropdown-item" role="menuitem">Ghosxt Cares</a></div></div>
+            <div class="navbar-dropdown"><a href="../services.html" class="navbar-link dropdown-trigger" aria-haspopup="menu">Services <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></a><div class="dropdown-menu" role="menu"><a href="../services.html" class="dropdown-item" role="menuitem">All Services</a><a href="../cybersecurity.html" class="dropdown-item" role="menuitem">Cybersecurity</a><a href="../website-development.html" class="dropdown-item" role="menuitem">Web Development</a><a href="../ctpat.html" class="dropdown-item" role="menuitem">C-TPAT Compliance</a></div></div>
+            <a href="../pricing.html" class="navbar-link">Pricing</a>
+            <a href="index.html" class="navbar-link">Blog</a>
+            <a href="../contact.html" class="navbar-link">Contact</a>
+          </div>
+          <button class="navbar-mobile-toggle" id="mobileToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu"><i class="fi fi-rs-burger-menu" aria-hidden="true"></i></button>
+          <div class="navbar-buttons"><a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer" class="navbar-btn btn-demo"><i class="fi fi-rs-calendar-day"></i><span>Book a Call</span></a></div>
+        </div>
+      </div>
+      <div class="navbar-overlay" id="navbarOverlay"></div>
+      <div class="navbar-mobile-menu" id="mobileMenu">
+        <a href="../index.html" class="mobile-link">Home</a>
+        <div class="mobile-accordion"><button class="mobile-accordion-trigger" aria-expanded="false">About <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></button><div class="mobile-accordion-content"><a href="../about.html" class="mobile-dropdown-item">About Ghosxt</a><a href="../ghosxt-cares.html" class="mobile-dropdown-item">Ghosxt Cares</a></div></div>
+        <div class="mobile-accordion"><button class="mobile-accordion-trigger" aria-expanded="false">Services <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></button><div class="mobile-accordion-content"><a href="../services.html" class="mobile-dropdown-item">All Services</a><a href="../cybersecurity.html" class="mobile-dropdown-item">Cybersecurity</a><a href="../website-development.html" class="mobile-dropdown-item">Web Development</a><a href="../ctpat.html" class="mobile-dropdown-item">C-TPAT Compliance</a></div></div>
+        <a href="../pricing.html" class="mobile-link">Pricing</a>
+        <a href="index.html" class="mobile-link">Blog</a>
+        <a href="../contact.html" class="mobile-link">Contact</a>
+        <div class="mobile-actions"><a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer" class="mobile-btn btn-demo"><i class="fi fi-rs-calendar-day"></i><span>Book a Call</span></a></div>
+      </div>
+    </nav>
+    <main id="main-content" class="blog-post">
+      <header class="blog-post-header">
+        <div class="container">
+          <nav class="blog-post-breadcrumbs" aria-label="Breadcrumb">
+            <a href="../index.html">Home</a><span class="sep">›</span><a href="index.html">Blog</a><span class="sep">›</span><span aria-current="page">Canvas data breach</span>
+          </nav>
+          <div class="blog-post-meta">
+            <time datetime="2026-05-08">May 8, 2026</time>
+            <span>·</span>
+            <span>7 min read</span>
+            <span>·</span>
+            <span class="blog-card-tag">Cybersecurity</span>
+          </div>
+          <h1>The Canvas Data Breach: What Happened and How to Protect Your Information</h1>
+          <div class="blog-post-author">
+            <strong>Ulises Paiz</strong>, Founder, Ghosxt
+          </div>
+        </div>
+      </header>
+      <div class="blog-post-body">
+        <div class="container">
+          <p>If your kid uses Canvas for school, if you teach a class through Canvas, or if you log in to Canvas as a student or staff member at a college, you have probably already heard the news. The platform went into "maintenance mode" on May 7. The reason is that Instructure, the company that runs Canvas, was hit with a major data breach.</p>
+
+          <p>I have been getting calls and texts about this since yesterday from parents in Salinas, Monterey, and Watsonville, plus a few clients whose own employees use Canvas through community college programs. The questions are all the same: what was actually stolen, how bad is it, and what should I do today.</p>
+
+          <p>Here is the plain-talk version, with no fearmongering and no "the sky is falling." Just the facts and the steps that actually matter.</p>
+
+          <h2>What actually happened</h2>
+
+          <p>A criminal extortion group called ShinyHunters claims they stole roughly 3.65 terabytes of data from Instructure, the parent company of the Canvas learning management system. They say it covers around 275 million records and roughly 9,000 schools worldwide. They posted a ransom note on a dark web leak site giving Instructure until May 12 to "negotiate a settlement" or they will publish the data.</p>
+
+          <p>On May 7, Instructure put Canvas, Canvas Beta, and Canvas Test into maintenance mode while they investigate. That is why students at the University of Pennsylvania, Duke, Harvard, Wake County schools, OU, and a long list of California districts and Cal State campuses suddenly could not get to their assignments during finals week. The outage is the visible part. The data is the actual problem.</p>
+
+          <p>The full scope is not independently verified yet. The 9,000-schools number comes from the attackers, not from Instructure. But based on the institutions that have already confirmed they were affected, this is going to land as one of the largest education-sector breaches in recent memory.</p>
+
+          <h2>What the attackers got</h2>
+
+          <p>Based on what Instructure has disclosed and what has shown up on the leak site so far, the exposed data includes:</p>
+
+          <ul>
+            <li><strong>Full names</strong> of students, teachers, and staff.</li>
+            <li><strong>Email addresses</strong>, including school-issued addresses and personal ones tied to the account.</li>
+            <li><strong>Student ID numbers</strong> as assigned by the institution.</li>
+            <li><strong>Messages</strong> sent inside Canvas. This is the one that bothers me most: years of student-teacher conversations, group chats, and private notes. ShinyHunters specifically threatened to release "billions of private messages between students and teachers" if the ransom is not paid.</li>
+            <li><strong>Course enrollment data</strong> showing what classes a person took or taught.</li>
+          </ul>
+
+          <h2>What the attackers did not get (so far)</h2>
+
+          <p>This is the part I want everyone to read carefully, because most of the panic going around the parent group chats is about things that were never in the data set in the first place.</p>
+
+          <ul>
+            <li><strong>No Social Security numbers.</strong> Canvas does not store them. They were not in the dump.</li>
+            <li><strong>No passwords.</strong> Most schools log in to Canvas through their university or district single sign-on. The breach hit Instructure's databases, not those identity providers, so your Canvas password is not the issue here.</li>
+            <li><strong>No financial information.</strong> No credit cards, no bank accounts, no tuition payment data.</li>
+            <li><strong>No dates of birth or government IDs</strong> in what has been disclosed so far.</li>
+          </ul>
+
+          <p>If that holds, the practical risk to most affected users is not identity theft in the classic sense. The risk is targeted phishing, fraud, and impersonation built on top of the names, emails, IDs, and message contents that did get out.</p>
+
+          <h2>What this actually puts you at risk for</h2>
+
+          <p>Three things, in order.</p>
+
+          <h3>1. Highly convincing phishing</h3>
+
+          <p>The attackers (or whoever buys the data after they release it) now have a list of names, school email addresses, the schools those people attend, the courses they were enrolled in, and the names of professors and teachers they actually talked to. Expect emails and texts that look like they come from a specific professor, a specific TA, a specific course, with a link to "your final grade," "your scholarship application," or "your transcript." The detail will be unusually right. That is what the messages were stolen for.</p>
+
+          <h3>2. Account takeover on other services</h3>
+
+          <p>The Canvas password is fine. The email address tied to the account is now public. If that email is reused on other sites, and any of those sites had a breach, attackers can stuff those credentials into your Canvas-tied email and try to take it over. Email is the master key to most of someone's digital life. Defending it is the highest-value thing you can do this week.</p>
+
+          <h3>3. Impersonation and "smishing" of family members</h3>
+
+          <p>This is the one parents miss. If your kid's school email and name are out, scam texts to mom and dad now have a believable hook. "Hi mom this is Sarah, I am locked out of my Canvas account, I need you to send me a code." With enough breach data, an attacker can do that without ever talking to your kid.</p>
+
+          <h2>What to do this week</h2>
+
+          <p>Practical, in priority order. Most of this is free.</p>
+
+          <ol>
+            <li><strong>Turn on multi-factor authentication on the email tied to your Canvas account.</strong> If you use Gmail, log in, go to Security, turn on 2-Step Verification with the Google Authenticator app. If you use Outlook or Microsoft 365, do the same with the Microsoft Authenticator. Do not use SMS as your only second factor; SMS gets sim-swapped. This is the single highest-leverage thing on this list.</li>
+            <li><strong>Change your password on any site where you reused that email's password.</strong> If you have ever typed the same password into Canvas, your email, Netflix, and a random forum, fix it now. Use a password manager (Bitwarden has a free tier, 1Password is the paid pick) and let it generate unique passwords for every site.</li>
+            <li><strong>Tell your family the rule.</strong> No one in the family sends a code, password, or money based on a text or DM, ever, without calling the person on a known phone number first. If your kid is in college, agree on a code word right now that has to be spoken on the phone before money moves. This is the cheapest and most effective scam defense in existence.</li>
+            <li><strong>Get suspicious of "Canvas" emails for the next 60 days.</strong> Real Canvas notifications come from your school's domain or instructure.com. If a message asks you to click a link to "restore your account," "verify your data," or "claim a refund," it is almost certainly fake. Open Canvas by typing the URL yourself.</li>
+            <li><strong>Watch the school's official communications.</strong> Don't trust forwarded screenshots in group chats. Go to the school's actual website or sign in to your student/parent portal directly. Many schools will offer free credit monitoring; sign up if it is offered, even though SSNs were not in the breach. It costs nothing and the monitoring catches future weirdness.</li>
+            <li><strong>If you are a teacher or administrator, scan your Canvas messages for sensitive content.</strong> Anything you wrote in a Canvas DM about a student's mental health, accommodations, family situation, or grades may be in the dump. Your school's privacy office and counsel need to know which conversations were sensitive so they can decide whether individual notification is required.</li>
+          </ol>
+
+          <h2>What schools and districts need to do</h2>
+
+          <p>If you run IT or compliance for a school, district, or campus, you have a different list. Briefly:</p>
+
+          <ul>
+            <li>Confirm with Instructure in writing whether your tenant data was in the affected set, and ask for the indicators of compromise.</li>
+            <li>Force a password reset for every account that has a local Canvas password (not SSO-only). It is precaution, not strict necessity, but the optics of skipping it are bad.</li>
+            <li>Audit Canvas API tokens and third-party LTI integrations. Revoke anything that has not been used in 90 days. Rotate any credentials shared with third-party tools.</li>
+            <li>Enable, or verify, MFA on every Canvas admin account and on the underlying identity provider.</li>
+            <li>Send a clear, calm communication to staff, parents, and students within 72 hours. Tell them what was and was not exposed, what you are doing, and what you want them to do. Vagueness here breeds the rumor mill, and the rumor mill is what scammers love.</li>
+            <li>Get your incident response and breach-notification clock started. Depending on the state, FERPA and student privacy laws may require formal notification within a specific window. California schools should be talking to counsel about <a href="https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1798.29.&amp;lawCode=CIV" target="_blank" rel="noopener noreferrer">Civ. Code 1798.29</a> obligations.</li>
+          </ul>
+
+          <h2>The lesson for any business that uses cloud platforms</h2>
+
+          <p>Canvas is not the only software-as-a-service platform that holds a giant pool of data about you. If you run a small business, you almost certainly have a Microsoft 365 tenant, a CRM, a payroll provider, a file-sharing service, and a handful of other vendors that each hold a different slice of what someone needs to impersonate you. Any one of them can have a Canvas-style Tuesday. The Canvas breach is a useful reminder of three things I keep saying to clients:</p>
+
+          <ul>
+            <li><strong>Your vendors' security is part of your security.</strong> You inherited their controls when you bought their service. If they get breached, your data goes with them. Pick vendors who can answer security questions in writing.</li>
+            <li><strong>MFA on the email account is the single most important control in your business.</strong> Every other defense gets weaker if attackers can read your inbox.</li>
+            <li><strong>Assume your name and email are already in a dump somewhere.</strong> Plan for the phishing that follows. Train people on it. Pay for a phishing simulation tool. The Canvas data will be combined with three other breaches and used against your team within a year. That is not paranoid; that is the pattern.</li>
+          </ul>
+
+          <p>If you have read this far and want a second pair of eyes on whether your small business in California has the basics in place, that is what our <a href="../cybersecurity.html">free cybersecurity assessment</a> is for. 30 minutes, written list of what to fix first, no sales script. We can also help schools and districts in our service area with incident response and post-breach hardening; just <a href="../contact.html">get in touch</a> and we will move fast.</p>
+
+          <p>For more on the controls that actually stop this kind of thing, see <a href="ransomware-2026-how-it-gets-in.html">how ransomware actually gets in in 2026</a> and <a href="small-business-cybersecurity-mistakes.html">the cybersecurity mistakes I see in almost every small business</a>.</p>
+
+          <div class="blog-post-cta">
+            <h3>Worried about your business after a breach like this?</h3>
+            <p>30 minutes with a DoD-cleared engineer. Written list of what to fix first. No sales script.</p>
+            <a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer">
+              <i class="fi fi-rs-calendar-day" aria-hidden="true"></i>
+              Book your free assessment
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer footer-visible" id="footerSection">
+      <div class="footer-container">
+        <div class="footer-grid">
+          <div class="footer-column"><h3 class="footer-column-title">Main Menu</h3><ul class="footer-links"><li><a href="../index.html">Home</a></li><li><a href="../about.html">About</a></li><li><a href="../services.html">Services</a></li><li><a href="../pricing.html">Pricing</a></li><li><a href="../contact.html">Contact</a></li></ul></div>
+          <div class="footer-column"><h3 class="footer-column-title">Services</h3><ul class="footer-links"><li><a href="../services.html">Managed IT</a></li><li><a href="../cybersecurity.html">Cybersecurity</a></li><li><a href="../services.html">Cloud Services</a></li><li><a href="../website-development.html">Web Development</a></li><li><a href="../ctpat.html">C-TPAT Compliance</a></li></ul></div>
+          <div class="footer-column"><h3 class="footer-column-title">Resources</h3><ul class="footer-links"><li><a href="index.html">Blog</a></li><li><a href="../privacy-policy.html">Privacy Policy</a></li><li><a href="https://ticket.ghosxt.com/" target="_blank" rel="noopener noreferrer">Client Portal</a></li><li><a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer">Schedule Free IT Assessment</a></li></ul></div>
+        </div>
+        <div class="service-areas-footer">
+          <h3>Service Areas</h3>
+          <ul><li><a href="../salinas.html">Salinas</a></li><li><a href="../monterey.html">Monterey</a></li><li><a href="../watsonville.html">Watsonville</a></li><li><a href="../hollister.html">Hollister</a></li><li><a href="../santa-cruz.html">Santa Cruz</a></li><li><a href="../gilroy.html">Gilroy</a></li><li><a href="../san-jose.html">San Jose</a></li><li><a href="../pacific-grove.html">Pacific Grove</a></li><li><a href="../carmel.html">Carmel</a></li><li><a href="../seaside.html">Seaside</a></li><li><a href="../marina.html">Marina</a></li></ul>
+        </div>
+      </div>
+    </footer>
+    <script src="../assets/js/main.js" defer></script>
+  </body>
+</html>
