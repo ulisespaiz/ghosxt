@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Network Design &amp; Architecture | Ghosxt – California</title>
+    <meta name="description" content="Network design, VLAN segmentation, firewall, and wireless for California small business. DoD-cleared engineer, real documentation, vendor-neutral. Free assessment." />
+    <link rel="canonical" href="https://ghosxt.com/network-design.html" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ghosxt.com/network-design.html" />
+    <meta property="og:title" content="Network Design &amp; Architecture | Ghosxt – California" />
+    <meta property="og:description" content="Network architecture, VLAN segmentation, firewall, and wireless done right for California small business. Free assessment." />
+    <meta property="og:image" content="https://ghosxt.com/assets/img/og-image.png" />
+    <meta property="og:site_name" content="Ghosxt" />
+
+    <meta name="robots" content="index, follow" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Network Design &amp; Architecture | Ghosxt – California" />
+    <meta name="twitter:description" content="Network architecture, VLAN segmentation, firewall, wireless. Free assessment." />
+    <meta name="twitter:image" content="https://ghosxt.com/assets/img/og-image.png" />
+
+    <link rel="icon" href="assets/img/favicon.ico" sizes="any" />
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdn-uicons.flaticon.com" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/locations.css" />
+    <link rel="stylesheet" media="print" onload="this.media='all'" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" />
+    <noscript><link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" /></noscript>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Service",
+            "@id": "https://ghosxt.com/network-design.html#service",
+            "name": "Network Design and Architecture",
+            "serviceType": "Network Design",
+            "description": "Network architecture, VLAN segmentation, firewall design, switching, and enterprise wireless for California small business. Multi-site VPN and SD-WAN, with full documentation, delivered by a DoD-cleared engineer.",
+            "url": "https://ghosxt.com/network-design.html",
+            "provider": { "@id": "https://ghosxt.com/#business" },
+            "areaServed": [
+              { "@type": "State", "name": "California" },
+              { "@type": "Country", "name": "United States" },
+              { "@type": "City", "name": "Salinas" },
+              { "@type": "City", "name": "Monterey" },
+              { "@type": "City", "name": "Watsonville" },
+              { "@type": "City", "name": "Hollister" },
+              { "@type": "City", "name": "Santa Cruz" },
+              { "@type": "City", "name": "Gilroy" },
+              { "@type": "City", "name": "San Jose" },
+              { "@type": "City", "name": "Pacific Grove" },
+              { "@type": "City", "name": "Carmel" },
+              { "@type": "City", "name": "Seaside" },
+              { "@type": "City", "name": "Marina" }
+            ]
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ghosxt.com/" },
+              { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://ghosxt.com/services.html" },
+              { "@type": "ListItem", "position": 3, "name": "Network Design", "item": "https://ghosxt.com/network-design.html" }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Do you replace our existing equipment, or work with what we have?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Both, depending on what is in the rack. If your existing firewall and switches are still under support and capable of doing the job, we configure them properly and document them. If they are end-of-life, undersized, or insecure by design, we replace what needs replacing and reuse the rest." }
+              },
+              {
+                "@type": "Question",
+                "name": "What firewall vendors do you deploy?",
+                "acceptedAnswer": { "@type": "Answer", "text": "pfSense Plus, Sophos XGS, WatchGuard Firebox, and Cisco Meraki MX, depending on the environment. We are vendor-neutral and pick the right tool for the size of business, the throughput needed, and your budget. We do not deploy ISP-provided routers as firewalls." }
+              },
+              {
+                "@type": "Question",
+                "name": "Why do small businesses need VLANs?",
+                "acceptedAnswer": { "@type": "Answer", "text": "VLANs separate traffic that should never see each other — guest Wi-Fi from production, security cameras and POS terminals from office computers, IoT devices from servers. Without segmentation, a compromised printer can give an attacker direct access to your domain controller. With segmentation, the same compromise is contained to one segment and goes nowhere." }
+              },
+              {
+                "@type": "Question",
+                "name": "Can you handle multi-site networks?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Yes. Site-to-site IPsec VPN, SD-WAN, and full hub-and-spoke designs depending on the use case. Common patterns include a Salinas headquarters connected to a Watsonville cooler and a Hollister yard, with remote workers tunneling in from across the state or the country." }
+              },
+              {
+                "@type": "Question",
+                "name": "Do we get a network diagram and documentation?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Yes. Every deployment ends with a written runbook, a current network diagram, IP scheme documentation, switch and firewall configuration backups, and credentials handed over to you in your password manager. You own all of it. You are not locked to us." }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
+      <i class="fi fi-rs-angle-up" aria-hidden="true"></i>
+    </button>
+
+    <div class="cookie-banner" id="cookieBanner">
+      <div class="cookie-banner-container">
+        <div class="cookie-content">
+          <div class="cookie-icon"><i class="fi fi-rs-cookie"></i></div>
+          <div class="cookie-text">
+            <p class="cookie-message">We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.</p>
+            <a href="privacy-policy.html" class="cookie-link">Learn more about our Privacy Policy</a>
+          </div>
+        </div>
+        <div class="cookie-actions">
+          <button class="cookie-btn cookie-btn-secondary" id="cookieDecline">Decline</button>
+          <button class="cookie-btn cookie-btn-primary" id="cookieAccept">Accept All</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="top-banner" id="topBanner">
+      <div class="banner-container">
+        <div class="banner-content">
+          <span class="banner-text">Need Remote Support? ►</span>
+          <a target="_blank" rel="noopener noreferrer" href="https://ticket.ghosxt.com/" class="banner-btn">
+            <i class="fi fi-rs-ticket-alt"></i>
+            <span>Visit Client Portal</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <nav class="navbar" aria-label="Main navigation">
+      <div class="navbar-container">
+        <div class="navbar-left">
+          <a href="index.html" class="navbar-logo">
+            <img src="assets/img/ghosxt logo.webp" alt="Ghosxt logo" width="48" height="48" />
+            <span>GHOSXT</span>
+          </a>
+        </div>
+        <div class="navbar-right">
+          <div class="navbar-menu">
+            <a href="index.html" class="navbar-link">Home</a>
+            <div class="navbar-dropdown">
+              <a href="about.html" class="navbar-link dropdown-trigger" aria-haspopup="menu">About <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></a>
+              <div class="dropdown-menu" role="menu">
+                <a href="about.html" class="dropdown-item" role="menuitem">About Ghosxt</a>
+                <a href="ghosxt-cares.html" class="dropdown-item" role="menuitem">Ghosxt Cares</a>
+              </div>
+            </div>
+            <div class="navbar-dropdown">
+              <a href="services.html" class="navbar-link dropdown-trigger" aria-haspopup="menu">Services <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></a>
+              <div class="dropdown-menu" role="menu">
+                <a href="services.html" class="dropdown-item" role="menuitem">All Services</a>
+                <a href="managed-it-services.html" class="dropdown-item" role="menuitem">Managed IT Services</a>
+                <a href="cybersecurity.html" class="dropdown-item" role="menuitem">Cybersecurity</a>
+                <a href="cloud-services.html" class="dropdown-item" role="menuitem">Cloud Services</a>
+                <a href="backup-disaster-recovery.html" class="dropdown-item" role="menuitem">Backup &amp; Disaster Recovery</a>
+                <a href="network-design.html" class="dropdown-item" role="menuitem">Network Design</a>
+                <a href="website-development.html" class="dropdown-item" role="menuitem">Web Development</a>
+                <a href="ctpat.html" class="dropdown-item" role="menuitem">C-TPAT Compliance</a>
+              </div>
+            </div>
+            <a href="pricing.html" class="navbar-link">Pricing</a>
+            <a href="blog/" class="navbar-link">Blog</a>
+            <a href="contact.html" class="navbar-link">Contact</a>
+          </div>
+          <button class="navbar-mobile-toggle" id="mobileToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu">
+            <i class="fi fi-rs-burger-menu" aria-hidden="true"></i>
+          </button>
+          <div class="navbar-buttons">
+            <a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer" class="navbar-btn btn-demo">
+              <i class="fi fi-rs-calendar-day"></i>
+              <span>Book a Call</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="navbar-overlay" id="navbarOverlay"></div>
+      <div class="navbar-mobile-menu" id="mobileMenu">
+        <a href="index.html" class="mobile-link">Home</a>
+        <div class="mobile-accordion">
+          <button class="mobile-accordion-trigger" aria-expanded="false">About <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></button>
+          <div class="mobile-accordion-content">
+            <a href="about.html" class="mobile-dropdown-item">About Ghosxt</a>
+            <a href="ghosxt-cares.html" class="mobile-dropdown-item">Ghosxt Cares</a>
+          </div>
+        </div>
+        <div class="mobile-accordion">
+          <button class="mobile-accordion-trigger" aria-expanded="false">Services <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></button>
+          <div class="mobile-accordion-content">
+            <a href="services.html" class="mobile-dropdown-item">All Services</a>
+            <a href="managed-it-services.html" class="mobile-dropdown-item">Managed IT Services</a>
+            <a href="cybersecurity.html" class="mobile-dropdown-item">Cybersecurity</a>
+            <a href="cloud-services.html" class="mobile-dropdown-item">Cloud Services</a>
+            <a href="backup-disaster-recovery.html" class="mobile-dropdown-item">Backup &amp; Disaster Recovery</a>
+            <a href="network-design.html" class="mobile-dropdown-item">Network Design</a>
+            <a href="website-development.html" class="mobile-dropdown-item">Web Development</a>
+            <a href="ctpat.html" class="mobile-dropdown-item">C-TPAT Compliance</a>
+          </div>
+        </div>
+        <a href="pricing.html" class="mobile-link">Pricing</a>
+        <a href="blog/" class="mobile-link">Blog</a>
+        <a href="contact.html" class="mobile-link">Contact</a>
+        <div class="mobile-actions">
+          <a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer" class="mobile-btn btn-demo">
+            <i class="fi fi-rs-calendar-day"></i>
+            <span>Book a Call</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <main id="main-content">
+      <section class="location-hero">
+        <div class="container">
+          <nav class="location-breadcrumbs" aria-label="Breadcrumb">
+            <a href="index.html">Home</a><span class="sep">›</span><a href="services.html">Services</a><span class="sep">›</span><span aria-current="page">Network Design</span>
+          </nav>
+          <h1>Network Design and Architecture for California Small Business</h1>
+          <p class="lead">Most small business networks were not designed. They grew. Someone plugged in an ISP router on day one. A switch got added when the office expanded. A second access point joined the mix when the back conference room had no Wi-Fi. Five years later, everything is on one flat segment, the firewall is the modem the cable company gave you, and the only person who knows the admin password left two jobs ago. Ghosxt designs networks the way a DoD-cleared engineer would build one if you owned the rack: segmented, documented, vendor-neutral, and built to last. On-site across Monterey County and California, remote across the United States.</p>
+          <div class="location-hero-ctas">
+            <a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer" class="location-btn location-btn-primary">
+              <i class="fi fi-rs-calendar-day" aria-hidden="true"></i>
+              Book a Free Network Assessment
+            </a>
+            <a href="tel:+18312040501" class="location-btn location-btn-secondary">
+              <i class="fi fi-rs-phone-call" aria-hidden="true"></i>
+              (831) 204-0501
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="location-section">
+        <div class="container">
+          <h2>What a properly designed network actually looks like</h2>
+          <p>A real network has shape. It separates traffic that should never see each other — production endpoints from guest Wi-Fi, point-of-sale terminals from office workstations, IoT cameras and printers from domain controllers, IT management interfaces from everything. It runs through a real firewall, not a residential router with a fancy logo. It has documented IP schemes, named VLANs, mapped switchports, and a current diagram that matches reality. It uses access points sized to the building, not three consumer ones stacked on a shelf. It has wired uplinks where it matters and a battery on the gear that holds the lights on.</p>
+          <p>None of that is exotic. It is what a network is supposed to look like before any of the cybersecurity work starts to matter. You cannot defend an undefined network.</p>
+        </div>
+      </section>
+
+      <section class="location-section">
+        <div class="container">
+          <h2>Where most small business networks fail</h2>
+          <p>The same five problems show up over and over when we open up a new client's network:</p>
+          <ul class="industries-list">
+            <li><strong>Flat networks.</strong> Every device on one VLAN. The receptionist's PC, the security cameras, the production server, and the kid in the parking lot on the open guest network are all neighbors. A compromised printer can talk directly to a domain controller.</li>
+            <li><strong>The ISP router as the firewall.</strong> A device with a default admin password, no real intrusion prevention, no logging, no VPN worth the name, and a vendor whose security update cadence is measured in years.</li>
+            <li><strong>No documentation.</strong> No diagram, no IP scheme, no record of which port goes where. Troubleshooting is archaeology. Onboarding a new IT provider takes three weeks.</li>
+            <li><strong>Default credentials.</strong> "admin" / the brand name on switches, access points, NAS units, and printers. We find at least one of these on almost every assessment.</li>
+            <li><strong>No segmentation between sites.</strong> A second office or remote yard is connected by an unmanaged tunnel, with no firewall in between, so a compromise at the small site is a compromise at the headquarters.</li>
+          </ul>
+          <p>Each of these is fixable. None of them require a six-figure equipment order. They require someone who knows how networks are supposed to be built and is willing to do the unglamorous work of building yours that way.</p>
+        </div>
+      </section>
+
+      <section class="location-section">
+        <div class="container">
+          <h2>Our design and deployment process</h2>
+          <div class="services-grid">
+            <article class="service-card">
+              <h3>1. Assess</h3>
+              <p>We walk the building, log into every device we can find, and map what is actually there. Switchports, IPs, VLANs, firewall rules, AP layouts, cabling. You get a written current-state report whether or not we get the project.</p>
+            </article>
+            <article class="service-card">
+              <h3>2. Design</h3>
+              <p>We draft a target architecture: VLAN scheme, firewall rules, AP placement, IP plan, redundancy choices, vendor selection. Trade-offs are explained, not hidden. You sign off on the design before anything gets ordered.</p>
+            </article>
+            <article class="service-card">
+              <h3>3. Stage</h3>
+              <p>Equipment is configured at our bench, not on your floor. Switches are flashed, firewalls are pre-built, APs are pre-adopted, configurations are version-controlled. By the time we are on-site, the gear is ready.</p>
+            </article>
+            <article class="service-card">
+              <h3>4. Deploy</h3>
+              <p>Cutover is scheduled around your operations. For most clients that is a Saturday or an after-hours window. We have a rollback plan documented before we touch the first cable.</p>
+            </article>
+            <article class="service-card">
+              <h3>5. Document</h3>
+              <p>Final diagram, IP scheme, port maps, firewall rule documentation, configuration backups, and credentials handed over in your password manager. You own everything. There is no "we hold the keys" lock-in.</p>
+            </article>
+            <article class="service-card">
+              <h3>6. Hand-off &amp; Monitor</h3>
+              <p>Either you take it from here, or we keep the network under <a href="managed-it-services.html">managed IT</a> with continuous monitoring, alerting, and patching. Either way, you are not stuck.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="location-section">
+        <div class="container">
+          <h2>Vendors we deploy and why</h2>
+          <p>We are vendor-neutral. The right gear depends on the size of the business, the throughput needed, the existing investment, and the maturity level the team can support after we hand it over. The shortlist:</p>
+          <ul class="industries-list">
+            <li><strong>pfSense Plus / OPNsense.</strong> Where the client wants real firewall capability without the recurring per-feature licensing model. Tunable, transparent, no surprise renewal bills.</li>
+            <li><strong>Sophos XGS / WatchGuard Firebox.</strong> Where centralized cloud management and integrated threat feeds are worth the licensing premium. Common pick for mid-size offices.</li>
+            <li><strong>Cisco Meraki MX.</strong> Where the client values a clean dashboard, easy multi-site rollouts, and is comfortable with the licensing model. Strong fit for distributed teams.</li>
+            <li><strong>UniFi Enterprise.</strong> Switching and Wi-Fi 6/6E for most small business deployments. Strong price-to-capability ratio, good documentation, controllable on-prem or in the cloud.</li>
+            <li><strong>Aruba CX / Cisco Catalyst.</strong> Where switching scale, advanced routing, or specific compliance demands push past UniFi.</li>
+            <li><strong>10GbE / SFP+ uplinks and fiber.</strong> Where coolers, warehouses, and multi-floor offices need actual backbone, not consumer-grade trunks.</li>
+          </ul>
+          <p>For the deeper cybersecurity layer that sits on top of the firewall — EDR, identity, MFA, monitoring — see our <a href="cybersecurity.html">cybersecurity services</a>. For C-TPAT-aligned network controls for importers and 3PLs, see <a href="ctpat.html">C-TPAT compliance</a>.</p>
+        </div>
+      </section>
+
+      <section class="location-cta">
+        <div class="container">
+          <h2>Free network architecture assessment</h2>
+          <p>30 minutes on-site or remote. We map what you have today, identify the security and reliability gaps, and write up the priority order to fix them. No sales script. You get the report regardless.</p>
+          <a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer" class="location-btn location-btn-primary">
+            <i class="fi fi-rs-calendar-day" aria-hidden="true"></i>
+            Book your free assessment
+          </a>
+        </div>
+      </section>
+
+      <section class="location-section">
+        <div class="container">
+          <h2>Wireless that actually works in the building you have</h2>
+          <p>Office Wi-Fi is the easy case. The hard cases are coolers, warehouses, machine shops, and concrete-walled buildings where consumer access points fail and the answer is not "more APs, closer together." We do site surveys with real RF tools, plan for the construction materials in your specific building, and design coverage for the way people actually move through it. We separate guest Wi-Fi from production. We isolate IoT and POS. We use enterprise authentication where it matters and pre-shared keys where it does not.</p>
+          <p>For <a href="watsonville.html">Watsonville</a> cold-storage and <a href="salinas.html">Salinas</a> ag operations, that often means hardened APs that survive a refrigerated environment and antenna placement designed around metal racking, not around the conference room. For <a href="san-jose.html">San Jose</a> tech offices and <a href="santa-cruz.html">Santa Cruz</a> professional services, it means Wi-Fi 6E and high client density on a single floor. The discipline scales.</p>
+        </div>
+      </section>
+
+      <section class="location-section">
+        <div class="container">
+          <h2>Multi-site, VPN, and SD-WAN</h2>
+          <p>Single-site networks are simple. The interesting work starts when you have a <a href="salinas.html">Salinas</a> headquarters, a <a href="watsonville.html">Watsonville</a> cooler, a <a href="hollister.html">Hollister</a> yard, and a <a href="monterey.html">Monterey</a> sales office, plus a handful of remote workers spread between <a href="gilroy.html">Gilroy</a>, <a href="san-jose.html">San Jose</a>, <a href="pacific-grove.html">Pacific Grove</a>, <a href="carmel.html">Carmel</a>, <a href="seaside.html">Seaside</a>, <a href="marina.html">Marina</a>, and the rest of the United States. Every site needs reliable connectivity, the same security policy, and a routing plan that does not turn into a maintenance nightmare.</p>
+          <p>We pick between site-to-site IPsec VPN, dynamic full-mesh tunnels, or SD-WAN based on the actual traffic patterns and the budget. SD-WAN is the right answer when there are more than three sites with steady inter-site traffic. IPsec is the right answer for a hub-and-spoke setup where most of the traffic goes to the cloud. We do not deploy SD-WAN because it sounds modern. We deploy it when the inter-site traffic and SLA requirements actually justify the licensing.</p>
+        </div>
+      </section>
+
+      <section class="location-section">
+        <div class="container">
+          <h2>Pricing and what is included</h2>
+          <p>Network design and deployment is project-priced based on scope. Ongoing network monitoring, configuration management, and firmware patching are included in every <a href="managed-it-services.html">managed IT plan</a>. <a href="pricing.html">See full pricing</a> for what is included at each managed tier.</p>
+        </div>
+      </section>
+
+      <section class="location-section location-faq">
+        <div class="container">
+          <h2>FAQs about network design</h2>
+          <details>
+            <summary>Do you replace our existing equipment, or work with what we have?</summary>
+            <div class="answer">Both, depending on what is in the rack. If your existing firewall and switches are still under support and capable of doing the job, we configure them properly and document them. If they are end-of-life, undersized, or insecure by design, we replace what needs replacing and reuse the rest.</div>
+          </details>
+          <details>
+            <summary>What firewall vendors do you deploy?</summary>
+            <div class="answer">pfSense Plus, Sophos XGS, WatchGuard Firebox, and Cisco Meraki MX, depending on the environment. We are vendor-neutral and pick the right tool for the size of business, the throughput needed, and your budget. We do not deploy ISP-provided routers as firewalls.</div>
+          </details>
+          <details>
+            <summary>Why do small businesses need VLANs?</summary>
+            <div class="answer">VLANs separate traffic that should never see each other — guest Wi-Fi from production, security cameras and POS terminals from office computers, IoT devices from servers. Without segmentation, a compromised printer can give an attacker direct access to your domain controller. With segmentation, the same compromise is contained to one segment and goes nowhere.</div>
+          </details>
+          <details>
+            <summary>Can you handle multi-site networks?</summary>
+            <div class="answer">Yes. Site-to-site IPsec VPN, SD-WAN, and full hub-and-spoke designs depending on the use case. Common patterns include a Salinas headquarters connected to a Watsonville cooler and a Hollister yard, with remote workers tunneling in from across the state or the country.</div>
+          </details>
+          <details>
+            <summary>Do we get a network diagram and documentation?</summary>
+            <div class="answer">Yes. Every deployment ends with a written runbook, a current network diagram, IP scheme documentation, switch and firewall configuration backups, and credentials handed over to you in your password manager. You own all of it. You are not locked to us.</div>
+          </details>
+        </div>
+      </section>
+
+      <section class="location-cta">
+        <div class="container">
+          <h2>Get your network mapped and graded</h2>
+          <p>Book a 30-minute free assessment, or send us a note. You walk away with a written network report and a priority-ordered fix list, on the house.</p>
+          <a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer" class="location-btn location-btn-primary">
+            <i class="fi fi-rs-calendar-day" aria-hidden="true"></i>
+            Book your free assessment
+          </a>
+          <a href="contact.html" class="location-btn location-btn-secondary">
+            <i class="fi fi-rs-envelope" aria-hidden="true"></i>
+            Send a Message
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer footer-visible" id="footerSection">
+      <div class="footer-container">
+        <div class="footer-grid">
+          <div class="footer-column">
+            <h3 class="footer-column-title">Main Menu</h3>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="pricing.html">Pricing</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3 class="footer-column-title">Services</h3>
+            <ul class="footer-links">
+              <li><a href="managed-it-services.html">Managed IT Services</a></li>
+              <li><a href="cybersecurity.html">Cybersecurity</a></li>
+              <li><a href="cloud-services.html">Cloud Services</a></li>
+              <li><a href="backup-disaster-recovery.html">Backup &amp; Disaster Recovery</a></li>
+              <li><a href="network-design.html">Network Design</a></li>
+              <li><a href="website-development.html">Web Development</a></li>
+              <li><a href="ctpat.html">C-TPAT Compliance</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3 class="footer-column-title">Resources</h3>
+            <ul class="footer-links">
+              <li><a href="privacy-policy.html">Privacy Policy</a></li>
+              <li><a href="https://ticket.ghosxt.com/" target="_blank" rel="noopener noreferrer">Client Portal</a></li>
+              <li><a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer">Schedule Free IT Assessment</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="service-areas-footer">
+          <h3>Service Areas</h3>
+          <ul>
+            <li><a href="salinas.html">Salinas</a></li>
+            <li><a href="monterey.html">Monterey</a></li>
+            <li><a href="watsonville.html">Watsonville</a></li>
+            <li><a href="hollister.html">Hollister</a></li>
+            <li><a href="santa-cruz.html">Santa Cruz</a></li>
+            <li><a href="gilroy.html">Gilroy</a></li>
+            <li><a href="san-jose.html">San Jose</a></li>
+            <li><a href="pacific-grove.html">Pacific Grove</a></li>
+            <li><a href="carmel.html">Carmel</a></li>
+            <li><a href="seaside.html">Seaside</a></li>
+            <li><a href="marina.html">Marina</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/main.js" defer></script>
+  </body>
+</html>
