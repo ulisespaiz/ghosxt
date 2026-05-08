@@ -906,7 +906,9 @@ body:has(.top-banner.hidden) .hero-section {
   border-bottom: 1px solid var(--ghosxt-black);
   max-height: calc(100vh - 119px);
   overflow-y: auto;
-  padding: 1rem 24px;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  padding: 1rem 24px 2rem 24px;
   flex-direction: column;
   gap: 0.5rem;
   z-index: 1001;
@@ -1010,16 +1012,16 @@ body.menu-open {
 }
 
 .mobile-accordion.active .mobile-accordion-content {
-  max-height: 500px;
+  max-height: 900px;
 }
 
 .mobile-dropdown-item {
   display: block;
-  padding: 0.75rem 1rem;
+  padding: 0.55rem 1rem;
   color: var(--ghosxt-black);
   text-decoration: none;
   font-family: var(--font-family-2);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   transition: background 0.2s ease;
 }
 
@@ -1361,7 +1363,17 @@ footer.unlocked {
   .navbar-mobile-menu {
     top: 109px;
     max-height: calc(100vh - 109px);
-    padding: 12px 24px 24px 24px;
+    padding: 12px 24px 32px 24px;
+  }
+
+  .mobile-link,
+  .mobile-accordion-trigger {
+    padding: 0.6rem 1rem;
+  }
+
+  .mobile-dropdown-item {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
   }
 
   .theme-toggle {
