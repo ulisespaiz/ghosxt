@@ -281,6 +281,42 @@
     color: var(--ghosxt-black);
 }
 
+.form-submit:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: 2px 2px 0 0 var(--ghosxt-black);
+}
+
+.form-status {
+    margin-top: 1rem;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    min-height: 1.5em;
+}
+
+.form-status:empty {
+    display: none;
+}
+
+.form-status[data-kind="success"] {
+    background: #e6f4ea;
+    border: 1px solid #137333;
+    color: #0d652d;
+}
+
+.form-status[data-kind="error"] {
+    background: #fce8e6;
+    border: 1px solid #b71c1c;
+    color: #8a1010;
+}
+
+.cf-turnstile {
+    margin: 0.5rem 0;
+    min-height: 65px;
+}
+
 /* RESPONSIVE STYLES */
 @media (max-width: 968px) {
     .contact-container {
