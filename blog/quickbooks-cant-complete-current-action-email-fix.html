@@ -12,7 +12,7 @@
     <meta property="og:description" content="The XPS Document Writer fix for QuickBooks Desktop's email error on Windows 11, including the trick most guides miss." />
     <meta property="og:image" content="https://ghosxt.com/assets/img/og-image.png" />
     <meta property="og:site_name" content="Ghosxt" />
-    <meta property="article:published_time" content="2026-05-10" />
+    <meta property="article:published_time" content="2026-05-09" />
     <meta property="article:author" content="Ulises Paiz" />
     <meta name="robots" content="index, follow" />
     <meta name="twitter:card" content="summary_large_image" />
@@ -40,8 +40,8 @@
         "image": "https://ghosxt.com/assets/img/og-image.png",
         "author": { "@type": "Person", "name": "Ulises Paiz", "url": "https://ghosxt.com/about.html" },
         "publisher": { "@type": "Organization", "name": "Ghosxt", "logo": { "@type": "ImageObject", "url": "https://ghosxt.com/assets/img/ghosxt logo.webp" } },
-        "datePublished": "2026-05-10",
-        "dateModified": "2026-05-10",
+        "datePublished": "2026-05-09",
+        "dateModified": "2026-05-09",
         "articleSection": "Managed IT",
         "keywords": "QuickBooks email error, QuickBooks can't complete the current action, XPS Document Writer Windows 11, optionalfeatures, QuickBooks Desktop, QuickBooks Tool Hub, Print and PDF Repair Tool"
       }
@@ -100,7 +100,7 @@
             <a href="../index.html">Home</a><span class="sep">&rsaquo;</span><a href="index.html">Blog</a><span class="sep">&rsaquo;</span><span aria-current="page">QuickBooks Email Error Fix</span>
           </nav>
           <div class="blog-post-meta">
-            <time datetime="2026-05-10">May 10, 2026</time>
+            <time datetime="2026-05-09">May 9, 2026</time>
             <span>&middot;</span>
             <span>5 min read</span>
             <span>&middot;</span>
@@ -114,6 +114,18 @@
       </header>
       <div class="blog-post-body">
         <div class="container">
+          <aside class="blog-post-quickfix" aria-label="Quick fix summary">
+            <span class="quickfix-label">TL;DR &mdash; The Fix</span>
+            <h2>Re-enable Microsoft XPS Document Writer via the legacy applet</h2>
+            <ol>
+              <li>Press <kbd>Windows</kbd>, type <code>optionalfeatures</code> (one word, no space), press <kbd>Enter</kbd>. The classic "Turn Windows features on or off" dialog opens.</li>
+              <li>Scroll to <strong>Microsoft XPS Document Writer</strong>. Check the box. Click <strong>OK</strong>.</li>
+              <li>If it was already checked: <strong>uncheck it &rarr; OK &rarr; reopen &rarr; recheck &rarr; OK</strong> to force-rebuild the printer.</li>
+              <li><strong>Reboot.</strong> Open QuickBooks as Administrator. Email a test invoice.</li>
+            </ol>
+            <p>Why this trick: on Windows 11 the XPS Document Writer is <strong>not listed</strong> under <em>Settings &rsaquo; System &rsaquo; Optional features</em>. You have to use the legacy Control Panel applet (<code>optionalfeatures.exe</code>) to find it. That is what burns hours on this ticket.</p>
+          </aside>
+
           <p>If you got here by Googling some version of <em>"QuickBooks can't complete the current action due to a missing component"</em> while trying to email an invoice, this is the post for you. We have hit this one a handful of times at client sites, and the fix is almost always the same: a missing or disabled <strong>Microsoft XPS Document Writer</strong>. The annoying part is that on Windows 11 the XPS Document Writer is hidden in a place most troubleshooting guides do not mention. We will get to that.</p>
 
           <p>This is a step-by-step how-to. No fluff. Run the steps in order and stop as soon as emailing works again.</p>
