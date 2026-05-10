@@ -1,14 +1,18 @@
-// Cloudflare Pages Function — contact form handler.
+// Cloudflare Worker entry point for ghosxt.com.
 //
-// Required environment variables (set in Cloudflare dashboard → Pages →
-// ghosxt → Settings → Environment variables; mark secrets as encrypted):
-//   RESEND_API_KEY        Resend API key (encrypted secret)
-//   TURNSTILE_SECRET_KEY  Cloudflare Turnstile secret key (encrypted secret)
-//   CONTACT_TO_EMAIL      destination inbox (e.g. hello@ghosxt.com)
-//   CONTACT_FROM_EMAIL    verified sender on the Resend domain
-//                         (e.g. "Ghosxt Contact Form <noreply@ghosxt.com>")
-//   ALLOWED_ORIGINS       comma-separated allowed Origins
-//                         (e.g. "https://ghosxt.com,https://www.ghosxt.com")
+// Routes:
+//   POST /api/contact  → handleContact (form submission via Turnstile + Resend)
+//   *                  → env.ASSETS.fetch(request)  (static site)
+//
+// Required environment variables (Workers & Pages → ghosxt → Settings →
+// Variables and Secrets). Mark RESEND_API_KEY and TURNSTILE_SECRET_KEY
+// as encrypted secrets; the rest are plaintext.
+//
+//   RESEND_API_KEY        Resend API key (secret)
+//   TURNSTILE_SECRET_KEY  Cloudflare Turnstile secret key (secret)
+//   CONTACT_TO_EMAIL      e.g. hello@ghosxt.com
+//   CONTACT_FROM_EMAIL    e.g. "Ghosxt Contact Form <noreply@ghosxt.com>"
+//   ALLOWED_ORIGINS       e.g. "https://ghosxt.com,https://www.ghosxt.com"
 
 const MAX_FIELD_LENGTH = {
   name: 120,
@@ -84,7 +88,10 @@ async function sendViaResend(env, payload) {
   return { ok: res.ok, status: res.status };
 }
 
-export async function onRequestPost({ request, env }) {
+async function handleContact(request, env) {
+  if (request.method !== "POST") {
+    return jsonResponse(405, { error: "Method Not Allowed", allow: "POST" });
+  }
   if (!isAllowedOrigin(request, env)) {
     return jsonResponse(403, { error: "Forbidden" });
   }
@@ -184,9 +191,12 @@ export async function onRequestPost({ request, env }) {
   return jsonResponse(200, { ok: true });
 }
 
-export function onRequest({ request }) {
-  return jsonResponse(405, {
-    error: "Method Not Allowed",
-    allow: "POST",
-  });
-}
+export default {
+  async fetch(request, env) {
+    const url = new URL(request.url);
+    if (url.pathname === "/api/contact") {
+      return handleContact(request, env);
+    }
+    return env.ASSETS.fetch(request);
+  },
+};

@@ -1,6 +1,12 @@
 # Contact form setup
 
-The contact form on `/contact.html` posts to `/api/contact`, which is implemented as a Cloudflare Pages Function at `functions/api/contact.js`. It uses Cloudflare Turnstile for bot mitigation and Resend for transactional email.
+The contact form on `/contact.html` posts to `/api/contact`. The handler is
+in `src/worker.js` — this is a **Cloudflare Worker with static assets**
+(not a Pages Function). The Worker routes `/api/contact` to the contact
+handler and falls through to the `ASSETS` binding for every other path.
+
+It uses Cloudflare Turnstile for bot mitigation and Resend for transactional
+email.
 
 ## One-time setup (production)
 
@@ -17,9 +23,11 @@ The contact form on `/contact.html` posts to `/api/contact`, which is implemente
 2. **Domains** → **Add Domain** → `ghosxt.com`. Add the DNS records (SPF, DKIM, return-path) to your DNS provider and wait for verification. Resend free tier covers 3,000 emails/month.
 3. **API Keys** → **Create API Key** with the **Sending access** role. Copy the key once — you won't see it again.
 
-### 3. Cloudflare Pages environment variables
+### 3. Cloudflare environment variables
 
-Cloudflare dashboard → **Workers & Pages** → `ghosxt` → **Settings** → **Variables and Secrets**. Add the following to the **Production** environment (mark secrets as **Encrypted**):
+Cloudflare dashboard → **Workers & Pages** → `ghosxt` → **Settings** → **Variables and Secrets**. Add the following.
+
+> **Important:** the dashboard hides Variables and Secrets when a Worker has only static assets and no compute entry point. Once `main: "src/worker.js"` is deployed (this commit), the section becomes editable. If the page still shows "Variables cannot be added to a Worker that only has static assets," redeploy the latest commit first.
 
 | Name | Type | Example value |
 |---|---|---|
@@ -33,11 +41,20 @@ Repeat the same variables in the **Preview** environment if you want the form to
 
 ### 4. Deploy
 
-Push to the branch and Cloudflare Pages will redeploy. The `functions/` directory is detected automatically; no `wrangler.jsonc` changes are required.
+Push to the branch and Cloudflare will redeploy the Worker + assets. The deploy reads `wrangler.jsonc` (`main: "src/worker.js"`) so the contact handler ships with the static site.
+
+### 5. (Optional) Account-level Secrets Store
+
+If you'd prefer to store `RESEND_API_KEY` / `TURNSTILE_SECRET_KEY` in the **account-level Secrets Store** instead of per-project Variables and Secrets, that works too:
+
+1. Create the secret in Secrets Store with whatever name you like.
+2. Back in **Workers & Pages → ghosxt → Settings → Variables and Secrets**, click **Add binding → Secrets Store**, pick the secret, and bind it under the same name the code expects (`RESEND_API_KEY`, etc.).
+
+The Worker reads them identically — `env.RESEND_API_KEY`. Secrets Store only makes sense if multiple projects share the same secret or your org wants account-wide RBAC + rotation. For one contact form, per-project Variables and Secrets is simpler.
 
 ## Security model
 
-Defense in depth, in order of execution in `functions/api/contact.js`:
+Defense in depth, in order of execution in `src/worker.js` → `handleContact`:
 
 1. **Method check** — only `POST` is accepted; other verbs return `405`.
 2. **Origin/Referer check** — `ALLOWED_ORIGINS` is enforced server-side. Blocks form replay from other domains even if someone scrapes the form HTML.
@@ -53,8 +70,10 @@ Defense in depth, in order of execution in `functions/api/contact.js`:
 ## Local testing
 
 ```bash
-npx wrangler pages dev .
+npx wrangler dev
 ```
+
+(Run from the repo root — `wrangler` reads `wrangler.jsonc` and serves the Worker at `http://localhost:8787` with the assets binding wired up.)
 
 You'll need the env vars set locally too. Easiest is a `.dev.vars` file in the repo root (gitignored):
 
@@ -63,7 +82,7 @@ RESEND_API_KEY=re_...
 TURNSTILE_SECRET_KEY=1x0000000000000000000000000000000AA   # Turnstile "always passes" test secret
 CONTACT_TO_EMAIL=you@example.com
 CONTACT_FROM_EMAIL=Ghosxt Contact Form <noreply@ghosxt.com>
-ALLOWED_ORIGINS=http://localhost:8788
+ALLOWED_ORIGINS=http://localhost:8787
 ```
 
 For local testing, use Cloudflare's [Turnstile test keys](https://developers.cloudflare.com/turnstile/troubleshooting/testing/):
