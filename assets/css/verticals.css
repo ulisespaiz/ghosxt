@@ -252,3 +252,66 @@
     margin-top: 0.6rem;
   }
 }
+
+/* ------------------------------------------------------------------
+   PROPERTY MANAGEMENT page — skyline hero, stat strip, stripe cards
+   ------------------------------------------------------------------ */
+
+.location-hero.hero--property {
+  position: relative;
+  border-top: 3px solid var(--ghosxt-red-0, #ff0000);
+}
+
+.hero--property .hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.hero--property .hero-skyline {
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+  display: block;
+  margin-left: auto;
+}
+
+.stat-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1.5rem;
+}
+
+.stat-strip .stat-pill {
+  padding: 0.4rem 0.95rem;
+  border: 1px solid var(--ghosxt-black, #000);
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  background: #fff;
+  font-family: var(--font-family-2, "Roboto", sans-serif);
+}
+
+.icon-card.stripe-card {
+  border-left-width: 6px;
+  border-left-color: var(--ghosxt-red-0, #ff0000);
+  padding-left: 1.4rem;
+}
+
+.icon-card.stripe-card .icon-card-icon {
+  background: #ffffff;
+  border: 2px solid var(--ghosxt-red-0, #ff0000);
+}
+
+@media (max-width: 900px) {
+  .hero--property .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .hero--property .hero-skyline {
+    max-width: 260px;
+    margin: 0 auto;
+  }
+}
