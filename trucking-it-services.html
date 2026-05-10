@@ -40,6 +40,7 @@
 
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="assets/css/locations.css" />
+    <link rel="stylesheet" href="assets/css/verticals.css" />
     <link rel="stylesheet" media="print" onload="this.media='all'" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" />
     <noscript><link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" /></noscript>
 
@@ -330,41 +331,154 @@
         </div>
       </section>
 
-      <section class="location-section">
+      <section class="vertical-section">
         <div class="container">
           <h2>Compliance frameworks we help trucking companies operate inside</h2>
-          <p>Trucking is one of the most regulated industries we work in. A small carrier can be inside three or four overlapping compliance programs without realizing it. We are not auditors, but we run the IT side of every one of these every day.</p>
-          <ul>
-            <li><strong>C-TPAT cybersecurity criteria.</strong> If you ship across the U.S. border or contract with a C-TPAT-validated importer, the cybersecurity section of the minimum security criteria applies to you. That means documented access controls, password policy, MFA, data backup, monitored networks, and an incident response plan that has actually been written down. Our <a href="ctpat.html">C-TPAT compliance page</a> walks the whole thing.</li>
-            <li><strong>FMCSA recordkeeping windows.</strong> HOS records retained for six months. DVIRs for three. Driver qualification files for the length of employment plus three years. The IT side is making sure those records survive a server failure, a ransomware attempt, or a careless deletion, and that they can be produced quickly during an audit or a roadside investigation.</li>
-            <li><strong>Cyber-insurance MTTP requirements.</strong> Renewal questionnaires for fleet operators are getting sharper. Carriers ask about mean time to patch on critical CVEs, MFA coverage, EDR deployment, and backup immutability. We answer those questions for our clients with a measured number, not a guess. That is the difference between a renewal at the same rate and a renewal at a 40% premium hike.</li>
-            <li><strong>PII and payment data for owner-operator settlements.</strong> Owner-operator and 1099 driver settlements pull W-9 data, bank routing information, IFTA filings, and IRP records. That is regulated PII and regulated payment data sitting in the AP folder. We treat it as such, with role-based access, encryption, and detection on the inbox where the wires get authorized.</li>
-            <li><strong>Cross-border data residency.</strong> If your operation moves freight into Mexico or Canada, some of your data is going to live on servers and inboxes outside the U.S. We map where it lives, who can reach it, and what the contract requires, so a cross-border audit does not turn into a discovery exercise.</li>
-          </ul>
-          <p>A DoD-cleared engineering background brings the documentation and audit discipline a trucking compliance program actually needs. The same controls that pass a federal contracting audit pass a CBP validation, an FMCSA review, and a cyber-insurance renewal, with the paper trail intact.</p>
+          <p class="section-intro">Trucking is one of the most regulated industries we work in. A small carrier can be inside three or four overlapping compliance programs without realizing it. We are not auditors, but we run the IT side of every one of these every day.</p>
+          <div class="icon-card-grid">
+            <article class="icon-card">
+              <div class="icon-card-icon" aria-hidden="true">
+                <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#ff0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 3 L27 7 V15 C27 22 21 27 16 29 C11 27 5 22 5 15 V7 Z"/>
+                  <path d="M11 16 L14.5 19.5 L21 13"/>
+                </svg>
+              </div>
+              <h3>C-TPAT cybersecurity criteria</h3>
+              <p>If you ship across the U.S. border or contract with a C-TPAT-validated importer, the cybersecurity section of the minimum security criteria applies to you. That means documented access controls, password policy, MFA, data backup, monitored networks, and an incident response plan that has actually been written down. Our <a href="ctpat.html">C-TPAT compliance page</a> walks the whole thing.</p>
+            </article>
+
+            <article class="icon-card">
+              <div class="icon-card-icon" aria-hidden="true">
+                <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#ff0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="6" y="4" width="16" height="20" rx="2"/>
+                  <rect x="10" y="8" width="16" height="20" rx="2" fill="#fff5f5"/>
+                  <line x1="13" y1="14" x2="23" y2="14"/>
+                  <line x1="13" y1="18" x2="23" y2="18"/>
+                  <line x1="13" y1="22" x2="20" y2="22"/>
+                </svg>
+              </div>
+              <h3>FMCSA recordkeeping windows</h3>
+              <p>HOS records retained for six months. DVIRs for three. Driver qualification files for the length of employment plus three years. The IT side is making sure those records survive a server failure, a ransomware attempt, or a careless deletion, and that they can be produced quickly during an audit or a roadside investigation.</p>
+            </article>
+
+            <article class="icon-card">
+              <div class="icon-card-icon" aria-hidden="true">
+                <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#ff0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="16" cy="16" r="11"/>
+                  <polyline points="16,9 16,16 20,18"/>
+                  <path d="M22 24 L25 27 L30 22" stroke-width="2.4"/>
+                </svg>
+              </div>
+              <h3>Cyber-insurance MTTP requirements</h3>
+              <p>Renewal questionnaires for fleet operators are getting sharper. Carriers ask about mean time to patch on critical CVEs, MFA coverage, EDR deployment, and backup immutability. We answer those questions for our clients with a measured number, not a guess. That is the difference between a renewal at the same rate and a renewal at a 40% premium hike.</p>
+            </article>
+
+            <article class="icon-card">
+              <div class="icon-card-icon" aria-hidden="true">
+                <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#ff0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="6" y="14" width="20" height="14" rx="2"/>
+                  <path d="M10 14 V10 a6 6 0 0 1 12 0 V14"/>
+                  <circle cx="16" cy="20" r="1.6" fill="#ff0000"/>
+                  <line x1="16" y1="21.5" x2="16" y2="24"/>
+                </svg>
+              </div>
+              <h3>PII and payment data for owner-operator settlements</h3>
+              <p>Owner-operator and 1099 driver settlements pull W-9 data, bank routing information, IFTA filings, and IRP records. That is regulated PII and regulated payment data sitting in the AP folder. We treat it as such, with role-based access, encryption, and detection on the inbox where the wires get authorized.</p>
+            </article>
+
+            <article class="icon-card">
+              <div class="icon-card-icon" aria-hidden="true">
+                <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#ff0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="16" cy="16" r="11"/>
+                  <ellipse cx="16" cy="16" rx="5" ry="11"/>
+                  <line x1="5" y1="16" x2="27" y2="16"/>
+                  <path d="M21 11 L25 11 L25 15" stroke-width="2.4"/>
+                  <path d="M11 21 L7 21 L7 17" stroke-width="2.4"/>
+                </svg>
+              </div>
+              <h3>Cross-border data residency</h3>
+              <p>If your operation moves freight into Mexico or Canada, some of your data is going to live on servers and inboxes outside the U.S. We map where it lives, who can reach it, and what the contract requires, so a cross-border audit does not turn into a discovery exercise.</p>
+            </article>
+          </div>
+
+          <p class="compliance-note">A DoD-cleared engineering background brings the documentation and audit discipline a trucking compliance program actually needs. The same controls that pass a federal contracting audit pass a CBP validation, an FMCSA review, and a cyber-insurance renewal, with the paper trail intact.</p>
         </div>
       </section>
 
-      <section class="location-section">
+      <section class="vertical-section">
         <div class="container">
           <h2>Common IT problems we see at trucking companies</h2>
-          <p>Four anonymized examples from real client work on the Central Coast. Names, locations, and specifics are removed; the patterns are exactly what we run into.</p>
-          <ol>
-            <li><strong>Dispatch dark at 2am.</strong> A regional carrier called because their dispatcher could not reach drivers across the West. The "redundant" internet connection had not been tested in six months and the cellular failover SIM had been deactivated for non-payment after a billing email landed in a former employee's mailbox. We rebuilt the failover that night, set up monthly automated failover tests, and rerouted billing notifications to a shared inbox that does not disappear when a person leaves.</li>
-            <li><strong>AP wire-fraud, two payments already gone.</strong> A customs broker had an attacker-installed inbox rule silently forwarding invoices to an external address. The attacker waited three weeks, then sent a lookalike email asking for a new wire-routing instruction. Two payments cleared before anyone noticed. We rebuilt the affected mailboxes from scratch, enforced MFA on every account, deployed a real-time detection for new forwarding rules, and rewrote the AP wire process so a similar attempt cannot succeed without a phone-call confirmation to a known number.</li>
-            <li><strong>TMS down during peak shipping season.</strong> A produce hauler running a five-year-old single-server TMS lost the box mid-week during harvest. Restoring took 12 hours because the most recent backup had failed silently for two months. We migrated them to a redundant configuration, set up tested cutover procedures, and instrumented backup health so a silent failure now pages someone within the hour.</li>
-            <li><strong>Stolen driver tablet, 800 miles from the yard.</strong> A driver left a tablet at a truck stop. It had the dispatch app, customer load board, and an open VPN profile. We remotely wiped the device, rotated credentials, and rolled out mobile device management with forced encryption to the rest of the fleet. The replacement device was online inside an hour. The lost device became a brick.</li>
-          </ol>
+          <p class="section-intro">Four anonymized examples from real client work on the Central Coast. Names, locations, and specifics are removed; the patterns are exactly what we run into.</p>
+          <div class="scenario-grid">
+            <article class="scenario-card">
+              <div class="scenario-header">
+                <div class="scenario-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#ff0000" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="9"/>
+                    <polyline points="12,7 12,12 15,14"/>
+                  </svg>
+                </div>
+                <h3>Dispatch dark at 2am</h3>
+              </div>
+              <p>A regional carrier called because their dispatcher could not reach drivers across the West. The "redundant" internet connection had not been tested in six months and the cellular failover SIM had been deactivated for non-payment after a billing email landed in a former employee's mailbox. We rebuilt the failover that night, set up monthly automated failover tests, and rerouted billing notifications to a shared inbox that does not disappear when a person leaves.</p>
+            </article>
+
+            <article class="scenario-card">
+              <div class="scenario-header">
+                <div class="scenario-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#ff0000" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="6" width="18" height="13" rx="2"/>
+                    <polyline points="3,7 12,14 21,7"/>
+                    <line x1="18" y1="3" x2="18" y2="9"/>
+                    <circle cx="18" cy="11" r="0.8" fill="#ff0000" stroke="none"/>
+                  </svg>
+                </div>
+                <h3>AP wire-fraud, two payments already gone</h3>
+              </div>
+              <p>A customs broker had an attacker-installed inbox rule silently forwarding invoices to an external address. The attacker waited three weeks, then sent a lookalike email asking for a new wire-routing instruction. Two payments cleared before anyone noticed. We rebuilt the affected mailboxes from scratch, enforced MFA on every account, deployed a real-time detection for new forwarding rules, and rewrote the AP wire process so a similar attempt cannot succeed without a phone-call confirmation to a known number.</p>
+            </article>
+
+            <article class="scenario-card">
+              <div class="scenario-header">
+                <div class="scenario-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#ff0000" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="4" width="18" height="6" rx="1"/>
+                    <rect x="3" y="13" width="18" height="6" rx="1"/>
+                    <circle cx="7" cy="7" r="0.8" fill="#ff0000" stroke="none"/>
+                    <circle cx="7" cy="16" r="0.8" fill="#ff0000" stroke="none"/>
+                    <path d="M16 21 L18.5 16 L21 21 Z"/>
+                    <line x1="18.5" y1="17.5" x2="18.5" y2="19.5"/>
+                  </svg>
+                </div>
+                <h3>TMS down during peak shipping season</h3>
+              </div>
+              <p>A produce hauler running a five-year-old single-server TMS lost the box mid-week during harvest. Restoring took 12 hours because the most recent backup had failed silently for two months. We migrated them to a redundant configuration, set up tested cutover procedures, and instrumented backup health so a silent failure now pages someone within the hour.</p>
+            </article>
+
+            <article class="scenario-card">
+              <div class="scenario-header">
+                <div class="scenario-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#ff0000" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="5" y="2" width="14" height="20" rx="2"/>
+                    <line x1="10" y1="19" x2="14" y2="19"/>
+                    <path d="M10 9 V8 a2 2 0 0 1 4 0 V11" stroke-width="1.8"/>
+                    <rect x="8" y="11" width="8" height="5" rx="0.8"/>
+                    <line x1="15" y1="7" x2="17" y2="9"/>
+                  </svg>
+                </div>
+                <h3>Stolen driver tablet, 800 miles from the yard</h3>
+              </div>
+              <p>A driver left a tablet at a truck stop. It had the dispatch app, customer load board, and an open VPN profile. We remotely wiped the device, rotated credentials, and rolled out mobile device management with forced encryption to the rest of the fleet. The replacement device was online inside an hour. The lost device became a brick.</p>
+            </article>
+          </div>
         </div>
       </section>
 
-      <section class="location-section">
+      <section class="vertical-section">
         <div class="container">
-          <blockquote style="border-left: 4px solid #e63946; padding: 1rem 0 1rem 1.5rem; margin: 1rem 0; font-style: italic; font-size: 1.05rem;">
-            "We've had the pleasure of partnering with Ghosxt for the past three years. Ulises has provided consistent, personalized IT support, enhanced our cybersecurity, and helped us meet high-level compliance standards. He's a true partner who takes time to explain, support, and find the right solutions."
-            <footer style="margin-top: 0.75rem; font-style: normal; font-size: 0.92rem; color: rgba(0,0,0,0.65);">
-              — Transportation client, three-year Ghosxt partner
-            </footer>
+          <blockquote class="pull-quote">
+            <p>"We've had the pleasure of partnering with Ghosxt for the past three years. Ulises has provided consistent, personalized IT support, enhanced our cybersecurity, and helped us meet high-level compliance standards. He's a true partner who takes time to explain, support, and find the right solutions."</p>
+            <cite>Transportation client, three-year Ghosxt partner</cite>
           </blockquote>
         </div>
       </section>
@@ -385,11 +499,11 @@
         </div>
       </section>
 
-      <section class="location-section">
+      <section class="vertical-section">
         <div class="container">
           <h2>Trucking IT glossary</h2>
-          <p>If you have run a fleet for any length of time, none of these are new. If you are the office manager or the owner's spouse who suddenly inherited the IT side, this is the short version.</p>
-          <dl style="display: grid; grid-template-columns: max-content 1fr; gap: 0.5rem 1.5rem; margin-top: 1rem;">
+          <p class="section-intro">If you have run a fleet for any length of time, none of these are new. If you are the office manager or the owner's spouse who suddenly inherited the IT side, this is the short version.</p>
+          <dl class="glossary-list">
             <dt><strong>ELD</strong></dt><dd>Electronic Logging Device. The device or app that records a commercial driver's hours of service. FMCSA-mandated for most carriers.</dd>
             <dt><strong>HOS</strong></dt><dd>Hours of Service. The federal rule set that limits driving and on-duty time. ELDs enforce it automatically.</dd>
             <dt><strong>DVIR</strong></dt><dd>Driver Vehicle Inspection Report. A daily pre- and post-trip check-in on the truck's condition. Retained for at least three months.</dd>
