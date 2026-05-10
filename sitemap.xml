@@ -44,9 +44,15 @@
   </url>
   <url>
     <loc>https://ghosxt.com/ctpat.html</loc>
-    <lastmod>2026-05-05</lastmod>
+    <lastmod>2026-05-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ghosxt.com/trucking-it-services.html</loc>
+    <lastmod>2026-05-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ghosxt.com/ghosxt-cares.html</loc>
