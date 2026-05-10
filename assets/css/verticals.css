@@ -281,7 +281,9 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.6rem;
-  margin-top: 1.5rem;
+  margin: 2.25rem 0 0;
+  padding: 0;
+  list-style: none;
 }
 
 .stat-strip .stat-pill {
