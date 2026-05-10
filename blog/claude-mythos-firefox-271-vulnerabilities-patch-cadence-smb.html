@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Claude Mythos Found 271 Firefox Bugs in One Run: What the Patch-Cadence Shift Means for Small Business | Ghosxt</title>
+    <meta name="description" content="Anthropic's Claude Mythos found 271 vulnerabilities in Firefox 150 in a single eval, and built working exploits for 181. A DoD-cleared engineer on what the patch-cadence shift means for small business in 2026." />
+    <link rel="canonical" href="https://ghosxt.com/blog/claude-mythos-firefox-271-vulnerabilities-patch-cadence-smb.html" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://ghosxt.com/blog/claude-mythos-firefox-271-vulnerabilities-patch-cadence-smb.html" />
+    <meta property="og:title" content="Claude Mythos Found 271 Firefox Bugs in One Run: The Patch-Cadence Shift for SMBs" />
+    <meta property="og:description" content="Anthropic's security model found 271 Firefox 150 vulns and built working exploits for 181. Here is what that means for small business patching in 2026." />
+    <meta property="og:image" content="https://ghosxt.com/assets/img/og-image.png" />
+    <meta property="og:site_name" content="Ghosxt" />
+    <meta property="article:published_time" content="2026-05-10" />
+    <meta property="article:author" content="Ulises Paiz" />
+    <meta name="robots" content="index, follow" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Claude Mythos Found 271 Firefox Bugs in One Run: The Patch-Cadence Shift for SMBs" />
+    <meta name="twitter:description" content="Anthropic's security model found 271 Firefox 150 vulns and built working exploits for 181. Here is what that means for small business patching in 2026." />
+    <meta name="twitter:image" content="https://ghosxt.com/assets/img/og-image.png" />
+    <link rel="icon" href="../assets/img/favicon.ico" sizes="any" />
+    <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdn-uicons.flaticon.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="../assets/css/blog.css" />
+    <link rel="stylesheet" media="print" onload="this.media='all'" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" />
+    <noscript><link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" /></noscript>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "BlogPosting",
+            "mainEntityOfPage": { "@type": "WebPage", "@id": "https://ghosxt.com/blog/claude-mythos-firefox-271-vulnerabilities-patch-cadence-smb.html" },
+            "headline": "Claude Mythos Found 271 Firefox Bugs in One Run: What the Patch-Cadence Shift Means for Small Business",
+            "description": "Anthropic's Claude Mythos found 271 vulnerabilities in Firefox 150 in a single eval, and built working exploits for 181. A DoD-cleared engineer on what the patch-cadence shift means for small business in 2026.",
+            "image": "https://ghosxt.com/assets/img/og-image.png",
+            "author": { "@type": "Person", "name": "Ulises Paiz", "url": "https://ghosxt.com/about.html" },
+            "publisher": { "@type": "Organization", "name": "Ghosxt", "logo": { "@type": "ImageObject", "url": "https://ghosxt.com/assets/img/ghosxt logo.webp" } },
+            "datePublished": "2026-05-10",
+            "dateModified": "2026-05-10",
+            "articleSection": "Cybersecurity",
+            "keywords": "Claude Mythos, Anthropic Mythos, Firefox 150 vulnerabilities, CVE-2026-6746, CVE-2026-6757, CVE-2026-6758, Project Glasswing, patch management, vulnerability management, small business cybersecurity, patch cadence, MTTP, mean time to patch"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ghosxt.com/" },
+              { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://ghosxt.com/blog/" },
+              { "@type": "ListItem", "position": 3, "name": "Claude Mythos and the Patch-Cadence Shift", "item": "https://ghosxt.com/blog/claude-mythos-firefox-271-vulnerabilities-patch-cadence-smb.html" }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Did Claude Mythos hack Firefox?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. Mozilla and Anthropic ran a coordinated audit. Mythos analyzed Firefox 150 source code, surfaced 271 sec-rated bugs, Mozilla's engineers triaged and patched them, and the fixes shipped before any of this was made public. No user data was touched. This was a defender exercise, not an attack."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is Firefox safe to use right now?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, on Firefox 150 or later. The whole point of the audit is that the bugs are now patched. If you are running Firefox 149 or earlier, update today."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does this affect Chrome, Edge, and Safari too?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "By implication, yes. Anthropic has stated that Mythos found thousands of zero-days across every major operating system and every major web browser. Expect comparable disclosures from Google, Microsoft, and Apple over the next few months. Keep all browsers on auto-update."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How fast does a small business need to patch a critical browser CVE in 2026?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "24 to 72 hours for browsers. 7 days for edge gear like firewalls, VPNs, and Remote Desktop Gateways. Faster if the CVE is on CISA's Known Exploited Vulnerabilities list. The old quarterly window does not work anymore."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can a 5-person business really run continuous patching?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Not in-house, no. The realistic answer is tooling plus a managed partner: a remote management tool that pushes patches automatically, plus someone whose job is to watch the CVE feed, prioritize, and verify. That is what Ghosxt does for small business clients."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top"><i class="fi fi-rs-angle-up" aria-hidden="true"></i></button>
+    <div class="cookie-banner" id="cookieBanner"><div class="cookie-banner-container"><div class="cookie-content"><div class="cookie-icon"><i class="fi fi-rs-cookie"></i></div><div class="cookie-text"><p class="cookie-message">We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.</p><a href="../privacy-policy.html" class="cookie-link">Learn more about our Privacy Policy</a></div></div><div class="cookie-actions"><button class="cookie-btn cookie-btn-secondary" id="cookieDecline">Decline</button><button class="cookie-btn cookie-btn-primary" id="cookieAccept">Accept All</button></div></div></div>
+    <div class="top-banner" id="topBanner"><div class="banner-container"><div class="banner-content"><span class="banner-text">Need Remote Support? &#9658;</span><a target="_blank" rel="noopener noreferrer" href="https://ticket.ghosxt.com/" class="banner-btn"><i class="fi fi-rs-ticket-alt"></i><span>Visit Client Portal</span></a></div></div></div>
+    <nav class="navbar" aria-label="Main navigation">
+      <div class="navbar-container">
+        <div class="navbar-left"><a href="../index.html" class="navbar-logo"><img src="../assets/img/ghosxt logo.webp" alt="Ghosxt logo" width="48" height="48" /><span>GHOSXT</span></a></div>
+        <div class="navbar-right">
+          <div class="navbar-menu">
+            <a href="../index.html" class="navbar-link">Home</a>
+            <div class="navbar-dropdown"><a href="../about.html" class="navbar-link dropdown-trigger" aria-haspopup="menu">About <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></a><div class="dropdown-menu" role="menu"><a href="../about.html" class="dropdown-item" role="menuitem">About Ghosxt</a><a href="../ghosxt-cares.html" class="dropdown-item" role="menuitem">Ghosxt Cares</a></div></div>
+            <div class="navbar-dropdown"><a href="../services.html" class="navbar-link dropdown-trigger" aria-haspopup="menu">Services <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></a><div class="dropdown-menu" role="menu"><a href="../services.html" class="dropdown-item" role="menuitem">All Services</a>
+                <a href="../managed-it-services.html" class="dropdown-item" role="menuitem">Managed IT Services</a>
+                <a href="../cybersecurity.html" class="dropdown-item" role="menuitem">Cybersecurity</a>
+                <a href="../cloud-services.html" class="dropdown-item" role="menuitem">Cloud Services</a>
+                <a href="../backup-disaster-recovery.html" class="dropdown-item" role="menuitem">Backup &amp; Disaster Recovery</a>
+                <a href="../network-design.html" class="dropdown-item" role="menuitem">Network Design</a>
+                <a href="../website-development.html" class="dropdown-item" role="menuitem">Web Development</a>
+                <a href="../ctpat.html" class="dropdown-item" role="menuitem">C-TPAT Compliance</a></div></div>
+            <a href="../pricing.html" class="navbar-link">Pricing</a>
+            <a href="index.html" class="navbar-link">Blog</a>
+            <a href="../contact.html" class="navbar-link">Contact</a>
+          </div>
+          <button class="navbar-mobile-toggle" id="mobileToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu"><i class="fi fi-rs-burger-menu" aria-hidden="true"></i></button>
+          <div class="navbar-buttons"><a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer" class="navbar-btn btn-demo"><i class="fi fi-rs-calendar-day"></i><span>Book a Call</span></a></div>
+        </div>
+      </div>
+      <div class="navbar-overlay" id="navbarOverlay"></div>
+      <div class="navbar-mobile-menu" id="mobileMenu">
+        <a href="../index.html" class="mobile-link">Home</a>
+        <div class="mobile-accordion"><button class="mobile-accordion-trigger" aria-expanded="false">About <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></button><div class="mobile-accordion-content"><a href="../about.html" class="mobile-dropdown-item">About Ghosxt</a><a href="../ghosxt-cares.html" class="mobile-dropdown-item">Ghosxt Cares</a></div></div>
+        <div class="mobile-accordion"><button class="mobile-accordion-trigger" aria-expanded="false">Services <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></button><div class="mobile-accordion-content"><a href="../services.html" class="mobile-dropdown-item">All Services</a>
+            <a href="../managed-it-services.html" class="mobile-dropdown-item">Managed IT Services</a>
+            <a href="../cybersecurity.html" class="mobile-dropdown-item">Cybersecurity</a>
+            <a href="../cloud-services.html" class="mobile-dropdown-item">Cloud Services</a>
+            <a href="../backup-disaster-recovery.html" class="mobile-dropdown-item">Backup &amp; Disaster Recovery</a>
+            <a href="../network-design.html" class="mobile-dropdown-item">Network Design</a>
+            <a href="../website-development.html" class="mobile-dropdown-item">Web Development</a>
+            <a href="../ctpat.html" class="mobile-dropdown-item">C-TPAT Compliance</a></div></div>
+        <a href="../pricing.html" class="mobile-link">Pricing</a>
+        <a href="index.html" class="mobile-link">Blog</a>
+        <a href="../contact.html" class="mobile-link">Contact</a>
+        <div class="mobile-actions"><a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer" class="mobile-btn btn-demo"><i class="fi fi-rs-calendar-day"></i><span>Book a Call</span></a></div>
+      </div>
+    </nav>
+    <main id="main-content" class="blog-post">
+      <header class="blog-post-header">
+        <div class="container">
+          <nav class="blog-post-breadcrumbs" aria-label="Breadcrumb">
+            <a href="../index.html">Home</a><span class="sep">&rsaquo;</span><a href="index.html">Blog</a><span class="sep">&rsaquo;</span><span aria-current="page">Claude Mythos &amp; Patch Cadence</span>
+          </nav>
+          <div class="blog-post-meta">
+            <time datetime="2026-05-10">May 10, 2026</time>
+            <span>&middot;</span>
+            <span>11 min read</span>
+            <span>&middot;</span>
+            <span class="blog-card-tag">Cybersecurity</span>
+          </div>
+          <h1>Claude Mythos Found 271 Firefox Bugs in One Run: What the Patch-Cadence Shift Means for Small Business</h1>
+          <div class="blog-post-author">
+            <strong>Ulises Paiz</strong>, Founder, Ghosxt
+          </div>
+        </div>
+      </header>
+      <div class="blog-post-body">
+        <div class="container">
+          <aside class="blog-post-quickfix" aria-label="Summary and what to do this week">
+            <span class="quickfix-label">TL;DR &mdash; What Changed</span>
+            <h2>The new pace of vulnerability disclosure is here, and it does not fit a quarterly patch cycle</h2>
+            <ul>
+              <li>Anthropic's <strong>Claude Mythos</strong> found <strong>271 sec-rated bugs in Firefox 150 in a single eval run</strong>, and built working exploits for 181 of them.</li>
+              <li>The previous flagship model surfaced 22 bugs on Firefox 148. Mythos hit roughly <strong>12 times that rate</strong>.</li>
+              <li>Some flaws had survived in Firefox for <strong>15 to 20 years</strong>. Every prior human review missed them.</li>
+            </ul>
+            <p>What to do this week:</p>
+            <ol>
+              <li>Today: force-update every browser org-wide. Firefox to 150 or later, Chrome and Edge to latest stable.</li>
+              <li>Today: list your edge devices and pull each vendor's CVE feed. Firewall, VPN, RDP gateway, the lot.</li>
+              <li>This week: turn on auto-patch wherever you can. RMM, Microsoft 365, browser group policy.</li>
+              <li>This week: ask your IT person, or the person who runs your business, what your <strong>mean time to patch</strong> is. If nobody can answer, you do not have one.</li>
+            </ol>
+          </aside>
+
+          <p>Mozilla shipped Firefox 150 with patches for 423 security-sensitive bugs. Two hundred seventy-one of those were found by Anthropic's new security model, Claude Mythos. They were found in a single evaluation run. Some had been sitting in the Firefox source code since 2011.</p>
+
+          <p>That is the news, and on its own it is the kind of cybersecurity headline that comes and goes without changing how anyone runs their business. The reason this one matters is not the count. It is what the count implies for everything else: vulnerability discovery just got a lot faster, vendors are going to start shipping a lot more patches, and the way most small businesses handle patching, the once-a-quarter "we'll get to it" rhythm, no longer fits the world it lives in.</p>
+
+          <p>I'm a DoD-cleared engineer who runs an MSP for small businesses on the Central Coast of California. I've spent the last week looking at this from the small-business side and writing down what changes for owners and operators. Here is the version without the hype.</p>
+
+          <h2>The news in plain English</h2>
+
+          <p>In April, Anthropic announced Claude Mythos, a security-focused model. Before Mythos shipped publicly, Anthropic ran it against a long list of widely-used open-source code as part of a program called Project Glasswing. Mozilla agreed to be one of the test targets, and the result was the audit that produced Firefox 150.</p>
+
+          <p>The numbers from the Mozilla side:</p>
+
+          <ul>
+            <li><strong>271 sec-rated bugs found in one eval run.</strong> Of those: 180 sec-high, 80 sec-moderate, 11 sec-low.</li>
+            <li><strong>423 total security fixes shipped in Firefox 150.</strong> The other 152 came from existing Mozilla audits and external reports, but Mythos was the largest single contributor.</li>
+            <li><strong>Working exploits for 181 of the 271.</strong> Mythos did not just point at suspicious code. It produced runnable proof-of-concept exploits.</li>
+            <li><strong>Three CVEs are formally credited to Claude in the Firefox advisory:</strong> CVE-2026-6746, CVE-2026-6757, and CVE-2026-6758.</li>
+            <li><strong>83% first-attempt exploit reproduction rate</strong> on previously-unknown bugs in pre-release testing. That is a number that should focus the mind.</li>
+          </ul>
+
+          <p>The bugs themselves are not exotic. They are the kind of thing a thorough human audit could find given enough time. A 15-year-old issue in how Firefox parsed an HTML legend element. A 20-year-old XSLT bug involving reentrant key() calls. A race condition over IPC. A buffer over-read in HTTPS resource record and ECH parsing. None of these would shock a senior security engineer reading the patch notes. What is new is that one model, in one run, found all of them at once.</p>
+
+          <h2>What actually changed under the hood</h2>
+
+          <p>Anthropic's previous flagship model, Opus 4.6, ran the same kind of analysis on Firefox 148 last month and surfaced 22 bugs. Mythos on Firefox 150 surfaced 271. That is not a 10% improvement. That is roughly twelve times the rate, in a release cycle that lasted weeks, not years.</p>
+
+          <p>The other thing worth understanding is that Mythos does not just statically flag code patterns. It builds and tests exploits. In pre-release evaluation, Anthropic reported that Mythos reproduced previously-unknown vulnerabilities and developed working exploit code on the first attempt in over 83% of cases. In one documented test it reconstructed a 27-year-old vulnerability in OpenBSD, a system that prides itself on being the most security-hardened operating system in the world.</p>
+
+          <p>Anthropic's CEO, Dario Amodei, put a number on the implication: there is a six-to-twelve month window during which defenders have an advantage, before adversaries running their own equivalent models catch up. After that, the same capability that found 271 bugs in Firefox is going to be available to people whose goal is the opposite of patching them.</p>
+
+          <p>That is the moment we are in. For now the news is mostly defensive: vendors are getting handed lists of long-buried bugs and shipping fixes faster than ever. The question is not whether that is good. It clearly is. The question is whether your patch cadence can absorb the volume.</p>
+
+          <h2>Why patch cadence is shifting from quarterly to continuous</h2>
+
+          <figure class="patch-cadence-figure" style="margin: 2rem 0;">
+            <svg role="img" aria-labelledby="cadenceTitle cadenceDesc" viewBox="0 0 640 320" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto; max-width: 640px; display: block;">
+              <title id="cadenceTitle">Patch cadence before and after AI-driven vulnerability discovery</title>
+              <desc id="cadenceDesc">A timeline diagram comparing two patch cadences. The top track, labelled "Before", shows four large dots evenly spaced across a year, representing quarterly patch windows. The bottom track, labelled "After Mythos-class tools", shows roughly forty smaller dots packed densely across the same year, representing continuous, hours-to-days patching. The "After" track is highlighted in red to draw attention to the volume increase.</desc>
+              <style>
+                .cadence-axis { stroke: #1a1a1a; stroke-width: 2; }
+                .cadence-track-old { stroke: #1a1a1a; stroke-width: 2; }
+                .cadence-track-new { stroke: #e63946; stroke-width: 3; }
+                .cadence-dot-old { fill: #1a1a1a; }
+                .cadence-dot-new { fill: #e63946; }
+                .cadence-label-track { font-family: Roboto, system-ui, sans-serif; font-size: 14px; font-weight: 700; fill: #1a1a1a; }
+                .cadence-label-pace { font-family: Roboto, system-ui, sans-serif; font-size: 12px; fill: rgba(0,0,0,0.7); }
+                .cadence-label-quarter { font-family: Roboto, system-ui, sans-serif; font-size: 11px; fill: rgba(0,0,0,0.55); }
+              </style>
+
+              <text x="20" y="30" class="cadence-label-track">Before</text>
+              <text x="20" y="50" class="cadence-label-pace">Quarterly patch windows. Once every 90 days.</text>
+
+              <line x1="60" y1="100" x2="600" y2="100" class="cadence-track-old" />
+              <circle cx="100" cy="100" r="9" class="cadence-dot-old" />
+              <circle cx="237" cy="100" r="9" class="cadence-dot-old" />
+              <circle cx="373" cy="100" r="9" class="cadence-dot-old" />
+              <circle cx="510" cy="100" r="9" class="cadence-dot-old" />
+              <text x="100" y="125" text-anchor="middle" class="cadence-label-quarter">Q1</text>
+              <text x="237" y="125" text-anchor="middle" class="cadence-label-quarter">Q2</text>
+              <text x="373" y="125" text-anchor="middle" class="cadence-label-quarter">Q3</text>
+              <text x="510" y="125" text-anchor="middle" class="cadence-label-quarter">Q4</text>
+
+              <text x="20" y="195" class="cadence-label-track">After Mythos-class tools</text>
+              <text x="20" y="215" class="cadence-label-pace">Continuous patching. Hours to days, not months.</text>
+
+              <line x1="60" y1="265" x2="600" y2="265" class="cadence-track-new" />
+              <g class="cadence-dot-new">
+                <circle cx="68" cy="265" r="4" /><circle cx="82" cy="265" r="4" /><circle cx="96" cy="265" r="4" /><circle cx="110" cy="265" r="4" /><circle cx="124" cy="265" r="4" /><circle cx="138" cy="265" r="4" /><circle cx="152" cy="265" r="4" /><circle cx="166" cy="265" r="4" /><circle cx="180" cy="265" r="4" /><circle cx="194" cy="265" r="4" /><circle cx="208" cy="265" r="4" /><circle cx="222" cy="265" r="4" /><circle cx="236" cy="265" r="4" /><circle cx="250" cy="265" r="4" /><circle cx="264" cy="265" r="4" /><circle cx="278" cy="265" r="4" /><circle cx="292" cy="265" r="4" /><circle cx="306" cy="265" r="4" /><circle cx="320" cy="265" r="4" /><circle cx="334" cy="265" r="4" /><circle cx="348" cy="265" r="4" /><circle cx="362" cy="265" r="4" /><circle cx="376" cy="265" r="4" /><circle cx="390" cy="265" r="4" /><circle cx="404" cy="265" r="4" /><circle cx="418" cy="265" r="4" /><circle cx="432" cy="265" r="4" /><circle cx="446" cy="265" r="4" /><circle cx="460" cy="265" r="4" /><circle cx="474" cy="265" r="4" /><circle cx="488" cy="265" r="4" /><circle cx="502" cy="265" r="4" /><circle cx="516" cy="265" r="4" /><circle cx="530" cy="265" r="4" /><circle cx="544" cy="265" r="4" /><circle cx="558" cy="265" r="4" /><circle cx="572" cy="265" r="4" /><circle cx="586" cy="265" r="4" />
+              </g>
+              <text x="100" y="295" text-anchor="middle" class="cadence-label-quarter">Q1</text>
+              <text x="237" y="295" text-anchor="middle" class="cadence-label-quarter">Q2</text>
+              <text x="373" y="295" text-anchor="middle" class="cadence-label-quarter">Q3</text>
+              <text x="510" y="295" text-anchor="middle" class="cadence-label-quarter">Q4</text>
+            </svg>
+            <figcaption style="font-size: 0.92rem; color: rgba(0,0,0,0.65); margin-top: 0.5rem; text-align: center;">
+              Patch cadence in small business IT, before and after AI-driven vulnerability discovery.
+            </figcaption>
+          </figure>
+
+          <h3>The old model: quarterly patch cycles, monthly for high-sev</h3>
+
+          <p>For most small businesses I have worked with, patching has been an occasional event. Workstations get the Microsoft cumulative update on Patch Tuesday, and that loop more or less takes care of itself. Servers get touched once a month. Edge devices, the firewall and the VPN appliance and the Remote Desktop Gateway, get firmware updates "when there is a window," which often means once or twice a year, sometimes never. That model worked because the rate of new disclosures was something a person could keep up with by reading a vendor newsletter on Monday morning.</p>
+
+          <h3>The new pace: hours to days for browsers, edge devices, and identity</h3>
+
+          <p>What Mythos and similar tools change is the rate. If one model finds 271 bugs in one browser in one run, the next release of that browser is not going to wait three months. Vendors are going to start shipping security releases on a tighter cadence to keep up with the inflow. We are already seeing it. Firefox 150 was followed by Firefox 150.0.1 and 150.0.2 within a couple of weeks, both with sec-high fixes. That pattern is going to spread to Chrome, Edge, Safari, and from there to every other piece of software you depend on.</p>
+
+          <p>The realistic patching window for browsers is now 24 to 72 hours from disclosure. For edge gear it is 7 days at the outside. For anything CISA puts on the Known Exploited Vulnerabilities list, it is "today, and document why if you can't."</p>
+
+          <h3>Why this hits browsers and edge gear hardest</h3>
+
+          <p>Two reasons. The first is exposure: browsers run untrusted code from the open internet by design, and edge devices are reachable from the open internet by definition. They are both the front door. The second is concentration: there are only a handful of browsers and a handful of edge appliance vendors, so when the audit results come in, they affect everyone at once. A 15-year-old bug in an HTML parser is a 15-year-old bug in essentially every Firefox install on earth, simultaneously.</p>
+
+          <h2>What this means for small business specifically</h2>
+
+          <h3>You no longer have a "we'll batch it" option on browsers</h3>
+
+          <p>If your workstations run Firefox, Chrome, or Edge, and most do, the browser is the most exposed piece of software you have. The new normal is that a critical browser CVE shows up, gets a patch within a day or two, and a working exploit starts circulating shortly after that. If your fleet is on auto-update, you are protected. If your IT person disables auto-update because "we control rollouts here," you are losing more than you are gaining. Those rollouts now need to be measured in hours, not weeks, and that is not what most small business IT setups are tuned for.</p>
+
+          <h3>Edge devices are the highest-leverage targets</h3>
+
+          <p>I have written before that <a href="ransomware-2026-how-it-gets-in.html">unpatched edge devices are one of the most common ransomware entry points</a> we see in small business networks. That has been true for years, and it is becoming more true. Mythos-class tools are going to surface a wave of long-buried bugs in firewall and VPN firmware over the next year. The vendors will ship fixes. The question for your business is whether the fix gets applied within a week, or whether it sits in a vendor newsletter your IT person scans on Monday mornings.</p>
+
+          <h3>The in-house IT person can't keep up. This is now a 24/7 job.</h3>
+
+          <p>I want to be careful here. Most small business IT people are good at what they do, and most of them are doing a job that is too big for one person already. The honest truth is that patching at the new cadence is not a "fit it in between tickets" task. It requires a feed of CVEs that is monitored continuously, a process that prioritizes them against your actual asset list, and a tool that can apply the patches and verify them. That is now an operations function, not a side duty. You either build it, or you contract it.</p>
+
+          <h3>Cyber-insurance posture is shifting</h3>
+
+          <p>The cyber-insurance carriers I deal with are starting to ask different questions on renewals. The old questionnaire wanted to know if you had antivirus and a firewall. The new one asks about <strong>mean time to patch</strong> on critical CVEs. If you can't answer with a number, your premium goes up, your retention goes up, or both. The carriers are doing this because they have the claims data to back it up: most of the breaches that produce big payouts trace back to a known, patchable vulnerability that nobody got around to.</p>
+
+          <h2>What controls actually matter now</h2>
+
+          <p>Most cybersecurity advice is generic. The version that actually moves the needle in 2026, given the new pace, is shorter and more specific. None of this is novel. It is just that the cost of skipping any of it is going up. If you want a fuller picture of what a real cybersecurity program looks like for a small business, our <a href="../cybersecurity.html">cybersecurity services</a> page covers that. Below is the patching-focused short list.</p>
+
+          <h3>Automated browser updates, not "leave it to the user"</h3>
+
+          <p>Set browser update policy through your endpoint management tool. Do not rely on individual users clicking "restart to update later." Most do not, and now most cannot afford not to.</p>
+
+          <h3>A real patch-management cadence on the edge</h3>
+
+          <p>Inventory every internet-reachable device. Subscribe to the vendor's CVE feed for each. Set a target window: 7 days for high-severity firmware updates, 24 hours for anything actively exploited. Track every patch event. If you cannot show me a log of edge-device patches in the last 90 days, you do not have a cadence. You have a hope.</p>
+
+          <h3>EDR with vulnerability telemetry</h3>
+
+          <p>Endpoint Detection and Response is no longer just behavior detection. The good products report on what software is installed on which endpoint and which versions are vulnerable. That feed is what lets you patch what matters first instead of patching everything at once and hoping for the best. CrowdStrike, SentinelOne, Microsoft Defender for Business, and Huntress all do versions of this for the small business market.</p>
+
+          <h3>Asset inventory you can trust</h3>
+
+          <p>You cannot patch what you do not know you own. The number of small businesses I open up that cannot tell me how many laptops, servers, switches, or cloud apps they actually have is the same number I started seeing five years ago. Build the list. Keep it current. This is the unglamorous foundation that makes everything else work.</p>
+
+          <h3>Identity hardening</h3>
+
+          <p>Most exploit chains, even AI-found ones, still need a foothold to land in your environment. Identity is that foothold. Multi-factor authentication on every account, conditional access where it is available, no shared admin credentials, and no legacy authentication protocols. This overlaps a lot with <a href="small-business-cybersecurity-mistakes.html">the cybersecurity mistakes I see in almost every small business</a>. The Mythos news does not change those fundamentals. It raises the cost of skipping them.</p>
+
+          <h2>What to do this week</h2>
+
+          <p>If you read this and realized your business is on the wrong side of the new pace, here is the order to fix it.</p>
+
+          <ol>
+            <li><strong>Today:</strong> force-update browsers on every workstation. Push it from the endpoint management tool, not as a request. If you don't have an endpoint management tool, that is the next bullet.</li>
+            <li><strong>Today:</strong> list every internet-reachable device. Firewall, VPN, Remote Desktop Gateway, hosted phone system, anything with a public-facing login page. Pull the vendor's CVE page for each. Patch anything sitting on a published high-severity CVE.</li>
+            <li><strong>This week:</strong> turn on auto-patch wherever it is available. RMM, Microsoft 365, browser group policies, mobile device management. The point is to make patching the default, not the exception.</li>
+            <li><strong>This week:</strong> measure your mean time to patch on the last three critical CVEs that hit your stack. If you can't answer, that is the answer. You don't have a cadence yet. Building one is the work.</li>
+            <li><strong>This month:</strong> get a managed patch cadence in place. Either build it in-house with a real owner and a real budget, or hand it to a partner whose job is to do this all day. The middle path, where one person fits it in between everything else, is the path that breaks first.</li>
+          </ol>
+
+          <h2>The honest take</h2>
+
+          <p>Mythos is good news for the industry. It is going to find a lot of dormant bugs and the vendors are going to ship a lot of fixes. The early returns are already showing up in browser and OS release notes, and that pattern is going to continue.</p>
+
+          <p>Mythos is also a threat, but not in the way most of the headlines are framing it. The threat is not that an AI is going to "hack" your business directly. The threat is that the rate of vulnerability disclosure is about to outrun the patch cadence most small businesses run on, and the gap between disclosure and exploitation is going to keep narrowing. The defender side has a six-to-twelve-month head start. That window is the planning horizon.</p>
+
+          <p>The deeper truth is that vulnerability management is no longer a tooling problem. It is an operations cadence problem. The tools to patch on the new pace exist and are not expensive. What's missing in most small business networks is somebody whose job is to run them every day. That person can be on your payroll, or it can be us, but the seat needs to be filled. If the answer right now is "nobody, really," that is the gap to close. We work with small businesses across Salinas, Monterey, Santa Cruz, and the rest of the Central Coast on exactly this problem, as part of our <a href="../managed-it-services.html">managed IT services</a>.</p>
+
+          <h2>FAQs about Claude Mythos and patch cadence in 2026</h2>
+
+          <h3>Did Claude Mythos hack Firefox?</h3>
+          <p>No. Mozilla and Anthropic ran a coordinated audit. Mythos analyzed Firefox 150 source code, surfaced 271 sec-rated bugs, Mozilla's engineers triaged and patched them, and the fixes shipped before any of this was made public. No user data was touched. This was a defender exercise, not an attack.</p>
+
+          <h3>Is Firefox safe to use right now?</h3>
+          <p>Yes, on Firefox 150 or later. The whole point of the audit is that the bugs are now patched. If you are running Firefox 149 or earlier, update today.</p>
+
+          <h3>Does this affect Chrome, Edge, and Safari too?</h3>
+          <p>By implication, yes. Anthropic has stated that Mythos found thousands of zero-days across every major operating system and every major web browser. Expect comparable disclosures from Google, Microsoft, and Apple over the next few months. Keep all browsers on auto-update.</p>
+
+          <h3>How fast does a small business need to patch a critical browser CVE in 2026?</h3>
+          <p>24 to 72 hours for browsers. 7 days for edge gear like firewalls, VPNs, and Remote Desktop Gateways. Faster if the CVE is on CISA's Known Exploited Vulnerabilities list. The old quarterly window does not work anymore.</p>
+
+          <h3>Can a 5-person business really run continuous patching?</h3>
+          <p>Not in-house, no. The realistic answer is tooling plus a managed partner: a remote management tool that pushes patches automatically, plus someone whose job is to watch the CVE feed, prioritize, and verify. That is what Ghosxt does for small business clients.</p>
+
+          <div class="blog-post-cta">
+            <h3>Want a real patch-cadence assessment?</h3>
+            <p>30 minutes, DoD-cleared engineer on the call, written list of where your patching gaps are and what to fix first. No sales script.</p>
+            <a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer">
+              <i class="fi fi-rs-calendar-day" aria-hidden="true"></i>
+              Book your free assessment
+            </a>
+          </div>
+
+          <p style="margin-top: 1.5rem; font-size: 0.95rem; color: rgba(0,0,0,0.7);">
+            Prefer to talk first? Email <a href="mailto:sales@ghosxt.com">sales@ghosxt.com</a> or call <a href="tel:+18312040501">(831) 204-0501</a>.
+          </p>
+        </div>
+      </div>
+    </main>
+    <footer class="footer footer-visible" id="footerSection">
+      <div class="footer-container">
+        <div class="footer-grid">
+          <div class="footer-column"><h3 class="footer-column-title">Main Menu</h3><ul class="footer-links"><li><a href="../index.html">Home</a></li><li><a href="../about.html">About</a></li><li><a href="../services.html">Services</a></li><li><a href="../pricing.html">Pricing</a></li><li><a href="../contact.html">Contact</a></li></ul></div>
+          <div class="footer-column"><h3 class="footer-column-title">Services</h3>
+            <ul class="footer-links">
+              <li><a href="../managed-it-services.html">Managed IT Services</a></li>
+              <li><a href="../cybersecurity.html">Cybersecurity</a></li>
+              <li><a href="../cloud-services.html">Cloud Services</a></li>
+              <li><a href="../backup-disaster-recovery.html">Backup &amp; Disaster Recovery</a></li>
+              <li><a href="../network-design.html">Network Design</a></li>
+              <li><a href="../website-development.html">Web Development</a></li>
+              <li><a href="../ctpat.html">C-TPAT Compliance</a></li>
+            </ul></div>
+          <div class="footer-column"><h3 class="footer-column-title">Resources</h3><ul class="footer-links"><li><a href="index.html">Blog</a></li><li><a href="../privacy-policy.html">Privacy Policy</a></li><li><a href="https://ticket.ghosxt.com/" target="_blank" rel="noopener noreferrer">Client Portal</a></li><li><a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer">Schedule Free IT Assessment</a></li></ul></div>
+        </div>
+        <div class="service-areas-footer">
+          <h3>Service Areas</h3>
+          <ul><li><a href="../salinas.html">Salinas</a></li><li><a href="../monterey.html">Monterey</a></li><li><a href="../watsonville.html">Watsonville</a></li><li><a href="../hollister.html">Hollister</a></li><li><a href="../santa-cruz.html">Santa Cruz</a></li><li><a href="../gilroy.html">Gilroy</a></li><li><a href="../san-jose.html">San Jose</a></li><li><a href="../pacific-grove.html">Pacific Grove</a></li><li><a href="../carmel.html">Carmel</a></li><li><a href="../seaside.html">Seaside</a></li><li><a href="../marina.html">Marina</a></li></ul>
+        </div>
+      </div>
+    </footer>
+    <script src="../assets/js/main.js" defer></script>
+  </body>
+</html>
