@@ -152,9 +152,15 @@
   <!-- Blog -->
   <url>
     <loc>https://ghosxt.com/blog/</loc>
-    <lastmod>2026-05-08</lastmod>
+    <lastmod>2026-05-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ghosxt.com/blog/quickbooks-cant-complete-current-action-email-fix.html</loc>
+    <lastmod>2026-05-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://ghosxt.com/blog/small-business-cybersecurity-mistakes.html</loc>
