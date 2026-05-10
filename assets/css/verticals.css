@@ -317,3 +317,173 @@
     margin: 0 auto;
   }
 }
+
+/* ------------------------------------------------------------------
+   ENGINEERING page — blueprint-grid hero, workflow timeline,
+   number-badge cards with dashed icon tiles
+   ------------------------------------------------------------------ */
+
+.location-hero.hero--engineering {
+  background-image:
+    linear-gradient(rgba(255, 0, 0, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 0, 0, 0.06) 1px, transparent 1px);
+  background-size: 24px 24px;
+  position: relative;
+}
+
+.hero--engineering .title-block {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.75rem;
+  border: 1px solid var(--ghosxt-black, #000);
+  padding: 0.45rem 0.85rem;
+  font-family: var(--font-family-2, "Roboto", sans-serif);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: #ffffff;
+  font-weight: 600;
+  color: var(--ghosxt-black, #000);
+}
+
+.hero--engineering .title-block .title-row {
+  display: block;
+  line-height: 1.5;
+}
+
+.hero--engineering .title-block .title-row + .title-row {
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  margin-top: 0.25rem;
+  padding-top: 0.25rem;
+}
+
+.hero-blueprint {
+  width: 100%;
+  max-width: 720px;
+  height: auto;
+  margin: 2rem 0 0;
+  display: block;
+}
+
+.workflow-timeline {
+  position: relative;
+  padding: 0 0 0 2.5rem;
+  margin: 0;
+  list-style: none;
+}
+
+.workflow-timeline::before {
+  content: "";
+  position: absolute;
+  left: 0.7rem;
+  top: 0.55rem;
+  bottom: 0.55rem;
+  width: 2px;
+  background: var(--ghosxt-red-0, #ff0000);
+}
+
+.workflow-step {
+  position: relative;
+  padding: 0 0 2.25rem 1.25rem;
+  margin: 0;
+}
+
+.workflow-step:last-child {
+  padding-bottom: 0;
+}
+
+.workflow-step::before {
+  content: "";
+  position: absolute;
+  left: -1.85rem;
+  top: 0.4rem;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--ghosxt-red-0, #ff0000);
+  border: 3px solid #ffffff;
+  box-shadow: 0 0 0 2px var(--ghosxt-black, #000);
+}
+
+.workflow-step h3 {
+  margin: 0 0 0.55rem;
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: var(--ghosxt-black, #000);
+  line-height: 1.25;
+}
+
+.workflow-step p {
+  margin: 0;
+  font-size: 0.97rem;
+  line-height: 1.65;
+  color: rgba(0, 0, 0, 0.82);
+}
+
+.icon-card.badge-num {
+  position: relative;
+  overflow: visible;
+}
+
+.icon-card.badge-num .badge-numeral {
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--ghosxt-red-0, #ff0000);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.92rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--ghosxt-black, #000);
+  font-family: var(--font-family-2, "Roboto", sans-serif);
+}
+
+.icon-card.badge-num .icon-card-icon {
+  background: #ffffff;
+  border-style: dashed;
+}
+
+.msp-callout {
+  margin: 1.5rem 0 0;
+  padding: 1.6rem 1.75rem;
+  border: 1px dashed var(--ghosxt-black, #000);
+  background: #fffafa;
+  border-radius: 8px;
+}
+
+.msp-callout h3 {
+  margin: 0 0 0.6rem;
+  font-size: 1.1rem;
+  color: var(--ghosxt-black, #000);
+}
+
+.msp-callout p {
+  margin: 0 0 0.85rem;
+  font-size: 0.98rem;
+  line-height: 1.65;
+}
+
+.msp-callout ul {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.msp-callout ul li {
+  margin-bottom: 0.35rem;
+}
+
+@media (max-width: 720px) {
+  .hero--engineering .title-block {
+    position: static;
+    display: inline-block;
+    margin-bottom: 0.75rem;
+  }
+  .hero-blueprint {
+    margin-top: 1.25rem;
+  }
+}
