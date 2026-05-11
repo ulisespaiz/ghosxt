@@ -33,6 +33,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdn-uicons.flaticon.com">
+    <link rel="preconnect" href="https://challenges.cloudflare.com">
+
+    <!-- Cloudflare Turnstile (CAPTCHA) -->
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 
     <!-- FONTS -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -279,43 +283,55 @@
                     <p class="form-subtitle">Fill out the form and we'll get back to you within 24 hours.</p>
                 </div>
 
-                <form class="contact-form">
+                <form class="contact-form" id="contactForm" action="/api/contact" method="POST" novalidate>
                     <div class="form-row">
                         <div class="form-group">
-                            <label class="form-label" for="input-name">Name<span class="form-label-required">*</span></label>
-                            <input type="text" id="input-name" class="form-input" placeholder="Enter your full name" required autocomplete="name">
+                            <label class="form-label" for="input-name">Name<span class="form-label-required" aria-hidden="true">*</span></label>
+                            <input type="text" id="input-name" name="name" class="form-input" placeholder="Enter your full name" maxlength="120" required autocomplete="name">
                         </div>
                         <div class="form-group">
-                            <label class="form-label" for="input-company">Company Name<span class="form-label-required">*</span></label>
-                            <input type="text" id="input-company" class="form-input" placeholder="Enter your company name" required autocomplete="organization">
+                            <label class="form-label" for="input-company">Company Name<span class="form-label-required" aria-hidden="true">*</span></label>
+                            <input type="text" id="input-company" name="company" class="form-input" placeholder="Enter your company name" maxlength="200" required autocomplete="organization">
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label class="form-label" for="input-email">Email Address<span class="form-label-required">*</span></label>
-                        <input type="email" id="input-email" class="form-input" placeholder="Enter your email" required autocomplete="email">
+                        <label class="form-label" for="input-email">Email Address<span class="form-label-required" aria-hidden="true">*</span></label>
+                        <input type="email" id="input-email" name="email" class="form-input" placeholder="Enter your email" maxlength="254" required autocomplete="email">
                     </div>
 
                     <div class="form-group">
-                        <label class="form-label" for="input-phone">Phone Number<span class="form-label-required">*</span></label>
+                        <label class="form-label" for="input-phone">Phone Number<span class="form-label-required" aria-hidden="true">*</span></label>
                         <div class="phone-input-wrapper">
-                            <div class="country-code">
-                                🇺🇸 +1
+                            <div class="country-code" id="phone-cc">
+                                <span aria-hidden="true">🇺🇸</span> +1
                             </div>
-                            <input type="tel" id="input-phone" class="form-input phone-input" placeholder="Enter your phone number" required autocomplete="tel">
+                            <input type="tel" id="input-phone" name="phone" class="form-input phone-input" placeholder="Enter your phone number" maxlength="40" required autocomplete="tel" aria-describedby="phone-cc">
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label class="form-label" for="input-message">How can we help you?<span class="form-label-required">*</span></label>
-                        <textarea id="input-message" class="form-textarea" placeholder="Tell us more about your needs..." aria-describedby="form-privacy-note"></textarea>
+                        <label class="form-label" for="input-message">How can we help you?<span class="form-label-required" aria-hidden="true">*</span></label>
+                        <textarea id="input-message" name="message" class="form-textarea" placeholder="Tell us more about your needs..." maxlength="5000" required aria-describedby="form-privacy-note"></textarea>
                     </div>
+
+                    <!-- Honeypot: real users won't see or fill this. Bots typically do. -->
+                    <div class="form-honeypot" aria-hidden="true" style="position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden">
+                        <label for="input-website">Website (leave blank)</label>
+                        <input type="text" id="input-website" name="website" tabindex="-1" autocomplete="off">
+                    </div>
+
+                    <!-- Cloudflare Turnstile widget. data-sitekey is set at deploy time
+                         (public, safe to inline). -->
+                    <div class="cf-turnstile" data-sitekey="0x4AAAAAADMxvIb2SEzyfRtD" data-theme="light" data-action="contact"></div>
 
                     <p class="form-disclaimer" id="form-privacy-note">
                         We respect your privacy. Your information is only used to respond to your inquiry and is never shared with third parties.
                     </p>
 
-                    <button type="submit" class="form-submit">Send Message</button>
+                    <button type="submit" class="form-submit" id="form-submit">Send Message</button>
+
+                    <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
                 </form>
             </div>
         </div>
@@ -627,6 +643,64 @@
                 });
             });
         });
+    </script>
+    <script>
+        // Contact form: AJAX submit to /api/contact (Cloudflare Pages Function).
+        // Handles Turnstile token, validation feedback, and accessible status updates.
+        (function () {
+            const form = document.getElementById('contactForm');
+            if (!form) return;
+            const submit = document.getElementById('form-submit');
+            const status = document.getElementById('form-status');
+            const submitDefault = submit.textContent;
+
+            function setStatus(message, kind) {
+                status.textContent = message;
+                status.dataset.kind = kind || '';
+            }
+
+            form.addEventListener('submit', async function (e) {
+                e.preventDefault();
+                setStatus('', '');
+
+                if (!form.reportValidity()) return;
+
+                const data = new FormData(form);
+                const token = data.get('cf-turnstile-response');
+                if (!token) {
+                    setStatus('Please complete the security check above.', 'error');
+                    return;
+                }
+
+                submit.disabled = true;
+                submit.textContent = 'Sending…';
+
+                try {
+                    const res = await fetch(form.action, {
+                        method: 'POST',
+                        body: data,
+                        headers: { Accept: 'application/json' },
+                    });
+                    if (res.ok) {
+                        form.reset();
+                        if (window.turnstile) window.turnstile.reset();
+                        setStatus('Thanks — we received your message and will reply within 1 business day.', 'success');
+                    } else {
+                        let msg = 'Something went wrong. Please try again or email hello@ghosxt.com.';
+                        try {
+                            const body = await res.json();
+                            if (body && body.error) msg = body.error + '. Please try again or email hello@ghosxt.com.';
+                        } catch (_) {}
+                        setStatus(msg, 'error');
+                    }
+                } catch (_) {
+                    setStatus('Network error. Please try again or email hello@ghosxt.com.', 'error');
+                } finally {
+                    submit.disabled = false;
+                    submit.textContent = submitDefault;
+                }
+            });
+        })();
     </script>
 </body>
 </html>

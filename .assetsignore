@@ -1,0 +1,37 @@
+# Files in this list are NOT uploaded as static assets to Cloudflare.
+# Cloudflare Workers + Assets reads .assetsignore at deploy time.
+# See: https://developers.cloudflare.com/workers/static-assets/binding/#ignoring-assets
+
+# Worker source (bundled into the Worker, not served as static)
+src/
+
+# Legacy Pages Functions directory (handler is now in src/worker.js)
+functions/
+
+# Deploy / build config
+wrangler.jsonc
+wrangler.toml
+package.json
+package-lock.json
+node_modules/
+
+# Repo docs (not part of the site)
+README.md
+SETUP-CONTACT-FORM.md
+
+# VCS
+.git/
+.gitignore
+.gitattributes
+
+# Local dev secrets (also in .gitignore but belt-and-suspenders)
+.dev.vars
+.dev.vars.*
+.env
+.env.*
+
+# Editor/OS clutter
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
