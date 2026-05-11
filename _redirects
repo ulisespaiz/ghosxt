@@ -4,12 +4,17 @@
 # Legacy WordPress URLs from the pre-static site that Google still has
 # indexed. Each is redirected to its closest equivalent on the new site
 # with a 301 (permanent) so any old link equity transfers over.
-/custom-website-development-building-your-digital-foundation-for-success/   /website-development.html   301
-/cybersecurity-and-data-protection/                                         /cybersecurity.html         301
-/sample-page/                                                               /                           301
-/category/it-support/                                                       /managed-it-services.html   301
-/category/web-development/                                                  /website-development.html   301
+/custom-website-development-building-your-digital-foundation-for-success/        /website-development.html   301
+/custom-website-development-building-your-digital-foundation-for-success/feed/   /website-development.html   301
+/cybersecurity-and-data-protection/                                              /cybersecurity.html         301
+/sample-page/                                                                    /                           301
+/hello-world/                                                                    /                           301
+/category/it-support/                                                            /managed-it-services.html   301
+/category/it-support/feed/                                                       /managed-it-services.html   301
+/category/web-development/                                                       /website-development.html   301
+/category/web-development/feed/                                                  /website-development.html   301
 
-# Catch-all for any other WordPress category archive URLs Google might
-# still know about. Anything under /category/* falls back to /services.html.
-/category/*   /services.html   301
+# Catch-all patterns for any other WordPress legacy URLs Google might
+# still know about that weren't in the specific list above.
+/category/*/feed/   /services.html   301
+/category/*         /services.html   301
