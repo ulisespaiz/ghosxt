@@ -215,9 +215,14 @@
   --ghosxt-white: white;
   --ghosxt-gray: gray;
 
-  --ghosxt-red-0: #ff0000;
+  /* Primary brand red. Was #ff0000 which fails WCAG 2.2 AA contrast on
+     white for normal text (4.00:1, needs 4.5:1). Swapped to #b71c1c
+     (≈6.8:1 on white) so every existing --ghosxt-red-0 use site-wide
+     passes AA in one change. --ghosxt-red-1 (#ff3333) is similarly
+     non-compliant; aliased to --ghosxt-red-4 for the same reason. */
+  --ghosxt-red-0: #b71c1c;
 
-  --ghosxt-red-1: #ff3333;
+  --ghosxt-red-1: #b71c1c;
   --ghosxt-red-2: #d32f2f;
   --ghosxt-red-3: #c62828;
   --ghosxt-red-4: #b71c1c;

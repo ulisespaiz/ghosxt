@@ -85,12 +85,28 @@ async function sendViaResend(env, payload) {
     },
     body: JSON.stringify(payload),
   });
+  if (!res.ok) {
+    let body = "";
+    try { body = await res.text(); } catch {}
+    console.error("Resend send failed", {
+      status: res.status,
+      body: body.slice(0, 500),
+      from: payload.from,
+      to: payload.to,
+    });
+  }
   return { ok: res.ok, status: res.status };
 }
 
 async function handleContact(request, env) {
   if (request.method !== "POST") {
     return jsonResponse(405, { error: "Method Not Allowed", allow: "POST" });
+  }
+  const missing = ["RESEND_API_KEY", "TURNSTILE_SECRET_KEY", "CONTACT_TO_EMAIL", "CONTACT_FROM_EMAIL"]
+    .filter((k) => !env[k]);
+  if (missing.length > 0) {
+    console.error("Missing required env vars", missing);
+    return jsonResponse(500, { error: "Server misconfigured" });
   }
   if (!isAllowedOrigin(request, env)) {
     return jsonResponse(403, { error: "Forbidden" });
