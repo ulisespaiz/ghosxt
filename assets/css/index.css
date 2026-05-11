@@ -5841,3 +5841,246 @@
     font-size: 1.625rem;
   }
 }
+
+/* ------ HOMEPAGE MESSAGE HIERARCHY REFINEMENTS ------ */
+main > div:not(.hero-section) .hero-badge,
+main > div:not(.hero-section) .problem-badge,
+.approach-card-badge {
+  margin-bottom: 0;
+  border-style: dashed;
+  box-shadow: none;
+  opacity: 0.82;
+  z-index: 10;
+}
+
+main > div:not(.hero-section) .hero-badge .badge-lines,
+main > div:not(.hero-section) .problem-badge .badge-lines {
+  display: none;
+}
+
+main > div:not(.hero-section) .hero-badge .badge-container,
+main > div:not(.hero-section) .problem-badge .badge-container,
+.approach-card-badge {
+  padding: 0.42rem 0.85rem;
+  gap: 0.5rem;
+}
+
+.problem-badge-text,
+.solutions-badge-text,
+.approach-card-badge {
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.problem-title,
+.efficiency-title,
+.approaches-stack-title,
+.services-title,
+.why-title,
+.cta-title {
+  font-size: clamp(2.1rem, 4vw, 3rem);
+}
+
+.solutions-main-title,
+.comparison-main-title,
+.ctpat-promo-title,
+.cares-promo-title {
+  font-size: clamp(2.2rem, 4.2vw, 3.25rem);
+}
+
+.solutions-header,
+.services-header,
+.comparison-header,
+.approaches-stack-header {
+  gap: 1.1rem;
+}
+
+.problem-section,
+.solutions-section,
+.efficiency-section,
+.approaches-stack-section,
+.services-section,
+.why-section,
+.comparison-section,
+.ctpat-promo-section,
+.cares-promo-section {
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.problem-container,
+.solutions-container,
+.efficiency-container,
+.approaches-stack-container,
+.services-container,
+.comparison-container,
+.testimonials-container,
+.ctpat-promo-container,
+.cares-promo-container {
+  padding-block: clamp(4rem, 8vw, 6rem);
+}
+
+.problem-right,
+.solutions-box,
+.chat-container,
+.bunker-stage,
+.comparison-wrapper,
+.testimonials-grid,
+.ctpat-promo-card,
+.cta-right {
+  isolation: isolate;
+}
+
+.floating-box,
+.solution-box,
+.service-card,
+.approach-card-inner,
+.comparison-card,
+.testimonial-card {
+  box-shadow: none;
+}
+
+.service-card,
+.approach-card-inner,
+.testimonial-card {
+  border-style: solid;
+}
+
+.approaches-stack-wrapper,
+.services-grid {
+  gap: 1.5rem;
+}
+
+.approach-card-badge {
+  color: var(--ghosxt-black);
+  background: rgba(255, 255, 255, 0.82);
+}
+
+.service-icon {
+  width: 58px;
+  height: 58px;
+}
+
+.service-icon i {
+  font-size: 28px;
+}
+
+.efficiency-left > p.efficiency-text {
+  display: block;
+}
+
+.efficiency-text-cta {
+  margin: 0;
+}
+
+/* Trust and CTA sections are intentionally more distinctive than content sections. */
+.testimonial-section {
+  background:
+    radial-gradient(circle at 12% 16%, rgba(255, 23, 68, 0.1), transparent 30%),
+    linear-gradient(180deg, #fff 0%, rgba(255, 23, 68, 0.045) 100%);
+}
+
+.testimonial-card {
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 8px 8px 0 0 rgba(0, 0, 0, 0.06);
+}
+
+.testimonial-left-column .testimonial-card {
+  border: 2px solid var(--ghosxt-black);
+}
+
+.read-more-reviews-btn {
+  align-self: flex-start;
+}
+
+.cares-promo-section {
+  background:
+    linear-gradient(135deg, rgba(255, 23, 68, 0.08), transparent 38%),
+    var(--ghosxt-white);
+}
+
+.cares-promo-container {
+  max-width: 1100px;
+}
+
+.cares-promo-right {
+  border: 1px solid var(--ghosxt-black);
+  border-radius: 24px;
+  padding: clamp(2rem, 5vw, 4rem);
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 10px 10px 0 0 rgba(0, 0, 0, 0.06);
+}
+
+.cta-section {
+  overflow: hidden;
+  background: var(--ghosxt-black);
+  color: var(--ghosxt-white);
+}
+
+.cta-title,
+.cta-text {
+  color: var(--ghosxt-white) !important;
+}
+
+.cta-section .hero-span-text {
+  color: var(--ghosxt-red-0) !important;
+}
+
+.cta-text {
+  opacity: 0.82;
+  max-width: 520px;
+}
+
+.cta-container {
+  position: relative;
+  z-index: 2;
+  padding-block: clamp(4rem, 8vw, 6rem);
+}
+
+.cta-container::before {
+  content: "";
+  position: absolute;
+  inset: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 28px;
+  pointer-events: none;
+}
+
+.cta-primary-btn {
+  background: var(--ghosxt-red-0);
+  color: var(--ghosxt-white);
+  border-color: var(--ghosxt-white);
+  box-shadow: 3px 3px 0 0 rgba(255, 255, 255, 0.28);
+}
+
+.cta-image {
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  filter: drop-shadow(0 18px 35px rgba(0, 0, 0, 0.35));
+}
+
+.cta-section .stackedserver-wrapper {
+  opacity: 0.12;
+  pointer-events: none;
+}
+
+@media (max-width: 968px) {
+  .approaches-stack-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-container::before {
+    inset: 0.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  main > div:not(.hero-section) .hero-badge,
+  main > div:not(.hero-section) .problem-badge {
+    align-self: center;
+  }
+
+  .cares-promo-right {
+    padding: 1.5rem;
+  }
+}
