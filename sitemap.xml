@@ -96,8 +96,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-
-  <!-- Service pages -->
   <url>
     <loc>https://ghosxt.com/managed-it-services.html</loc>
     <lastmod>2026-05-08</lastmod>
@@ -122,8 +120,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
-  <!-- Service area pages -->
   <url>
     <loc>https://ghosxt.com/salinas.html</loc>
     <lastmod>2026-05-05</lastmod>
@@ -190,8 +186,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
-  <!-- Blog -->
   <url>
     <loc>https://ghosxt.com/blog/</loc>
     <lastmod>2026-05-10</lastmod>
