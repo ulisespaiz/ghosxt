@@ -138,7 +138,7 @@
 
           <h3>1. Stolen email credentials, no MFA</h3>
 
-          <p>The most common path in 2026 is still the most boring one. An employee's email password ends up in a credential dump because they reused it on some site that got breached. The attacker logs into the email account. There is no multi-factor authentication. They sit in the inbox for a few weeks, learn the business, and pivot from there.</p>
+          <p>The most common path in 2026 is still the most boring one. An employee's email password ends up in a credential dump because they reused it on some site that got breached. This is why identity controls sit at the center of any small-business security plan. The attacker logs into the email account. There is no multi-factor authentication. They sit in the inbox for a few weeks, learn the business, and pivot from there.</p>
 
           <p>From an inbox an attacker can set up forwarding rules, intercept invoices to redirect wire transfers, harvest more credentials from internal emails, and impersonate the user to ask other employees to open attachments. Plain inbox access is enough to ruin a small business. I have watched it happen.</p>
 
@@ -158,7 +158,7 @@
 
           <h3>5. Misconfigured cloud, mostly Microsoft 365</h3>
 
-          <p>A fresh Microsoft 365 tenant out of the box is not secure. Default settings allow legacy authentication protocols that bypass MFA, give every user the ability to install applications that can read mail, leave guest sharing wide open, and skip conditional access entirely. Most small businesses sign up, get email working, and never touch the security settings. Attackers know this and target the gaps directly.</p>
+          <p>A fresh Microsoft 365 tenant out of the box is not secure. Default settings allow legacy authentication protocols that bypass MFA, give every user the ability to install applications that can read mail, leave guest sharing wide open, and skip conditional access entirely. If Microsoft 365 is where your mail and files live, treat it like production infrastructure and manage it through a real <a href="../cloud-services.html">cloud services</a> baseline. Most small businesses sign up, get email working, and never touch the security settings. Attackers know this and target the gaps directly.</p>
 
           <h2>What happens after they get in</h2>
 
@@ -187,7 +187,7 @@
 
           <h3>3. Immutable, off-account backups</h3>
 
-          <p>Backups that the attacker cannot delete or encrypt, even with domain admin credentials. The backup data lives in a separate cloud account or storage that the production network cannot reach. Daily snapshots, retention you actually control, and tested restores on a schedule. Without immutable backups, paying the ransom is sometimes the only way to recover. With them, you wipe the affected systems and rebuild.</p>
+          <p>Backups that the attacker cannot delete or encrypt, even with domain admin credentials. The backup data lives in a separate cloud account or storage that the production network cannot reach. That design is the reason <a href="../backup-disaster-recovery.html">backup and disaster recovery</a> planning belongs in the ransomware conversation, not after it. Daily snapshots, retention you actually control, and tested restores on a schedule. Without immutable backups, paying the ransom is sometimes the only way to recover. With them, you wipe the affected systems and rebuild.</p>
 
           <p>This is where most small businesses get caught flat-footed. They have backups, but they live on the same network, share the same credentials, and get encrypted along with everything else. <a href="small-business-cybersecurity-mistakes.html">I covered this in detail in the cybersecurity mistakes post</a>.</p>
 
@@ -236,9 +236,9 @@
 
           <p>Most small business ransomware victims I have worked with were not targeted specifically. They were swept up in opportunistic campaigns that found a weak point and walked through it. The attackers do not care about your industry, your size, or whether you have something worth stealing. They care that they got in. That is the whole bar.</p>
 
-          <p>The good news: the controls above are not expensive, not exotic, and not rocket science. They require discipline and a partner who actually deploys them properly. Done correctly, you become a hard target, and hard targets get skipped because the attackers have a list of soft ones below you.</p>
+          <p>The good news: the controls above are not expensive, not exotic, and not rocket science. They require discipline and a partner who actually deploys them properly. Done correctly, you become a hard target, and hard targets get skipped because the attackers have a list of soft ones below you. For many small businesses, the simplest path is folding patching, EDR, backups, and identity checks into <a href="../managed-it-services.html">managed IT services</a> with accountable monthly reporting.</p>
 
-          <p>If you want a second pair of eyes on whether your business is hard or soft, that is what our <a href="../cybersecurity.html">free cybersecurity assessment</a> is for. 30 minutes, no sales pitch, written punch list of what to fix in priority order. You can read more about <a href="../cybersecurity.html">our cybersecurity services</a> or just <a href="../contact.html">get in touch</a>.</p>
+          <p>If you want a second pair of eyes on whether your business is hard or soft, that is what our <a href="../cybersecurity.html">free cybersecurity assessment</a> is for. 30 minutes, no sales pitch, written punch list of what to fix in priority order. You can read more about our cybersecurity services or just <a href="../contact.html">get in touch</a>.</p>
 
           <div class="blog-post-cta">
             <h3>Want a real cybersecurity assessment?</h3>
