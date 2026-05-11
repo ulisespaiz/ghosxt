@@ -42,64 +42,205 @@
         "@context": "https://schema.org",
         "@graph": [
           {
+            "@type": "LocalBusiness",
+            "@id": "https://ghosxt.com/#business",
+            "name": "Ghosxt",
+            "url": "https://ghosxt.com/",
+            "image": "https://ghosxt.com/assets/img/ghosxt logo.webp",
+            "telephone": "+18312040501",
+            "email": "sales@ghosxt.com",
+            "priceRange": "$$",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Salinas",
+              "addressRegion": "CA",
+              "postalCode": "93901",
+              "addressCountry": "US"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 36.6777,
+              "longitude": -121.6555
+            },
+            "areaServed": [
+              {
+                "@type": "City",
+                "name": "Salinas"
+              },
+              {
+                "@type": "City",
+                "name": "Monterey"
+              },
+              {
+                "@type": "City",
+                "name": "Watsonville"
+              },
+              {
+                "@type": "City",
+                "name": "Hollister"
+              },
+              {
+                "@type": "City",
+                "name": "Santa Cruz"
+              },
+              {
+                "@type": "City",
+                "name": "Gilroy"
+              },
+              {
+                "@type": "City",
+                "name": "San Jose"
+              },
+              {
+                "@type": "City",
+                "name": "Pacific Grove"
+              },
+              {
+                "@type": "City",
+                "name": "Carmel"
+              },
+              {
+                "@type": "City",
+                "name": "Seaside"
+              },
+              {
+                "@type": "City",
+                "name": "Marina"
+              }
+            ]
+          },
+          {
             "@type": "Service",
             "@id": "https://ghosxt.com/network-design.html#service",
             "name": "Network Design and Architecture",
-            "serviceType": "Network Design",
+            "serviceType": "Network Design and Architecture Services",
             "description": "Network architecture, VLAN segmentation, firewall design, switching, and enterprise wireless for California small business. Multi-site VPN and SD-WAN, with full documentation, delivered by a DoD-cleared engineer.",
             "url": "https://ghosxt.com/network-design.html",
-            "provider": { "@id": "https://ghosxt.com/#business" },
+            "provider": {
+              "@id": "https://ghosxt.com/#business"
+            },
             "areaServed": [
-              { "@type": "State", "name": "California" },
-              { "@type": "Country", "name": "United States" },
-              { "@type": "City", "name": "Salinas" },
-              { "@type": "City", "name": "Monterey" },
-              { "@type": "City", "name": "Watsonville" },
-              { "@type": "City", "name": "Hollister" },
-              { "@type": "City", "name": "Santa Cruz" },
-              { "@type": "City", "name": "Gilroy" },
-              { "@type": "City", "name": "San Jose" },
-              { "@type": "City", "name": "Pacific Grove" },
-              { "@type": "City", "name": "Carmel" },
-              { "@type": "City", "name": "Seaside" },
-              { "@type": "City", "name": "Marina" }
+              {
+                "@type": "State",
+                "name": "California"
+              },
+              {
+                "@type": "Country",
+                "name": "United States"
+              },
+              {
+                "@type": "City",
+                "name": "Salinas"
+              },
+              {
+                "@type": "City",
+                "name": "Monterey"
+              },
+              {
+                "@type": "City",
+                "name": "Watsonville"
+              },
+              {
+                "@type": "City",
+                "name": "Hollister"
+              },
+              {
+                "@type": "City",
+                "name": "Santa Cruz"
+              },
+              {
+                "@type": "City",
+                "name": "Gilroy"
+              },
+              {
+                "@type": "City",
+                "name": "San Jose"
+              },
+              {
+                "@type": "City",
+                "name": "Pacific Grove"
+              },
+              {
+                "@type": "City",
+                "name": "Carmel"
+              },
+              {
+                "@type": "City",
+                "name": "Seaside"
+              },
+              {
+                "@type": "City",
+                "name": "Marina"
+              }
             ]
           },
           {
             "@type": "BreadcrumbList",
+            "@id": "https://ghosxt.com/network-design.html#breadcrumb",
             "itemListElement": [
-              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ghosxt.com/" },
-              { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://ghosxt.com/services.html" },
-              { "@type": "ListItem", "position": 3, "name": "Network Design", "item": "https://ghosxt.com/network-design.html" }
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://ghosxt.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Services",
+                "item": "https://ghosxt.com/services.html"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Network Design and Architecture",
+                "item": "https://ghosxt.com/network-design.html"
+              }
             ]
           },
           {
             "@type": "FAQPage",
+            "@id": "https://ghosxt.com/network-design.html#faq",
             "mainEntity": [
               {
                 "@type": "Question",
                 "name": "Do you replace our existing equipment, or work with what we have?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Both, depending on what is in the rack. If your existing firewall and switches are still under support and capable of doing the job, we configure them properly and document them. If they are end-of-life, undersized, or insecure by design, we replace what needs replacing and reuse the rest." }
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Both, depending on what is in the rack. If your existing firewall and switches are still under support and capable of doing the job, we configure them properly and document them. If they are end-of-life, undersized, or insecure by design, we replace what needs replacing and reuse the rest."
+                }
               },
               {
                 "@type": "Question",
                 "name": "What firewall vendors do you deploy?",
-                "acceptedAnswer": { "@type": "Answer", "text": "pfSense Plus, Sophos XGS, WatchGuard Firebox, and Cisco Meraki MX, depending on the environment. We are vendor-neutral and pick the right tool for the size of business, the throughput needed, and your budget. We do not deploy ISP-provided routers as firewalls." }
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "pfSense Plus, Sophos XGS, WatchGuard Firebox, and Cisco Meraki MX, depending on the environment. We are vendor-neutral and pick the right tool for the size of business, the throughput needed, and your budget. We do not deploy ISP-provided routers as firewalls."
+                }
               },
               {
                 "@type": "Question",
                 "name": "Why do small businesses need VLANs?",
-                "acceptedAnswer": { "@type": "Answer", "text": "VLANs separate traffic that should never see each other — guest Wi-Fi from production, security cameras and POS terminals from office computers, IoT devices from servers. Without segmentation, a compromised printer can give an attacker direct access to your domain controller. With segmentation, the same compromise is contained to one segment and goes nowhere." }
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "VLANs separate traffic that should never see each other — guest Wi-Fi from production, security cameras and POS terminals from office computers, IoT devices from servers. Without segmentation, a compromised printer can give an attacker direct access to your domain controller. With segmentation, the same compromise is contained to one segment and goes nowhere."
+                }
               },
               {
                 "@type": "Question",
                 "name": "Can you handle multi-site networks?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Yes. Site-to-site IPsec VPN, SD-WAN, and full hub-and-spoke designs depending on the use case. Common patterns include a Salinas headquarters connected to a Watsonville cooler and a Hollister yard, with remote workers tunneling in from across the state or the country." }
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. Site-to-site IPsec VPN, SD-WAN, and full hub-and-spoke designs depending on the use case. Common patterns include a Salinas headquarters connected to a Watsonville cooler and a Hollister yard, with remote workers tunneling in from across the state or the country."
+                }
               },
               {
                 "@type": "Question",
                 "name": "Do we get a network diagram and documentation?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Yes. Every deployment ends with a written runbook, a current network diagram, IP scheme documentation, switch and firewall configuration backups, and credentials handed over to you in your password manager. You own all of it. You are not locked to us." }
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. Every deployment ends with a written runbook, a current network diagram, IP scheme documentation, switch and firewall configuration backups, and credentials handed over to you in your password manager. You own all of it. You are not locked to us."
+                }
               }
             ]
           }

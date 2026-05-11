@@ -42,64 +42,205 @@
         "@context": "https://schema.org",
         "@graph": [
           {
+            "@type": "LocalBusiness",
+            "@id": "https://ghosxt.com/#business",
+            "name": "Ghosxt",
+            "url": "https://ghosxt.com/",
+            "image": "https://ghosxt.com/assets/img/ghosxt logo.webp",
+            "telephone": "+18312040501",
+            "email": "sales@ghosxt.com",
+            "priceRange": "$$",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Salinas",
+              "addressRegion": "CA",
+              "postalCode": "93901",
+              "addressCountry": "US"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 36.6777,
+              "longitude": -121.6555
+            },
+            "areaServed": [
+              {
+                "@type": "City",
+                "name": "Salinas"
+              },
+              {
+                "@type": "City",
+                "name": "Monterey"
+              },
+              {
+                "@type": "City",
+                "name": "Watsonville"
+              },
+              {
+                "@type": "City",
+                "name": "Hollister"
+              },
+              {
+                "@type": "City",
+                "name": "Santa Cruz"
+              },
+              {
+                "@type": "City",
+                "name": "Gilroy"
+              },
+              {
+                "@type": "City",
+                "name": "San Jose"
+              },
+              {
+                "@type": "City",
+                "name": "Pacific Grove"
+              },
+              {
+                "@type": "City",
+                "name": "Carmel"
+              },
+              {
+                "@type": "City",
+                "name": "Seaside"
+              },
+              {
+                "@type": "City",
+                "name": "Marina"
+              }
+            ]
+          },
+          {
             "@type": "Service",
             "@id": "https://ghosxt.com/cloud-services.html#service",
             "name": "Cloud Services and Microsoft 365",
             "serviceType": "Cloud Services",
             "description": "Microsoft 365, Azure, and hybrid cloud services for California small business. Tenant hardening, conditional access, M365 migrations, and Azure infrastructure delivered by a DoD-cleared engineer.",
             "url": "https://ghosxt.com/cloud-services.html",
-            "provider": { "@id": "https://ghosxt.com/#business" },
+            "provider": {
+              "@id": "https://ghosxt.com/#business"
+            },
             "areaServed": [
-              { "@type": "State", "name": "California" },
-              { "@type": "Country", "name": "United States" },
-              { "@type": "City", "name": "Salinas" },
-              { "@type": "City", "name": "Monterey" },
-              { "@type": "City", "name": "Watsonville" },
-              { "@type": "City", "name": "Hollister" },
-              { "@type": "City", "name": "Santa Cruz" },
-              { "@type": "City", "name": "Gilroy" },
-              { "@type": "City", "name": "San Jose" },
-              { "@type": "City", "name": "Pacific Grove" },
-              { "@type": "City", "name": "Carmel" },
-              { "@type": "City", "name": "Seaside" },
-              { "@type": "City", "name": "Marina" }
+              {
+                "@type": "State",
+                "name": "California"
+              },
+              {
+                "@type": "Country",
+                "name": "United States"
+              },
+              {
+                "@type": "City",
+                "name": "Salinas"
+              },
+              {
+                "@type": "City",
+                "name": "Monterey"
+              },
+              {
+                "@type": "City",
+                "name": "Watsonville"
+              },
+              {
+                "@type": "City",
+                "name": "Hollister"
+              },
+              {
+                "@type": "City",
+                "name": "Santa Cruz"
+              },
+              {
+                "@type": "City",
+                "name": "Gilroy"
+              },
+              {
+                "@type": "City",
+                "name": "San Jose"
+              },
+              {
+                "@type": "City",
+                "name": "Pacific Grove"
+              },
+              {
+                "@type": "City",
+                "name": "Carmel"
+              },
+              {
+                "@type": "City",
+                "name": "Seaside"
+              },
+              {
+                "@type": "City",
+                "name": "Marina"
+              }
             ]
           },
           {
             "@type": "BreadcrumbList",
+            "@id": "https://ghosxt.com/cloud-services.html#breadcrumb",
             "itemListElement": [
-              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ghosxt.com/" },
-              { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://ghosxt.com/services.html" },
-              { "@type": "ListItem", "position": 3, "name": "Cloud Services", "item": "https://ghosxt.com/cloud-services.html" }
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://ghosxt.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Services",
+                "item": "https://ghosxt.com/services.html"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Cloud Services and Microsoft 365",
+                "item": "https://ghosxt.com/cloud-services.html"
+              }
             ]
           },
           {
             "@type": "FAQPage",
+            "@id": "https://ghosxt.com/cloud-services.html#faq",
             "mainEntity": [
               {
                 "@type": "Question",
                 "name": "What does a Microsoft 365 migration actually involve?",
-                "acceptedAnswer": { "@type": "Answer", "text": "We discover the source environment, inventory mailboxes, file shares, distribution lists, and shared calendars, build a target tenant with hardened security defaults, run a pilot migration, validate it, then cut over the rest of the users in waves. Most small business migrations finish over one weekend with no business disruption on Monday morning." }
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "We discover the source environment, inventory mailboxes, file shares, distribution lists, and shared calendars, build a target tenant with hardened security defaults, run a pilot migration, validate it, then cut over the rest of the users in waves. Most small business migrations finish over one weekend with no business disruption on Monday morning."
+                }
               },
               {
                 "@type": "Question",
                 "name": "Is Microsoft 365 secure out of the box?",
-                "acceptedAnswer": { "@type": "Answer", "text": "No. A fresh M365 tenant has legacy authentication enabled, weak default sharing settings, and no Conditional Access. We layer Microsoft Defender for Business, Conditional Access, Intune, and DLP on top, and lock down legacy auth entirely. Tenant hardening is the single highest-value cloud project most small businesses skip." }
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. A fresh M365 tenant has legacy authentication enabled, weak default sharing settings, and no Conditional Access. We layer Microsoft Defender for Business, Conditional Access, Intune, and DLP on top, and lock down legacy auth entirely. Tenant hardening is the single highest-value cloud project most small businesses skip."
+                }
               },
               {
                 "@type": "Question",
                 "name": "Should we move to Azure or stay on-prem?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Sometimes the answer is hybrid. Some workloads belong in Azure, some belong on a Hyper-V or VMware host in your office. We make the call based on your data, your latency requirements, your line-of-business apps, and your budget — not based on what we sell." }
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Sometimes the answer is hybrid. Some workloads belong in Azure, some belong on a Hyper-V or VMware host in your office. We make the call based on your data, your latency requirements, your line-of-business apps, and your budget — not based on what we sell."
+                }
               },
               {
                 "@type": "Question",
                 "name": "Do you handle SharePoint and Teams structure, or just email?",
-                "acceptedAnswer": { "@type": "Answer", "text": "All of it. SharePoint information architecture, Teams governance, sharing policies, retention, and external sharing controls. Most M365 deployments collapse into chaos because nobody designed the SharePoint structure. We design it." }
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "All of it. SharePoint information architecture, Teams governance, sharing policies, retention, and external sharing controls. Most M365 deployments collapse into chaos because nobody designed the SharePoint structure. We design it."
+                }
               },
               {
                 "@type": "Question",
                 "name": "Can you support remote teams and multi-state employees?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Yes. We deliver cloud services to clients across the United States, fully remotely. Identity, device management, and security policies follow the user, not the office. California-based clients add on-site work where needed." }
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. We deliver cloud services to clients across the United States, fully remotely. Identity, device management, and security policies follow the user, not the office. California-based clients add on-site work where needed."
+                }
               }
             ]
           }
