@@ -59,19 +59,15 @@
     <!-- PERFORMANCE -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://cdn-uicons.flaticon.com" />
-
-    <!-- FONTS -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+<!-- FONTS -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
 
     <!-- STYLESHEETS -->
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="assets/css/ctpat.css" />
-    <link rel="stylesheet" media="print" onload="this.media='all'" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" />
-    <noscript><link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" /></noscript>
+    <link rel="stylesheet" media="print" onload="this.media='all'" href="assets/css/uicons-regular-straight.css" />
+    <noscript><link rel="stylesheet" href="assets/css/uicons-regular-straight.css" /></noscript>
 
     <!-- STRUCTURED DATA -->
     <script type="application/ld+json">
@@ -159,7 +155,7 @@
     <div class="cookie-banner" id="cookieBanner">
       <div class="cookie-banner-container">
         <div class="cookie-content">
-          <div class="cookie-icon"><i class="fi fi-rs-cookie"></i></div>
+          <div class="cookie-icon"><i class="fi fi-rs-cookie" aria-hidden="true"></i></div>
           <div class="cookie-text">
             <p class="cookie-message">
               We use cookies to enhance your browsing experience, serve
@@ -191,7 +187,7 @@
             rel="noopener noreferrer"
             href="https://ticket.ghosxt.com/"
             class="banner-btn"
-            ><i class="fi fi-rs-ticket-alt"></i>
+            ><i class="fi fi-rs-ticket-alt" aria-hidden="true"></i>
             <span>Visit Client Portal</span></a
           >
         </div>
@@ -215,27 +211,27 @@
           <div class="navbar-menu">
             <a href="index.html" class="navbar-link">Home</a>
             <div class="navbar-dropdown">
-              <a href="about.html" class="navbar-link dropdown-trigger" aria-haspopup="menu"
+              <a href="about.html" class="navbar-link dropdown-trigger" aria-haspopup="true"
                 >About <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i
               ></a>
-              <div class="dropdown-menu" role="menu">
-                <a href="about.html" class="dropdown-item" role="menuitem">About Ghosxt</a>
-                <a href="ghosxt-cares.html" class="dropdown-item" role="menuitem">Ghosxt Cares</a>
+              <div class="dropdown-menu">
+                <a href="about.html" class="dropdown-item">About Ghosxt</a>
+                <a href="ghosxt-cares.html" class="dropdown-item">Ghosxt Cares</a>
               </div>
             </div>
             <div class="navbar-dropdown">
-              <a href="services.html" class="navbar-link dropdown-trigger" aria-haspopup="menu"
+              <a href="services.html" class="navbar-link dropdown-trigger" aria-haspopup="true"
                 >Services <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i
               ></a>
-              <div class="dropdown-menu" role="menu">
-                <a href="services.html" class="dropdown-item" role="menuitem">All Services</a>
-                <a href="managed-it-services.html" class="dropdown-item" role="menuitem">Managed IT Services</a>
-                <a href="cybersecurity.html" class="dropdown-item" role="menuitem">Cybersecurity</a>
-                <a href="cloud-services.html" class="dropdown-item" role="menuitem">Cloud Services</a>
-                <a href="backup-disaster-recovery.html" class="dropdown-item" role="menuitem">Backup &amp; Disaster Recovery</a>
-                <a href="network-design.html" class="dropdown-item" role="menuitem">Network Design</a>
-                <a href="website-development.html" class="dropdown-item" role="menuitem">Web Development</a>
-                <a href="ctpat.html" class="dropdown-item" role="menuitem">C-TPAT Compliance</a>
+              <div class="dropdown-menu">
+                <a href="services.html" class="dropdown-item">All Services</a>
+                <a href="managed-it-services.html" class="dropdown-item">Managed IT Services</a>
+                <a href="cybersecurity.html" class="dropdown-item">Cybersecurity</a>
+                <a href="cloud-services.html" class="dropdown-item">Cloud Services</a>
+                <a href="backup-disaster-recovery.html" class="dropdown-item">Backup &amp; Disaster Recovery</a>
+                <a href="network-design.html" class="dropdown-item">Network Design</a>
+                <a href="website-development.html" class="dropdown-item">Web Development</a>
+                <a href="ctpat.html" class="dropdown-item">C-TPAT Compliance</a>
               </div>
             </div>
             <a href="pricing.html" class="navbar-link">Pricing</a>
@@ -257,7 +253,7 @@
               target="_blank" rel="noopener noreferrer"
               class="navbar-btn btn-demo"
             >
-              <i class="fi fi-rs-calendar-day"></i>
+              <i class="fi fi-rs-calendar-day" aria-hidden="true"></i>
               <span>Book a Call</span>
             </a>
           </div>
@@ -267,19 +263,19 @@
       <div class="navbar-mobile-menu" id="mobileMenu">
         <a href="index.html" class="mobile-link">Home</a>
         <div class="mobile-accordion">
-          <button class="mobile-accordion-trigger" aria-expanded="false">
+          <button class="mobile-accordion-trigger" aria-expanded="false" aria-controls="mobile-acc-ctpat-1">
             About <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i>
           </button>
-          <div class="mobile-accordion-content">
+          <div class="mobile-accordion-content" id="mobile-acc-ctpat-1">
             <a href="about.html" class="mobile-dropdown-item">About Ghosxt</a>
             <a href="ghosxt-cares.html" class="mobile-dropdown-item">Ghosxt Cares</a>
           </div>
         </div>
         <div class="mobile-accordion">
-          <button class="mobile-accordion-trigger" aria-expanded="false">
+          <button class="mobile-accordion-trigger" aria-expanded="false" aria-controls="mobile-acc-ctpat-2">
             Services <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i>
           </button>
-          <div class="mobile-accordion-content">
+          <div class="mobile-accordion-content" id="mobile-acc-ctpat-2">
             <a href="services.html" class="mobile-dropdown-item">All Services</a>
             <a href="managed-it-services.html" class="mobile-dropdown-item">Managed IT Services</a>
             <a href="cybersecurity.html" class="mobile-dropdown-item">Cybersecurity</a>
@@ -299,7 +295,7 @@
             target="_blank" rel="noopener noreferrer"
             class="mobile-btn btn-demo"
           >
-            <i class="fi fi-rs-calendar-day"></i>
+            <i class="fi fi-rs-calendar-day" aria-hidden="true"></i>
             <span>Book a Call</span>
           </a>
         </div>
@@ -1095,11 +1091,11 @@
 
           <div class="faq-items">
             <div class="faq-item">
-              <button class="faq-question" aria-expanded="false">
+              <button class="faq-question" aria-expanded="false" aria-controls="faq-ans-ctpat-1">
                 What is C-TPAT and is it mandatory?
                 <i class="fi fi-rs-angle-down faq-icon" aria-hidden="true"></i>
               </button>
-              <div class="faq-answer">
+              <div class="faq-answer" id="faq-ans-ctpat-1">
                 <p>
                   C-TPAT (Customs-Trade Partnership Against Terrorism) is a
                   voluntary CBP program for businesses involved in U.S.
@@ -1113,11 +1109,11 @@
             </div>
 
             <div class="faq-item">
-              <button class="faq-question" aria-expanded="false">
+              <button class="faq-question" aria-expanded="false" aria-controls="faq-ans-ctpat-2">
                 Does C-TPAT actually require cybersecurity controls?
                 <i class="fi fi-rs-angle-down faq-icon" aria-hidden="true"></i>
               </button>
-              <div class="faq-answer">
+              <div class="faq-answer" id="faq-ans-ctpat-2">
                 <p>
                   Yes. CBP's updated Minimum Security Criteria include a
                   dedicated Cybersecurity section with six core requirements:
@@ -1130,11 +1126,11 @@
             </div>
 
             <div class="faq-item">
-              <button class="faq-question" aria-expanded="false">
+              <button class="faq-question" aria-expanded="false" aria-controls="faq-ans-ctpat-3">
                 How long does it take to become C-TPAT cybersecurity compliant?
                 <i class="fi fi-rs-angle-down faq-icon" aria-hidden="true"></i>
               </button>
-              <div class="faq-answer">
+              <div class="faq-answer" id="faq-ans-ctpat-3">
                 <p>
                   It depends on your starting point. For companies with some
                   existing IT controls, we typically achieve a validation-ready
@@ -1147,12 +1143,12 @@
             </div>
 
             <div class="faq-item">
-              <button class="faq-question" aria-expanded="false">
+              <button class="faq-question" aria-expanded="false" aria-controls="faq-ans-ctpat-4">
                 Can Ghosxt help us if we're already C-TPAT members but failed a
                 validation?
                 <i class="fi fi-rs-angle-down faq-icon" aria-hidden="true"></i>
               </button>
-              <div class="faq-answer">
+              <div class="faq-answer" id="faq-ans-ctpat-4">
                 <p>
                   Absolutely. If CBP identified cybersecurity deficiencies
                   during a validation, we can step in immediately. We'll review
@@ -1164,12 +1160,12 @@
             </div>
 
             <div class="faq-item">
-              <button class="faq-question" aria-expanded="false">
+              <button class="faq-question" aria-expanded="false" aria-controls="faq-ans-ctpat-5">
                 Does C-TPAT compliance also help with other frameworks like NIST
                 or ISO 27001?
                 <i class="fi fi-rs-angle-down faq-icon" aria-hidden="true"></i>
               </button>
-              <div class="faq-answer">
+              <div class="faq-answer" id="faq-ans-ctpat-5">
                 <p>
                   Yes — and intentionally so. Ghosxt maps C-TPAT cybersecurity
                   controls to NIST CSF (Cybersecurity Framework) and CIS
@@ -1182,12 +1178,12 @@
             </div>
 
             <div class="faq-item">
-              <button class="faq-question" aria-expanded="false">
+              <button class="faq-question" aria-expanded="false" aria-controls="faq-ans-ctpat-6">
                 What makes Ghosxt different from a general IT consultant for
                 C-TPAT work?
                 <i class="fi fi-rs-angle-down faq-icon" aria-hidden="true"></i>
               </button>
-              <div class="faq-answer">
+              <div class="faq-answer" id="faq-ans-ctpat-6">
                 <p>
                   Most IT consultants approach C-TPAT like a checklist. Ghosxt
                   is led by a DoD-cleared engineer who has built security

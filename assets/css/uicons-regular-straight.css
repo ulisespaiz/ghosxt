@@ -1,0 +1,114 @@
+/* Self-hosted, subsetted UIcons Regular Straight 3.0.0.
+   Subsetted from the official Flaticon CDN to the 93 icon classes
+   actually used on the site. Full font was 419 KB; this is ~8 KB.
+   Original copyright: Flaticon (https://www.flaticon.com/uicons). */
+@font-face {
+    font-family: "uicons-regular-straight";
+    src: url("../fonts/uicons-regular-straight.woff2") format("woff2");
+    font-display: swap;
+}
+
+i[class^="fi-rs-"]:before, i[class*=" fi-rs-"]:before,
+span[class^="fi-rs-"]:before, span[class*=" fi-rs-"]:before {
+    font-family: uicons-regular-straight !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.fi-rs-add:before { content: "\e02e"; }
+.fi-rs-angle-double-right:before { content: "\e088"; }
+.fi-rs-angle-double-small-right:before { content: "\e08b"; }
+.fi-rs-angle-down:before { content: "\e08d"; }
+.fi-rs-angle-small-down:before { content: "\e090"; }
+.fi-rs-angle-up:before { content: "\e098"; }
+.fi-rs-arrow-down:before { content: "\e0d8"; }
+.fi-rs-arrow-right:before { content: "\e0ec"; }
+.fi-rs-arrow-small-down:before { content: "\e0ef"; }
+.fi-rs-box-open:before { content: "\e267"; }
+.fi-rs-briefcase:before { content: "\e2af"; }
+.fi-rs-building:before { content: "\e2d5"; }
+.fi-rs-burger-menu:before { content: "\e2ee"; }
+.fi-rs-calculator:before { content: "\e306"; }
+.fi-rs-calendar:before { content: "\e30c"; }
+.fi-rs-calendar-clock:before { content: "\e312"; }
+.fi-rs-calendar-day:before { content: "\e313"; }
+.fi-rs-chart-line-up:before { content: "\e3b7"; }
+.fi-rs-check:before { content: "\e3d7"; }
+.fi-rs-check-circle:before { content: "\e3d8"; }
+.fi-rs-circle-cross:before { content: "\e41d"; }
+.fi-rs-circle-xmark:before { content: "\e453"; }
+.fi-rs-clock:before { content: "\e46f"; }
+.fi-rs-clock-three:before { content: "\e482"; }
+.fi-rs-cloud:before { content: "\e48f"; }
+.fi-rs-cloud-check:before { content: "\e492"; }
+.fi-rs-code-branch:before { content: "\e4c3"; }
+.fi-rs-code-window:before { content: "\e4cd"; }
+.fi-rs-computer:before { content: "\e51b"; }
+.fi-rs-cookie:before { content: "\e539"; }
+.fi-rs-cross:before { content: "\e576"; }
+.fi-rs-cross-small:before { content: "\e579"; }
+.fi-rs-diploma:before { content: "\e62c"; }
+.fi-rs-document:before { content: "\e654"; }
+.fi-rs-document-signed:before { content: "\e661"; }
+.fi-rs-duration-alt:before { content: "\e6af"; }
+.fi-rs-envelope:before { content: "\e6f1"; }
+.fi-rs-error-bug:before { content: "\e703"; }
+.fi-rs-exclamation:before { content: "\e717"; }
+.fi-rs-file-invoice-dollar:before { content: "\e7b5"; }
+.fi-rs-flame:before { content: "\e80f"; }
+.fi-rs-ghost:before { content: "\e8b5"; }
+.fi-rs-gift:before { content: "\e8b9"; }
+.fi-rs-globe:before { content: "\e8cc"; }
+.fi-rs-hand-back-point-left:before { content: "\e93e"; }
+.fi-rs-hand-back-point-right:before { content: "\e940"; }
+.fi-rs-handshake:before { content: "\e972"; }
+.fi-rs-headset:before { content: "\e99f"; }
+.fi-rs-heart:before { content: "\e9a1"; }
+.fi-rs-home:before { content: "\e9d2"; }
+.fi-rs-house-building:before { content: "\e9f6"; }
+.fi-rs-industry-windows:before { content: "\ea4c"; }
+.fi-rs-info:before { content: "\ea4f"; }
+.fi-rs-interrogation:before { content: "\ea6f"; }
+.fi-rs-laptop:before { content: "\eaec"; }
+.fi-rs-layers:before { content: "\eb07"; }
+.fi-rs-list:before { content: "\eb5c"; }
+.fi-rs-lock:before { content: "\eb79"; }
+.fi-rs-marker:before { content: "\ebce"; }
+.fi-rs-minus-circle:before { content: "\ec3f"; }
+.fi-rs-minus-small:before { content: "\ec41"; }
+.fi-rs-moon:before { content: "\ec7d"; }
+.fi-rs-network:before { content: "\ecc3"; }
+.fi-rs-network-analytic:before { content: "\ecc4"; }
+.fi-rs-network-cloud:before { content: "\ecc5"; }
+.fi-rs-phone-call:before { content: "\ee13"; }
+.fi-rs-problem-solving:before { content: "\eecc"; }
+.fi-rs-puzzle-alt:before { content: "\eee7"; }
+.fi-rs-road:before { content: "\ef85"; }
+.fi-rs-rocket-lunch:before { content: "\ef97"; }
+.fi-rs-search:before { content: "\f015"; }
+.fi-rs-settings:before { content: "\f03d"; }
+.fi-rs-settings-sliders:before { content: "\f03e"; }
+.fi-rs-shield-alt:before { content: "\f04d"; }
+.fi-rs-shield-check:before { content: "\f04f"; }
+.fi-rs-shield-exclamation:before { content: "\f053"; }
+.fi-rs-shipping-fast:before { content: "\f060"; }
+.fi-rs-sparkles:before { content: "\f139"; }
+.fi-rs-star:before { content: "\f1a9"; }
+.fi-rs-talent-alt:before { content: "\f242"; }
+.fi-rs-terminal:before { content: "\f270"; }
+.fi-rs-ticket-alt:before { content: "\f2a0"; }
+.fi-rs-time-fast:before { content: "\f2aa"; }
+.fi-rs-trophy-star:before { content: "\f349"; }
+.fi-rs-truck-side:before { content: "\f35f"; }
+.fi-rs-user-add:before { content: "\f3aa"; }
+.fi-rs-user-headset:before { content: "\f3c9"; }
+.fi-rs-user-robot:before { content: "\f3eb"; }
+.fi-rs-users:before { content: "\f404"; }
+.fi-rs-users-alt:before { content: "\f405"; }
+.fi-rs-virus:before { content: "\f439"; }
+.fi-rs-warehouse-alt:before { content: "\f468"; }
+.fi-rs-x:before { content: "\f4e6"; }

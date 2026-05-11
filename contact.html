@@ -18,6 +18,9 @@
     <meta property="og:title" content="Contact Ghosxt | Free IT Assessment for California Small Businesses">
     <meta property="og:description" content="Schedule a free IT assessment with Ghosxt. No sales scripts, straight answers from engineers who know your stack.">
     <meta property="og:image" content="https://ghosxt.com/assets/img/og-image.png">
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Ghosxt — managed IT and cybersecurity for California small business" />
     <meta property="og:site_name" content="Ghosxt">
 
     <!-- TWITTER CARD -->
@@ -32,35 +35,83 @@
     <!-- PERFORMANCE: Preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdn-uicons.flaticon.com">
-    <link rel="preconnect" href="https://challenges.cloudflare.com">
+<link rel="preconnect" href="https://challenges.cloudflare.com">
 
     <!-- Cloudflare Turnstile (CAPTCHA) -->
     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 
     <!-- FONTS -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
 
     <!-- STYLESHEETS -->
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/contact.css">
-    <link rel="stylesheet" media="print" onload="this.media='all'" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css">
-    <noscript><link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css"></noscript>
+    <link rel="stylesheet" media="print" onload="this.media='all'" href="assets/css/uicons-regular-straight.css">
+    <noscript><link rel="stylesheet" href="assets/css/uicons-regular-straight.css"></noscript>
 
     <!-- STRUCTURED DATA -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "ContactPage",
-      "name": "Contact Ghosxt",
-      "url": "https://ghosxt.com/contact.html",
-      "breadcrumb": {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://ghosxt.com/"},
-          {"@type": "ListItem", "position": 2, "name": "Contact", "item": "https://ghosxt.com/contact.html"}
-        ]
-      }
+      "@graph": [
+        {
+          "@type": "ContactPage",
+          "name": "Contact Ghosxt",
+          "url": "https://ghosxt.com/contact.html",
+          "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://ghosxt.com/"},
+              {"@type": "ListItem", "position": 2, "name": "Contact", "item": "https://ghosxt.com/contact.html"}
+            ]
+          }
+        },
+        {
+          "@type": "LocalBusiness",
+          "@id": "https://ghosxt.com/#business",
+          "name": "Ghosxt",
+          "description": "Enterprise-grade managed IT services and cybersecurity for small businesses in California and beyond.",
+          "url": "https://ghosxt.com",
+          "image": "https://ghosxt.com/assets/img/ghosxt logo.webp",
+          "telephone": "+18312040501",
+          "email": "info@ghosxt.com",
+          "priceRange": "$$",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Salinas",
+            "addressRegion": "CA",
+            "postalCode": "93901",
+            "addressCountry": "US"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 36.6777,
+            "longitude": -121.6555
+          },
+          "areaServed": [
+            {"@type": "GeoCircle", "geoMidpoint": {"@type": "GeoCoordinates", "latitude": 36.6777, "longitude": -121.6555}, "geoRadius": "80000"},
+            {"@type": "City", "name": "Salinas"},
+            {"@type": "City", "name": "Monterey"},
+            {"@type": "City", "name": "Watsonville"},
+            {"@type": "City", "name": "Santa Cruz"},
+            {"@type": "City", "name": "Hollister"},
+            {"@type": "City", "name": "Gilroy"},
+            {"@type": "City", "name": "San Jose"},
+            {"@type": "City", "name": "Pacific Grove"},
+            {"@type": "City", "name": "Carmel"},
+            {"@type": "City", "name": "Seaside"},
+            {"@type": "City", "name": "Marina"},
+            {"@type": "State", "name": "California"}
+          ],
+          "sameAs": [
+            "https://share.google/88vsSuams5s62RdPJ",
+            "https://www.linkedin.com/company/ghosxt/",
+            "https://www.facebook.com/GhosxtTech",
+            "https://www.instagram.com/ghosxttech/"
+          ]
+        }
+      ]
     }
     </script>
 </head>
@@ -79,7 +130,7 @@
         <div class="cookie-banner-container">
             <div class="cookie-content">
                 <div class="cookie-icon">
-                    <i class="fi fi-rs-cookie"></i>
+                    <i class="fi fi-rs-cookie" aria-hidden="true"></i>
                 </div>
                 <div class="cookie-text">
                     <p class="cookie-message">We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.</p>
@@ -101,7 +152,7 @@
         <div class="banner-container">
             <div class="banner-content">
                 <span class="banner-text">Need Remote Support? ►</span>
-                <a target="_blank" rel="noopener noreferrer" href="https://ticket.ghosxt.com/" class="banner-btn"><i class="fi fi-rs-ticket-alt"></i> <span>Visit Client Portal</span></a>
+                <a target="_blank" rel="noopener noreferrer" href="https://ticket.ghosxt.com/" class="banner-btn"><i class="fi fi-rs-ticket-alt" aria-hidden="true"></i> <span>Visit Client Portal</span></a>
             </div>
             <!--
             <button class="banner-close" id="bannerClose" aria-label="Close announcement banner">
@@ -123,23 +174,23 @@
                 <div class="navbar-menu">
                     <a href="index.html" class="navbar-link">Home</a>
                     <div class="navbar-dropdown">
-                        <a href="about.html" class="navbar-link dropdown-trigger" aria-haspopup="menu">About <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></a>
-                        <div class="dropdown-menu" role="menu">
-                            <a href="about.html" class="dropdown-item" role="menuitem">About Ghosxt</a>
-                            <a href="ghosxt-cares.html" class="dropdown-item" role="menuitem">Ghosxt Cares</a>
+                        <a href="about.html" class="navbar-link dropdown-trigger" aria-haspopup="true">About <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="about.html" class="dropdown-item">About Ghosxt</a>
+                            <a href="ghosxt-cares.html" class="dropdown-item">Ghosxt Cares</a>
                         </div>
                     </div>
                     <div class="navbar-dropdown">
-                        <a href="services.html" class="navbar-link dropdown-trigger" aria-haspopup="menu">Services <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></a>
-                        <div class="dropdown-menu" role="menu">
-                            <a href="services.html" class="dropdown-item" role="menuitem">All Services</a>
-                <a href="managed-it-services.html" class="dropdown-item" role="menuitem">Managed IT Services</a>
-                <a href="cybersecurity.html" class="dropdown-item" role="menuitem">Cybersecurity</a>
-                <a href="cloud-services.html" class="dropdown-item" role="menuitem">Cloud Services</a>
-                <a href="backup-disaster-recovery.html" class="dropdown-item" role="menuitem">Backup &amp; Disaster Recovery</a>
-                <a href="network-design.html" class="dropdown-item" role="menuitem">Network Design</a>
-                <a href="website-development.html" class="dropdown-item" role="menuitem">Web Development</a>
-                <a href="ctpat.html" class="dropdown-item" role="menuitem">C-TPAT Compliance</a>
+                        <a href="services.html" class="navbar-link dropdown-trigger" aria-haspopup="true">Services <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="services.html" class="dropdown-item">All Services</a>
+                <a href="managed-it-services.html" class="dropdown-item">Managed IT Services</a>
+                <a href="cybersecurity.html" class="dropdown-item">Cybersecurity</a>
+                <a href="cloud-services.html" class="dropdown-item">Cloud Services</a>
+                <a href="backup-disaster-recovery.html" class="dropdown-item">Backup &amp; Disaster Recovery</a>
+                <a href="network-design.html" class="dropdown-item">Network Design</a>
+                <a href="website-development.html" class="dropdown-item">Web Development</a>
+                <a href="ctpat.html" class="dropdown-item">C-TPAT Compliance</a>
                         </div>
                     </div>
                     <a href="pricing.html" class="navbar-link">Pricing</a>
@@ -151,7 +202,7 @@
                 </button>
                 <div class="navbar-buttons">
                     <a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer" class="navbar-btn btn-demo">
-                        <i class="fi fi-rs-calendar-day"></i>
+                        <i class="fi fi-rs-calendar-day" aria-hidden="true"></i>
                         <span>Book a Call</span>
                     </a>
                 </div>
@@ -161,19 +212,19 @@
         <div class="navbar-mobile-menu" id="mobileMenu">
             <a href="index.html" class="mobile-link">Home</a>
             <div class="mobile-accordion">
-                <button class="mobile-accordion-trigger" aria-expanded="false">
+                <button class="mobile-accordion-trigger" aria-expanded="false" aria-controls="mobile-acc-contact-1">
                     About <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i>
                 </button>
-                <div class="mobile-accordion-content">
+                <div class="mobile-accordion-content" id="mobile-acc-contact-1">
                     <a href="about.html" class="mobile-dropdown-item">About Ghosxt</a>
                     <a href="ghosxt-cares.html" class="mobile-dropdown-item">Ghosxt Cares</a>
                 </div>
             </div>
             <div class="mobile-accordion">
-                <button class="mobile-accordion-trigger" aria-expanded="false">
+                <button class="mobile-accordion-trigger" aria-expanded="false" aria-controls="mobile-acc-contact-2">
                     Services <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i>
                 </button>
-                <div class="mobile-accordion-content">
+                <div class="mobile-accordion-content" id="mobile-acc-contact-2">
                     <a href="services.html" class="mobile-dropdown-item">All Services</a>
             <a href="managed-it-services.html" class="mobile-dropdown-item">Managed IT Services</a>
             <a href="cybersecurity.html" class="mobile-dropdown-item">Cybersecurity</a>
@@ -189,7 +240,7 @@
             <a href="contact.html" class="mobile-link">Contact</a>
             <div class="mobile-actions">
                 <a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer" class="mobile-btn btn-demo">
-                    <i class="fi fi-rs-calendar-day"></i>
+                    <i class="fi fi-rs-calendar-day" aria-hidden="true"></i>
                     <span>Book a Call</span>
                 </a>
             </div>
@@ -213,7 +264,7 @@
                         <div class="badge-line"></div>
                     </div>
                     <div class="badge-container">
-                        <i class="fi fi-rs-envelope"></i>
+                        <i class="fi fi-rs-envelope" aria-hidden="true"></i>
                         <div class="solutions-badge-text">Get In Touch</div>
                     </div>
                     <div class="badge-lines">
@@ -234,7 +285,7 @@
                 <div class="contact-info-box">
                     <div class="info-item">
                         <div class="info-icon">
-                            <i class="fi fi-rs-envelope"></i>
+                            <i class="fi fi-rs-envelope" aria-hidden="true"></i>
                         </div>
                         <div class="info-content">
                             <div class="info-value"><a href="mailto:sales@ghosxt.com"><span>sales@ghosxt.com</span></a></div>
@@ -245,7 +296,7 @@
 
                     <div class="info-item">
                         <div class="info-icon">
-                            <i class="fi fi-rs-phone-call"></i>
+                            <i class="fi fi-rs-phone-call" aria-hidden="true"></i>
                         </div>
                         <div class="info-content">
                             <div class="info-value"><a href="tel:+18312040501">Call or Text: (831) 204-0501</a></div>
@@ -255,17 +306,17 @@
 
                     <div class="info-item">
                         <div class="info-icon">
-                            <i class="fi fi-rs-calendar"></i>
+                            <i class="fi fi-rs-calendar" aria-hidden="true"></i>
                         </div>
                         <div class="info-content">
-                            <div class="info-value"><a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer">Schedule a Call — Click Here <i class="fi fi-rs-hand-back-point-left"></i></a></div>
+                            <div class="info-value"><a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer">Schedule a Call — Click Here <i class="fi fi-rs-hand-back-point-left" aria-hidden="true"></i></a></div>
                             <div class="info-label">Book a 30-minute consultation directly</div>
                         </div>
                     </div>
 
                     <div class="info-item">
                         <div class="info-icon">
-                            <i class="fi fi-rs-marker"></i>
+                            <i class="fi fi-rs-marker" aria-hidden="true"></i>
                         </div>
                         <div class="info-content">
                             <div class="info-value">Based in Salinas, California</div>
@@ -352,7 +403,7 @@
                         <div class="badge-line"></div>
                     </div>
                     <div class="badge-container">
-                        <i class="fi fi-rs-shield-check"></i>
+                        <i class="fi fi-rs-shield-check" aria-hidden="true"></i>
                         <div class="solutions-badge-text">Our Process</div>
                     </div>
                     <div class="badge-lines">
@@ -427,7 +478,7 @@
                         <div class="badge-line"></div>
                     </div>
                     <div class="badge-container">
-                        <i class="fi fi-rs-interrogation"></i>
+                        <i class="fi fi-rs-interrogation" aria-hidden="true"></i>
                         <div class="solutions-badge-text">FAQ</div>
                     </div>
                     <div class="badge-lines">
@@ -448,66 +499,66 @@
             <div class="faq-items">
                 <!-- FAQ 1 -->
                 <div class="faq-item">
-                    <button class="faq-question" aria-expanded="false">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq-ans-contact-1">
                         <span>Do you work with businesses outside California?</span>
-                        <i class="fi fi-rs-angle-small-down faq-icon"></i>
+                        <i class="fi fi-rs-angle-small-down faq-icon" aria-hidden="true"></i>
                     </button>
-                    <div class="faq-answer">
+                    <div class="faq-answer" id="faq-ans-contact-1">
                         <p>Yes. While we're based in Salinas and available for on-site work in California, most of our support is delivered remotely. We've structured our services for efficient remote management, which keeps costs down while maintaining responsiveness. We work with clients throughout the United States.</p>
                     </div>
                 </div>
 
                 <!-- FAQ 2 -->
                 <div class="faq-item">
-                    <button class="faq-question" aria-expanded="false">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq-ans-contact-2">
                         <span>What size businesses do you work with?</span>
-                        <i class="fi fi-rs-angle-small-down faq-icon"></i>
+                        <i class="fi fi-rs-angle-small-down faq-icon" aria-hidden="true"></i>
                     </button>
-                    <div class="faq-answer">
+                    <div class="faq-answer" id="faq-ans-contact-2">
                         <p>Our focus is 15-50 employee businesses that need reliable IT infrastructure but don't need (or want to pay for) a full internal IT department. We occasionally work with smaller or larger businesses depending on their specific needs.</p>
                     </div>
                 </div>
 
                 <!-- FAQ 3 -->
                 <div class="faq-item">
-                    <button class="faq-question" aria-expanded="false">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq-ans-contact-3">
                         <span>Do you require long-term contracts?</span>
-                        <i class="fi fi-rs-angle-small-down faq-icon"></i>
+                        <i class="fi fi-rs-angle-small-down faq-icon" aria-hidden="true"></i>
                     </button>
-                    <div class="faq-answer">
+                    <div class="faq-answer" id="faq-ans-contact-3">
                         <p>No. While we recommend at least 3-6 months to properly architect and stabilize your infrastructure, we don't lock clients into multi-year contracts. Good service should earn your continued business, not a contract.</p>
                     </div>
                 </div>
 
                 <!-- FAQ 4 -->
                 <div class="faq-item">
-                    <button class="faq-question" aria-expanded="false">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq-ans-contact-4">
                         <span>How quickly can you start?</span>
-                        <i class="fi fi-rs-angle-small-down faq-icon"></i>
+                        <i class="fi fi-rs-angle-small-down faq-icon" aria-hidden="true"></i>
                     </button>
-                    <div class="faq-answer">
+                    <div class="faq-answer" id="faq-ans-contact-4">
                         <p>For new managed service clients, we typically need 2-4 weeks to properly onboard: audit existing systems, document everything, implement monitoring, and establish baseline operations. For urgent project work, we can often start sooner.</p>
                     </div>
                 </div>
 
                 <!-- FAQ 5 -->
                 <div class="faq-item">
-                    <button class="faq-question" aria-expanded="false">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq-ans-contact-5">
                         <span>What if we just need help with a specific project?</span>
-                        <i class="fi fi-rs-angle-small-down faq-icon"></i>
+                        <i class="fi fi-rs-angle-small-down faq-icon" aria-hidden="true"></i>
                     </button>
-                    <div class="faq-answer">
+                    <div class="faq-answer" id="faq-ans-contact-5">
                         <p>We're happy to discuss project work (network redesign, cloud migration, etc.) separate from ongoing managed services. Some projects lead to managed service relationships, others don't—we're comfortable with both.</p>
                     </div>
                 </div>
 
                 <!-- FAQ 6 -->
                 <div class="faq-item">
-                    <button class="faq-question" aria-expanded="false">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq-ans-contact-6">
                         <span>How do you handle after-hours emergencies?</span>
-                        <i class="fi fi-rs-angle-small-down faq-icon"></i>
+                        <i class="fi fi-rs-angle-small-down faq-icon" aria-hidden="true"></i>
                     </button>
-                    <div class="faq-answer">
+                    <div class="faq-answer" id="faq-ans-contact-6">
                         <p>Critical system failures get immediate attention. Our monitoring systems alert us 24/7 to critical issues. For planned after-hours work (infrastructure upgrades, migrations), we schedule in advance to minimize business disruption.</p>
                     </div>
                 </div>

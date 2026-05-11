@@ -58,20 +58,17 @@
     <!-- PERFORMANCE -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://cdn-uicons.flaticon.com" />
-    <link rel="preconnect" href="https://calendly.com" />
+<link rel="preconnect" href="https://calendly.com" />
 
     <!-- FONTS -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
 
     <!-- STYLESHEETS -->
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="assets/css/pricing.css?v=20260506" />
-    <link rel="stylesheet" media="print" onload="this.media='all'" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" />
-    <noscript><link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" /></noscript>
+    <link rel="stylesheet" media="print" onload="this.media='all'" href="assets/css/uicons-regular-straight.css" />
+    <noscript><link rel="stylesheet" href="assets/css/uicons-regular-straight.css" /></noscript>
 
     <!-- STRUCTURED DATA -->
     <script type="application/ld+json">
@@ -109,9 +106,39 @@
             "@type": "LocalBusiness",
             "@id": "https://ghosxt.com/#business",
             "name": "Ghosxt",
+            "description": "Enterprise-grade managed IT services and cybersecurity for small businesses in California and beyond.",
             "url": "https://ghosxt.com/",
+            "image": "https://ghosxt.com/assets/img/ghosxt logo.webp",
             "telephone": "+18312040501",
             "email": "sales@ghosxt.com",
+            "priceRange": "$$",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Salinas",
+              "addressRegion": "CA",
+              "postalCode": "93901",
+              "addressCountry": "US"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 36.6777,
+              "longitude": -121.6555
+            },
+            "areaServed": [
+              {"@type": "GeoCircle", "geoMidpoint": {"@type": "GeoCoordinates", "latitude": 36.6777, "longitude": -121.6555}, "geoRadius": "80000"},
+              {"@type": "City", "name": "Salinas"},
+              {"@type": "City", "name": "Monterey"},
+              {"@type": "City", "name": "Watsonville"},
+              {"@type": "City", "name": "Santa Cruz"},
+              {"@type": "City", "name": "Hollister"},
+              {"@type": "City", "name": "Gilroy"},
+              {"@type": "City", "name": "San Jose"},
+              {"@type": "City", "name": "Pacific Grove"},
+              {"@type": "City", "name": "Carmel"},
+              {"@type": "City", "name": "Seaside"},
+              {"@type": "City", "name": "Marina"},
+              {"@type": "State", "name": "California"}
+            ],
             "sameAs": [
               "https://share.google/88vsSuams5s62RdPJ",
               "https://www.linkedin.com/company/ghosxt/",
@@ -216,7 +243,7 @@
     <div class="cookie-banner" id="cookieBanner">
       <div class="cookie-banner-container">
         <div class="cookie-content">
-          <div class="cookie-icon"><i class="fi fi-rs-cookie"></i></div>
+          <div class="cookie-icon"><i class="fi fi-rs-cookie" aria-hidden="true"></i></div>
           <div class="cookie-text">
             <p class="cookie-message">
               We use cookies to enhance your browsing experience, serve
@@ -248,7 +275,7 @@
             rel="noopener noreferrer"
             href="https://ticket.ghosxt.com/"
             class="banner-btn"
-            ><i class="fi fi-rs-ticket-alt"></i>
+            ><i class="fi fi-rs-ticket-alt" aria-hidden="true"></i>
             <span>Visit Client Portal</span></a
           >
         </div>
@@ -272,27 +299,27 @@
           <div class="navbar-menu">
             <a href="index.html" class="navbar-link">Home</a>
             <div class="navbar-dropdown">
-              <a href="about.html" class="navbar-link dropdown-trigger" aria-haspopup="menu"
+              <a href="about.html" class="navbar-link dropdown-trigger" aria-haspopup="true"
                 >About <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i
               ></a>
-              <div class="dropdown-menu" role="menu">
-                <a href="about.html" class="dropdown-item" role="menuitem">About Ghosxt</a>
-                <a href="ghosxt-cares.html" class="dropdown-item" role="menuitem">Ghosxt Cares</a>
+              <div class="dropdown-menu">
+                <a href="about.html" class="dropdown-item">About Ghosxt</a>
+                <a href="ghosxt-cares.html" class="dropdown-item">Ghosxt Cares</a>
               </div>
             </div>
             <div class="navbar-dropdown">
-              <a href="services.html" class="navbar-link dropdown-trigger" aria-haspopup="menu"
+              <a href="services.html" class="navbar-link dropdown-trigger" aria-haspopup="true"
                 >Services <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i
               ></a>
-              <div class="dropdown-menu" role="menu">
-                <a href="services.html" class="dropdown-item" role="menuitem">All Services</a>
-                <a href="managed-it-services.html" class="dropdown-item" role="menuitem">Managed IT Services</a>
-                <a href="cybersecurity.html" class="dropdown-item" role="menuitem">Cybersecurity</a>
-                <a href="cloud-services.html" class="dropdown-item" role="menuitem">Cloud Services</a>
-                <a href="backup-disaster-recovery.html" class="dropdown-item" role="menuitem">Backup &amp; Disaster Recovery</a>
-                <a href="network-design.html" class="dropdown-item" role="menuitem">Network Design</a>
-                <a href="website-development.html" class="dropdown-item" role="menuitem">Web Development</a>
-                <a href="ctpat.html" class="dropdown-item" role="menuitem">C-TPAT Compliance</a>
+              <div class="dropdown-menu">
+                <a href="services.html" class="dropdown-item">All Services</a>
+                <a href="managed-it-services.html" class="dropdown-item">Managed IT Services</a>
+                <a href="cybersecurity.html" class="dropdown-item">Cybersecurity</a>
+                <a href="cloud-services.html" class="dropdown-item">Cloud Services</a>
+                <a href="backup-disaster-recovery.html" class="dropdown-item">Backup &amp; Disaster Recovery</a>
+                <a href="network-design.html" class="dropdown-item">Network Design</a>
+                <a href="website-development.html" class="dropdown-item">Web Development</a>
+                <a href="ctpat.html" class="dropdown-item">C-TPAT Compliance</a>
               </div>
             </div>
             <a href="pricing.html" class="navbar-link">Pricing</a>
@@ -314,7 +341,7 @@
               target="_blank" rel="noopener noreferrer"
               class="navbar-btn btn-demo"
             >
-              <i class="fi fi-rs-calendar-day"></i>
+              <i class="fi fi-rs-calendar-day" aria-hidden="true"></i>
               <span>Book a Call</span>
             </a>
           </div>
@@ -324,19 +351,19 @@
       <div class="navbar-mobile-menu" id="mobileMenu">
         <a href="index.html" class="mobile-link">Home</a>
         <div class="mobile-accordion">
-          <button class="mobile-accordion-trigger" aria-expanded="false">
+          <button class="mobile-accordion-trigger" aria-expanded="false" aria-controls="mobile-acc-pricing-1">
             About <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i>
           </button>
-          <div class="mobile-accordion-content">
+          <div class="mobile-accordion-content" id="mobile-acc-pricing-1">
             <a href="about.html" class="mobile-dropdown-item">About Ghosxt</a>
             <a href="ghosxt-cares.html" class="mobile-dropdown-item">Ghosxt Cares</a>
           </div>
         </div>
         <div class="mobile-accordion">
-          <button class="mobile-accordion-trigger" aria-expanded="false">
+          <button class="mobile-accordion-trigger" aria-expanded="false" aria-controls="mobile-acc-pricing-2">
             Services <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i>
           </button>
-          <div class="mobile-accordion-content">
+          <div class="mobile-accordion-content" id="mobile-acc-pricing-2">
             <a href="services.html" class="mobile-dropdown-item">All Services</a>
             <a href="managed-it-services.html" class="mobile-dropdown-item">Managed IT Services</a>
             <a href="cybersecurity.html" class="mobile-dropdown-item">Cybersecurity</a>
@@ -356,7 +383,7 @@
             target="_blank" rel="noopener noreferrer"
             class="mobile-btn btn-demo"
           >
-            <i class="fi fi-rs-calendar-day"></i>
+            <i class="fi fi-rs-calendar-day" aria-hidden="true"></i>
             <span>Book a Call</span>
           </a>
         </div>
@@ -423,10 +450,10 @@
                     <div class="pricing-stat-card stat-wide">
                         <div class="stat-label">Includes with every plan</div>
                         <div class="stat-pills">
-                            <span class="stat-pill"><i class="fi fi-rs-shield-check"></i> EDR</span>
-                            <span class="stat-pill"><i class="fi fi-rs-settings"></i> Patches</span>
-                            <span class="stat-pill"><i class="fi fi-rs-network"></i> Monitoring</span>
-                            <span class="stat-pill"><i class="fi fi-rs-backup"></i> Backups</span>
+                            <span class="stat-pill"><i class="fi fi-rs-shield-check" aria-hidden="true"></i> EDR</span>
+                            <span class="stat-pill"><i class="fi fi-rs-settings" aria-hidden="true"></i> Patches</span>
+                            <span class="stat-pill"><i class="fi fi-rs-network" aria-hidden="true"></i> Monitoring</span>
+                            <span class="stat-pill"><i class="fi fi-rs-backup" aria-hidden="true"></i> Backups</span>
                         </div>
                     </div>
                 </div>
@@ -1963,6 +1990,8 @@
           <div class="cta-right">
             <img
               src="assets/img/ghosxt-cta.webp"
+              srcset="assets/img/ghosxt-cta-480w.webp 480w, assets/img/ghosxt-cta-900w.webp 900w, assets/img/ghosxt-cta.webp 1625w"
+              sizes="(max-width: 600px) 480px, 600px"
               alt="Ghosxt managed IT pricing plans for California small business"
               class="cta-image"
               width="600"

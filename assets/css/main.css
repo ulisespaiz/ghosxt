@@ -1933,9 +1933,27 @@ textarea:focus-visible,
 select:focus-visible,
 summary:focus-visible,
 [tabindex]:focus-visible {
-  outline: 2px solid var(--ghosxt-red-0, #e63946);
+  outline: 2px solid var(--ghosxt-red-0, #b71c1c);
   outline-offset: 3px;
   border-radius: 2px;
+  /* Inner dark halo + outer red ring so the indicator stays visible on
+     red CTAs and banners (WCAG 2.2 AA 2.4.7 / 1.4.11). */
+  box-shadow: 0 0 0 1px #fff, 0 0 0 4px var(--ghosxt-red-0, #b71c1c);
+}
+
+/* Force-visible focus for inputs that aggressively set outline:none in
+   their own stylesheets (range sliders, number steppers, chat input,
+   form inputs). The :focus-visible rule above wins on specificity for
+   keyboard nav; this block ensures element-specific overrides cannot
+   strip the focus state from keyboard users. */
+input[type="range"]:focus-visible,
+input[type="number"]:focus-visible,
+.form-input:focus-visible,
+.form-textarea:focus-visible,
+.chat-input:focus-visible {
+  outline: 2px solid var(--ghosxt-red-0, #b71c1c) !important;
+  outline-offset: 3px !important;
+  box-shadow: 0 0 0 1px #fff, 0 0 0 4px var(--ghosxt-red-0, #b71c1c) !important;
 }
 
 /* ------ ACCESSIBILITY: respect reduced-motion preference ------ */

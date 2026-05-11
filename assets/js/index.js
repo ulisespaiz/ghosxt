@@ -1,15 +1,19 @@
 // GRID HERO
 
 const canvas = document.getElementById('gridCanvas');
-const ctx = canvas.getContext('2d');
+const ctx = canvas ? canvas.getContext('2d') : null;
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 let pulses = [];
+let animationFrameId = null;
+let pulseIntervalId = null;
 
 function resizeCanvas() {
+    if (!canvas) return;
     canvas.width = window.innerWidth;
     canvas.height = 300;
 }
 
-resizeCanvas();
+if (canvas) resizeCanvas();
 
 window.addEventListener('resize', () => {
     resizeCanvas();
@@ -159,16 +163,42 @@ function drawPulses() {
 function animate() {
     drawGrid();
     drawPulses();
-    requestAnimationFrame(animate);
+    animationFrameId = requestAnimationFrame(animate);
 }
 
-setInterval(() => {
-    if (pulses.length < 50 && Math.random() > 0.2) {
-        createPulse();
+function startCanvasLoop() {
+    if (!canvas || prefersReducedMotion) {
+        // Reduced-motion users get a single static frame of the grid, no pulses.
+        if (canvas) drawGrid();
+        return;
     }
-}, 50);
+    if (animationFrameId === null) animate();
+    if (pulseIntervalId === null) {
+        pulseIntervalId = setInterval(() => {
+            if (pulses.length < 50 && Math.random() > 0.2) createPulse();
+        }, 50);
+    }
+}
 
-animate();
+function stopCanvasLoop() {
+    if (animationFrameId !== null) {
+        cancelAnimationFrame(animationFrameId);
+        animationFrameId = null;
+    }
+    if (pulseIntervalId !== null) {
+        clearInterval(pulseIntervalId);
+        pulseIntervalId = null;
+    }
+}
+
+document.addEventListener('visibilitychange', () => {
+    if (document.hidden) stopCanvasLoop();
+    else startCanvasLoop();
+});
+
+window.addEventListener('beforeunload', stopCanvasLoop);
+
+startCanvasLoop();
 
 
 // GRID CTA

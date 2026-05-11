@@ -43,17 +43,12 @@ document.addEventListener('DOMContentLoaded', function() {
     cookieAccept.addEventListener('click', () => {
         localStorage.setItem('cookieConsent', 'accepted');
         cookieBanner.classList.remove('visible');
-        
-        // Here you can add your analytics/tracking code
-        console.log('Cookies accepted');
     });
-    
+
     // Decline cookies
     cookieDecline.addEventListener('click', () => {
         localStorage.setItem('cookieConsent', 'declined');
         cookieBanner.classList.remove('visible');
-        
-        console.log('Cookies declined');
     });
 });
 
