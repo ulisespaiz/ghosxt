@@ -51,69 +51,213 @@
         "@context": "https://schema.org",
         "@graph": [
           {
+            "@type": "LocalBusiness",
+            "@id": "https://ghosxt.com/#business",
+            "name": "Ghosxt",
+            "url": "https://ghosxt.com/",
+            "image": "https://ghosxt.com/assets/img/ghosxt logo.webp",
+            "telephone": "+18312040501",
+            "email": "sales@ghosxt.com",
+            "priceRange": "$$",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Salinas",
+              "addressRegion": "CA",
+              "postalCode": "93901",
+              "addressCountry": "US"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 36.6777,
+              "longitude": -121.6555
+            },
+            "areaServed": [
+              {
+                "@type": "City",
+                "name": "Salinas"
+              },
+              {
+                "@type": "City",
+                "name": "Monterey"
+              },
+              {
+                "@type": "City",
+                "name": "Watsonville"
+              },
+              {
+                "@type": "City",
+                "name": "Hollister"
+              },
+              {
+                "@type": "City",
+                "name": "Santa Cruz"
+              },
+              {
+                "@type": "City",
+                "name": "Gilroy"
+              },
+              {
+                "@type": "City",
+                "name": "San Jose"
+              },
+              {
+                "@type": "City",
+                "name": "Pacific Grove"
+              },
+              {
+                "@type": "City",
+                "name": "Carmel"
+              },
+              {
+                "@type": "City",
+                "name": "Seaside"
+              },
+              {
+                "@type": "City",
+                "name": "Marina"
+              }
+            ]
+          },
+          {
             "@type": "Service",
             "@id": "https://ghosxt.com/managed-it-services.html#service",
             "name": "Managed IT Services",
             "serviceType": "Managed IT Services",
             "description": "Fully managed IT services for California small businesses: 24/7 monitoring, EDR, patch management, Microsoft 365, helpdesk, backup, and strategic IT planning. Delivered by a DoD-cleared engineer.",
             "url": "https://ghosxt.com/managed-it-services.html",
-            "provider": { "@id": "https://ghosxt.com/#business" },
+            "provider": {
+              "@id": "https://ghosxt.com/#business"
+            },
             "areaServed": [
-              { "@type": "State", "name": "California" },
-              { "@type": "Country", "name": "United States" },
-              { "@type": "City", "name": "Salinas" },
-              { "@type": "City", "name": "Monterey" },
-              { "@type": "City", "name": "Watsonville" },
-              { "@type": "City", "name": "Hollister" },
-              { "@type": "City", "name": "Santa Cruz" },
-              { "@type": "City", "name": "Gilroy" },
-              { "@type": "City", "name": "San Jose" },
-              { "@type": "City", "name": "Pacific Grove" },
-              { "@type": "City", "name": "Carmel" },
-              { "@type": "City", "name": "Seaside" },
-              { "@type": "City", "name": "Marina" }
+              {
+                "@type": "State",
+                "name": "California"
+              },
+              {
+                "@type": "Country",
+                "name": "United States"
+              },
+              {
+                "@type": "City",
+                "name": "Salinas"
+              },
+              {
+                "@type": "City",
+                "name": "Monterey"
+              },
+              {
+                "@type": "City",
+                "name": "Watsonville"
+              },
+              {
+                "@type": "City",
+                "name": "Hollister"
+              },
+              {
+                "@type": "City",
+                "name": "Santa Cruz"
+              },
+              {
+                "@type": "City",
+                "name": "Gilroy"
+              },
+              {
+                "@type": "City",
+                "name": "San Jose"
+              },
+              {
+                "@type": "City",
+                "name": "Pacific Grove"
+              },
+              {
+                "@type": "City",
+                "name": "Carmel"
+              },
+              {
+                "@type": "City",
+                "name": "Seaside"
+              },
+              {
+                "@type": "City",
+                "name": "Marina"
+              }
             ]
           },
           {
             "@type": "BreadcrumbList",
+            "@id": "https://ghosxt.com/managed-it-services.html#breadcrumb",
             "itemListElement": [
-              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ghosxt.com/" },
-              { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://ghosxt.com/services.html" },
-              { "@type": "ListItem", "position": 3, "name": "Managed IT Services", "item": "https://ghosxt.com/managed-it-services.html" }
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://ghosxt.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Services",
+                "item": "https://ghosxt.com/services.html"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Managed IT Services",
+                "item": "https://ghosxt.com/managed-it-services.html"
+              }
             ]
           },
           {
             "@type": "FAQPage",
+            "@id": "https://ghosxt.com/managed-it-services.html#faq",
             "mainEntity": [
               {
                 "@type": "Question",
                 "name": "How fast do you respond when something breaks?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Most issues are picked up by our monitoring before a user notices, and resolved remotely the same hour. For tickets you raise directly, business-hours response is under 15 minutes and after-hours emergencies are answered live by the engineer who built your environment, not a call center." }
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Most issues are picked up by our monitoring before a user notices, and resolved remotely the same hour. For tickets you raise directly, business-hours response is under 15 minutes and after-hours emergencies are answered live by the engineer who built your environment, not a call center."
+                }
               },
               {
                 "@type": "Question",
                 "name": "Do I have to sign a long contract?",
-                "acceptedAnswer": { "@type": "Answer", "text": "No. We work month-to-month after the initial onboarding. Pricing is fixed per user per month and you see the same invoice every cycle. If we are not delivering, you should be free to leave." }
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. We work month-to-month after the initial onboarding. Pricing is fixed per user per month and you see the same invoice every cycle. If we are not delivering, you should be free to leave."
+                }
               },
               {
                 "@type": "Question",
                 "name": "Do you support Mac as well as Windows?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Yes. The full stack runs on macOS and Windows, and we manage iOS and Android phones through Microsoft Intune. Linux servers are also supported on managed plans." }
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. The full stack runs on macOS and Windows, and we manage iOS and Android phones through Microsoft Intune. Linux servers are also supported on managed plans."
+                }
               },
               {
                 "@type": "Question",
                 "name": "We already have an internal IT person. Can you co-manage?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Yes. Co-managed IT is a common arrangement. We bring the enterprise tooling, the cybersecurity stack, and after-hours coverage; your internal IT keeps owning end-user relationships and project work. We document the boundary together." }
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. Co-managed IT is a common arrangement. We bring the enterprise tooling, the cybersecurity stack, and after-hours coverage; your internal IT keeps owning end-user relationships and project work. We document the boundary together."
+                }
               },
               {
                 "@type": "Question",
-                "name": "What size business is Ghosxt managed IT designed for?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Most clients are 5 to 50 employees. Smaller teams that have outgrown a relative-with-a-laptop, larger teams that have not yet hit the headcount that justifies a full-time IT hire. We serve clients on-site across Monterey County and the Central Coast, and remotely across the United States." }
+                "name": "What size business is this designed for?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Most clients are 5 to 50 employees. Smaller teams that have outgrown a relative-with-a-laptop, larger teams that have not yet hit the headcount that justifies a full-time IT hire. We serve clients on-site across Monterey County and the Central Coast, and remotely across the United States."
+                }
               },
               {
                 "@type": "Question",
                 "name": "Are you actually available after hours?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Yes for emergencies. The Huntress SOC monitors endpoints around the clock and will engage us automatically on a critical event. Direct after-hours contact for client escalations is included; routine helpdesk runs business hours Pacific." }
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes for emergencies. The Huntress SOC monitors endpoints around the clock and engages us automatically on a critical event. Direct after-hours contact for client escalations is included; routine helpdesk runs business hours Pacific."
+                }
               }
             ]
           }
