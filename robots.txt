@@ -2,7 +2,6 @@ User-agent: *
 Allow: /
 Disallow: /admin/
 Disallow: /staging/
-Disallow: /blank-template.html
 # Note: /assets/css/ and /assets/js/ are intentionally crawlable —
 # Googlebot needs both to render pages correctly.
 
