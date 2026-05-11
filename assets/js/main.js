@@ -66,9 +66,18 @@ document.addEventListener('DOMContentLoaded', function() {
     const body = document.body;
     if (!mobileToggle || !mobileMenu || !navbarOverlay) return;
 
+    const closeMobileMenu = () => {
+        mobileMenu.classList.remove('active');
+        navbarOverlay.classList.remove('active');
+        body.classList.remove('menu-open');
+        mobileToggle.setAttribute('aria-expanded', 'false');
+        mobileToggle.querySelector('i').className = 'fi fi-rs-burger-menu';
+    };
+
     mobileToggle.addEventListener('click', () => {
         mobileMenu.classList.toggle('active');
         const isOpen = mobileMenu.classList.contains('active');
+        mobileToggle.setAttribute('aria-expanded', String(isOpen));
         
         // Toggle overlay - ADD THIS
         if (isOpen) {
@@ -105,15 +114,24 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Close mobile menu when clicking the overlay
+    navbarOverlay.addEventListener('click', () => {
+        closeMobileMenu();
+    });
+
     // Close mobile menu when clicking outside
     document.addEventListener('click', (e) => {
         if (mobileMenu.classList.contains('active') && 
             !mobileMenu.contains(e.target) && 
             !mobileToggle.contains(e.target)) {
-            mobileMenu.classList.remove('active');
-            navbarOverlay.classList.remove('active'); 
-            body.classList.remove('menu-open'); // Remove scroll lock
-            mobileToggle.querySelector('i').className = 'fi fi-rs-burger-menu';
+            closeMobileMenu();
+        }
+    });
+
+    // Close mobile menu when pressing Escape
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
+            closeMobileMenu();
         }
     });
 
@@ -121,10 +139,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const mobileLinks = document.querySelectorAll('.mobile-link, .mobile-dropdown-item, .mobile-btn');
     mobileLinks.forEach(link => {
         link.addEventListener('click', () => {
-            mobileMenu.classList.remove('active');
-            navbarOverlay.classList.remove('active');
-            body.classList.remove('menu-open'); // Remove scroll lock
-            mobileToggle.querySelector('i').className = 'fi fi-rs-burger-menu';
+            closeMobileMenu();
         });
     });
 
