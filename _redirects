@@ -1,2 +1,15 @@
 # Legacy URL fix: ghosxt-cares page was previously linked as /cares.html
 /cares.html   /ghosxt-cares.html   301
+
+# Legacy WordPress URLs from the pre-static site that Google still has
+# indexed. Each is redirected to its closest equivalent on the new site
+# with a 301 (permanent) so any old link equity transfers over.
+/custom-website-development-building-your-digital-foundation-for-success/   /website-development.html   301
+/cybersecurity-and-data-protection/                                         /cybersecurity.html         301
+/sample-page/                                                               /                           301
+/category/it-support/                                                       /managed-it-services.html   301
+/category/web-development/                                                  /website-development.html   301
+
+# Catch-all for any other WordPress category archive URLs Google might
+# still know about. Anything under /category/* falls back to /services.html.
+/category/*   /services.html   301
