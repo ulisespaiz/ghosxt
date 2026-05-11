@@ -1862,13 +1862,30 @@ img[loading="lazy"]:not([src=""]) {
 
 /* ------ TOUCH TARGETS: Minimum 44x44px (WCAG 2.5.5) ------ */
 button,
-a,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+input[type="search"],
+input[type="password"],
+input[type="number"],
+select,
+textarea,
 [role="button"],
-.cookie-btn,
+.banner-btn,
 .navbar-btn,
 .mobile-btn,
-.scroll-to-top {
-  min-height: 14px;
+.cookie-btn,
+.scroll-to-top,
+.footer-subscribe-btn,
+.footer-cta-btn,
+.location-btn,
+.button-primary,
+.cta-primary-btn {
+  min-height: 44px;
   min-width: 44px;
 }
 
