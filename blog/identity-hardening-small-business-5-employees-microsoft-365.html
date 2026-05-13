@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Identity Hardening for the 5-Employee Company | Ghosxt</title>
+    <meta name="description" content="The minimum identity controls that actually move the needle for a 5-employee business in 2026: phishing-resistant MFA, Conditional Access, no persistent local admins, separated admin accounts, and legacy auth turned off. From a DoD-cleared engineer." />
+    <link rel="canonical" href="https://ghosxt.com/blog/identity-hardening-small-business-5-employees-microsoft-365.html" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://ghosxt.com/blog/identity-hardening-small-business-5-employees-microsoft-365.html" />
+    <meta property="og:title" content="Identity Hardening for the 5-Employee Company | Ghosxt" />
+    <meta property="og:description" content="The minimum identity controls that actually move the needle for a 5-employee business in 2026. Plain-talk read from a DoD-cleared engineer." />
+    <meta property="og:image" content="https://ghosxt.com/assets/img/og-image.png" />
+    <meta property="og:site_name" content="Ghosxt" />
+    <meta property="article:published_time" content="2026-05-13" />
+    <meta property="article:author" content="Ulises Paiz" />
+    <meta name="robots" content="index, follow" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Identity Hardening for the 5-Employee Company | Ghosxt" />
+    <meta name="twitter:description" content="The minimum identity controls that actually move the needle for a 5-employee business in 2026." />
+    <meta name="twitter:image" content="https://ghosxt.com/assets/img/og-image.png" />
+    <link rel="icon" href="../assets/img/favicon.ico" sizes="any" />
+    <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdn-uicons.flaticon.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="../assets/css/blog.css" />
+    <link rel="stylesheet" media="print" onload="this.media='all'" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" />
+    <noscript><link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" /></noscript>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "BlogPosting",
+            "mainEntityOfPage": { "@type": "WebPage", "@id": "https://ghosxt.com/blog/identity-hardening-small-business-5-employees-microsoft-365.html" },
+            "headline": "Identity Hardening for the 5-Employee Company: The Real Minimum in 2026",
+            "description": "The minimum identity controls that actually move the needle for a 5-employee business: phishing-resistant MFA, Conditional Access, no persistent local admins, separated admin accounts, and legacy auth turned off. From a DoD-cleared engineer running an MSP on California's Central Coast.",
+            "image": "https://ghosxt.com/assets/img/og-image.png",
+            "author": { "@type": "Person", "name": "Ulises Paiz", "url": "https://ghosxt.com/about.html" },
+            "publisher": { "@type": "Organization", "name": "Ghosxt", "logo": { "@type": "ImageObject", "url": "https://ghosxt.com/assets/img/ghosxt logo.webp" } },
+            "datePublished": "2026-05-13",
+            "dateModified": "2026-05-13",
+            "articleSection": "Cybersecurity",
+            "keywords": "identity hardening, small business cybersecurity, Microsoft 365 Business Premium, Conditional Access, phishing-resistant MFA, FIDO2, Windows Hello for Business, separated admin accounts, LAPS, Microsoft LAPS for Entra, no persistent local admins, legacy authentication, token theft, primary refresh token, MFA fatigue, push bombing"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ghosxt.com/" },
+              { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://ghosxt.com/blog/" },
+              { "@type": "ListItem", "position": 3, "name": "Identity Hardening for the 5-Employee Company", "item": "https://ghosxt.com/blog/identity-hardening-small-business-5-employees-microsoft-365.html" }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What does 'identity hardening' actually mean?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Identity hardening is the practice of making it harder for an attacker to sign in as your users, and less rewarding when they do. In practical terms for a small business that means phishing-resistant multi-factor authentication, Conditional Access policies that gate sign-ins, separation between everyday accounts and admin accounts, no persistent local administrators on workstations, and legacy authentication protocols disabled across the tenant."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is MFA enough?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Not by itself anymore. Push-notification MFA is increasingly bypassed by push bombing and adversary-in-the-middle phishing kits that proxy the legitimate sign-in and steal the session token. The defensible posture in 2026 is phishing-resistant MFA (FIDO2 hardware keys or Windows Hello for Business) on admin accounts at minimum, paired with Conditional Access that requires a compliant device and blocks legacy authentication."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What does this cost for a 5-person business?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The realistic floor is Microsoft 365 Business Premium at approximately 22 dollars per user per month, which bundles Entra ID Plan 1, Conditional Access, Defender for Business, and Intune. For 5 users that is about 1,320 dollars per year of licensing. Add 100 to 200 dollars one-time for FIDO2 keys on admin accounts. The labor to configure it well is the larger cost and is usually the reason it does not get done."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Why do you keep talking about 'no persistent local admins'?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Because almost every ransomware case study has the same step in it: an attacker lands code as a regular user, finds that user is also a local administrator on their workstation, and uses that local admin to dump credentials and move laterally. Removing standing local admin rights on user laptops is one of the highest-leverage controls a small business can put in place. Microsoft LAPS for Entra makes it manageable without breaking IT troubleshooting."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do I need separate admin accounts?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. The owner who uses one account for daily email and also for Microsoft 365 tenant administration is one phishing click away from handing the keys to the attacker. The fix is to make a dedicated admin account that is used only for admin work, ideally with phishing-resistant MFA and Conditional Access scoped to compliant devices. The everyday account does not have admin rights and therefore cannot be tricked into using them."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top"><i class="fi fi-rs-angle-up" aria-hidden="true"></i></button>
+    <div class="cookie-banner" id="cookieBanner"><div class="cookie-banner-container"><div class="cookie-content"><div class="cookie-icon"><i class="fi fi-rs-cookie"></i></div><div class="cookie-text"><p class="cookie-message">We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.</p><a href="../privacy-policy.html" class="cookie-link">Learn more about our Privacy Policy</a></div></div><div class="cookie-actions"><button class="cookie-btn cookie-btn-secondary" id="cookieDecline">Decline</button><button class="cookie-btn cookie-btn-primary" id="cookieAccept">Accept All</button></div></div></div>
+    <div class="top-banner" id="topBanner"><div class="banner-container"><div class="banner-content"><span class="banner-text">Need Remote Support? &#9658;</span><a target="_blank" rel="noopener noreferrer" href="https://ticket.ghosxt.com/" class="banner-btn"><i class="fi fi-rs-ticket-alt"></i><span>Visit Client Portal</span></a></div></div></div>
+    <nav class="navbar" aria-label="Main navigation">
+      <div class="navbar-container">
+        <div class="navbar-left"><a href="../index.html" class="navbar-logo"><img src="../assets/img/ghosxt logo.webp" alt="Ghosxt logo" width="48" height="48" /><span>GHOSXT</span></a></div>
+        <div class="navbar-right">
+          <div class="navbar-menu">
+            <a href="../index.html" class="navbar-link">Home</a>
+            <div class="navbar-dropdown"><a href="../about.html" class="navbar-link dropdown-trigger" aria-haspopup="menu">About <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></a><div class="dropdown-menu" role="menu"><a href="../about.html" class="dropdown-item" role="menuitem">About Ghosxt</a><a href="../ghosxt-cares.html" class="dropdown-item" role="menuitem">Ghosxt Cares</a></div></div>
+            <div class="navbar-dropdown"><a href="../services.html" class="navbar-link dropdown-trigger" aria-haspopup="menu">Services <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></a><div class="dropdown-menu" role="menu"><a href="../services.html" class="dropdown-item" role="menuitem">All Services</a>
+                <a href="../managed-it-services.html" class="dropdown-item" role="menuitem">Managed IT Services</a>
+                <a href="../cybersecurity.html" class="dropdown-item" role="menuitem">Cybersecurity</a>
+                <a href="../cloud-services.html" class="dropdown-item" role="menuitem">Cloud Services</a>
+                <a href="../backup-disaster-recovery.html" class="dropdown-item" role="menuitem">Backup &amp; Disaster Recovery</a>
+                <a href="../network-design.html" class="dropdown-item" role="menuitem">Network Design</a>
+                <a href="../website-development.html" class="dropdown-item" role="menuitem">Web Development</a>
+                <a href="../ctpat.html" class="dropdown-item" role="menuitem">C-TPAT Compliance</a></div></div>
+            <a href="../pricing.html" class="navbar-link">Pricing</a>
+            <a href="index.html" class="navbar-link">Blog</a>
+            <a href="../contact.html" class="navbar-link">Contact</a>
+          </div>
+          <button class="navbar-mobile-toggle" id="mobileToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu"><i class="fi fi-rs-burger-menu" aria-hidden="true"></i></button>
+          <div class="navbar-buttons"><a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer" class="navbar-btn btn-demo"><i class="fi fi-rs-calendar-day"></i><span>Book a Call</span></a></div>
+        </div>
+      </div>
+      <div class="navbar-overlay" id="navbarOverlay"></div>
+      <div class="navbar-mobile-menu" id="mobileMenu">
+        <a href="../index.html" class="mobile-link">Home</a>
+        <div class="mobile-accordion"><button class="mobile-accordion-trigger" aria-expanded="false">About <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></button><div class="mobile-accordion-content"><a href="../about.html" class="mobile-dropdown-item">About Ghosxt</a><a href="../ghosxt-cares.html" class="mobile-dropdown-item">Ghosxt Cares</a></div></div>
+        <div class="mobile-accordion"><button class="mobile-accordion-trigger" aria-expanded="false">Services <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></button><div class="mobile-accordion-content"><a href="../services.html" class="mobile-dropdown-item">All Services</a>
+            <a href="../managed-it-services.html" class="mobile-dropdown-item">Managed IT Services</a>
+            <a href="../cybersecurity.html" class="mobile-dropdown-item">Cybersecurity</a>
+            <a href="../cloud-services.html" class="mobile-dropdown-item">Cloud Services</a>
+            <a href="../backup-disaster-recovery.html" class="mobile-dropdown-item">Backup &amp; Disaster Recovery</a>
+            <a href="../network-design.html" class="mobile-dropdown-item">Network Design</a>
+            <a href="../website-development.html" class="mobile-dropdown-item">Web Development</a>
+            <a href="../ctpat.html" class="mobile-dropdown-item">C-TPAT Compliance</a></div></div>
+        <a href="../pricing.html" class="mobile-link">Pricing</a>
+        <a href="index.html" class="mobile-link">Blog</a>
+        <a href="../contact.html" class="mobile-link">Contact</a>
+        <div class="mobile-actions"><a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer" class="mobile-btn btn-demo"><i class="fi fi-rs-calendar-day"></i><span>Book a Call</span></a></div>
+      </div>
+    </nav>
+    <main id="main-content" class="blog-post">
+      <header class="blog-post-header">
+        <div class="container">
+          <nav class="blog-post-breadcrumbs" aria-label="Breadcrumb">
+            <a href="../index.html">Home</a><span class="sep">&rsaquo;</span><a href="index.html">Blog</a><span class="sep">&rsaquo;</span><span aria-current="page">Identity Hardening for the 5-Employee Company</span>
+          </nav>
+          <div class="blog-post-meta">
+            <time datetime="2026-05-13">May 13, 2026</time>
+            <span>&middot;</span>
+            <span>10 min read</span>
+            <span>&middot;</span>
+            <span class="blog-card-tag">Cybersecurity</span>
+          </div>
+          <h1>Identity Hardening for the 5-Employee Company: The Real Minimum in 2026</h1>
+          <div class="blog-post-author">
+            <strong>Ulises Paiz</strong>, Founder, Ghosxt
+          </div>
+        </div>
+      </header>
+      <div class="blog-post-body">
+        <div class="container">
+          <aside class="blog-post-quickfix" aria-label="Summary and the minimum identity controls">
+            <span class="quickfix-label">TL;DR &mdash; The minimum that actually works</span>
+            <h2>Five controls. Two days of work. Cuts the realistic small-business attack surface by an order of magnitude.</h2>
+            <ul>
+              <li><strong>Phishing-resistant MFA</strong> on every admin account, regular MFA on everything else. Push-notification MFA alone is no longer enough.</li>
+              <li><strong>Separated admin accounts.</strong> The owner's daily email account should not also be tenant administrator.</li>
+              <li><strong>Conditional Access policies</strong> that block legacy authentication and require a compliant device for sensitive apps.</li>
+              <li><strong>No persistent local administrators</strong> on user workstations. Microsoft LAPS for Entra gives you a working alternative.</li>
+              <li><strong>Legacy authentication off</strong> at the tenant level. Basic auth, IMAP, POP3, ActiveSync where unused: all disabled.</li>
+            </ul>
+            <p>What this costs: roughly $1,320 per year of Microsoft 365 Business Premium licensing for 5 users, $100 to $200 one-time for FIDO2 keys on admin accounts, and one to two days of configuration. The labor is the part that does not happen on its own.</p>
+          </aside>
+
+          <p>Most of the breaches I see in small business networks do not start with malware. They start with somebody signing in. An attacker types a stolen password, completes an MFA prompt the user did not pay attention to, and from inside the user's mailbox quietly sets up forwarding rules and goes looking for invoices to redirect. The technical story is unglamorous. The financial damage is real. The defenses are not exotic. They just require somebody to set them up.</p>
+
+          <p>This is the post I wish every small business owner I have ever sat across from had read before our first call. It is the identity-hardening floor for a 5-to-25-person business running on Microsoft 365 in 2026. None of it is novel. All of it is fixable in a week. If you are reading this and recognizing that some of these are not in place, that is the project to start on Monday.</p>
+
+          <h2>Why identity is the front door now</h2>
+
+          <p>For most of the last decade, perimeter security was the dominant model: a firewall around the office, a VPN to get in from outside, antivirus on the workstations. That model assumed work happened on devices that lived behind the perimeter most of the time. It has not described the world for several years. The "perimeter" is now wherever your users sign in: a hotel Wi-Fi network, a phone in a coffee shop, a home laptop checking SharePoint at 9pm. Identity is what the cloud trusts to decide who you are. Identity is what an attacker has to defeat to look like you.</p>
+
+          <p>The numbers back this up. Microsoft's own threat intelligence reports have placed identity-driven attacks at the top of the breach-cause list for several years running. Cyber-insurance carriers, which see the claims data, have shifted from asking "do you have antivirus" to asking "do you have MFA on every account, and is it phishing-resistant on admins." The carriers do not move quickly. When they shift their questionnaires, it means the loss data has been telling them the same story for a long time.</p>
+
+          <p>The other reason identity matters more now is that the consequences are bigger. A signed-in user in Microsoft 365 has cached primary refresh tokens (PRTs), session cookies, and OAuth grants that can be stolen and replayed from anywhere in the world. The <a href="yellowkey-greenplasma-windows-bitlocker-bypass-privesc.html">YellowKey BitLocker bypass I wrote about yesterday</a> ends with the attacker reading the BitLocker volume, and the most valuable thing on that volume for a modern business is not the files; it is the cached tokens. Once the tokens are out, the attacker is the user as far as Microsoft 365 is concerned.</p>
+
+          <h2>The five controls that actually move the needle</h2>
+
+          <h3>1. Phishing-resistant MFA on admin accounts; regular MFA on everyone</h3>
+
+          <p>Multi-factor authentication is non-negotiable. The honest update for 2026 is that "MFA" no longer means one thing. Push-notification MFA, where you tap "Approve" on your phone, has been quietly losing the arms race for years. Two failure modes dominate:</p>
+
+          <ul>
+            <li><strong>Push bombing.</strong> The attacker has the password and spams MFA prompts at 2am until the user taps Approve to make the buzzing stop. This works more often than anyone wants to admit.</li>
+            <li><strong>Adversary-in-the-middle phishing.</strong> The user clicks a link, lands on a real-looking Microsoft login page that is actually a proxy, types the password, completes the MFA prompt against the real Microsoft, and the proxy steals the resulting session cookie. The attacker now has a valid session without ever knowing the password's MFA secret.</li>
+          </ul>
+
+          <p>The fix for both is <strong>phishing-resistant MFA</strong>: hardware FIDO2 keys (YubiKey, Feitian, Token2) or Windows Hello for Business with PIN+biometric. These work by cryptographically tying the authentication to the specific domain the user is signing into. An adversary-in-the-middle proxy at a different domain cannot complete the challenge, no matter how convincingly it imitates Microsoft's login page. The user cannot accidentally approve the wrong sign-in, because there is no "Approve" button.</p>
+
+          <p>The realistic deployment for a 5-employee business is: phishing-resistant MFA on every admin account (Global Administrator, Exchange Administrator, anything privileged) and a phishing-resistant option offered to every regular user, with strong push MFA acceptable as a fallback. Hardware keys cost about $25 to $50 each. Buy two per admin account so a lost key is not a lockout event.</p>
+
+          <h3>2. Separated admin accounts</h3>
+
+          <p>This is the one that gets the most resistance from owners and is one of the highest-impact changes. The pattern I see constantly is one account, owner@business.com, that is both the daily-driver mailbox and a tenant Global Administrator. The owner reads email from it. The owner clicks links from it. The owner runs PowerShell against the tenant from it.</p>
+
+          <p>The problem is that any phishing email that fools the owner has just compromised a tenant Global Admin. The blast radius is the entire Microsoft 365 environment: every user, every mailbox, every SharePoint site, every license. An attacker with a Global Admin token can disable MFA, create new accounts, mass-export mailboxes, and remove themselves from audit logs.</p>
+
+          <p>The fix is two accounts. The owner's daily account, owner@business.com, is a normal licensed user with no admin rights. A second account, owner-admin@business.com (or similar), holds the Global Admin role, has phishing-resistant MFA, is gated by a Conditional Access policy that requires a compliant device, and is used only for admin work. The two accounts do not share a mailbox, a browser session, or a password manager entry.</p>
+
+          <p>Microsoft Entra ID also supports <strong>Privileged Identity Management (PIM)</strong> on higher tiers, which makes the admin account "eligible" for Global Admin rather than holding it standing. The admin elevates for an hour at a time, with approval and logging. PIM is included in Entra ID P2 (part of Microsoft 365 E5 or available as an add-on). For a 5-person business it is overkill but worth knowing about as you grow.</p>
+
+          <h3>3. Conditional Access: the rule engine you already paid for</h3>
+
+          <p>Conditional Access is the Microsoft Entra policy engine that decides, for every sign-in, whether to allow it, block it, or require additional proof. It is included in Microsoft 365 Business Premium and is one of the most valuable features in the bundle. It is also one of the least-used. Most of the tenants I open up have Security Defaults enabled (better than nothing) but no Conditional Access policies tuned for their actual business.</p>
+
+          <p>The minimum set of policies for a 5-employee business:</p>
+
+          <ul>
+            <li><strong>Block legacy authentication.</strong> Legacy auth protocols (Basic auth, IMAP, POP3, older Outlook) cannot do MFA. They are the easiest bypass an attacker has. Block them at the tenant level with a Conditional Access policy.</li>
+            <li><strong>Require MFA for all users.</strong> Belt-and-suspenders with Security Defaults: explicit policy, scoped to all cloud apps, with hardware key required for admins.</li>
+            <li><strong>Block sign-ins from countries you do not operate in.</strong> A Salinas-based plumbing contractor with a California-only customer base does not need to allow sign-ins from anywhere outside North America. Geo-blocking is one rule and cuts the credential-stuffing background noise dramatically.</li>
+            <li><strong>Require a compliant or Entra-joined device for sensitive apps.</strong> If a user's laptop is enrolled in Intune and reporting compliant, they can sign into the admin portal. From an unmanaged personal phone, they cannot. This is the policy that defeats most stolen-token replay attacks: even if an attacker has the cookie, their device is not enrolled.</li>
+            <li><strong>Sign-in risk and user risk policies.</strong> If Microsoft's threat intel flags a sign-in as high-risk (impossible travel, leaked credentials, anonymized IP), require MFA again or block. This is included in Entra ID P2 (Business Premium gives you P1; full risk policies need P2 or a step up to E5).</li>
+          </ul>
+
+          <p>Conditional Access is also where I see the worst self-inflicted outages. A misconfigured policy can lock the entire tenant out, including the admin trying to fix it. Always create a <strong>break-glass account</strong> (a single non-MFA account with a long random password, monitored, used only in emergencies, excluded from all Conditional Access policies) before you start tightening policies. Anyone who has ever locked themselves out of their own tenant at 11pm understands why.</p>
+
+          <h3>4. No persistent local administrators on workstations</h3>
+
+          <p>This is the one that overlaps with privilege escalation bugs like <a href="yellowkey-greenplasma-windows-bitlocker-bypass-privesc.html">GreenPlasma</a>. Every ransomware case study I have ever read has a step in it where the attacker has code running as a standard user and needs to become Local System on the machine. Sometimes they do it with a zero-day. Most of the time they just notice that the user is also a local administrator, and "elevate" by re-running their code with a UAC prompt the user obediently approves.</p>
+
+          <p>The fix is to remove standing local administrator rights from every regular user account. The user can no longer install software, run elevated PowerShell, or accept their way through a UAC prompt to give an attacker SYSTEM. The local admin password is randomized and rotated by Microsoft Entra's built-in LAPS (Local Administrator Password Solution), so when IT actually needs admin on a specific machine, the password is retrievable from the Entra portal and rotates afterward.</p>
+
+          <p>The objection I hear: "But Ulises, my users need to install software." The honest answer is that they don't, most of the time. The cases where they do (a contractor installs a vendor tool, a designer needs to install a plug-in) are exceptions you can handle with a just-in-time elevation tool (CyberArk EPM, AutoElevate, Microsoft's Endpoint Privilege Management) or by IT installing it. Removing standing admin is the single highest-leverage workstation control I know of.</p>
+
+          <h3>5. Legacy authentication off, tenant-wide</h3>
+
+          <p>Legacy authentication is the catch-all term for the older Microsoft protocols that predate MFA: Basic auth on SMTP/IMAP/POP3, older Outlook clients (Outlook 2010 and earlier), older ActiveSync, the legacy Exchange Web Services flow. They are the path of least resistance for an attacker who has a valid password and wants to skip MFA entirely. Microsoft has been deprecating them for years, and as of 2026, most are off by default in new tenants. They are not off in older tenants.</p>
+
+          <p>Audit it. In the Entra ID portal, look at sign-in logs filtered for "Client app" = "Other clients." Anything showing up there is using legacy auth. Almost always it is a service account, an old printer, or a SMTP relay. Replace the legitimate uses with modern equivalents (OAuth, Microsoft Graph, SMTP AUTH submission with app password or modern auth) and disable legacy auth at the tenant level. The Conditional Access policy in the previous section enforces it; the underlying tenant setting makes it default-off.</p>
+
+          <h2>What it costs and what it does not</h2>
+
+          <p>Here is the rough math for a 5-person business that today has Microsoft 365 Business Basic or Business Standard and not much else:</p>
+
+          <ul>
+            <li><strong>Microsoft 365 Business Premium upgrade:</strong> roughly $22 per user per month. For 5 users, about $1,320 per year. This gets you Entra ID Plan 1, Conditional Access, Intune, Defender for Business, and Defender for Office 365 Plan 1.</li>
+            <li><strong>FIDO2 hardware keys:</strong> $25-$50 per key. Buy two keys per admin account (lost-key insurance). For two admin accounts, four keys: $100-$200 one-time.</li>
+            <li><strong>Labor to configure:</strong> one to two engineer-days, depending on how messy the starting state is and how many shared mailboxes and legacy integrations are in scope.</li>
+          </ul>
+
+          <p>For comparison, the median incident-response engagement for a small-business ransomware case I see runs $25,000 to $75,000, plus downtime, plus the chance of a breach notification that requires lawyers and customer letters. The math on prevention is not subtle.</p>
+
+          <p>What this <strong>does not</strong> solve: insider threats, supply-chain breaches at your vendors, malicious browser extensions, social-engineering attacks where the attacker calls your bookkeeper and convinces them to wire money. Identity hardening is necessary, not sufficient. It overlaps significantly with <a href="small-business-cybersecurity-mistakes.html">the cybersecurity mistakes I see in almost every small business</a>, and it is part of the broader posture covered in our <a href="../cybersecurity.html">cybersecurity services</a> page. If you want the recovery side of the plan, start with <a href="../backup-disaster-recovery.html">backup and disaster recovery</a>.</p>
+
+          <h2>What to do this week</h2>
+
+          <ol>
+            <li><strong>Today:</strong> turn on Security Defaults if you have not already (Entra admin portal &rsaquo; Properties &rsaquo; Manage Security Defaults). This is the absolute floor and is free. If you have Conditional Access in place, leave Security Defaults off and rely on the policies.</li>
+            <li><strong>Today:</strong> create a break-glass account. Long random password (40+ characters), no MFA, excluded from every Conditional Access policy you ever create. Store the password somewhere that survives a tenant outage (a printout in the safe is fine).</li>
+            <li><strong>This week:</strong> order FIDO2 hardware keys for every admin account and the owner's daily account.</li>
+            <li><strong>This week:</strong> identify every Global Administrator in the tenant. Most small business tenants have more than they should. The right number is two: the owner's separated admin account and one IT-provider account. Everyone else gets a least-privilege role.</li>
+            <li><strong>This week:</strong> turn on the four core Conditional Access policies (block legacy auth, require MFA, geo-block where appropriate, require compliant device for admin portals). Test each one with the break-glass account in scope before rolling it tenant-wide.</li>
+            <li><strong>This month:</strong> audit local administrators on every workstation. Remove standing rights, deploy Microsoft LAPS for Entra, document the process for the cases that legitimately need elevation.</li>
+          </ol>
+
+          <h2>The honest take</h2>
+
+          <p>Identity hardening is not exciting work. Nobody puts a press release out about the day they removed standing local admin rights or finally turned on a Conditional Access policy. The reason it matters is that the alternative is the press release nobody wants: the breach notification, the customer letter, the carrier non-renewal. Every small business I have helped after a Microsoft 365 compromise has been one Conditional Access policy and one FIDO2 key away from the incident never happening.</p>
+
+          <p>The 5-person business has an advantage here, weirdly. The fewer accounts, devices, and integrations you have, the less there is to lock down. A two-day project in a 5-person environment is the same project that becomes a six-month rollout in a 200-person environment. The window when this work is easy and cheap is the window you are in right now. The window when it becomes expensive is the day after the breach.</p>
+
+          <p>If you are reading this and want a second opinion on where your tenant actually stands, that is what we do for small businesses across Salinas, Monterey, Santa Cruz, and the rest of the Central Coast. The 30-minute call is free, the answer is written, and the answer is yours to take to whoever you want to implement it.</p>
+
+          <h2>FAQs about identity hardening for small business</h2>
+
+          <h3>What does "identity hardening" actually mean?</h3>
+          <p>Identity hardening is the practice of making it harder for an attacker to sign in as your users, and less rewarding when they do. In practical terms for a small business that means phishing-resistant multi-factor authentication, Conditional Access policies that gate sign-ins, separation between everyday accounts and admin accounts, no persistent local administrators on workstations, and legacy authentication protocols disabled across the tenant.</p>
+
+          <h3>Is MFA enough?</h3>
+          <p>Not by itself anymore. Push-notification MFA is increasingly bypassed by push bombing and adversary-in-the-middle phishing kits that proxy the legitimate sign-in and steal the session token. The defensible posture in 2026 is phishing-resistant MFA (FIDO2 hardware keys or Windows Hello for Business) on admin accounts at minimum, paired with Conditional Access that requires a compliant device and blocks legacy authentication.</p>
+
+          <h3>What does this cost for a 5-person business?</h3>
+          <p>The realistic floor is Microsoft 365 Business Premium at approximately $22 per user per month, which bundles Entra ID Plan 1, Conditional Access, Defender for Business, and Intune. For 5 users that is about $1,320 per year of licensing. Add $100 to $200 one-time for FIDO2 keys on admin accounts. The labor to configure it well is the larger cost and is usually the reason it does not get done.</p>
+
+          <h3>Why do you keep talking about "no persistent local admins"?</h3>
+          <p>Because almost every <a href="ransomware-2026-how-it-gets-in.html">ransomware case study</a> has the same step in it: an attacker lands code as a regular user, finds that user is also a local administrator on their workstation, and uses that local admin to dump credentials and move laterally. Removing standing local admin rights on user laptops is one of the highest-leverage controls a small business can put in place. Microsoft LAPS for Entra makes it manageable without breaking IT troubleshooting.</p>
+
+          <h3>Do I need separate admin accounts?</h3>
+          <p>Yes. The owner who uses one account for daily email and also for Microsoft 365 tenant administration is one phishing click away from handing the keys to the attacker. The fix is to make a dedicated admin account that is used only for admin work, ideally with phishing-resistant MFA and Conditional Access scoped to compliant devices. The everyday account does not have admin rights and therefore cannot be tricked into using them.</p>
+
+          <h3>What if a user loses their FIDO2 key?</h3>
+          <p>That is why you buy two and enroll both, and why you have a break-glass account. The user falls back to their second key, or to a strong MFA method while a replacement is ordered. The break-glass account is for the worst case where every admin is locked out. Plan for the lost key on day one; the cost is small and the alternative is a stuck tenant.</p>
+
+          <div class="blog-post-cta">
+            <h3>Want a real identity-hardening review of your tenant?</h3>
+            <p>30 minutes with a DoD-cleared engineer. Honest look at your MFA, admin sprawl, Conditional Access, and local admins. Written follow-up with priorities and rough cost. No sales script.</p>
+            <a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer">
+              <i class="fi fi-rs-calendar-day" aria-hidden="true"></i>
+              Book your free assessment
+            </a>
+          </div>
+
+          <p style="margin-top: 1.5rem; font-size: 0.95rem; color: rgba(0,0,0,0.7);">
+            Prefer to talk first? Email <a href="mailto:sales@ghosxt.com">sales@ghosxt.com</a> or call <a href="tel:+18312040501">(831) 204-0501</a>.
+          </p>
+        </div>
+      </div>
+    </main>
+    <footer class="footer footer-visible" id="footerSection">
+      <div class="footer-container">
+        <div class="footer-grid">
+          <div class="footer-column"><h3 class="footer-column-title">Main Menu</h3><ul class="footer-links"><li><a href="../index.html">Home</a></li><li><a href="../about.html">About</a></li><li><a href="../services.html">Services</a></li><li><a href="../pricing.html">Pricing</a></li><li><a href="../contact.html">Contact</a></li></ul></div>
+          <div class="footer-column"><h3 class="footer-column-title">Services</h3>
+            <ul class="footer-links">
+              <li><a href="../managed-it-services.html">Managed IT Services</a></li>
+              <li><a href="../cybersecurity.html">Cybersecurity</a></li>
+              <li><a href="../cloud-services.html">Cloud Services</a></li>
+              <li><a href="../backup-disaster-recovery.html">Backup &amp; Disaster Recovery</a></li>
+              <li><a href="../network-design.html">Network Design</a></li>
+              <li><a href="../website-development.html">Web Development</a></li>
+              <li><a href="../ctpat.html">C-TPAT Compliance</a></li>
+              <li><a href="../trucking-it-services.html">Trucking &amp; Logistics IT</a></li>
+              <li><a href="../agriculture-it-services.html">Agriculture &amp; Agribusiness IT</a></li>
+              <li><a href="../manufacturing-it-services.html">Manufacturing &amp; Industrial IT</a></li>
+              <li><a href="../professional-services-it.html">SMB Office &amp; Professional Services IT</a></li>
+              <li><a href="../healthcare-it-services.html">Healthcare &amp; Medical IT</a></li>
+              <li><a href="../property-management-it-services.html">Property Management IT</a></li>
+              <li><a href="../engineering-it-services.html">Engineering &amp; Architecture IT</a></li>
+            </ul></div>
+          <div class="footer-column"><h3 class="footer-column-title">Resources</h3><ul class="footer-links"><li><a href="index.html">Blog</a></li><li><a href="../privacy-policy.html">Privacy Policy</a></li><li><a href="https://ticket.ghosxt.com/" target="_blank" rel="noopener noreferrer">Client Portal</a></li><li><a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer">Schedule Free IT Assessment</a></li></ul></div>
+        </div>
+        <div class="service-areas-footer">
+          <h3>Service Areas</h3>
+          <ul><li><a href="../salinas.html">Salinas</a></li><li><a href="../monterey.html">Monterey</a></li><li><a href="../watsonville.html">Watsonville</a></li><li><a href="../hollister.html">Hollister</a></li><li><a href="../santa-cruz.html">Santa Cruz</a></li><li><a href="../gilroy.html">Gilroy</a></li><li><a href="../san-jose.html">San Jose</a></li><li><a href="../pacific-grove.html">Pacific Grove</a></li><li><a href="../carmel.html">Carmel</a></li><li><a href="../seaside.html">Seaside</a></li><li><a href="../marina.html">Marina</a></li></ul>
+        </div>
+      </div>
+    </footer>
+    <script src="../assets/js/main.js" defer></script>
+  </body>
+</html>
