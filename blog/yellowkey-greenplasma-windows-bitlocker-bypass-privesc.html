@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YellowKey &amp; GreenPlasma: Two Windows Bypasses Explained | Ghosxt</title>
+    <meta name="description" content="A plain-talk defender's read on YellowKey (BitLocker bypass via WinRE on Windows 11 and Server 2022/2025) and GreenPlasma (CTFMON privilege escalation). How they work, what's at risk, and what small businesses should actually do this week." />
+    <link rel="canonical" href="https://ghosxt.com/blog/yellowkey-greenplasma-windows-bitlocker-bypass-privesc.html" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://ghosxt.com/blog/yellowkey-greenplasma-windows-bitlocker-bypass-privesc.html" />
+    <meta property="og:title" content="YellowKey &amp; GreenPlasma: Two Windows Bypasses Explained | Ghosxt" />
+    <meta property="og:description" content="How YellowKey bypasses BitLocker through Windows Recovery Environment, how GreenPlasma abuses CTFMON to elevate privileges, and what small businesses on Windows 11 should do this week." />
+    <meta property="og:image" content="https://ghosxt.com/assets/img/og-image.png" />
+    <meta property="og:site_name" content="Ghosxt" />
+    <meta property="article:published_time" content="2026-05-13" />
+    <meta property="article:author" content="Ulises Paiz" />
+    <meta name="robots" content="index, follow" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="YellowKey &amp; GreenPlasma: Two Windows Bypasses Explained | Ghosxt" />
+    <meta name="twitter:description" content="How YellowKey bypasses BitLocker through WinRE, how GreenPlasma abuses CTFMON, and what small businesses should do about it." />
+    <meta name="twitter:image" content="https://ghosxt.com/assets/img/og-image.png" />
+    <link rel="icon" href="../assets/img/favicon.ico" sizes="any" />
+    <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdn-uicons.flaticon.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="../assets/css/blog.css" />
+    <link rel="stylesheet" media="print" onload="this.media='all'" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" />
+    <noscript><link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" /></noscript>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "BlogPosting",
+            "mainEntityOfPage": { "@type": "WebPage", "@id": "https://ghosxt.com/blog/yellowkey-greenplasma-windows-bitlocker-bypass-privesc.html" },
+            "headline": "YellowKey & GreenPlasma: Two Windows Bypasses Explained for Defenders",
+            "description": "A plain-talk defender's read on YellowKey (a BitLocker bypass via Windows Recovery Environment on Windows 11 and Server 2022/2025) and GreenPlasma (a CTFMON privilege-escalation PoC). How they work at a high level, what's actually at risk, and what small businesses should do this week.",
+            "image": "https://ghosxt.com/assets/img/og-image.png",
+            "author": { "@type": "Person", "name": "Ulises Paiz", "url": "https://ghosxt.com/about.html" },
+            "publisher": { "@type": "Organization", "name": "Ghosxt", "logo": { "@type": "ImageObject", "url": "https://ghosxt.com/assets/img/ghosxt logo.webp" } },
+            "datePublished": "2026-05-13",
+            "dateModified": "2026-05-13",
+            "articleSection": "Cybersecurity",
+            "keywords": "YellowKey, GreenPlasma, BitLocker bypass, Windows Recovery Environment, WinRE, FsTx, CTFMON, MSCTF, privilege escalation, Windows 11 security, Windows Server 2022, Windows Server 2025, pre-boot PIN, ReAgentC, lateral movement, small business cybersecurity, Nightmare-Eclipse"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ghosxt.com/" },
+              { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://ghosxt.com/blog/" },
+              { "@type": "ListItem", "position": 3, "name": "YellowKey & GreenPlasma Explained", "item": "https://ghosxt.com/blog/yellowkey-greenplasma-windows-bitlocker-bypass-privesc.html" }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is YellowKey and what does it bypass?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "YellowKey is a publicly disclosed BitLocker bypass that uses Windows Recovery Environment (WinRE) to gain unrestricted access to an encrypted system drive on Windows 11 and Windows Server 2022/2025. It requires physical access. The attacker stages files on a USB stick (or the EFI partition) and triggers a specific key combination during a WinRE-initiated restart to land in a shell with read/write access to the BitLocker volume. Windows 10 is not affected."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is GreenPlasma?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "GreenPlasma is a proof-of-concept that abuses CTFMON (the Text Services Framework process) to create memory section objects inside Windows kernel object directories that are writable by SYSTEM. By itself the PoC does not yield SYSTEM, but it gives an attacker a low-cost primitive for placing data where privileged code expects to find it. The published code is intentionally partial; the author left the final escalation as a research exercise."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does YellowKey work without physical access?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. YellowKey requires the attacker to either insert a USB stick into the target machine or write to the EFI System Partition. That means a stolen laptop, an office walk-in, a service drop-off where the device is left unattended, or a malicious insider. For a small business, this maps to physical security and pre-boot PIN policy, not to perimeter or email controls."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "If my laptop has BitLocker turned on, am I safe from a thief?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "BitLocker alone with TPM-only protection has been considered marginal against a determined physical attacker for years. YellowKey is the latest data point. The defensible posture is TPM plus a pre-boot PIN, with WinRE either hardened or disabled on managed fleets. A stolen laptop with TPM-only BitLocker should be treated as a potential data breach until proven otherwise."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is there a patch yet?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "As of publication, Microsoft has acknowledged both disclosures and triage is in progress. We update this post as patches ship. The mitigations below (pre-boot PIN, WinRE hardening, physical security, fast patching) are the durable answers regardless of patch status."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top"><i class="fi fi-rs-angle-up" aria-hidden="true"></i></button>
+    <div class="cookie-banner" id="cookieBanner"><div class="cookie-banner-container"><div class="cookie-content"><div class="cookie-icon"><i class="fi fi-rs-cookie"></i></div><div class="cookie-text"><p class="cookie-message">We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.</p><a href="../privacy-policy.html" class="cookie-link">Learn more about our Privacy Policy</a></div></div><div class="cookie-actions"><button class="cookie-btn cookie-btn-secondary" id="cookieDecline">Decline</button><button class="cookie-btn cookie-btn-primary" id="cookieAccept">Accept All</button></div></div></div>
+    <div class="top-banner" id="topBanner"><div class="banner-container"><div class="banner-content"><span class="banner-text">Need Remote Support? &#9658;</span><a target="_blank" rel="noopener noreferrer" href="https://ticket.ghosxt.com/" class="banner-btn"><i class="fi fi-rs-ticket-alt"></i><span>Visit Client Portal</span></a></div></div></div>
+    <nav class="navbar" aria-label="Main navigation">
+      <div class="navbar-container">
+        <div class="navbar-left"><a href="../index.html" class="navbar-logo"><img src="../assets/img/ghosxt logo.webp" alt="Ghosxt logo" width="48" height="48" /><span>GHOSXT</span></a></div>
+        <div class="navbar-right">
+          <div class="navbar-menu">
+            <a href="../index.html" class="navbar-link">Home</a>
+            <div class="navbar-dropdown"><a href="../about.html" class="navbar-link dropdown-trigger" aria-haspopup="menu">About <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></a><div class="dropdown-menu" role="menu"><a href="../about.html" class="dropdown-item" role="menuitem">About Ghosxt</a><a href="../ghosxt-cares.html" class="dropdown-item" role="menuitem">Ghosxt Cares</a></div></div>
+            <div class="navbar-dropdown"><a href="../services.html" class="navbar-link dropdown-trigger" aria-haspopup="menu">Services <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></a><div class="dropdown-menu" role="menu"><a href="../services.html" class="dropdown-item" role="menuitem">All Services</a>
+                <a href="../managed-it-services.html" class="dropdown-item" role="menuitem">Managed IT Services</a>
+                <a href="../cybersecurity.html" class="dropdown-item" role="menuitem">Cybersecurity</a>
+                <a href="../cloud-services.html" class="dropdown-item" role="menuitem">Cloud Services</a>
+                <a href="../backup-disaster-recovery.html" class="dropdown-item" role="menuitem">Backup &amp; Disaster Recovery</a>
+                <a href="../network-design.html" class="dropdown-item" role="menuitem">Network Design</a>
+                <a href="../website-development.html" class="dropdown-item" role="menuitem">Web Development</a>
+                <a href="../ctpat.html" class="dropdown-item" role="menuitem">C-TPAT Compliance</a></div></div>
+            <a href="../pricing.html" class="navbar-link">Pricing</a>
+            <a href="index.html" class="navbar-link">Blog</a>
+            <a href="../contact.html" class="navbar-link">Contact</a>
+          </div>
+          <button class="navbar-mobile-toggle" id="mobileToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu"><i class="fi fi-rs-burger-menu" aria-hidden="true"></i></button>
+          <div class="navbar-buttons"><a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer" class="navbar-btn btn-demo"><i class="fi fi-rs-calendar-day"></i><span>Book a Call</span></a></div>
+        </div>
+      </div>
+      <div class="navbar-overlay" id="navbarOverlay"></div>
+      <div class="navbar-mobile-menu" id="mobileMenu">
+        <a href="../index.html" class="mobile-link">Home</a>
+        <div class="mobile-accordion"><button class="mobile-accordion-trigger" aria-expanded="false">About <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></button><div class="mobile-accordion-content"><a href="../about.html" class="mobile-dropdown-item">About Ghosxt</a><a href="../ghosxt-cares.html" class="mobile-dropdown-item">Ghosxt Cares</a></div></div>
+        <div class="mobile-accordion"><button class="mobile-accordion-trigger" aria-expanded="false">Services <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></button><div class="mobile-accordion-content"><a href="../services.html" class="mobile-dropdown-item">All Services</a>
+            <a href="../managed-it-services.html" class="mobile-dropdown-item">Managed IT Services</a>
+            <a href="../cybersecurity.html" class="mobile-dropdown-item">Cybersecurity</a>
+            <a href="../cloud-services.html" class="mobile-dropdown-item">Cloud Services</a>
+            <a href="../backup-disaster-recovery.html" class="mobile-dropdown-item">Backup &amp; Disaster Recovery</a>
+            <a href="../network-design.html" class="mobile-dropdown-item">Network Design</a>
+            <a href="../website-development.html" class="mobile-dropdown-item">Web Development</a>
+            <a href="../ctpat.html" class="mobile-dropdown-item">C-TPAT Compliance</a></div></div>
+        <a href="../pricing.html" class="mobile-link">Pricing</a>
+        <a href="index.html" class="mobile-link">Blog</a>
+        <a href="../contact.html" class="mobile-link">Contact</a>
+        <div class="mobile-actions"><a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer" class="mobile-btn btn-demo"><i class="fi fi-rs-calendar-day"></i><span>Book a Call</span></a></div>
+      </div>
+    </nav>
+    <main id="main-content" class="blog-post">
+      <header class="blog-post-header">
+        <div class="container">
+          <nav class="blog-post-breadcrumbs" aria-label="Breadcrumb">
+            <a href="../index.html">Home</a><span class="sep">&rsaquo;</span><a href="index.html">Blog</a><span class="sep">&rsaquo;</span><span aria-current="page">YellowKey &amp; GreenPlasma Explained</span>
+          </nav>
+          <div class="blog-post-meta">
+            <time datetime="2026-05-13">May 13, 2026</time>
+            <span>&middot;</span>
+            <span>12 min read</span>
+            <span>&middot;</span>
+            <span class="blog-card-tag">Cybersecurity</span>
+          </div>
+          <h1>YellowKey &amp; GreenPlasma: Two Windows Bypasses, Explained for Defenders</h1>
+          <div class="blog-post-author">
+            <strong>Ulises Paiz</strong>, Founder, Ghosxt
+          </div>
+        </div>
+      </header>
+      <div class="blog-post-body">
+        <div class="container">
+          <aside class="blog-post-quickfix" aria-label="Summary and what to do this week">
+            <span class="quickfix-label">TL;DR &mdash; Two bugs worth understanding</span>
+            <h2>One bypasses BitLocker with a USB stick. The other turns a standard user into the operating system.</h2>
+            <ul>
+              <li><strong>YellowKey</strong> is a publicly disclosed BitLocker bypass on Windows 11 and Windows Server 2022/2025. With physical access, an attacker drops files into a specific folder on a USB stick (or the EFI partition), boots into Windows Recovery Environment, and uses a key combination to land in a shell with full access to the encrypted volume. Windows 10 is not affected.</li>
+              <li><strong>GreenPlasma</strong> is a proof-of-concept that abuses CTFMON (Windows' Text Services Framework process) to create kernel memory section objects inside directories that only SYSTEM should be able to write. On its own it is not a full root; combined with the right second-stage primitive, it is a building block for local privilege escalation on Windows 11 and Server 2022/2026.</li>
+              <li>Both are <strong>publicly posted on GitHub by the researcher Nightmare-Eclipse</strong>. Neither requires exotic tooling. The BitLocker bypass in particular is the kind of thing a non-specialist can run against a stolen laptop.</li>
+            </ul>
+            <p>What to do this week:</p>
+            <ol>
+              <li>Today: enable a <strong>BitLocker pre-boot PIN</strong> on every laptop that leaves the building. TPM-only is no longer enough.</li>
+              <li>Today: take a physical inventory of every Windows device in your environment. The ones that are easiest to steal are the ones that matter most.</li>
+              <li>This week: harden or disable Windows Recovery Environment on managed fleets you do not need it on, and re-seal it on the ones you do.</li>
+              <li>This week: turn on auto-patch for Windows and watch for the May/June 2026 cumulative update notes. Both of these bugs are in Microsoft's triage queue.</li>
+            </ol>
+          </aside>
+
+          <p>Two Windows vulnerability disclosures crossed my desk this week, both published openly on GitHub, both already getting attention from security researchers, and both squarely in the category of "bugs that small business owners should at least understand the shape of." One bypasses BitLocker on a stolen laptop. The other turns a normal user account into the operating system. I'm going to walk through what each one actually does, why they work, and what a small business should do about them.</p>
+
+          <p>This post is for defenders. I'm explaining publicly disclosed bugs that are already in the wild as research write-ups. I'm not publishing exploit code, I'm not giving step-by-step replication instructions beyond what the original researcher already put on GitHub, and the only systems anyone should be testing this on are ones they own. The point is for you to understand the shape of the threat well enough to make good decisions about your fleet.</p>
+
+          <h2>The setting</h2>
+
+          <p>A researcher posting under <strong>Nightmare-Eclipse</strong> dropped two proof-of-concept repos on GitHub over the last few weeks. The first is called <a href="https://github.com/Nightmare-Eclipse/YellowKey" target="_blank" rel="noopener noreferrer">YellowKey</a>. It is a BitLocker bypass that works on Windows 11 and Windows Server 2022/2025 and explicitly does not work on Windows 10. The second is <a href="https://github.com/Nightmare-Eclipse/GreenPlasma" target="_blank" rel="noopener noreferrer">GreenPlasma</a>. It is a privilege-escalation proof-of-concept that abuses Windows' Text Services Framework, also on Windows 11 and Windows Server 2022 and 2026.</p>
+
+          <p>Between them they have several hundred stars on GitHub, which in research-community terms means a lot of people are taking them seriously. The author credits Microsoft's <strong>MORSE</strong>, <strong>MSTIC</strong>, and <strong>Microsoft GHOST</strong> teams on the YellowKey disclosure, which is what you would expect for a coordinated report to Microsoft. As of publication, neither has a public CVE number assigned that I can locate, and Microsoft has not yet shipped a patch. That is normal for the early window of a coordinated disclosure. I will update this post when those numbers land.</p>
+
+          <h2>YellowKey: how a BitLocker bypass through WinRE actually works</h2>
+
+          <h3>What BitLocker is supposed to do</h3>
+
+          <p>BitLocker is the full-disk encryption built into Windows. On a typical business laptop, when you turn the machine on, the Trusted Platform Module (TPM) measures the boot chain, decides everything looks right, and releases the disk encryption key automatically. The user logs in normally and never sees the encryption. The protection only kicks in if the disk is pulled out and read on another machine, or if the boot chain is tampered with: in those cases the TPM refuses to release the key and the data on the disk is just ciphertext.</p>
+
+          <p>That is the threat model BitLocker was designed for: a stolen laptop, where the thief should not be able to read the data. It is also the threat model that has been quietly eroding for years. Researchers have shown sniffing the TPM bus, attacking sleep states, and abusing Windows Recovery Environment to get at the unlocked volume. YellowKey is the newest entry in that lineage.</p>
+
+          <h3>Where Windows Recovery Environment fits in</h3>
+
+          <p>Windows Recovery Environment, or WinRE, is the small Windows image that boots when normal Windows cannot. It is what you land in when you hold Shift and click Restart, when the operating system fails to boot three times in a row, or when you boot from recovery media. WinRE has its own minimal Windows on top of which troubleshooting tools (System Restore, Startup Repair, the command prompt, Reset This PC) run. By design, WinRE has to be able to touch the BitLocker-protected volume to do its job, because most of what it does is repair a system drive that is otherwise encrypted.</p>
+
+          <p>The way Microsoft has historically handled that is to require a BitLocker recovery key, or to only release the key inside WinRE when the boot chain measurements still match the TPM's expectations. The recovery environment is also supposed to be a signed image: tampering with WinRE should trip Secure Boot and refuse to launch.</p>
+
+          <h3>What YellowKey actually does</h3>
+
+          <p>The YellowKey disclosure shows a way to slip past those checks. The high-level shape, lifted straight from the public README:</p>
+
+          <ol>
+            <li>The attacker prepares a USB stick. A specific folder structure is created at <code>System Volume Information\FsTx\</code> on the USB, containing a specific payload directory whose name matches a system GUID. (The folder name and GUID are in the public repo. I am intentionally not repeating them here, although a determined reader can look them up. The point is that the contents are not magic; they are a small, specific layout that triggers the bug.)</li>
+            <li>The USB stick is plugged into a target Windows 11 or Server 2022/2025 machine. The attacker triggers a reboot into WinRE: Shift-Restart from a logon screen, or, if the machine is powered off, by interrupting the normal boot a few times to force WinRE to launch on its own.</li>
+            <li>During the WinRE-initiated reboot, a specific keyboard combination is held. The README describes it as Ctrl held during the restart sequence. Under normal conditions this does nothing. With the staged payload on the USB stick, it lands the attacker in a shell that has full read/write access to the BitLocker-protected system drive.</li>
+          </ol>
+
+          <p>The researcher also notes that the same effect can be achieved without external media by writing the same files to the machine's own EFI System Partition. That is significant because the EFI partition is not protected by BitLocker and, on most fleet machines, is reachable from a live-boot USB or any administrative shell.</p>
+
+          <h3>Why this works at all, in one paragraph</h3>
+
+          <p>The mechanism the researcher exposes is that a component used by WinRE checks for a specific input combination at boot, and when it sees one, it accepts an external configuration written to the <code>FsTx</code> folder. That configuration ends up steering the recovery image toward launching a privileged shell with the BitLocker volume already mounted in cleartext. The bug, in the author's reading, is that this codepath should not exist in a production WinRE image, or if it does, it should require a signed configuration. The author goes further and notes that the same-named component exists in normal Windows installations but does not contain the trigger; only the WinRE image does. They speculate, without proof, that this is a leftover engineering or recovery interface that was never supposed to ship.</p>
+
+          <p>For the purposes of running a small business, the speculation does not matter. The shape of the bug does: <strong>any attacker with brief physical access to a Windows 11 machine can read the BitLocker-protected disk</strong>, unless the disk is locked behind something the TPM cannot release on its own.</p>
+
+          <h3>What this means for a stolen laptop</h3>
+
+          <p>If you hand a thief a Windows 11 laptop with TPM-only BitLocker, the thief can now plausibly read every file on it. Customer data. QuickBooks files. Saved Outlook profiles. Cached SharePoint files. The cached Azure AD primary refresh token, which in many configurations is enough to impersonate the user against Microsoft 365 from another device. That last one is the one that should focus a small business owner's attention. The data on the laptop is bad enough; the keys to the cloud accounts the laptop was already signed into is worse.</p>
+
+          <p>It is also worth being honest about the historical context. BitLocker with TPM-only protection has been considered marginal against a determined physical attacker for several years. Microsoft's own guidance has been moving toward TPM plus PIN, particularly for portable devices. YellowKey is not the first reason to add a pre-boot PIN; it is just the loudest recent one.</p>
+
+          <h2>GreenPlasma: how a CTFMON bug becomes a building block for SYSTEM</h2>
+
+          <h3>What CTFMON even is</h3>
+
+          <p>CTFMON.exe is one of those Windows processes that runs on every machine, that almost no one thinks about, and that has been quietly responsible for security bugs for two decades. The "CTF" stands for Collaborative Translation Framework. It is the back end of the Text Services Framework, or MSCTF, which is what Windows uses to route input from keyboards, alternative input methods, handwriting, speech, and the on-screen keyboard into every application that accepts text. Every text box in every application on a Windows machine, from Notepad to a UAC password prompt to a SYSTEM-owned service console, is wired into CTFMON.</p>
+
+          <p>The reason it shows up in security research is that CTFMON sits across a lot of trust boundaries. A standard user process talks to it. A SYSTEM process talks to it. A locked desktop talks to it. A logon screen talks to it. Any process that can convince CTFMON to do something on its behalf inherits a little bit of CTFMON's reach into those other contexts.</p>
+
+          <h3>Where kernel object directories come in</h3>
+
+          <p>Windows has a kernel-level namespace for "objects": named pipes, mutexes, events, memory section objects, and so on. These objects live inside <strong>object directories</strong>, which are arranged into a tree very similar to a filesystem. You can browse it with tools like Sysinternals' WinObj. Some of these directories are writable only by SYSTEM, like <code>\KnownDlls</code>, <code>\BaseNamedObjects</code> in the appropriate session, and various device and driver namespaces. The reason they are SYSTEM-writable is that the kernel and many privileged services assume the names inside them are trustworthy: a kernel driver that opens <code>\Device\Foo</code> implicitly trusts that nobody but SYSTEM could have created it.</p>
+
+          <p>"Trustworthy" is doing a lot of work in that sentence. The trust model is that if you can put something in a SYSTEM-only directory, you must have been SYSTEM, so whatever you put there is fine to use. That assumption is what GreenPlasma breaks.</p>
+
+          <h3>What GreenPlasma actually does</h3>
+
+          <p>The proof-of-concept code in the repo, as a standard user, gets CTFMON to create an arbitrary <strong>memory section object</strong> inside one of those SYSTEM-writable directories. A section object is a kernel object that represents a region of memory that can be mapped into a process's address space. The attacker, who normally cannot place anything in a SYSTEM-only directory, now has a named object sitting where SYSTEM-owned code expects to find SYSTEM-owned data.</p>
+
+          <p>On its own, this is not root. The PoC stops at "I created the object." What turns it into a privilege escalation is the next step the author deliberately leaves to the reader: find a SYSTEM-owned service or kernel driver that opens that name and reads from it, and you have a primitive for influencing that privileged code. Depending on the consumer, that can be a controlled memory disclosure, a controlled code path, or in the worst case a controlled write into kernel memory. The author frames the missing step as a CTF challenge; in practice, people will write it, and some of them will publish.</p>
+
+          <h3>Why this kind of bug matters even when it is "just" local</h3>
+
+          <p>Local privilege escalation is the unglamorous workhorse of every modern intrusion. A phishing email or a browser exploit gives the attacker code running as the user. By itself, that is annoying. Stack a local privilege-escalation primitive on top, and the attacker becomes SYSTEM. Once they are SYSTEM on one machine, they can dump credentials from memory, register a persistence mechanism, disable defenses, and start moving laterally. In every <a href="ransomware-2026-how-it-gets-in.html">ransomware case study I've written about</a>, there is a local-privesc step in the chain. GreenPlasma is the kind of building block that ends up in that step.</p>
+
+          <p>So while the PoC by itself does not pop a SYSTEM shell, the right way for a defender to read it is: <strong>this is a primitive that lowers the cost of building a SYSTEM-level exploit on every supported Windows 11 and Server 2022/2026 build, until Microsoft fixes the CTFMON path</strong>.</p>
+
+          <h2>What's actually at risk for a small business</h2>
+
+          <h3>YellowKey: every laptop that leaves the building</h3>
+
+          <p>The threat is physical. A laptop left in a car, a laptop forgotten at a customer site, a laptop that an employee hands to a "technician" for a fake repair. The attacker needs a few uninterrupted minutes with the device powered on or off, a USB stick, and the public disclosure. There is no remote variant. If your fleet stays inside the office and never leaves, your exposure is small. If your fleet is half a dozen sales laptops driving up and down US-101, your exposure is real.</p>
+
+          <p>The harder cost is not the data on the drive. It is the credentials. A modern Windows laptop signed into Microsoft 365 stores cached tokens and refresh tokens that let an attacker impersonate the user against your tenant for hours to days. The same is true of cached VPN credentials, saved passwords in browsers, and any local copies of work files. The drive being readable means the cloud accounts are functionally readable too, unless you have additional controls in place.</p>
+
+          <h3>GreenPlasma: every Windows 11 endpoint, every Server 2022/2026 host</h3>
+
+          <p>The threat is remote-then-local. An attacker has to first land code on the machine as a standard user, which they typically do through phishing, a malicious document, a browser bug, or stolen credentials. GreenPlasma then gives them a faster path from "code as a user" to "code as SYSTEM," and from there to the full toolkit of post-exploitation. Servers matter most. A Windows Server 2022 file server, terminal server, or RDS host that lets the wrong user reach a shell is a worse exposure than a laptop, because there is more privileged data sitting on it.</p>
+
+          <h2>What to do, in order</h2>
+
+          <h3>1. Turn on a BitLocker pre-boot PIN on portable devices</h3>
+
+          <p>This is the single most important control specifically for YellowKey, and a good idea regardless. With TPM plus PIN, the TPM will not release the BitLocker key until the user types the PIN at boot. Holding Ctrl during a WinRE reboot does not help an attacker who cannot get the drive unlocked in the first place. You set it through Group Policy under <code>Computer Configuration &rsaquo; Administrative Templates &rsaquo; Windows Components &rsaquo; BitLocker Drive Encryption &rsaquo; Operating System Drives</code>, with "Require additional authentication at startup" set to enabled and a PIN required. Pair this with a recovery key escrowed to Microsoft Entra ID or Active Directory so a forgotten PIN does not become a stuck laptop.</p>
+
+          <p>The trade-off is user friction: people will have to type one more thing at boot. In my experience, owners agree to it once they see what a stolen laptop costs them in incident response and notification. For C-TPAT and similar compliance regimes, a pre-boot PIN is increasingly assumed.</p>
+
+          <h3>2. Harden or disable Windows Recovery Environment on the fleet</h3>
+
+          <p>WinRE is useful but it is also the attack surface YellowKey lives on. For a managed fleet that does not rely on local WinRE recovery (because you reimage from MDT, Intune, or a vendor image instead), you can disable it: <code>reagentc /disable</code> from an elevated prompt, optionally followed by removing the WinRE image. For machines where you want to keep recovery available, make sure the WinRE partition is up to date, Secure Boot is enforced, and the recovery image is the one Microsoft ships, not a vendor variant that may carry the vulnerable component longer. When the patch ships, apply it to the WinRE image too: WinRE has its own update path, and the cumulative monthly update does not always cover it without an extra step (<code>reagentc /info</code> shows the current image; <code>DISM</code> applies updates).</p>
+
+          <h3>3. Patch fast when Microsoft ships</h3>
+
+          <p>Microsoft is aware of both disclosures. When the cumulative updates land that address them, you want to be on a patch cadence that absorbs them within days, not months. I wrote about this at length in the post on <a href="claude-mythos-firefox-271-vulnerabilities-patch-cadence-smb.html">why patch cadence is shifting from quarterly to continuous</a>. The TL;DR is that auto-patch through your endpoint management tool, plus someone whose job is to watch the CVE feed, is the only configuration that keeps up with current disclosure volume.</p>
+
+          <h3>4. Reduce blast radius: identity hardening</h3>
+
+          <p>Both bugs hurt less in environments with disciplined identity. Conditional Access policies that block sign-ins from unmanaged devices mean a stolen primary refresh token gets you less. Phishing-resistant MFA (FIDO2 keys, Windows Hello for Business) means cached passwords are not the keys to the kingdom. No persistent local administrators on user laptops means a local-privesc primitive lands in an account that is already constrained. The list overlaps heavily with the <a href="small-business-cybersecurity-mistakes.html">cybersecurity mistakes I see in almost every small business</a>. Closing those gaps is the durable answer, not a per-CVE fire drill.</p>
+
+          <h3>5. Physical security, the unglamorous part</h3>
+
+          <p>A laptop in a locked office is a much harder target than a laptop in the back of a car. A server in a locked rack with logged physical access is harder than a server on a shelf in a closet. Asset tags, cable locks, and a clear policy about devices off-premises are not exciting controls, but they cut the population of attackable machines down to the ones that actually need additional engineering.</p>
+
+          <h2>How to think about this kind of disclosure in general</h2>
+
+          <p>It is easy to read about a BitLocker bypass and conclude that BitLocker is broken, or to read about a CTFMON bug and conclude that Windows is broken. Neither conclusion is useful. The honest reading is that complex systems leak attack surface over time, that public researchers are getting better and faster at finding the leaks (a theme I covered in the <a href="claude-mythos-firefox-271-vulnerabilities-patch-cadence-smb.html">Claude Mythos post</a> last week), and that the defenses that matter are the ones that survive any individual bug: defense in depth, fast patching, hardware-backed identity, and a physical posture that matches the threat model.</p>
+
+          <p>YellowKey and GreenPlasma are interesting because they are accessible. The README on each repo is short enough that a smart undergraduate can follow it. That is the new normal. The window when a disclosure is "researchers only" used to be months. It is now days. The defender response that worked for the old window does not work for the new one.</p>
+
+          <h2>FAQs about YellowKey and GreenPlasma</h2>
+
+          <h3>What is YellowKey and what does it bypass?</h3>
+          <p>YellowKey is a publicly disclosed BitLocker bypass that uses Windows Recovery Environment to gain unrestricted access to an encrypted system drive on Windows 11 and Windows Server 2022/2025. It requires physical access. The attacker stages files on a USB stick (or the EFI partition) and triggers a specific key combination during a WinRE-initiated restart to land in a shell with read/write access to the BitLocker volume. Windows 10 is not affected.</p>
+
+          <h3>What is GreenPlasma?</h3>
+          <p>GreenPlasma is a proof-of-concept that abuses CTFMON, the Text Services Framework process, to create memory section objects inside Windows kernel object directories that are writable by SYSTEM. By itself the PoC does not yield SYSTEM, but it gives an attacker a low-cost primitive for placing data where privileged code expects to find it. The published code is intentionally partial; the author left the final escalation as a research exercise.</p>
+
+          <h3>Does YellowKey work without physical access?</h3>
+          <p>No. YellowKey requires the attacker to either insert a USB stick into the target machine or write to the EFI System Partition. That means a stolen laptop, an office walk-in, a service drop-off where the device is left unattended, or a malicious insider. For a small business, this maps to physical security and pre-boot PIN policy, not to perimeter or email controls.</p>
+
+          <h3>If my laptop has BitLocker turned on, am I safe from a thief?</h3>
+          <p>BitLocker alone with TPM-only protection has been considered marginal against a determined physical attacker for years. YellowKey is the latest data point. The defensible posture is TPM plus a pre-boot PIN, with WinRE either hardened or disabled on managed fleets. A stolen laptop with TPM-only BitLocker should be treated as a potential data breach until proven otherwise.</p>
+
+          <h3>Is there a patch yet?</h3>
+          <p>As of publication, Microsoft has acknowledged both disclosures and triage is in progress. We will update this post when patches ship. The mitigations above (pre-boot PIN, WinRE hardening, physical security, fast patching) are the durable answers regardless of patch status.</p>
+
+          <h3>Does this affect macOS or Linux?</h3>
+          <p>No. Both bugs are specific to Windows components: WinRE in the YellowKey case, the Windows Text Services Framework in the GreenPlasma case. macOS FileVault and Linux dm-crypt/LUKS have their own histories of physical-access research, but neither shares the WinRE codepath. On the local-privesc side, every operating system has its analog; the relevant question is patch cadence, not the existence of bugs.</p>
+
+          <h3>Why publish the bugs publicly at all?</h3>
+          <p>Coordinated public disclosure is how the security community pressures vendors to fix things and how defenders learn what to look for. The researcher credited Microsoft's MORSE, MSTIC, and Microsoft GHOST teams on YellowKey, which is consistent with coordinated reporting. The GreenPlasma PoC is intentionally incomplete for the same reason: the author wants the bug fixed, not weaponized. The reason a small business owner should care is not the ethics of disclosure; it is that you should be on the patching side of the disclosure curve.</p>
+
+          <div class="blog-post-cta">
+            <h3>Want a real BitLocker and patching review?</h3>
+            <p>30 minutes with a DoD-cleared engineer. Honest read on where your laptops, recovery environment, and patch cadence are exposed. Written follow-up with priorities and rough cost. No sales script.</p>
+            <a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer">
+              <i class="fi fi-rs-calendar-day" aria-hidden="true"></i>
+              Book your free assessment
+            </a>
+          </div>
+
+          <p style="margin-top: 1.5rem; font-size: 0.95rem; color: rgba(0,0,0,0.7);">
+            Prefer to talk first? Email <a href="mailto:sales@ghosxt.com">sales@ghosxt.com</a> or call <a href="tel:+18312040501">(831) 204-0501</a>.
+          </p>
+
+          <p style="margin-top: 2rem; padding: 1rem 1.25rem; border-left: 3px solid rgba(0,0,0,0.2); font-size: 0.9rem; color: rgba(0,0,0,0.7);">
+            <strong>About this post.</strong> This article discusses publicly disclosed Windows vulnerabilities for defensive and educational purposes. It does not contain working exploit code or detailed replication steps beyond what the original researcher has already published. Any testing of physical-access techniques should be performed only on systems you own or are explicitly authorized to assess. If you believe a vulnerability affects your organization, follow your incident-response plan and coordinate with your IT provider before taking action.
+          </p>
+        </div>
+      </div>
+    </main>
+    <footer class="footer footer-visible" id="footerSection">
+      <div class="footer-container">
+        <div class="footer-grid">
+          <div class="footer-column"><h3 class="footer-column-title">Main Menu</h3><ul class="footer-links"><li><a href="../index.html">Home</a></li><li><a href="../about.html">About</a></li><li><a href="../services.html">Services</a></li><li><a href="../pricing.html">Pricing</a></li><li><a href="../contact.html">Contact</a></li></ul></div>
+          <div class="footer-column"><h3 class="footer-column-title">Services</h3>
+            <ul class="footer-links">
+              <li><a href="../managed-it-services.html">Managed IT Services</a></li>
+              <li><a href="../cybersecurity.html">Cybersecurity</a></li>
+              <li><a href="../cloud-services.html">Cloud Services</a></li>
+              <li><a href="../backup-disaster-recovery.html">Backup &amp; Disaster Recovery</a></li>
+              <li><a href="../network-design.html">Network Design</a></li>
+              <li><a href="../website-development.html">Web Development</a></li>
+              <li><a href="../ctpat.html">C-TPAT Compliance</a></li>
+              <li><a href="../trucking-it-services.html">Trucking &amp; Logistics IT</a></li>
+              <li><a href="../agriculture-it-services.html">Agriculture &amp; Agribusiness IT</a></li>
+              <li><a href="../manufacturing-it-services.html">Manufacturing &amp; Industrial IT</a></li>
+              <li><a href="../professional-services-it.html">SMB Office &amp; Professional Services IT</a></li>
+              <li><a href="../healthcare-it-services.html">Healthcare &amp; Medical IT</a></li>
+              <li><a href="../property-management-it-services.html">Property Management IT</a></li>
+              <li><a href="../engineering-it-services.html">Engineering &amp; Architecture IT</a></li>
+            </ul></div>
+          <div class="footer-column"><h3 class="footer-column-title">Resources</h3><ul class="footer-links"><li><a href="index.html">Blog</a></li><li><a href="../privacy-policy.html">Privacy Policy</a></li><li><a href="https://ticket.ghosxt.com/" target="_blank" rel="noopener noreferrer">Client Portal</a></li><li><a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer">Schedule Free IT Assessment</a></li></ul></div>
+        </div>
+        <div class="service-areas-footer">
+          <h3>Service Areas</h3>
+          <ul><li><a href="../salinas.html">Salinas</a></li><li><a href="../monterey.html">Monterey</a></li><li><a href="../watsonville.html">Watsonville</a></li><li><a href="../hollister.html">Hollister</a></li><li><a href="../santa-cruz.html">Santa Cruz</a></li><li><a href="../gilroy.html">Gilroy</a></li><li><a href="../san-jose.html">San Jose</a></li><li><a href="../pacific-grove.html">Pacific Grove</a></li><li><a href="../carmel.html">Carmel</a></li><li><a href="../seaside.html">Seaside</a></li><li><a href="../marina.html">Marina</a></li></ul>
+        </div>
+      </div>
+    </footer>
+    <script src="../assets/js/main.js" defer></script>
+  </body>
+</html>
