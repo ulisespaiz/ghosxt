@@ -22,7 +22,7 @@
     <meta property="og:url" content="https://ghosxt.com/ghosxt-cares.html" />
     <meta property="og:title" content="Ghosxt Cares – Free IT Foundations for Monterey County Nonprofits" />
     <meta property="og:description" content="Free IT setup for Monterey County 501(c)(3) nonprofits. Microsoft 365, custom domain and email, basic website, DNS, and onboarding. Zero labor cost." />
-    <meta property="og:image" content="https://ghosxt.com/assets/img/og-image.png" />
+    <meta property="og:image" content="https://ghosxt.com/assets/img/og/ghosxt-cares.png" />
     <meta property="og:site_name" content="Ghosxt" />
 
     <!-- FAVICON -->
@@ -33,6 +33,8 @@
     <!-- PRECONNECT -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- ghosxt:roboto-preload -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" />
     <link rel="preconnect" href="https://cdn-uicons.flaticon.com" />
 
     <!-- FONTS -->
@@ -46,6 +48,33 @@
     <link rel="stylesheet" href="assets/css/ghosxt-cares.css" />
     <link rel="stylesheet" media="print" onload="this.media='all'" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" />
     <noscript><link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" /></noscript>
+    <!-- ghosxt:cf-web-analytics -->
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"REPLACE_WITH_CF_WEB_ANALYTICS_TOKEN"}'></script>
+    <!-- ghosxt:extra-schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://ghosxt.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Ghosxt Cares",
+              "item": "https://ghosxt.com/ghosxt-cares.html"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
   </head>
 
   <body>
@@ -107,7 +136,7 @@
       <div class="navbar-container">
         <div class="navbar-left">
           <a href="index.html" class="navbar-logo">
-            <img
+            <img fetchpriority="high" loading="eager"
               src="assets/img/ghosxt logo.webp"
               alt="Ghosxt logo"
               width="48"
@@ -676,5 +705,10 @@
 
       });
     </script>
+    <!-- ghosxt:mobile-cta-bar -->
+    <div class="mobile-cta-bar" aria-label="Quick contact">
+      <a class="mcta-primary" href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer">Book free assessment</a>
+      <a class="mcta-secondary" href="tel:+18312040501">Call (831) 204-0501</a>
+    </div>
   </body>
 </html>

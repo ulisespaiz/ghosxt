@@ -142,10 +142,14 @@ async function handleContact(request, env) {
     message: String(data.message || "").trim(),
   };
 
+  const OPTIONAL_FIELDS = new Set(["phone"]);
   const errors = {};
   for (const [k, v] of Object.entries(fields)) {
-    if (!v) errors[k] = "Required";
-    else if (v.length > MAX_FIELD_LENGTH[k]) errors[k] = "Too long";
+    if (!v) {
+      if (!OPTIONAL_FIELDS.has(k)) errors[k] = "Required";
+    } else if (v.length > MAX_FIELD_LENGTH[k]) {
+      errors[k] = "Too long";
+    }
   }
   if (!errors.email && !EMAIL_RE.test(fields.email)) {
     errors.email = "Invalid email";
@@ -164,12 +168,13 @@ async function handleContact(request, env) {
     return jsonResponse(403, { error: "Challenge failed" });
   }
 
+  const phoneDisplay = fields.phone || "(not provided)";
   const subject = `New contact form submission — ${fields.company}`;
   const text = [
     `Name:    ${fields.name}`,
     `Company: ${fields.company}`,
     `Email:   ${fields.email}`,
-    `Phone:   ${fields.phone}`,
+    `Phone:   ${phoneDisplay}`,
     "",
     "Message:",
     fields.message,
@@ -185,7 +190,7 @@ async function handleContact(request, env) {
 <tr><td><b>Name</b></td><td>${escapeHtml(fields.name)}</td></tr>
 <tr><td><b>Company</b></td><td>${escapeHtml(fields.company)}</td></tr>
 <tr><td><b>Email</b></td><td>${escapeHtml(fields.email)}</td></tr>
-<tr><td><b>Phone</b></td><td>${escapeHtml(fields.phone)}</td></tr>
+<tr><td><b>Phone</b></td><td>${escapeHtml(phoneDisplay)}</td></tr>
 </table>
 <h3 style="margin:16px 0 4px">Message</h3>
 <pre style="white-space:pre-wrap;font-family:inherit;background:#f6f6f6;padding:12px;border-radius:6px">${escapeHtml(fields.message)}</pre>
@@ -207,11 +212,32 @@ async function handleContact(request, env) {
   return jsonResponse(200, { ok: true });
 }
 
+async function handleTrack(request) {
+  // Lightweight conversion-event sink. Currently a no-op so that
+  // navigator.sendBeacon calls from assets/js/main.js do not 404. Events also
+  // surface in Cloudflare Web Analytics via the page beacon. Logged at
+  // info level so the worker tail captures them while a richer pipeline is
+  // wired up.
+  if (request.method !== "POST") {
+    return new Response(null, { status: 204 });
+  }
+  try {
+    const text = await request.text();
+    if (text && text.length < 4096) {
+      console.log("track", text.slice(0, 500));
+    }
+  } catch {}
+  return new Response(null, { status: 204, headers: { "Cache-Control": "no-store" } });
+}
+
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
     if (url.pathname === "/api/contact") {
       return handleContact(request, env);
+    }
+    if (url.pathname === "/api/track") {
+      return handleTrack(request);
     }
     return env.ASSETS.fetch(request);
   },

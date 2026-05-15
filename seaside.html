@@ -10,18 +10,20 @@
     <meta property="og:url" content="https://ghosxt.com/seaside.html" />
     <meta property="og:title" content="Managed IT Services in Seaside, CA | Ghosxt" />
     <meta property="og:description" content="DoD-cleared IT for Seaside small business and the former Fort Ord area." />
-    <meta property="og:image" content="https://ghosxt.com/assets/img/og-image.png" />
+    <meta property="og:image" content="https://ghosxt.com/assets/img/og/seaside.png" />
     <meta property="og:site_name" content="Ghosxt" />
     <meta name="robots" content="index, follow" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Managed IT Services in Seaside, CA | Ghosxt" />
     <meta name="twitter:description" content="DoD-cleared IT for Seaside small business." />
-    <meta name="twitter:image" content="https://ghosxt.com/assets/img/og-image.png" />
+    <meta name="twitter:image" content="https://ghosxt.com/assets/img/og/seaside.png" />
     <link rel="icon" href="assets/img/favicon.ico" sizes="any" />
     <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- ghosxt:roboto-preload -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" />
     <link rel="preconnect" href="https://cdn-uicons.flaticon.com" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/main.css" />
@@ -42,6 +44,47 @@
         ]
       }
     </script>
+    <!-- ghosxt:cf-web-analytics -->
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"REPLACE_WITH_CF_WEB_ANALYTICS_TOKEN"}'></script>
+    <!-- ghosxt:extra-schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://ghosxt.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Seaside",
+              "item": "https://ghosxt.com/seaside.html"
+            }
+          ]
+        },
+        {
+          "@type": "Service",
+          "@id": "https://ghosxt.com/seaside.html#service",
+          "name": "Managed IT Services in Seaside, CA",
+          "serviceType": "Managed IT Services",
+          "url": "https://ghosxt.com/seaside.html",
+          "provider": {
+            "@id": "https://ghosxt.com/#business"
+          },
+          "areaServed": {
+            "@type": "City",
+            "name": "Seaside"
+          }
+        }
+      ]
+    }
+    </script>
   </head>
   <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -50,7 +93,7 @@
     <div class="top-banner" id="topBanner"><div class="banner-container"><div class="banner-content"><span class="banner-text">Need Remote Support? ►</span><a target="_blank" rel="noopener noreferrer" href="https://ticket.ghosxt.com/" class="banner-btn"><i class="fi fi-rs-ticket-alt"></i><span>Visit Client Portal</span></a></div></div></div>
     <nav class="navbar" aria-label="Main navigation">
       <div class="navbar-container">
-        <div class="navbar-left"><a href="index.html" class="navbar-logo"><img src="assets/img/ghosxt logo.webp" alt="Ghosxt logo" width="48" height="48" /><span>GHOSXT</span></a></div>
+        <div class="navbar-left"><a href="index.html" class="navbar-logo"><img fetchpriority="high" loading="eager" src="assets/img/ghosxt logo.webp" alt="Ghosxt logo" width="48" height="48" /><span>GHOSXT</span></a></div>
         <div class="navbar-right">
           <div class="navbar-menu">
             <a href="index.html" class="navbar-link">Home</a>
@@ -192,5 +235,10 @@
       </div>
     </footer>
     <script src="assets/js/main.js" defer></script>
+    <!-- ghosxt:mobile-cta-bar -->
+    <div class="mobile-cta-bar" aria-label="Quick contact">
+      <a class="mcta-primary" href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer">Book free assessment</a>
+      <a class="mcta-secondary" href="tel:+18312040501">Call (831) 204-0501</a>
+    </div>
   </body>
 </html>
