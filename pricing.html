@@ -5,9 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- PRIMARY SEO -->
-    <title>
-      Pricing | Managed IT Service Plans for Small Business | Ghosxt
-    </title>
+    <title>Pricing | Managed IT Service Plans for Small Business | Ghosxt</title>
     <meta
       name="description"
       content="Transparent managed IT pricing. Foundation $600/mo flat (1-4 users). Essential $125, Professional $175, Premium $250 per user/month."
@@ -24,7 +22,7 @@
     />
     <meta
       property="og:image"
-      content="https://ghosxt.com/assets/img/og-image.png"
+      content="https://ghosxt.com/assets/img/og/pricing.png"
     />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -46,7 +44,7 @@
     />
     <meta
       name="twitter:image"
-      content="https://ghosxt.com/assets/img/og-image.png"
+      content="https://ghosxt.com/assets/img/og/pricing.png"
     />
 
     <!-- FAVICON -->
@@ -58,6 +56,8 @@
     <!-- PERFORMANCE -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- ghosxt:roboto-preload -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" />
     <link rel="preconnect" href="https://cdn-uicons.flaticon.com" />
     <link rel="preconnect" href="https://calendly.com" />
 
@@ -202,6 +202,33 @@
         ]
       }
     </script>
+    <!-- ghosxt:cf-web-analytics -->
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"REPLACE_WITH_CF_WEB_ANALYTICS_TOKEN"}'></script>
+    <!-- ghosxt:extra-schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://ghosxt.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Pricing",
+              "item": "https://ghosxt.com/pricing.html"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
   </head>
   <body>
     <div class="grain-overlay"></div>
@@ -259,7 +286,7 @@
       <div class="navbar-container">
         <div class="navbar-left">
           <a href="index.html" class="navbar-logo">
-            <img
+            <img fetchpriority="high" loading="eager"
               src="assets/img/ghosxt logo.webp"
               alt="Ghosxt logo"
               width="48"
@@ -2143,5 +2170,10 @@
 
     <script src="assets/js/main.js" defer></script>
     <script src="assets/js/pricing.js?v=20260506" defer></script>
+    <!-- ghosxt:mobile-cta-bar -->
+    <div class="mobile-cta-bar" aria-label="Quick contact">
+      <a class="mcta-primary" href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer">Book free assessment</a>
+      <a class="mcta-secondary" href="tel:+18312040501">Call (831) 204-0501</a>
+    </div>
   </body>
 </html>

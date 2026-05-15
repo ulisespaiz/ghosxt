@@ -1979,3 +1979,130 @@ summary:focus-visible,
     animation: none !important;
   }
 }
+
+/* ------ CONTACT FORM helpers (optional label + response promise) ------ */
+.form-label-optional {
+  font-weight: 400;
+  font-size: 0.85em;
+  color: #6b7280;
+  margin-left: 4px;
+}
+.form-response-promise {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 12px 0 8px;
+  padding: 10px 12px;
+  background: rgba(230, 57, 70, 0.06);
+  border-left: 3px solid var(--ghosxt-red-0, #e63946);
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: #2a2a2a;
+  line-height: 1.4;
+}
+.form-response-promise i {
+  color: var(--ghosxt-red-0, #e63946);
+  flex-shrink: 0;
+}
+
+/* ------ CALENDLY INLINE EMBED on contact page ------ */
+.calendly-embed-section {
+  padding: 60px 20px;
+  background: #f8f9fa;
+}
+.calendly-embed-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.calendly-embed-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+.calendly-embed-header h2 {
+  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  margin: 0 0 12px;
+  color: #111;
+}
+.calendly-embed-header p {
+  color: #4b5563;
+  max-width: 640px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+.calendly-inline-widget {
+  min-width: 320px;
+  height: 720px;
+}
+@media (max-width: 768px) {
+  .calendly-inline-widget {
+    height: 1000px;
+  }
+}
+
+/* ------ MOBILE STICKY CTA BAR ------ */
+.mobile-cta-bar {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-cta-bar {
+    display: flex;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 950;
+    gap: 8px;
+    padding: 8px 10px calc(8px + env(safe-area-inset-bottom));
+    background: rgba(15, 15, 18, 0.96);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 -6px 18px rgba(0, 0, 0, 0.25);
+  }
+  .mobile-cta-bar a {
+    flex: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    min-height: 44px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    line-height: 1.1;
+    text-align: center;
+  }
+  .mobile-cta-bar .mcta-primary {
+    background: var(--ghosxt-red-0, #e63946);
+    color: #fff;
+  }
+  .mobile-cta-bar .mcta-secondary {
+    background: #fff;
+    color: #111;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+  }
+  /* Lift the existing scroll-to-top so it doesn't sit under the bar */
+  .scroll-to-top {
+    bottom: 76px !important;
+  }
+  /* Avoid the bar covering the page footer / form action area */
+  body {
+    padding-bottom: 64px;
+  }
+}
+
+/* Hide on the contact page where the form is the primary CTA */
+body.no-mobile-cta-bar .mobile-cta-bar {
+  display: none !important;
+}
+@media (max-width: 768px) {
+  body.no-mobile-cta-bar {
+    padding-bottom: 0;
+  }
+  body.no-mobile-cta-bar .scroll-to-top {
+    bottom: 24px !important;
+  }
+}

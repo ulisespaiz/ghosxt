@@ -15,7 +15,7 @@
     <meta property="og:url" content="https://ghosxt.com/engineering-it-services.html" />
     <meta property="og:title" content="IT for Engineering &amp; A/E Firms: CAD, BIM, ITAR | Ghosxt" />
     <meta property="og:description" content="Managed IT and CAD/PDM performance for California A/E firms. SolidWorks, Revit, Bentley uptime, ITAR controls, DoD-cleared engineering." />
-    <meta property="og:image" content="https://ghosxt.com/assets/img/og-image.png" />
+    <meta property="og:image" content="https://ghosxt.com/assets/img/og/engineering-it-services.png" />
     <meta property="og:site_name" content="Ghosxt" />
 
     <meta name="robots" content="index, follow" />
@@ -23,7 +23,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="IT Services for Engineering &amp; Architecture Firms | Ghosxt" />
     <meta name="twitter:description" content="CAD/PDM performance, engineering data security, multi-site replicated vaults. DoD-cleared engineering." />
-    <meta name="twitter:image" content="https://ghosxt.com/assets/img/og-image.png" />
+    <meta name="twitter:image" content="https://ghosxt.com/assets/img/og/engineering-it-services.png" />
 
     <link rel="icon" href="assets/img/favicon.ico" sizes="any" />
     <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
@@ -31,6 +31,8 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- ghosxt:roboto-preload -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" />
     <link rel="preconnect" href="https://cdn-uicons.flaticon.com" />
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -245,6 +247,64 @@
         ]
       }
     </script>
+    <!-- ghosxt:cf-web-analytics -->
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"REPLACE_WITH_CF_WEB_ANALYTICS_TOKEN"}'></script>
+    <!-- ghosxt:extra-schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://ghosxt.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Engineering IT Services",
+              "item": "https://ghosxt.com/engineering-it-services.html"
+            }
+          ]
+        },
+        {
+          "@type": "Service",
+          "@id": "https://ghosxt.com/engineering-it-services.html#service",
+          "name": "Engineering IT Services",
+          "url": "https://ghosxt.com/engineering-it-services.html",
+          "provider": {
+            "@id": "https://ghosxt.com/#business"
+          },
+          "areaServed": [
+            {
+              "@type": "State",
+              "name": "California"
+            },
+            {
+              "@type": "City",
+              "name": "Salinas"
+            },
+            {
+              "@type": "City",
+              "name": "Monterey"
+            },
+            {
+              "@type": "City",
+              "name": "Santa Cruz"
+            },
+            {
+              "@type": "City",
+              "name": "San Jose"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
   </head>
   <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -286,7 +346,7 @@
       <div class="navbar-container">
         <div class="navbar-left">
           <a href="index.html" class="navbar-logo">
-            <img src="assets/img/ghosxt logo.webp" alt="Ghosxt logo" width="48" height="48" />
+            <img fetchpriority="high" loading="eager" src="assets/img/ghosxt logo.webp" alt="Ghosxt logo" width="48" height="48" />
             <span>GHOSXT</span>
           </a>
         </div>
@@ -787,5 +847,10 @@
     </footer>
 
     <script src="assets/js/main.js" defer></script>
+    <!-- ghosxt:mobile-cta-bar -->
+    <div class="mobile-cta-bar" aria-label="Quick contact">
+      <a class="mcta-primary" href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer">Book free assessment</a>
+      <a class="mcta-secondary" href="tel:+18312040501">Call (831) 204-0501</a>
+    </div>
   </body>
 </html>

@@ -1,3 +1,57 @@
+// Conversion event tracking.
+// Sends a JSON beacon to /api/track for high-intent clicks (Calendly, tel:,
+// contact form submit). The endpoint is currently a no-op on the worker side;
+// these events also surface in Cloudflare Web Analytics via the data-cf-beacon
+// scripts. Keeping this client-side hook in one place so we can swap the
+// destination later without editing every page.
+(function () {
+  function send(name, detail) {
+    try {
+      const payload = JSON.stringify({
+        e: name,
+        d: detail || {},
+        p: location.pathname,
+        t: Date.now(),
+      });
+      if (navigator.sendBeacon) {
+        navigator.sendBeacon('/api/track', new Blob([payload], { type: 'application/json' }));
+      }
+    } catch (_) {}
+  }
+
+  document.addEventListener('click', function (e) {
+    const a = e.target.closest && e.target.closest('a[href]');
+    if (!a) return;
+    const href = a.getAttribute('href') || '';
+    if (href.indexOf('calendly.com') !== -1) {
+      send('cta_calendly_click', { href: href, text: (a.textContent || '').trim().slice(0, 80) });
+    } else if (href.indexOf('tel:') === 0) {
+      send('cta_tel_click', { href: href });
+    }
+  }, { capture: true, passive: true });
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('contactForm');
+    if (!form) return;
+    form.addEventListener('submit', function () {
+      send('contact_form_submit_attempt', {});
+    });
+    document.addEventListener('contact:success', function () {
+      send('contact_form_submit_success', {});
+    });
+    document.addEventListener('calendly.event_scheduled', function () {
+      send('calendly_booking_complete', {});
+    });
+    window.addEventListener('message', function (e) {
+      if (!e || !e.data || typeof e.data !== 'object') return;
+      if (e.data.event === 'calendly.event_scheduled') {
+        send('calendly_booking_complete', {});
+      }
+    });
+  });
+})();
+
+
 // Scroll to Top Button Functionality
 document.addEventListener('DOMContentLoaded', function() {
     const scrollToTopBtn = document.getElementById('scrollToTop');

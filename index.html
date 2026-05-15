@@ -25,7 +25,7 @@
     />
     <meta
       property="og:image"
-      content="https://ghosxt.com/assets/img/og-image.png"
+      content="https://ghosxt.com/assets/img/og/home.png"
     />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -50,7 +50,7 @@
     />
     <meta
       name="twitter:image"
-      content="https://ghosxt.com/assets/img/og-image.png"
+      content="https://ghosxt.com/assets/img/og/home.png"
     />
 
     <!-- FAVICON -->
@@ -62,6 +62,8 @@
     <!-- PERFORMANCE: Preconnect to external origins -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- ghosxt:roboto-preload -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" />
     <link rel="preconnect" href="https://cdn-uicons.flaticon.com" />
     <link rel="preconnect" href="https://calendly.com" />
 
@@ -263,6 +265,8 @@
         ]
       }
     </script>
+    <!-- ghosxt:cf-web-analytics -->
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"REPLACE_WITH_CF_WEB_ANALYTICS_TOKEN"}'></script>
   </head>
   <body>
     <!-- ACCESSIBILITY: Skip link -->
@@ -327,7 +331,7 @@
       <div class="navbar-container">
         <div class="navbar-left">
           <a href="index.html" class="navbar-logo">
-            <img
+            <img fetchpriority="high" loading="eager"
               src="assets/img/ghosxt logo.webp"
               alt="Ghosxt logo"
               width="48"
@@ -464,9 +468,9 @@
             make sure they don't start.
           </h1>
           <p class="hero-subtitle">
-            Ghosxt is run by a cleared DoD IT engineer who's built and secured
-            infrastructure for thousands of government endpoints. Your business
-            deserves that same standard — without the federal budget.
+            Get government-grade IT and cybersecurity for less than one in-house
+            hire. One DoD-cleared engineer, real local response across
+            California, no enterprise price tag.
           </p>
           <div class="hero-buttons">
             <a
@@ -3650,5 +3654,10 @@
         setTimeout(animateLEDs, 500);
       });
     </script>
+    <!-- ghosxt:mobile-cta-bar -->
+    <div class="mobile-cta-bar" aria-label="Quick contact">
+      <a class="mcta-primary" href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer">Book free assessment</a>
+      <a class="mcta-secondary" href="tel:+18312040501">Call (831) 204-0501</a>
+    </div>
   </body>
 </html>
