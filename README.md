@@ -25,6 +25,6 @@ python3 scripts/generate-og-images.py
 
 The script reads `*.html` and `blog/*.html`, skips pages with a `noindex` robots meta tag, splits the title at `|` / `–` / `—` / `-`, and renders a 1200x630 PNG. Output filenames map `index.html` → `home.png`, `blog/foo.html` → `blog-foo.png`, and everything else to `<slug-without-extension>.png`. Drop `Roboto-Bold.ttf` and `Roboto-Regular.ttf` into `scripts/fonts/` for on-brand typography; otherwise the script falls back to DejaVu Sans.
 
-## Cloudflare Web Analytics token
+## Cloudflare Web Analytics
 
-Every page loads the Cloudflare Web Analytics beacon. The `data-cf-beacon` attribute currently contains the placeholder `REPLACE_WITH_CF_WEB_ANALYTICS_TOKEN` — replace it with the real site token from the Cloudflare dashboard (Analytics → Web Analytics → site → Token). Search-and-replace across all `*.html` and `blog/*.html` once.
+Every page loads the Cloudflare Web Analytics beacon via a `<script>` tag in `<head>` with the site token in `data-cf-beacon`. The live data lives at Cloudflare → Analytics & Logs → Web Analytics → `ghosxt.com`. If the token ever needs to be rotated, regenerate it in the dashboard (Manage site → "Enable with JS Snippet installation") and search-and-replace the old token across all `*.html` and `blog/*.html` files.
