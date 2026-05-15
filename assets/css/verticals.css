@@ -77,7 +77,7 @@
   height: 56px;
   border-radius: 8px;
   background: #fff5f5;
-  border: 1px solid var(--ghosxt-red-0, #ff0000);
+  border: 1px solid var(--ghosxt-red-0, #b71c1c);
   flex-shrink: 0;
 }
 
@@ -102,7 +102,7 @@
 }
 
 .icon-card p a {
-  color: var(--ghosxt-red-0, #ff0000);
+  color: var(--ghosxt-red-0, #b71c1c);
   text-decoration: underline;
   text-underline-offset: 2px;
 }
@@ -173,7 +173,7 @@
   margin-top: 2rem;
   padding: 1.25rem 1.5rem;
   background: #fafafa;
-  border-left: 4px solid var(--ghosxt-red-0, #ff0000);
+  border-left: 4px solid var(--ghosxt-red-0, #b71c1c);
   border-radius: 0 6px 6px 0;
   font-size: 0.98rem;
   line-height: 1.6;
@@ -185,7 +185,7 @@
   margin: 0;
   padding: 1.5rem 1.75rem;
   border: 1px solid var(--ghosxt-black);
-  border-left: 6px solid var(--ghosxt-red-0, #ff0000);
+  border-left: 6px solid var(--ghosxt-red-0, #b71c1c);
   background: var(--ghosxt-white);
   border-radius: 0 8px 8px 0;
   box-shadow: 3px 3px 0 0 var(--ghosxt-black);
@@ -259,7 +259,7 @@
 
 .location-hero.hero--property {
   position: relative;
-  border-top: 3px solid var(--ghosxt-red-0, #ff0000);
+  border-top: 3px solid var(--ghosxt-red-0, #b71c1c);
 }
 
 .hero--property .hero-grid {
@@ -298,13 +298,13 @@
 
 .icon-card.stripe-card {
   border-left-width: 6px;
-  border-left-color: var(--ghosxt-red-0, #ff0000);
+  border-left-color: var(--ghosxt-red-0, #b71c1c);
   padding-left: 1.4rem;
 }
 
 .icon-card.stripe-card .icon-card-icon {
   background: #ffffff;
-  border: 2px solid var(--ghosxt-red-0, #ff0000);
+  border: 2px solid var(--ghosxt-red-0, #b71c1c);
 }
 
 @media (max-width: 900px) {
@@ -379,7 +379,7 @@
   top: 0.55rem;
   bottom: 0.55rem;
   width: 2px;
-  background: var(--ghosxt-red-0, #ff0000);
+  background: var(--ghosxt-red-0, #b71c1c);
 }
 
 .workflow-step {
@@ -400,7 +400,7 @@
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background: var(--ghosxt-red-0, #ff0000);
+  background: var(--ghosxt-red-0, #b71c1c);
   border: 3px solid #ffffff;
   box-shadow: 0 0 0 2px var(--ghosxt-black, #000);
 }
@@ -432,7 +432,7 @@
   width: 34px;
   height: 34px;
   border-radius: 50%;
-  background: var(--ghosxt-red-0, #ff0000);
+  background: var(--ghosxt-red-0, #b71c1c);
   color: #ffffff;
   font-weight: 700;
   font-size: 0.92rem;

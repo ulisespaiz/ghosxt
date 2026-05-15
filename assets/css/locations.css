@@ -68,7 +68,7 @@
 }
 
 .location-btn-primary {
-  background: var(--ghosxt-red-0, #e63946);
+  background: var(--ghosxt-red-0, #b71c1c);
   color: var(--ghosxt-white);
   box-shadow: 3px 3px 0 0 var(--ghosxt-black);
 }
@@ -199,7 +199,7 @@
 
 .industries-list li::before {
   content: "▸";
-  color: var(--ghosxt-red-0, #e63946);
+  color: var(--ghosxt-red-0, #b71c1c);
   font-weight: 700;
 }
 

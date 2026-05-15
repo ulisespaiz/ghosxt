@@ -221,7 +221,7 @@
 }
 
 .blog-post-body blockquote {
-  border-left: 4px solid var(--ghosxt-red-0, #e63946);
+  border-left: 4px solid var(--ghosxt-red-0, #b71c1c);
   padding: 0.5rem 0 0.5rem 1.25rem;
   margin: 1.5rem 0;
   font-style: italic;
@@ -250,7 +250,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: var(--ghosxt-red-0, #e63946);
+  background: var(--ghosxt-red-0, #b71c1c);
   color: var(--ghosxt-white);
   padding: 0.75rem 1.25rem;
   border-radius: 6px;
@@ -260,17 +260,17 @@
 }
 
 .blog-post-quickfix {
-  border: 2px solid var(--ghosxt-red-0, #e63946);
+  border: 2px solid var(--ghosxt-red-0, #b71c1c);
   border-radius: 8px;
   padding: 1.5rem 1.75rem;
   margin: 0 0 2rem 0;
   background: #fff5f5;
-  box-shadow: 4px 4px 0 0 var(--ghosxt-red-0, #e63946);
+  box-shadow: 4px 4px 0 0 var(--ghosxt-red-0, #b71c1c);
 }
 
 .blog-post-quickfix .quickfix-label {
   display: inline-block;
-  background: var(--ghosxt-red-0, #e63946);
+  background: var(--ghosxt-red-0, #b71c1c);
   color: var(--ghosxt-white);
   font-family: var(--font-family-2);
   font-weight: 700;

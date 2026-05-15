@@ -215,16 +215,18 @@
   --ghosxt-white: white;
   --ghosxt-gray: gray;
 
-  /* Primary brand red. Was #ff0000 which fails WCAG 2.2 AA contrast on
-     white for normal text (4.00:1, needs 4.5:1). Swapped to #b71c1c
-     (≈6.8:1 on white) so every existing --ghosxt-red-0 use site-wide
-     passes AA in one change. --ghosxt-red-1 (#ff3333) is similarly
-     non-compliant; aliased to --ghosxt-red-4 for the same reason. */
+  /* Primary brand red. The original palette ran from #ff0000 through
+     #ff3333 which both fail WCAG 2.2 AA contrast on white for normal
+     text (4.00:1, needs 4.5:1). Red-0 through red-4 are now all aliased
+     to #b71c1c (≈6.8:1 on white) so every brand accent across the site
+     lands on the same AA-compliant dark red. Red-5 (#8b0000) and red-6
+     (#3d0000) stay as deeper shades for elements that intentionally
+     need a heavier tone. */
   --ghosxt-red-0: #b71c1c;
 
   --ghosxt-red-1: #b71c1c;
-  --ghosxt-red-2: #d32f2f;
-  --ghosxt-red-3: #c62828;
+  --ghosxt-red-2: #b71c1c;
+  --ghosxt-red-3: #b71c1c;
   --ghosxt-red-4: #b71c1c;
   --ghosxt-red-5: #8b0000;
   --ghosxt-red-6: #3d0000;
@@ -1950,7 +1952,7 @@ textarea:focus-visible,
 select:focus-visible,
 summary:focus-visible,
 [tabindex]:focus-visible {
-  outline: 2px solid var(--ghosxt-red-0, #e63946);
+  outline: 2px solid var(--ghosxt-red-0, #b71c1c);
   outline-offset: 3px;
   border-radius: 2px;
 }
@@ -1994,14 +1996,14 @@ summary:focus-visible,
   margin: 12px 0 8px;
   padding: 10px 12px;
   background: rgba(230, 57, 70, 0.06);
-  border-left: 3px solid var(--ghosxt-red-0, #e63946);
+  border-left: 3px solid var(--ghosxt-red-0, #b71c1c);
   border-radius: 4px;
   font-size: 0.9rem;
   color: #2a2a2a;
   line-height: 1.4;
 }
 .form-response-promise i {
-  color: var(--ghosxt-red-0, #e63946);
+  color: var(--ghosxt-red-0, #b71c1c);
   flex-shrink: 0;
 }
 
@@ -2094,7 +2096,7 @@ summary:focus-visible,
     text-align: center;
   }
   .mobile-cta-bar .mcta-primary {
-    background: var(--ghosxt-red-0, #e63946);
+    background: var(--ghosxt-red-0, #b71c1c);
     color: #fff;
   }
   .mobile-cta-bar .mcta-secondary {

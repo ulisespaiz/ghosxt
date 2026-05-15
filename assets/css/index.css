@@ -4475,7 +4475,7 @@
 }
 
 .threat-icon i {
-  color: var(--ghosxt-red-1, #ef4444);
+  color: var(--ghosxt-red-1, #b71c1c);
   font-size: 2.5rem;
   flex-shrink: 0;
   transition: all 0.5s ease;
@@ -4587,7 +4587,7 @@
 .threat-particle {
   width: 12px;
   height: 12px;
-  background: #ef4444;
+  background: #b71c1c;
   box-shadow: 0 0 15px rgba(239, 68, 68, 1);
   z-index: 10000;
 }
