@@ -107,45 +107,74 @@ def render_og(title: str, subtitle: str, out_path: Path, logo_img):
     # Accent bar on the left edge
     draw.rectangle([(0, 0), (12, HEIGHT)], fill=ACCENT_COLOR)
 
-    # Logo (top-left)
+    # Brand row: logo + wordmark live in a reserved band at the top so the
+    # heading can never collide with them, even when the title wraps to
+    # three lines.
+    LOGO_TOP = 56
+    LOGO_SIZE = 72
+    LOGO_LEFT = 60
+    WORDMARK_X = LOGO_LEFT + LOGO_SIZE + 20
+    BRAND_BAND_BOTTOM = LOGO_TOP + LOGO_SIZE  # 128
+    HEADING_TOP = BRAND_BAND_BOTTOM + 56      # 184 — generous gap below brand row
+    FOOTER_TOP = HEIGHT - 120                 # 510
+
     if logo_img is not None:
-        logo_max = 96
-        ratio = min(logo_max / logo_img.width, logo_max / logo_img.height)
+        ratio = min(LOGO_SIZE / logo_img.width, LOGO_SIZE / logo_img.height)
         new_size = (int(logo_img.width * ratio), int(logo_img.height * ratio))
         logo_resized = logo_img.resize(new_size, Image.LANCZOS)
-        img.paste(logo_resized, (60, 60), logo_resized if logo_resized.mode == "RGBA" else None)
+        img.paste(
+            logo_resized,
+            (LOGO_LEFT, LOGO_TOP),
+            logo_resized if logo_resized.mode == "RGBA" else None,
+        )
 
-    # Brand wordmark next to logo
     brand_font_path = first_existing(FONT_CANDIDATES_BOLD)
     reg_font_path = first_existing(FONT_CANDIDATES_REG)
     if not brand_font_path or not reg_font_path:
         raise SystemExit("No usable TTF font found. Drop Roboto-Bold.ttf into scripts/fonts/.")
 
-    brand_font = ImageFont.truetype(brand_font_path, 36)
-    draw.text((170, 90), "GHOSXT", font=brand_font, fill=TEXT_COLOR)
+    # Wordmark vertically centered against the logo
+    brand_font = ImageFont.truetype(brand_font_path, 30)
+    wm_bbox = draw.textbbox((0, 0), "GHOSXT", font=brand_font)
+    wm_h = wm_bbox[3] - wm_bbox[1]
+    wm_y = LOGO_TOP + (LOGO_SIZE - wm_h) // 2 - 2
+    draw.text((WORDMARK_X, wm_y), "GHOSXT", font=brand_font, fill=TEXT_COLOR)
 
-    # Heading: dynamically size down so it fits two lines max.
+    # Heading: pick the largest size that fits in the heading band
+    # (between HEADING_TOP and FOOTER_TOP) with at most 3 lines.
     max_text_width = WIDTH - 120
-    for size in (78, 70, 62, 56, 50, 46, 42):
+    heading_available_h = FOOTER_TOP - HEADING_TOP
+    for size in (72, 64, 58, 52, 46, 42, 38):
         title_font = ImageFont.truetype(brand_font_path, size)
         lines = wrap_to_width(draw, title, title_font, max_text_width)
-        if len(lines) <= 3 and all(draw.textlength(l, font=title_font) <= max_text_width for l in lines):
+        line_height = int(size * 1.18)
+        block_height = line_height * len(lines)
+        fits_lines = len(lines) <= 3
+        fits_width = all(draw.textlength(l, font=title_font) <= max_text_width for l in lines)
+        fits_height = block_height <= heading_available_h
+        if fits_lines and fits_width and fits_height:
             break
 
-    # Vertical placement — heading occupies the middle band.
-    line_height = int(size * 1.18)
-    block_height = line_height * len(lines)
-    start_y = int(HEIGHT * 0.42) - block_height // 2
+    # Vertically center the heading within the heading band so short titles
+    # don't crowd the brand row.
+    start_y = HEADING_TOP + (heading_available_h - block_height) // 2
     for i, line in enumerate(lines):
         draw.text((60, start_y + i * line_height), line, font=title_font, fill=TEXT_COLOR)
 
     # Subtitle / domain in the bottom band.
-    subtitle_font = ImageFont.truetype(reg_font_path, 30)
+    subtitle_font = ImageFont.truetype(reg_font_path, 28)
     domain_font = ImageFont.truetype(brand_font_path, 26)
-    sub_y = HEIGHT - 110
-    draw.text((60, sub_y), subtitle, font=subtitle_font, fill=SUBTITLE_COLOR)
+    sub_y = HEIGHT - 90
+    # Truncate the subtitle if it would collide with the domain on the right
     domain_text = "ghosxt.com"
     domain_width = draw.textlength(domain_text, font=domain_font)
+    max_sub_width = WIDTH - 120 - domain_width - 24
+    sub = subtitle
+    while sub and draw.textlength(sub + "…", font=subtitle_font) > max_sub_width:
+        sub = sub[:-1]
+    if sub != subtitle:
+        sub = sub.rstrip() + "…"
+    draw.text((60, sub_y), sub, font=subtitle_font, fill=SUBTITLE_COLOR)
     draw.text((WIDTH - 60 - domain_width, sub_y + 2), domain_text, font=domain_font, fill=ACCENT_COLOR)
 
     out_path.parent.mkdir(parents=True, exist_ok=True)
