@@ -1889,7 +1889,7 @@
 }
 
 .foundation-includes li i {
-  color: var(--ghosxt-red-0, #e63946);
+  color: var(--ghosxt-red-0, #b71c1c);
   flex-shrink: 0;
   margin-top: 0.15rem;
   display: flex;
@@ -1923,7 +1923,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: var(--ghosxt-red-0, #e63946);
+  background: var(--ghosxt-red-0, #b71c1c);
   color: var(--ghosxt-white, #fff);
   padding: 0.875rem 1.5rem;
   border-radius: 6px;
@@ -2053,7 +2053,7 @@
 }
 
 .onboarding-card-title i {
-  color: var(--ghosxt-red-0, #e63946);
+  color: var(--ghosxt-red-0, #b71c1c);
   display: flex;
   font-size: 1.25rem;
 }
@@ -2084,7 +2084,7 @@
 
 .onboarding-card-list li::before {
   content: "▸";
-  color: var(--ghosxt-red-0, #e63946);
+  color: var(--ghosxt-red-0, #b71c1c);
   position: absolute;
   left: 0;
   font-weight: 700;
