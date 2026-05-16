@@ -1,0 +1,635 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HIPAA-Compliant IT for Medical &amp; Dental Practices in Monterey County | Ghosxt</title>
+    <meta name="description" content="What HIPAA actually requires of small medical and dental practices in Monterey County, Santa Cruz County, San Benito County, and Santa Clara County: the four IT pillars (identity, encryption, audit, backup), BAA basics, EHR considerations, common compliance gaps, and what it costs to do this right." />
+    <link rel="canonical" href="https://ghosxt.com/blog/hipaa-compliant-it-medical-dental-monterey-county.html" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://ghosxt.com/blog/hipaa-compliant-it-medical-dental-monterey-county.html" />
+    <meta property="og:title" content="HIPAA-Compliant IT for Medical &amp; Dental Practices in Monterey County | Ghosxt" />
+    <meta property="og:description" content="What HIPAA actually requires of small practices, the four IT pillars, BAA basics, EHR considerations, common gaps, and 2026 cost ranges for medical and dental offices on the Central Coast and South Bay." />
+    <meta property="og:image" content="https://ghosxt.com/assets/img/og/blog-hipaa-compliant-it-medical-dental-monterey-county.png" />
+    <meta property="og:site_name" content="Ghosxt" />
+    <meta property="article:published_time" content="2026-05-16" />
+    <meta property="article:author" content="Ulises Paiz" />
+    <meta name="robots" content="index, follow" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="HIPAA-Compliant IT for Medical &amp; Dental Practices in Monterey County | Ghosxt" />
+    <meta name="twitter:description" content="The practical HIPAA IT playbook for small medical and dental practices across the Central Coast and South Bay." />
+    <meta name="twitter:image" content="https://ghosxt.com/assets/img/og/blog-hipaa-compliant-it-medical-dental-monterey-county.png" />
+    <link rel="icon" href="../assets/img/favicon.ico" sizes="any" />
+    <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- ghosxt:roboto-preload -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" />
+    <link rel="preconnect" href="https://cdn-uicons.flaticon.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/main.css?v=2026-05-15a" />
+    <link rel="stylesheet" href="../assets/css/blog.css?v=2026-05-15a" />
+    <link rel="stylesheet" media="print" onload="this.media='all'" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" />
+    <noscript><link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" /></noscript>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "BlogPosting",
+            "mainEntityOfPage": { "@type": "WebPage", "@id": "https://ghosxt.com/blog/hipaa-compliant-it-medical-dental-monterey-county.html" },
+            "headline": "HIPAA-Compliant IT for Medical and Dental Practices in Monterey County and the Central Coast",
+            "description": "What HIPAA actually requires of small medical and dental practices in Monterey, Santa Cruz, San Benito, and Santa Clara counties: the four IT pillars (identity, encryption, audit, backup), BAA basics, EHR considerations, common compliance gaps, and 2026 cost ranges.",
+            "image": "https://ghosxt.com/assets/img/og/blog-hipaa-compliant-it-medical-dental-monterey-county.png",
+            "author": { "@type": "Person", "name": "Ulises Paiz", "url": "https://ghosxt.com/about.html" },
+            "publisher": { "@type": "Organization", "name": "Ghosxt", "logo": { "@type": "ImageObject", "url": "https://ghosxt.com/assets/img/ghosxt logo.webp" } },
+            "datePublished": "2026-05-16",
+            "dateModified": "2026-05-16",
+            "articleSection": "Cybersecurity",
+            "keywords": "HIPAA IT Monterey County, HIPAA compliance medical practice California, dental office IT Salinas, HIPAA Security Rule small practice, EHR IT support Central Coast, BAA Business Associate Agreement, HIPAA risk assessment, encrypted laptop medical, OCR breach notification, Santa Cruz County medical IT, Santa Clara County dental IT, San Benito County HIPAA"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ghosxt.com/" },
+              { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://ghosxt.com/blog/" },
+              { "@type": "ListItem", "position": 3, "name": "HIPAA-Compliant IT for Monterey County Practices", "item": "https://ghosxt.com/blog/hipaa-compliant-it-medical-dental-monterey-county.html" }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Does HIPAA actually apply to a small medical or dental practice?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. HIPAA applies to any covered entity that handles Protected Health Information (PHI), regardless of size. A solo practitioner with one front-desk employee is just as much a covered entity as a hospital system. The Office for Civil Rights (OCR) at HHS enforces HIPAA against practices of all sizes; settlements against small practices are common and routinely run from $50,000 to several hundred thousand dollars for documented violations."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What does HIPAA actually require for IT?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The HIPAA Security Rule requires administrative, physical, and technical safeguards for electronic Protected Health Information (ePHI). For IT specifically: a documented risk assessment, unique user IDs and access controls, automatic logoff, encryption of ePHI at rest and in transit, audit logs of access to ePHI, integrity controls, and a data backup with disaster recovery plan. It also requires a written Business Associate Agreement (BAA) with every vendor that touches ePHI on your behalf, including your IT provider."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What's a Business Associate Agreement (BAA) and do I need one with my IT company?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A BAA is a written contract between your practice (the covered entity) and any vendor (the business associate) that creates, receives, maintains, or transmits ePHI on your behalf. It establishes that the vendor will protect the information to HIPAA standards. You need one with: your EHR vendor, your IT services provider, your cloud storage provider (Microsoft, Google), your backup vendor, your email vendor if you use it for ePHI, and any other vendor that has incidental access. Most reputable vendors have a standard BAA they will sign. If a vendor refuses to sign one, you cannot use them for anything that touches ePHI."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What are the most common HIPAA IT compliance gaps in small practices?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Five come up almost universally: no BAA with the IT provider or the cloud vendor, unencrypted laptops or USB drives leaving the office, shared logins on workstations (multiple staff using the same account), no formal documented risk assessment in the last 12 months, and backup tapes or drives stored in the same building as the originals. Each of these has been the cause of an OCR settlement in published cases. Each is fixable in a week."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How much does HIPAA-compliant IT cost for a small practice?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "For a 5 to 15 person medical or dental practice on the Central Coast, expect $175 to $300 per user per month for HIPAA-compliant managed IT, depending on how much security tooling is in scope. That covers EDR, MFA enforcement, encryption management, audit logging, backup with documented retention, BAA-signed cloud services, an annual risk assessment, and ongoing policy maintenance. For a 10-person practice, that is roughly $1,750 to $3,000 per month or $21,000 to $36,000 per year. Compared to a typical OCR settlement after a breach ($50,000 to $250,000+ plus the breach-notification costs), the math is straightforward."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+    <!-- ghosxt:cf-web-analytics -->
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"f3ce7e0e17f54050845d52d7f355cd98"}'></script>
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top"><i class="fi fi-rs-angle-up" aria-hidden="true"></i></button>
+    <div class="cookie-banner" id="cookieBanner"><div class="cookie-banner-container"><div class="cookie-content"><div class="cookie-icon"><i class="fi fi-rs-cookie"></i></div><div class="cookie-text"><p class="cookie-message">We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.</p><a href="../privacy-policy.html" class="cookie-link">Learn more about our Privacy Policy</a></div></div><div class="cookie-actions"><button class="cookie-btn cookie-btn-secondary" id="cookieDecline">Decline</button><button class="cookie-btn cookie-btn-primary" id="cookieAccept">Accept All</button></div></div></div>
+    <div class="top-banner" id="topBanner"><div class="banner-container"><div class="banner-content"><span class="banner-text">Need Remote Support? &#9658;</span><a target="_blank" rel="noopener noreferrer" href="https://ticket.ghosxt.com/" class="banner-btn"><i class="fi fi-rs-ticket-alt"></i><span>Visit Client Portal</span></a></div></div></div>
+    <nav class="navbar" aria-label="Main navigation">
+      <div class="navbar-container">
+        <div class="navbar-left"><a href="../index.html" class="navbar-logo"><img fetchpriority="high" loading="eager" src="../assets/img/ghosxt logo.webp" alt="Ghosxt logo" width="48" height="48" /><span>GHOSXT</span></a></div>
+        <div class="navbar-right">
+          <div class="navbar-menu">
+            <a href="../index.html" class="navbar-link">Home</a>
+            <div class="navbar-dropdown"><a href="../about.html" class="navbar-link dropdown-trigger" aria-haspopup="menu">About <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></a><div class="dropdown-menu" role="menu"><a href="../about.html" class="dropdown-item" role="menuitem">About Ghosxt</a><a href="../ghosxt-cares.html" class="dropdown-item" role="menuitem">Ghosxt Cares</a></div></div>
+            <div class="navbar-dropdown"><a href="../services.html" class="navbar-link dropdown-trigger" aria-haspopup="menu">Services <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></a><div class="dropdown-menu" role="menu"><a href="../services.html" class="dropdown-item" role="menuitem">All Services</a>
+                <a href="../managed-it-services.html" class="dropdown-item" role="menuitem">Managed IT Services</a>
+                <a href="../cybersecurity.html" class="dropdown-item" role="menuitem">Cybersecurity</a>
+                <a href="../cloud-services.html" class="dropdown-item" role="menuitem">Cloud Services</a>
+                <a href="../backup-disaster-recovery.html" class="dropdown-item" role="menuitem">Backup &amp; Disaster Recovery</a>
+                <a href="../network-design.html" class="dropdown-item" role="menuitem">Network Design</a>
+                <a href="../website-development.html" class="dropdown-item" role="menuitem">Web Development</a>
+                <a href="../ctpat.html" class="dropdown-item" role="menuitem">C-TPAT Compliance</a></div></div>
+            <a href="../pricing.html" class="navbar-link">Pricing</a>
+            <a href="index.html" class="navbar-link">Blog</a>
+            <a href="../contact.html" class="navbar-link">Contact</a>
+          </div>
+          <button class="navbar-mobile-toggle" id="mobileToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu"><i class="fi fi-rs-burger-menu" aria-hidden="true"></i></button>
+          <div class="navbar-buttons"><a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer" class="navbar-btn btn-demo"><i class="fi fi-rs-calendar-day"></i><span>Book a Call</span></a></div>
+        </div>
+      </div>
+      <div class="navbar-overlay" id="navbarOverlay"></div>
+      <div class="navbar-mobile-menu" id="mobileMenu">
+        <a href="../index.html" class="mobile-link">Home</a>
+        <div class="mobile-accordion"><button class="mobile-accordion-trigger" aria-expanded="false">About <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></button><div class="mobile-accordion-content"><a href="../about.html" class="mobile-dropdown-item">About Ghosxt</a><a href="../ghosxt-cares.html" class="mobile-dropdown-item">Ghosxt Cares</a></div></div>
+        <div class="mobile-accordion"><button class="mobile-accordion-trigger" aria-expanded="false">Services <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></button><div class="mobile-accordion-content"><a href="../services.html" class="mobile-dropdown-item">All Services</a>
+            <a href="../managed-it-services.html" class="mobile-dropdown-item">Managed IT Services</a>
+            <a href="../cybersecurity.html" class="mobile-dropdown-item">Cybersecurity</a>
+            <a href="../cloud-services.html" class="mobile-dropdown-item">Cloud Services</a>
+            <a href="../backup-disaster-recovery.html" class="mobile-dropdown-item">Backup &amp; Disaster Recovery</a>
+            <a href="../network-design.html" class="mobile-dropdown-item">Network Design</a>
+            <a href="../website-development.html" class="mobile-dropdown-item">Web Development</a>
+            <a href="../ctpat.html" class="mobile-dropdown-item">C-TPAT Compliance</a></div></div>
+        <a href="../pricing.html" class="mobile-link">Pricing</a>
+        <a href="index.html" class="mobile-link">Blog</a>
+        <a href="../contact.html" class="mobile-link">Contact</a>
+        <div class="mobile-actions"><a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer" class="mobile-btn btn-demo"><i class="fi fi-rs-calendar-day"></i><span>Book a Call</span></a></div>
+      </div>
+    </nav>
+    <main id="main-content" class="blog-post">
+      <header class="blog-post-header">
+        <div class="container">
+          <nav class="blog-post-breadcrumbs" aria-label="Breadcrumb">
+            <a href="../index.html">Home</a><span class="sep">&rsaquo;</span><a href="index.html">Blog</a><span class="sep">&rsaquo;</span><span aria-current="page">HIPAA-Compliant IT for Monterey County Practices</span>
+          </nav>
+          <div class="blog-post-meta">
+            <time datetime="2026-05-16">May 16, 2026</time>
+            <span>&middot;</span>
+            <span>13 min read</span>
+            <span>&middot;</span>
+            <span class="blog-card-tag">Cybersecurity</span>
+          </div>
+          <h1>HIPAA-Compliant IT for Medical &amp; Dental Practices in Monterey County and the Central Coast</h1>
+          <div class="blog-post-author">
+            <strong>Ulises Paiz</strong>, Founder, Ghosxt
+          </div>
+        </div>
+      </header>
+      <div class="blog-post-body">
+        <div class="container">
+          <aside class="blog-post-quickfix" aria-label="Summary of HIPAA IT requirements">
+            <span class="quickfix-label">TL;DR &mdash; What HIPAA actually requires of small practice IT</span>
+            <h2>HIPAA applies to every practice that handles PHI, regardless of size. The IT requirements are specific, documentable, and not optional.</h2>
+            <ul>
+              <li><strong>Risk assessment:</strong> documented, completed within the last 12 months, kept on file.</li>
+              <li><strong>Identity:</strong> unique user ID per staff member, MFA on every account that touches ePHI, automatic logoff, no shared logins.</li>
+              <li><strong>Encryption:</strong> ePHI encrypted at rest (full-disk on laptops and servers) and in transit (TLS for email and EHR). Encrypted laptops are an "addressable" requirement that becomes the practical floor.</li>
+              <li><strong>Audit logs:</strong> who accessed which patient record, when, retained for at least 6 years.</li>
+              <li><strong>Backup and DR:</strong> tested backups with a written disaster recovery plan and documented restore time.</li>
+              <li><strong>BAAs:</strong> a signed Business Associate Agreement with every vendor that touches ePHI &mdash; EHR, IT provider, cloud (Microsoft / Google), backup vendor, email if used for ePHI.</li>
+            </ul>
+            <p>For a 5-to-15 person Monterey County medical or dental practice, the realistic cost of doing this right in 2026 is <strong>$175 to $300 per user per month</strong> for managed IT plus a one-time setup of $2,500 to $8,000 to bring an existing practice into compliance. The OCR settlement math (typical $50,000 to $250,000 per documented violation) makes the case for itself.</p>
+          </aside>
+
+          <p>Medical and dental practices on the Central Coast and South Bay run on technology that touches patient data every day. Every appointment is logged in an EHR. Every X-ray is stored on a network share. Every phone call to confirm an insurance benefit might reference a patient by name. Every email between front desk and a specialist references appointments. All of it is electronic Protected Health Information (ePHI), and all of it is subject to HIPAA's Security Rule.</p>
+
+          <p>This article is the version of the conversation I have with practice owners and office managers who are trying to figure out whether their current IT setup actually meets the standard. The honest answer for many small practices is: probably not, and the specific gaps are predictable. Below is what HIPAA actually requires in IT terms, where the typical compliance gaps are, what a compliant setup looks like in practice for a 5-to-15-person office, and what it costs.</p>
+
+          <p>Important note up front: I am an IT engineer who runs HIPAA-aligned environments for healthcare clients on the Central Coast and South Bay. I am not your compliance officer and this article is not legal advice. Any practice should pair this with a written risk analysis from a qualified privacy professional and, where stakes warrant, an attorney familiar with health-care regulation. With that disclaimer in place, this is the operational reality.</p>
+
+          <h2>Does HIPAA actually apply to a small practice?</h2>
+
+          <p>Yes. HIPAA applies to any covered entity that handles PHI, regardless of size. The Office for Civil Rights (OCR) at the U.S. Department of Health and Human Services enforces it. Solo practitioners, two-dentist offices, three-MD primary care groups, five-provider specialty practices, mental health solo practices, physical therapy clinics, optometrists, chiropractors, podiatrists, audiologists &mdash; all covered entities. If the practice creates, receives, maintains, or transmits PHI, HIPAA applies.</p>
+
+          <p>OCR routinely settles cases against small practices. Published examples include dental practices fined $50,000-plus for unsecured ePHI, single-physician practices fined for not encrypting laptops, and small physical therapy clinics fined for posting patient testimonials without authorization. The frequent pattern is that the practice did not realize the specific control was required until a complaint or a breach surfaced the issue.</p>
+
+          <p>The relevant rules:</p>
+
+          <ul>
+            <li><strong>Privacy Rule</strong> (2003) &mdash; governs how PHI can be used and disclosed.</li>
+            <li><strong>Security Rule</strong> (2005) &mdash; governs the technical safeguards for electronic PHI. This is the rule that drives most IT-specific requirements.</li>
+            <li><strong>Breach Notification Rule</strong> (2009) &mdash; requires notifying patients, OCR, and in some cases the media when ePHI is breached. 60-day notice window. Reports of breaches affecting 500+ individuals are posted publicly on the OCR breach portal.</li>
+            <li><strong>HITECH Act</strong> (2009) &mdash; increased enforcement and penalty tiers; clarified that business associates (including IT vendors) are directly liable.</li>
+          </ul>
+
+          <p>The OCR enforcement website lists published settlements at <a href="https://www.hhs.gov/hipaa/for-professionals/compliance-enforcement/agreements/index.html" target="_blank" rel="noopener noreferrer">hhs.gov/hipaa/for-professionals/compliance-enforcement</a>. Reading a few of them is the fastest way to understand how OCR actually enforces and what the typical gaps look like.</p>
+
+          <h2>What HIPAA's Security Rule actually requires of IT</h2>
+
+          <p>The Security Rule breaks safeguards into three categories: administrative, physical, and technical. For a small practice's IT scope, the requirements that matter most:</p>
+
+          <h3>Administrative safeguards</h3>
+
+          <ul>
+            <li><strong>Security Risk Analysis.</strong> Required. Documented. Annual is the practical standard. The risk assessment identifies where ePHI lives, how it could be accessed inappropriately, and what controls mitigate the risk. This is the single most-cited gap in OCR settlements: practices that did not have a current written risk assessment.</li>
+            <li><strong>Workforce training</strong> on PHI handling. Documented per employee, annual.</li>
+            <li><strong>Sanctions policy</strong> for staff who violate HIPAA policies.</li>
+            <li><strong>Incident response and breach notification procedures</strong> in writing.</li>
+            <li><strong>Business Associate Agreements</strong> with every vendor that touches ePHI (more on these below).</li>
+          </ul>
+
+          <h3>Physical safeguards</h3>
+
+          <ul>
+            <li><strong>Facility access controls.</strong> Keys, locks, alarm systems for areas where ePHI is stored or processed.</li>
+            <li><strong>Workstation security.</strong> Screens that lock when staff steps away. Workstations positioned so patients in the lobby cannot read them.</li>
+            <li><strong>Device and media disposal.</strong> Secure destruction of hard drives, laptops, USB drives, paper records when retired. Documented.</li>
+            <li><strong>Inventory of ePHI-touching devices.</strong> You know what you have and where it is.</li>
+          </ul>
+
+          <h3>Technical safeguards (where IT lives)</h3>
+
+          <ul>
+            <li><strong>Access controls.</strong> Unique user ID per staff member. MFA on accounts that touch ePHI. Automatic logoff after inactivity. Role-based access to the EHR. <strong>No shared logins.</strong></li>
+            <li><strong>Audit controls.</strong> Logs of who accessed what ePHI and when. Retained for at least 6 years.</li>
+            <li><strong>Integrity controls.</strong> Mechanisms to ensure ePHI is not improperly altered or destroyed. Usually means write-protected audit logs and backups.</li>
+            <li><strong>Transmission security.</strong> ePHI encrypted in transit (TLS for email, HTTPS for web apps, encrypted file sharing).</li>
+            <li><strong>Encryption of ePHI at rest.</strong> Technically "addressable" rather than "required" in the rule's language, which practically means "you have to either do it or document why you're not, and the only acceptable reasons are vanishingly rare." Full-disk encryption on every laptop and server that touches ePHI is the working standard.</li>
+          </ul>
+
+          <p>Most of these read like a checklist of things any well-run IT environment does anyway. The HIPAA-specific overlay is the documentation requirement: you must be able to prove every control is in place, with written policies, configuration evidence, and audit trails. The IT environment that "is secure" is not the same as the IT environment that "can demonstrate compliance to an auditor." For a small practice, that documentation overhead is what the right managed IT provider takes off your hands.</p>
+
+          <h2>The four IT pillars in practice</h2>
+
+          <h3>Pillar 1: Identity</h3>
+
+          <p>Every person who can see ePHI has a unique account. Every account has MFA. Workstations lock automatically after inactivity. The EHR enforces role-based access (the front desk does not see the same fields a clinician does). Microsoft 365 or Google Workspace tenant is configured per the <a href="identity-hardening-small-business-5-employees-microsoft-365.html">identity hardening playbook</a> we use for every client, with phishing-resistant MFA on admin accounts.</p>
+
+          <p>The most common gap: <strong>shared logins.</strong> Three front-desk staff using the same "frontdesk" account on the same workstation throughout the day. From a HIPAA perspective, this is non-compliant: there is no audit trail that distinguishes which person accessed which patient record. The fix is unique accounts plus fast-user-switching workflows. Modern EHRs handle this with badge tap-in or PIN-based login that takes seconds, not minutes.</p>
+
+          <h3>Pillar 2: Encryption</h3>
+
+          <p>Full-disk encryption (BitLocker on Windows, FileVault on macOS) on every device that touches ePHI. Encrypted backups. TLS on every email path. HTTPS on every web app. The single most-cited cause of small-practice HIPAA breaches in the OCR portal is "lost or stolen unencrypted laptop." The fix is a one-time configuration plus ongoing enforcement.</p>
+
+          <p>The trick is that "BitLocker is on" is not the same as "BitLocker recovery keys are escrowed and the policy is enforced through Intune or Entra." Most practices that "have encryption" cannot produce a current report showing which devices are encrypted, who has access to the recovery keys, and what happens if a laptop is lost. The managed IT provider's job is to maintain that report and make it audit-ready.</p>
+
+          <h3>Pillar 3: Audit logs</h3>
+
+          <p>Logs of who accessed what ePHI, when, from where. Retained for at least 6 years. This is mostly an EHR responsibility &mdash; modern EHRs generate access logs natively &mdash; but the underlying systems (Microsoft 365, file shares, network access) also need logging. The configuration is straightforward; the discipline is making sure the logs are actually retained and reviewed periodically for unusual patterns.</p>
+
+          <p>"Unusual patterns" includes things like: a front-desk account accessing 200 patient records in an hour, a clinician account logging in at 2am from a city the staff member does not live in, repeated failed logins on an admin account. A managed IT provider that includes a managed SIEM or security operations tier handles this monitoring; a provider that does not, leaves it to you.</p>
+
+          <h3>Pillar 4: Backup and disaster recovery</h3>
+
+          <p>Daily backups of every system that stores ePHI. Encrypted backups. Stored separately from the source (a backup in the same building is not a backup for a fire or theft). Tested restore at least quarterly with documented results. Written DR plan that specifies recovery time objective (RTO) and recovery point objective (RPO).</p>
+
+          <p>For a small practice, this typically means a cloud-replicated backup product (Datto, Veeam to cloud, Acronis Cyber Cloud, or the EHR vendor's own cloud-replicated backup) plus quarterly restore testing. We covered the broader scope on the <a href="../backup-disaster-recovery.html">backup and disaster recovery page</a> and the operational testing playbook in the <a href="pge-psps-it-continuity-plan-central-coast.html">PSPS continuity post</a>.</p>
+
+          <h2>Business Associate Agreements (BAAs): the contract piece</h2>
+
+          <p>A BAA is a written contract between your practice (the covered entity) and any vendor (the business associate) that creates, receives, maintains, or transmits ePHI on your behalf. The BAA establishes that the vendor will protect the ePHI to HIPAA standards. Without a signed BAA, you cannot legally use the vendor for ePHI work, full stop.</p>
+
+          <p>For a typical small practice, the BAAs you need:</p>
+
+          <ul>
+            <li><strong>EHR vendor.</strong> Athenahealth, eClinicalWorks, Epic, Cerner/Oracle Health, Practice Fusion, NextGen, Kareo, DrChrono, etc. for medical. Dentrix, Eaglesoft, Open Dental, Curve Dental, Dentrix Ascend, Carestream, etc. for dental.</li>
+            <li><strong>IT services provider (us, or whoever).</strong> Required because the IT provider has administrative access to systems containing ePHI.</li>
+            <li><strong>Cloud platform (Microsoft 365 or Google Workspace).</strong> Microsoft will sign a BAA at Business Premium / E3 / E5 tiers. Google signs one for Google Workspace business tiers. Critically, the BAA only covers specific products within the tenant; using a non-BAA product (e.g., Microsoft Forms in some configurations, certain free add-ons) for ePHI breaks compliance.</li>
+            <li><strong>Backup vendor.</strong> Datto, Veeam, Acronis, etc.</li>
+            <li><strong>Email vendor</strong> if email is used for ePHI. Most secure-email vendors (Paubox, Virtru, Identillect) sign BAAs.</li>
+            <li><strong>Document management / e-signature.</strong> DocuSign signs a BAA at the appropriate tier; many cheaper alternatives do not.</li>
+            <li><strong>Telehealth platform</strong> if you use one. Doxy.me, SimplePractice, others.</li>
+            <li><strong>Transcription, billing, claims processing vendors.</strong> Anyone seeing patient data on your behalf.</li>
+          </ul>
+
+          <p>The BAA audit is one of the highest-leverage one-day projects a small practice can do. Pull the vendor list. Confirm each one has a signed BAA on file. For any that do not, either get the BAA signed or replace the vendor with one that will. Most reputable healthcare-focused vendors have a standard BAA they will sign within hours; the ones that refuse are vendors you cannot use for ePHI work.</p>
+
+          <h2>The common compliance gaps in small practice IT</h2>
+
+          <p>Five gaps come up almost universally in the practices I have helped onboard:</p>
+
+          <h3>1. No BAA with the IT provider</h3>
+
+          <p>The practice has an IT provider (break-fix freelancer or older MSP). The IT provider has admin access to the EHR and the network. There is no signed BAA. This is a HIPAA violation on day one and an OCR settlement risk. The fix is a one-page conversation: ask for the BAA, get it signed, or replace the provider.</p>
+
+          <h3>2. Unencrypted laptops or USB drives</h3>
+
+          <p>A clinician takes the laptop home to chart, leaves it in the car, the car gets broken into, the laptop is gone. If the laptop was not encrypted, that is a reportable breach. If it was encrypted, OCR considers the data "secure" and no breach notification is required. Encryption is the single highest-ROI HIPAA control. Cost: free (BitLocker / FileVault are included with the OS). Time: 5 minutes per device plus configuration management.</p>
+
+          <h3>3. Shared logins on workstations</h3>
+
+          <p>Front desk staff sharing a "reception" login or clinicians sharing a "exam-room-3" login. Common, fast, and non-compliant. The fix is unique accounts plus fast-user-switching (badge tap, fingerprint, PIN). Modern EHRs are built for this; the workstation OS needs to be configured to support it.</p>
+
+          <h3>4. No documented risk assessment in the last 12 months</h3>
+
+          <p>OCR settlements routinely cite missing or outdated risk analyses as a primary violation. The risk analysis does not have to be a 200-page document; it has to be current, thorough, and produce action items the practice actually addresses. A managed IT provider with healthcare expertise typically includes the annual risk assessment as part of the contract.</p>
+
+          <h3>5. Backups stored in the same building as the originals</h3>
+
+          <p>The "backup" is a USB drive in the office that gets swapped weekly. A fire, a theft, or ransomware takes both. Cloud-replicated backup solves this. So does a properly-configured off-site backup rotation, though cloud has largely replaced rotating tapes for small practices.</p>
+
+          <h2>What a HIPAA-compliant IT stack looks like for a 10-person practice</h2>
+
+          <p>A realistic 2026 reference design for a 10-person Monterey County or Salinas-area medical or dental practice:</p>
+
+          <h3>Endpoints</h3>
+
+          <ul>
+            <li>Windows 11 Pro on every workstation. BitLocker enabled, recovery keys escrowed in Microsoft Entra. Automatic screen lock after 5 minutes.</li>
+            <li>EDR (CrowdStrike Falcon Go, SentinelOne Vigilance, Microsoft Defender for Business, or Huntress) on every endpoint.</li>
+            <li>Patch management on a documented cadence: critical patches inside 14 days, all others inside 30 days, with reporting.</li>
+            <li>Unique user account per staff member; no local administrator rights for users.</li>
+            <li>Intune or equivalent endpoint management for policy enforcement and inventory.</li>
+          </ul>
+
+          <h3>Identity</h3>
+
+          <ul>
+            <li>Microsoft 365 Business Premium or higher tier (Business Premium signs a BAA; Business Basic and Business Standard do not for all components).</li>
+            <li>MFA enforced on every account. Phishing-resistant MFA (FIDO2 hardware keys or Windows Hello for Business) on admin accounts.</li>
+            <li>Separated admin accounts (per the <a href="identity-hardening-small-business-5-employees-microsoft-365.html">identity hardening post</a>).</li>
+            <li>Conditional Access policies: block legacy authentication, require compliant device, geo-restrict, optional sign-in risk policies.</li>
+            <li>No shared accounts.</li>
+          </ul>
+
+          <h3>EHR and clinical applications</h3>
+
+          <ul>
+            <li>Cloud-hosted EHR (Athenahealth, eClinicalWorks Cloud, Practice Fusion, etc.) or on-prem EHR with hardened access controls.</li>
+            <li>BAA on file with the EHR vendor.</li>
+            <li>Role-based access configured: front desk, billing, clinical, admin each have appropriate scope.</li>
+            <li>Audit logs enabled and reviewed quarterly.</li>
+            <li>For dental: imaging server (CBCT, panoramic) on a segmented network with full backup. Imaging viewer software (Dexis, Sirona Sidexis, CS Imaging) updated quarterly.</li>
+          </ul>
+
+          <h3>Network</h3>
+
+          <ul>
+            <li>Business-grade firewall (Sophos, Fortinet, Meraki, Ubiquiti UDM Pro) with intrusion detection enabled.</li>
+            <li>Segmented network: guest Wi-Fi separate from staff network. Imaging devices on their own VLAN. IoT (cameras, smart thermostats) on their own VLAN.</li>
+            <li>No legacy authentication protocols accessible from outside.</li>
+            <li>Cellular failover on the firewall (covered in the <a href="pge-psps-it-continuity-plan-central-coast.html">PSPS continuity post</a>).</li>
+          </ul>
+
+          <h3>Backup and DR</h3>
+
+          <ul>
+            <li>Cloud-replicated daily backups of the EHR (if on-prem), file server, and Microsoft 365 tenant.</li>
+            <li>Quarterly tested restore with documented evidence.</li>
+            <li>Written DR plan with RTO of 24 hours and RPO of 24 hours, more aggressive if patient care requires.</li>
+            <li>Encrypted backups in transit and at rest. Backup vendor BAA on file.</li>
+          </ul>
+
+          <h3>Email</h3>
+
+          <ul>
+            <li>Microsoft 365 or Google Workspace mailboxes (both can be HIPAA-compliant with BAA).</li>
+            <li>Encrypted email option for PHI sent externally: Paubox, Virtru, Microsoft Purview Message Encryption, or Google's confidential mode with BAA.</li>
+            <li>Anti-phishing and advanced threat protection enabled.</li>
+            <li>Audit logs retained per Microsoft / Google's tier defaults plus an external retention solution if needed.</li>
+          </ul>
+
+          <h3>Documentation and policy</h3>
+
+          <ul>
+            <li>Written HIPAA policies covering each Security Rule requirement.</li>
+            <li>Workforce training records, annual.</li>
+            <li>Annual Security Risk Analysis (SRA) with documented findings and remediation.</li>
+            <li>Incident response plan and breach notification procedures.</li>
+            <li>Inventory of ePHI-touching assets, kept current.</li>
+            <li>BAA register: list of every BAA on file with effective date and renewal status.</li>
+          </ul>
+
+          <h2>What it costs for a small Monterey County practice</h2>
+
+          <p>Rough numbers for a 10-person medical or dental practice in 2026:</p>
+
+          <ul>
+            <li><strong>Managed IT (HIPAA-aligned):</strong> $175 to $300 per user per month. For 10 users, $1,750 to $3,000/month or $21,000 to $36,000/year.</li>
+            <li><strong>Microsoft 365 Business Premium:</strong> approximately $22/user/month. For 10 users, $2,640/year (BAA-eligible tier).</li>
+            <li><strong>EDR / endpoint security:</strong> usually bundled in the managed IT contract above. Standalone $5-$15/user/month.</li>
+            <li><strong>Cloud backup with BAA:</strong> usually bundled. Standalone $500-$1,500/month for a typical small practice.</li>
+            <li><strong>Encrypted email (if separate):</strong> $5-$15/user/month for Paubox or equivalent.</li>
+            <li><strong>One-time setup / remediation</strong> to bring an existing practice into compliance: $2,500 to $8,000 depending on starting state. Includes risk analysis, policy authoring, encryption rollout, BAA roundup.</li>
+            <li><strong>Annual Security Risk Analysis:</strong> sometimes included in the managed IT contract; sometimes a separate $1,500 to $5,000 engagement.</li>
+            <li><strong>Workforce training:</strong> $5-$15/user/year for a HIPAA training platform (HIPAA Secure Now, Compliancy Group, etc.) or included in managed IT.</li>
+          </ul>
+
+          <p>All-in for a 10-person practice in year one: roughly <strong>$28,000 to $50,000</strong>. For year two onward (no big one-time remediation): roughly <strong>$25,000 to $42,000</strong>.</p>
+
+          <p>For comparison: <a href="https://www.hhs.gov/hipaa/for-professionals/compliance-enforcement/agreements/index.html" target="_blank" rel="noopener noreferrer">OCR settlements against small practices</a> routinely run $50,000 to $250,000 plus the breach-notification costs (mailing letters to every affected patient, credit monitoring services, legal counsel, possible state-level penalties). A single avoided breach pays for several years of compliance work.</p>
+
+          <h2>What Ghosxt does for healthcare practices</h2>
+
+          <p>For medical and dental practice clients in <a href="../monterey.html">Monterey</a>, <a href="../salinas.html">Salinas</a>, <a href="../santa-cruz.html">Santa Cruz</a>, <a href="../watsonville.html">Watsonville</a>, <a href="../hollister.html">Hollister</a>, <a href="../gilroy.html">Gilroy</a>, <a href="../san-jose.html">San Jose</a>, and the surrounding service areas, Ghosxt's <a href="../healthcare-it-services.html">healthcare IT program</a> is structured around the four pillars above plus the documentation discipline that turns "we are secure" into "we can prove it to an auditor."</p>
+
+          <p>In practice, that includes: signed BAA on day one; an environment audit in the first 30 days that produces a written HIPAA gap list; encryption rollout, MFA enforcement, and audit-log configuration in the next 30 days; an annual Security Risk Analysis included in the contract; quarterly business reviews that include a HIPAA-status check; and active monitoring of the security stack with the same operations rigor we run for non-healthcare clients, plus the documentation overhead that healthcare specifically requires.</p>
+
+          <p>If you are a practice owner reading this and recognizing some of these gaps, the conversation to have is whether your current IT provider is treating you as a healthcare client or as a small business that happens to be a clinic. Those are different operating models.</p>
+
+          <h2>FAQs about HIPAA-compliant IT for Monterey County medical and dental practices</h2>
+
+          <h3>Does HIPAA actually apply to a small medical or dental practice?</h3>
+          <p>Yes. HIPAA applies to any covered entity that handles PHI, regardless of size. A solo practitioner with one front-desk employee is just as much a covered entity as a hospital system. The Office for Civil Rights (OCR) at HHS enforces HIPAA against practices of all sizes; settlements against small practices are common and routinely run from $50,000 to several hundred thousand dollars for documented violations.</p>
+
+          <h3>What does HIPAA actually require for IT?</h3>
+          <p>The HIPAA Security Rule requires administrative, physical, and technical safeguards for electronic Protected Health Information (ePHI). For IT specifically: a documented risk assessment, unique user IDs and access controls, automatic logoff, encryption of ePHI at rest and in transit, audit logs of access to ePHI, integrity controls, and a data backup with disaster recovery plan. It also requires a written Business Associate Agreement (BAA) with every vendor that touches ePHI on your behalf, including your IT provider.</p>
+
+          <h3>What's a Business Associate Agreement (BAA) and do I need one with my IT company?</h3>
+          <p>A BAA is a written contract between your practice (the covered entity) and any vendor (the business associate) that creates, receives, maintains, or transmits ePHI on your behalf. It establishes that the vendor will protect the information to HIPAA standards. You need one with: your EHR vendor, your IT services provider, your cloud storage provider (Microsoft, Google), your backup vendor, your email vendor if you use it for ePHI, and any other vendor that has incidental access. Most reputable vendors have a standard BAA they will sign. <strong>If a vendor refuses to sign one, you cannot use them for anything that touches ePHI.</strong></p>
+
+          <h3>What are the most common HIPAA IT compliance gaps in small practices?</h3>
+          <p>Five come up almost universally: no BAA with the IT provider or the cloud vendor, unencrypted laptops or USB drives leaving the office, shared logins on workstations (multiple staff using the same account), no formal documented risk assessment in the last 12 months, and backup tapes or drives stored in the same building as the originals. Each of these has been the cause of an OCR settlement in published cases. Each is fixable in a week.</p>
+
+          <h3>How much does HIPAA-compliant IT cost for a small practice?</h3>
+          <p>For a 5 to 15 person medical or dental practice on the Central Coast, expect <strong>$175 to $300 per user per month</strong> for HIPAA-compliant managed IT, depending on how much security tooling is in scope. That covers EDR, MFA enforcement, encryption management, audit logging, backup with documented retention, BAA-signed cloud services, an annual risk assessment, and ongoing policy maintenance. For a 10-person practice, that is roughly $1,750 to $3,000 per month or $21,000 to $36,000 per year. Compared to a typical OCR settlement after a breach ($50,000 to $250,000+ plus the breach-notification costs), the math is straightforward.</p>
+
+          <h3>Is Microsoft 365 HIPAA-compliant?</h3>
+          <p>Microsoft 365 can be configured to be HIPAA-aligned, but it is not automatically compliant. Required steps: use a Business Premium tier or higher (BAA covers fewer components on lower tiers), sign the Microsoft BAA in the Service Trust Portal, configure the tenant for compliance (MFA enforced, audit logs retained, DLP policies for PHI in some configurations), and document the configuration. Most practices that "use Microsoft 365" have not done the configuration; the tenant is technically eligible but operationally non-compliant. This is the same pattern with Google Workspace.</p>
+
+          <h3>What about Apple devices and Macs in a practice?</h3>
+          <p>Fine, with the same controls applied: FileVault encryption, MDM enrollment via Intune or Jamf, automatic screen lock, unique user accounts, EDR enrolled. The clinical software you can run is sometimes Windows-only (especially older dental imaging systems), so the practical answer is often a mixed-OS environment with both Windows and Macs. The compliance posture is the same either way; only the tools differ.</p>
+
+          <h3>Do I need to encrypt every laptop or just the ones with PHI?</h3>
+          <p>In practice, encrypt every laptop. The administrative overhead of tracking which ones "have PHI" and which ones do not is higher than the cost of encrypting all of them, and the consequences of being wrong (an unencrypted laptop that turns out to have a cached email with PHI) are severe. BitLocker on Windows and FileVault on macOS are free, fast to deploy, and transparent to users once configured. Encrypt them all.</p>
+
+          <h3>What happens if there's a breach despite all this?</h3>
+          <p>The Breach Notification Rule applies. You have 60 days from discovery to notify affected individuals. Breaches affecting 500+ individuals require notice to OCR and to "prominent media outlets" in the state. Breaches affecting fewer than 500 require an annual summary submission to OCR. Encryption is the safe harbor: properly-encrypted ePHI that is lost or stolen is generally not considered a reportable breach, because the data is not "accessed or acquired" in a usable form. This is the practical reason encryption is the highest-ROI control.</p>
+
+          <div class="blog-post-cta">
+            <h3>Want a HIPAA gap audit on your current IT?</h3>
+            <p>30 minutes with the founder. We will look at your current IT setup, your EHR, your cloud configuration, your BAAs, and your documentation, and produce a written HIPAA gap list with prioritized remediation. Includes whether your existing IT provider needs to sign a BAA and what that conversation looks like. No sales script.</p>
+            <a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer">
+              <i class="fi fi-rs-calendar-day" aria-hidden="true"></i>
+              Book your free assessment
+            </a>
+          </div>
+
+          <p style="margin-top: 1.5rem; font-size: 0.95rem; color: rgba(0,0,0,0.7);">
+            Prefer to talk first? Email <a href="mailto:sales@ghosxt.com">sales@ghosxt.com</a> or call <a href="tel:+18312040501">(831) 204-0501</a>. Based in Salinas, serving Monterey, San Benito, Santa Cruz, and Santa Clara counties (including San Jose, Gilroy, and Morgan Hill). This article is operational guidance, not legal advice; pair it with a qualified privacy professional for your practice's specific situation.
+          </p>
+        </div>
+      </div>
+    </main>
+    <footer class="footer" id="footerSection">
+      <div class="footer-container">
+        <div class="footer-brand-row">
+          <div class="footer-brand">
+            <img
+              src="../assets/img/ghosxt logo.webp"
+              alt="Ghosxt logo"
+              width="80"
+              height="80"
+              loading="lazy"
+            />
+            <div class="footer-brand-text">
+              <span class="footer-brand-name">GHOSXT</span>
+              <span class="footer-brand-tagline"
+                >Government-grade IT for small business.</span
+              >
+            </div>
+          </div>
+          <div class="footer-cta-block">
+            <a
+              href="https://calendly.com/ulises-ghosxt"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="footer-cta-btn"
+            >
+              <i class="fi fi-rs-calendar-day" aria-hidden="true"></i>
+              Schedule Free Assessment
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-grid">
+          <div class="footer-column">
+            <h3 class="footer-column-title">Company</h3>
+            <ul class="footer-links">
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="../about.html">About</a></li>
+              <li><a href="../services.html">Services</a></li>
+              <li><a href="../pricing.html">Pricing</a></li>
+              <li>
+                <a href="../website-development.html">Website Development</a>
+              </li>
+              <li><a href="../contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-column-title">Services</h3>
+            <ul class="footer-links">
+              <li><a href="../managed-it-services.html">Managed IT Services</a></li>
+              <li><a href="../cybersecurity.html">Cybersecurity</a></li>
+              <li><a href="../cloud-services.html">Cloud Services</a></li>
+              <li><a href="../backup-disaster-recovery.html">Backup &amp; Disaster Recovery</a></li>
+              <li><a href="../network-design.html">Network Design</a></li>
+              <li><a href="../website-development.html">Web Development</a></li>
+              <li><a href="../ctpat.html">C-TPAT Compliance</a></li>
+              <li><a href="../trucking-it-services.html">Trucking &amp; Logistics IT</a></li>
+              <li><a href="../agriculture-it-services.html">Agriculture &amp; Agribusiness IT</a></li>
+              <li><a href="../manufacturing-it-services.html">Manufacturing &amp; Industrial IT</a></li>
+              <li><a href="../professional-services-it.html">SMB Office &amp; Professional Services IT</a></li>
+              <li><a href="../healthcare-it-services.html">Healthcare &amp; Medical IT</a></li>
+              <li><a href="../property-management-it-services.html">Property Management IT</a></li>
+              <li><a href="../engineering-it-services.html">Engineering &amp; Architecture IT</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-column-title">Resources</h3>
+            <ul class="footer-links">
+              <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+              <li>
+                <a
+                  href="https://ticket.ghosxt.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Client Portal</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://calendly.com/ulises-ghosxt"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Free IT Assessment</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-column-title">Connect</h3>
+            <ul class="footer-links footer-social-links">
+              <li>
+                <a
+                  href="https://www.linkedin.com/company/ghosxt/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.063 2.063 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                  LinkedIn</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.facebook.com/GhosxtTech"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg>
+                  Facebook</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/ghosxttech/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+                  Instagram</a
+                >
+              </li>
+              <li>
+                <a href="mailto:sales@ghosxt.com"
+                  ><i class="fi fi-rs-envelope" aria-hidden="true"></i>
+                  sales@ghosxt.com</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <div class="footer-bottom">
+          <p class="footer-copyright">
+            &copy; 2026 Ghosxt. All rights reserved. Built by a cleared DoD
+            engineer.
+          </p>
+          <div class="footer-bottom-links">
+            <a href="../privacy-policy.html">Privacy Policy</a>
+            <span aria-hidden="true">&middot;</span>
+            <a
+              href="https://ticket.ghosxt.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Client Portal</a
+            >
+          </div>
+        </div>
+
+        <div class="service-areas-footer">
+          <h3>Service Areas</h3>
+          <ul>
+            <li><a href="../salinas.html">Salinas</a></li>
+            <li><a href="../monterey.html">Monterey</a></li>
+            <li><a href="../watsonville.html">Watsonville</a></li>
+            <li><a href="../hollister.html">Hollister</a></li>
+            <li><a href="../santa-cruz.html">Santa Cruz</a></li>
+            <li><a href="../gilroy.html">Gilroy</a></li>
+            <li><a href="../san-jose.html">San Jose</a></li>
+            <li><a href="../pacific-grove.html">Pacific Grove</a></li>
+            <li><a href="../carmel.html">Carmel</a></li>
+            <li><a href="../seaside.html">Seaside</a></li>
+            <li><a href="../marina.html">Marina</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="../assets/js/main.js?v=2026-05-15a" defer></script>
+    <!-- ghosxt:mobile-cta-bar -->
+    <div class="mobile-cta-bar" aria-label="Quick contact">
+      <a class="mcta-primary" href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer">Book free assessment</a>
+      <a class="mcta-secondary" href="tel:+18312040501">Call (831) 204-0501</a>
+    </div>
+  </body>
+</html>
