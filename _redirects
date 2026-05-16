@@ -1,2 +1,5 @@
 # Legacy URL fix: ghosxt-cares page was previously linked as /cares.html
 /cares.html   /ghosxt-cares.html   301
+
+# Renamed Salinas IT support post to a cleaner slug
+/blog/best-it-support-small-businesses-salinas-ca.html   /blog/best-it-support-in-salinas.html   301
