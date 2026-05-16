@@ -1,0 +1,627 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PG&amp;E PSPS Preparedness: IT Continuity Plan for Central Coast &amp; South Bay Small Businesses | Ghosxt</title>
+    <meta name="description" content="A practical IT continuity plan for PG&amp;E Public Safety Power Shutoff events in Monterey County, Santa Cruz County, San Benito County, and Santa Clara County. UPS sizing, generators, cellular failover, cloud-first architecture, and what to do in the 48-hour notice window." />
+    <link rel="canonical" href="https://ghosxt.com/blog/pge-psps-it-continuity-plan-central-coast.html" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://ghosxt.com/blog/pge-psps-it-continuity-plan-central-coast.html" />
+    <meta property="og:title" content="PG&amp;E PSPS Preparedness: IT Continuity Plan for Central Coast &amp; South Bay Small Businesses | Ghosxt" />
+    <meta property="og:description" content="The fall PSPS season will happen again. Here's what a small business in Monterey, Santa Cruz, San Benito, or Santa Clara County actually needs to put in place to keep operating." />
+    <meta property="og:image" content="https://ghosxt.com/assets/img/og/blog-pge-psps-it-continuity-plan-central-coast.png" />
+    <meta property="og:site_name" content="Ghosxt" />
+    <meta property="article:published_time" content="2026-05-16" />
+    <meta property="article:author" content="Ulises Paiz" />
+    <meta name="robots" content="index, follow" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="PG&amp;E PSPS Preparedness: IT Continuity Plan for Central Coast &amp; South Bay Small Businesses | Ghosxt" />
+    <meta name="twitter:description" content="Practical 48-hour PSPS playbook for small businesses across the Central Coast and South Bay." />
+    <meta name="twitter:image" content="https://ghosxt.com/assets/img/og/blog-pge-psps-it-continuity-plan-central-coast.png" />
+    <link rel="icon" href="../assets/img/favicon.ico" sizes="any" />
+    <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- ghosxt:roboto-preload -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" />
+    <link rel="preconnect" href="https://cdn-uicons.flaticon.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/main.css?v=2026-05-15a" />
+    <link rel="stylesheet" href="../assets/css/blog.css?v=2026-05-15a" />
+    <link rel="stylesheet" media="print" onload="this.media='all'" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" />
+    <noscript><link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" /></noscript>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "BlogPosting",
+            "mainEntityOfPage": { "@type": "WebPage", "@id": "https://ghosxt.com/blog/pge-psps-it-continuity-plan-central-coast.html" },
+            "headline": "PG&E PSPS Preparedness: An IT Continuity Plan for Central Coast and South Bay Small Businesses",
+            "description": "A practical IT continuity plan for PG&E Public Safety Power Shutoff events on the Central Coast and South Bay. Covers the four-layer continuity stack (power, network, cloud-first apps, people), UPS and generator sizing for SMB offices, cellular failover, the 48-hour notice playbook, and the specific risk profile for Monterey, Santa Cruz, San Benito, and Santa Clara counties.",
+            "image": "https://ghosxt.com/assets/img/og/blog-pge-psps-it-continuity-plan-central-coast.png",
+            "author": { "@type": "Person", "name": "Ulises Paiz", "url": "https://ghosxt.com/about.html" },
+            "publisher": { "@type": "Organization", "name": "Ghosxt", "logo": { "@type": "ImageObject", "url": "https://ghosxt.com/assets/img/ghosxt logo.webp" } },
+            "datePublished": "2026-05-16",
+            "dateModified": "2026-05-16",
+            "articleSection": "Backup &amp; Disaster Recovery",
+            "keywords": "PG&E PSPS small business, Public Safety Power Shutoff IT plan, business continuity Central Coast, Santa Cruz County PSPS, Monterey County PSPS, Santa Clara County PSPS, San Benito County PSPS, wildfire IT preparedness California, UPS battery backup business, generator sizing office, cellular failover SMB, cloud-first business continuity"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ghosxt.com/" },
+              { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://ghosxt.com/blog/" },
+              { "@type": "ListItem", "position": 3, "name": "PG&E PSPS IT Continuity Plan", "item": "https://ghosxt.com/blog/pge-psps-it-continuity-plan-central-coast.html" }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is a PG&E PSPS event and why does it affect my business?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "PSPS stands for Public Safety Power Shutoff. PG&E proactively cuts power in areas at high wildfire risk when conditions (high winds, low humidity, dry fuel) make energized power lines a significant ignition threat. Started in 2019, PSPS events have happened every fall since. They typically last 24 to 72 hours but can extend longer. If your business or your employees' homes are in a Tier 2 or Tier 3 High Fire Threat District, the power can be shut off with as little as 48 hours of notice."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Which Central Coast and South Bay areas are most exposed to PSPS?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Santa Cruz County (the San Lorenzo Valley, Scotts Valley hills, Bonny Doon), the mountain areas of Monterey County (Carmel Valley, Big Sur, Cachagua), the eastern and southern hills of Santa Clara County (Morgan Hill, Gilroy, San Martin foothills), and parts of San Benito County (Hollister hills, San Juan Bautista hills) all sit inside PG&E's Tier 2 or Tier 3 High Fire Threat Districts. Downtown Salinas, downtown Monterey, and central San Jose are generally not on the PSPS map, but supply chains and remote workers in your business probably are."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What's the minimum IT continuity setup for a small business in PSPS country?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Four layers. Power: a UPS on every critical box plus a generator if you have an on-prem server. Network: cellular failover (Cradlepoint, Peplink, or a configured LTE/5G hotspot) for the office firewall, and Wi-Fi hotspot capability for remote workers. Cloud-first apps: Microsoft 365 or Google Workspace for email, files, and collaboration so the office going dark does not mean the business going dark. People: a written communication plan and a designated backup work location. Total cost for a 10-person business is typically $1,500 to $5,000 one-time plus the cellular failover monthly."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How much UPS battery time do I actually need?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "For an office where the goal is graceful shutdown and a few minutes of warning, 15 to 30 minutes per critical device is the floor. For an office where you want to keep working through a 1 to 2 hour outage, 2 hours of runtime is the target, which means a 1500 to 2000 VA UPS for a workstation and monitor or a 3000 VA unit for a small server. For PSPS events that last 24 to 72 hours, UPS alone is not the answer; you need either a generator or a cloud-first architecture that lets the office close while the business continues."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do I need a generator?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "If you have an on-prem server, line-of-business equipment that does not run on battery, or refrigeration / cold-chain operations (produce, packing, ag, food service, healthcare), yes. A portable generator in the 5 to 8 kW range runs $800 to $1,800 and covers a typical small office. A natural-gas standby generator in the 14 to 22 kW range that auto-starts on power loss runs $5,000 to $12,000 installed and is the right answer for any business that cannot afford a 72-hour outage. If your business runs entirely on laptops, cloud apps, and cellular, you can usually skip the generator."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+    <!-- ghosxt:cf-web-analytics -->
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"f3ce7e0e17f54050845d52d7f355cd98"}'></script>
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top"><i class="fi fi-rs-angle-up" aria-hidden="true"></i></button>
+    <div class="cookie-banner" id="cookieBanner"><div class="cookie-banner-container"><div class="cookie-content"><div class="cookie-icon"><i class="fi fi-rs-cookie"></i></div><div class="cookie-text"><p class="cookie-message">We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.</p><a href="../privacy-policy.html" class="cookie-link">Learn more about our Privacy Policy</a></div></div><div class="cookie-actions"><button class="cookie-btn cookie-btn-secondary" id="cookieDecline">Decline</button><button class="cookie-btn cookie-btn-primary" id="cookieAccept">Accept All</button></div></div></div>
+    <div class="top-banner" id="topBanner"><div class="banner-container"><div class="banner-content"><span class="banner-text">Need Remote Support? &#9658;</span><a target="_blank" rel="noopener noreferrer" href="https://ticket.ghosxt.com/" class="banner-btn"><i class="fi fi-rs-ticket-alt"></i><span>Visit Client Portal</span></a></div></div></div>
+    <nav class="navbar" aria-label="Main navigation">
+      <div class="navbar-container">
+        <div class="navbar-left"><a href="../index.html" class="navbar-logo"><img fetchpriority="high" loading="eager" src="../assets/img/ghosxt logo.webp" alt="Ghosxt logo" width="48" height="48" /><span>GHOSXT</span></a></div>
+        <div class="navbar-right">
+          <div class="navbar-menu">
+            <a href="../index.html" class="navbar-link">Home</a>
+            <div class="navbar-dropdown"><a href="../about.html" class="navbar-link dropdown-trigger" aria-haspopup="menu">About <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></a><div class="dropdown-menu" role="menu"><a href="../about.html" class="dropdown-item" role="menuitem">About Ghosxt</a><a href="../ghosxt-cares.html" class="dropdown-item" role="menuitem">Ghosxt Cares</a></div></div>
+            <div class="navbar-dropdown"><a href="../services.html" class="navbar-link dropdown-trigger" aria-haspopup="menu">Services <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></a><div class="dropdown-menu" role="menu"><a href="../services.html" class="dropdown-item" role="menuitem">All Services</a>
+                <a href="../managed-it-services.html" class="dropdown-item" role="menuitem">Managed IT Services</a>
+                <a href="../cybersecurity.html" class="dropdown-item" role="menuitem">Cybersecurity</a>
+                <a href="../cloud-services.html" class="dropdown-item" role="menuitem">Cloud Services</a>
+                <a href="../backup-disaster-recovery.html" class="dropdown-item" role="menuitem">Backup &amp; Disaster Recovery</a>
+                <a href="../network-design.html" class="dropdown-item" role="menuitem">Network Design</a>
+                <a href="../website-development.html" class="dropdown-item" role="menuitem">Web Development</a>
+                <a href="../ctpat.html" class="dropdown-item" role="menuitem">C-TPAT Compliance</a></div></div>
+            <a href="../pricing.html" class="navbar-link">Pricing</a>
+            <a href="index.html" class="navbar-link">Blog</a>
+            <a href="../contact.html" class="navbar-link">Contact</a>
+          </div>
+          <button class="navbar-mobile-toggle" id="mobileToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu"><i class="fi fi-rs-burger-menu" aria-hidden="true"></i></button>
+          <div class="navbar-buttons"><a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer" class="navbar-btn btn-demo"><i class="fi fi-rs-calendar-day"></i><span>Book a Call</span></a></div>
+        </div>
+      </div>
+      <div class="navbar-overlay" id="navbarOverlay"></div>
+      <div class="navbar-mobile-menu" id="mobileMenu">
+        <a href="../index.html" class="mobile-link">Home</a>
+        <div class="mobile-accordion"><button class="mobile-accordion-trigger" aria-expanded="false">About <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></button><div class="mobile-accordion-content"><a href="../about.html" class="mobile-dropdown-item">About Ghosxt</a><a href="../ghosxt-cares.html" class="mobile-dropdown-item">Ghosxt Cares</a></div></div>
+        <div class="mobile-accordion"><button class="mobile-accordion-trigger" aria-expanded="false">Services <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></button><div class="mobile-accordion-content"><a href="../services.html" class="mobile-dropdown-item">All Services</a>
+            <a href="../managed-it-services.html" class="mobile-dropdown-item">Managed IT Services</a>
+            <a href="../cybersecurity.html" class="mobile-dropdown-item">Cybersecurity</a>
+            <a href="../cloud-services.html" class="mobile-dropdown-item">Cloud Services</a>
+            <a href="../backup-disaster-recovery.html" class="mobile-dropdown-item">Backup &amp; Disaster Recovery</a>
+            <a href="../network-design.html" class="mobile-dropdown-item">Network Design</a>
+            <a href="../website-development.html" class="mobile-dropdown-item">Web Development</a>
+            <a href="../ctpat.html" class="mobile-dropdown-item">C-TPAT Compliance</a></div></div>
+        <a href="../pricing.html" class="mobile-link">Pricing</a>
+        <a href="index.html" class="mobile-link">Blog</a>
+        <a href="../contact.html" class="mobile-link">Contact</a>
+        <div class="mobile-actions"><a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer" class="mobile-btn btn-demo"><i class="fi fi-rs-calendar-day"></i><span>Book a Call</span></a></div>
+      </div>
+    </nav>
+    <main id="main-content" class="blog-post">
+      <header class="blog-post-header">
+        <div class="container">
+          <nav class="blog-post-breadcrumbs" aria-label="Breadcrumb">
+            <a href="../index.html">Home</a><span class="sep">&rsaquo;</span><a href="index.html">Blog</a><span class="sep">&rsaquo;</span><span aria-current="page">PG&amp;E PSPS IT Continuity Plan</span>
+          </nav>
+          <div class="blog-post-meta">
+            <time datetime="2026-05-16">May 16, 2026</time>
+            <span>&middot;</span>
+            <span>14 min read</span>
+            <span>&middot;</span>
+            <span class="blog-card-tag">Backup &amp; DR</span>
+          </div>
+          <h1>PG&amp;E PSPS Preparedness: An IT Continuity Plan for Central Coast &amp; South Bay Small Businesses</h1>
+          <div class="blog-post-author">
+            <strong>Ulises Paiz</strong>, Founder, Ghosxt
+          </div>
+        </div>
+      </header>
+      <div class="blog-post-body">
+        <div class="container">
+          <aside class="blog-post-quickfix" aria-label="Summary of the IT continuity stack for PSPS events">
+            <span class="quickfix-label">TL;DR &mdash; Four layers, before next fire season</span>
+            <h2>If your business runs in Monterey, Santa Cruz, San Benito, or Santa Clara County, PSPS will happen again. Build the stack before September.</h2>
+            <ul>
+              <li><strong>Power:</strong> UPS on every critical box. Generator if you have an on-prem server, refrigeration, or anything that cannot tolerate a 72-hour outage.</li>
+              <li><strong>Network:</strong> Cellular failover on the office firewall (Cradlepoint, Peplink, or a configured LTE/5G hotspot). Mobile hotspot capability for remote workers and any team member whose home is in a PSPS zone.</li>
+              <li><strong>Cloud-first apps:</strong> Microsoft 365 or Google Workspace for email, files, and collaboration. The office going dark should not mean the business going dark.</li>
+              <li><strong>People:</strong> A written communication plan, a designated backup work location, and a roster of which employees live in PSPS-exposed areas. Practice the plan once a year, ideally in August.</li>
+            </ul>
+            <p>Realistic total cost for a 10-person business: <strong>$1,500 to $5,000 one-time</strong> plus the cellular failover monthly. Compared to the cost of a 48-hour outage (lost revenue, missed customer commitments, refrigeration loss, payroll for staff that cannot work), the math is straightforward.</p>
+          </aside>
+
+          <p>Public Safety Power Shutoff events are part of running a business on the Central Coast and in the South Bay now. PG&amp;E began the program in 2019 after the Camp Fire and the 2017 North Bay fires made it clear that energized power lines in dry, windy conditions had become a major wildfire ignition risk. The trade is straightforward: cut the power proactively, lose a few days of normal operations, prevent the fire. Five years in, PSPS events are an annual fact of life for any business operating in PG&amp;E territory, especially in the mountains and foothills.</p>
+
+          <p>This article is the operational version of the conversation I have with every new client whose office or staff sit inside a Tier 2 or Tier 3 High Fire Threat District. The plan is not complicated. It does require deciding on it in advance, because the 48-hour notice window is not enough time to design a continuity plan from scratch. Below is the four-layer stack, what each layer costs, and how to make the decisions for a small business in Salinas, Monterey, Santa Cruz, San Jose, Gilroy, Hollister, or anywhere else on the Central Coast or South Bay.</p>
+
+          <h2>What PSPS actually is, in plain English</h2>
+
+          <p>A Public Safety Power Shutoff is a preventive de-energization. When PG&amp;E's meteorologists and fire-risk models detect a combination of high winds (typically sustained above ~25 mph with gusts higher), low humidity (below ~20 percent), and dry vegetation in a specific service area, PG&amp;E can choose to shut off power to that area to prevent a fire ignition from a downed or sparking line. The shutoff is targeted to the affected circuits, not the entire region. A business in downtown Salinas might keep power while a business in Carmel Valley loses it on the same day.</p>
+
+          <p>The relevant facts for planning:</p>
+
+          <ul>
+            <li><strong>Notice:</strong> PG&amp;E targets 48 hours of advance notice. In practice, notice has been as short as 12 hours during fast-moving weather events.</li>
+            <li><strong>Duration:</strong> typically 24 to 72 hours. Has extended to a week in extreme cases. Power is restored only after PG&amp;E physically inspects the lines, which takes longer in hard-to-reach mountain areas.</li>
+            <li><strong>Affected areas:</strong> Tier 2 and Tier 3 High Fire Threat Districts. <a href="https://www.cpuc.ca.gov/firethreatmaps" target="_blank" rel="noopener noreferrer">California Public Utilities Commission publishes the official map</a>. <a href="https://www.pge.com/en/outages-and-safety/outages/maps-and-alerts/psps-map-and-alerts.html" target="_blank" rel="noopener noreferrer">PG&amp;E's PSPS event map</a> shows live and recent events.</li>
+            <li><strong>Frequency:</strong> events have happened every fall since 2019. Some years see multiple events; some years one. Spring events are rarer but not unknown.</li>
+            <li><strong>Notification:</strong> PG&amp;E sends notifications to the billing email and phone on file. If your business address is not on PG&amp;E's notification list, you will hear about the event from the news, not from PG&amp;E.</li>
+          </ul>
+
+          <h2>Who's actually exposed on the Central Coast and South Bay</h2>
+
+          <p>The misconception I see most often is that PSPS is a Sierra Nevada problem and that the Monterey Bay is too coastal to worry about it. The fire-threat map says otherwise. The specific local exposure:</p>
+
+          <h3>Santa Cruz County</h3>
+
+          <p>The San Lorenzo Valley (Boulder Creek, Ben Lomond, Felton), Scotts Valley hills, and the Bonny Doon area sit squarely in Tier 3 High Fire Threat District territory. The 2020 CZU Lightning Complex Fire passed through this area; the fuel load remains elevated. A business with an office in Scotts Valley or Felton, or remote workers living in the San Lorenzo Valley, should assume PSPS exposure every fall. Downtown Santa Cruz and Capitola are generally not in PSPS zones but can be affected when upstream transmission infrastructure is shut off.</p>
+
+          <h3>Monterey County</h3>
+
+          <p>Carmel Valley, the Big Sur coast, Cachagua, and the inland mountain communities are inside Tier 2 and Tier 3 zones. The 2020 Dolan Fire and the 2024 Carmel-area fires both ran in this corridor. Downtown Monterey, Pacific Grove, Carmel-by-the-Sea, Marina, and Seaside are generally not on the PSPS map, but you may have employees who live in Carmel Valley or south county areas that are. Salinas and the valley floor are not typically affected, but the surrounding hills are.</p>
+
+          <h3>Santa Clara County</h3>
+
+          <p>The eastern hills (Mount Hamilton, the Diablo Range), the southern foothills around Morgan Hill and Gilroy, the San Martin / Coyote Valley corridor, and the western Santa Cruz Mountains side of the county (Saratoga, Los Gatos hills, Loma Prieta) all sit inside Tier 2 or Tier 3 zones. Central San Jose, Sunnyvale, and Mountain View are generally not in PSPS zones, but Almaden Valley, the eastern hills, and South County (Morgan Hill, Gilroy) are recurring PSPS territory.</p>
+
+          <h3>San Benito County</h3>
+
+          <p>The hills around Hollister, the San Juan Bautista back country, and the eastern parts of the county along the Diablo Range sit in Tier 2 zones. Downtown Hollister and San Juan Bautista typically have power during events, but agricultural operations in the surrounding hills can lose power for days.</p>
+
+          <h3>Even if your office is not in a PSPS zone, your business probably is</h3>
+
+          <p>This is the part most owners miss. Even if your downtown Salinas office stays powered through every event, the following can still take your business offline:</p>
+
+          <ul>
+            <li><strong>Employees who live in PSPS zones.</strong> A remote worker in the San Lorenzo Valley loses power and the office becomes their problem until they relocate or a different worker covers the role.</li>
+            <li><strong>Supply chain partners in PSPS zones.</strong> A cooler operator in south Monterey County, an ag packer in San Benito, a contractor in Morgan Hill all losing power on the same day means your operations stop even if your office is fine.</li>
+            <li><strong>Upstream telecom and internet.</strong> A few PSPS events have taken out regional cellular towers and fiber routes, so even a powered office can lose connectivity.</li>
+            <li><strong>Cold-chain dependencies.</strong> Produce, food service, healthcare, and lab operations that depend on continuous refrigeration are affected by partner outages, not just their own.</li>
+          </ul>
+
+          <p>The right way to plan is to assume that PSPS will hit something in your operational footprint every fall, and design the continuity stack accordingly.</p>
+
+          <h2>The four-layer IT continuity stack</h2>
+
+          <h3>Layer 1: Power</h3>
+
+          <p>UPS battery backup on every critical box. Generator for anything that cannot tolerate a multi-day outage.</p>
+
+          <h4>UPS sizing for small business offices</h4>
+
+          <p>The goal of a UPS is to give the box enough runtime to either (a) shut down gracefully if the outage will be long, or (b) ride through a brief outage and keep working. For PSPS events, "brief" is the wrong target; the goal is graceful shutdown plus enough warning for users to save their work.</p>
+
+          <ul>
+            <li><strong>Per workstation:</strong> 850 to 1500 VA UPS. About $100 to $250. Gives 15 to 45 minutes of runtime for a typical desktop and monitor. Brands: APC, CyberPower, Eaton.</li>
+            <li><strong>Per server:</strong> 1500 to 3000 VA UPS with extended battery option if available. About $400 to $1,200. Critical: configure the UPS to signal a graceful shutdown to the server when battery hits 20 percent. A server that dies during an unceremonious power loss can corrupt the filesystem.</li>
+            <li><strong>Per firewall / switch / wireless access point:</strong> these often draw 30-60 watts each and can run for hours on a single 1500 VA UPS. Put the firewall, the core switch, and the wireless controller on a UPS together so the network stays up during the brief gap before the generator kicks in (or stays up entirely if you skip the generator).</li>
+            <li><strong>Voice systems:</strong> if you have a desk-phone VoIP system, the phones and the switch they connect to need UPS coverage. Most modern small businesses have shifted to softphones (Microsoft Teams Phone, Zoom Phone, RingCentral on the laptop), which solves this problem because the phone is wherever the laptop is.</li>
+          </ul>
+
+          <h4>Generators</h4>
+
+          <p>If you have an on-prem server, line-of-business equipment that cannot run on battery, refrigeration, or cold-chain operations, a generator is the practical answer for PSPS events.</p>
+
+          <ul>
+            <li><strong>Portable generator (5-8 kW):</strong> $800 to $1,800. Runs on gasoline or propane. Manual start, must be wheeled out and connected via an extension cord or a transfer switch. Right for a small office that wants to keep one or two critical circuits running.</li>
+            <li><strong>Standby generator (14-22 kW):</strong> $5,000 to $12,000 installed. Runs on natural gas or propane. Auto-starts on power loss, switches over within 10 to 30 seconds via a transfer switch. Right for any business that cannot afford to be without power for 72 hours and is willing to invest once.</li>
+            <li><strong>Battery-based whole-building (Tesla Powerwall, Enphase, Generac PWRcell):</strong> $15,000 to $40,000 installed depending on capacity. Runs silently, integrates with solar. Right for businesses that want a more permanent continuity solution and have solar capacity to charge it.</li>
+          </ul>
+
+          <p>Sizing rule of thumb: add up the wattage of everything you want to keep running (server, firewall, switch, a few workstations, lights, refrigeration). A 14 kW standby generator handles roughly 50 to 70 amps of load, which covers a small office with refrigeration. A 22 kW unit handles 80 to 90 amps and covers a medium office with light commercial refrigeration.</p>
+
+          <h3>Layer 2: Network</h3>
+
+          <p>Power is half the problem; connectivity is the other half. During PSPS events, the office ISP often goes down (Comcast, AT&amp;T, and other wireline providers depend on local infrastructure that loses power too).</p>
+
+          <h4>Cellular failover on the firewall</h4>
+
+          <p>Modern small-business firewalls (Sophos, Fortinet, SonicWall, Meraki, Ubiquiti UDM) support cellular failover via a USB modem or a dedicated cellular WAN appliance. When the primary internet connection drops, the firewall automatically switches to cellular and traffic keeps flowing. Cost: $200 to $600 for the modem, plus $30 to $100 per month for the cellular data plan. Brands: Cradlepoint, Peplink, Pepwave, or the modem option that ships with your specific firewall.</p>
+
+          <p>Critical: test the failover before you need it. The most common failure mode I see in the field is a cellular failover that was installed three years ago, has a deactivated SIM, and only gets discovered when the primary internet drops.</p>
+
+          <h4>Mobile hotspots for remote workers</h4>
+
+          <p>Any employee in a PSPS zone needs the ability to keep working from a coffee shop, a relative's house, or their car if needed. A 5G/LTE hotspot (Verizon Jetpack, T-Mobile 5G Home Internet, AT&amp;T Nighthawk) is $200 to $400 one-time and $30 to $60 per month. For 5 remote workers, that is $1,000 to $2,000 one-time and $150 to $300 per month for the data plans. Most small businesses do not pre-provision these; they should.</p>
+
+          <h4>Backup ISP</h4>
+
+          <p>If your business depends on internet uptime more than a typical office does (anything cloud-first, anything customer-facing, any e-commerce, any VoIP-heavy operation), consider a second ISP from a different infrastructure. Fixed wireless (Razzolink on the Central Coast, Etheric in some areas), Starlink for $99 to $250 per month, or a second wireline provider on a different rack and route. The firewall handles the failover automatically once both connections are configured.</p>
+
+          <h3>Layer 3: Cloud-first applications</h3>
+
+          <p>The single biggest shift you can make for PSPS resilience is moving the applications your business runs on into the cloud. An office without power but with cloud-based applications can keep operating from any laptop with a cellular connection. An office whose entire operation depends on an on-prem server is stuck the moment power goes out.</p>
+
+          <p>The practical translation:</p>
+
+          <ul>
+            <li><strong>Email and calendar:</strong> Microsoft 365 or Google Workspace. Almost everyone is here now; the holdouts on Exchange Server should read <a href="exchange-server-zero-day-cve-2026-42897-may-2026-smb.html">our recent Exchange zero-day post</a> for additional motivation.</li>
+            <li><strong>File storage:</strong> OneDrive, SharePoint, Google Drive, or Dropbox Business. Replace the on-prem file server with cloud storage that syncs to the laptop. The local copy works offline; cloud sync resumes when connectivity returns.</li>
+            <li><strong>Phone system:</strong> softphones (Teams Phone, Zoom Phone, RingCentral, Dialpad). Phone follows the laptop and the cellular connection.</li>
+            <li><strong>Line-of-business apps:</strong> QuickBooks Online instead of QuickBooks Desktop on a server. Web-based ERP instead of an on-prem client-server install. Industry-specific SaaS instead of on-prem software. This is usually the biggest project and the highest payoff.</li>
+            <li><strong>Backups:</strong> cloud-replicated backup (Datto, Veeam to cloud, Microsoft 365 backup via Veeam or Spanning, Acronis Cyber Cloud). A backup that lives in the same building as the data is not a real backup for a regional event.</li>
+          </ul>
+
+          <p>The destination state: the office is a place where people gather to work, not the place where the work is stored. When the office loses power, the work happens elsewhere. This overlaps heavily with the <a href="../cloud-services.html">cloud services migration scope</a> and the <a href="../backup-disaster-recovery.html">backup and disaster recovery program</a> we run for clients.</p>
+
+          <h3>Layer 4: People</h3>
+
+          <p>The technology is half the plan. The other half is the people.</p>
+
+          <h4>Written communication plan</h4>
+
+          <p>A one-page document that answers: When PSPS is announced, who calls whom? Who decides whether to open the office? Where do employees go if the office is dark? How do customers find out? How do we update the website and the voicemail? Who has authority to authorize emergency purchases (a generator rental, a hotspot upgrade)? Put it in writing. Distribute it before fire season starts. Print a paper copy and put it in the file cabinet because the digital copy is on the network you cannot reach during an event.</p>
+
+          <h4>Designated backup work location</h4>
+
+          <p>A library, a coffee shop with reliable Wi-Fi, a partner's office, or a home office that is not in a PSPS zone. The decision should be made before you need it. For a 10-person business in Salinas, the backup might be the Salinas Public Library or a co-working space. For a Santa Cruz Mountains business, the backup is probably "everyone works from home, and home cannot be in the same PSPS zone as the office."</p>
+
+          <h4>Staff roster with PSPS exposure</h4>
+
+          <p>Know which of your employees live in Tier 2 or Tier 3 zones. They are the ones who will lose power even if the office stays on. They need either a hotspot, a designated alternative work location, or the option to flex their hours and make up time outside the event. Having this conversation in August is better than having it in October at 9pm when the event has started.</p>
+
+          <h4>Annual practice</h4>
+
+          <p>Once a year, ideally in August before fire season starts, simulate a PSPS day. Turn off the main breaker for an hour. See what works and what does not. Update the plan based on what you learn. Most small businesses I have worked with skip this step the first year and learn the hard way in October.</p>
+
+          <h2>The 48-hour notice playbook</h2>
+
+          <p>When PG&amp;E sends a PSPS notification, you have roughly 48 hours (sometimes less) to execute. The playbook:</p>
+
+          <h3>Hour 0: Notice received</h3>
+
+          <ul>
+            <li>Confirm the affected zones include any of your locations or staff homes via the <a href="https://www.pge.com/en/outages-and-safety/outages/maps-and-alerts/psps-map-and-alerts.html" target="_blank" rel="noopener noreferrer">PG&amp;E PSPS map</a>.</li>
+            <li>Activate the communication plan. Email and call all staff. Brief leadership.</li>
+            <li>Confirm the generator (if you have one) has fuel. Order more if needed.</li>
+            <li>Pre-position any portable equipment (hotspots, portable generators, fuel cans) before stores close.</li>
+          </ul>
+
+          <h3>Hour 24: Day before</h3>
+
+          <ul>
+            <li>Test the cellular failover on the office firewall. Verify the failover SIM is active and the data plan is current.</li>
+            <li>Hand out hotspots to remote workers in affected zones. Confirm they work from each location.</li>
+            <li>Top off batteries on every UPS, every laptop, every mobile phone.</li>
+            <li>Update the website and voicemail with the expected impact.</li>
+            <li>Brief customers who have time-sensitive work in progress.</li>
+            <li>Save everything. Sync everything. Close open files on shared drives.</li>
+          </ul>
+
+          <h3>Hour 0 of event: Power off</h3>
+
+          <ul>
+            <li>If you have a generator, verify it starts when grid power drops.</li>
+            <li>If you do not, verify the office shuts down gracefully. Servers, NAS, network equipment all powered off in sequence (server first, then network, then UPS unplugged).</li>
+            <li>Move operations to the designated backup location or to remote-work-from-home mode.</li>
+            <li>Monitor the PG&amp;E event page for restoration estimates.</li>
+          </ul>
+
+          <h3>During the event</h3>
+
+          <ul>
+            <li>Keep customers informed. Daily update at minimum.</li>
+            <li>Keep staff informed. Pay them for hours worked from elsewhere; the disruption is not their fault.</li>
+            <li>Check insurance: business interruption insurance often covers PSPS-related losses if you have the right rider. Some policies explicitly exclude utility shutoffs; read your policy before the event.</li>
+            <li>Do not return to the office until PG&amp;E confirms restoration. Lines that were "off" can come back on without warning during inspection.</li>
+          </ul>
+
+          <h3>After restoration</h3>
+
+          <ul>
+            <li>Power equipment back up in reverse order: UPS, then network, then servers, then workstations.</li>
+            <li>Verify every system is back online. Run a backup before resuming normal operations.</li>
+            <li>Note any failures: did anything not come back up correctly? Did anyone lose data? Document for the post-event review.</li>
+            <li>Hold a 30-minute team meeting within a week to discuss what worked and what to fix before the next event.</li>
+            <li>Update the plan.</li>
+          </ul>
+
+          <h2>What it actually costs for a small business</h2>
+
+          <p>Rough numbers for a typical 10-person Salinas-area office that wants full PSPS coverage:</p>
+
+          <ul>
+            <li><strong>UPS units</strong> (10 workstations + 1 server + network rack): $1,500 to $3,000 one-time.</li>
+            <li><strong>Cellular failover on the firewall:</strong> $300 to $600 hardware + $40 to $80 per month data plan.</li>
+            <li><strong>Mobile hotspots</strong> (3 to 5 for at-risk staff): $600 to $2,000 hardware + $100 to $300 per month data plans.</li>
+            <li><strong>Portable generator (5-8 kW):</strong> $1,000 to $1,800 one-time. Or skip if cloud-first.</li>
+            <li><strong>Standby generator (14-22 kW):</strong> $7,000 to $12,000 installed. Or skip if cloud-first and no refrigeration.</li>
+            <li><strong>Cloud migration project</strong> (if needed): $3,000 to $15,000 depending on scope. Usually a separate decision that pays for itself in many other ways.</li>
+            <li><strong>Annual planning and practice:</strong> 4 to 8 hours of professional services + 2 hours of staff time once a year.</li>
+          </ul>
+
+          <p>For a business that already runs cloud-first (Microsoft 365, cloud accounting, no on-prem server), the floor cost is roughly $2,500 one-time and $200 per month. For a business that still depends on on-prem infrastructure, the floor is closer to $15,000 with a standby generator.</p>
+
+          <p>For comparison: a typical 48-hour outage costs a 10-person Salinas service business between $5,000 and $20,000 in lost revenue, staff time, and recovery work. The math on prevention is not subtle.</p>
+
+          <h2>The cloud-first conclusion</h2>
+
+          <p>The cheapest, most resilient PSPS plan for a small business in 2026 is to run as much of the business in the cloud as you can, then add modest power and network resilience on top. An office that can pick up its laptops and continue operations from anywhere with cellular service does not need a $12,000 standby generator. An office that depends on an on-prem server, on-prem phone system, and on-prem file storage needs the full hardware stack.</p>
+
+          <p>If your business has been waiting for a reason to migrate off the on-prem server, the annual PSPS event is the reason. We covered the broader migration scope in <a href="exchange-server-zero-day-cve-2026-42897-may-2026-smb.html">the on-prem Exchange post</a> and the <a href="../cloud-services.html">cloud services page</a>. The PSPS angle is one of the strongest cost-justification arguments.</p>
+
+          <h2>How Ghosxt approaches PSPS planning with clients</h2>
+
+          <p>For Ghosxt clients in <a href="../monterey.html">Monterey</a>, <a href="../santa-cruz.html">Santa Cruz</a>, <a href="../watsonville.html">Watsonville</a>, <a href="../hollister.html">Hollister</a>, <a href="../gilroy.html">Gilroy</a>, <a href="../san-jose.html">San Jose</a>, and the surrounding service areas, PSPS planning is part of the annual operating rhythm. In practice:</p>
+
+          <ul>
+            <li><strong>July:</strong> annual review of the continuity plan with the owner. Update the staff PSPS-exposure roster, refresh hotspot inventory, verify cellular failover SIM status.</li>
+            <li><strong>August:</strong> simulated PSPS day. Turn off the main breaker for an hour. Identify and fix any gaps.</li>
+            <li><strong>September to November:</strong> active monitoring. Subscribe to PG&amp;E PSPS notifications on the client's behalf. When notice comes in, run the 48-hour playbook with the client.</li>
+            <li><strong>December:</strong> post-season review. Document what worked, what to invest in next year.</li>
+          </ul>
+
+          <p>The point of this rhythm is that PSPS becomes a planned operational event instead of an emergency. Owners who run the plan consistently stop losing days of operations to events. Owners who do not lose days every fall.</p>
+
+          <h2>FAQs about PSPS preparedness for Central Coast and South Bay small businesses</h2>
+
+          <h3>What is a PG&amp;E PSPS event and why does it affect my business?</h3>
+          <p>PSPS stands for Public Safety Power Shutoff. PG&amp;E proactively cuts power in areas at high wildfire risk when conditions (high winds, low humidity, dry fuel) make energized power lines a significant ignition threat. Started in 2019, PSPS events have happened every fall since. They typically last 24 to 72 hours but can extend longer. If your business or your employees' homes are in a Tier 2 or Tier 3 High Fire Threat District, the power can be shut off with as little as 48 hours of notice.</p>
+
+          <h3>Which Central Coast and South Bay areas are most exposed to PSPS?</h3>
+          <p>Santa Cruz County (the San Lorenzo Valley, Scotts Valley hills, Bonny Doon), the mountain areas of Monterey County (Carmel Valley, Big Sur, Cachagua), the eastern and southern hills of Santa Clara County (Morgan Hill, Gilroy, San Martin foothills), and parts of San Benito County (Hollister hills, San Juan Bautista hills) all sit inside PG&amp;E's Tier 2 or Tier 3 High Fire Threat Districts. Downtown Salinas, downtown Monterey, and central San Jose are generally not on the PSPS map, but supply chains and remote workers in your business probably are.</p>
+
+          <h3>What's the minimum IT continuity setup for a small business in PSPS country?</h3>
+          <p>Four layers. <strong>Power:</strong> a UPS on every critical box plus a generator if you have an on-prem server. <strong>Network:</strong> cellular failover (Cradlepoint, Peplink, or a configured LTE/5G hotspot) for the office firewall, and Wi-Fi hotspot capability for remote workers. <strong>Cloud-first apps:</strong> Microsoft 365 or Google Workspace for email, files, and collaboration so the office going dark does not mean the business going dark. <strong>People:</strong> a written communication plan and a designated backup work location. Total cost for a 10-person business is typically $1,500 to $5,000 one-time plus the cellular failover monthly.</p>
+
+          <h3>How much UPS battery time do I actually need?</h3>
+          <p>For an office where the goal is graceful shutdown and a few minutes of warning, <strong>15 to 30 minutes per critical device</strong> is the floor. For an office where you want to keep working through a 1 to 2 hour outage, 2 hours of runtime is the target, which means a 1500 to 2000 VA UPS for a workstation and monitor or a 3000 VA unit for a small server. For PSPS events that last 24 to 72 hours, UPS alone is not the answer; you need either a generator or a cloud-first architecture that lets the office close while the business continues.</p>
+
+          <h3>Do I need a generator?</h3>
+          <p>If you have an on-prem server, line-of-business equipment that does not run on battery, or refrigeration / cold-chain operations (produce, packing, ag, food service, healthcare), yes. A portable generator in the 5 to 8 kW range runs $800 to $1,800 and covers a typical small office. A natural-gas standby generator in the 14 to 22 kW range that auto-starts on power loss runs $5,000 to $12,000 installed and is the right answer for any business that cannot afford a 72-hour outage. If your business runs entirely on laptops, cloud apps, and cellular, you can usually skip the generator.</p>
+
+          <h3>Does business interruption insurance cover PSPS losses?</h3>
+          <p>It depends on the policy. Some policies explicitly exclude utility shutoffs as a covered cause of loss; others include them, sometimes with a "civil authority" or "service interruption" rider. Read your policy or ask your broker before the next event. Even if you have coverage, the typical waiting period (24 to 72 hours) means most PSPS events fall below the deductible threshold; the policy matters most for longer events.</p>
+
+          <h3>What about Starlink or other satellite internet?</h3>
+          <p>Starlink works well as a primary or backup ISP for offices and homes in PSPS zones, particularly in the San Lorenzo Valley, Carmel Valley, and the Santa Clara County hills where wireline service is unreliable. Hardware: $349 to $599. Monthly: $99 to $250 depending on plan. The dish needs clear sky and power (so it needs to be on a UPS or generator), but for businesses in coverage-poor areas, it has changed the math on whether a remote-work plan is realistic.</p>
+
+          <h3>Should I move my server to the cloud just because of PSPS?</h3>
+          <p>PSPS by itself usually does not justify a server migration in dollar terms. PSPS plus the security and patching reality of running an on-prem server (covered in <a href="exchange-server-zero-day-cve-2026-42897-may-2026-smb.html">the Exchange post</a>) plus the operational cost of maintaining hardware in a small office usually does. Most small businesses that have retired their on-prem servers in the last three years cite PSPS as one of the three reasons; the others are security and maintenance burden.</p>
+
+          <div class="blog-post-cta">
+            <h3>Want a written PSPS continuity plan for your business?</h3>
+            <p>30 minutes with the founder. We will look at your office location, your staff distribution, your current infrastructure, and your industry, and produce a written PSPS plan you can hand to leadership before fire season. Includes cost estimates for the hardware and the optional cloud migration. No sales script.</p>
+            <a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer">
+              <i class="fi fi-rs-calendar-day" aria-hidden="true"></i>
+              Book your free assessment
+            </a>
+          </div>
+
+          <p style="margin-top: 1.5rem; font-size: 0.95rem; color: rgba(0,0,0,0.7);">
+            Prefer to talk first? Email <a href="mailto:sales@ghosxt.com">sales@ghosxt.com</a> or call <a href="tel:+18312040501">(831) 204-0501</a>. Based in Salinas, serving Monterey, San Benito, Santa Cruz, and Santa Clara counties (including San Jose, Gilroy, and Morgan Hill).
+          </p>
+        </div>
+      </div>
+    </main>
+    <footer class="footer" id="footerSection">
+      <div class="footer-container">
+        <div class="footer-brand-row">
+          <div class="footer-brand">
+            <img
+              src="../assets/img/ghosxt logo.webp"
+              alt="Ghosxt logo"
+              width="80"
+              height="80"
+              loading="lazy"
+            />
+            <div class="footer-brand-text">
+              <span class="footer-brand-name">GHOSXT</span>
+              <span class="footer-brand-tagline"
+                >Government-grade IT for small business.</span
+              >
+            </div>
+          </div>
+          <div class="footer-cta-block">
+            <a
+              href="https://calendly.com/ulises-ghosxt"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="footer-cta-btn"
+            >
+              <i class="fi fi-rs-calendar-day" aria-hidden="true"></i>
+              Schedule Free Assessment
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-grid">
+          <div class="footer-column">
+            <h3 class="footer-column-title">Company</h3>
+            <ul class="footer-links">
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="../about.html">About</a></li>
+              <li><a href="../services.html">Services</a></li>
+              <li><a href="../pricing.html">Pricing</a></li>
+              <li>
+                <a href="../website-development.html">Website Development</a>
+              </li>
+              <li><a href="../contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-column-title">Services</h3>
+            <ul class="footer-links">
+              <li><a href="../managed-it-services.html">Managed IT Services</a></li>
+              <li><a href="../cybersecurity.html">Cybersecurity</a></li>
+              <li><a href="../cloud-services.html">Cloud Services</a></li>
+              <li><a href="../backup-disaster-recovery.html">Backup &amp; Disaster Recovery</a></li>
+              <li><a href="../network-design.html">Network Design</a></li>
+              <li><a href="../website-development.html">Web Development</a></li>
+              <li><a href="../ctpat.html">C-TPAT Compliance</a></li>
+              <li><a href="../trucking-it-services.html">Trucking &amp; Logistics IT</a></li>
+              <li><a href="../agriculture-it-services.html">Agriculture &amp; Agribusiness IT</a></li>
+              <li><a href="../manufacturing-it-services.html">Manufacturing &amp; Industrial IT</a></li>
+              <li><a href="../professional-services-it.html">SMB Office &amp; Professional Services IT</a></li>
+              <li><a href="../healthcare-it-services.html">Healthcare &amp; Medical IT</a></li>
+              <li><a href="../property-management-it-services.html">Property Management IT</a></li>
+              <li><a href="../engineering-it-services.html">Engineering &amp; Architecture IT</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-column-title">Resources</h3>
+            <ul class="footer-links">
+              <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+              <li>
+                <a
+                  href="https://ticket.ghosxt.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Client Portal</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://calendly.com/ulises-ghosxt"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Free IT Assessment</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-column-title">Connect</h3>
+            <ul class="footer-links footer-social-links">
+              <li>
+                <a
+                  href="https://www.linkedin.com/company/ghosxt/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.063 2.063 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                  LinkedIn</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.facebook.com/GhosxtTech"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg>
+                  Facebook</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/ghosxttech/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+                  Instagram</a
+                >
+              </li>
+              <li>
+                <a href="mailto:sales@ghosxt.com"
+                  ><i class="fi fi-rs-envelope" aria-hidden="true"></i>
+                  sales@ghosxt.com</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <div class="footer-bottom">
+          <p class="footer-copyright">
+            &copy; 2026 Ghosxt. All rights reserved. Built by a cleared DoD
+            engineer.
+          </p>
+          <div class="footer-bottom-links">
+            <a href="../privacy-policy.html">Privacy Policy</a>
+            <span aria-hidden="true">&middot;</span>
+            <a
+              href="https://ticket.ghosxt.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Client Portal</a
+            >
+          </div>
+        </div>
+
+        <div class="service-areas-footer">
+          <h3>Service Areas</h3>
+          <ul>
+            <li><a href="../salinas.html">Salinas</a></li>
+            <li><a href="../monterey.html">Monterey</a></li>
+            <li><a href="../watsonville.html">Watsonville</a></li>
+            <li><a href="../hollister.html">Hollister</a></li>
+            <li><a href="../santa-cruz.html">Santa Cruz</a></li>
+            <li><a href="../gilroy.html">Gilroy</a></li>
+            <li><a href="../san-jose.html">San Jose</a></li>
+            <li><a href="../pacific-grove.html">Pacific Grove</a></li>
+            <li><a href="../carmel.html">Carmel</a></li>
+            <li><a href="../seaside.html">Seaside</a></li>
+            <li><a href="../marina.html">Marina</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="../assets/js/main.js?v=2026-05-15a" defer></script>
+    <!-- ghosxt:mobile-cta-bar -->
+    <div class="mobile-cta-bar" aria-label="Quick contact">
+      <a class="mcta-primary" href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer">Book free assessment</a>
+      <a class="mcta-secondary" href="tel:+18312040501">Call (831) 204-0501</a>
+    </div>
+  </body>
+</html>
