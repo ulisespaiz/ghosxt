@@ -706,6 +706,7 @@
                         form.reset();
                         if (window.turnstile) window.turnstile.reset();
                         setStatus('Thanks — we received your message and will reply within 1 business day.', 'success');
+                        document.dispatchEvent(new CustomEvent('contact:success'));
                     } else {
                         let msg = 'Something went wrong. Please try again or email hello@ghosxt.com.';
                         try {
