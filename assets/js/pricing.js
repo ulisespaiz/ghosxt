@@ -236,6 +236,17 @@
       });
     });
 
+    /* "Which tier" decision-block links: pre-select the tier radio before
+       the browser scrolls to #calculator. Click is not prevented — the
+       anchor scroll still happens natively. */
+    document.querySelectorAll('.choose-card-link[data-tier]').forEach(link => {
+      link.addEventListener('click', () => {
+        const target = link.dataset.tier;
+        const radio = document.querySelector('input[name="tier"][value="' + target + '"]');
+        if (radio) { radio.checked = true; state.tier = target; render(); }
+      });
+    });
+
     /* Add-on checkboxes — toggle qty wrap visibility, then re-render */
     document.querySelectorAll('.addon-item input[type="checkbox"]').forEach(cb => {
       cb.addEventListener('change', () => {
