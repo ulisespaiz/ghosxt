@@ -8,7 +8,7 @@
 
   /* ── CONSTANTS ───────────────────────────────────────────── */
   const TIER_PRICES  = { essential: 125, professional: 175, premium: 250 };
-  const TIER_LABELS  = { essential: 'Essential', professional: 'Professional', premium: 'Premium' };
+  const TIER_LABELS  = { essential: 'Core Managed IT', professional: 'Secure Growth', premium: 'Compliance & Continuity' };
   const MIN_USERS      = 5;
 
   /* Loaded monthly cost for each role (CA salary + 30% benefits/overhead, ÷12).
