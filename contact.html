@@ -273,7 +273,7 @@
                         </div>
                         <div class="info-content">
                             <div class="info-value">Based in Salinas, California</div>
-                            <div class="info-label">Serving businesses thoroughout California and beyond</div>
+                            <div class="info-label">Serving businesses throughout California and beyond</div>
                             <div class="info-label">Remote support available nationwide</div>
                         </div>
                     </div>
@@ -407,7 +407,7 @@
                     <div class="process-icon">
                         <span class="">2</span>
                     </div>
-                    <h3 class="service-title">Assessment (If Appropiate)</h3>
+                    <h3 class="service-title">Assessment (If Appropriate)</h3>
                     <p class="service-description">We review your infrastructure and identify concerns.</p>
                 </div>
 
@@ -708,15 +708,15 @@
                         setStatus('Thanks — we received your message and will reply within 1 business day.', 'success');
                         document.dispatchEvent(new CustomEvent('contact:success'));
                     } else {
-                        let msg = 'Something went wrong. Please try again or email hello@ghosxt.com.';
+                        let msg = 'Something went wrong. Please try again or email sales@ghosxt.com.';
                         try {
                             const body = await res.json();
-                            if (body && body.error) msg = body.error + '. Please try again or email hello@ghosxt.com.';
+                            if (body && body.error) msg = body.error + '. Please try again or email sales@ghosxt.com.';
                         } catch (_) {}
                         setStatus(msg, 'error');
                     }
                 } catch (_) {
-                    setStatus('Network error. Please try again or email hello@ghosxt.com.', 'error');
+                    setStatus('Network error. Please try again or email sales@ghosxt.com.', 'error');
                 } finally {
                     submit.disabled = false;
                     submit.textContent = submitDefault;
