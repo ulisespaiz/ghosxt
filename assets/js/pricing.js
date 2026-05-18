@@ -7,8 +7,12 @@
   'use strict';
 
   /* ── CONSTANTS ───────────────────────────────────────────── */
-  const TIER_PRICES  = { essential: 125, professional: 175, premium: 250 };
-  const TIER_LABELS  = { essential: 'Core Managed IT', professional: 'Secure Growth', premium: 'Compliance & Continuity' };
+  const TIER_PRICES       = { essential: 125, professional: 175, premium: 250 };
+  const TIER_LABELS       = { essential: 'Core Managed IT', professional: 'Secure Growth', premium: 'Compliance & Continuity' };
+  /* Short labels used inside the dynamic CTA button so a long tier name
+     doesn't push the button copy past ~60 chars on mobile. */
+  const TIER_SHORT_LABELS = { essential: 'Core', professional: 'Secure Growth', premium: 'Compliance' };
+  const CALENDLY_BASE_URL = 'https://calendly.com/ulises-ghosxt';
   const MIN_USERS      = 5;
 
   /* Loaded monthly cost for each role (CA salary + 30% benefits/overhead, ÷12).
@@ -200,6 +204,30 @@
 
     const heroEl = document.getElementById('heroSavingsPct');
     if (heroEl) heroEl.textContent = pct > 0 ? pct + '%' : '—';
+
+    /* Calculator CTA — reflect the live quote in both button text and the
+       Calendly URL (UTM-tagged so the context lands in Calendly's tracking
+       and any analytics). */
+    const ctaBtn  = document.getElementById('calcCtaBtn');
+    const ctaText = document.getElementById('calcCtaBtnText');
+    if (ctaBtn && ctaText) {
+      const shortTier = TIER_SHORT_LABELS[tier] || TIER_LABELS[tier];
+      const label = `Book a call about this ${fmtDollar(ghosxt)}/mo ${shortTier} estimate`;
+      ctaText.textContent = label;
+      ctaBtn.setAttribute('aria-label', label + ' — opens Calendly in a new tab');
+
+      const params = new URLSearchParams({
+        utm_source:  'pricing-calc',
+        utm_medium:  'website',
+        utm_campaign: 'pricing-page-cta',
+        utm_content: `tier_${tier}__users_${users}__total_${Math.round(ghosxt)}`,
+      });
+      const addons = getActiveAddons();
+      if (addons.length) {
+        params.set('utm_term', addons.map(a => `${a.name}-${a.quantity}`).join('_'));
+      }
+      ctaBtn.href = `${CALENDLY_BASE_URL}?${params.toString()}`;
+    }
   }
 
   /* ── CONTROLS ────────────────────────────────────────────── */
