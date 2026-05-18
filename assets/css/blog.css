@@ -28,9 +28,33 @@
   padding: 3rem 24px;
 }
 
+.blog-list + .blog-list {
+  padding-top: 0.5rem;
+}
+
 .blog-list .container {
   max-width: 900px;
   margin: 0 auto;
+}
+
+.blog-topic-title {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin: 0 0 0.5rem;
+  color: var(--ghosxt-black);
+  border-bottom: 2px solid var(--ghosxt-black);
+  padding-bottom: 0.5rem;
+}
+
+.blog-topic-intro {
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.72);
+  margin: 0 0 1.5rem;
+  line-height: 1.55;
+}
+
+.blog-topic-intro a {
+  color: var(--ghosxt-black);
+  font-weight: 600;
 }
 
 .blog-card {
@@ -235,6 +259,56 @@
   margin-top: 2.5rem;
   background: var(--ghosxt-white);
   box-shadow: 3px 3px 0 0 var(--ghosxt-black);
+}
+
+.blog-related {
+  border-top: 2px solid var(--ghosxt-black);
+  margin-top: 3rem;
+  padding-top: 2rem;
+}
+
+.blog-related h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1.35rem;
+}
+
+.blog-related p.blog-related-intro {
+  margin: 0 0 1.25rem;
+  color: rgba(0, 0, 0, 0.72);
+}
+
+.blog-related ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.blog-related li {
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--ghosxt-black);
+  border-radius: 6px;
+  background: var(--ghosxt-white);
+  box-shadow: 2px 2px 0 0 var(--ghosxt-black);
+}
+
+.blog-related li a {
+  color: var(--ghosxt-black);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.blog-related li a:hover {
+  text-decoration: underline;
+}
+
+.blog-related li span.blog-related-note {
+  display: block;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 0.95rem;
+  margin-top: 0.25rem;
 }
 
 .blog-post-cta h3 {
