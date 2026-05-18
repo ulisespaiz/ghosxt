@@ -50,9 +50,6 @@
     document.addEventListener('pricing:tier', function (e) {
       send('pricing_tier_selected', e.detail || {});
     });
-    document.addEventListener('pricing:users', function (e) {
-      send('pricing_users_changed', e.detail || {});
-    });
     document.addEventListener('pricing:addon', function (e) {
       send('pricing_addon_selected', e.detail || {});
     });

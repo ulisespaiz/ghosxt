@@ -49,13 +49,6 @@
     try { document.dispatchEvent(new CustomEvent(name, { detail: detail || {} })); }
     catch (_) {}
   }
-  /* High-frequency events (slider drag, typing) are debounced so we capture
-     the value the user landed on, not every intermediate state. */
-  let usersTrackTimer = null;
-  function trackUsersDebounced() {
-    if (usersTrackTimer) clearTimeout(usersTrackTimer);
-    usersTrackTimer = setTimeout(() => trackEvent('pricing:users', { users: state.users }), 600);
-  }
   /* Read an add-on's display name from the DOM the same way getActiveAddons does. */
   function addonNameFromEl(item) {
     const nameEl = item && item.querySelector ? item.querySelector('.addon-name') : null;
@@ -269,13 +262,13 @@
     const userInput  = document.getElementById('userCount');
     const userSlider = document.getElementById('userSlider');
 
-    if (stepDown)   stepDown.addEventListener('click', () => { setUsers(state.users - 1); trackUsersDebounced(); });
-    if (stepUp)     stepUp.addEventListener('click',   () => { setUsers(state.users + 1); trackUsersDebounced(); });
+    if (stepDown)   stepDown.addEventListener('click', () => setUsers(state.users - 1));
+    if (stepUp)     stepUp.addEventListener('click',   () => setUsers(state.users + 1));
     if (userInput)  {
-      userInput.addEventListener('change', () => { setUsers(userInput.value); trackUsersDebounced(); });
-      userInput.addEventListener('input',  () => { setUsers(userInput.value); trackUsersDebounced(); });
+      userInput.addEventListener('change', () => setUsers(userInput.value));
+      userInput.addEventListener('input',  () => setUsers(userInput.value));
     }
-    if (userSlider) userSlider.addEventListener('input', () => { setUsers(userSlider.value); trackUsersDebounced(); });
+    if (userSlider) userSlider.addEventListener('input', () => setUsers(userSlider.value));
 
     /* Tier radios */
     document.querySelectorAll('input[name="tier"]').forEach(r => {
