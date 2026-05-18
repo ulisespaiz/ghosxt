@@ -42,6 +42,23 @@
     document.addEventListener('calendly.event_scheduled', function () {
       send('calendly_booking_complete', {});
     });
+    /* Pricing calculator intent events — dispatched by pricing.js. The
+       generic cta_calendly_click event above still fires for the
+       calculator's Book-a-Call button (it matches any calendly.com
+       href); pricing_book_call_click adds the tier/users/total/addons
+       context that the generic event can't capture. */
+    document.addEventListener('pricing:tier', function (e) {
+      send('pricing_tier_selected', e.detail || {});
+    });
+    document.addEventListener('pricing:users', function (e) {
+      send('pricing_users_changed', e.detail || {});
+    });
+    document.addEventListener('pricing:addon', function (e) {
+      send('pricing_addon_selected', e.detail || {});
+    });
+    document.addEventListener('pricing:cta-click', function (e) {
+      send('pricing_book_call_click', e.detail || {});
+    });
     window.addEventListener('message', function (e) {
       if (!e || !e.data || typeof e.data !== 'object') return;
       if (e.data.event === 'calendly.event_scheduled') {

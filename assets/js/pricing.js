@@ -42,6 +42,26 @@
     tier:  'professional',
   };
 
+  /* ── TRACKING HELPERS ────────────────────────────────────── */
+  /* Dispatch a semantic CustomEvent. main.js listens for these and beacons
+     to /api/track. Wrapped in try/catch so analytics can never break the UI. */
+  function trackEvent(name, detail) {
+    try { document.dispatchEvent(new CustomEvent(name, { detail: detail || {} })); }
+    catch (_) {}
+  }
+  /* High-frequency events (slider drag, typing) are debounced so we capture
+     the value the user landed on, not every intermediate state. */
+  let usersTrackTimer = null;
+  function trackUsersDebounced() {
+    if (usersTrackTimer) clearTimeout(usersTrackTimer);
+    usersTrackTimer = setTimeout(() => trackEvent('pricing:users', { users: state.users }), 600);
+  }
+  /* Read an add-on's display name from the DOM the same way getActiveAddons does. */
+  function addonNameFromEl(item) {
+    const nameEl = item && item.querySelector ? item.querySelector('.addon-name') : null;
+    return nameEl ? (nameEl.childNodes[0] && nameEl.childNodes[0].textContent || '').trim() : '';
+  }
+
   /* ── COLLECT ACTIVE ADD-ONS WITH QUANTITIES ───────────────── */
   function getActiveAddons() {
     const addons = [];
@@ -249,18 +269,22 @@
     const userInput  = document.getElementById('userCount');
     const userSlider = document.getElementById('userSlider');
 
-    if (stepDown)   stepDown.addEventListener('click', () => setUsers(state.users - 1));
-    if (stepUp)     stepUp.addEventListener('click',   () => setUsers(state.users + 1));
+    if (stepDown)   stepDown.addEventListener('click', () => { setUsers(state.users - 1); trackUsersDebounced(); });
+    if (stepUp)     stepUp.addEventListener('click',   () => { setUsers(state.users + 1); trackUsersDebounced(); });
     if (userInput)  {
-      userInput.addEventListener('change', () => setUsers(userInput.value));
-      userInput.addEventListener('input',  () => setUsers(userInput.value));
+      userInput.addEventListener('change', () => { setUsers(userInput.value); trackUsersDebounced(); });
+      userInput.addEventListener('input',  () => { setUsers(userInput.value); trackUsersDebounced(); });
     }
-    if (userSlider) userSlider.addEventListener('input', () => setUsers(userSlider.value));
+    if (userSlider) userSlider.addEventListener('input', () => { setUsers(userSlider.value); trackUsersDebounced(); });
 
     /* Tier radios */
     document.querySelectorAll('input[name="tier"]').forEach(r => {
       r.addEventListener('change', () => {
-        if (r.checked) { state.tier = r.value; render(); }
+        if (r.checked) {
+          state.tier = r.value;
+          render();
+          trackEvent('pricing:tier', { tier: r.value, source: 'radio' });
+        }
       });
     });
 
@@ -272,6 +296,7 @@
         const target = link.dataset.tier;
         const radio = document.querySelector('input[name="tier"][value="' + target + '"]');
         if (radio) { radio.checked = true; state.tier = target; render(); }
+        trackEvent('pricing:tier', { tier: target, source: 'decision-block' });
       });
     });
 
@@ -290,6 +315,7 @@
           }
         }
         render();
+        trackEvent('pricing:addon', { addon: addonNameFromEl(item), action: cb.checked ? 'add' : 'remove' });
       });
     });
 
@@ -303,8 +329,25 @@
         qty = action === 'up' ? qty + 1 : Math.max(1, qty - 1);
         qtyEl.textContent = qty;
         render();
+        trackEvent('pricing:addon', { addon: addonNameFromEl(btn.closest('.addon-item')), action: 'qty', quantity: qty });
       });
     });
+
+    /* Calculator CTA click — beacon the full quote context. The generic
+       cta_calendly_click event from main.js still fires too (it covers
+       every Calendly link site-wide); this richer event is calculator-
+       specific. */
+    const calcCta = document.getElementById('calcCtaBtn');
+    if (calcCta) {
+      calcCta.addEventListener('click', () => {
+        trackEvent('pricing:cta-click', {
+          tier:   state.tier,
+          users:  state.users,
+          total:  Math.round(ghosxtCost()),
+          addons: getActiveAddons().map(a => ({ name: a.name, qty: a.quantity })),
+        });
+      });
+    }
 
     /* Set Professional as default selected */
     const proRadio = document.querySelector('input[name="tier"][value="professional"]');
