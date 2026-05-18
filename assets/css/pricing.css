@@ -473,6 +473,35 @@
     letter-spacing: 0.02em;
 }
 
+/* Under-5-users callout that appears when someone tries to set < 5 in the calculator */
+.under5-notice {
+    margin-top: 0.875rem;
+    padding: 0.65rem 0.8rem;
+    background: rgba(183, 28, 28, 0.07);
+    border-left: 3px solid var(--ghosxt-red-0);
+    border-radius: 4px;
+    font-family: var(--font-family-2);
+    font-size: 0.85rem;
+    line-height: 1.4;
+    color: var(--ghosxt-black);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.under5-notice[hidden] { display: none; }
+.under5-notice i {
+    color: var(--ghosxt-red-0);
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+.under5-notice a {
+    color: var(--ghosxt-red-0);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+.under5-notice a:hover { text-decoration: none; }
+
 /* ── TIER SELECTOR ────────────────────────────────────────── */
 .tier-selector {
     padding: 0.875rem;

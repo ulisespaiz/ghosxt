@@ -204,7 +204,10 @@
 
   /* ── CONTROLS ────────────────────────────────────────────── */
   function setUsers(raw) {
-    state.users = Math.max(MIN_USERS, Math.min(500, parseInt(raw) || MIN_USERS));
+    const parsed = parseInt(raw);
+    const notice = document.getElementById('under5Notice');
+    if (notice) notice.hidden = !(Number.isFinite(parsed) && parsed >= 1 && parsed < MIN_USERS);
+    state.users = Math.max(MIN_USERS, Math.min(500, parsed || MIN_USERS));
     const ui = document.getElementById('userCount');
     const us = document.getElementById('userSlider');
     if (ui) ui.value = state.users;
