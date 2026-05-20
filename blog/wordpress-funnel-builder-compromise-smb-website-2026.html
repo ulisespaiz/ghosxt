@@ -1,0 +1,546 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WordPress Funnel Builder Compromise: What Every SMB With a Website Should Check | Ghosxt</title>
+    <meta name="description" content="Active exploitation of a Funnel Builder plugin flaw is injecting card-skimming JavaScript into WooCommerce checkouts. Plain-talk verification steps for SMB site owners from a DoD-cleared engineer." />
+    <link rel="canonical" href="https://ghosxt.com/blog/wordpress-funnel-builder-compromise-smb-website-2026.html" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://ghosxt.com/blog/wordpress-funnel-builder-compromise-smb-website-2026.html" />
+    <meta property="og:title" content="WordPress Funnel Builder Compromise: What Every SMB With a Website Should Check | Ghosxt" />
+    <meta property="og:description" content="Active exploitation of a Funnel Builder plugin flaw is injecting card-skimming JavaScript into WooCommerce checkouts. Plain-talk verification steps for SMB site owners from a DoD-cleared engineer." />
+    <meta property="og:image" content="https://ghosxt.com/assets/img/og/blog-wordpress-funnel-builder-compromise-smb-website-2026.png" />
+    <meta property="og:site_name" content="Ghosxt" />
+    <meta property="article:published_time" content="2026-05-20" />
+    <meta property="article:author" content="Ulises Paiz" />
+    <meta name="robots" content="index, follow" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="WordPress Funnel Builder Compromise: What Every SMB With a Website Should Check | Ghosxt" />
+    <meta name="twitter:description" content="Active exploitation of a Funnel Builder plugin flaw is injecting card-skimming JavaScript into WooCommerce checkouts. Verification steps for SMB site owners." />
+    <meta name="twitter:image" content="https://ghosxt.com/assets/img/og/blog-wordpress-funnel-builder-compromise-smb-website-2026.png" />
+    <link rel="icon" href="../assets/img/favicon.ico" sizes="any" />
+    <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- ghosxt:roboto-preload -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" />
+    <link rel="preconnect" href="https://cdn-uicons.flaticon.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/main.css?v=2026-05-20a" />
+    <link rel="stylesheet" href="../assets/css/blog.css?v=2026-05-20a" />
+    <link rel="stylesheet" media="print" onload="this.media='all'" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" />
+    <noscript><link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" /></noscript>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "BlogPosting",
+            "mainEntityOfPage": { "@type": "WebPage", "@id": "https://ghosxt.com/blog/wordpress-funnel-builder-compromise-smb-website-2026.html" },
+            "headline": "WordPress Funnel Builder Compromise: What Every SMB With a Website Should Check",
+            "description": "Active exploitation of a Funnel Builder for WordPress plugin flaw in mid-May 2026 is injecting card-skimming JavaScript into WooCommerce checkout pages. Plain-talk verification and response steps for SMB site owners from a DoD-cleared engineer.",
+            "image": "https://ghosxt.com/assets/img/og/blog-wordpress-funnel-builder-compromise-smb-website-2026.png",
+            "author": { "@type": "Person", "name": "Ulises Paiz", "url": "https://ghosxt.com/about.html" },
+            "publisher": { "@type": "Organization", "name": "Ghosxt", "logo": { "@type": "ImageObject", "url": "https://ghosxt.com/assets/img/ghosxt logo.webp" } },
+            "datePublished": "2026-05-20",
+            "dateModified": "2026-05-20",
+            "articleSection": "Cybersecurity",
+            "keywords": "Funnel Builder vulnerability, FunnelKit, WooCommerce card skimmer, Magecart, WordPress plugin compromise, e-skimmer, WordPress security, SMB website security, Salinas IT services, Monterey Bay managed IT, central coast cybersecurity, PCI DSS"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ghosxt.com/" },
+              { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://ghosxt.com/blog/" },
+              { "@type": "ListItem", "position": 3, "name": "WordPress Funnel Builder Compromise", "item": "https://ghosxt.com/blog/wordpress-funnel-builder-compromise-smb-website-2026.html" }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Is my site affected if I do not use Funnel Builder?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Not by this specific bug. The vulnerability is in the Funnel Builder by FunnelKit plugin and is exploitable only on sites where that plugin is installed and active. If you log into wp-admin, go to Plugins, and Funnel Builder does not appear in the list, this incident is not your immediate problem. That said, the same class of attack (an unauthenticated injection point in a third-party plugin that ends up writing attacker-controlled JavaScript into your checkout page) is one of the most common compromise paths for WooCommerce sites in 2026. Treat this as the prompt to do the broader checks below: scan with Wordfence or Sucuri, audit your installed plugins, and confirm you are on current versions."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Should I just turn off all plugins?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. Disabling every plugin on a live store will break the site, often including the checkout itself. The right move is targeted: confirm whether Funnel Builder specifically is installed, and if so, update it to 3.15.0.3 or later, or deactivate that one plugin until you can update. After the immediate exposure is closed, do a broader plugin audit: remove plugins you do not actively use, replace anything that has not been updated by its author in the last 12 months, and consolidate redundant plugins. Plugin minimization is one of the highest-leverage things an SMB can do to reduce WordPress attack surface, but it is a planned activity, not an emergency one."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "We use Shopify, Squarespace, or a non-WordPress platform. Are we affected?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Not by this specific vulnerability. Funnel Builder by FunnelKit is a WordPress plugin and only runs on WordPress sites with WooCommerce. Shopify, Squarespace, Wix, BigCommerce, and other hosted SaaS storefronts use entirely different codebases and are not exposed to this bug. That said, e-skimmer attacks against hosted platforms exist too. They typically come in through a compromised marketing tag, a malicious third-party script (a chat widget, an analytics plugin, a review widget), or a stolen admin credential. The same defensive baseline applies: MFA on admin accounts, minimize installed apps and tags, review what scripts run on your checkout."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How quickly do these card-skimming attacks get noticed?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Honestly, slowly. In the small-business breaches I have walked into, e-skimmer injections often run for weeks or months before anyone notices. The site loads normally. Checkout completes normally. Real orders go through and ship. The skimmer simply copies the card details on their way to the legitimate payment processor and sends them to an attacker-controlled domain. Detection usually comes from one of three places: the card brands flag the merchant as a common point of purchase for fraudulent cards, a customer complains about fraud after shopping with you, or a security scanner (Sucuri, Wordfence, PCI ASV) spots the unfamiliar script. By the time the merchant gets the call from their processor, the damage is several thousand customers deep."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What does rotating WordPress salts actually do?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "WordPress uses a set of secret keys (called salts) stored in wp-config.php to sign authentication cookies. If an attacker stole a session cookie or a copy of your database while they had access, rotating the salts invalidates every existing logged-in session on the site. Every user, including the attacker if they still have a foothold, is forced to re-authenticate. You generate new salts at the WordPress.org secret-key service URL, paste them into wp-config.php replacing the eight AUTH_KEY / SECURE_AUTH_KEY / etc. lines, save, and confirm the site still loads. It is a cheap, fast, high-value step after any suspected WordPress compromise."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "We are PCI in scope. What changes for us?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Several things. First, if you store, process, or transmit cardholder data on your WordPress site (including iframe-redirect setups that PCI DSS v4 now treats as in scope), a confirmed e-skimmer injection is a reportable incident under your acquiring bank's merchant agreement. Notify your payment processor and your acquirer in writing as soon as you confirm the compromise, ideally with timestamps. Second, you will likely need a PCI Forensic Investigator (PFI) engagement, paid by you, to determine scope and dwell time. Third, your annual SAQ A-EP, SAQ D, or ROC will reflect this event for at least the next reporting cycle. Fourth, plan for card-brand fines and reissue costs to flow back to you as a merchant. None of this is meant to scare you out of self-reporting; the penalty for being caught hiding it is materially worse than the penalty for reporting promptly."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+    <!-- ghosxt:cf-web-analytics -->
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"f3ce7e0e17f54050845d52d7f355cd98"}'></script>
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top"><i class="fi fi-rs-angle-up" aria-hidden="true"></i></button>
+    <div class="cookie-banner" id="cookieBanner"><div class="cookie-banner-container"><div class="cookie-content"><div class="cookie-icon"><i class="fi fi-rs-cookie"></i></div><div class="cookie-text"><p class="cookie-message">We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.</p><a href="../privacy-policy.html" class="cookie-link">Learn more about our Privacy Policy</a></div></div><div class="cookie-actions"><button class="cookie-btn cookie-btn-secondary" id="cookieDecline">Decline</button><button class="cookie-btn cookie-btn-primary" id="cookieAccept">Accept All</button></div></div></div>
+    <div class="top-banner" id="topBanner"><div class="banner-container"><div class="banner-content"><span class="banner-text">Need Remote Support? &#9658;</span><a target="_blank" rel="noopener noreferrer" href="https://ticket.ghosxt.com/" class="banner-btn"><i class="fi fi-rs-ticket-alt"></i><span>Visit Client Portal</span></a></div></div></div>
+    <nav class="navbar" aria-label="Main navigation">
+      <div class="navbar-container">
+        <div class="navbar-left"><a href="../index.html" class="navbar-logo"><img fetchpriority="high" loading="eager" src="../assets/img/ghosxt logo.webp" alt="Ghosxt logo" width="48" height="48" /><span>GHOSXT</span></a></div>
+        <div class="navbar-right">
+          <div class="navbar-menu">
+            <a href="../index.html" class="navbar-link">Home</a>
+            <div class="navbar-dropdown"><a href="../about.html" class="navbar-link dropdown-trigger" aria-haspopup="menu">About <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></a><div class="dropdown-menu" role="menu"><a href="../about.html" class="dropdown-item" role="menuitem">About Ghosxt</a><a href="../ghosxt-cares.html" class="dropdown-item" role="menuitem">Ghosxt Cares</a></div></div>
+            <div class="navbar-dropdown"><a href="../services.html" class="navbar-link dropdown-trigger" aria-haspopup="menu">Services <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></a><div class="dropdown-menu" role="menu"><a href="../services.html" class="dropdown-item" role="menuitem">All Services</a>
+                <a href="../managed-it-services.html" class="dropdown-item" role="menuitem">Managed IT Services</a>
+                <a href="../cybersecurity.html" class="dropdown-item" role="menuitem">Cybersecurity</a>
+                <a href="../cloud-services.html" class="dropdown-item" role="menuitem">Cloud Services</a>
+                <a href="../backup-disaster-recovery.html" class="dropdown-item" role="menuitem">Backup &amp; Disaster Recovery</a>
+                <a href="../network-design.html" class="dropdown-item" role="menuitem">Network Design</a>
+                <a href="../website-development.html" class="dropdown-item" role="menuitem">Web Development</a>
+                <a href="../ctpat.html" class="dropdown-item" role="menuitem">C-TPAT Compliance</a></div></div>
+            <a href="../pricing.html" class="navbar-link">Pricing</a>
+            <a href="index.html" class="navbar-link">Blog</a>
+            <a href="../contact.html" class="navbar-link">Contact</a>
+          </div>
+          <button class="navbar-mobile-toggle" id="mobileToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu"><i class="fi fi-rs-burger-menu" aria-hidden="true"></i></button>
+          <div class="navbar-buttons"><a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer" class="navbar-btn btn-demo"><i class="fi fi-rs-calendar-day"></i><span>Book a Call</span></a></div>
+        </div>
+      </div>
+      <div class="navbar-overlay" id="navbarOverlay"></div>
+      <div class="navbar-mobile-menu" id="mobileMenu">
+        <a href="../index.html" class="mobile-link">Home</a>
+        <div class="mobile-accordion"><button class="mobile-accordion-trigger" aria-expanded="false">About <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></button><div class="mobile-accordion-content"><a href="../about.html" class="mobile-dropdown-item">About Ghosxt</a><a href="../ghosxt-cares.html" class="mobile-dropdown-item">Ghosxt Cares</a></div></div>
+        <div class="mobile-accordion"><button class="mobile-accordion-trigger" aria-expanded="false">Services <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></button><div class="mobile-accordion-content"><a href="../services.html" class="mobile-dropdown-item">All Services</a>
+            <a href="../managed-it-services.html" class="mobile-dropdown-item">Managed IT Services</a>
+            <a href="../cybersecurity.html" class="mobile-dropdown-item">Cybersecurity</a>
+            <a href="../cloud-services.html" class="mobile-dropdown-item">Cloud Services</a>
+            <a href="../backup-disaster-recovery.html" class="mobile-dropdown-item">Backup &amp; Disaster Recovery</a>
+            <a href="../network-design.html" class="mobile-dropdown-item">Network Design</a>
+            <a href="../website-development.html" class="mobile-dropdown-item">Web Development</a>
+            <a href="../ctpat.html" class="mobile-dropdown-item">C-TPAT Compliance</a></div></div>
+        <a href="../pricing.html" class="mobile-link">Pricing</a>
+        <a href="index.html" class="mobile-link">Blog</a>
+        <a href="../contact.html" class="mobile-link">Contact</a>
+        <div class="mobile-actions"><a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer" class="mobile-btn btn-demo"><i class="fi fi-rs-calendar-day"></i><span>Book a Call</span></a></div>
+      </div>
+    </nav>
+    <main id="main-content" class="blog-post">
+      <header class="blog-post-header">
+        <div class="container">
+          <nav class="blog-post-breadcrumbs" aria-label="Breadcrumb">
+            <a href="../index.html">Home</a><span class="sep">&rsaquo;</span><a href="index.html">Blog</a><span class="sep">&rsaquo;</span><span aria-current="page">WordPress Funnel Builder Compromise</span>
+          </nav>
+          <div class="blog-post-meta">
+            <time datetime="2026-05-20">May 20, 2026</time>
+            <span>&middot;</span>
+            <span>8 min read</span>
+            <span>&middot;</span>
+            <span class="blog-card-tag">Cybersecurity</span>
+          </div>
+          <h1>WordPress Funnel Builder Compromise: What Every SMB With a Website Should Check</h1>
+          <div class="blog-post-author">
+            <strong>Ulises Paiz</strong>, Founder, Ghosxt
+          </div>
+        </div>
+      </header>
+      <div class="blog-post-body">
+        <div class="container">
+          <aside class="blog-post-quickfix" aria-label="Summary and what to check today">
+            <span class="quickfix-label">TL;DR &mdash; If your site runs WooCommerce and Funnel Builder, stop reading and check it now</span>
+            <h2>An unauthenticated bug in the Funnel Builder by FunnelKit plugin is being actively exploited to silently skim credit cards at checkout.</h2>
+            <ul>
+              <li><strong>What:</strong> A flaw in Funnel Builder by FunnelKit lets unauthenticated attackers inject arbitrary JavaScript into the plugin's "External Scripts" configuration, which then loads on every WooCommerce checkout page on the site.</li>
+              <li><strong>Who is affected:</strong> WordPress sites running Funnel Builder versions before <strong>3.15.0.3</strong>. The plugin is installed on roughly 40,000 WooCommerce stores. Patched version was released by FunnelKit; active exploitation has been documented in the wild since mid-May 2026.</li>
+              <li><strong>What the payload does:</strong> Masquerades as a Google Tag Manager loader, opens a WebSocket to an attacker C2 (one observed: <code>wss://protect-wss[.]com/ws</code>), and pulls down a skimmer that copies card numbers, CVVs, and billing details from the checkout DOM and exfiltrates them.</li>
+              <li><strong>What to do in the next hour</strong> if Funnel Builder is on your site: update the plugin to 3.15.0.3 or later, audit <em>Settings &rarr; Checkout &rarr; External Scripts</em> for unfamiliar entries and remove them, force-reset every admin password, and rotate WordPress salts.</li>
+            </ul>
+            <p>If you do not run WordPress, this specific bug does not affect you, but the broader question (do you actually know what JavaScript runs on your checkout page?) does. Keep reading.</p>
+          </aside>
+
+          <p>The morning of May 18 brought another one. Active exploitation, in the wild, against a popular WooCommerce funnel-and-upsell plugin called Funnel Builder by FunnelKit, with attackers injecting card-skimming JavaScript into the checkout pages of every store running an unpatched copy. The plugin is on the order of 40,000 active installs. The skimmer is well built and quiet. Most affected merchants will not notice on their own.</p>
+
+          <p>I want to walk through what happened, exactly what an SMB site owner should check today, what to do in the first hour if you find indicators of compromise, and what the durable defensive baseline looks like for any small business with a WordPress store. The post is intentionally operational. If you own a Central Coast e-commerce site and the next 30 minutes is the time you have, this is what I would do with it.</p>
+
+          <h2>What happened</h2>
+
+          <p>Funnel Builder by FunnelKit is a WordPress plugin that adds sales funnel, upsell, and checkout-optimization features on top of WooCommerce. It is one of the better-regarded plugins in the WooCommerce ecosystem, used heavily by SMBs that sell info-products, digital downloads, and direct-to-consumer goods. The vulnerability is in how the plugin handles its "External Scripts" setting, which is meant to let store owners drop in legitimate third-party tags (Google Tag Manager, Meta Pixel, analytics, etc.) that should fire on the checkout flow.</p>
+
+          <p>The bug, fixed in version <strong>3.15.0.3</strong>, allowed unauthenticated attackers to write arbitrary content into that External Scripts field. Once a script lands there, it executes in every visitor's browser on every checkout page. There is no authentication step. There is no admin involvement. The attacker writes, the customer's browser runs it.</p>
+
+          <p>The class of bug here is a classic "stored cross-site scripting via a sensitive configuration sink." It is the same shape we have seen many times in the WordPress plugin ecosystem over the years: a configuration write endpoint that the plugin author assumed only admins could reach, but which a missing capability check or a broken nonce allows anyone on the internet to call. The class is unglamorous and well understood; the consequences when a plugin sits on checkout pages are not.</p>
+
+          <h3>What the payload does</h3>
+
+          <p>The observed payloads in this campaign are well-engineered. They masquerade as a Google Tag Manager loader so that a casual look at the page source sees what appears to be a normal GTM include and moves on. The injected loader actually establishes a WebSocket connection to an attacker-controlled command-and-control endpoint (one publicly reported address: <code>wss://protect-wss[.]com/ws</code>) and pulls down a second-stage skimmer tailored to the specific theme and checkout layout of the victim store.</p>
+
+          <p>The skimmer hooks the checkout form. When the customer types their card number, expiration date, CVV, name, and billing address, the skimmer reads those values out of the DOM, packages them, and ships them back out over the same WebSocket. The customer's order then completes normally through Stripe, Square, Authorize.Net, or whatever processor the store actually uses. From the customer's perspective, nothing went wrong. From the store owner's perspective, orders shipped and revenue came in. The card data, meanwhile, is in an attacker's hands within seconds of being typed.</p>
+
+          <h3>Why this category of attack is everywhere</h3>
+
+          <p>E-skimmers (sometimes called Magecart-style attacks after the loose collective that pioneered them on Magento) are the dominant card-fraud monetization path for compromised e-commerce sites in 2026. The economics are good: a successful injection runs invisibly for weeks, captures every card that flows through the checkout, and feeds card-shop marketplaces where the data is sold in batches. The infrastructure cost to the attacker is low. The detection rate on the merchant side is low. The criminal returns are high.</p>
+
+          <p>Plugin-based injection vectors like this one are particularly attractive because the attacker does not need to compromise the host, the database, or the WordPress core. A single HTTP request to a vulnerable plugin endpoint writes the skimmer, and the plugin happily serves it back to every visitor. From an attacker's point of view, that is a phenomenal return on investment.</p>
+
+          <h2>How to tell if your site is affected</h2>
+
+          <p>Six concrete checks, in order. None of them require a developer. All of them take longer to explain than to actually do.</p>
+
+          <h3>1. Confirm whether Funnel Builder is even installed</h3>
+
+          <p>Log into <code>/wp-admin</code>, click <strong>Plugins</strong> in the left sidebar, and look for an entry titled <em>Funnel Builder by FunnelKit</em> (the related plugins <em>FunnelKit Automations</em> and <em>FunnelKit Stripe Gateway</em> are separate products from the same vendor and are not the vulnerable component in this campaign). If Funnel Builder is not in the list, this specific bug is not your problem. Move on to the broader checks below.</p>
+
+          <h3>2. Check the plugin's installed version</h3>
+
+          <p>If Funnel Builder is installed, look at the version number listed under the plugin name. If it is <strong>3.15.0.3 or later</strong>, the bug is patched on your site. If it is anything earlier, you are running a vulnerable version. Click <em>Update Now</em>. If for any reason you cannot update immediately (custom modifications, staging concerns, a hosting plan that has plugin updates locked down), <strong>deactivate</strong> the plugin until you can update. A deactivated plugin's code does not execute and is not exploitable.</p>
+
+          <h3>3. View source on your checkout page</h3>
+
+          <p>Open an incognito browser window, go to your live checkout URL (typically <code>/checkout</code>), and view the page source (Ctrl+U or right-click and choose "View page source"). Use the browser's find function to search for <code>&lt;script</code>. Walk down the list of script tags and ask, for each one whose <code>src</code> points to an external domain, whether you recognize the domain. Domains you should expect to see include your own, your CDN (Cloudflare, Fastly), Google (gtm.js, analytics.js, gstatic), Meta (connect.facebook.net), Stripe (js.stripe.com), and any analytics or chat tool you have installed deliberately.</p>
+
+          <p>Domains you should <em>not</em> see and should treat as indicators of compromise: anything that vaguely resembles a legitimate service but is not (<code>googl-tagmanager</code> instead of <code>googletagmanager</code>, <code>stripe-js</code> instead of <code>js.stripe.com</code>, random hyphenated lookalikes), and anything pointing to a domain you cannot identify with one quick search. The specific C2 reported in this campaign was <code>protect-wss[.]com</code>, but attackers rotate infrastructure constantly. Treat any unfamiliar external script on your checkout page as guilty until proven innocent.</p>
+
+          <h3>4. Audit Funnel Builder's External Scripts setting directly</h3>
+
+          <p>In wp-admin, navigate to <em>FunnelKit &rarr; Settings &rarr; Checkout</em> (the exact menu path varies slightly by version) and find the <strong>External Scripts</strong> configuration. Read every line. If you see code you do not remember adding and that does not match a tag your marketing team or developer would have placed there, copy it somewhere safe for evidence and then delete it. The injection sink in this attack is exactly this field.</p>
+
+          <h3>5. Pull 30 days of processor logs</h3>
+
+          <p>Log into your payment processor's dashboard (Stripe, Square, Authorize.Net, PayPal, whatever) and review the last 30 days of transactions for unusual patterns: small test charges from unfamiliar countries, repeat declines on cards that subsequently succeed elsewhere, refunds you did not issue. Skimmer operators often test stolen cards through legitimate-looking merchants to validate them before listing them for sale. If a meaningful number of your recent transactions match that pattern, your site was likely compromised some time ago.</p>
+
+          <h3>6. Audit WordPress users</h3>
+
+          <p>In wp-admin, click <strong>Users</strong> and look at the full user list. Sort by role and confirm that every account with <em>Administrator</em>, <em>Editor</em>, or <em>Shop Manager</em> privileges belongs to a person you know. Attackers who get a foothold through one vulnerability often create a persistence account so they retain access even after the original bug is patched. Any admin user you do not recognize gets deleted, and the password on every legitimate admin gets reset.</p>
+
+          <h2>What to do right now (if you found anything)</h2>
+
+          <p>If any of the checks above turned up an indicator of compromise, here is the emergency-response order I would run. The goal of these steps, in priority order, is: stop the bleeding, evict the attacker, preserve evidence, and notify the parties who legally need to know.</p>
+
+          <ol>
+            <li><strong>Update or deactivate Funnel Builder.</strong> Get to 3.15.0.3 or later, or turn the plugin off entirely. This closes the original injection sink so the attacker cannot simply re-inject after you clean up.</li>
+            <li><strong>Remove the injected scripts</strong> from <em>Settings &rarr; Checkout &rarr; External Scripts</em>. Save your changes. View the checkout page source again in an incognito window and confirm the unfamiliar scripts are no longer being served.</li>
+            <li><strong>Force-reset every admin and shop-manager password.</strong> In Users, edit each privileged account and either send a password reset email or set a new password directly. Do not let the prior credentials remain valid.</li>
+            <li><strong>Force-reset customer passwords</strong> if customer accounts also touch sensitive data on your site. WooCommerce supports a bulk-reset workflow; use it.</li>
+            <li><strong>Rotate WordPress salts</strong> by generating a new set at the WordPress.org secret-key URL and pasting them into <code>wp-config.php</code>, replacing the existing AUTH_KEY, SECURE_AUTH_KEY, LOGGED_IN_KEY, NONCE_KEY, AUTH_SALT, SECURE_AUTH_SALT, LOGGED_IN_SALT, and NONCE_SALT lines. Save the file. This invalidates every existing session cookie on the site, including any the attacker may still be holding.</li>
+            <li><strong>Run a full security scan</strong> with Wordfence (free version is fine for this) or Sucuri SiteCheck. The scan looks for known web shells, backdoors, modified core files, and additional injected scripts elsewhere in the site. Investigate every finding.</li>
+            <li><strong>Review <code>.htaccess</code></strong> at the WordPress root and in <code>/wp-admin/</code> for injected redirect rules. Attackers sometimes plant entries that quietly send certain visitors (search-engine crawlers, mobile users) to malicious destinations.</li>
+            <li><strong>Audit <code>wp-content/plugins/</code> and <code>wp-content/themes/</code></strong> via your hosting file manager or SFTP for unfamiliar files, especially in obscure subdirectories. Common attacker plant locations include theme function files, plugin uploads directories, and randomly-named PHP files in <code>wp-content/uploads/</code>.</li>
+            <li><strong>If you are PCI in scope</strong> (storing, processing, or transmitting cardholder data, including via redirect or iframe checkouts under PCI DSS v4), notify your acquiring bank and payment processor in writing. Do this before they reach out to you. The penalty structure for self-reporting is materially better than for being caught hiding it. Expect a PCI Forensic Investigator engagement.</li>
+            <li><strong>Preserve evidence</strong> before you wipe anything. Take a full backup (files plus database) of the compromised state and store it offline. If there is later litigation, an insurance claim, or a forensic process, that evidence matters.</li>
+          </ol>
+
+          <p>If you are not confident running any of these steps, this is the moment to bring in a professional. Our <a href="../website-development.html">website development team</a> handles WordPress incident response for Central Coast SMBs, and our <a href="../cybersecurity.html">cybersecurity practice</a> handles the broader environment hardening. The cost of an hour or two of help here is dramatically lower than the cost of a continued skimmer run.</p>
+
+          <h2>The defensive baseline for any SMB WordPress site</h2>
+
+          <p>Whether or not this particular bug affected you, the cluster of controls that meaningfully reduces the probability of the next WordPress compromise is short and well understood. Run all of them. They are not exotic.</p>
+
+          <h3>A web application firewall in front of the site</h3>
+
+          <p>Cloudflare Pro (around $25 per month per zone) or Wordfence Premium (around $150 per site per year) sits between the internet and your WordPress origin and blocks the bulk of automated exploit attempts before they reach the plugin. WAFs do not catch everything, but they catch the noisy mass-scan traffic that is responsible for the majority of opportunistic compromises. For an SMB, this is one of the highest-leverage $25-per-month decisions available.</p>
+
+          <h3>MFA on wp-admin</h3>
+
+          <p>Wordfence and the standalone Two Factor Authentication plugin both add proper MFA to WordPress admin login. Require it on every administrator and editor account. Username and password are not adequate for any account that can modify code or content in 2026, including on WordPress.</p>
+
+          <h3>Least-privilege admin accounts</h3>
+
+          <p>Most WordPress sites I audit have three to five users with full Administrator privileges where they only needed Editor or Shop Manager. Demote them. The blast radius of any one account being phished or breached is bounded by what that account can do.</p>
+
+          <h3>Plugin minimization</h3>
+
+          <p>The average SMB WordPress site I see has thirty-plus plugins installed. Half are unused. Quarter have not been updated by their author in years. Plugin sprawl is the largest single factor in WordPress attack surface. Every quarter, walk the plugin list and ask "do we actively use this, and is it being maintained." Remove anything that fails either test. Prefer plugins from reputable authors (Automattic, Yoast, WP Rocket, FunnelKit, WP Engine, etc.) over unmaintained one-developer projects.</p>
+
+          <h3>Automated daily off-site backups</h3>
+
+          <p>UpdraftPlus pointed at an S3 bucket or a Backblaze B2 bucket, running daily, with a 30-day retention. Off-site means not on the same server as the site. Daily means you have a recovery point within 24 hours of any compromise. The combination is what lets you confidently roll back a compromised site instead of trying to clean it in place. Tied directly to our <a href="../backup-disaster-recovery.html">backup and disaster recovery</a> practice for the same reason.</p>
+
+          <h3>File integrity monitoring</h3>
+
+          <p>Wordfence does this for free at a basic level. The premise is simple: WordPress core, plugin, and theme files should not change between releases. When they do, something is wrong. A file-change alert is often the earliest detection signal for a backdoor or web shell.</p>
+
+          <h3>Kept-current PHP and WordPress core</h3>
+
+          <p>Confirm your hosting environment is on a supported PHP major version (PHP 8.2 or later as of mid-2026) and that WordPress core is on the current major. Out-of-support PHP gets no security patches, and out-of-support WordPress versions accumulate known issues that the bulk-scanner ecosystem actively exploits.</p>
+
+          <h3>Hosting that supports the rest of the program</h3>
+
+          <p>Cheap shared hosting where dozens of sites share a single uid does not let you isolate a compromise. Managed WordPress hosting (Kinsta, WP Engine, Pressable, Rocket.net) gives you account isolation, automated daily backups at the platform level, staging environments, and a meaningful response if the host detects malware. The cost difference is usually $20-50 per month and is worth it for any site that takes payments. We cover hosting selection in our <a href="../cloud-services.html">cloud services</a> practice.</p>
+
+          <h2>Why this keeps happening to WordPress</h2>
+
+          <p>An honest take, because most of the WordPress security commentary online is either marketing or doom-mongering.</p>
+
+          <p>WordPress runs roughly 40 percent of the public web. That alone makes it a target of disproportionate attention. The platform itself, meaning core WordPress, is reasonably well-maintained and has a credible security team. The vast majority of WordPress compromises do not exploit core; they exploit the plugin ecosystem layered on top.</p>
+
+          <p>The plugin ecosystem has structural problems that the WordPress.org plugin directory does not solve:</p>
+
+          <ul>
+            <li><strong>No consistent security review.</strong> Plugins submitted to the directory get a sanity-check review on initial submission. Subsequent updates do not. A plugin can ship a perfectly clean version 1.0 and a deeply vulnerable version 1.4 without any review gate in between.</li>
+            <li><strong>Plugin sprawl.</strong> The average site has dozens of plugins. The probability that <em>at least one</em> of them has a critical issue in any given year approaches certainty by the math.</li>
+            <li><strong>Abandoned plugins.</strong> A non-trivial fraction of installed plugins are no longer maintained. The original author moved on, the company that bought it deprioritized it, or it was never going to be a real product. Vulnerable code sits in production until someone notices.</li>
+            <li><strong>Weak shared hosting.</strong> A lot of WordPress lives on shared hosting where one compromised site on the same server can sometimes touch others. SMBs gravitate to this hosting tier because it is cheap.</li>
+            <li><strong>Supply-chain risk.</strong> A reputable plugin gets sold to a different company, and the new owner injects monetization (or, in the worst cases, malware) in a future update. Site owners auto-update and trust the name on the plugin, not realizing the maintainer changed.</li>
+          </ul>
+
+          <p>None of this is a reason to abandon WordPress. For most SMB use cases, the alternative is more expensive and less flexible. It is, however, a reason to operate WordPress with the discipline you would apply to any production system: short plugin lists, current versions, MFA on admin, a WAF in front, and backups you have actually tested. The discipline is not glamorous. It is what works.</p>
+
+          <h2>Where this fits with the rest of the week</h2>
+
+          <p>This post lands in the middle of a cluster of related pieces in the cybersecurity and website-development sections of the blog:</p>
+
+          <ul>
+            <li><a href="ai-attack-speed-22-seconds-mdr-smb.html">AI has cut attacker handoff to 22 seconds</a>: the broader 2026 threat environment that makes detection-and-response a baseline, not a luxury.</li>
+            <li><a href="ransomware-2026-how-it-gets-in.html">Ransomware in 2026: how it gets in</a>: the most common compromise paths against SMBs, of which a vulnerable public-facing plugin is one.</li>
+            <li><a href="small-business-cybersecurity-mistakes.html">Small business cybersecurity mistakes</a>: the durable list of own-goals that turn a single bug into a full incident.</li>
+            <li><a href="top-website-design-companies-salinas-monterey-bay.html">Top website design companies in Salinas and the Monterey Bay</a>: how to think about who builds and maintains your site, including security posture as a selection criterion.</li>
+          </ul>
+
+          <p>If you take one thing from this article, take this: a WordPress site that processes payments is a production system. Treat it like one. The plugin you installed three years ago and forgot about is still running on every visitor's checkout page, and someone is paid to find the next bug in it.</p>
+
+          <h2>FAQs about the Funnel Builder compromise</h2>
+
+          <h3>Is my site affected if I do not use Funnel Builder?</h3>
+          <p>Not by this specific bug. The vulnerability is in the Funnel Builder by FunnelKit plugin and is exploitable only on sites where that plugin is installed and active. If you log into wp-admin, go to Plugins, and Funnel Builder does not appear in the list, this incident is not your immediate problem. That said, the same class of attack (an unauthenticated injection point in a third-party plugin that ends up writing attacker-controlled JavaScript into your checkout page) is one of the most common compromise paths for WooCommerce sites in 2026. Treat this as the prompt to do the broader checks below: scan with Wordfence or Sucuri, audit your installed plugins, and confirm you are on current versions.</p>
+
+          <h3>Should I just turn off all plugins?</h3>
+          <p>No. Disabling every plugin on a live store will break the site, often including the checkout itself. The right move is targeted: confirm whether Funnel Builder specifically is installed, and if so, update it to 3.15.0.3 or later, or deactivate that one plugin until you can update. After the immediate exposure is closed, do a broader plugin audit: remove plugins you do not actively use, replace anything that has not been updated by its author in the last 12 months, and consolidate redundant plugins. Plugin minimization is one of the highest-leverage things an SMB can do to reduce WordPress attack surface, but it is a planned activity, not an emergency one.</p>
+
+          <h3>We use Shopify, Squarespace, or a non-WordPress platform. Are we affected?</h3>
+          <p>Not by this specific vulnerability. Funnel Builder by FunnelKit is a WordPress plugin and only runs on WordPress sites with WooCommerce. Shopify, Squarespace, Wix, BigCommerce, and other hosted SaaS storefronts use entirely different codebases and are not exposed to this bug. That said, e-skimmer attacks against hosted platforms exist too. They typically come in through a compromised marketing tag, a malicious third-party script (a chat widget, an analytics plugin, a review widget), or a stolen admin credential. The same defensive baseline applies: MFA on admin accounts, minimize installed apps and tags, review what scripts run on your checkout.</p>
+
+          <h3>How quickly do these card-skimming attacks get noticed?</h3>
+          <p>Honestly, slowly. In the small-business breaches I have walked into, e-skimmer injections often run for weeks or months before anyone notices. The site loads normally. Checkout completes normally. Real orders go through and ship. The skimmer simply copies the card details on their way to the legitimate payment processor and sends them to an attacker-controlled domain. Detection usually comes from one of three places: the card brands flag the merchant as a common point of purchase for fraudulent cards, a customer complains about fraud after shopping with you, or a security scanner (Sucuri, Wordfence, PCI ASV) spots the unfamiliar script. By the time the merchant gets the call from their processor, the damage is several thousand customers deep.</p>
+
+          <h3>What does rotating WordPress salts actually do?</h3>
+          <p>WordPress uses a set of secret keys (called salts) stored in wp-config.php to sign authentication cookies. If an attacker stole a session cookie or a copy of your database while they had access, rotating the salts invalidates every existing logged-in session on the site. Every user, including the attacker if they still have a foothold, is forced to re-authenticate. You generate new salts at the WordPress.org secret-key service URL, paste them into wp-config.php replacing the eight AUTH_KEY / SECURE_AUTH_KEY / etc. lines, save, and confirm the site still loads. It is a cheap, fast, high-value step after any suspected WordPress compromise.</p>
+
+          <h3>We are PCI in scope. What changes for us?</h3>
+          <p>Several things. First, if you store, process, or transmit cardholder data on your WordPress site (including iframe-redirect setups that PCI DSS v4 now treats as in scope), a confirmed e-skimmer injection is a reportable incident under your acquiring bank's merchant agreement. Notify your payment processor and your acquirer in writing as soon as you confirm the compromise, ideally with timestamps. Second, you will likely need a PCI Forensic Investigator (PFI) engagement, paid by you, to determine scope and dwell time. Third, your annual SAQ A-EP, SAQ D, or ROC will reflect this event for at least the next reporting cycle. Fourth, plan for card-brand fines and reissue costs to flow back to you as a merchant. None of this is meant to scare you out of self-reporting; the penalty for being caught hiding it is materially worse than the penalty for reporting promptly.</p>
+
+          <div class="blog-post-cta">
+            <h3>Want eyes on your WordPress site this week?</h3>
+            <p>30 minutes with a DoD-cleared engineer. We will run the Funnel Builder check live, audit your installed plugins, review what scripts are running on your checkout, and give you a written read on the gaps and the realistic next steps for a site your size.</p>
+            <a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer">
+              <i class="fi fi-rs-calendar-day" aria-hidden="true"></i>
+              Book your free assessment
+            </a>
+          </div>
+
+          <p style="margin-top: 1.5rem; font-size: 0.95rem; color: rgba(0,0,0,0.7);">
+            Prefer to talk first? Email <a href="mailto:sales@ghosxt.com">sales@ghosxt.com</a> or call <a href="tel:+18312040501">(831) 204-0501</a>.
+          </p>
+        </div>
+      </div>
+    </main>
+    <footer class="footer" id="footerSection">
+      <div class="footer-container">
+        <div class="footer-brand-row">
+          <div class="footer-brand">
+            <img
+              src="../assets/img/ghosxt logo.webp"
+              alt="Ghosxt logo"
+              width="80"
+              height="80"
+              loading="lazy"
+            />
+            <div class="footer-brand-text">
+              <span class="footer-brand-name">GHOSXT</span>
+              <span class="footer-brand-tagline"
+                >Government-grade IT for small business.</span
+              >
+            </div>
+          </div>
+          <div class="footer-cta-block">
+            <a
+              href="https://calendly.com/ulises-ghosxt"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="footer-cta-btn"
+            >
+              <i class="fi fi-rs-calendar-day" aria-hidden="true"></i>
+              Schedule Free Assessment
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-grid">
+          <div class="footer-column">
+            <h3 class="footer-column-title">Company</h3>
+            <ul class="footer-links">
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="../about.html">About</a></li>
+              <li><a href="../services.html">Services</a></li>
+              <li><a href="../pricing.html">Pricing</a></li>
+              <li>
+                <a href="../website-development.html">Website Development</a>
+              </li>
+              <li><a href="../contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-column-title">Services</h3>
+            <ul class="footer-links">
+              <li><a href="../managed-it-services.html">Managed IT Services</a></li>
+              <li><a href="../cybersecurity.html">Cybersecurity</a></li>
+              <li><a href="../cloud-services.html">Cloud Services</a></li>
+              <li><a href="../backup-disaster-recovery.html">Backup &amp; Disaster Recovery</a></li>
+              <li><a href="../network-design.html">Network Design</a></li>
+              <li><a href="../website-development.html">Web Development</a></li>
+              <li><a href="../ctpat.html">C-TPAT Compliance</a></li>
+              <li><a href="../trucking-it-services.html">Trucking &amp; Logistics IT</a></li>
+              <li><a href="../agriculture-it-services.html">Agriculture &amp; Agribusiness IT</a></li>
+              <li><a href="../manufacturing-it-services.html">Manufacturing &amp; Industrial IT</a></li>
+              <li><a href="../professional-services-it.html">SMB Office &amp; Professional Services IT</a></li>
+              <li><a href="../healthcare-it-services.html">Healthcare &amp; Medical IT</a></li>
+              <li><a href="../property-management-it-services.html">Property Management IT</a></li>
+              <li><a href="../engineering-it-services.html">Engineering &amp; Architecture IT</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-column-title">Resources</h3>
+            <ul class="footer-links">
+              <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+              <li>
+                <a
+                  href="https://ticket.ghosxt.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Client Portal</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://calendly.com/ulises-ghosxt"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Free IT Assessment</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-column-title">Connect</h3>
+            <ul class="footer-links footer-social-links">
+              <li>
+                <a
+                  href="https://www.linkedin.com/company/ghosxt/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.063 2.063 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                  LinkedIn</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.facebook.com/GhosxtTech"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg>
+                  Facebook</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/ghosxttech/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+                  Instagram</a
+                >
+              </li>
+              <li>
+                <a href="mailto:sales@ghosxt.com"
+                  ><i class="fi fi-rs-envelope" aria-hidden="true"></i>
+                  sales@ghosxt.com</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <div class="footer-bottom">
+          <p class="footer-copyright">
+            &copy; 2026 Ghosxt. All rights reserved. Built by a cleared DoD
+            engineer.
+          </p>
+          <div class="footer-bottom-links">
+            <a href="../privacy-policy.html">Privacy Policy</a>
+            <span aria-hidden="true">&middot;</span>
+            <a
+              href="https://ticket.ghosxt.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Client Portal</a
+            >
+          </div>
+        </div>
+
+        <div class="service-areas-footer">
+          <h3>Service Areas</h3>
+          <ul>
+            <li><a href="../salinas.html">Salinas</a></li>
+            <li><a href="../monterey.html">Monterey</a></li>
+            <li><a href="../watsonville.html">Watsonville</a></li>
+            <li><a href="../hollister.html">Hollister</a></li>
+            <li><a href="../santa-cruz.html">Santa Cruz</a></li>
+            <li><a href="../gilroy.html">Gilroy</a></li>
+            <li><a href="../san-jose.html">San Jose</a></li>
+            <li><a href="../pacific-grove.html">Pacific Grove</a></li>
+            <li><a href="../carmel.html">Carmel</a></li>
+            <li><a href="../seaside.html">Seaside</a></li>
+            <li><a href="../marina.html">Marina</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="../assets/js/main.js?v=2026-05-20a" defer></script>
+    <!-- ghosxt:mobile-cta-bar -->
+    <div class="mobile-cta-bar" aria-label="Quick contact">
+      <a class="mcta-primary" href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer">Book free assessment</a>
+      <a class="mcta-secondary" href="tel:+18312040501">Call (831) 204-0501</a>
+    </div>
+  </body>
+</html>
