@@ -1,0 +1,634 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OneDrive vs SharePoint vs Teams Files: Which Should Your Small Business Use? | Ghosxt</title>
+    <meta name="description" content="A plain-talk decision guide on when to use OneDrive, SharePoint, or Teams files for a 15-100 person business. Permissions, governance, and the patterns that actually work, from a DoD-cleared engineer." />
+    <link rel="canonical" href="https://ghosxt.com/blog/onedrive-vs-sharepoint-vs-teams-files-small-business.html" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://ghosxt.com/blog/onedrive-vs-sharepoint-vs-teams-files-small-business.html" />
+    <meta property="og:title" content="OneDrive vs SharePoint vs Teams Files: Which Should Your Small Business Use? | Ghosxt" />
+    <meta property="og:description" content="A plain-talk decision guide on when to use OneDrive, SharePoint, or Teams files for a 15-100 person business. Permissions, governance, and the patterns that actually work, from a DoD-cleared engineer." />
+    <meta property="og:image" content="https://ghosxt.com/assets/img/og/blog-onedrive-vs-sharepoint-vs-teams-files-small-business.png" />
+    <meta property="og:site_name" content="Ghosxt" />
+    <meta property="article:published_time" content="2026-05-23" />
+    <meta property="article:author" content="Ulises Paiz" />
+    <meta name="robots" content="index, follow" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="OneDrive vs SharePoint vs Teams Files: Which Should Your Small Business Use? | Ghosxt" />
+    <meta name="twitter:description" content="A plain-talk decision guide on when to use OneDrive, SharePoint, or Teams files for a 15-100 person business. From a DoD-cleared engineer." />
+    <meta name="twitter:image" content="https://ghosxt.com/assets/img/og/blog-onedrive-vs-sharepoint-vs-teams-files-small-business.png" />
+    <link rel="icon" href="../assets/img/favicon.ico" sizes="any" />
+    <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- ghosxt:roboto-preload -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" />
+    <link rel="preconnect" href="https://cdn-uicons.flaticon.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/main.css?v=2026-05-23a" />
+    <link rel="stylesheet" href="../assets/css/blog.css?v=2026-05-23a" />
+    <link rel="stylesheet" media="print" onload="this.media='all'" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" />
+    <noscript><link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" /></noscript>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "BlogPosting",
+            "mainEntityOfPage": { "@type": "WebPage", "@id": "https://ghosxt.com/blog/onedrive-vs-sharepoint-vs-teams-files-small-business.html" },
+            "headline": "OneDrive vs SharePoint vs Teams Files: Which Should Your Small Business Use?",
+            "description": "A plain-talk decision guide on when to use OneDrive, SharePoint, or Teams files for a 15-100 person business. Permissions, governance, and the patterns that actually work, from a DoD-cleared engineer.",
+            "image": "https://ghosxt.com/assets/img/og/blog-onedrive-vs-sharepoint-vs-teams-files-small-business.png",
+            "author": { "@type": "Person", "name": "Ulises Paiz", "url": "https://ghosxt.com/about.html" },
+            "publisher": { "@type": "Organization", "name": "Ghosxt", "logo": { "@type": "ImageObject", "url": "https://ghosxt.com/assets/img/ghosxt logo.webp" } },
+            "datePublished": "2026-05-23",
+            "dateModified": "2026-05-23",
+            "articleSection": "Microsoft 365",
+            "keywords": "OneDrive vs SharePoint, SharePoint vs Teams files, Microsoft 365 file storage, SMB file collaboration, Salinas managed IT, Monterey IT services"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ghosxt.com/" },
+              { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://ghosxt.com/blog/" },
+              { "@type": "ListItem", "position": 3, "name": "OneDrive vs SharePoint vs Teams Files", "item": "https://ghosxt.com/blog/onedrive-vs-sharepoint-vs-teams-files-small-business.html" }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "If they all use SharePoint under the hood, why does it matter where I put a file?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Because the underlying SharePoint site determines who has access, what retention policies apply, what happens when the user leaves, and what Copilot can see. OneDrive is a SharePoint site owned by one user. A Teams channel's files live in a SharePoint site owned by a team. The storage layer is the same, but the governance container is different. If you put a customer contract in your personal OneDrive, it inherits your personal permissions and disappears when your account is offboarded. If you put it in the Sales SharePoint site, it inherits the Sales site's permissions and survives any single employee leaving."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What happens to a user's OneDrive when they leave the company?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "By default, Microsoft 365 retains the departed user's OneDrive contents for 30 days after the account is deleted, then purges them. You can extend that retention window in the Microsoft 365 admin center, and you should as part of your offboarding playbook. The better practice is to transfer the OneDrive contents to the manager (or to the appropriate SharePoint site) before deleting the account. Many SMBs lose institutional knowledge here because nobody ever looked inside the departed user's OneDrive. This is the single biggest reason not to use OneDrive as a substitute for shared storage."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I share a OneDrive file the same way I share a SharePoint file?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, the share dialog is the same and the link types (anyone, people in your organization, specific people) are the same. The difference is governance. A OneDrive share is granted by the file's owner without any site-level oversight. A SharePoint share inherits the site's external sharing policy and is visible to the site owner. For files that belong to the business rather than to one person, SharePoint sharing is auditable and survivable; OneDrive sharing is not."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Should we use Teams private channels or separate Teams?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Default to fewer Teams with more channels. Each new Team creates a separate SharePoint site, which adds governance overhead. Standard channels share the team's SharePoint site. Private channels each get their own dedicated SharePoint site, which is the right answer when a small subset needs to keep files away from the rest of the team (for example, a deal team within a sales Team). Shared channels are for cross-tenant collaboration with external partners. The wrong answer is creating a brand new Team every time two people want a private space, which is how a 25-person org ends up with 80 Teams and a sprawl problem."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does Microsoft Copilot work the same way across OneDrive, SharePoint, and Teams?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Copilot honors Microsoft 365 permissions, which means it can only see files the asking user can already access. It works across all three surfaces. The catch is that any oversharing mistake you made before Copilot rolled out becomes a Copilot leak after rollout. If the Finance SharePoint site was accidentally shared with the whole company in 2024, Copilot will happily summarize the salary spreadsheet for any user who asks. Permissions hygiene is the single biggest pre-Copilot project. Run an oversharing report and clean it up before turning Copilot on."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How do we move existing files from a Windows file server to SharePoint?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Three steps: inventory and classify (what is active, what is archive, what is junk), map to OneDrive or SharePoint (personal scratch goes to OneDrive, departmental and project files go to SharePoint sites), then run the cutover with Microsoft 365 Migration Manager for straightforward shares or ShareGate for complex permission structures. The mistake to avoid is lifting and shifting the file server's folder hierarchy into one giant SharePoint document library. SharePoint is happier with multiple sites scoped by department or project, each with sensible permissions, than with one mega-library that recreates the old chaos."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+    <!-- ghosxt:cf-web-analytics -->
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"f3ce7e0e17f54050845d52d7f355cd98"}'></script>
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top"><i class="fi fi-rs-angle-up" aria-hidden="true"></i></button>
+    <div class="cookie-banner" id="cookieBanner"><div class="cookie-banner-container"><div class="cookie-content"><div class="cookie-icon"><i class="fi fi-rs-cookie"></i></div><div class="cookie-text"><p class="cookie-message">We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.</p><a href="../privacy-policy.html" class="cookie-link">Learn more about our Privacy Policy</a></div></div><div class="cookie-actions"><button class="cookie-btn cookie-btn-secondary" id="cookieDecline">Decline</button><button class="cookie-btn cookie-btn-primary" id="cookieAccept">Accept All</button></div></div></div>
+    <div class="top-banner" id="topBanner"><div class="banner-container"><div class="banner-content"><span class="banner-text">Need Remote Support? &#9658;</span><a target="_blank" rel="noopener noreferrer" href="https://ticket.ghosxt.com/" class="banner-btn"><i class="fi fi-rs-ticket-alt"></i><span>Visit Client Portal</span></a></div></div></div>
+    <nav class="navbar" aria-label="Main navigation">
+      <div class="navbar-container">
+        <div class="navbar-left"><a href="../index.html" class="navbar-logo"><img fetchpriority="high" loading="eager" src="../assets/img/ghosxt logo.webp" alt="Ghosxt logo" width="48" height="48" /><span>GHOSXT</span></a></div>
+        <div class="navbar-right">
+          <div class="navbar-menu">
+            <a href="../index.html" class="navbar-link">Home</a>
+            <div class="navbar-dropdown"><a href="../about.html" class="navbar-link dropdown-trigger" aria-haspopup="menu">About <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></a><div class="dropdown-menu" role="menu"><a href="../about.html" class="dropdown-item" role="menuitem">About Ghosxt</a><a href="../ghosxt-cares.html" class="dropdown-item" role="menuitem">Ghosxt Cares</a></div></div>
+            <div class="navbar-dropdown"><a href="../services.html" class="navbar-link dropdown-trigger" aria-haspopup="menu">Services <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></a><div class="dropdown-menu" role="menu"><a href="../services.html" class="dropdown-item" role="menuitem">All Services</a>
+                <a href="../managed-it-services.html" class="dropdown-item" role="menuitem">Managed IT Services</a>
+                <a href="../cybersecurity.html" class="dropdown-item" role="menuitem">Cybersecurity</a>
+                <a href="../cloud-services.html" class="dropdown-item" role="menuitem">Cloud Services</a>
+                <a href="../backup-disaster-recovery.html" class="dropdown-item" role="menuitem">Backup &amp; Disaster Recovery</a>
+                <a href="../network-design.html" class="dropdown-item" role="menuitem">Network Design</a>
+                <a href="../website-development.html" class="dropdown-item" role="menuitem">Web Development</a>
+                <a href="../ctpat.html" class="dropdown-item" role="menuitem">C-TPAT Compliance</a></div></div>
+            <a href="../pricing.html" class="navbar-link">Pricing</a>
+            <a href="index.html" class="navbar-link">Blog</a>
+            <a href="../contact.html" class="navbar-link">Contact</a>
+          </div>
+          <button class="navbar-mobile-toggle" id="mobileToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu"><i class="fi fi-rs-burger-menu" aria-hidden="true"></i></button>
+          <div class="navbar-buttons"><a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer" class="navbar-btn btn-demo"><i class="fi fi-rs-calendar-day"></i><span>Book a Call</span></a></div>
+        </div>
+      </div>
+      <div class="navbar-overlay" id="navbarOverlay"></div>
+      <div class="navbar-mobile-menu" id="mobileMenu">
+        <a href="../index.html" class="mobile-link">Home</a>
+        <div class="mobile-accordion"><button class="mobile-accordion-trigger" aria-expanded="false">About <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></button><div class="mobile-accordion-content"><a href="../about.html" class="mobile-dropdown-item">About Ghosxt</a><a href="../ghosxt-cares.html" class="mobile-dropdown-item">Ghosxt Cares</a></div></div>
+        <div class="mobile-accordion"><button class="mobile-accordion-trigger" aria-expanded="false">Services <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></button><div class="mobile-accordion-content"><a href="../services.html" class="mobile-dropdown-item">All Services</a>
+            <a href="../managed-it-services.html" class="mobile-dropdown-item">Managed IT Services</a>
+            <a href="../cybersecurity.html" class="mobile-dropdown-item">Cybersecurity</a>
+            <a href="../cloud-services.html" class="mobile-dropdown-item">Cloud Services</a>
+            <a href="../backup-disaster-recovery.html" class="mobile-dropdown-item">Backup &amp; Disaster Recovery</a>
+            <a href="../network-design.html" class="mobile-dropdown-item">Network Design</a>
+            <a href="../website-development.html" class="mobile-dropdown-item">Web Development</a>
+            <a href="../ctpat.html" class="mobile-dropdown-item">C-TPAT Compliance</a></div></div>
+        <a href="../pricing.html" class="mobile-link">Pricing</a>
+        <a href="index.html" class="mobile-link">Blog</a>
+        <a href="../contact.html" class="mobile-link">Contact</a>
+        <div class="mobile-actions"><a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer" class="mobile-btn btn-demo"><i class="fi fi-rs-calendar-day"></i><span>Book a Call</span></a></div>
+      </div>
+    </nav>
+    <main id="main-content" class="blog-post">
+      <header class="blog-post-header">
+        <div class="container">
+          <nav class="blog-post-breadcrumbs" aria-label="Breadcrumb">
+            <a href="../index.html">Home</a><span class="sep">&rsaquo;</span><a href="index.html">Blog</a><span class="sep">&rsaquo;</span><span aria-current="page">OneDrive vs SharePoint vs Teams Files</span>
+          </nav>
+          <div class="blog-post-meta">
+            <time datetime="2026-05-23">May 23, 2026</time>
+            <span>&middot;</span>
+            <span>10 min read</span>
+            <span>&middot;</span>
+            <span class="blog-card-tag">Microsoft 365</span>
+          </div>
+          <h1>OneDrive vs SharePoint vs Teams Files: Which Should Your Small Business Use?</h1>
+          <div class="blog-post-author">
+            <strong>Ulises Paiz</strong>, Founder, Ghosxt
+          </div>
+        </div>
+      </header>
+      <div class="blog-post-body">
+        <div class="container">
+          <aside class="blog-post-quickfix" aria-label="Summary and the default-correct pattern">
+            <span class="quickfix-label">TL;DR &mdash; All three live on top of SharePoint Online underneath</span>
+            <h2>The "right" answer depends on who owns the file and who needs access. There is a default-correct pattern for SMBs.</h2>
+            <ul>
+              <li><strong>OneDrive</strong> = "my drafts and personal work files."</li>
+              <li><strong>SharePoint</strong> = "the official place for the department's documents."</li>
+              <li><strong>Teams files</strong> = "SharePoint, but presented inside a Teams channel for live collaboration."</li>
+            </ul>
+            <p>Files moved between these surfaces are governed by where they live in SharePoint, <em>not</em> which app you opened them in. The same file inside the same SharePoint document library can be opened from the Teams Files tab, the SharePoint web UI, or as a OneDrive synced folder. Permissions follow the storage container, never the app icon.</p>
+            <p>Apply that mental model and 80% of the confusion goes away. The rest of this post covers the patterns, the five mistakes I keep cleaning up, and a reference org chart for a 25-person business.</p>
+          </aside>
+
+          <p>About once a week, a Central Coast business owner asks me a version of the same question. "We have OneDrive, we have SharePoint, we have Teams. We have files in all of them. Where are we supposed to put what?" It is a fair question, and the official Microsoft documentation does not always make it easier to answer. This post is the version I give to clients in plain English, with the trade-offs called out and a reference pattern for a 15-to-100 person business.</p>
+
+          <h2>The thing nobody tells you up front</h2>
+
+          <p>Here is the single most useful fact about Microsoft 365 file storage, and the one that almost never gets stated clearly: <strong>SharePoint Online is the underlying storage layer for both OneDrive and Teams files</strong>. They are not three separate products with three separate storage systems. They are three different presentation surfaces on top of the same backend.</p>
+
+          <ul>
+            <li><strong>OneDrive</strong> is your <em>personal</em> SharePoint site. Every Microsoft 365 user gets one. The technical name is "OneDrive for Business," and under the hood it is a SharePoint site collection with one owner: you. The mobile app, the desktop sync client, and the web UI are all just front ends to that personal SharePoint site.</li>
+            <li><strong>A SharePoint site</strong> is a shared SharePoint site collection. It has multiple owners and members. It can have multiple document libraries. It can have lists, pages, news posts, and other SharePoint features. The Files tab in any modern team or department is a document library inside one of these sites.</li>
+            <li><strong>A Teams channel's Files tab</strong> is a folder inside a SharePoint document library, tied to the SharePoint site that backs the Team. When you click Files in a Teams channel, you are looking at SharePoint with a different chrome around it.</li>
+          </ul>
+
+          <p>Understanding this clears up most of the confusion. When you ask "where should this file live," you are really asking "which SharePoint site (and which document library inside it) is the right home." OneDrive, SharePoint, and Teams are the apps you use to <em>get to</em> the file. Where the file actually <em>lives</em> determines the permissions, the retention rules, the backup posture, and what Copilot can see.</p>
+
+          <h2>When to use OneDrive</h2>
+
+          <p>OneDrive is for files that belong to one person. Think of it as your personal scratchpad, draft folder, and travel bag for work-in-progress.</p>
+
+          <p>The right things to put in OneDrive:</p>
+
+          <ul>
+            <li>Drafts of documents that you have not shared with anyone yet.</li>
+            <li>Personal work files (notes, your own templates, your own task lists).</li>
+            <li>Files you want to follow you across devices but that nobody else needs to see by default.</li>
+            <li>Temporary scratch space for files you are about to email out or upload somewhere else.</li>
+          </ul>
+
+          <p>The wrong things to put in OneDrive:</p>
+
+          <ul>
+            <li>Anything that the department, project, or company needs to keep when you leave.</li>
+            <li>The "official" version of a customer contract, vendor record, financial report, or policy document.</li>
+            <li>A shared folder you have invited the whole company into. (More on why this is a problem below.)</li>
+            <li>Anything that needs a retention policy applied at the department or organization level.</li>
+          </ul>
+
+          <p>The mental test I use: <em>If this person took the job offer in Phoenix tomorrow and disappeared, would the business still need this file?</em> If yes, it does not belong in OneDrive.</p>
+
+          <h2>When to use SharePoint</h2>
+
+          <p>SharePoint is the default home for files that belong to the business rather than to one person. It is the digital equivalent of the locked filing cabinet in the office that the department uses, not the one in your personal desk drawer.</p>
+
+          <p>The right things to put in SharePoint:</p>
+
+          <ul>
+            <li>Official department documents: HR forms, finance reports, sales collateral, operations procedures, legal templates.</li>
+            <li>Policies and procedures that apply across the team or company.</li>
+            <li>Customer files: contracts, project deliverables, correspondence archives, signed statements of work.</li>
+            <li>Project files, especially those that will outlive any one employee.</li>
+            <li>Anything subject to a retention obligation (industry regulation, contractual requirement, insurance requirement).</li>
+          </ul>
+
+          <p>The SMB pattern that works: <strong>one SharePoint site per department or business function</strong>. For a typical professional services firm, that means HR, Finance, Operations, Sales, Legal, and IT each get their own site, with their own owners, their own members, and their own external sharing posture. Each site has the document library structure that makes sense for that function.</p>
+
+          <p>The pattern to avoid: one giant company-wide SharePoint site with every department's files in one document library. It collapses under its own weight by the time you have 25 employees.</p>
+
+          <h2>When to use Teams files</h2>
+
+          <p>Teams files are for the workspace where active collaboration is happening right now. A Teams channel gives you a chat thread, meeting history, tabs for apps, and a Files tab. That Files tab is where the documents the team is currently working on live.</p>
+
+          <p>The key insight: <strong>the Files tab IS SharePoint underneath</strong>. When someone uploads a document to a Teams channel, the file does not exist in some separate "Teams storage." It is placed in a folder inside the document library on the SharePoint site that backs the Team. You can open that exact same file from the SharePoint web UI, sync it to your desktop via OneDrive, or grab it via the Microsoft Graph API. The file does not move; only the chrome around it changes.</p>
+
+          <p>This matters because:</p>
+
+          <ul>
+            <li>Sharing a file in a Teams channel does <em>not</em> copy the file. It posts a link to the same SharePoint location. Edits flow through whichever surface you used to open it.</li>
+            <li>When a project ends and the Team becomes inactive, the files do not vanish. They are still sitting in the SharePoint site, available to anyone who had access.</li>
+            <li>Retention policies applied at the SharePoint site level apply to files uploaded through Teams. Compliance and legal hold work the same way regardless of which surface the file came in through.</li>
+          </ul>
+
+          <p>The right pattern: use Teams as the active-collaboration surface, and treat the underlying SharePoint site as the permanent home. When a project ends, you can either keep the Team archived for reference or move the surviving documents into a department SharePoint site and let the project Team retire.</p>
+
+          <h2>Permissions, the SMB way</h2>
+
+          <p>The three permission patterns that fit a small business are simple. The trick is applying each one to the right surface.</p>
+
+          <h3>Pattern 1: Personal (OneDrive default)</h3>
+
+          <p>Default OneDrive permissions are: you (the owner), the tenant admins (for recovery and compliance), and anyone you have explicitly shared a specific file or folder with. No site members. No automatic departmental access. If you want someone else to see something in your OneDrive, you have to share it directly.</p>
+
+          <p>This is correct for personal scratch work. It is wrong for departmental files.</p>
+
+          <h3>Pattern 2: Departmental (SharePoint sites with owners, members, visitors)</h3>
+
+          <p>Every SharePoint site has three default permission groups:</p>
+
+          <ul>
+            <li><strong>Owners</strong> &mdash; can change permissions, manage the site, delete content. For a department, this is the department head and optionally an admin. Keep this list short.</li>
+            <li><strong>Members</strong> &mdash; can read and write content. This is the working population of the department.</li>
+            <li><strong>Visitors</strong> &mdash; read-only access. Useful when another department needs reference access without edit rights.</li>
+          </ul>
+
+          <p>The discipline is to populate these groups with security groups (or Entra ID groups), not individual users. Adding "Sales Team" as a group to the Sales site's Members group means new hires automatically get access when they are added to the group, and lose it when they are removed. Adding individuals one at a time creates the access drift that becomes the oversharing problem two years later.</p>
+
+          <h3>Pattern 3: Project/team (Teams membership, with private channels as a layer)</h3>
+
+          <p>A standard Microsoft Team has one membership list. Everyone in the team sees every standard channel. The team is backed by one SharePoint site, and the standard channel Files tabs are folders inside that site's document library.</p>
+
+          <p>Private channels add an extra layer. Each private channel gets its <em>own</em> SharePoint site, separate from the team's main site, with its own membership. This is useful when a deal team or a sensitive sub-project needs to share files away from the rest of the team. The cost is more SharePoint sites to govern.</p>
+
+          <p>Shared channels are different again: they let you collaborate with users in other Microsoft 365 tenants. Useful for sustained partner relationships, not the default tool.</p>
+
+          <h2>The five mistakes SMBs make</h2>
+
+          <p>I have walked into enough Microsoft 365 tenants now to see the same five mistakes on repeat. They are all fixable, but they are easier to avoid than to clean up.</p>
+
+          <h3>1. Treating OneDrive as the company file server</h3>
+
+          <p>The classic version: the office manager has been at the company for 12 years, knows where everything is, and has built up a personal OneDrive with 800 GB of "shared" folders that the rest of the office gets to via a sync link. The office manager retires. The OneDrive is deleted 30 days later. The institutional knowledge is gone.</p>
+
+          <p>The fix is to move shared business data into SharePoint sites scoped by department or function. OneDrive stays for personal scratch.</p>
+
+          <h3>2. Sharing OneDrive folders to the whole company</h3>
+
+          <p>A close cousin of mistake #1. Someone needs to "share with everyone" and the easiest button is in OneDrive, so they click it. Now you have a folder that the whole company can see but that is owned by one user. When that user leaves, the share breaks. When external sharing rules change at the tenant level, this folder may suddenly leak outside the company.</p>
+
+          <p>The fix is to use a SharePoint site with the appropriate departmental membership. SharePoint shares are governed by the site, not by the individual. They survive ownership changes.</p>
+
+          <h3>3. Creating a new Team for every customer</h3>
+
+          <p>A 30-person professional services firm with 200 customers can end up with 200 Teams. Each Team is a separate SharePoint site, each one has its own permissions to maintain, each one has its own Files tab nobody is checking. The Teams list in the sidebar becomes useless. Governance breaks.</p>
+
+          <p>The fix is a SharePoint hub site for "Customers" with a document library or sub-site per customer, plus a smaller number of long-lived Teams for the persistent groups (the delivery team, the sales team, the leadership team). Active engagements get a Teams channel; durable customer records live in SharePoint.</p>
+
+          <h3>4. "External sharing on" without governance</h3>
+
+          <p>Most Microsoft 365 tenants ship with external sharing wide open. That is fine until somebody shares a customer list to a personal Gmail account, or until you turn on Copilot and realize that <em>everything that was overshared in the past is now searchable by everyone with a license</em>. Oversharing is the single largest pre-Copilot problem I see in 2026.</p>
+
+          <p>The fix is a tiered external sharing model: stricter at the tenant level, looser at the specific site level where partner collaboration actually happens. Run an oversharing report quarterly. Build a process to revoke stale external shares. See the <a href="microsoft-365-copilot-business-price-lock-2026.html">Copilot business price-lock post</a> for why this is urgent if you are deploying Copilot in the next 90 days.</p>
+
+          <h3>5. No retention policy</h3>
+
+          <p>Microsoft 365 has a feature called retention policies that lets you specify how long content is kept and when it is deleted. Most SMBs leave this at the default, which means deleted files are recoverable for 93 days and then gone forever. The flipside is that <em>nothing</em> is automatically held; if an employee deletes something they shouldn't have, you may not notice until the recovery window has closed.</p>
+
+          <p>The other flipside is the lawyer's nightmare: a dispute arises, discovery is requested, and the deleted files come back through eDiscovery anyway because they were never truly purged. Run retention deliberately, not by accident. Decide what you keep for how long, write it down, and apply it at the SharePoint site level so it covers OneDrive, Teams files, and SharePoint files in one go.</p>
+
+          <h2>How Copilot interacts with all this</h2>
+
+          <p>Microsoft 365 Copilot honors the same permission model as the rest of the platform. It can only see files the asking user can already access. There is no magic admin view; Copilot inherits whatever the user already had.</p>
+
+          <p>That sounds reassuring until you remember what the average tenant looks like. If the Finance SharePoint site was accidentally shared with "everyone except external users" three years ago and nobody noticed, Copilot will happily summarize the payroll spreadsheet for any user who asks "what does the leadership team get paid?" The oversharing that did not matter when nobody had a search bar in their face suddenly matters a lot when every user does.</p>
+
+          <p>The practical implication is that permissions hygiene becomes a prerequisite for Copilot deployment, not a nice-to-have. Run the SharePoint Advanced Management (SAM) oversharing report. Use restricted SharePoint search to limit Copilot's reach during initial rollout. Clean up stale external shares. Apply sensitivity labels to actually sensitive content. Identity hygiene matters too &mdash; see the <a href="identity-hardening-small-business-5-employees-microsoft-365.html">identity hardening post</a> for the prerequisites that have to be in place before you turn Copilot on.</p>
+
+          <h2>Migrating off file servers, OneDrive Personal, or Dropbox to the right home</h2>
+
+          <p>The most common migration project I get pulled into is "we have a Windows file server and we want it gone." The pattern that works is three steps, in this order:</p>
+
+          <h3>Step 1: Inventory and classify</h3>
+
+          <p>Walk the file server. Categorize content into four buckets:</p>
+
+          <ul>
+            <li><strong>Active</strong> &mdash; used in the last 12 months, still relevant.</li>
+            <li><strong>Reference</strong> &mdash; not actively edited, but needed for lookups, compliance, or institutional memory.</li>
+            <li><strong>Archive</strong> &mdash; legally required to retain, but not consulted day to day.</li>
+            <li><strong>Junk</strong> &mdash; abandoned, duplicates, personal files that ended up on the share, screen recordings from 2017.</li>
+          </ul>
+
+          <p>The junk bucket usually accounts for 30-60% of the file server. Do not migrate it. Delete it (or at least quarantine it).</p>
+
+          <h3>Step 2: Map to OneDrive or SharePoint</h3>
+
+          <p>Personal scratch and one-owner content goes to that user's OneDrive. Departmental and project content goes to SharePoint sites organized by function. Reference and archive content can go to a dedicated archive site with stricter retention and read-only access for most users. Build the SharePoint site structure <em>before</em> the migration, not as you go.</p>
+
+          <h3>Step 3: Run the cutover</h3>
+
+          <p>For straightforward file server shares, <strong>Microsoft 365 Migration Manager</strong> (free, built into the M365 admin center) handles up to several TB of data with reasonable permissions mapping. For complex permissions (NTFS ACLs that need to translate into SharePoint groups), legacy SharePoint farms, or large multi-site migrations, <strong>ShareGate</strong> is worth the licensing cost. Both support delta sync, so you can do an initial pass weeks before cutover, then a delta pass at the cutover weekend to catch recent changes.</p>
+
+          <p>Communicate the change. Train users on the new locations. Plan a cutover weekend where the file server goes read-only, the delta sync runs, and the file server is decommissioned on Monday. Cloud-first storage also reduces your exposure to the kind of on-prem vulnerabilities I covered in the <a href="sharepoint-server-rce-cve-2026-33112-may-2026-smb.html">SharePoint Server zero-day post</a>; SharePoint Online does not need patching by you, and that alone is worth the migration in 2026.</p>
+
+          <h2>A reference org chart for a 25-person business</h2>
+
+          <p>Here is the concrete recommendation I give to a typical 25-person Central Coast professional services firm or property management company. Adjust the department names to fit your org.</p>
+
+          <p><strong>Per-user storage:</strong></p>
+
+          <ul>
+            <li>Every user gets a OneDrive for personal work, drafts, and one-owner files. Default permissions. Sharing limited to internal users by default. Quotas at the default 1 TB.</li>
+          </ul>
+
+          <p><strong>SharePoint sites (one per business function):</strong></p>
+
+          <ul>
+            <li><strong>HR</strong> &mdash; HR managers as owners, HR staff as members, leadership as visitors. External sharing off.</li>
+            <li><strong>Finance</strong> &mdash; CFO and controller as owners, finance team as members. External sharing off. Sensitivity labels applied to anything with employee compensation or banking detail.</li>
+            <li><strong>Operations</strong> &mdash; operations manager as owner, ops team as members, all staff as visitors for the procedures library.</li>
+            <li><strong>Sales</strong> &mdash; sales manager as owner, sales team as members, account managers in the Members group. External sharing on for the "Customer-Facing" document library, off for the rest of the site.</li>
+            <li><strong>Legal</strong> &mdash; general counsel (or outside counsel contact) as owner, leadership as members, no broad visitor access.</li>
+            <li><strong>Company-Wide</strong> &mdash; one site for the things everyone needs (employee handbook, IT policies, holiday schedule, the office wifi password). Everyone as visitors, HR and IT as members, IT as owner.</li>
+          </ul>
+
+          <p><strong>Teams:</strong></p>
+
+          <ul>
+            <li>One Team per persistent collaboration group (Sales, Operations, Leadership) and one Team per active major project.</li>
+            <li>Files tab is the active workspace for in-flight documents.</li>
+            <li>When a project ends, surviving documents move into the appropriate department SharePoint site. The project Team is archived rather than deleted, so the chat history remains searchable for the inevitable "what did we agree to in February" question.</li>
+          </ul>
+
+          <p>This structure scales from 15 users to 100 users without needing to be rebuilt. Past 100 users, you start looking at SharePoint hub sites, formal information architecture, and possibly a Microsoft 365 governance plan as a separate workstream.</p>
+
+          <h2>What we are not recommending</h2>
+
+          <p>Three patterns I see and steer clients away from:</p>
+
+          <ul>
+            <li><strong>Personal OneDrive (the consumer product) for business files.</strong> The consumer OneDrive (signed in with a personal Microsoft account) is not part of your Microsoft 365 tenant. It has no admin visibility, no retention controls, no Conditional Access, and no DLP. Business files do not belong there, period.</li>
+            <li><strong>Document libraries for structured data.</strong> If you find yourself building a 30-column Excel sheet to track customer records, support tickets, or asset inventories, that is a sign you want Microsoft Lists, Dataverse, or a real database, not a SharePoint document library. Lists is included with Microsoft 365 and is the right tool for structured data the team needs to query.</li>
+            <li><strong>Free-for-all link sharing.</strong> Some clients respond to the "where does this file live" question by enabling "anyone with the link can access" sharing across the tenant. This is the same as putting the file on a publicly indexable web server. Search engines find these links. Phishing pages clone them. The default-correct sharing posture is "specific people" or "people in your organization." Reserve "anyone with the link" for the occasional file you would not mind seeing on the front page of the local paper.</li>
+          </ul>
+
+          <h2>Where this fits with the rest of the cluster</h2>
+
+          <p>This post is the foundation piece for the Microsoft 365 storage cluster. It pairs with:</p>
+
+          <ul>
+            <li>The <a href="sharepoint-server-rce-cve-2026-33112-may-2026-smb.html">SharePoint Server zero-day post</a> &mdash; evidence for why SharePoint Online (cloud) beats running on-prem SharePoint at SMB scale.</li>
+            <li>The <a href="identity-hardening-small-business-5-employees-microsoft-365.html">identity hardening post</a> &mdash; the prerequisites that have to be in place before any of these permission patterns matter.</li>
+            <li>The <a href="microsoft-365-copilot-business-price-lock-2026.html">Copilot business price-lock post</a> &mdash; why permissions hygiene needs to come <em>before</em> you turn Copilot on, not after.</li>
+            <li>The <a href="backup-disaster-recovery-small-business-2026.html">backup and disaster recovery post</a> &mdash; how to back up the SharePoint, OneDrive, and Teams content once it is in the right place, because Microsoft's native retention is not a backup.</li>
+            <li><a href="../cloud-services.html">Ghosxt cloud services</a> &mdash; the wrap-around managed service for Microsoft 365, including governance, migrations, and ongoing tuning.</li>
+            <li><a href="../managed-it-services.html">Managed IT services</a> &mdash; the bigger umbrella, for the firms that want one provider handling identity, endpoints, storage, and security as a single program.</li>
+            <li><a href="../cybersecurity.html">Cybersecurity services</a> &mdash; the detection and response layer that watches all three surfaces.</li>
+          </ul>
+
+          <p>The honest read is that most SMB confusion about OneDrive, SharePoint, and Teams comes from treating them as three competing storage products rather than three views of the same SharePoint backend. Once the mental model lines up, the decision tree is straightforward. Personal scratch goes to OneDrive. Departmental and project content goes to SharePoint, accessed either via the SharePoint web UI or via the Teams Files tab depending on whether collaboration is happening right now. Permissions are governed by the SharePoint site, not by the app icon. Copilot will only see what the asking user can already see, so permissions hygiene becomes the project that unlocks everything else.</p>
+
+          <h2>FAQs about OneDrive vs SharePoint vs Teams</h2>
+
+          <h3>If they all use SharePoint under the hood, why does it matter where I put a file?</h3>
+          <p>Because the underlying SharePoint site determines who has access, what retention policies apply, what happens when the user leaves, and what Copilot can see. OneDrive is a SharePoint site owned by one user. A Teams channel's files live in a SharePoint site owned by a team. The storage layer is the same, but the governance container is different. If you put a customer contract in your personal OneDrive, it inherits your personal permissions and disappears when your account is offboarded. If you put it in the Sales SharePoint site, it inherits the Sales site's permissions and survives any single employee leaving.</p>
+
+          <h3>What happens to a user's OneDrive when they leave the company?</h3>
+          <p>By default, Microsoft 365 retains the departed user's OneDrive contents for 30 days after the account is deleted, then purges them. You can extend that retention window in the Microsoft 365 admin center, and you should as part of your offboarding playbook. The better practice is to transfer the OneDrive contents to the manager (or to the appropriate SharePoint site) before deleting the account. Many SMBs lose institutional knowledge here because nobody ever looked inside the departed user's OneDrive. This is the single biggest reason not to use OneDrive as a substitute for shared storage.</p>
+
+          <h3>Can I share a OneDrive file the same way I share a SharePoint file?</h3>
+          <p>Yes, the share dialog is the same and the link types (anyone, people in your organization, specific people) are the same. The difference is governance. A OneDrive share is granted by the file's owner without any site-level oversight. A SharePoint share inherits the site's external sharing policy and is visible to the site owner. For files that belong to the business rather than to one person, SharePoint sharing is auditable and survivable; OneDrive sharing is not.</p>
+
+          <h3>Should we use Teams private channels or separate Teams?</h3>
+          <p>Default to fewer Teams with more channels. Each new Team creates a separate SharePoint site, which adds governance overhead. Standard channels share the team's SharePoint site. Private channels each get their own dedicated SharePoint site, which is the right answer when a small subset needs to keep files away from the rest of the team (for example, a deal team within a sales Team). Shared channels are for cross-tenant collaboration with external partners. The wrong answer is creating a brand new Team every time two people want a private space, which is how a 25-person org ends up with 80 Teams and a sprawl problem.</p>
+
+          <h3>Does Microsoft Copilot work the same way across OneDrive, SharePoint, and Teams?</h3>
+          <p>Copilot honors Microsoft 365 permissions, which means it can only see files the asking user can already access. It works across all three surfaces. The catch is that any oversharing mistake you made before Copilot rolled out becomes a Copilot leak after rollout. If the Finance SharePoint site was accidentally shared with the whole company in 2024, Copilot will happily summarize the salary spreadsheet for any user who asks. Permissions hygiene is the single biggest pre-Copilot project. Run an oversharing report and clean it up before turning Copilot on.</p>
+
+          <h3>How do we move existing files from a Windows file server to SharePoint?</h3>
+          <p>Three steps: inventory and classify (what is active, what is archive, what is junk), map to OneDrive or SharePoint (personal scratch goes to OneDrive, departmental and project files go to SharePoint sites), then run the cutover with Microsoft 365 Migration Manager for straightforward shares or ShareGate for complex permission structures. The mistake to avoid is lifting and shifting the file server's folder hierarchy into one giant SharePoint document library. SharePoint is happier with multiple sites scoped by department or project, each with sensible permissions, than with one mega-library that recreates the old chaos.</p>
+
+          <div class="blog-post-cta">
+            <h3>Want a tenant-readiness review before you deploy Copilot or migrate?</h3>
+            <p>30 minutes with a DoD-cleared engineer. We will walk through your Microsoft 365 tenant, look at OneDrive, SharePoint, and Teams sprawl, run an oversharing report, and give you a written read on what to clean up before you turn on Copilot or move off your file server.</p>
+            <a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer">
+              <i class="fi fi-rs-calendar-day" aria-hidden="true"></i>
+              Book your free assessment
+            </a>
+          </div>
+
+          <p style="margin-top: 1.5rem; font-size: 0.95rem; color: rgba(0,0,0,0.7);">
+            Prefer to talk first? Email <a href="mailto:sales@ghosxt.com">sales@ghosxt.com</a> or call <a href="tel:+18312040501">(831) 204-0501</a>.
+          </p>
+        </div>
+      </div>
+    </main>
+    <footer class="footer" id="footerSection">
+      <div class="footer-container">
+        <div class="footer-brand-row">
+          <div class="footer-brand">
+            <img
+              src="../assets/img/ghosxt logo.webp"
+              alt="Ghosxt logo"
+              width="80"
+              height="80"
+              loading="lazy"
+            />
+            <div class="footer-brand-text">
+              <span class="footer-brand-name">GHOSXT</span>
+              <span class="footer-brand-tagline"
+                >Government-grade IT for small business.</span
+              >
+            </div>
+          </div>
+          <div class="footer-cta-block">
+            <a
+              href="https://calendly.com/ulises-ghosxt"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="footer-cta-btn"
+            >
+              <i class="fi fi-rs-calendar-day" aria-hidden="true"></i>
+              Schedule Free Assessment
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-grid">
+          <div class="footer-column">
+            <h3 class="footer-column-title">Company</h3>
+            <ul class="footer-links">
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="../about.html">About</a></li>
+              <li><a href="../services.html">Services</a></li>
+              <li><a href="../pricing.html">Pricing</a></li>
+              <li>
+                <a href="../website-development.html">Website Development</a>
+              </li>
+              <li><a href="../contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-column-title">Services</h3>
+            <ul class="footer-links">
+              <li><a href="../managed-it-services.html">Managed IT Services</a></li>
+              <li><a href="../cybersecurity.html">Cybersecurity</a></li>
+              <li><a href="../cloud-services.html">Cloud Services</a></li>
+              <li><a href="../backup-disaster-recovery.html">Backup &amp; Disaster Recovery</a></li>
+              <li><a href="../network-design.html">Network Design</a></li>
+              <li><a href="../website-development.html">Web Development</a></li>
+              <li><a href="../ctpat.html">C-TPAT Compliance</a></li>
+              <li><a href="../trucking-it-services.html">Trucking &amp; Logistics IT</a></li>
+              <li><a href="../agriculture-it-services.html">Agriculture &amp; Agribusiness IT</a></li>
+              <li><a href="../manufacturing-it-services.html">Manufacturing &amp; Industrial IT</a></li>
+              <li><a href="../professional-services-it.html">SMB Office &amp; Professional Services IT</a></li>
+              <li><a href="../healthcare-it-services.html">Healthcare &amp; Medical IT</a></li>
+              <li><a href="../property-management-it-services.html">Property Management IT</a></li>
+              <li><a href="../engineering-it-services.html">Engineering &amp; Architecture IT</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-column-title">Resources</h3>
+            <ul class="footer-links">
+              <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+              <li>
+                <a
+                  href="https://ticket.ghosxt.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Client Portal</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://calendly.com/ulises-ghosxt"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Free IT Assessment</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-column-title">Connect</h3>
+            <ul class="footer-links footer-social-links">
+              <li>
+                <a
+                  href="https://www.linkedin.com/company/ghosxt/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.063 2.063 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                  LinkedIn</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.facebook.com/GhosxtTech"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg>
+                  Facebook</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/ghosxttech/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+                  Instagram</a
+                >
+              </li>
+              <li>
+                <a href="mailto:sales@ghosxt.com"
+                  ><i class="fi fi-rs-envelope" aria-hidden="true"></i>
+                  sales@ghosxt.com</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <div class="footer-bottom">
+          <p class="footer-copyright">
+            &copy; 2026 Ghosxt. All rights reserved. Built by a cleared DoD
+            engineer.
+          </p>
+          <div class="footer-bottom-links">
+            <a href="../privacy-policy.html">Privacy Policy</a>
+            <span aria-hidden="true">&middot;</span>
+            <a
+              href="https://ticket.ghosxt.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Client Portal</a
+            >
+          </div>
+        </div>
+
+        <div class="service-areas-footer">
+          <h3>Service Areas</h3>
+          <ul>
+            <li><a href="../salinas.html">Salinas</a></li>
+            <li><a href="../monterey.html">Monterey</a></li>
+            <li><a href="../watsonville.html">Watsonville</a></li>
+            <li><a href="../hollister.html">Hollister</a></li>
+            <li><a href="../santa-cruz.html">Santa Cruz</a></li>
+            <li><a href="../gilroy.html">Gilroy</a></li>
+            <li><a href="../san-jose.html">San Jose</a></li>
+            <li><a href="../pacific-grove.html">Pacific Grove</a></li>
+            <li><a href="../carmel.html">Carmel</a></li>
+            <li><a href="../seaside.html">Seaside</a></li>
+            <li><a href="../marina.html">Marina</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="../assets/js/main.js?v=2026-05-23a" defer></script>
+    <!-- ghosxt:mobile-cta-bar -->
+    <div class="mobile-cta-bar" aria-label="Quick contact">
+      <a class="mcta-primary" href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer">Book free assessment</a>
+      <a class="mcta-secondary" href="tel:+18312040501">Call (831) 204-0501</a>
+    </div>
+  </body>
+</html>
