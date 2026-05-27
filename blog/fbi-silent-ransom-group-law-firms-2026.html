@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FBI Warns: Silent Ransom Group Is Targeting Law Firms. What to Do | Ghosxt</title>
+    <meta name="description" content="The FBI warns that the Silent Ransom Group (Luna Moth) is targeting law firms with phone-based social engineering, fake IT support, and data-theft extortion. What law firms and professional-services SMBs on the Central Coast should do, from a DoD-cleared engineer." />
+    <link rel="canonical" href="https://ghosxt.com/blog/fbi-silent-ransom-group-law-firms-2026.html" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://ghosxt.com/blog/fbi-silent-ransom-group-law-firms-2026.html" />
+    <meta property="og:title" content="FBI Warns: Silent Ransom Group Is Targeting Law Firms. What to Do | Ghosxt" />
+    <meta property="og:description" content="Silent Ransom Group (Luna Moth) uses fake IT calls and remote-access tools to steal client data and extort law firms. No malware, no encryption. Here is how to defend a small firm." />
+    <meta property="og:image" content="https://ghosxt.com/assets/img/og/blog-fbi-silent-ransom-group-law-firms-2026.png" />
+    <meta property="og:site_name" content="Ghosxt" />
+    <meta property="article:published_time" content="2026-05-27" />
+    <meta property="article:author" content="Ulises Paiz" />
+    <meta name="robots" content="index, follow" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="FBI Warns: Silent Ransom Group Is Targeting Law Firms. What to Do | Ghosxt" />
+    <meta name="twitter:description" content="Fake IT calls and remote-access tools used to steal client data and extort law firms. How a small firm defends against it." />
+    <meta name="twitter:image" content="https://ghosxt.com/assets/img/og/blog-fbi-silent-ransom-group-law-firms-2026.png" />
+    <link rel="icon" href="../assets/img/favicon.ico" sizes="any" />
+    <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- ghosxt:roboto-preload -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" />
+    <link rel="preconnect" href="https://cdn-uicons.flaticon.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/main.css?v=2026-05-27a" />
+    <link rel="stylesheet" href="../assets/css/blog.css?v=2026-05-27a" />
+    <link rel="stylesheet" media="print" onload="this.media='all'" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" />
+    <noscript><link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" /></noscript>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "BlogPosting",
+            "mainEntityOfPage": { "@type": "WebPage", "@id": "https://ghosxt.com/blog/fbi-silent-ransom-group-law-firms-2026.html" },
+            "headline": "FBI Warns: Silent Ransom Group Is Targeting Law Firms. What to Do",
+            "description": "The FBI warns that the Silent Ransom Group (also tracked as Luna Moth) is targeting law firms with phone-based social engineering, fake IT-support calls, abuse of legitimate remote-access tools, and data-theft extortion that often involves no malware and no file encryption. Operational guidance for law firms and professional-services small businesses, from a DoD-cleared engineer.",
+            "image": "https://ghosxt.com/assets/img/og/blog-fbi-silent-ransom-group-law-firms-2026.png",
+            "author": { "@type": "Person", "name": "Ulises Paiz", "url": "https://ghosxt.com/about.html" },
+            "publisher": { "@type": "Organization", "name": "Ghosxt", "logo": { "@type": "ImageObject", "url": "https://ghosxt.com/assets/img/ghosxt logo.webp" } },
+            "datePublished": "2026-05-27",
+            "dateModified": "2026-05-27",
+            "articleSection": "Cybersecurity",
+            "keywords": "Silent Ransom Group, Luna Moth, FBI alert, law firm cybersecurity, callback phishing, vishing, fake IT support, remote access tool abuse, data extortion, professional services IT, Salinas law firm IT, Monterey County legal IT, small business cybersecurity"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ghosxt.com/" },
+              { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://ghosxt.com/blog/" },
+              { "@type": "ListItem", "position": 3, "name": "FBI Alert: Silent Ransom Group Targets Law Firms", "item": "https://ghosxt.com/blog/fbi-silent-ransom-group-law-firms-2026.html" }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Who is the Silent Ransom Group?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Silent Ransom Group, also tracked by researchers as Luna Moth, is a financially motivated extortion crew known for callback phishing and phone-based social engineering rather than traditional malware. They trick employees into granting remote access, quietly exfiltrate sensitive data, and then extort the organization with the threat of leaking it. The FBI has warned that they are actively targeting law firms because of the volume of sensitive client data those firms hold."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How is this different from normal ransomware?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Traditional ransomware encrypts your files and demands payment for the key. Silent Ransom Group often does not encrypt anything. They steal the data and threaten to publish it. That means your backups, which are the usual ransomware safety net, do not save you here, because the leverage is exposure of confidential client information, not loss of access to it. It also means the attack can be much quieter, since there is no dramatic encryption event to trigger alarms."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "We are a small firm. Are we really a target?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. Small and midsize firms are attractive precisely because they hold the same sensitive client material as large firms but typically have lighter IT and security staffing. A five-to-thirty-attorney firm in Salinas or Monterey holds privileged client files, financial records, and case strategy that are highly damaging if leaked, and is less likely to have 24/7 monitoring or a hardened help desk. That combination is exactly what this group looks for."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the single most important defense?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Stopping unauthorized remote-access tools and training staff to recognize fake IT calls. The attack hinges on a person being talked into installing a remote-access application or granting a session. Application control that blocks unapproved remote-access software, combined with a firm-wide rule that nobody installs anything or grants remote access based on an inbound phone call, removes the group's primary entry method. Pair that with phishing-resistant MFA and 24/7 monitoring."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does this affect non-law professional services like accounting or real estate?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. The law-firm focus is the current FBI warning, but the same playbook works against any professional-services business that holds sensitive client data and bills by the hour: accounting and tax firms, real estate and title offices, insurance agencies, medical and dental practices, and consultancies. If your business would suffer serious harm from client data being leaked, you are in the target profile and the same defenses apply."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What should we do first if we think we have been contacted or compromised?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "If someone may have granted remote access, disconnect that device from the network immediately and call your IT provider; do not simply close the remote-access app, because a session may persist. Preserve logs, do not pay or respond to any extortion contact before getting professional and legal advice, and engage your cyber-insurance carrier's incident hotline early since they often require it and can supply an IR team. Then rotate credentials and review what data the account could reach. We provide this incident-response support for clients on the Central Coast."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+    <!-- ghosxt:cf-web-analytics -->
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"f3ce7e0e17f54050845d52d7f355cd98"}'></script>
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top"><i class="fi fi-rs-angle-up" aria-hidden="true"></i></button>
+    <div class="cookie-banner" id="cookieBanner"><div class="cookie-banner-container"><div class="cookie-content"><div class="cookie-icon"><i class="fi fi-rs-cookie"></i></div><div class="cookie-text"><p class="cookie-message">We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.</p><a href="../privacy-policy.html" class="cookie-link">Learn more about our Privacy Policy</a></div></div><div class="cookie-actions"><button class="cookie-btn cookie-btn-secondary" id="cookieDecline">Decline</button><button class="cookie-btn cookie-btn-primary" id="cookieAccept">Accept All</button></div></div></div>
+    <div class="top-banner" id="topBanner"><div class="banner-container"><div class="banner-content"><span class="banner-text">Need Remote Support? &#9658;</span><a target="_blank" rel="noopener noreferrer" href="https://ticket.ghosxt.com/" class="banner-btn"><i class="fi fi-rs-ticket-alt"></i><span>Visit Client Portal</span></a></div></div></div>
+    <nav class="navbar" aria-label="Main navigation">
+      <div class="navbar-container">
+        <div class="navbar-left"><a href="../index.html" class="navbar-logo"><img fetchpriority="high" loading="eager" src="../assets/img/ghosxt logo.webp" alt="Ghosxt logo" width="48" height="48" /><span>GHOSXT</span></a></div>
+        <div class="navbar-right">
+          <div class="navbar-menu">
+            <a href="../index.html" class="navbar-link">Home</a>
+            <div class="navbar-dropdown"><a href="../about.html" class="navbar-link dropdown-trigger" aria-haspopup="menu">About <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></a><div class="dropdown-menu" role="menu"><a href="../about.html" class="dropdown-item" role="menuitem">About Ghosxt</a><a href="../ghosxt-cares.html" class="dropdown-item" role="menuitem">Ghosxt Cares</a></div></div>
+            <div class="navbar-dropdown"><a href="../services.html" class="navbar-link dropdown-trigger" aria-haspopup="menu">Services <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></a><div class="dropdown-menu" role="menu"><a href="../services.html" class="dropdown-item" role="menuitem">All Services</a>
+                <a href="../managed-it-services.html" class="dropdown-item" role="menuitem">Managed IT Services</a>
+                <a href="../cybersecurity.html" class="dropdown-item" role="menuitem">Cybersecurity</a>
+                <a href="../cloud-services.html" class="dropdown-item" role="menuitem">Cloud Services</a>
+                <a href="../backup-disaster-recovery.html" class="dropdown-item" role="menuitem">Backup &amp; Disaster Recovery</a>
+                <a href="../network-design.html" class="dropdown-item" role="menuitem">Network Design</a>
+                <a href="../website-development.html" class="dropdown-item" role="menuitem">Web Development</a>
+                <a href="../ctpat.html" class="dropdown-item" role="menuitem">C-TPAT Compliance</a></div></div>
+            <a href="../pricing.html" class="navbar-link">Pricing</a>
+            <a href="index.html" class="navbar-link">Blog</a>
+            <a href="../contact.html" class="navbar-link">Contact</a>
+          </div>
+          <button class="navbar-mobile-toggle" id="mobileToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu"><i class="fi fi-rs-burger-menu" aria-hidden="true"></i></button>
+          <div class="navbar-buttons"><a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer" class="navbar-btn btn-demo"><i class="fi fi-rs-calendar-day"></i><span>Book a Call</span></a></div>
+        </div>
+      </div>
+      <div class="navbar-overlay" id="navbarOverlay"></div>
+      <div class="navbar-mobile-menu" id="mobileMenu">
+        <a href="../index.html" class="mobile-link">Home</a>
+        <div class="mobile-accordion"><button class="mobile-accordion-trigger" aria-expanded="false">About <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></button><div class="mobile-accordion-content"><a href="../about.html" class="mobile-dropdown-item">About Ghosxt</a><a href="../ghosxt-cares.html" class="mobile-dropdown-item">Ghosxt Cares</a></div></div>
+        <div class="mobile-accordion"><button class="mobile-accordion-trigger" aria-expanded="false">Services <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></button><div class="mobile-accordion-content"><a href="../services.html" class="mobile-dropdown-item">All Services</a>
+            <a href="../managed-it-services.html" class="mobile-dropdown-item">Managed IT Services</a>
+            <a href="../cybersecurity.html" class="mobile-dropdown-item">Cybersecurity</a>
+            <a href="../cloud-services.html" class="mobile-dropdown-item">Cloud Services</a>
+            <a href="../backup-disaster-recovery.html" class="mobile-dropdown-item">Backup &amp; Disaster Recovery</a>
+            <a href="../network-design.html" class="mobile-dropdown-item">Network Design</a>
+            <a href="../website-development.html" class="mobile-dropdown-item">Web Development</a>
+            <a href="../ctpat.html" class="mobile-dropdown-item">C-TPAT Compliance</a></div></div>
+        <a href="../pricing.html" class="mobile-link">Pricing</a>
+        <a href="index.html" class="mobile-link">Blog</a>
+        <a href="../contact.html" class="mobile-link">Contact</a>
+        <div class="mobile-actions"><a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer" class="mobile-btn btn-demo"><i class="fi fi-rs-calendar-day"></i><span>Book a Call</span></a></div>
+      </div>
+    </nav>
+    <main id="main-content" class="blog-post">
+      <header class="blog-post-header">
+        <div class="container">
+          <nav class="blog-post-breadcrumbs" aria-label="Breadcrumb">
+            <a href="../index.html">Home</a><span class="sep">&rsaquo;</span><a href="index.html">Blog</a><span class="sep">&rsaquo;</span><span aria-current="page">FBI Alert: Silent Ransom Group Targets Law Firms</span>
+          </nav>
+          <div class="blog-post-meta">
+            <time datetime="2026-05-27">May 27, 2026</time>
+            <span>&middot;</span>
+            <span>9 min read</span>
+            <span>&middot;</span>
+            <span class="blog-card-tag">Cybersecurity</span>
+          </div>
+          <h1>FBI Warns: Silent Ransom Group Is Targeting Law Firms. Here's What to Do</h1>
+          <div class="blog-post-author">
+            <strong>Ulises Paiz</strong>, Founder, Ghosxt
+          </div>
+        </div>
+      </header>
+      <div class="blog-post-body">
+        <div class="container">
+          <aside class="blog-post-quickfix" aria-label="Summary and what to do">
+            <span class="quickfix-label">TL;DR &mdash; The attack is a phone call, not a virus. Backups will not save you.</span>
+            <h2>The FBI says the Silent Ransom Group is calling law firms, posing as IT, and talking staff into granting remote access &mdash; then stealing client data and extorting the firm.</h2>
+            <ul>
+              <li><strong>Silent Ransom Group (a.k.a. Luna Moth)</strong> is an extortion crew that uses phone calls and callback phishing instead of malware. There is often <strong>no file encryption</strong> at all.</li>
+              <li><strong>The hook:</strong> an employee is convinced &mdash; by email then phone &mdash; to install a remote-access tool or grant a remote session. The attacker then quietly copies sensitive files and threatens to leak them.</li>
+              <li><strong>Why law firms:</strong> privileged client data, billable-hour time pressure, and typically light IT make small and midsize firms a high-value, soft target.</li>
+              <li><strong>Backups do not help here</strong> &mdash; the leverage is exposure of confidential data, not loss of access to it.</li>
+            </ul>
+            <p>What to do this week (law firms and any professional-services SMB):</p>
+            <ol>
+              <li><strong>Today:</strong> tell every employee, in writing, that nobody installs software or grants remote access because of an inbound phone call &mdash; ever. Verify through a known internal channel first.</li>
+              <li><strong>This week:</strong> block unapproved remote-access tools with application control; only your real IT provider's tool should run.</li>
+              <li><strong>This week:</strong> confirm phishing-resistant MFA and 24/7 monitoring are in place on the systems holding client data.</li>
+              <li><strong>This month:</strong> add data-egress monitoring and a written incident-response plan that includes your cyber-insurance hotline and outside counsel.</li>
+            </ol>
+          </aside>
+
+          <p>The FBI issued an alert this week warning that the <strong>Silent Ransom Group</strong> &mdash; tracked by security researchers as <strong>Luna Moth</strong> &mdash; is actively targeting law firms. This one is worth attention from every small professional-services business on the Central Coast, not just attorneys, because the technique is unusually effective against exactly the kind of organization that thinks it is too small to be a target.</p>
+
+          <p>What makes this group notable is what they <em>do not</em> use: malware, exploits, or file encryption. Their primary weapon is a phone call. That changes the defensive playbook in ways worth understanding.</p>
+
+          <h2>How the attack actually works</h2>
+
+          <p>The Silent Ransom Group's playbook is built around <strong>social engineering, not software</strong>. A typical sequence looks like this:</p>
+
+          <ol>
+            <li><strong>A lure arrives</strong>, often a low-key email &mdash; a fake subscription receipt, a "your account will be charged" notice, or a document-review request &mdash; with a phone number to call. There is no malicious attachment for your email filter to catch, just a number.</li>
+            <li><strong>The victim calls, or is called.</strong> A polished operator answers, posing as IT support, a vendor's help desk, or a service the firm uses. The conversation is calm and professional, not the broken-English scam caricature.</li>
+            <li><strong>The operator gets the victim to grant remote access</strong>, usually by walking them through installing a legitimate remote-access or remote-management tool, the same category of software real IT departments use. Because the tool itself is legitimate, antivirus does not flag it.</li>
+            <li><strong>The attacker quietly copies data.</strong> Once on the machine, they locate and exfiltrate sensitive files: client matters, financial records, case files, personal information. There is no ransomware note, no encryption, nothing dramatic.</li>
+            <li><strong>The extortion arrives later.</strong> The firm is contacted and told that confidential client data will be published or sold unless a payment is made. For a law firm, the threat of leaking privileged client information is enormous leverage.</li>
+          </ol>
+
+          <p>If this sounds familiar, it should: it is the same human-targeted social-engineering pattern we wrote about in the <a href="mfa-fatigue-push-bombing-smb-2026.html">MFA fatigue post</a> yesterday, applied to remote access instead of login approval. The common thread across 2026's most effective attacks is that they go after a person on the phone, not a flaw in your software.</p>
+
+          <h2>Why law firms, and why small ones</h2>
+
+          <p>The FBI's focus on law firms is not arbitrary. Firms concentrate exactly what an extortion crew wants:</p>
+
+          <ul>
+            <li><strong>Highly sensitive data with real leak consequences.</strong> Privileged client communications, litigation strategy, M&amp;A details, personal and financial records. The damage from exposure is severe and the reputational stakes are high, which makes firms more likely to pay.</li>
+            <li><strong>Time pressure and a culture of responsiveness.</strong> Attorneys and staff bill by the hour and move fast. A plausible "your account is about to be charged" lure plays directly into the instinct to resolve it quickly.</li>
+            <li><strong>Lighter IT than the data warrants.</strong> A small or midsize firm often runs without dedicated security staff or 24/7 monitoring, even though it holds material as sensitive as a large firm does. That mismatch is the target profile.</li>
+          </ul>
+
+          <p>And it is not only law firms. The same playbook works against any professional-services business that holds sensitive client data and would suffer real harm from a leak: <strong>accounting and tax practices, real estate and title offices, insurance agencies, medical and dental practices, wealth managers, and consultancies.</strong> If that describes your business, read "law firm" below as "your firm." Our <a href="../professional-services-it.html">professional-services IT</a> work is built around exactly this risk profile.</p>
+
+          <h2>Why your backups will not save you here</h2>
+
+          <p>This is the part that catches people off guard. The standard ransomware safety net is good backups: if your files get encrypted, you restore from a clean copy and refuse to pay. We make that case in the <a href="backup-disaster-recovery-small-business-2026.html">backup and disaster recovery post</a>, and it is still essential.</p>
+
+          <p>But Silent Ransom Group usually does not encrypt anything. The leverage is not "you cannot access your data" &mdash; it is "we will publish your clients' confidential information." A perfect backup does nothing about that. This is a <strong>confidentiality</strong> attack, not an <strong>availability</strong> attack, and it has to be defended differently: by preventing the data from leaving in the first place, and by detecting the access that precedes the theft.</p>
+
+          <h2>The controls that actually stop this</h2>
+
+          <h3>1. Kill the entry method: no remote access from inbound calls</h3>
+
+          <p>The entire attack hinges on someone granting remote access. Two controls close that door:</p>
+
+          <ul>
+            <li><strong>A firm-wide rule, in writing and trained:</strong> nobody installs software or grants a remote-control session because of an inbound phone call, email, or pop-up &mdash; no matter how legitimate it sounds. If "IT" calls, you hang up and call your IT provider back on the number you already have. This is the same caller-verification discipline we build into every client's <a href="mfa-fatigue-push-bombing-smb-2026.html">help-desk procedure</a>.</li>
+            <li><strong>Application control that blocks unapproved remote-access tools.</strong> Your environment should permit exactly one remote-support tool &mdash; the one your IT provider actually uses &mdash; and block the rest (AnyDesk, TeamViewer, ScreenConnect installs, and the dozens of similar apps) from running at all. Microsoft Defender Application Control and Intune can enforce this. If the tool cannot run, the attacker cannot get in even if they talk their way past a person.</li>
+          </ul>
+
+          <h3>2. Detect the access and the data leaving</h3>
+
+          <ul>
+            <li><strong>EDR and 24/7 monitoring.</strong> A new remote-access session, unusual file-access patterns, or a workstation suddenly reading the entire client-files share at 2 a.m. are detectable signals &mdash; if someone is watching. This is the <a href="ai-attack-speed-22-seconds-mdr-smb.html">managed detection and response</a> argument again: tooling plus a human who responds.</li>
+            <li><strong>Data-egress awareness.</strong> Large uploads to unfamiliar cloud-storage or file-transfer services should raise a flag. For Microsoft 365 firms, controls on where data can be shared and alerts on bulk downloads add a real tripwire.</li>
+          </ul>
+
+          <h3>3. Harden identity and limit blast radius</h3>
+
+          <ul>
+            <li><strong>Phishing-resistant MFA</strong> on everything, so a talked-out password does not become full access. See the <a href="identity-hardening-small-business-5-employees-microsoft-365.html">identity hardening post</a>.</li>
+            <li><strong>Least privilege on the document management system.</strong> Not every user needs access to every client matter. The less any single compromised account can reach, the less there is to steal.</li>
+          </ul>
+
+          <h3>4. Have a plan before you need it</h3>
+
+          <ul>
+            <li><strong>A written incident-response plan</strong> that names who to call, includes your <a href="cyber-insurance-renewal-checklist-small-business-central-coast.html">cyber-insurance</a> incident hotline, and identifies outside counsel for breach-notification obligations. Law firms have bar-association and client-notification duties that make the legal side as important as the technical side.</li>
+            <li><strong>Do not improvise the extortion conversation.</strong> If contacted, do not respond or pay before involving professionals and counsel. Payment carries no guarantee and can create its own legal exposure.</li>
+          </ul>
+
+          <h2>What to do right now if you think you have been contacted</h2>
+
+          <p>If an employee may have granted remote access:</p>
+
+          <ol>
+            <li><strong>Disconnect that device from the network immediately</strong> &mdash; pull the cable or disable Wi-Fi. Do not just close the remote-access app; the session may persist.</li>
+            <li><strong>Call your IT provider</strong> and preserve the machine and its logs for investigation.</li>
+            <li><strong>Engage your cyber-insurance carrier's hotline early.</strong> Many policies require it, and they can supply an incident-response team.</li>
+            <li><strong>Rotate credentials</strong> for the affected user and review what client data that account could reach.</li>
+            <li><strong>Loop in counsel</strong> on notification obligations before making statements.</li>
+          </ol>
+
+          <p>We provide this kind of incident-response support for businesses across Salinas, Monterey, Santa Cruz, and the rest of the Central Coast, and we would rather get the call before the data leaves than after.</p>
+
+          <h2>Where this fits with the rest of the cluster</h2>
+
+          <ul>
+            <li>The <a href="mfa-fatigue-push-bombing-smb-2026.html">MFA fatigue post</a>: same human-on-the-phone attack pattern, different target (login approval vs. remote access). The caller-verification habit defends both.</li>
+            <li>The <a href="ransomware-2026-how-it-gets-in.html">ransomware post</a>: the broader picture of how these intrusions begin, and why data-theft extortion is displacing pure encryption.</li>
+            <li>The <a href="backup-disaster-recovery-small-business-2026.html">backup and DR post</a>: still essential, but explicitly not the fix for a confidentiality-extortion attack.</li>
+            <li>The <a href="ai-attack-speed-22-seconds-mdr-smb.html">monitoring / MDR post</a>: the detection layer that catches the data leaving.</li>
+            <li>The <a href="../professional-services-it.html">professional-services IT</a> page: the program we build for firms that hold sensitive client data.</li>
+          </ul>
+
+          <p>The honest summary: this is a reminder that in 2026 the most dangerous attacks against a small firm do not look like hacking. They look like a helpful phone call. The defense is part technology &mdash; block the remote-access tools, watch the data &mdash; and part culture: a firm where no one grants access because someone on the phone asked them to.</p>
+
+          <h2>FAQs about the Silent Ransom Group warning</h2>
+
+          <h3>Who is the Silent Ransom Group?</h3>
+          <p>Silent Ransom Group, also tracked by researchers as Luna Moth, is a financially motivated extortion crew known for callback phishing and phone-based social engineering rather than traditional malware. They trick employees into granting remote access, quietly exfiltrate sensitive data, and then extort the organization with the threat of leaking it. The FBI has warned that they are actively targeting law firms because of the volume of sensitive client data those firms hold.</p>
+
+          <h3>How is this different from normal ransomware?</h3>
+          <p>Traditional ransomware encrypts your files and demands payment for the key. Silent Ransom Group often does not encrypt anything. They steal the data and threaten to publish it. That means your backups, which are the usual ransomware safety net, do not save you here, because the leverage is exposure of confidential client information, not loss of access to it. It also means the attack can be much quieter, since there is no dramatic encryption event to trigger alarms.</p>
+
+          <h3>We are a small firm. Are we really a target?</h3>
+          <p>Yes. Small and midsize firms are attractive precisely because they hold the same sensitive client material as large firms but typically have lighter IT and security staffing. A five-to-thirty-attorney firm in Salinas or Monterey holds privileged client files, financial records, and case strategy that are highly damaging if leaked, and is less likely to have 24/7 monitoring or a hardened help desk. That combination is exactly what this group looks for.</p>
+
+          <h3>What is the single most important defense?</h3>
+          <p>Stopping unauthorized remote-access tools and training staff to recognize fake IT calls. The attack hinges on a person being talked into installing a remote-access application or granting a session. Application control that blocks unapproved remote-access software, combined with a firm-wide rule that nobody installs anything or grants remote access based on an inbound phone call, removes the group's primary entry method. Pair that with phishing-resistant MFA and 24/7 monitoring.</p>
+
+          <h3>Does this affect non-law professional services like accounting or real estate?</h3>
+          <p>Yes. The law-firm focus is the current FBI warning, but the same playbook works against any professional-services business that holds sensitive client data and bills by the hour: accounting and tax firms, real estate and title offices, insurance agencies, medical and dental practices, and consultancies. If your business would suffer serious harm from client data being leaked, you are in the target profile and the same defenses apply.</p>
+
+          <h3>What should we do first if we think we have been contacted or compromised?</h3>
+          <p>If someone may have granted remote access, disconnect that device from the network immediately and call your IT provider; do not simply close the remote-access app, because a session may persist. Preserve logs, do not pay or respond to any extortion contact before getting professional and legal advice, and engage your cyber-insurance carrier's incident hotline early since they often require it and can supply an IR team. Then rotate credentials and review what data the account could reach. We provide this incident-response support for clients on the Central Coast.</p>
+
+          <div class="blog-post-cta">
+            <h3>Want your firm checked against this attack?</h3>
+            <p>30 minutes with a DoD-cleared engineer. We will review whether unauthorized remote-access tools can run in your environment, check your MFA and monitoring on the systems holding client data, and give you a written read plus a one-page caller-verification policy your whole team can follow.</p>
+            <a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer">
+              <i class="fi fi-rs-calendar-day" aria-hidden="true"></i>
+              Book your free assessment
+            </a>
+          </div>
+
+          <p style="margin-top: 1.5rem; font-size: 0.95rem; color: rgba(0,0,0,0.7);">
+            Prefer to talk first? Email <a href="mailto:sales@ghosxt.com">sales@ghosxt.com</a> or call <a href="tel:+18312040501">(831) 204-0501</a>.
+          </p>
+        </div>
+      </div>
+    </main>
+    <footer class="footer" id="footerSection">
+      <div class="footer-container">
+        <div class="footer-brand-row">
+          <div class="footer-brand">
+            <img
+              src="../assets/img/ghosxt logo.webp"
+              alt="Ghosxt logo"
+              width="80"
+              height="80"
+              loading="lazy"
+            />
+            <div class="footer-brand-text">
+              <span class="footer-brand-name">GHOSXT</span>
+              <span class="footer-brand-tagline"
+                >Government-grade IT for small business.</span
+              >
+            </div>
+          </div>
+          <div class="footer-cta-block">
+            <a
+              href="https://calendly.com/ulises-ghosxt"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="footer-cta-btn"
+            >
+              <i class="fi fi-rs-calendar-day" aria-hidden="true"></i>
+              Schedule Free Assessment
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-grid">
+          <div class="footer-column">
+            <h3 class="footer-column-title">Company</h3>
+            <ul class="footer-links">
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="../about.html">About</a></li>
+              <li><a href="../services.html">Services</a></li>
+              <li><a href="../pricing.html">Pricing</a></li>
+              <li><a href="../website-development.html">Website Development</a></li>
+              <li><a href="../contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-column-title">Services</h3>
+            <ul class="footer-links">
+              <li><a href="../managed-it-services.html">Managed IT Services</a></li>
+              <li><a href="../cybersecurity.html">Cybersecurity</a></li>
+              <li><a href="../cloud-services.html">Cloud Services</a></li>
+              <li><a href="../backup-disaster-recovery.html">Backup &amp; Disaster Recovery</a></li>
+              <li><a href="../network-design.html">Network Design</a></li>
+              <li><a href="../website-development.html">Web Development</a></li>
+              <li><a href="../ctpat.html">C-TPAT Compliance</a></li>
+              <li><a href="../trucking-it-services.html">Trucking &amp; Logistics IT</a></li>
+              <li><a href="../agriculture-it-services.html">Agriculture &amp; Agribusiness IT</a></li>
+              <li><a href="../manufacturing-it-services.html">Manufacturing &amp; Industrial IT</a></li>
+              <li><a href="../professional-services-it.html">SMB Office &amp; Professional Services IT</a></li>
+              <li><a href="../healthcare-it-services.html">Healthcare &amp; Medical IT</a></li>
+              <li><a href="../property-management-it-services.html">Property Management IT</a></li>
+              <li><a href="../engineering-it-services.html">Engineering &amp; Architecture IT</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-column-title">Resources</h3>
+            <ul class="footer-links">
+              <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+              <li><a href="https://ticket.ghosxt.com/" target="_blank" rel="noopener noreferrer">Client Portal</a></li>
+              <li><a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer">Free IT Assessment</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-column-title">Connect</h3>
+            <ul class="footer-links footer-social-links">
+              <li><a href="https://www.linkedin.com/company/ghosxt/" target="_blank" rel="noopener noreferrer"><svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.063 2.063 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>LinkedIn</a></li>
+              <li><a href="https://www.facebook.com/GhosxtTech" target="_blank" rel="noopener noreferrer"><svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg>Facebook</a></li>
+              <li><a href="https://www.instagram.com/ghosxttech/" target="_blank" rel="noopener noreferrer"><svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>Instagram</a></li>
+              <li><a href="mailto:sales@ghosxt.com"><i class="fi fi-rs-envelope" aria-hidden="true"></i> sales@ghosxt.com</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <div class="footer-bottom">
+          <p class="footer-copyright">&copy; 2026 Ghosxt. All rights reserved. Built by a cleared DoD engineer.</p>
+          <div class="footer-bottom-links">
+            <a href="../privacy-policy.html">Privacy Policy</a>
+            <span aria-hidden="true">&middot;</span>
+            <a href="https://ticket.ghosxt.com/" target="_blank" rel="noopener noreferrer">Client Portal</a>
+          </div>
+        </div>
+
+        <div class="service-areas-footer">
+          <h3>Service Areas</h3>
+          <ul>
+            <li><a href="../salinas.html">Salinas</a></li>
+            <li><a href="../monterey.html">Monterey</a></li>
+            <li><a href="../watsonville.html">Watsonville</a></li>
+            <li><a href="../hollister.html">Hollister</a></li>
+            <li><a href="../santa-cruz.html">Santa Cruz</a></li>
+            <li><a href="../gilroy.html">Gilroy</a></li>
+            <li><a href="../san-jose.html">San Jose</a></li>
+            <li><a href="../pacific-grove.html">Pacific Grove</a></li>
+            <li><a href="../carmel.html">Carmel</a></li>
+            <li><a href="../seaside.html">Seaside</a></li>
+            <li><a href="../marina.html">Marina</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="../assets/js/main.js?v=2026-05-27a" defer></script>
+    <!-- ghosxt:mobile-cta-bar -->
+    <div class="mobile-cta-bar" aria-label="Quick contact">
+      <a class="mcta-primary" href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer">Book free assessment</a>
+      <a class="mcta-secondary" href="tel:+18312040501">Call (831) 204-0501</a>
+    </div>
+  </body>
+</html>
