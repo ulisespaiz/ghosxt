@@ -1,0 +1,71 @@
+# Ghosxt
+
+> Ghosxt provides managed IT services and cybersecurity for small businesses on
+> California's Central Coast and beyond. The company is run by a DoD-cleared IT
+> engineer and delivers government-grade infrastructure, security, and 24/7
+> monitoring at small-business pricing. Based in Salinas, CA, Ghosxt serves the
+> Monterey Bay, Salinas Valley, San Benito County, and Silicon Valley.
+
+Key facts:
+- Business: Ghosxt (managed IT services provider / MSP)
+- Location: Salinas, California, USA (serves the surrounding region)
+- Phone: +1 (831) 204-0501
+- Email: sales@ghosxt.com
+- Differentiator: founded and run by a cleared DoD IT engineer; enterprise-grade
+  security without an enterprise price tag
+- Pricing (published): Core Managed IT $125/user/mo, Secure Growth $175/user/mo,
+  Compliance & Continuity $250/user/mo; flat-rate Tiny Team Managed Security
+  $600/mo for teams of 1–4 users
+- Free 30-minute IT assessment with no obligation
+
+## Services
+- [Managed IT Services](https://ghosxt.com/managed-it-services.html): 24/7 monitoring, helpdesk, patching, Microsoft 365, and backup for small business.
+- [Cybersecurity](https://ghosxt.com/cybersecurity.html): endpoint protection, MFA, immutable backups, and audits with government-grade rigor.
+- [Cloud Services & Microsoft 365](https://ghosxt.com/cloud-services.html): Microsoft 365, Azure, and hybrid cloud with hardened tenants and no-downtime migrations.
+- [Backup & Disaster Recovery](https://ghosxt.com/backup-disaster-recovery.html): immutable backups, tested restores, and ransomware-ready recovery.
+- [Network Design & Architecture](https://ghosxt.com/network-design.html): VLAN segmentation, firewalls, and business-grade wireless with real documentation.
+- [Website Development](https://ghosxt.com/website-development.html): custom small-business websites and e-commerce that load fast and convert.
+- [C-TPAT Compliance](https://ghosxt.com/ctpat.html): IT controls and documentation for supply-chain security certification.
+- [Pricing](https://ghosxt.com/pricing.html): transparent, published managed IT service plans.
+
+## Industries served
+- [Agriculture & Agribusiness IT](https://ghosxt.com/agriculture-it-services.html): Salinas Valley growers, food processing, and ag-tech.
+- [Trucking & Logistics IT](https://ghosxt.com/trucking-it-services.html): C-TPAT, ELD, fleet, and dispatch systems.
+- [Manufacturing IT](https://ghosxt.com/manufacturing-it-services.html): OT/IT, ERP, and CMMC.
+- [Healthcare & Medical IT](https://ghosxt.com/healthcare-it-services.html): HIPAA, EHR, and PHI protection.
+- [Professional Services IT](https://ghosxt.com/professional-services-it.html): law firms, CPAs, and small offices.
+- [Property Management IT](https://ghosxt.com/property-management-it-services.html): Yardi and AppFolio environments.
+- [Engineering & A/E IT](https://ghosxt.com/engineering-it-services.html): CAD, BIM, and ITAR.
+
+## Service areas (city pages)
+- [Salinas](https://ghosxt.com/salinas.html)
+- [Monterey](https://ghosxt.com/monterey.html)
+- [Watsonville](https://ghosxt.com/watsonville.html)
+- [Hollister](https://ghosxt.com/hollister.html)
+- [Santa Cruz](https://ghosxt.com/santa-cruz.html)
+- [Gilroy](https://ghosxt.com/gilroy.html)
+- [San Jose](https://ghosxt.com/san-jose.html)
+- [Pacific Grove](https://ghosxt.com/pacific-grove.html)
+- [Carmel](https://ghosxt.com/carmel.html)
+- [Seaside](https://ghosxt.com/seaside.html)
+- [Marina](https://ghosxt.com/marina.html)
+
+## About & contact
+- [About Ghosxt](https://ghosxt.com/about.html): the DoD-cleared engineer and approach behind the company.
+- [Contact / Free IT Assessment](https://ghosxt.com/contact.html): schedule a no-obligation 30-minute assessment.
+- [Ghosxt Cares](https://ghosxt.com/ghosxt-cares.html): community work and discounted IT for nonprofits.
+
+## Blog (selected guides)
+- [What managed IT actually costs (Salinas, 2026)](https://ghosxt.com/blog/managed-it-services-cost-salinas-2026.html)
+- [IT support vs. managed IT services](https://ghosxt.com/blog/it-support-vs-managed-it-services-difference.html)
+- [Backup & disaster recovery for small businesses (2026)](https://ghosxt.com/blog/backup-disaster-recovery-small-business-2026.html)
+- [Common small-business cybersecurity mistakes](https://ghosxt.com/blog/small-business-cybersecurity-mistakes.html)
+- [How ransomware actually gets in (2026)](https://ghosxt.com/blog/ransomware-2026-how-it-gets-in.html)
+- [Identity hardening for a small Microsoft 365 team](https://ghosxt.com/blog/identity-hardening-small-business-5-employees-microsoft-365.html)
+- [HIPAA-compliant IT for medical and dental practices](https://ghosxt.com/blog/hipaa-compliant-it-medical-dental-monterey-county.html)
+- [Switching IT providers: a Salinas/Monterey checklist](https://ghosxt.com/blog/switching-it-providers-salinas-monterey-checklist.html)
+- [Full blog index](https://ghosxt.com/blog/)
+
+## More
+- [Sitemap](https://ghosxt.com/sitemap.xml)
+- [All services](https://ghosxt.com/services.html)
