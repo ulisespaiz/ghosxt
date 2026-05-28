@@ -44,3 +44,30 @@ The script reads `*.html` and `blog/*.html`, skips pages with a `noindex` robots
 ## Cloudflare Web Analytics
 
 Every page loads the Cloudflare Web Analytics beacon via a `<script>` tag in `<head>` with the site token in `data-cf-beacon`. The live data lives at Cloudflare → Analytics & Logs → Web Analytics → `ghosxt.com`. If the token ever needs to be rotated, regenerate it in the dashboard (Manage site → "Enable with JS Snippet installation") and search-and-replace the old token across all `*.html` and `blog/*.html` files.
+
+## Google Search Console verification
+
+Search Console is the source of truth for what queries actually bring people to
+the site (impressions, clicks, average position) and is where the sitemap should
+be submitted. To verify ownership, choose one method:
+
+- **HTML meta tag (per-property):** in [Search Console](https://search.google.com/search-console),
+  add a URL-prefix property for `https://ghosxt.com/`, copy the
+  `google-site-verification` content string it gives you, and paste it into the
+  placeholder in `index.html` `<head>` (search for `google-site-verification`).
+  The tag only needs to live on the homepage. Then click *Verify*.
+- **DNS TXT (domain-wide, recommended):** add the `google-site-verification=...`
+  TXT record Search Console provides to the `ghosxt.com` DNS zone in Cloudflare.
+  This verifies the whole domain (all subdomains) and needs no code change.
+
+After verifying, submit `https://ghosxt.com/sitemap.xml` under *Sitemaps*.
+
+## llms.txt (AI answer engines)
+
+`llms.txt` at the repo root is a plain-text, link-rich map of the business,
+services, service-area cities, and key guides, written for AI assistants
+(ChatGPT, Perplexity, Google AI Overviews) so they can cite Ghosxt accurately.
+It is served at `https://ghosxt.com/llms.txt`. Update it whenever a service,
+city, or important page is added, removed, or renamed, and keep the phone,
+email, and pricing lines in sync with the rest of the site. It is not an
+indexable HTML page, so it is intentionally absent from `sitemap.xml`.
