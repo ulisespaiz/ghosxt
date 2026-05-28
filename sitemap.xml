@@ -235,6 +235,18 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://ghosxt.com/soledad.html</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ghosxt.com/king-city.html</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://ghosxt.com/blog/</loc>
     <lastmod>2026-05-10</lastmod>
     <changefreq>weekly</changefreq>
