@@ -51,6 +51,19 @@ Key facts:
 - [Carmel](https://ghosxt.com/carmel.html)
 - [Seaside](https://ghosxt.com/seaside.html)
 - [Marina](https://ghosxt.com/marina.html)
+- [Soledad](https://ghosxt.com/soledad.html)
+- [King City](https://ghosxt.com/king-city.html)
+
+## Service areas (by county)
+- [Monterey County](https://ghosxt.com/monterey-county.html): Salinas, the Peninsula, and South County (on-site).
+- [Santa Cruz County](https://ghosxt.com/santa-cruz-county.html): Santa Cruz, Watsonville, and the Pajaro Valley (on-site).
+- [San Benito County](https://ghosxt.com/san-benito-county.html): Hollister and San Juan Bautista (on-site).
+- [Santa Clara County](https://ghosxt.com/santa-clara-county.html): San Jose, Gilroy, and the South Bay (on-site).
+- [San Luis Obispo County](https://ghosxt.com/san-luis-obispo-county.html): remote-first managed IT across the Central Coast.
+
+## Local service pages (service + city)
+- [Cybersecurity in Salinas](https://ghosxt.com/cybersecurity-salinas.html), [Monterey](https://ghosxt.com/cybersecurity-monterey.html), [Santa Cruz](https://ghosxt.com/cybersecurity-santa-cruz.html), [San Jose](https://ghosxt.com/cybersecurity-san-jose.html), [Watsonville](https://ghosxt.com/cybersecurity-watsonville.html)
+- [Cloud & Microsoft 365 in Salinas](https://ghosxt.com/cloud-services-salinas.html), [Monterey](https://ghosxt.com/cloud-services-monterey.html), [Santa Cruz](https://ghosxt.com/cloud-services-santa-cruz.html), [San Jose](https://ghosxt.com/cloud-services-san-jose.html), [Watsonville](https://ghosxt.com/cloud-services-watsonville.html)
 
 ## About & contact
 - [About Ghosxt](https://ghosxt.com/about.html): the DoD-cleared engineer and approach behind the company.
