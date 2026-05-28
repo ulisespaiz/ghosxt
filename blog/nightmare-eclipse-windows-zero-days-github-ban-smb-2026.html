@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nightmare-Eclipse: The 6 Windows Zero-Days From the Banned Researcher | Ghosxt</title>
+    <meta name="description" content="GitHub and GitLab banned the researcher Nightmare-Eclipse for dropping six unpatched Windows zero-days in six weeks. Here is what BlueHammer, RedSun, UnDefend, YellowKey, GreenPlasma, and MiniPlasma actually do, which are patched, and what a small business should do this week, from a DoD-cleared engineer." />
+    <link rel="canonical" href="https://ghosxt.com/blog/nightmare-eclipse-windows-zero-days-github-ban-smb-2026.html" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://ghosxt.com/blog/nightmare-eclipse-windows-zero-days-github-ban-smb-2026.html" />
+    <meta property="og:title" content="Nightmare-Eclipse: The 6 Windows Zero-Days From the Banned Researcher | Ghosxt" />
+    <meta property="og:description" content="Six unpatched Windows zero-days in six weeks, then a GitHub and GitLab ban. What BlueHammer, RedSun, UnDefend, YellowKey, GreenPlasma, and MiniPlasma do, what is patched, and what a small business should do now." />
+    <meta property="og:image" content="https://ghosxt.com/assets/img/og/blog-nightmare-eclipse-windows-zero-days-github-ban-smb-2026.png" />
+    <meta property="og:site_name" content="Ghosxt" />
+    <meta property="article:published_time" content="2026-05-28" />
+    <meta property="article:author" content="Ulises Paiz" />
+    <meta name="robots" content="index, follow" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Nightmare-Eclipse: The 6 Windows Zero-Days From the Banned Researcher | Ghosxt" />
+    <meta name="twitter:description" content="Six Windows zero-days, a GitHub ban, and a threatened July 14 sequel. What each exploit does, what is patched, and what an SMB should do this week." />
+    <meta name="twitter:image" content="https://ghosxt.com/assets/img/og/blog-nightmare-eclipse-windows-zero-days-github-ban-smb-2026.png" />
+    <link rel="icon" href="../assets/img/favicon.ico" sizes="any" />
+    <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- ghosxt:roboto-preload -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" />
+    <link rel="preconnect" href="https://cdn-uicons.flaticon.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/main.css?v=2026-05-28a" />
+    <link rel="stylesheet" href="../assets/css/blog.css?v=2026-05-28a" />
+    <link rel="stylesheet" media="print" onload="this.media='all'" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" />
+    <noscript><link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" /></noscript>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "BlogPosting",
+            "mainEntityOfPage": { "@type": "WebPage", "@id": "https://ghosxt.com/blog/nightmare-eclipse-windows-zero-days-github-ban-smb-2026.html" },
+            "headline": "Nightmare-Eclipse: The Six Windows Zero-Days From the Researcher GitHub Banned",
+            "description": "GitHub and then GitLab banned the researcher known as Nightmare-Eclipse after they released six unpatched Windows zero-days in six weeks as a protest against Microsoft. A plain-language rundown of BlueHammer, RedSun, UnDefend, YellowKey, GreenPlasma, and MiniPlasma, what is patched, what is still open, what is being exploited in the wild, and what a small business should do, from a DoD-cleared engineer.",
+            "image": "https://ghosxt.com/assets/img/og/blog-nightmare-eclipse-windows-zero-days-github-ban-smb-2026.png",
+            "author": { "@type": "Person", "name": "Ulises Paiz", "url": "https://ghosxt.com/about.html" },
+            "publisher": { "@type": "Organization", "name": "Ghosxt", "logo": { "@type": "ImageObject", "url": "https://ghosxt.com/assets/img/ghosxt logo.webp" } },
+            "datePublished": "2026-05-28",
+            "dateModified": "2026-05-28",
+            "articleSection": "Cybersecurity",
+            "keywords": "Nightmare-Eclipse, Chaotic Eclipse, Dead Eclipse, Windows zero-day, BlueHammer, RedSun, UnDefend, YellowKey, GreenPlasma, MiniPlasma, CVE-2026-33825, CVE-2026-41091, CVE-2026-45498, Windows Defender exploit, BitLocker bypass, privilege escalation, GitHub ban, MSRC, small business cybersecurity, Salinas IT, Monterey County IT"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ghosxt.com/" },
+              { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://ghosxt.com/blog/" },
+              { "@type": "ListItem", "position": 3, "name": "Nightmare-Eclipse: The Six Windows Zero-Days", "item": "https://ghosxt.com/blog/nightmare-eclipse-windows-zero-days-github-ban-smb-2026.html" }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Who is Nightmare-Eclipse?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Nightmare-Eclipse, who has also used the aliases Chaotic Eclipse and Dead Eclipse, is an anonymous security researcher who released six Windows zero-day exploits over roughly six weeks starting in early April 2026. The releases were a public protest against how Microsoft's Security Response Center (MSRC) handled their vulnerability reports, including unpaid bug bounties. GitHub banned the researcher's account around May 23, 2026, and GitLab suspended a mirror account days later."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Which of the six zero-days are patched?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "BlueHammer (CVE-2026-33825) was fixed in the April 2026 Patch Tuesday. RedSun (CVE-2026-41091) and UnDefend (CVE-2026-45498) were fixed in an out-of-band update on May 21, 2026 after active exploitation was reported. The BitLocker bypass (YellowKey), the CTFMON privilege escalation (GreenPlasma), and the Cloud Filter privilege escalation (MiniPlasma) were still being remediated as of late May 2026, so treat them as open and rely on mitigations."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Are these being used in real attacks?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. Incident responders confirmed the three Windows Defender exploits, BlueHammer, RedSun, and UnDefend, in real-world intrusions. BlueHammer has been seen in active use since around April 10, 2026, and RedSun and UnDefend were found on a Windows host that had been compromised through a hijacked SSL VPN account. Once a public proof-of-concept exists, criminal and commodity attackers adopt it quickly, which is why patching speed matters."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "We are a small business, not an enterprise. Does this affect us?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. These are flaws in Windows, Windows Defender, BitLocker, and core Windows drivers, which means they affect ordinary Windows 10 and 11 machines, not exotic enterprise gear. Several are privilege-escalation bugs that turn a normal user or a single phished login into full SYSTEM control of a device. A five-to-fifty-person business running standard Windows laptops is squarely in scope, and is less likely to have the fast patching and monitoring that limits the damage."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the single most important thing to do right now?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Make sure every Windows machine has the April 2026 Patch Tuesday updates and the May 21, 2026 out-of-band updates installed, since those close BlueHammer, RedSun, and UnDefend. Then assume the still-open bugs exist and add layers that do not depend on a single endpoint staying healthy: phishing-resistant MFA, 24/7 monitoring and EDR, least-privilege accounts, and a BitLocker configuration that requires a PIN or uses TPM-plus-PIN. Patch fast, then defend in depth."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the July 14, 2026 threat?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Nightmare-Eclipse has publicly announced a larger disclosure event for July 14, 2026, warning that the date will be significant regardless of patches released before then. Treat it as a likely batch of new proof-of-concept exploits. The defensive posture is the same either way: keep patching on a tight cadence, keep monitoring in place, and have an incident-response plan ready before the date rather than scrambling on it."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+    <!-- ghosxt:cf-web-analytics -->
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"f3ce7e0e17f54050845d52d7f355cd98"}'></script>
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top"><i class="fi fi-rs-angle-up" aria-hidden="true"></i></button>
+    <div class="cookie-banner" id="cookieBanner"><div class="cookie-banner-container"><div class="cookie-content"><div class="cookie-icon"><i class="fi fi-rs-cookie"></i></div><div class="cookie-text"><p class="cookie-message">We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.</p><a href="../privacy-policy.html" class="cookie-link">Learn more about our Privacy Policy</a></div></div><div class="cookie-actions"><button class="cookie-btn cookie-btn-secondary" id="cookieDecline">Decline</button><button class="cookie-btn cookie-btn-primary" id="cookieAccept">Accept All</button></div></div></div>
+    <div class="top-banner" id="topBanner"><div class="banner-container"><div class="banner-content"><span class="banner-text">Need Remote Support? &#9658;</span><a target="_blank" rel="noopener noreferrer" href="https://ticket.ghosxt.com/" class="banner-btn"><i class="fi fi-rs-ticket-alt"></i><span>Visit Client Portal</span></a></div></div></div>
+    <nav class="navbar" aria-label="Main navigation">
+      <div class="navbar-container">
+        <div class="navbar-left"><a href="../index.html" class="navbar-logo"><img fetchpriority="high" loading="eager" src="../assets/img/ghosxt logo.webp" alt="Ghosxt logo" width="48" height="48" /><span>GHOSXT</span></a></div>
+        <div class="navbar-right">
+          <div class="navbar-menu">
+            <a href="../index.html" class="navbar-link">Home</a>
+            <div class="navbar-dropdown"><a href="../about.html" class="navbar-link dropdown-trigger" aria-haspopup="menu">About <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></a><div class="dropdown-menu" role="menu"><a href="../about.html" class="dropdown-item" role="menuitem">About Ghosxt</a><a href="../ghosxt-cares.html" class="dropdown-item" role="menuitem">Ghosxt Cares</a></div></div>
+            <div class="navbar-dropdown"><a href="../services.html" class="navbar-link dropdown-trigger" aria-haspopup="menu">Services <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></a><div class="dropdown-menu" role="menu"><a href="../services.html" class="dropdown-item" role="menuitem">All Services</a>
+                <a href="../managed-it-services.html" class="dropdown-item" role="menuitem">Managed IT Services</a>
+                <a href="../cybersecurity.html" class="dropdown-item" role="menuitem">Cybersecurity</a>
+                <a href="../cloud-services.html" class="dropdown-item" role="menuitem">Cloud Services</a>
+                <a href="../backup-disaster-recovery.html" class="dropdown-item" role="menuitem">Backup &amp; Disaster Recovery</a>
+                <a href="../network-design.html" class="dropdown-item" role="menuitem">Network Design</a>
+                <a href="../website-development.html" class="dropdown-item" role="menuitem">Web Development</a>
+                <a href="../ctpat.html" class="dropdown-item" role="menuitem">C-TPAT Compliance</a></div></div>
+            <a href="../pricing.html" class="navbar-link">Pricing</a>
+            <a href="index.html" class="navbar-link">Blog</a>
+            <a href="../contact.html" class="navbar-link">Contact</a>
+          </div>
+          <button class="navbar-mobile-toggle" id="mobileToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu"><i class="fi fi-rs-burger-menu" aria-hidden="true"></i></button>
+          <div class="navbar-buttons"><a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer" class="navbar-btn btn-demo"><i class="fi fi-rs-calendar-day"></i><span>Book a Call</span></a></div>
+        </div>
+      </div>
+      <div class="navbar-overlay" id="navbarOverlay"></div>
+      <div class="navbar-mobile-menu" id="mobileMenu">
+        <a href="../index.html" class="mobile-link">Home</a>
+        <div class="mobile-accordion"><button class="mobile-accordion-trigger" aria-expanded="false">About <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></button><div class="mobile-accordion-content"><a href="../about.html" class="mobile-dropdown-item">About Ghosxt</a><a href="../ghosxt-cares.html" class="mobile-dropdown-item">Ghosxt Cares</a></div></div>
+        <div class="mobile-accordion"><button class="mobile-accordion-trigger" aria-expanded="false">Services <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></button><div class="mobile-accordion-content"><a href="../services.html" class="mobile-dropdown-item">All Services</a>
+            <a href="../managed-it-services.html" class="mobile-dropdown-item">Managed IT Services</a>
+            <a href="../cybersecurity.html" class="mobile-dropdown-item">Cybersecurity</a>
+            <a href="../cloud-services.html" class="mobile-dropdown-item">Cloud Services</a>
+            <a href="../backup-disaster-recovery.html" class="mobile-dropdown-item">Backup &amp; Disaster Recovery</a>
+            <a href="../network-design.html" class="mobile-dropdown-item">Network Design</a>
+            <a href="../website-development.html" class="mobile-dropdown-item">Web Development</a>
+            <a href="../ctpat.html" class="mobile-dropdown-item">C-TPAT Compliance</a></div></div>
+        <a href="../pricing.html" class="mobile-link">Pricing</a>
+        <a href="index.html" class="mobile-link">Blog</a>
+        <a href="../contact.html" class="mobile-link">Contact</a>
+        <div class="mobile-actions"><a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer" class="mobile-btn btn-demo"><i class="fi fi-rs-calendar-day"></i><span>Book a Call</span></a></div>
+      </div>
+    </nav>
+    <main id="main-content" class="blog-post">
+      <header class="blog-post-header">
+        <div class="container">
+          <nav class="blog-post-breadcrumbs" aria-label="Breadcrumb">
+            <a href="../index.html">Home</a><span class="sep">&rsaquo;</span><a href="index.html">Blog</a><span class="sep">&rsaquo;</span><span aria-current="page">Nightmare-Eclipse: The Six Windows Zero-Days</span>
+          </nav>
+          <div class="blog-post-meta">
+            <time datetime="2026-05-28">May 28, 2026</time>
+            <span>&middot;</span>
+            <span>11 min read</span>
+            <span>&middot;</span>
+            <span class="blog-card-tag">Cybersecurity</span>
+          </div>
+          <h1>Nightmare-Eclipse: The Six Windows Zero-Days From the Researcher GitHub Banned</h1>
+          <div class="blog-post-author">
+            <strong>Ulises Paiz</strong>, Founder, Ghosxt
+          </div>
+        </div>
+      </header>
+      <div class="blog-post-body">
+        <div class="container">
+          <aside class="blog-post-quickfix" aria-label="Summary and what to do">
+            <span class="quickfix-label">TL;DR &mdash; Six Windows zero-days in six weeks, then a GitHub ban. Patch fast, then defend in depth.</span>
+            <h2>An anonymous researcher dropped six unpatched Windows exploits as a protest against Microsoft. GitHub and GitLab banned them. Three are patched, three are not, and several are already in real attacks.</h2>
+            <ul>
+              <li><strong>The researcher</strong> &mdash; Nightmare-Eclipse, also seen as Chaotic Eclipse and Dead Eclipse &mdash; released six Windows zero-days from early April 2026, saying Microsoft's MSRC mishandled their reports and paid them nothing.</li>
+              <li><strong>The six:</strong> BlueHammer, RedSun, UnDefend (all hit Windows Defender), plus YellowKey (a BitLocker bypass), GreenPlasma and MiniPlasma (both take a normal user to SYSTEM).</li>
+              <li><strong>Patched:</strong> BlueHammer (CVE-2026-33825, April Patch Tuesday); RedSun (CVE-2026-41091) and UnDefend (CVE-2026-45498) in a May 21 out-of-band update. <strong>Still open as of late May:</strong> YellowKey, GreenPlasma, MiniPlasma.</li>
+              <li><strong>In the wild already:</strong> incident responders have seen BlueHammer, RedSun, and UnDefend in real intrusions, one via a hijacked VPN login.</li>
+              <li><strong>A sequel is threatened</strong> for July 14, 2026.</li>
+            </ul>
+            <p>What to do this week (any business running Windows):</p>
+            <ol>
+              <li><strong>Today:</strong> confirm every Windows machine has the April 2026 <em>and</em> the May 21, 2026 out-of-band updates. That closes the three patched bugs, including the two being exploited.</li>
+              <li><strong>This week:</strong> assume the three open bugs are real. Make sure no everyday user is a local administrator, and confirm EDR and 24/7 monitoring are actually running.</li>
+              <li><strong>This week:</strong> require a BitLocker PIN (TPM-plus-PIN) on laptops, so a stolen or lost device is not trivially unlocked.</li>
+              <li><strong>Before July 14:</strong> have a written patch-and-respond plan ready for the threatened next release.</li>
+            </ol>
+          </aside>
+
+          <p>Over the last several weeks an anonymous security researcher who goes by <strong>Nightmare-Eclipse</strong> &mdash; and previously by <strong>Chaotic Eclipse</strong> and <strong>Dead Eclipse</strong> &mdash; published a string of working exploits for unpatched Windows vulnerabilities. Six of them, in roughly six weeks, starting in early April 2026. It culminated last week in <strong>GitHub banning the account</strong>, and GitLab suspending a mirror a few days later, on or around May 23&ndash;26.</p>
+
+          <p>If you only read the headlines, this looks like inside-baseball drama between a researcher and Microsoft. But several of these bugs affect ordinary Windows laptops and the security software that ships with them, a few are already being used in real attacks, and the researcher has promised a bigger release on July 14. So it is worth understanding, in plain language, what was actually released and what a normal small business should do about it.</p>
+
+          <h2>What happened, briefly</h2>
+
+          <p>By the researcher's own account, this was a protest. They say they reported vulnerabilities to Microsoft's Security Response Center (MSRC), were unhappy with how the reports were handled, and received no bug-bounty payment for the work. So instead of quiet, coordinated disclosure, they started publishing full proof-of-concept (PoC) exploits for unpatched flaws &mdash; the kind of code that lets anyone reproduce the attack.</p>
+
+          <p>That is the part worth being clear-eyed about: dropping working exploits for <em>unpatched</em> bugs does pressure the vendor, but it also hands a ready-made weapon to every criminal crew watching. Defenders and attackers got the same code at the same time. GitHub and GitLab both ultimately removed the accounts, but PoCs spread the moment they are posted, and these did.</p>
+
+          <h2>The six zero-days, in plain language</h2>
+
+          <p>The six fall into two natural groups: three that attack <strong>Windows Defender</strong> itself, and three that are <strong>Windows privilege-escalation or encryption bypass</strong> issues. Here is the short version of each.</p>
+
+          <h3>The three that target Windows Defender</h3>
+
+          <ul>
+            <li><strong>BlueHammer &mdash; CVE-2026-33825 (patched, April 2026).</strong> The clever one. It drops a file that Defender wants to quarantine, then uses a file-locking trick (an opportunistic lock) to freeze Defender mid-operation and swaps in an NTFS junction that redirects Defender's own write into <code>C:\Windows\System32</code>. Because Defender runs as SYSTEM, the attacker effectively borrows its privileges to write where a normal user cannot &mdash; a path to full control of the machine. Fixed in the April Patch Tuesday.</li>
+            <li><strong>RedSun &mdash; CVE-2026-41091 (patched out-of-band, May 21).</strong> A different route to the same goal: it abuses Defender's cloud-file rollback, the feature that restores a file Defender removed, without properly checking the destination. That lets an attacker redirect the restore into a privileged location. A local privilege-escalation bug.</li>
+            <li><strong>UnDefend &mdash; CVE-2026-45498 (patched out-of-band, May 21).</strong> This one does not grab privileges directly. It quietly sabotages Defender's <em>definition updates</em> so the endpoint's detection slowly goes blind over time. It is the "turn off the smoke detector" step that makes the others stealthier.</li>
+          </ul>
+
+          <p>Read together, the three are a chain, not three separate curiosities: use BlueHammer or RedSun to become SYSTEM, then UnDefend to degrade Defender so the intrusion is harder to spot. Incident-response teams have confirmed all three in real-world attacks, with BlueHammer seen in use since around April 10, and RedSun and UnDefend found on a host that was first broken into through a <strong>hijacked SSL VPN account</strong>. That detail matters: the entry point was a stolen login, which is exactly the kind of thing <a href="identity-hardening-small-business-5-employees-microsoft-365.html">identity hardening</a> and <a href="mfa-fatigue-push-bombing-smb-2026.html">phishing-resistant MFA</a> are meant to stop.</p>
+
+          <h3>The three Windows privilege-escalation and bypass bugs</h3>
+
+          <ul>
+            <li><strong>YellowKey &mdash; a BitLocker bypass (still being remediated).</strong> The researcher called this "one of the most insane discoveries I ever found" and described it as functioning like a backdoor into BitLocker-encrypted drives. In practice that means the disk encryption you rely on to protect a lost or stolen laptop may not protect it the way you assume. We covered this one in detail when it dropped &mdash; see <a href="yellowkey-greenplasma-windows-bitlocker-bypass-privesc.html">YellowKey &amp; GreenPlasma: Two Windows Bypasses Explained</a>.</li>
+            <li><strong>GreenPlasma &mdash; a CTFMON privilege escalation (still being remediated).</strong> A local privilege-escalation flaw the researcher describes as a "Windows CTFMON Arbitrary Section Creation Elevation of Privileges Vulnerability." Translation: a normal user can abuse it to get a SYSTEM-level shell. Same write-up linked above.</li>
+            <li><strong>MiniPlasma &mdash; a Cloud Filter driver privilege escalation (still being remediated).</strong> The most uncomfortable of the set, because it reportedly takes a <em>standard</em> user to SYSTEM on a <em>fully patched</em> Windows 11 machine with the May 2026 updates installed. We wrote that one up separately: <a href="windows-miniplasma-cve-2020-17103-system-privesc-smb.html">Windows MiniPlasma SYSTEM Privilege Escalation: No Patch, Public PoC</a>.</li>
+          </ul>
+
+          <h2>Why this matters to a small business</h2>
+
+          <p>It is tempting to file "Windows Defender zero-day" under enterprise problems. It is not. Every item here affects the software on ordinary Windows 10 and 11 laptops and desktops: Defender, BitLocker, and core Windows drivers. There is nothing exotic required.</p>
+
+          <p>The privilege-escalation bugs are the ones to internalize. On their own, a "normal user to SYSTEM" bug does not break into your network &mdash; an attacker needs a foothold first. But footholds are cheap in 2026: a phished password, a <a href="mfa-fatigue-push-bombing-smb-2026.html">talked-out MFA code</a>, a hijacked VPN login, a malicious attachment. Once any one of those lands a low-privilege foothold, an escalation bug like GreenPlasma or MiniPlasma turns it into total control of the device &mdash; and from there, the rest of the environment. This is the same point we made in the <a href="ai-attack-speed-22-seconds-mdr-smb.html">22-seconds / MDR post</a>: the gap between "someone got in" and "someone owns everything" is now tiny, and it closes automatically when these exploits are in play.</p>
+
+          <p>And the BitLocker bypass changes a quiet assumption a lot of businesses make: that a lost or stolen encrypted laptop is "fine, it's encrypted." With YellowKey-class techniques, that confidence needs a second look &mdash; which is why device encryption should be paired with a PIN and with the ability to remotely wipe a missing machine, not treated as a single magic checkbox.</p>
+
+          <h2>What to do this week</h2>
+
+          <h3>1. Patch the three that are fixed &mdash; all of them</h3>
+          <p>The most important and most boring step. Confirm every Windows machine has both the <strong>April 2026 Patch Tuesday</strong> updates (BlueHammer / CVE-2026-33825) and the <strong>May 21, 2026 out-of-band</strong> updates (RedSun / CVE-2026-41091 and UnDefend / CVE-2026-45498). Two of those three are being actively exploited, so an unpatched machine is not a theoretical risk. If you are not certain every endpoint is current &mdash; including the laptop that never comes into the office &mdash; that uncertainty <em>is</em> the finding. This is exactly the gap that <a href="../managed-it-services.html">managed IT</a> with enforced patching is supposed to remove, and it is the lesson of every <a href="may-2026-patch-tuesday-windows-dns-word-rce-smb.html">Patch Tuesday post</a> we write.</p>
+
+          <h3>2. Assume the three open bugs exist, and build around them</h3>
+          <p>You cannot patch YellowKey, GreenPlasma, or MiniPlasma yet, so reduce what they can do for an attacker:</p>
+          <ul>
+            <li><strong>No everyday local admins.</strong> Privilege-escalation bugs matter most when the starting point is weak. Standard users, separated admin accounts, and no persistent local administrators shrink the blast radius. (See <a href="identity-hardening-small-business-5-employees-microsoft-365.html">identity hardening</a>.)</li>
+            <li><strong>EDR plus 24/7 monitoring.</strong> Since one of these bugs is literally designed to blind Defender over time, you want detection that does not rely solely on the endpoint's own health &mdash; a managed detection and response layer with a human watching, as argued in the <a href="ai-attack-speed-22-seconds-mdr-smb.html">MDR post</a>.</li>
+            <li><strong>Network and identity controls that work even if a device is compromised.</strong> Conditional access, VPN MFA, and alerting on anomalous logins catch the <em>entry</em> that precedes the escalation. The real intrusion above started with a hijacked VPN account.</li>
+          </ul>
+
+          <h3>3. Harden BitLocker</h3>
+          <p>Require <strong>TPM-plus-PIN</strong> on laptops so the drive does not silently unlock on boot, keep recovery keys escrowed in your management tenant (not on a sticky note), and make sure you can remotely wipe a lost device. Full walkthrough in the <a href="yellowkey-greenplasma-windows-bitlocker-bypass-privesc.html">YellowKey write-up</a>.</p>
+
+          <h3>4. Get ready for July 14</h3>
+          <p>Nightmare-Eclipse has announced a larger disclosure event for <strong>July 14, 2026</strong>, saying the date will matter regardless of what gets patched first. Do not panic about it, but do prepare: a tight patch cadence, monitoring already in place, and a one-page incident-response plan that says who decides, who calls whom, and where the backups and recovery keys live. Preparation before the date beats improvisation on it.</p>
+
+          <h2>A note on the bigger picture</h2>
+
+          <p>It is genuinely debatable whether Microsoft's bug-bounty handling was fair here, and reasonable people disagree about whether banning the accounts helped or just escalated things. But from where a small business sits, the ethics debate does not change the to-do list. Working exploit code for Windows is public; some of it is being used; the defense is the same fundamentals we keep coming back to &mdash; patch quickly, harden identity, monitor continuously, and assume any single control can fail.</p>
+
+          <p>That last idea, <strong>defense in depth</strong>, is the whole point of this episode. BlueHammer turned Defender's own privileges against it. UnDefend was built to switch Defender's eyesight off slowly. If your entire security posture is "Windows Defender is on," a campaign like this is exactly what gets through. Layers are what hold when one layer is the thing under attack.</p>
+
+          <h2>Frequently asked questions</h2>
+
+          <h3>Who is Nightmare-Eclipse?</h3>
+          <p>An anonymous security researcher, also seen using the names Chaotic Eclipse and Dead Eclipse, who released six Windows zero-day exploits over roughly six weeks starting in early April 2026 as a public protest against how Microsoft's MSRC handled their reports, including unpaid bounties. GitHub banned the account around May 23, 2026, and GitLab suspended a mirror days later.</p>
+
+          <h3>Which of the six zero-days are patched?</h3>
+          <p>BlueHammer (CVE-2026-33825) was fixed in the April 2026 Patch Tuesday. RedSun (CVE-2026-41091) and UnDefend (CVE-2026-45498) were fixed in a May 21, 2026 out-of-band update after active exploitation was reported. YellowKey (the BitLocker bypass), GreenPlasma (CTFMON privilege escalation), and MiniPlasma (Cloud Filter privilege escalation) were still being remediated as of late May 2026, so treat them as open and rely on mitigations.</p>
+
+          <h3>Are these being used in real attacks?</h3>
+          <p>Yes. Incident responders confirmed BlueHammer, RedSun, and UnDefend in real intrusions. BlueHammer has been seen in use since around April 10, 2026, and RedSun and UnDefend were found on a host first compromised through a hijacked SSL VPN account. Once a public proof-of-concept exists, attackers adopt it quickly, which is why patch speed matters.</p>
+
+          <h3>We are a small business, not an enterprise. Does this affect us?</h3>
+          <p>Yes. These are flaws in Windows, Windows Defender, BitLocker, and core Windows drivers &mdash; the software on ordinary Windows 10 and 11 machines. Several are privilege-escalation bugs that turn a single phished login or normal user into full SYSTEM control of a device. A small business running standard Windows laptops is squarely in scope and is less likely to have the fast patching and monitoring that limit the damage.</p>
+
+          <h3>What is the single most important thing to do right now?</h3>
+          <p>Confirm every Windows machine has the April 2026 and May 21, 2026 updates installed, which close the three patched bugs (including the two being exploited). Then assume the open bugs exist and add layers that do not depend on one endpoint staying healthy: phishing-resistant MFA, 24/7 monitoring and EDR, least privilege, and a BitLocker PIN. Patch fast, then defend in depth.</p>
+
+          <h3>What is the July 14, 2026 threat?</h3>
+          <p>Nightmare-Eclipse has announced a larger disclosure event for July 14, 2026, warning the date will be significant regardless of earlier patches. Treat it as a likely batch of new proof-of-concept exploits. The defensive posture is the same either way: keep patching on a tight cadence, keep monitoring in place, and have an incident-response plan ready before the date.</p>
+
+          <div class="blog-post-cta">
+            <h3>Not sure every machine is patched and watched?</h3>
+            <p>30 minutes with a DoD-cleared engineer. We will check that your Windows fleet has the April and May 2026 updates, confirm whether everyday users still have local admin, review your BitLocker and MFA configuration, and tell you plainly where the gaps are before July 14.</p>
+            <a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer">
+              <i class="fi fi-rs-calendar-day" aria-hidden="true"></i>
+              Book your free assessment
+            </a>
+          </div>
+
+          <p style="margin-top: 1.5rem; font-size: 0.95rem; color: rgba(0,0,0,0.7);">
+            Prefer to talk first? Email <a href="mailto:sales@ghosxt.com">sales@ghosxt.com</a> or call <a href="tel:+18312040501">(831) 204-0501</a>.
+          </p>
+        </div>
+      </div>
+    </main>
+    <footer class="footer" id="footerSection">
+      <div class="footer-container">
+        <div class="footer-brand-row">
+          <div class="footer-brand">
+            <img
+              src="../assets/img/ghosxt logo.webp"
+              alt="Ghosxt logo"
+              width="80"
+              height="80"
+              loading="lazy"
+            />
+            <div class="footer-brand-text">
+              <span class="footer-brand-name">GHOSXT</span>
+              <span class="footer-brand-tagline"
+                >Government-grade IT for small business.</span
+              >
+            </div>
+          </div>
+          <div class="footer-cta-block">
+            <a
+              href="https://calendly.com/ulises-ghosxt"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="footer-cta-btn"
+            >
+              <i class="fi fi-rs-calendar-day" aria-hidden="true"></i>
+              Schedule Free Assessment
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-grid">
+          <div class="footer-column">
+            <h3 class="footer-column-title">Company</h3>
+            <ul class="footer-links">
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="../about.html">About</a></li>
+              <li><a href="../services.html">Services</a></li>
+              <li><a href="../pricing.html">Pricing</a></li>
+              <li><a href="../website-development.html">Website Development</a></li>
+              <li><a href="../contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-column-title">Services</h3>
+            <ul class="footer-links">
+              <li><a href="../managed-it-services.html">Managed IT Services</a></li>
+              <li><a href="../cybersecurity.html">Cybersecurity</a></li>
+              <li><a href="../cloud-services.html">Cloud Services</a></li>
+              <li><a href="../backup-disaster-recovery.html">Backup &amp; Disaster Recovery</a></li>
+              <li><a href="../network-design.html">Network Design</a></li>
+              <li><a href="../website-development.html">Web Development</a></li>
+              <li><a href="../ctpat.html">C-TPAT Compliance</a></li>
+              <li><a href="../trucking-it-services.html">Trucking &amp; Logistics IT</a></li>
+              <li><a href="../agriculture-it-services.html">Agriculture &amp; Agribusiness IT</a></li>
+              <li><a href="../manufacturing-it-services.html">Manufacturing &amp; Industrial IT</a></li>
+              <li><a href="../professional-services-it.html">SMB Office &amp; Professional Services IT</a></li>
+              <li><a href="../healthcare-it-services.html">Healthcare &amp; Medical IT</a></li>
+              <li><a href="../property-management-it-services.html">Property Management IT</a></li>
+              <li><a href="../engineering-it-services.html">Engineering &amp; Architecture IT</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-column-title">Resources</h3>
+            <ul class="footer-links">
+              <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+              <li><a href="https://ticket.ghosxt.com/" target="_blank" rel="noopener noreferrer">Client Portal</a></li>
+              <li><a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer">Free IT Assessment</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-column-title">Connect</h3>
+            <ul class="footer-links footer-social-links">
+              <li><a href="https://www.linkedin.com/company/ghosxt/" target="_blank" rel="noopener noreferrer"><svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.063 2.063 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>LinkedIn</a></li>
+              <li><a href="https://www.facebook.com/GhosxtTech" target="_blank" rel="noopener noreferrer"><svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg>Facebook</a></li>
+              <li><a href="https://www.instagram.com/ghosxttech/" target="_blank" rel="noopener noreferrer"><svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>Instagram</a></li>
+              <li><a href="mailto:sales@ghosxt.com"><i class="fi fi-rs-envelope" aria-hidden="true"></i> sales@ghosxt.com</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <div class="footer-bottom">
+          <p class="footer-copyright">&copy; 2026 Ghosxt. All rights reserved. Built by a cleared DoD engineer.</p>
+          <div class="footer-bottom-links">
+            <a href="../privacy-policy.html">Privacy Policy</a>
+            <span aria-hidden="true">&middot;</span>
+            <a href="https://ticket.ghosxt.com/" target="_blank" rel="noopener noreferrer">Client Portal</a>
+          </div>
+        </div>
+
+        <div class="service-areas-footer">
+          <h3>Service Areas</h3>
+          <ul>
+            <li><a href="../salinas.html">Salinas</a></li>
+            <li><a href="../monterey.html">Monterey</a></li>
+            <li><a href="../watsonville.html">Watsonville</a></li>
+            <li><a href="../hollister.html">Hollister</a></li>
+            <li><a href="../santa-cruz.html">Santa Cruz</a></li>
+            <li><a href="../gilroy.html">Gilroy</a></li>
+            <li><a href="../san-jose.html">San Jose</a></li>
+            <li><a href="../pacific-grove.html">Pacific Grove</a></li>
+            <li><a href="../carmel.html">Carmel</a></li>
+            <li><a href="../seaside.html">Seaside</a></li>
+            <li><a href="../marina.html">Marina</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="../assets/js/main.js?v=2026-05-28a" defer></script>
+    <!-- ghosxt:mobile-cta-bar -->
+    <div class="mobile-cta-bar" aria-label="Quick contact">
+      <a class="mcta-primary" href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer">Book free assessment</a>
+      <a class="mcta-secondary" href="tel:+18312040501">Call (831) 204-0501</a>
+    </div>
+  </body>
+</html>
