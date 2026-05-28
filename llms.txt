@@ -20,6 +20,8 @@ Key facts:
 
 ## Services
 - [Managed IT Services](https://ghosxt.com/managed-it-services.html): 24/7 monitoring, helpdesk, patching, Microsoft 365, and backup for small business.
+- [IT Help Desk & Support](https://ghosxt.com/help-desk-it-support.html): live, US-based IT help desk and end-user support, remote and on-site across the Central Coast.
+- [IT Consulting & vCIO](https://ghosxt.com/it-consulting-vcio.html): strategic IT roadmap, budget, security and compliance strategy, and vendor-neutral vCIO guidance.
 - [Cybersecurity](https://ghosxt.com/cybersecurity.html): endpoint protection, MFA, immutable backups, and audits with government-grade rigor.
 - [Cloud Services & Microsoft 365](https://ghosxt.com/cloud-services.html): Microsoft 365, Azure, and hybrid cloud with hardened tenants and no-downtime migrations.
 - [Backup & Disaster Recovery](https://ghosxt.com/backup-disaster-recovery.html): immutable backups, tested restores, and ransomware-ready recovery.
