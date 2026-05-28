@@ -30,6 +30,16 @@ The script scans `blog/*.html` (skipping `index.html`, `all.html`, and any post 
 
 Nav, footer, head, schema, and CSS in `blog/all.html` are untouched, so layout edits to the page can be made by hand without breaking the generator. Categories come from each post's `"articleSection"` value in its JSON-LD `BlogPosting` schema; keep that field accurate when authoring new posts.
 
+## RSS feed
+
+`feed.xml` (RSS 2.0) at the site root publishes the 30 most recent blog posts for feed readers, content aggregators, and answer-engine crawlers. Every page advertises it via `<link rel="alternate" type="application/rss+xml" ...>`, and `robots.txt` references it. Regenerate it whenever a post is added, removed, or re-dated:
+
+```bash
+python3 scripts/generate-feed.py
+```
+
+The script scans `blog/*.html` (skipping `index.html`, `all.html`, and any post with a `noindex` robots meta tag), extracts each post's title, canonical URL, meta description, `article:published_time` date, JSON-LD `articleSection` category, and author, sorts by date descending, and writes the newest 30 as RSS items.
+
 ## Open Graph image generation
 
 Per-page social-share images live in `assets/img/og/<slug>.png` and are generated from each page's `<title>`. Re-run the generator whenever a page is added, renamed, or has its title changed:

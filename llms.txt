@@ -83,4 +83,5 @@ Key facts:
 
 ## More
 - [Sitemap](https://ghosxt.com/sitemap.xml)
+- [RSS feed](https://ghosxt.com/feed.xml): latest blog posts (managed IT, cybersecurity, and compliance guidance).
 - [All services](https://ghosxt.com/services.html)
