@@ -898,9 +898,37 @@ body:has(.top-banner.hidden) .hero-section {
   font-size: 1.25rem;
 }
 
+/* Draw the hamburger in pure CSS so it never depends on the lazily-loaded
+   Flaticon webfont (which can leave the button as a bare black box on a
+   slow/blocked CDN). The middle bar is the <i> element itself; the
+   ::before/::after rules also override the font glyph so it can't double up. */
 .navbar-mobile-toggle i {
-  display: flex;
+  display: block;
+  position: relative;
+  width: 20px;
+  height: 2px;
+  background: var(--ghosxt-white);
   color: var(--ghosxt-white);
+  font-size: 0;
+}
+
+.navbar-mobile-toggle i::before,
+.navbar-mobile-toggle i::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 20px;
+  height: 2px;
+  background: var(--ghosxt-white);
+  font-family: inherit;
+}
+
+.navbar-mobile-toggle i::before {
+  top: -6px;
+}
+
+.navbar-mobile-toggle i::after {
+  top: 6px;
 }
 
 .navbar-mobile-menu {

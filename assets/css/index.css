@@ -3452,10 +3452,13 @@
 
   .solutions-tabs {
     gap: 8px;
+    flex-direction: column;
   }
 
   .solutions-tab {
     font-size: 0.85rem;
+    width: 100%;
+    justify-content: center;
   }
 
   .customer-showcase-container {
