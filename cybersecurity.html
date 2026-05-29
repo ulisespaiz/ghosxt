@@ -11,6 +11,7 @@
       content="Cybersecurity services for California small business. DoD-cleared engineer. Endpoint protection, MFA, backups, audits, compliance. Free assessment."
     />
     <link rel="canonical" href="https://ghosxt.com/cybersecurity.html" />
+    <link rel="alternate" type="application/rss+xml" title="Ghosxt Blog" href="https://ghosxt.com/feed.xml" />
 
     <!-- OPEN GRAPH -->
     <meta property="og:type" content="website" />
@@ -295,6 +296,10 @@
           {
             "@type": "FAQPage",
             "@id": "https://ghosxt.com/cybersecurity.html#faq",
+            "speakable": {
+              "@type": "SpeakableSpecification",
+              "cssSelector": ["h1", ".lead"]
+            },
             "mainEntity": [
               {
                 "@type": "Question",

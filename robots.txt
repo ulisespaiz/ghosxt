@@ -40,3 +40,6 @@ User-agent: CCBot
 Allow: /
 
 Sitemap: https://ghosxt.com/sitemap.xml
+
+# RSS feed of the latest blog posts (also linked via <link rel="alternate"> on every page).
+# https://ghosxt.com/feed.xml
