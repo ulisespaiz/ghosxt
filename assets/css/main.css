@@ -1159,8 +1159,6 @@ footer.unlocked {
   opacity: 0.8;
 }
 
-.service-areas-footer ul li a { z-index: 10 !important;}
-
 .footer-links a:hover {
   opacity: 1;
 }
@@ -1793,6 +1791,10 @@ footer.unlocked {
 
 .footer-bottom-links span {
   color: rgba(255, 255, 255, 0.2);
+}
+
+.footer-container .service-areas-footer ul li a { 
+  z-index: 100 !important;
 }
 
 /* ── Responsive ──────────────────────────────── */
