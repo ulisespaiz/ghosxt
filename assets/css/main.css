@@ -1793,6 +1793,14 @@ footer.unlocked {
   color: rgba(255, 255, 255, 0.2);
 }
 
+.service-areas-footer {
+  z-index: 100 !important;
+}
+
+.service-areas-footer ul {
+  z-index: 100 !important;
+}
+
 .footer-container .service-areas-footer ul li a { 
   z-index: 100 !important;
 }
