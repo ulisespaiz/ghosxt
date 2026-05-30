@@ -70,7 +70,7 @@
 
     <!-- STYLESHEETS -->
     <link rel="stylesheet" href="assets/css/main.css?v=2026-05-28b" />
-    <link rel="stylesheet" href="assets/css/pricing.css?v=2026-05-15a" />
+    <link rel="stylesheet" href="assets/css/pricing.css?v=2026-05-30a" />
     <link rel="stylesheet" media="print" onload="this.media='all'" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" />
     <noscript><link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" /></noscript>
 
@@ -130,7 +130,7 @@
                 {
                   "@type": "Offer",
                   "name": "Tiny Team Managed Security",
-                  "description": "Real managed IT coverage for very small teams (1-4 users) that still need serious protection. Flat-rate plan including 24/7 monitoring, helpdesk, patching, EDR, MFA, Microsoft 365 baseline hardening, email security, vulnerability management, and security awareness training. Backups and hardware management sold separately.",
+                  "description": "Real managed IT coverage for very small teams (1-4 users) that still need serious protection. Flat-rate plan including 24/7 monitoring, helpdesk, patching, EDR, MFA, Microsoft 365 baseline hardening, email security, cloud backup for Microsoft 365 and OneDrive, vulnerability management, and security awareness training. Server image-based backup and hardware management sold separately.",
                   "price": "600",
                   "priceCurrency": "USD",
                   "priceSpecification": {
@@ -170,7 +170,7 @@
                 {
                   "@type": "Offer",
                   "name": "Secure Growth",
-                  "description": "Per user per month. The right default for most businesses: identity, email, password, phishing, and endpoint protection together. Includes everything in Core Managed IT plus advanced email filtering, dark web monitoring, DNS filtering, and password management.",
+                  "description": "Per user per month. The right default for most businesses: identity, email, password, phishing, and endpoint protection together. Includes everything in Core Managed IT plus advanced email filtering, dark web monitoring, DNS filtering, password management, and cloud backup for Microsoft 365 and OneDrive.",
                   "price": "175",
                   "priceCurrency": "USD",
                   "priceSpecification": {
@@ -187,7 +187,7 @@
                 {
                   "@type": "Offer",
                   "name": "Compliance & Continuity",
-                  "description": "Per user per month. For businesses where downtime, compliance gaps, or breach response would be expensive — regulated, logistics, healthcare, after-hours, cyber-insurance-heavy clients. Includes everything in Secure Growth plus Identity Threat Detection, Managed SIEM, compliance support, vCIO, QBRs, and priority 15-minute SLA.",
+                  "description": "Per user per month. For businesses where downtime, compliance gaps, or breach response would be expensive — regulated, logistics, healthcare, after-hours, cyber-insurance-heavy clients. Includes everything in Secure Growth plus Identity Threat Detection, Managed SIEM, compliance support, compliance-grade backup retention, vCIO, QBRs, and priority 15-minute SLA.",
                   "price": "250",
                   "priceCurrency": "USD",
                   "priceSpecification": {
@@ -516,7 +516,7 @@
               <div class="choose-card-badge">Recommended</div>
               <h3 class="choose-card-title">Choose <span>Secure Growth</span> if&hellip;</h3>
               <p class="choose-card-body">
-                You use Microsoft 365 heavily, have remote users, share passwords across the team, get phished, or face cyber-insurance requirements. The right default for most businesses.
+                You use Microsoft 365 heavily, have remote users, share passwords across the team, get phished, or face cyber-insurance requirements. The right default for most businesses — and your Microsoft 365 &amp; OneDrive data is backed up, included.
               </p>
               <p class="choose-card-meta">Best for 10&ndash;40 users &middot; $175/user/mo</p>
               <a href="#calculator" class="choose-card-link" data-tier="professional">
@@ -711,7 +711,7 @@
                         </div>
                       </div>
                       <div class="tier-option-desc">
-                        Best for 10–40 users. The right default for most businesses: identity, email, password, phishing, and endpoint protection together. Everything in Core + advanced email filtering, dark web monitoring, DNS filtering, and password management.
+                        Best for 10–40 users. The right default for most businesses: identity, email, password, phishing, and endpoint protection together. Everything in Core + advanced email filtering, dark web monitoring, DNS filtering, password management, and cloud backup for Microsoft 365 &amp; OneDrive.
                       </div>
                     </div>
                   </label>
@@ -736,7 +736,7 @@
                         </div>
                       </div>
                       <div class="tier-option-desc">
-                        For businesses where downtime, compliance gaps, or breach response would be expensive — regulated, logistics, healthcare, after-hours, cyber-insurance-heavy clients. Full coverage + SIEM, identity threat detection, vCIO, compliance support &amp; 15-min priority SLA.
+                        For businesses where downtime, compliance gaps, or breach response would be expensive — regulated, logistics, healthcare, after-hours, cyber-insurance-heavy clients. Full coverage + SIEM, identity threat detection, vCIO, compliance support, compliance-grade backup retention &amp; 15-min priority SLA.
                       </div>
                     </div>
                   </label>
@@ -1405,6 +1405,78 @@
                   </td>
                 </tr>
                 <tr>
+                  <td class="feature-name">
+                    Critical File Backup via OneDrive
+                    <span class="feature-subnote">Your most important files (Desktop &amp; Documents) auto-saved and protected in the cloud</span>
+                  </td>
+                  <td class="check-cell">
+                    <i
+                      class="fi fi-rs-minus-circle check-no"
+                      aria-label="Not included"
+                    ></i>
+                  </td>
+                  <td class="check-cell plan-col-featured">
+                    <i
+                      class="fi fi-rs-check-circle check-yes"
+                      aria-label="Included"
+                    ></i>
+                  </td>
+                  <td class="check-cell">
+                    <i
+                      class="fi fi-rs-check-circle check-yes"
+                      aria-label="Included"
+                    ></i>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="feature-name">
+                    Microsoft 365 Cloud Backup
+                    <span class="feature-subnote">Email, OneDrive, SharePoint &amp; Teams &mdash; protected against deletion, ransomware &amp; departing staff</span>
+                  </td>
+                  <td class="check-cell">
+                    <i
+                      class="fi fi-rs-minus-circle check-no"
+                      aria-label="Not included"
+                    ></i>
+                  </td>
+                  <td class="check-cell plan-col-featured">
+                    <i
+                      class="fi fi-rs-check-circle check-yes"
+                      aria-label="Included"
+                    ></i>
+                  </td>
+                  <td class="check-cell">
+                    <i
+                      class="fi fi-rs-check-circle check-yes"
+                      aria-label="Included"
+                    ></i>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="feature-name">
+                    Compliance-Grade Backup Retention
+                    <span class="feature-subnote">Extended retention for HIPAA, cyber-insurance &amp; audit requirements</span>
+                  </td>
+                  <td class="check-cell">
+                    <i
+                      class="fi fi-rs-minus-circle check-no"
+                      aria-label="Not included"
+                    ></i>
+                  </td>
+                  <td class="check-cell plan-col-featured">
+                    <i
+                      class="fi fi-rs-minus-circle check-no"
+                      aria-label="Not included"
+                    ></i>
+                  </td>
+                  <td class="check-cell">
+                    <i
+                      class="fi fi-rs-check-circle check-yes"
+                      aria-label="Included"
+                    ></i>
+                  </td>
+                </tr>
+                <tr>
                   <td class="feature-name">Basic Monthly Reporting</td>
                   <td class="check-cell">
                     <i
@@ -1866,6 +1938,11 @@
               </tbody>
             </table>
           </div>
+
+          <p class="plans-backup-note">
+            <i class="fi fi-rs-shield-check" aria-hidden="true"></i>
+            <span><strong>Your data is covered.</strong> Secure Growth and Compliance &amp; Continuity include cloud backup for your Microsoft 365 and OneDrive data at no extra charge &mdash; the files and email your business actually runs on. Only full <strong>server / image-based backup (BCDR)</strong> is quoted separately, since it scales with your hardware and data volume.</span>
+          </p>
         </div>
       </section>
 
@@ -1923,6 +2000,7 @@
                 <li><i class="fi fi-rs-check" aria-hidden="true"></i> Multi-factor authentication and identity management</li>
                 <li><i class="fi fi-rs-check" aria-hidden="true"></i> Microsoft 365 baseline security configuration</li>
                 <li><i class="fi fi-rs-check" aria-hidden="true"></i> Email security and anti-phishing</li>
+                <li><i class="fi fi-rs-check" aria-hidden="true"></i> Cloud backup for Microsoft 365 &amp; OneDrive &mdash; your most important files protected</li>
                 <li><i class="fi fi-rs-check" aria-hidden="true"></i> Vulnerability management</li>
                 <li><i class="fi fi-rs-check" aria-hidden="true"></i> Security awareness training</li>
                 <li><i class="fi fi-rs-check" aria-hidden="true"></i> 1-hour response SLA during business hours</li>
@@ -1930,7 +2008,7 @@
 
               <div class="foundation-excludes">
                 <strong>Sold separately as add-ons:</strong>
-                backups (per device), firewall management ($50/mo each), server management ($200/mo each), network switch ($25/mo each), wireless AP ($20/mo each), NAS ($100/mo each), MDM ($15/device/mo).
+                server / image-based backup (quoted per server), firewall management ($50/mo each), server management ($200/mo each), network switch ($25/mo each), wireless AP ($20/mo each), NAS ($100/mo each), MDM ($15/device/mo).
               </div>
 
               <div class="foundation-cta-row">

@@ -1424,6 +1424,38 @@
     border-right: 1px dashed rgba(0, 0, 0, 0.12);;
 }
 
+.feature-subnote {
+    display: block;
+    margin-top: 0.25rem;
+    font-size: 0.72rem;
+    font-weight: 400;
+    line-height: 1.35;
+    color: rgba(0, 0, 0, 0.55);
+}
+
+.plans-backup-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.625rem;
+    max-width: 880px;
+    margin: 1.5rem auto 0;
+    padding: 1rem 1.25rem;
+    background: var(--ghosxt-white);
+    border: 1px dashed rgba(0, 0, 0, 0.18);
+    border-radius: 12px;
+    font-family: var(--font-family-2);
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: var(--ghosxt-black);
+}
+
+.plans-backup-note i {
+    flex-shrink: 0;
+    margin-top: 0.15rem;
+    color: #22c55e;
+    font-size: 1rem;
+}
+
 .check-cell {
     text-align: center;
     padding: 0.875rem 0.5rem;
