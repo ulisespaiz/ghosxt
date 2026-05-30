@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from a DoD-cleared IT engineer.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Thu, 28 May 2026 23:55:19 +0000</lastBuildDate>
-    <pubDate>Thu, 28 May 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Sat, 30 May 2026 02:49:47 +0000</lastBuildDate>
+    <pubDate>Sat, 30 May 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>The Microsoft Teams "IT Help Desk" That Isn't: A Ransomware Playbook</title>
+      <link>https://ghosxt.com/blog/microsoft-teams-help-desk-impersonation-ransomware-smb-2026.html</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/microsoft-teams-help-desk-impersonation-ransomware-smb-2026.html</guid>
+      <pubDate>Sat, 30 May 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>Attackers are flooding inboxes with spam, then messaging staff on Microsoft Teams while posing as the IT help desk, talking them into Quick Assist remote access, and dropping ransomware. How the email-bombing-plus-Teams-vishing playbook works and how a small business shuts it down, from a DoD-cleared engineer.</description>
+    </item>
     <item>
       <title>Nightmare-Eclipse: The 6 Windows Zero-Days From the Banned Researcher</title>
       <link>https://ghosxt.com/blog/nightmare-eclipse-windows-zero-days-github-ban-smb-2026.html</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>Plain-talk breakdown of the May 2026 Instructure Canvas data breach by ShinyHunters: what was exposed and what students, parents, and staff should do.</description>
-    </item>
-    <item>
-      <title>Ransomware in 2026: How It Actually Gets In, and What Stops It</title>
-      <link>https://ghosxt.com/blog/ransomware-2026-how-it-gets-in.html</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/ransomware-2026-how-it-gets-in.html</guid>
-      <pubDate>Tue, 05 May 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>A DoD-cleared engineer's plain-talk breakdown of how ransomware actually gets into small business networks in 2026, and the controls that actually stop it.</description>
     </item>
   </channel>
 </rss>
