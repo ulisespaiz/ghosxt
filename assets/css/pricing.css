@@ -1750,6 +1750,61 @@
     animation: numFlash 0.25s ease forwards;
 }
 
+/* ── CALCULATOR OVERFLOW SAFETY ───────────────────────────────
+   Keep the "Build Your Custom Quote" calculator inside the viewport on
+   mobile. Flex/grid text children default to min-width:auto and won't
+   shrink below their content, which can push the calculator wider than the
+   screen and cause sideways scrolling. Let labels wrap; keep dollar values
+   on one line; allow the grid columns to shrink. */
+.calc-left,
+.calc-right {
+    min-width: 0;
+}
+
+.breakdown-row,
+.compare-row {
+    gap: 0.75rem;
+}
+
+.breakdown-label,
+.compare-label {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.breakdown-value,
+.compare-value {
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+/* Make the calculator more compact on small phones so nothing is cut off. */
+@media (max-width: 560px) {
+    .calc-card-header,
+    .user-stepper,
+    .user-slider-track,
+    .tier-option-inner,
+    .addon-item,
+    .result-card-header,
+    .result-main-number,
+    .result-breakdown,
+    .savings-card-header,
+    .savings-compare,
+    .savings-highlight,
+    .savings-note,
+    .calc-cta-card {
+        padding-left: 0.875rem;
+        padding-right: 0.875rem;
+    }
+
+    .result-amount { font-size: 2.1rem; }
+    .result-currency { font-size: 1.4rem; }
+    .tier-option-desc { font-size: 0.8rem; }
+    .compare-row,
+    .breakdown-row { font-size: 0.78rem; }
+    .compare-value { font-size: 0.82rem; }
+}
+
 .footer-visible { display: flex !important; }
 
 
