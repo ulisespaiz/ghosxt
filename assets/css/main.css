@@ -4,6 +4,12 @@
   box-sizing: border-box;
 }
 
+/* Offset in-page anchor jumps so targets clear the sticky header. */
+html {
+  scroll-padding-top: 88px;
+  scroll-behavior: smooth;
+}
+
 .brand-icon {
   display: inline-block;
   width: 1em;
@@ -663,19 +669,31 @@ body:has(.top-banner.hidden) .hero-section {
 
 /* ------ NAVBAR ------ */
 .navbar {
-  position: relative;
+  position: sticky;
   top: 0;
   left: 0;
   right: 0;
   background: var(--ghosxt-white);
-  z-index: 1000;
+  /* Above the content layer: many page cards/badges use z-index:1000, and
+     now that the header is sticky they would otherwise paint over it as the
+     page scrolls underneath. Sits below true overlays (scroll-to-top 10000,
+     skip-link 100000). */
+  z-index: 1050;
   padding: 0 24px;
   border-top: 1px solid black;
   border-bottom: 1px solid black;
 }
 
 .navbar {
-  transition: top 0.3s ease;
+  transition:
+    top 0.3s ease,
+    box-shadow 0.25s ease;
+}
+
+/* Subtle shadow once the page is scrolled, so the sticky header (and the
+   red Call button) reads as a distinct, always-available bar. */
+.navbar.scrolled {
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
 }
 
 .navbar-container {
@@ -734,6 +752,23 @@ body:has(.top-banner.hidden) .hero-section {
   color: var(--ghosxt-red-0);
 }
 
+/* Active page indicator (desktop). Set by main.js by matching the URL. */
+.navbar-link.active {
+  color: var(--ghosxt-red-0);
+  font-weight: 700;
+  position: relative;
+}
+
+.navbar-link.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  height: 2px;
+  background: var(--ghosxt-red-0);
+}
+
 .navbar-dropdown {
   position: relative;
 }
@@ -762,7 +797,7 @@ body:has(.top-banner.hidden) .hero-section {
   visibility: hidden;
   transition: all 0.2s ease;
   box-shadow: 2px 2px 0 0 var(--ghosxt-black);
-  z-index: 1000;
+  z-index: 1051;
 }
 
 .navbar-dropdown:hover .dropdown-menu,
@@ -956,24 +991,36 @@ body:has(.top-banner.hidden) .hero-section {
 .navbar-mobile-menu {
   display: none;
   position: fixed;
-  top: 119px;
+  top: 72px;
   left: 0;
   right: 0;
   background: var(--ghosxt-white);
   border-bottom: 1px solid var(--ghosxt-black);
-  max-height: calc(100vh - 119px);
+  max-height: calc(100vh - 72px);
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   overscroll-behavior: contain;
   padding: 1rem 24px 2rem 24px;
   flex-direction: column;
   gap: 0.5rem;
-  z-index: 1001;
+  z-index: 1060;
 }
 
 .navbar-mobile-menu.active {
   display: flex;
   background: white;
+  animation: navMenuSlideDown 0.22s ease;
+}
+
+@keyframes navMenuSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 body.menu-open {
@@ -1030,6 +1077,17 @@ body.menu-open {
 
 .mobile-link:hover {
   background: rgba(0, 0, 0, 0.05);
+}
+
+/* Active page indicator (mobile). Set by main.js. */
+.mobile-link.active,
+.mobile-accordion-trigger.active {
+  color: var(--ghosxt-red-0);
+  font-weight: 700;
+}
+
+.mobile-link.active {
+  background: rgba(183, 28, 28, 0.06);
 }
 
 .mobile-accordion {
@@ -1406,6 +1464,11 @@ footer.unlocked {
 @media (max-width: 640px) {
   .navbar-container {
     height: 60px;
+  }
+
+  .navbar-mobile-menu {
+    top: 62px;
+    max-height: calc(100vh - 62px);
   }
 
   .navbar-logo {
@@ -2126,7 +2189,7 @@ summary:focus-visible,
   display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 968px) {
   .mobile-cta-bar {
     display: flex;
     position: fixed;
@@ -2180,7 +2243,7 @@ summary:focus-visible,
 body.no-mobile-cta-bar .mobile-cta-bar {
   display: none !important;
 }
-@media (max-width: 768px) {
+@media (max-width: 968px) {
   body.no-mobile-cta-bar {
     padding-bottom: 0;
   }
@@ -2189,16 +2252,6 @@ body.no-mobile-cta-bar .mobile-cta-bar {
   }
 }
 
-/* Keep the click-to-call visible in the header on tablets (769–968px),
-   where the main nav collapses to a burger menu. Below 768px the mobile
-   bottom bar takes over, so the header number is hidden there. */
-@media (max-width: 968px) {
-  .navbar-buttons .navbar-phone {
-    display: inline-flex;
-  }
-}
-@media (max-width: 768px) {
-  .navbar-buttons .navbar-phone {
-    display: none;
-  }
-}
+/* The header phone button is desktop-only (>968px). On mobile and tablet the
+   sticky bottom bar carries Call + Book, so the header number inherits the
+   default .navbar-buttons .navbar-btn hide at ≤968px — no duplicate CTA. */
