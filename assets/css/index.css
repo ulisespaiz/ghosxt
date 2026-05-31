@@ -6087,3 +6087,40 @@ main > div:not(.hero-section) .problem-badge .badge-container,
     padding: 1.5rem;
   }
 }
+
+/* =============================================
+   MOBILE: hide the interactive hero drag game and the chat demo.
+   Touch-dragging the floating boxes hijacked vertical scroll, and the
+   chat is a desktop-only flourish. Hidden elements receive no touch
+   events, so this also removes the scroll-hijack without touching JS.
+   Both features remain fully interactive on desktop (>968px).
+   ============================================= */
+
+/* CTA wording swap: drag instruction on desktop, plain prompt on mobile */
+.problem-cta .no-drag {
+  display: none;
+}
+
+@media (max-width: 968px) {
+  /* Hero: drop the draggable boxes + drop zone; keep the copy column */
+  .problem-right {
+    display: none;
+  }
+
+  .problem-container {
+    grid-template-columns: 1fr;
+  }
+
+  .problem-cta .drag-only {
+    display: none;
+  }
+
+  .problem-cta .no-drag {
+    display: inline;
+  }
+
+  /* Chat demo section: hide entirely on mobile */
+  .efficiency-section {
+    display: none;
+  }
+}
