@@ -879,22 +879,26 @@ body:has(.top-banner.hidden) .hero-section {
   box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.3);
 }
 
-/* Click-to-call in the desktop header. Inherits .navbar-btn sizing and
-   auto-hides on mobile via the existing .navbar-buttons .navbar-btn rule
-   (the mobile bottom bar handles calls below 968px). */
+/* Click-to-call is the primary header CTA. Solid red, prominent.
+   The header "Book a Call" button is hidden (see .navbar-buttons .btn-demo);
+   Calendly is still reachable from the mobile menu, hero CTAs, and footer. */
 .navbar-phone {
-  background: var(--ghosxt-white);
-  color: var(--ghosxt-red-0);
+  background: var(--ghosxt-red-0);
+  color: var(--ghosxt-white);
   border-color: var(--ghosxt-red-0);
   font-weight: 600;
-  box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.18);
+  box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.3);
 }
 
 .navbar-phone:hover {
-  background: var(--ghosxt-red-0);
-  color: var(--ghosxt-white);
   transform: translateY(-2px);
   box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.3);
+}
+
+/* Hide the redundant "Book a Call" button in the header — the phone number
+   takes its place. */
+.navbar-buttons .btn-demo {
+  display: none;
 }
 
 .btn-demo:hover,
@@ -2182,5 +2186,19 @@ body.no-mobile-cta-bar .mobile-cta-bar {
   }
   body.no-mobile-cta-bar .scroll-to-top {
     bottom: 24px !important;
+  }
+}
+
+/* Keep the click-to-call visible in the header on tablets (769–968px),
+   where the main nav collapses to a burger menu. Below 768px the mobile
+   bottom bar takes over, so the header number is hidden there. */
+@media (max-width: 968px) {
+  .navbar-buttons .navbar-phone {
+    display: inline-flex;
+  }
+}
+@media (max-width: 768px) {
+  .navbar-buttons .navbar-phone {
+    display: none;
   }
 }
