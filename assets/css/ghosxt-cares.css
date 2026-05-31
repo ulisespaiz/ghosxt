@@ -521,6 +521,14 @@
   text-align: center;
 }
 
+/* The shared grain overlay (.cares-hero-section:after in main.css) is
+   position:fixed and 300% wide/tall, so it floats above the whole page.
+   Without this it swallows clicks on interactive elements lower down the
+   page (e.g. the FAQ accordion). Scoped here so other pages are untouched. */
+.cares-hero-section::after {
+  pointer-events: none;
+}
+
 .cares-faq-items {
   display: flex;
   flex-direction: column;
