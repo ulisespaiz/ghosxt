@@ -353,6 +353,12 @@
   padding: 0 24px;
   min-height: 100vh;
   position: relative;
+  /* Sit above the hero's stacking context (.hero-section is z-index: 3).
+     The draggable boxes are z-index: 1000 but this section was z-index: auto,
+     so they leaked into the root stacking context and the hero painted over
+     them, swallowing clicks/drags on desktop. A stacking context here keeps
+     them layered correctly. */
+  z-index: 4;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -2624,6 +2630,10 @@
 .efficiency-section {
   padding: 0 24px;
   position: relative;
+  /* Same fix as .problem-section: the chat options are z-index: 1000, so this
+     section needs its own stacking context above the hero (z-index: 3) to keep
+     the chat clickable on desktop. */
+  z-index: 4;
   display: flex;
   flex-direction: column;
   justify-content: center;

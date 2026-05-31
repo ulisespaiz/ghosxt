@@ -814,9 +814,11 @@ function unlockRemainingSections() {
     const featuresStackSection = document.getElementById('featuresStackSection');
     const footerSection = document.getElementById('footerSection');
     
-    // Unlock all remaining sections
-    featuresStackSection.classList.add('unlocked');
-    footerSection.classList.add('unlocked');
+    // Unlock all remaining sections (guard against missing elements:
+    // #featuresStackSection isn't in the DOM, which previously threw a
+    // TypeError here on chat completion).
+    featuresStackSection?.classList.add('unlocked');
+    footerSection?.classList.add('unlocked');
 
 }
 
