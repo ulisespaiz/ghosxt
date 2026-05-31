@@ -219,19 +219,35 @@ document.addEventListener('DOMContentLoaded', function() {
     //     // You can add actual theme switching logic here if needed
     // });
 
-    // Navbar scroll effect (optional - adds shadow on scroll)
-    let lastScroll = 0;
+    // Sticky navbar: add a shadow once the page is scrolled so the header
+    // (and the red Call button) reads as a distinct, always-present bar.
     const navbar = document.querySelector('.navbar');
+    if (navbar) {
+        const onScroll = () => {
+            navbar.classList.toggle('scrolled', window.pageYOffset > 8);
+        };
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
+    }
+});
 
-    window.addEventListener('scroll', () => {
-        const currentScroll = window.pageYOffset;
-        
-        // if (currentScroll > 10) {
-        //     navbar.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.1)';
-        // } else {
-        //     navbar.style.boxShadow = 'none';
-        // }
-
-        lastScroll = currentScroll;
-    }, { passive: true });
+// Active-page highlight. Compares each nav link's resolved pathname to the
+// current URL (the browser resolves relative/`../` hrefs for us), so it works
+// across root and /blog/ pages without per-page edits.
+document.addEventListener('DOMContentLoaded', function () {
+    const norm = (p) => p.replace(/index\.html$/, '').replace(/\/+$/, '') || '/';
+    const current = norm(location.pathname);
+    const links = document.querySelectorAll(
+        '.navbar-link[href], .dropdown-item[href], .mobile-link[href], .mobile-dropdown-item[href]'
+    );
+    links.forEach((a) => {
+        if (norm(a.pathname) !== current) return;
+        a.classList.add('active');
+        a.setAttribute('aria-current', 'page');
+        // Bubble the highlight up to the parent dropdown / accordion trigger.
+        const dd = a.closest('.navbar-dropdown');
+        if (dd) dd.querySelector('.dropdown-trigger')?.classList.add('active');
+        const acc = a.closest('.mobile-accordion');
+        if (acc) acc.querySelector('.mobile-accordion-trigger')?.classList.add('active');
+    });
 });
