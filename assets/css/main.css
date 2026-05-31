@@ -879,6 +879,24 @@ body:has(.top-banner.hidden) .hero-section {
   box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.3);
 }
 
+/* Click-to-call in the desktop header. Inherits .navbar-btn sizing and
+   auto-hides on mobile via the existing .navbar-buttons .navbar-btn rule
+   (the mobile bottom bar handles calls below 968px). */
+.navbar-phone {
+  background: var(--ghosxt-white);
+  color: var(--ghosxt-red-0);
+  border-color: var(--ghosxt-red-0);
+  font-weight: 600;
+  box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.18);
+}
+
+.navbar-phone:hover {
+  background: var(--ghosxt-red-0);
+  color: var(--ghosxt-white);
+  transform: translateY(-2px);
+  box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.3);
+}
+
 .btn-demo:hover,
 .btn-signin:hover {
   transform: translateY(-2px);
