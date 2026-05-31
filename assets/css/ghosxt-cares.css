@@ -137,6 +137,451 @@
   text-decoration: none;
 }
 
+/* Hero actions: primary + secondary CTA side by side */
+.cares-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* Secondary (outline) CTA — inverted to read on the dark hero */
+.cares-hero-cta-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.75rem;
+  background: transparent;
+  color: var(--ghosxt-white);
+  font-family: var(--font-family-2);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.15s ease;
+}
+
+.cares-hero-cta-secondary:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--ghosxt-white);
+  color: var(--ghosxt-white);
+  text-decoration: none;
+}
+
+.cares-hero-note {
+  font-family: var(--font-family-2);
+  font-size: 0.9rem;
+  color: var(--ghosxt-white);
+  opacity: 0.6;
+  text-align: center;
+  margin-top: -0.5rem;
+}
+
+/* ─────────────────────────────────────────────────────────
+   MISSION SECTION  ("Why we do this")
+   Classes: cares-mission-*
+───────────────────────────────────────────────────────── */
+.cares-mission-section {
+  padding: 0 24px;
+  background: var(--ghosxt-white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.cares-mission-container {
+  max-width: 820px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.cares-mission-badge {
+  display: flex;
+  margin-bottom: 2rem;
+  border: 1px solid var(--ghosxt-black);
+  position: relative;
+  width: fit-content;
+  background: var(--ghosxt-white);
+}
+
+.cares-mission-badge .badge-lines:first-child {
+  border-right: 1px solid var(--ghosxt-black);
+}
+
+.cares-mission-badge .badge-lines:last-child {
+  border-left: 1px solid var(--ghosxt-black);
+}
+
+.cares-mission-badge .badge-line {
+  margin-top: 3px;
+  height: 1px;
+  width: 10px;
+  border-bottom: 1px solid var(--ghosxt-black);
+}
+
+.cares-mission-badge i {
+  display: flex;
+  align-items: center;
+  color: var(--ghosxt-red-0);
+  font-size: 0.9rem;
+}
+
+.cares-mission-badge .badge-text {
+  color: var(--ghosxt-black);
+  font-size: 1rem;
+  font-family: var(--font-family-2);
+}
+
+.cares-mission-title {
+  font-size: 2.75rem;
+  font-weight: 600;
+  color: var(--ghosxt-black);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+}
+
+.cares-mission-title span {
+  color: var(--ghosxt-red-0);
+}
+
+.cares-mission-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  max-width: 640px;
+}
+
+.cares-mission-body p {
+  font-size: 1.125rem;
+  font-family: var(--font-family-2);
+  color: rgba(0, 0, 0, 0.7);
+  line-height: 1.7;
+}
+
+/* ─────────────────────────────────────────────────────────
+   STEPS SECTION  ("How to apply")
+   Classes: cares-steps-* / cares-step-*
+───────────────────────────────────────────────────────── */
+.cares-steps-section {
+  padding: 0 24px;
+  background: var(--ghosxt-gray);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cares-steps-container {
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.cares-steps-badge {
+  display: flex;
+  margin-bottom: 2rem;
+  border: 1px solid var(--ghosxt-black);
+  position: relative;
+  width: fit-content;
+  background: var(--ghosxt-white);
+}
+
+.cares-steps-badge .badge-lines:first-child {
+  border-right: 1px solid var(--ghosxt-black);
+}
+
+.cares-steps-badge .badge-lines:last-child {
+  border-left: 1px solid var(--ghosxt-black);
+}
+
+.cares-steps-badge .badge-line {
+  margin-top: 3px;
+  height: 1px;
+  width: 10px;
+  border-bottom: 1px solid var(--ghosxt-black);
+}
+
+.cares-steps-badge i {
+  display: flex;
+  align-items: center;
+  color: var(--ghosxt-black);
+  font-size: 0.9rem;
+}
+
+.cares-steps-badge .badge-text {
+  color: var(--ghosxt-black);
+  font-size: 1rem;
+  font-family: var(--font-family-2);
+}
+
+.cares-steps-title {
+  font-size: 2.75rem;
+  font-weight: 600;
+  color: var(--ghosxt-red-0);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+
+.cares-steps-subtitle {
+  font-size: 1.125rem;
+  font-family: var(--font-family-2);
+  color: rgba(0, 0, 0, 0.6);
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto 3rem;
+}
+
+.cares-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.cares-step-card {
+  border: 1px solid var(--ghosxt-black);
+  border-radius: 12px;
+  padding: 2rem;
+  background: var(--ghosxt-white);
+  box-shadow: 3px 3px 0 0 var(--ghosxt-black);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+  text-align: left;
+}
+
+.cares-step-num {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--ghosxt-red-0);
+  color: var(--ghosxt-white);
+  border: 1px solid var(--ghosxt-black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-family-2);
+  font-weight: 700;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.cares-step-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--ghosxt-black);
+  line-height: 1.2;
+}
+
+.cares-step-desc {
+  font-size: 0.95rem;
+  font-family: var(--font-family-2);
+  color: rgba(0, 0, 0, 0.65);
+  line-height: 1.6;
+}
+
+/* ─────────────────────────────────────────────────────────
+   APPLY SECTION — actions (primary + secondary) + note
+   (Extends the existing .apply-* block above)
+───────────────────────────────────────────────────────── */
+.apply-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.apply-cta-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  background: var(--ghosxt-white);
+  color: var(--ghosxt-black);
+  font-family: var(--font-family-2);
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 4px;
+  border: 1px solid var(--ghosxt-black);
+  box-shadow: rgba(0, 0, 0, 0.3) 2px 2px 0px 0px;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.2s ease;
+  letter-spacing: 0.01em;
+}
+
+.apply-cta-secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: rgba(0, 0, 0, 0.3) 3px 3px 0px 0px;
+  text-decoration: none;
+  color: var(--ghosxt-black);
+}
+
+.apply-cta-secondary i {
+  display: flex;
+}
+
+.apply-note {
+  font-family: var(--font-family-2);
+  font-size: 0.95rem;
+  color: rgba(0, 0, 0, 0.6);
+  text-align: center;
+}
+
+.apply-note a {
+  color: var(--ghosxt-red-0);
+  font-weight: 600;
+}
+
+/* ─────────────────────────────────────────────────────────
+   FAQ SECTION  ("Questions, answered")
+   Classes: cares-faq-*
+───────────────────────────────────────────────────────── */
+.cares-faq-section {
+  padding: 0 24px;
+  background: var(--ghosxt-white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cares-faq-container {
+  max-width: 820px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cares-faq-badge {
+  display: flex;
+  margin-bottom: 2rem;
+  border: 1px solid var(--ghosxt-black);
+  position: relative;
+  width: fit-content;
+  background: var(--ghosxt-white);
+}
+
+.cares-faq-badge .badge-lines:first-child {
+  border-right: 1px solid var(--ghosxt-black);
+}
+
+.cares-faq-badge .badge-lines:last-child {
+  border-left: 1px solid var(--ghosxt-black);
+}
+
+.cares-faq-badge .badge-line {
+  margin-top: 3px;
+  height: 1px;
+  width: 10px;
+  border-bottom: 1px solid var(--ghosxt-black);
+}
+
+.cares-faq-badge i {
+  display: flex;
+  align-items: center;
+  color: var(--ghosxt-black);
+  font-size: 0.9rem;
+}
+
+.cares-faq-badge .badge-text {
+  color: var(--ghosxt-black);
+  font-size: 1rem;
+  font-family: var(--font-family-2);
+}
+
+.cares-faq-title {
+  font-size: 2.75rem;
+  font-weight: 600;
+  color: var(--ghosxt-red-0);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.cares-faq-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.cares-faq-item {
+  border: 1px solid var(--ghosxt-black);
+  border-radius: 10px;
+  background: var(--ghosxt-white);
+  overflow: hidden;
+}
+
+.cares-faq-question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--font-family-2);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--ghosxt-black);
+  line-height: 1.4;
+}
+
+.cares-faq-icon {
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+  color: var(--ghosxt-red-0);
+  display: flex;
+}
+
+.cares-faq-item.active .cares-faq-icon {
+  transform: rotate(180deg);
+}
+
+.cares-faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.cares-faq-item.active .cares-faq-answer {
+  max-height: 400px;
+}
+
+.cares-faq-answer p {
+  padding: 0 1.5rem 1.25rem;
+  font-family: var(--font-family-2);
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.7);
+  line-height: 1.65;
+}
+
 /* ─────────────────────────────────────────────────────────
    PROVIDES SECTION  ("What we provide")
    Classes: provides-*
@@ -592,14 +1037,18 @@
     font-size: 3rem;
   }
 
-  .provides-grid {
+  .provides-grid,
+  .cares-steps-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
   .provides-title,
   .covers-title,
   .eligibility-title,
-  .apply-title {
+  .apply-title,
+  .cares-mission-title,
+  .cares-steps-title,
+  .cares-faq-title {
     font-size: 2.25rem;
   }
 }
@@ -609,7 +1058,10 @@
   .provides-section,
   .covers-section,
   .eligibility-section,
-  .apply-section {
+  .apply-section,
+  .cares-mission-section,
+  .cares-steps-section,
+  .cares-faq-section {
     padding: 0 16px;
   }
 
@@ -625,20 +1077,39 @@
     font-size: 1rem;
   }
 
-  .provides-grid {
+  /* Stack hero/apply CTAs full-width so neither button overflows */
+  .cares-hero-actions,
+  .apply-actions {
+    flex-direction: column;
+    align-self: stretch;
+  }
+
+  .cares-hero-actions a,
+  .apply-actions a {
+    justify-content: center;
+  }
+
+  .provides-grid,
+  .cares-steps-grid {
     grid-template-columns: 1fr;
   }
 
   .provides-container,
   .covers-container,
   .eligibility-container,
-  .apply-container {
+  .apply-container,
+  .cares-mission-container,
+  .cares-steps-container,
+  .cares-faq-container {
     padding: 3rem 0;
   }
 
   .provides-title,
   .covers-title,
-  .eligibility-title {
+  .eligibility-title,
+  .cares-mission-title,
+  .cares-steps-title,
+  .cares-faq-title {
     font-size: 1.85rem;
   }
 
@@ -646,7 +1117,8 @@
     font-size: 1.85rem;
   }
 
-  .apply-text {
+  .apply-text,
+  .cares-mission-body p {
     font-size: 1rem;
   }
 
@@ -663,11 +1135,19 @@
   .provides-title,
   .covers-title,
   .eligibility-title,
-  .apply-title {
+  .apply-title,
+  .cares-mission-title,
+  .cares-steps-title,
+  .cares-faq-title {
     font-size: 1.6rem;
   }
 
-  .provides-card {
+  .provides-card,
+  .cares-step-card {
     padding: 1.5rem;
+  }
+
+  .cares-faq-question {
+    font-size: 1rem;
   }
 }
