@@ -5667,11 +5667,11 @@
 
 .ctpat-status-pass {
   background: rgba(22, 163, 74, 0.1);
-  color: #16a34a;
+  color: #15793b;
 }
 .ctpat-status-warn {
   background: rgba(234, 179, 8, 0.1);
-  color: #ca8a04;
+  color: #9a5408;
 }
 .ctpat-status-fail {
   background: rgba(220, 38, 38, 0.1);
