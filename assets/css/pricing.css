@@ -1721,7 +1721,17 @@
     .savings-numbers { grid-template-columns: 1fr; gap: 0.75rem; }
     .savings-divider { display: none; }
 
-    .calc-cta-card { flex-direction: column; align-items: flex-start; }
+    .calc-cta-card { flex-direction: column; align-items: stretch; }
+
+    /* The button label is dynamic (e.g. "Book a call about this $1,750/mo
+       Secure Growth estimate") — let it wrap and fill the column instead of
+       running off-screen. */
+    .calc-cta-btn {
+        width: 100%;
+        white-space: normal;
+        justify-content: center;
+        text-align: center;
+    }
 
     .result-amount { font-size: 2.5rem; }
     .savings-stat-val { font-size: 1.1rem; }
