@@ -60,17 +60,14 @@
     <!-- ghosxt:roboto-preload -->
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" />
     <link rel="preconnect" href="https://cdn-uicons.flaticon.com" />
-    <link rel="preconnect" href="https://calendly.com" />
 
     <!-- FONTS -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" /></noscript>
 
     <!-- STYLESHEETS -->
-    <link rel="stylesheet" href="assets/css/main.css?v=2026-05-28b" />
-    <link rel="stylesheet" href="assets/css/pricing.css?v=2026-05-15a" />
+    <link rel="stylesheet" href="assets/css/main.css?v=2026-05-31d" />
+    <link rel="stylesheet" href="assets/css/pricing.css?v=2026-05-31b" />
     <link rel="stylesheet" media="print" onload="this.media='all'" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" />
     <noscript><link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" /></noscript>
 
@@ -130,7 +127,7 @@
                 {
                   "@type": "Offer",
                   "name": "Tiny Team Managed Security",
-                  "description": "Real managed IT coverage for very small teams (1-4 users) that still need serious protection. Flat-rate plan including 24/7 monitoring, helpdesk, patching, EDR, MFA, Microsoft 365 baseline hardening, email security, vulnerability management, and security awareness training. Backups and hardware management sold separately.",
+                  "description": "Real managed IT coverage for very small teams (1-4 users) that still need serious protection. Flat-rate plan including 24/7 monitoring, helpdesk, patching, EDR, MFA, Microsoft 365 baseline hardening, email security, cloud backup for Microsoft 365 and OneDrive, vulnerability management, and security awareness training. Server image-based backup and hardware management sold separately.",
                   "price": "600",
                   "priceCurrency": "USD",
                   "priceSpecification": {
@@ -170,7 +167,7 @@
                 {
                   "@type": "Offer",
                   "name": "Secure Growth",
-                  "description": "Per user per month. The right default for most businesses: identity, email, password, phishing, and endpoint protection together. Includes everything in Core Managed IT plus advanced email filtering, dark web monitoring, DNS filtering, and password management.",
+                  "description": "Per user per month. The right default for most businesses: identity, email, password, phishing, and endpoint protection together. Includes everything in Core Managed IT plus advanced email filtering, dark web monitoring, DNS filtering, password management, and cloud backup for Microsoft 365 and OneDrive.",
                   "price": "175",
                   "priceCurrency": "USD",
                   "priceSpecification": {
@@ -187,7 +184,7 @@
                 {
                   "@type": "Offer",
                   "name": "Compliance & Continuity",
-                  "description": "Per user per month. For businesses where downtime, compliance gaps, or breach response would be expensive — regulated, logistics, healthcare, after-hours, cyber-insurance-heavy clients. Includes everything in Secure Growth plus Identity Threat Detection, Managed SIEM, compliance support, vCIO, QBRs, and priority 15-minute SLA.",
+                  "description": "Per user per month. For businesses where downtime, compliance gaps, or breach response would be expensive — regulated, logistics, healthcare, after-hours, cyber-insurance-heavy clients. Includes everything in Secure Growth plus Identity Threat Detection, Managed SIEM, compliance support, compliance-grade backup retention, vCIO, QBRs, and priority 15-minute SLA.",
                   "price": "250",
                   "priceCurrency": "USD",
                   "priceSpecification": {
@@ -203,6 +200,68 @@
                 }
               ]
             }
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://ghosxt.com/pricing.html#faq",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Is there a minimum number of users?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. The per-user tiers — Core Managed IT, Secure Growth, and Compliance & Continuity — start at 5 users on a 12-month agreement. If you have 1 to 4 users, the Tiny Team Managed Security plan covers you at a flat $600 per month, so you still get real managed IT and security without per-seat math."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Are backups included in the price?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, on Secure Growth and Compliance & Continuity. Both include cloud backup for your Microsoft 365 and OneDrive data — the email and files your business actually runs on — at no extra charge, and Compliance & Continuity adds extended, compliance-grade retention. The only backup billed separately is full server / image-based backup (BCDR), because its cost scales with your hardware and data volume."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do I have to sign a long contract, and can I cancel?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Our standard agreement is 12 months at the listed price, which locks your rate with no increases during the initial term. Early cancellation during the term costs 50% of the remaining months. After the first 12 months you can cancel anytime with 30 days written notice and no fee. If you want zero term commitment from day one, month-to-month is available at +15%. You own your data and we export it on request."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What does onboarding cost?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Onboarding is a one-time fee. It's $1,000 for the Tiny Team plan. For the per-user tiers it's based on size: $1,500 for 5–15 users, $2,500 for 15–30 users, $4,000 for 30–50 users, and a custom quote above 50. It covers environment audit, agent deployment, identity and MFA hardening, Microsoft 365 hardening, any needed migration, and team training."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What's the difference between the three tiers?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Core Managed IT ($125/user/mo) keeps devices patched, monitored, supported, and stable with MFA and security fundamentals built in. Secure Growth ($175/user/mo) is the recommended default and adds advanced email filtering, dark web and DNS filtering, password management, and Microsoft 365 & OneDrive cloud backup. Compliance & Continuity ($250/user/mo) adds Managed SIEM, identity threat detection, vCIO and QBRs, compliance support, compliance-grade backup retention, and a 15-minute priority SLA."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Are there any hidden fees?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. Your monthly cost is the per-user tier price plus any infrastructure add-ons you choose — servers, firewalls, switches, access points, NAS, and MDM are all listed with their prices — plus a one-time onboarding fee at the start. There are no surprise monthly charges and no price increases during your initial term."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How much can I save versus hiring IT in-house?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "For most small teams, Ghosxt runs roughly 73–79% less per month than building the equivalent in-house skillset (a helpdesk tech, a systems engineer, and a network engineer in California). Use the calculator on this page to see your exact monthly cost and side-by-side savings for your user count and tier."
+                }
+              }
+            ]
           }
         ]
       }
@@ -271,28 +330,13 @@
       </div>
     </div>
 
-    <div class="top-banner" id="topBanner">
-      <div class="banner-container">
-        <div class="banner-content">
-          <span class="banner-text">Need Remote Support? ►</span>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://ticket.ghosxt.com/"
-            class="banner-btn"
-            ><i class="fi fi-rs-ticket-alt"></i>
-            <span>Visit Client Portal</span></a
-          >
-        </div>
-      </div>
-    </div>
 
     <nav class="navbar" aria-label="Main navigation">
       <div class="navbar-container">
         <div class="navbar-left">
           <a href="index.html" class="navbar-logo">
             <img fetchpriority="high" loading="eager"
-              src="assets/img/ghosxt logo.webp"
+              src="assets/img/ghosxt-logo-160.webp"
               alt="Ghosxt logo"
               width="48"
               height="48"
@@ -342,7 +386,7 @@
           >
             <i class="fi fi-rs-burger-menu" aria-hidden="true"></i>
           </button>
-          <div class="navbar-buttons">
+          <div class="navbar-buttons"><a class="navbar-btn navbar-phone" href="tel:+18312040501" aria-label="Call Ghosxt at (831) 204-0501"><i class="fi fi-rs-phone-call" aria-hidden="true"></i><span>(831)&nbsp;204-0501</span></a>
             <a
               href="https://calendly.com/ulises-ghosxt"
               target="_blank" rel="noopener noreferrer"
@@ -516,7 +560,7 @@
               <div class="choose-card-badge">Recommended</div>
               <h3 class="choose-card-title">Choose <span>Secure Growth</span> if&hellip;</h3>
               <p class="choose-card-body">
-                You use Microsoft 365 heavily, have remote users, share passwords across the team, get phished, or face cyber-insurance requirements. The right default for most businesses.
+                You use Microsoft 365 heavily, have remote users, share passwords across the team, get phished, or face cyber-insurance requirements. The right default for most businesses — and your Microsoft 365 &amp; OneDrive data is backed up, included.
               </p>
               <p class="choose-card-meta">Best for 10&ndash;40 users &middot; $175/user/mo</p>
               <a href="#calculator" class="choose-card-link" data-tier="professional">
@@ -711,7 +755,7 @@
                         </div>
                       </div>
                       <div class="tier-option-desc">
-                        Best for 10–40 users. The right default for most businesses: identity, email, password, phishing, and endpoint protection together. Everything in Core + advanced email filtering, dark web monitoring, DNS filtering, and password management.
+                        Best for 10–40 users. The right default for most businesses: identity, email, password, phishing, and endpoint protection together. Everything in Core + advanced email filtering, dark web monitoring, DNS filtering, password management, and cloud backup for Microsoft 365 &amp; OneDrive.
                       </div>
                     </div>
                   </label>
@@ -736,7 +780,7 @@
                         </div>
                       </div>
                       <div class="tier-option-desc">
-                        For businesses where downtime, compliance gaps, or breach response would be expensive — regulated, logistics, healthcare, after-hours, cyber-insurance-heavy clients. Full coverage + SIEM, identity threat detection, vCIO, compliance support &amp; 15-min priority SLA.
+                        For businesses where downtime, compliance gaps, or breach response would be expensive — regulated, logistics, healthcare, after-hours, cyber-insurance-heavy clients. Full coverage + SIEM, identity threat detection, vCIO, compliance support, compliance-grade backup retention &amp; 15-min priority SLA.
                       </div>
                     </div>
                   </label>
@@ -1405,6 +1449,78 @@
                   </td>
                 </tr>
                 <tr>
+                  <td class="feature-name">
+                    Critical File Backup via OneDrive
+                    <span class="feature-subnote">Your most important files (Desktop &amp; Documents) auto-saved and protected in the cloud</span>
+                  </td>
+                  <td class="check-cell">
+                    <i
+                      class="fi fi-rs-minus-circle check-no"
+                      aria-label="Not included"
+                    ></i>
+                  </td>
+                  <td class="check-cell plan-col-featured">
+                    <i
+                      class="fi fi-rs-check-circle check-yes"
+                      aria-label="Included"
+                    ></i>
+                  </td>
+                  <td class="check-cell">
+                    <i
+                      class="fi fi-rs-check-circle check-yes"
+                      aria-label="Included"
+                    ></i>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="feature-name">
+                    Microsoft 365 Cloud Backup
+                    <span class="feature-subnote">Email, OneDrive, SharePoint &amp; Teams &mdash; protected against deletion, ransomware &amp; departing staff</span>
+                  </td>
+                  <td class="check-cell">
+                    <i
+                      class="fi fi-rs-minus-circle check-no"
+                      aria-label="Not included"
+                    ></i>
+                  </td>
+                  <td class="check-cell plan-col-featured">
+                    <i
+                      class="fi fi-rs-check-circle check-yes"
+                      aria-label="Included"
+                    ></i>
+                  </td>
+                  <td class="check-cell">
+                    <i
+                      class="fi fi-rs-check-circle check-yes"
+                      aria-label="Included"
+                    ></i>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="feature-name">
+                    Compliance-Grade Backup Retention
+                    <span class="feature-subnote">Extended retention for HIPAA, cyber-insurance &amp; audit requirements</span>
+                  </td>
+                  <td class="check-cell">
+                    <i
+                      class="fi fi-rs-minus-circle check-no"
+                      aria-label="Not included"
+                    ></i>
+                  </td>
+                  <td class="check-cell plan-col-featured">
+                    <i
+                      class="fi fi-rs-minus-circle check-no"
+                      aria-label="Not included"
+                    ></i>
+                  </td>
+                  <td class="check-cell">
+                    <i
+                      class="fi fi-rs-check-circle check-yes"
+                      aria-label="Included"
+                    ></i>
+                  </td>
+                </tr>
+                <tr>
                   <td class="feature-name">Basic Monthly Reporting</td>
                   <td class="check-cell">
                     <i
@@ -1866,6 +1982,11 @@
               </tbody>
             </table>
           </div>
+
+          <p class="plans-backup-note">
+            <i class="fi fi-rs-shield-check" aria-hidden="true"></i>
+            <span><strong>Your data is covered.</strong> Secure Growth and Compliance &amp; Continuity include cloud backup for your Microsoft 365 and OneDrive data at no extra charge &mdash; the files and email your business actually runs on. Only full <strong>server / image-based backup (BCDR)</strong> is quoted separately, since it scales with your hardware and data volume.</span>
+          </p>
         </div>
       </section>
 
@@ -1923,6 +2044,7 @@
                 <li><i class="fi fi-rs-check" aria-hidden="true"></i> Multi-factor authentication and identity management</li>
                 <li><i class="fi fi-rs-check" aria-hidden="true"></i> Microsoft 365 baseline security configuration</li>
                 <li><i class="fi fi-rs-check" aria-hidden="true"></i> Email security and anti-phishing</li>
+                <li><i class="fi fi-rs-check" aria-hidden="true"></i> Cloud backup for Microsoft 365 &amp; OneDrive &mdash; your most important files protected</li>
                 <li><i class="fi fi-rs-check" aria-hidden="true"></i> Vulnerability management</li>
                 <li><i class="fi fi-rs-check" aria-hidden="true"></i> Security awareness training</li>
                 <li><i class="fi fi-rs-check" aria-hidden="true"></i> 1-hour response SLA during business hours</li>
@@ -1930,7 +2052,7 @@
 
               <div class="foundation-excludes">
                 <strong>Sold separately as add-ons:</strong>
-                backups (per device), firewall management ($50/mo each), server management ($200/mo each), network switch ($25/mo each), wireless AP ($20/mo each), NAS ($100/mo each), MDM ($15/device/mo).
+                server / image-based backup (quoted per server), firewall management ($50/mo each), server management ($200/mo each), network switch ($25/mo each), wireless AP ($20/mo each), NAS ($100/mo each), MDM ($15/device/mo).
               </div>
 
               <div class="foundation-cta-row">
@@ -2064,6 +2186,89 @@
         </div>
       </section>
 
+      <!-- ═══════════════════════════════════════════ PRICING FAQ -->
+      <section class="faq-section" id="faq" aria-label="Pricing frequently asked questions">
+        <div class="faq-outer">
+          <div class="plans-header">
+            <div class="center-badge">
+              <div class="badge-lines" aria-hidden="true">
+                <div class="badge-line"></div>
+                <div class="badge-line"></div>
+                <div class="badge-line"></div>
+                <div class="badge-line"></div>
+                <div class="badge-line"></div>
+                <div class="badge-line"></div>
+                <div class="badge-line"></div>
+              </div>
+              <div class="badge-container">
+                <i class="fi fi-rs-interrogation" aria-hidden="true"></i>
+                <div class="solutions-badge-text">Pricing FAQ</div>
+              </div>
+              <div class="badge-lines" aria-hidden="true">
+                <div class="badge-line"></div>
+                <div class="badge-line"></div>
+                <div class="badge-line"></div>
+                <div class="badge-line"></div>
+                <div class="badge-line"></div>
+                <div class="badge-line"></div>
+                <div class="badge-line"></div>
+              </div>
+            </div>
+            <h2 class="plans-title">
+              Common <span class="title-span-text">questions</span>
+            </h2>
+            <p class="plans-subtitle">
+              The things prospects ask before booking a call. Still unsure? Book a free call and we'll build your exact proposal.
+            </p>
+          </div>
+
+          <div class="faq-list">
+            <details class="faq-item">
+              <summary>Is there a minimum number of users?</summary>
+              <div class="faq-answer">
+                Yes. The per-user tiers — Core Managed IT, Secure Growth, and Compliance &amp; Continuity — start at 5 users on a 12-month agreement. If you have 1 to 4 users, the <a href="#foundation">Tiny Team Managed Security</a> plan covers you at a flat $600/month, so you still get real managed IT and security without per-seat math.
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>Are backups included in the price?</summary>
+              <div class="faq-answer">
+                Yes, on Secure Growth and Compliance &amp; Continuity. Both include cloud backup for your Microsoft 365 and OneDrive data — the email and files your business actually runs on — at no extra charge, and Compliance &amp; Continuity adds extended, compliance-grade retention. The only backup billed separately is full <strong>server / image-based backup (BCDR)</strong>, because its cost scales with your hardware and data volume.
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>Do I have to sign a long contract, and can I cancel?</summary>
+              <div class="faq-answer">
+                Our standard agreement is 12 months at the listed price, which locks your rate with no increases during the initial term. Early cancellation during the term costs 50% of the remaining months. After the first 12 months you can cancel anytime with 30 days written notice and no fee. Want zero term commitment from day one? Month-to-month is available at +15%. You own your data and we export it on request.
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>What does onboarding cost?</summary>
+              <div class="faq-answer">
+                Onboarding is a one-time fee. It's $1,000 for the Tiny Team plan. For the per-user tiers it's based on size: $1,500 for 5–15 users, $2,500 for 15–30 users, $4,000 for 30–50 users, and a custom quote above 50. It covers environment audit, agent deployment, identity and MFA hardening, Microsoft 365 hardening, any needed migration, and team training.
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>What's the difference between the three tiers?</summary>
+              <div class="faq-answer">
+                <strong>Core Managed IT</strong> ($125/user/mo) keeps devices patched, monitored, supported, and stable with MFA and security fundamentals built in. <strong>Secure Growth</strong> ($175/user/mo) is the recommended default and adds advanced email filtering, dark web and DNS filtering, password management, and Microsoft 365 &amp; OneDrive cloud backup. <strong>Compliance &amp; Continuity</strong> ($250/user/mo) adds Managed SIEM, identity threat detection, vCIO and QBRs, compliance support, compliance-grade backup retention, and a 15-minute priority SLA.
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>Are there any hidden fees?</summary>
+              <div class="faq-answer">
+                No. Your monthly cost is the per-user tier price plus any infrastructure add-ons you choose — servers, firewalls, switches, access points, NAS, and MDM are all listed with their prices — plus a one-time onboarding fee at the start. There are no surprise monthly charges and no price increases during your initial term.
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>How much can I save versus hiring IT in-house?</summary>
+              <div class="faq-answer">
+                For most small teams, Ghosxt runs roughly 73–79% less per month than building the equivalent in-house skillset (a helpdesk tech, a systems engineer, and a network engineer in California). Use the <a href="#calculator">calculator</a> above to see your exact monthly cost and side-by-side savings for your user count and tier.
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
       <!-- ═══════════════════════════════════════════ BOTTOM CTA -->
       <div class="cta-section" id="ctaSection">
         <div class="cta-container">
@@ -2107,7 +2312,7 @@
         <div class="footer-brand-row">
           <div class="footer-brand">
             <img
-              src="assets/img/ghosxt logo.webp"
+              src="assets/img/ghosxt-logo-160.webp"
               alt="Ghosxt logo"
               width="80"
               height="80"
@@ -2273,12 +2478,12 @@
       </div>
     </footer>
 
-    <script src="assets/js/main.js?v=2026-05-15a" defer></script>
+    <script src="assets/js/main.js?v=2026-05-31b" defer></script>
     <script src="assets/js/pricing.js?v=2026-05-15a" defer></script>
     <!-- ghosxt:mobile-cta-bar -->
     <div class="mobile-cta-bar" aria-label="Quick contact">
-      <a class="mcta-primary" href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer">Book free assessment</a>
-      <a class="mcta-secondary" href="tel:+18312040501">Call (831) 204-0501</a>
+      <a class="mcta-primary" href="tel:+18312040501">Call (831) 204-0501</a>
+      <a class="mcta-secondary" href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer">Book free assessment</a>
     </div>
   </body>
 </html>

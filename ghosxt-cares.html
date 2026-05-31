@@ -24,7 +24,16 @@
     <meta property="og:title" content="Ghosxt Cares – Free IT Foundations for Monterey County Nonprofits" />
     <meta property="og:description" content="Free IT setup for Monterey County 501(c)(3) nonprofits. Microsoft 365, custom domain and email, basic website, DNS, and onboarding. Zero labor cost." />
     <meta property="og:image" content="https://ghosxt.com/assets/img/og/ghosxt-cares.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Ghosxt Cares – free IT foundations for Monterey County nonprofits" />
     <meta property="og:site_name" content="Ghosxt" />
+
+    <!-- TWITTER CARD -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Ghosxt Cares – Free IT for Monterey County Nonprofits" />
+    <meta name="twitter:description" content="We donate our time to set Monterey County 501(c)(3) nonprofits up with Microsoft 365, email, a website, and DNS — zero labor cost." />
+    <meta name="twitter:image" content="https://ghosxt.com/assets/img/og/ghosxt-cares.png" />
 
     <!-- FAVICON -->
     <link rel="icon" href="assets/img/favicon.ico" sizes="any" />
@@ -39,14 +48,12 @@
     <link rel="preconnect" href="https://cdn-uicons.flaticon.com" />
 
     <!-- FONTS -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" /></noscript>
 
     <!-- STYLESHEETS -->
-    <link rel="stylesheet" href="assets/css/main.css?v=2026-05-28b" />
-    <link rel="stylesheet" href="assets/css/ghosxt-cares.css?v=2026-05-15a" />
+    <link rel="stylesheet" href="assets/css/main.css?v=2026-05-31d" />
+    <link rel="stylesheet" href="assets/css/ghosxt-cares.css?v=2026-05-31b" />
     <link rel="stylesheet" media="print" onload="this.media='all'" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" />
     <noscript><link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" /></noscript>
     <!-- ghosxt:cf-web-analytics -->
@@ -70,6 +77,83 @@
               "position": 2,
               "name": "Ghosxt Cares",
               "item": "https://ghosxt.com/ghosxt-cares.html"
+            }
+          ]
+        },
+        {
+          "@type": "Service",
+          "name": "Ghosxt Cares — Free IT Foundations for Nonprofits",
+          "serviceType": "Nonprofit IT setup",
+          "provider": {
+            "@type": "Organization",
+            "name": "Ghosxt",
+            "url": "https://ghosxt.com/"
+          },
+          "areaServed": {
+            "@type": "AdministrativeArea",
+            "name": "Monterey County, California"
+          },
+          "audience": {
+            "@type": "Audience",
+            "audienceType": "501(c)(3) nonprofit organizations"
+          },
+          "description": "Donated IT setup for Monterey County 501(c)(3) nonprofits: Microsoft 365 tenant, custom domain and email, a basic website, DNS configuration, an onboarding session, and handover documentation. Zero labor cost.",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Is it really free?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Our labor is 100% donated — you pay nothing for the setup work. The only costs are third-party fees we can't waive, like domain registration (about $12/year) and any hosting. Microsoft 365 is free or deeply discounted for eligible nonprofits."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What's the catch?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "There's no catch. We're a local managed IT provider giving back to the community that supports us, and there's no obligation to ever become a paying client."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Who qualifies?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Active 501(c)(3) organizations based in Monterey County. We take one organization per quarter so each one gets our full attention."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How long does setup take?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Most setups are completed within a couple of weeks of our kickoff call, depending on domain registration and Microsoft's nonprofit approval timelines."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do you support us after setup?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Setup includes a one-hour onboarding session and handover documentation so your team is self-sufficient. If you ever want ongoing managed support, it's available separately — but it's never required."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "We're a nonprofit outside Monterey County — can you help?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ghosxt Cares is focused on Monterey County for now, but reach out anyway — depending on your needs we may be able to help remotely or point you to the right resource."
+              }
             }
           ]
         }
@@ -115,22 +199,6 @@
     </div>
 
     <!-- TOP BANNER -->
-    <div class="top-banner" id="topBanner">
-      <div class="banner-container">
-        <div class="banner-content">
-          <span class="banner-text">Need Remote Support? ►</span>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://ticket.ghosxt.com/"
-            class="banner-btn"
-          >
-            <i class="fi fi-rs-ticket-alt"></i>
-            <span>Visit Client Portal</span>
-          </a>
-        </div>
-      </div>
-    </div>
 
     <!-- NAVBAR -->
     <nav class="navbar" aria-label="Main navigation">
@@ -138,7 +206,7 @@
         <div class="navbar-left">
           <a href="index.html" class="navbar-logo">
             <img fetchpriority="high" loading="eager"
-              src="assets/img/ghosxt logo.webp"
+              src="assets/img/ghosxt-logo-160.webp"
               alt="Ghosxt logo"
               width="48"
               height="48"
@@ -188,7 +256,7 @@
           >
             <i class="fi fi-rs-burger-menu" aria-hidden="true"></i>
           </button>
-          <div class="navbar-buttons">
+          <div class="navbar-buttons"><a class="navbar-btn navbar-phone" href="tel:+18312040501" aria-label="Call Ghosxt at (831) 204-0501"><i class="fi fi-rs-phone-call" aria-hidden="true"></i><span>(831)&nbsp;204-0501</span></a>
             <a
               href="https://calendly.com/ulises-ghosxt"
               target="_blank" rel="noopener noreferrer"
@@ -285,10 +353,70 @@
             modern IT foundation — at no cost for our labor.
           </p>
 
-          <a href="mailto:cares@ghosxt.com" class="cares-hero-cta">
-            <i class="fi fi-rs-envelope" aria-hidden="true"></i>
-            Apply at cares@ghosxt.com
-          </a>
+          <div class="cares-hero-actions">
+            <a href="mailto:cares@ghosxt.com?subject=Ghosxt%20Cares%20application%20%E2%80%94%20%5BYour%20organization%20name%5D&body=Hi%20Ghosxt%20Cares%20team%2C%0A%0AWe%27d%20like%20to%20apply%20for%20free%20IT%20setup.%20Here%20are%20our%20details%3A%0A%0A-%20Organization%20name%3A%0A-%20501(c)(3)%20status%20%2F%20EIN%3A%0A-%20City%20(Monterey%20County)%3A%0A-%20What%20we%20need%20help%20with%3A%0A-%20Ideal%20timeline%3A%0A%0AThank%20you%21" class="cares-hero-cta">
+              <i class="fi fi-rs-envelope" aria-hidden="true"></i>
+              Apply by email
+            </a>
+            <a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer" class="cares-hero-cta-secondary">
+              <i class="fi fi-rs-calendar-day" aria-hidden="true"></i>
+              Book a 15-min call
+            </a>
+          </div>
+
+          <p class="cares-hero-note">
+            100% free labor &middot; For Monterey County 501(c)(3) nonprofits
+          </p>
+        </div>
+      </section>
+
+      <!-- ── WHY WE DO THIS ───────────────────────────────────── -->
+      <section class="cares-mission-section" aria-label="Why we do this">
+        <div class="cares-mission-container">
+          <div class="cares-mission-badge">
+            <div class="badge-lines">
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+            </div>
+            <div class="badge-container">
+              <i class="fi fi-rs-heart" aria-hidden="true"></i>
+              <div class="badge-text">Why we do this</div>
+            </div>
+            <div class="badge-lines">
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+            </div>
+          </div>
+
+          <h2 class="cares-mission-title">
+            Good IT shouldn't be a<br /><span>luxury for nonprofits.</span>
+          </h2>
+          <div class="cares-mission-body">
+            <p>
+              Ghosxt was built by an engineer who spent years securing systems
+              where the stakes were high and the standards were higher. The same
+              care that protects a business shouldn't be out of reach for the
+              organizations doing the hard work in our community.
+            </p>
+            <p>
+              Too many Monterey County nonprofits run on a personal Gmail, a
+              forgotten domain, and a website nobody can update — not because
+              they don't care, but because real IT help has always cost money
+              they'd rather spend on their mission. Ghosxt Cares is our way of
+              closing that gap: we donate the setup so the technology fades into
+              the background and the work can come first.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -381,6 +509,80 @@
               <p class="provides-card-desc">
                 A 1-hour walkthrough so your team knows how to use what we
                 built.
+              </p>
+            </div>
+
+            <div class="provides-card">
+              <div class="provides-card-icon">
+                <i class="fi fi-rs-document" aria-hidden="true"></i>
+              </div>
+              <div class="provides-card-title">Handover Documentation</div>
+              <p class="provides-card-desc">
+                A plain-language record of your accounts, domains, and settings —
+                so you own your setup and are never locked in.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── HOW TO APPLY (3 STEPS) ───────────────────────────── -->
+      <section class="cares-steps-section" aria-label="How to apply">
+        <div class="cares-steps-container">
+          <div class="cares-steps-badge">
+            <div class="badge-lines">
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+            </div>
+            <div class="badge-container">
+              <i class="fi fi-rs-route" aria-hidden="true"></i>
+              <div class="badge-text">How to apply</div>
+            </div>
+            <div class="badge-lines">
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+            </div>
+          </div>
+
+          <h2 class="cares-steps-title">Three simple steps.</h2>
+          <p class="cares-steps-subtitle">
+            No long forms. No commitment. Just a short conversation to see if
+            we're a fit.
+          </p>
+
+          <div class="cares-steps-grid">
+            <div class="cares-step-card">
+              <div class="cares-step-num">1</div>
+              <h3 class="cares-step-title">Reach out</h3>
+              <p class="cares-step-desc">
+                Email us or book a quick call and tell us a little about your
+                organization.
+              </p>
+            </div>
+            <div class="cares-step-card">
+              <div class="cares-step-num">2</div>
+              <h3 class="cares-step-title">We confirm eligibility</h3>
+              <p class="cares-step-desc">
+                We verify your 501(c)(3) status and Monterey County base, then
+                map out what you need.
+              </p>
+            </div>
+            <div class="cares-step-card">
+              <div class="cares-step-num">3</div>
+              <h3 class="cares-step-title">We schedule &amp; build</h3>
+              <p class="cares-step-desc">
+                We set everything up, walk your team through it, and hand over
+                the documentation.
               </p>
             </div>
           </div>
@@ -509,10 +711,140 @@
             schedule your setup. Spots are limited to one organization per
             quarter.
           </p>
-          <a href="mailto:cares@ghosxt.com" class="apply-cta">
-            <i class="fi fi-rs-envelope" aria-hidden="true"></i>
-            Apply at cares@ghosxt.com
-          </a>
+          <div class="apply-actions">
+            <a href="mailto:cares@ghosxt.com?subject=Ghosxt%20Cares%20application%20%E2%80%94%20%5BYour%20organization%20name%5D&body=Hi%20Ghosxt%20Cares%20team%2C%0A%0AWe%27d%20like%20to%20apply%20for%20free%20IT%20setup.%20Here%20are%20our%20details%3A%0A%0A-%20Organization%20name%3A%0A-%20501(c)(3)%20status%20%2F%20EIN%3A%0A-%20City%20(Monterey%20County)%3A%0A-%20What%20we%20need%20help%20with%3A%0A-%20Ideal%20timeline%3A%0A%0AThank%20you%21" class="apply-cta">
+              <i class="fi fi-rs-envelope" aria-hidden="true"></i>
+              Apply by email
+            </a>
+            <a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer" class="apply-cta-secondary">
+              <i class="fi fi-rs-calendar-day" aria-hidden="true"></i>
+              Book a 15-min call
+            </a>
+          </div>
+          <p class="apply-note">
+            Questions first? Email
+            <a href="mailto:cares@ghosxt.com">cares@ghosxt.com</a>.
+          </p>
+        </div>
+      </section>
+
+      <!-- ── FAQ ──────────────────────────────────────────────── -->
+      <section class="cares-faq-section" aria-label="Frequently asked questions">
+        <div class="cares-faq-container">
+          <div class="cares-faq-badge">
+            <div class="badge-lines">
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+            </div>
+            <div class="badge-container">
+              <i class="fi fi-rs-interrogation" aria-hidden="true"></i>
+              <div class="badge-text">FAQ</div>
+            </div>
+            <div class="badge-lines">
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+              <div class="badge-line"></div>
+            </div>
+          </div>
+
+          <h2 class="cares-faq-title">Questions, answered.</h2>
+
+          <div class="cares-faq-items">
+            <div class="cares-faq-item">
+              <button class="cares-faq-question" aria-expanded="false">
+                <span>Is it really free?</span>
+                <i class="fi fi-rs-angle-small-down cares-faq-icon" aria-hidden="true"></i>
+              </button>
+              <div class="cares-faq-answer">
+                <p>
+                  Our labor is 100% donated — you pay nothing for the setup work.
+                  The only costs are third-party fees we can't waive, like domain
+                  registration (about $12/year) and any hosting. Microsoft 365 is
+                  free or deeply discounted for eligible nonprofits.
+                </p>
+              </div>
+            </div>
+
+            <div class="cares-faq-item">
+              <button class="cares-faq-question" aria-expanded="false">
+                <span>What's the catch?</span>
+                <i class="fi fi-rs-angle-small-down cares-faq-icon" aria-hidden="true"></i>
+              </button>
+              <div class="cares-faq-answer">
+                <p>
+                  There's no catch. We're a local managed IT provider giving back
+                  to the community that supports us, and there's no obligation to
+                  ever become a paying client.
+                </p>
+              </div>
+            </div>
+
+            <div class="cares-faq-item">
+              <button class="cares-faq-question" aria-expanded="false">
+                <span>Who qualifies?</span>
+                <i class="fi fi-rs-angle-small-down cares-faq-icon" aria-hidden="true"></i>
+              </button>
+              <div class="cares-faq-answer">
+                <p>
+                  Active 501(c)(3) organizations based in Monterey County. We take
+                  one organization per quarter so each one gets our full
+                  attention.
+                </p>
+              </div>
+            </div>
+
+            <div class="cares-faq-item">
+              <button class="cares-faq-question" aria-expanded="false">
+                <span>How long does setup take?</span>
+                <i class="fi fi-rs-angle-small-down cares-faq-icon" aria-hidden="true"></i>
+              </button>
+              <div class="cares-faq-answer">
+                <p>
+                  Most setups are completed within a couple of weeks of our
+                  kickoff call, depending on domain registration and Microsoft's
+                  nonprofit approval timelines.
+                </p>
+              </div>
+            </div>
+
+            <div class="cares-faq-item">
+              <button class="cares-faq-question" aria-expanded="false">
+                <span>Do you support us after setup?</span>
+                <i class="fi fi-rs-angle-small-down cares-faq-icon" aria-hidden="true"></i>
+              </button>
+              <div class="cares-faq-answer">
+                <p>
+                  Setup includes a one-hour onboarding session and handover
+                  documentation so your team is self-sufficient. If you ever want
+                  ongoing managed support, it's available separately — but it's
+                  never required.
+                </p>
+              </div>
+            </div>
+
+            <div class="cares-faq-item">
+              <button class="cares-faq-question" aria-expanded="false">
+                <span>We're a nonprofit outside Monterey County — can you help?</span>
+                <i class="fi fi-rs-angle-small-down cares-faq-icon" aria-hidden="true"></i>
+              </button>
+              <div class="cares-faq-answer">
+                <p>
+                  Ghosxt Cares is focused on Monterey County for now, but reach
+                  out anyway — depending on your needs we may be able to help
+                  remotely or point you to the right resource.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
@@ -523,7 +855,7 @@
         <div class="footer-brand-row">
           <div class="footer-brand">
             <img
-              src="assets/img/ghosxt logo.webp"
+              src="assets/img/ghosxt-logo-160.webp"
               alt="Ghosxt logo"
               width="80"
               height="80"
@@ -693,7 +1025,7 @@
     </footer>
 
     <!-- SCRIPTS -->
-    <script src="assets/js/main.js?v=2026-05-15a" defer></script>
+    <script src="assets/js/main.js?v=2026-05-31b" defer></script>
 
     <script>
       document.addEventListener("DOMContentLoaded", function () {
@@ -712,12 +1044,20 @@
           });
         }
 
+        // FAQ accordion
+        document.querySelectorAll(".cares-faq-item").forEach(function (item) {
+          const question = item.querySelector(".cares-faq-question");
+          question.addEventListener("click", function () {
+            const isOpen = item.classList.toggle("active");
+            question.setAttribute("aria-expanded", String(isOpen));
+          });
+        });
       });
     </script>
     <!-- ghosxt:mobile-cta-bar -->
     <div class="mobile-cta-bar" aria-label="Quick contact">
-      <a class="mcta-primary" href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer">Book free assessment</a>
-      <a class="mcta-secondary" href="tel:+18312040501">Call (831) 204-0501</a>
+      <a class="mcta-primary" href="tel:+18312040501">Call (831) 204-0501</a>
+      <a class="mcta-secondary" href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer">Book free assessment</a>
     </div>
   </body>
 </html>

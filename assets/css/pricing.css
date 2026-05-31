@@ -1424,6 +1424,38 @@
     border-right: 1px dashed rgba(0, 0, 0, 0.12);;
 }
 
+.feature-subnote {
+    display: block;
+    margin-top: 0.25rem;
+    font-size: 0.72rem;
+    font-weight: 400;
+    line-height: 1.35;
+    color: rgba(0, 0, 0, 0.55);
+}
+
+.plans-backup-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.625rem;
+    max-width: 880px;
+    margin: 1.5rem auto 0;
+    padding: 1rem 1.25rem;
+    background: var(--ghosxt-white);
+    border: 1px dashed rgba(0, 0, 0, 0.18);
+    border-radius: 12px;
+    font-family: var(--font-family-2);
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: var(--ghosxt-black);
+}
+
+.plans-backup-note i {
+    flex-shrink: 0;
+    margin-top: 0.15rem;
+    color: #22c55e;
+    font-size: 1rem;
+}
+
 .check-cell {
     text-align: center;
     padding: 0.875rem 0.5rem;
@@ -1689,7 +1721,17 @@
     .savings-numbers { grid-template-columns: 1fr; gap: 0.75rem; }
     .savings-divider { display: none; }
 
-    .calc-cta-card { flex-direction: column; align-items: flex-start; }
+    .calc-cta-card { flex-direction: column; align-items: stretch; }
+
+    /* The button label is dynamic (e.g. "Book a call about this $1,750/mo
+       Secure Growth estimate") — let it wrap and fill the column instead of
+       running off-screen. */
+    .calc-cta-btn {
+        width: 100%;
+        white-space: normal;
+        justify-content: center;
+        text-align: center;
+    }
 
     .result-amount { font-size: 2.5rem; }
     .savings-stat-val { font-size: 1.1rem; }
@@ -1716,6 +1758,61 @@
 .result-amount.updating,
 .savings-stat-val.updating {
     animation: numFlash 0.25s ease forwards;
+}
+
+/* ── CALCULATOR OVERFLOW SAFETY ───────────────────────────────
+   Keep the "Build Your Custom Quote" calculator inside the viewport on
+   mobile. Flex/grid text children default to min-width:auto and won't
+   shrink below their content, which can push the calculator wider than the
+   screen and cause sideways scrolling. Let labels wrap; keep dollar values
+   on one line; allow the grid columns to shrink. */
+.calc-left,
+.calc-right {
+    min-width: 0;
+}
+
+.breakdown-row,
+.compare-row {
+    gap: 0.75rem;
+}
+
+.breakdown-label,
+.compare-label {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.breakdown-value,
+.compare-value {
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+/* Make the calculator more compact on small phones so nothing is cut off. */
+@media (max-width: 560px) {
+    .calc-card-header,
+    .user-stepper,
+    .user-slider-track,
+    .tier-option-inner,
+    .addon-item,
+    .result-card-header,
+    .result-main-number,
+    .result-breakdown,
+    .savings-card-header,
+    .savings-compare,
+    .savings-highlight,
+    .savings-note,
+    .calc-cta-card {
+        padding-left: 0.875rem;
+        padding-right: 0.875rem;
+    }
+
+    .result-amount { font-size: 2.1rem; }
+    .result-currency { font-size: 1.4rem; }
+    .tier-option-desc { font-size: 0.8rem; }
+    .compare-row,
+    .breakdown-row { font-size: 0.78rem; }
+    .compare-value { font-size: 0.82rem; }
 }
 
 .footer-visible { display: flex !important; }
@@ -2395,4 +2492,86 @@
   max-width: 100%;
   margin: 0 0 1.5rem;
   align-self: center;
+}
+
+/* ============================================================
+   PRICING FAQ
+   ============================================================ */
+.faq-section {
+    padding: 0 24px;
+    display: flex;
+    justify-content: center;
+}
+.faq-outer {
+    padding: 5rem 0;
+    max-width: 820px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.faq-item {
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 12px;
+    background: var(--ghosxt-white);
+    overflow: hidden;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.faq-item[open] {
+    border-color: var(--ghosxt-red-0);
+    box-shadow: 4px 4px 0 0 var(--ghosxt-red-0);
+}
+.faq-item summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.125rem 1.375rem;
+    font-family: var(--font-family-2);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--ghosxt-black);
+    cursor: pointer;
+    list-style: none;
+    line-height: 1.4;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+    content: "\002B";
+    flex-shrink: 0;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1;
+    color: var(--ghosxt-red-0);
+    transition: transform 0.2s ease;
+}
+.faq-item[open] summary::after {
+    transform: rotate(45deg);
+}
+.faq-item summary:hover { color: var(--ghosxt-red-0); }
+.faq-item summary:focus-visible {
+    outline: 2px solid var(--ghosxt-red-0);
+    outline-offset: -2px;
+}
+.faq-answer {
+    padding: 0 1.375rem 1.25rem;
+    font-family: var(--font-family-2);
+    font-size: 0.95rem;
+    line-height: 1.65;
+    color: var(--ghosxt-black);
+    opacity: 0.82;
+}
+.faq-answer a {
+    color: var(--ghosxt-red-0);
+    text-decoration: underline;
+}
+@media (max-width: 768px) {
+    .faq-outer { padding: 3rem 0; gap: 2rem; }
+    .faq-item summary { font-size: 0.95rem; padding: 1rem 1.125rem; }
+    .faq-answer { padding: 0 1.125rem 1.125rem; font-size: 0.9rem; }
 }
