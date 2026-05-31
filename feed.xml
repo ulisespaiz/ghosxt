@@ -7,7 +7,7 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from a DoD-cleared IT engineer.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Sat, 30 May 2026 15:35:48 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 31 May 2026 19:26:32 +0000</lastBuildDate>
     <pubDate>Sat, 30 May 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
     <item>
@@ -27,6 +27,15 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>Windows 10 support ended October 14, 2025, and the consumer ESU lifeline expires in October 2026. A plain-language guide for small businesses: who can upgrade to Windows 11 free, who needs new PCs, what ESU really costs, and how to plan it without panic, from a DoD-cleared engineer.</description>
+    </item>
+    <item>
+      <title>How to Protect Your Small Business From a Cyberattack: 10 Essentials</title>
+      <link>https://ghosxt.com/blog/protect-small-business-cyberattack-10-essentials-2026.html</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/protect-small-business-cyberattack-10-essentials-2026.html</guid>
+      <pubDate>Sat, 30 May 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>A no-jargon checklist for owners: the 10 things that actually protect a small business from a cyberattack in 2026, in priority order, what each one stops, and how to tell if yours is really in place, from a DoD-cleared engineer on California's Central Coast.</description>
     </item>
     <item>
       <title>Nightmare-Eclipse: The 6 Windows Zero-Days From the Banned Researcher</title>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>Anthropic's Claude Mythos found 271 Firefox 150 vulnerabilities in one eval and built working exploits for 181. What the patch-cadence shift means for SMBs.</description>
-    </item>
-    <item>
-      <title>QuickBooks Email Error on Windows 11: The Real Fix</title>
-      <link>https://ghosxt.com/blog/quickbooks-cant-complete-current-action-email-fix.html</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/quickbooks-cant-complete-current-action-email-fix.html</guid>
-      <pubDate>Sat, 09 May 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Troubleshooting</category>
-      <description>The XPS Document Writer fix for QuickBooks Desktop's email error on Windows 11, including the trick most guides miss for finding the feature.</description>
     </item>
   </channel>
 </rss>
