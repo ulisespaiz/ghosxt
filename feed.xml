@@ -7,7 +7,7 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from a DoD-cleared IT engineer.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Sun, 31 May 2026 19:59:25 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 02 Jun 2026 03:17:45 +0000</lastBuildDate>
     <pubDate>Sat, 30 May 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
     <item>
@@ -27,6 +27,15 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>Windows 10 support ended October 14, 2025, and the consumer ESU lifeline expires in October 2026. A plain-language guide for small businesses: who can upgrade to Windows 11 free, who needs new PCs, what ESU really costs, and how to plan it without panic, from a DoD-cleared engineer.</description>
+    </item>
+    <item>
+      <title>Microsoft 365 for Small Business: 9 Settings to Turn On First</title>
+      <link>https://ghosxt.com/blog/microsoft-365-small-business-settings-to-turn-on-2026.html</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/microsoft-365-small-business-settings-to-turn-on-2026.html</guid>
+      <pubDate>Sat, 30 May 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Microsoft 365</category>
+      <description>Microsoft 365 ships powerful security and productivity features turned off by default. The nine settings a small business should enable first, what each one does, and how to tell if yours are on, from a DoD-cleared engineer on California's Central Coast.</description>
     </item>
     <item>
       <title>How to Protect Your Small Business From a Cyberattack: 10 Essentials</title>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>A plain-talk defender's read on YellowKey (BitLocker bypass via WinRE on Windows 11 and Server 2022/2025) and GreenPlasma (CTFMON privilege escalation). How they work, what's at risk, and what small businesses should actually do this week.</description>
-    </item>
-    <item>
-      <title>Claude Mythos: 271 Firefox Bugs in One Run</title>
-      <link>https://ghosxt.com/blog/claude-mythos-firefox-271-vulnerabilities-patch-cadence-smb.html</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/claude-mythos-firefox-271-vulnerabilities-patch-cadence-smb.html</guid>
-      <pubDate>Sun, 10 May 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>Anthropic's Claude Mythos found 271 Firefox 150 vulnerabilities in one eval and built working exploits for 181. What the patch-cadence shift means for SMBs.</description>
     </item>
   </channel>
 </rss>
