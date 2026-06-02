@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from a DoD-cleared IT engineer.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Tue, 02 Jun 2026 03:17:45 +0000</lastBuildDate>
-    <pubDate>Sat, 30 May 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Tue, 02 Jun 2026 21:23:11 +0000</lastBuildDate>
+    <pubDate>Tue, 02 Jun 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>Property Management IT in Monterey and Santa Cruz Counties: A 2026 Owner's Guide</title>
+      <link>https://ghosxt.com/blog/property-management-it-monterey-santa-cruz.html</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/property-management-it-monterey-santa-cruz.html</guid>
+      <pubDate>Tue, 02 Jun 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Industry IT</category>
+      <description>A plain-talk IT and cybersecurity guide for property management companies and HOAs in Monterey and Santa Cruz Counties. Tenant-data protection, Yardi and AppFolio uptime, wire-fraud defense, multi-site networks, and compliance. From a DoD-cleared engineer.</description>
+    </item>
     <item>
       <title>The Microsoft Teams "IT Help Desk" That Isn't: A Ransomware Playbook</title>
       <link>https://ghosxt.com/blog/microsoft-teams-help-desk-impersonation-ransomware-smb-2026.html</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>The minimum identity controls that actually move the needle for a 5-employee business in 2026: phishing-resistant MFA, Conditional Access, no persistent local admins, separated admin accounts, and legacy auth turned off. From a DoD-cleared engineer.</description>
-    </item>
-    <item>
-      <title>YellowKey &amp;amp; GreenPlasma: Two Windows Bypasses Explained</title>
-      <link>https://ghosxt.com/blog/yellowkey-greenplasma-windows-bitlocker-bypass-privesc.html</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/yellowkey-greenplasma-windows-bitlocker-bypass-privesc.html</guid>
-      <pubDate>Tue, 12 May 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>A plain-talk defender's read on YellowKey (BitLocker bypass via WinRE on Windows 11 and Server 2022/2025) and GreenPlasma (CTFMON privilege escalation). How they work, what's at risk, and what small businesses should actually do this week.</description>
     </item>
   </channel>
 </rss>
