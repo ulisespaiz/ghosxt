@@ -646,7 +646,7 @@ def build_page(chrome, service, slug, city):
             "name": "{schema_name}",
             "url": "{url}",
             "description": {jstr(schema_desc)},
-            "provider": {{ "@type": "Organization", "name": "Ghosxt", "url": "https://ghosxt.com/" }},
+            "provider": {{ "@id": "https://ghosxt.com/#business" }},
             "areaServed": {{ "@type": "City", "name": "{name}", "containedInPlace": {{ "@type": "AdministrativeArea", "name": "{admin}" }} }}
           }},
           {{
@@ -690,7 +690,6 @@ def build_page(chrome, service, slug, city):
 {jsonld}
 {chrome['cf_analytics']}
   </head>
-  <body>
 {chrome['body_top']}
 {chrome['nav']}
 
