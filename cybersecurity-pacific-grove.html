@@ -229,39 +229,40 @@
       <section class="location-section">
         <div class="container">
           <h2>The Pacific Grove threat picture</h2>
-          <p>Hospitality is a frequent target because it combines payment-card data with seasonal, high-turnover staff — a mix that invites point-of-sale compromise and social engineering. Inns and B&amp;Bs run booking and guest systems that hold personal and card data. Small offices and retreats often have one person handling email, billing, and bookings, so a single compromised inbox can do real damage.</p>
-          <p>The controls that stop this are the same proven set used on government endpoints — PCI-aware point-of-sale security, segmented guest Wi-Fi, phishing-resistant MFA, EDR, and immutable backup. In a town this small, the other requirement is discretion, and that is built into how we work.</p>
+          <p>Hospitality is a frequent target because it combines payment-card data with seasonal, high-turnover staff — a mix that invites point-of-sale compromise and social engineering. Inns and B&amp;Bs run booking and guest systems that hold personal and card data year-round, with exposure that spikes during summer season and event weekends when seasonal staff are onboarded quickly and access is granted without time for proper vetting. A single credential in the wrong hands can expose an entire season's worth of guest records.</p>
+          <p>Small professional offices along Lighthouse Avenue face a different version of the same problem. One person often handles email, billing, scheduling, and bookkeeping. A business email compromise attack does not need to defeat a complex network — it needs one inbox, one wire transfer, one invoice changed. That is a realistic attack against a very small PG practice, and it is entirely preventable.</p>
+          <p>The controls that stop both scenarios are a proven set — PCI-aware point-of-sale security, segmented guest Wi-Fi, phishing-resistant MFA, EDR, and immutable backup. In a town this small, the other requirement is discretion. On-site visits are scheduled around your hours, and we do not discuss client details. That standard came from operating inside DoD networks; it travels with us.</p>
         </div>
       </section>
 
       <section class="location-section">
         <div class="container">
-          <h2>What we secure</h2>
-          <p>The same class of controls used to protect government endpoints, sized down for a Pacific Grove small business without being dumbed down.</p>
+          <h2>What we secure in Pacific Grove</h2>
+          <p>Pacific Grove businesses are small — often one-person offices, two-person front desks, or inns where the same staff member handles reservations, email, and card payments. That profile does not need a dumbed-down security stack; it needs the same proven controls applied precisely, without the enterprise overhead that exists only to justify enterprise billing.</p>
           <div class="services-grid">
             <article class="service-card">
               <h3>Endpoint Detection &amp; Response</h3>
-              <p>Huntress EDR with a 24/7 SOC on every endpoint, layered with Microsoft Defender. Ransomware behavior is detected and isolated before it spreads.</p>
+              <p>Huntress EDR with a 24/7 SOC on every device — the front-desk PC, the back-office laptop, the owner's home workstation. Ransomware behavior is isolated before it reaches reservation data or guest records.</p>
             </article>
             <article class="service-card">
               <h3>Identity &amp; MFA</h3>
-              <p>Phishing-resistant MFA, Conditional Access, and the death of legacy auth — the single highest-leverage control on a small business network. See <a href="blog/identity-hardening-small-business-5-employees-microsoft-365.html">identity hardening</a>.</p>
+              <p>Phishing-resistant MFA and Conditional Access enforced on every account. In a one-person office on Lighthouse Avenue, a single compromised inbox can empty the business — this is the control that stops it. See <a href="blog/identity-hardening-small-business-5-employees-microsoft-365.html">identity hardening</a>.</p>
             </article>
             <article class="service-card">
               <h3>Hospitality &amp; PCI</h3>
-              <p>PCI-aware point-of-sale security and guest Wi-Fi segmented from the back office, sized for an inn, cafe, or retreat — protection that holds through the summer and festival surge.</p>
+              <p>PCI-aware point-of-sale security and guest Wi-Fi segmented hard from the back office — built for inns, cafes, and retreats. The configuration holds through the summer surge and Butterfly Parade weekend when staff turns over fast.</p>
             </article>
             <article class="service-card">
               <h3>Booking &amp; Guest-Data Defense</h3>
-              <p>Email hardening and immutable backup around the booking and reservation systems that hold guest and card data, so a compromise does not become a guest-trust problem.</p>
+              <p>Hardened email and application-layer controls around the booking and reservation systems that hold guest names, addresses, and card data. A breach here becomes a guest-trust problem almost instantly in a small town; we close that exposure before it opens.</p>
             </article>
             <article class="service-card">
               <h3>Immutable Backup</h3>
-              <p>Backups the production network cannot reach or delete, with monthly tested restores — so a ransomware hit is a bad day, not a closed business. See <a href="backup-disaster-recovery.html">backup &amp; DR</a>.</p>
+              <p>Backups the production network cannot reach or wipe, with tested restores — not just tested schedules. A ransomware event becomes a recoverable incident instead of a closure notice. See <a href="backup-disaster-recovery.html">backup &amp; DR</a>.</p>
             </article>
             <article class="service-card">
               <h3>24/7 Monitoring &amp; Response</h3>
-              <p>Tooling plus a human who responds. When something fires at 2 a.m., it is contained — not waiting in a queue. The <a href="blog/ai-attack-speed-22-seconds-mdr-smb.html">speed of modern attacks</a> demands it.</p>
+              <p>Alerts go to a human who acts, not a dashboard that waits. PG businesses run lean — there is no internal IT on call at 2 a.m. We are. The <a href="blog/ai-attack-speed-22-seconds-mdr-smb.html">speed of modern attacks</a> makes that response time the difference.</p>
             </article>
           </div>
         </div>
@@ -270,7 +271,7 @@
       <section class="location-cta">
         <div class="container">
           <h2>Free cybersecurity assessment for your Pacific Grove business</h2>
-          <p>30 minutes with a cleared engineer. We review your endpoints, identity, Microsoft 365, and backups, and leave you a written, prioritized punch list of what to fix first — whether or not you become a client.</p>
+          <p>30 minutes with a cleared engineer — no sales pitch, no jargon. We look at your endpoints, accounts, email, and backups and hand you a short, prioritized list of what to address first. Most PG businesses come away with three to five clear actions. Useful whether or not you become a client. Scheduled around your hours, handled without making a scene in front of guests or colleagues.</p>
           <a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer" class="location-btn location-btn-primary">
             <i class="fi fi-rs-calendar-day" aria-hidden="true"></i>
             Book your free assessment
@@ -280,16 +281,16 @@
 
       <section class="location-section">
         <div class="container">
-          <h2>What the controls have to satisfy</h2>
-          <p>Pacific Grove businesses rarely face a federal compliance regime, but those that take cards face PCI obligations, and all of them face cyber-insurers who now require MFA, EDR, immutable backup, and email security before they renew. We put those controls in place and document them. Our <a href="blog/cyber-insurance-renewal-checklist-small-business-central-coast.html">cyber-insurance renewal checklist</a> and note on <a href="blog/small-business-cybersecurity-mistakes.html">common small-business security mistakes</a> cover the essentials.</p>
+          <h2>Compliance and insurability for a PG small business</h2>
+          <p>Most Pacific Grove businesses are not chasing a federal compliance regime — but those that take cards carry PCI obligations they often do not know about, and cyber-insurers now require documented MFA, EDR, immutable backup, and email security before they issue or renew a policy. An inn that cannot show those controls may simply not be insurable. We put them in place and document them in a form that satisfies an underwriter. Our <a href="blog/cyber-insurance-renewal-checklist-small-business-central-coast.html">cyber-insurance renewal checklist</a> and note on <a href="blog/small-business-cybersecurity-mistakes.html">common small-business security mistakes</a> cover the specifics.</p>
         </div>
       </section>
 
       <section class="location-section">
         <div class="container">
-          <h2>Local cybersecurity, part of a complete IT program</h2>
-          <p>Security works best when the same team also runs the systems it protects. Our Pacific Grove cybersecurity sits inside <a href="managed-it-services.html">managed IT</a> — monitoring, patching, <a href="help-desk-it-support.html">help desk</a>, <a href="cloud-services-pacific-grove.html">cloud and Microsoft 365</a>, and backup — so controls are maintained, not installed once and forgotten. For our statewide approach, see the main <a href="cybersecurity.html">cybersecurity services</a> page; for everything local, the <a href="pacific-grove.html">Pacific Grove IT services</a> hub.</p>
-          <p>We are based on the Central Coast, so on-site response is genuinely local — same-day or next-day for non-emergencies, immediate remote response for anything critical. We also serve <a href="monterey.html">Monterey</a>, <a href="carmel.html">Carmel</a>, <a href="seaside.html">Seaside</a>, and <a href="marina.html">Marina</a>.</p>
+          <h2>Security that stays current — part of a maintained PG IT program</h2>
+          <p>A security stack installed once and never revisited drifts. Seasonal staff changes bring new accounts and orphaned ones. New booking integrations open new exposure. PG businesses do not have internal IT to catch any of that. Our cybersecurity for Pacific Grove is not a one-time install — it runs inside <a href="managed-it-services.html">managed IT</a>, alongside patching, <a href="help-desk-it-support.html">help desk</a>, <a href="cloud-services-pacific-grove.html">cloud and Microsoft 365</a>, and backup, all under one team that already knows your environment. Controls get reviewed when systems change, not abandoned after the initial invoice. For the broader picture, see the main <a href="cybersecurity.html">cybersecurity services</a> page and the <a href="pacific-grove.html">Pacific Grove IT services</a> hub.</p>
+          <p>We are based on the Central Coast — on-site in PG is same-day or next-morning for non-emergencies, immediate remote response for anything critical. You do not reach a national call center; you reach the engineer who built the environment. We also serve <a href="monterey.html">Monterey</a>, <a href="carmel.html">Carmel</a>, <a href="seaside.html">Seaside</a>, and <a href="marina.html">Marina</a>.</p>
         </div>
       </section>
 
@@ -317,8 +318,8 @@
 
       <section class="location-cta">
         <div class="container">
-          <h2>Lock down your Pacific Grove business</h2>
-          <p>Book a 30-minute free assessment, or send us a note. Either way, you walk away knowing exactly where your security stands and what to fix first.</p>
+          <h2>Start with a conversation — no commitment, no pressure</h2>
+          <p>Book a 30-minute call with a cleared engineer, or send a message. Either way you leave with a plain-language read on where your security stands and the two or three things most worth addressing. In Pacific Grove, word travels fast in both directions — we work quietly, and we do not discuss our clients. That is not a sales line; it is the standard we held inside DoD networks.</p>
           <a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer" class="location-btn location-btn-primary">
             <i class="fi fi-rs-calendar-day" aria-hidden="true"></i>
             Book your free assessment
