@@ -423,3 +423,6 @@ FodyWeavers.xsd
 !.dev.vars.example
 .env*
 !.env.example
+
+# Local-only OG-image build fonts (see scripts/generate-og-images.py)
+scripts/fonts/
