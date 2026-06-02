@@ -1,0 +1,544 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Engineering and Architecture IT on the Central Coast: CAD, BIM, and Protecting Your Project Data in 2026 | Ghosxt</title>
+    <meta name="description" content="A plain-talk IT guide for engineering and architecture firms on the Central Coast. CAD and BIM workstations, large-file and PDM/vault workflows, remote-engineer performance, IP protection, ITAR and CMMC flow-down, and backup that actually restores. From a DoD-cleared engineer." />
+    <link rel="canonical" href="https://ghosxt.com/blog/engineering-architecture-it-cad-bim-central-coast.html" />
+    <link rel="alternate" type="application/rss+xml" title="Ghosxt Blog" href="https://ghosxt.com/feed.xml" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://ghosxt.com/blog/engineering-architecture-it-cad-bim-central-coast.html" />
+    <meta property="og:title" content="Engineering and Architecture IT on the Central Coast: CAD, BIM, and Protecting Your Project Data in 2026 | Ghosxt" />
+    <meta property="og:description" content="A plain-talk IT guide for engineering and architecture firms on the Central Coast. CAD and BIM workstations, large-file and PDM/vault workflows, remote-engineer performance, IP protection, ITAR and CMMC flow-down, and backup that actually restores. From a DoD-cleared engineer." />
+    <meta property="og:image" content="https://ghosxt.com/assets/img/og/blog-engineering-architecture-it-cad-bim-central-coast.png" />
+    <meta property="og:site_name" content="Ghosxt" />
+    <meta property="article:published_time" content="2026-06-02" />
+    <meta property="article:author" content="Ulises Paiz" />
+    <meta name="robots" content="index, follow" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Engineering and Architecture IT on the Central Coast: CAD, BIM, and Protecting Your Project Data in 2026 | Ghosxt" />
+    <meta name="twitter:description" content="The IT an A/E firm actually needs: CAD/BIM workstations, large-file and PDM/vault workflows, remote-engineer performance, IP protection, ITAR/CMMC flow-down, and tested backup." />
+    <meta name="twitter:image" content="https://ghosxt.com/assets/img/og/blog-engineering-architecture-it-cad-bim-central-coast.png" />
+    <link rel="icon" href="../assets/img/favicon.ico" sizes="any" />
+    <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- ghosxt:roboto-preload -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" />
+    <link rel="preconnect" href="https://cdn-uicons.flaticon.com" />
+    <link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" /></noscript>
+    <link rel="stylesheet" href="../assets/css/main.css?v=2026-05-31d" />
+    <link rel="stylesheet" href="../assets/css/blog.css?v=2026-05-15a" />
+    <link rel="stylesheet" media="print" onload="this.media='all'" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" />
+    <noscript><link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" /></noscript>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "BlogPosting",
+            "mainEntityOfPage": { "@type": "WebPage", "@id": "https://ghosxt.com/blog/engineering-architecture-it-cad-bim-central-coast.html" },
+            "headline": "Engineering and Architecture IT on the Central Coast: CAD, BIM, and Protecting Your Project Data in 2026",
+            "description": "A plain-talk IT guide for engineering and architecture firms on the Central Coast. CAD and BIM workstations, large-file and PDM/vault workflows, remote-engineer performance, IP protection, ITAR and CMMC flow-down, and backup that actually restores. From a DoD-cleared engineer.",
+            "image": "https://ghosxt.com/assets/img/og/blog-engineering-architecture-it-cad-bim-central-coast.png",
+            "author": { "@type": "Person", "name": "Ulises Paiz", "url": "https://ghosxt.com/about.html" },
+            "publisher": { "@type": "Organization", "name": "Ghosxt", "logo": { "@type": "ImageObject", "url": "https://ghosxt.com/assets/img/ghosxt logo.webp" } },
+            "datePublished": "2026-06-02",
+            "dateModified": "2026-06-02",
+            "articleSection": "Industry IT",
+            "keywords": "engineering IT, architecture firm IT, CAD workstation, BIM large file workflow, SolidWorks PDM, Autodesk Vault, Revit BIM 360, engineering data security, IP protection, ITAR technical data, NIST 800-171 CMMC engineering, remote engineer VDI, Central Coast engineering IT, Salinas Monterey A/E firm"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ghosxt.com/" },
+              { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://ghosxt.com/blog/" },
+              { "@type": "ListItem", "position": 3, "name": "Engineering and Architecture IT", "item": "https://ghosxt.com/blog/engineering-architecture-it-cad-bim-central-coast.html" }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Opening a Revit or SolidWorks model over the VPN takes five minutes. What actually fixes that?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A plain VPN is the wrong tool for large CAD and BIM files, and no amount of bandwidth fully fixes it, because the slowness comes from latency and the chatty file-locking and reference-resolution that PDM systems and Revit central models do across a wide-area link. There are three patterns that do work. One: keep the work next to the data by giving each office or remote engineer a cloud or VDI workstation that lives in the same place as the vault, so only pixels travel over the wire. Two: use a managed cloud workspace built for the file type, such as Autodesk Construction Cloud or BIM Collaborate for Revit, or PDM replication for SolidWorks, so each location has a local cache. Three: WAN acceleration and a properly designed vault topology for firms that need to stay on-premise. The right choice depends on your tools and your offices, and picking it is exactly the kind of thing our assessment sorts out."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Our BIM vault is several terabytes. Is our backup actually protecting it?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Only if it has been test-restored, and in our experience large engineering vaults are the backups least likely to have ever been tested. A multi-terabyte vault has real restore challenges: how long a full restore actually takes, whether the file references and PDM database come back consistent, and whether your offsite copy is immutable so ransomware cannot encrypt it too. A backup job that reports success every night but has never produced a verified, usable restore of the vault is a guess, not protection. We treat the vault as a first-class system: immutable offsite copies, a documented and tested restore procedure, and a known recovery time objective so you know how long a real recovery would take before you need it."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "An engineer left and downloaded the entire project archive on the way out. Can we prevent that?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Largely, yes, with a combination of access control and monitoring. Your drawings, models, and calculations are the firm's intellectual property and often a client's confidential data, and a departing engineer with broad vault access and no monitoring can copy years of work in an afternoon. The controls are named accounts with least-privilege access so people can only reach the projects they work on, a documented same-day offboarding checklist that revokes vault and VPN access the moment notice is given, enforced device encryption so a synced local copy is not readable off a personal laptop, and export or data-loss monitoring that flags a large bulk download before it leaves. The IP agreements matter legally, but the technical controls are what actually stop the copy."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do we need ITAR or CMMC compliance if we do government or aerospace project work?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Possibly, and it depends on the data, not the size of your firm. If your technical data is subject to ITAR or EAR export controls, you have obligations around who can access it and where it is stored, including keeping it off systems that route through foreign data centers or are administered by non-US persons. If you are a subconsultant on federal work that involves Controlled Unclassified Information, NIST SP 800-171 and CMMC requirements can flow down to you the same way they reach manufacturers. Even civil, structural, and MEP firms get pulled in through prime-contractor flow-down on defense and federal facility projects. The right first step is to identify which of your projects carry export-controlled or CUI data, because that scopes everything else."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can our engineers work from home without killing performance or security?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, but the pattern matters. The approach that works for heavy CAD and BIM is to keep the computation and the data together: a cloud or VDI workstation the engineer connects into, or a properly cached cloud workspace, rather than dragging multi-gigabyte files back and forth over a home connection. On the security side, a remote engineering device needs enforced full-disk encryption, MFA on every login, mobile device management so the firm can wipe a lost or stolen laptop, and access scoped to the projects that person is on. Done right, a remote engineer gets near-office performance and the firm keeps its IP controlled. Done as a plain VPN with an unmanaged personal laptop, you get the worst of both."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is consumer cloud storage like Dropbox or Google Drive fine for our drawings?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Not for managed CAD and BIM, and it is risky for your IP. SolidWorks and Revit projects rely on file references, check-in and check-out, and revision control that consumer sync tools break, you end up with broken links, overwritten work, and no clean revision history. And consumer storage gives you little control over who can access or export your clients' confidential project data, which is a problem for IP, for client contracts, and for any export-controlled work. The right setup is a managed PDM or BIM platform for the active models, backed by business-grade Microsoft 365 and SharePoint or Autodesk Construction Cloud for documents, all with named accounts, MFA, and an audit trail."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+    <!-- ghosxt:cf-web-analytics -->
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"f3ce7e0e17f54050845d52d7f355cd98"}'></script>
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top"><i class="fi fi-rs-angle-up" aria-hidden="true"></i></button>
+    <div class="cookie-banner" id="cookieBanner"><div class="cookie-banner-container"><div class="cookie-content"><div class="cookie-icon"><i class="fi fi-rs-cookie"></i></div><div class="cookie-text"><p class="cookie-message">We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.</p><a href="../privacy-policy.html" class="cookie-link">Learn more about our Privacy Policy</a></div></div><div class="cookie-actions"><button class="cookie-btn cookie-btn-secondary" id="cookieDecline">Decline</button><button class="cookie-btn cookie-btn-primary" id="cookieAccept">Accept All</button></div></div></div>
+    <nav class="navbar" aria-label="Main navigation">
+      <div class="navbar-container">
+        <div class="navbar-left"><a href="../index.html" class="navbar-logo"><img fetchpriority="high" loading="eager" src="../assets/img/ghosxt logo.webp" alt="Ghosxt logo" width="48" height="48" /><span>GHOSXT</span></a></div>
+        <div class="navbar-right">
+          <div class="navbar-menu">
+            <a href="../index.html" class="navbar-link">Home</a>
+            <div class="navbar-dropdown"><a href="../about.html" class="navbar-link dropdown-trigger" aria-haspopup="menu">About <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></a><div class="dropdown-menu" role="menu"><a href="../about.html" class="dropdown-item" role="menuitem">About Ghosxt</a><a href="../ghosxt-cares.html" class="dropdown-item" role="menuitem">Ghosxt Cares</a></div></div>
+            <div class="navbar-dropdown"><a href="../services.html" class="navbar-link dropdown-trigger" aria-haspopup="menu">Services <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></a><div class="dropdown-menu" role="menu"><a href="../services.html" class="dropdown-item" role="menuitem">All Services</a>
+                <a href="../managed-it-services.html" class="dropdown-item" role="menuitem">Managed IT Services</a>
+                <a href="../help-desk-it-support.html" class="dropdown-item" role="menuitem">IT Help Desk &amp; Support</a>
+                <a href="../it-consulting-vcio.html" class="dropdown-item" role="menuitem">IT Consulting &amp; vCIO</a>
+                <a href="../cybersecurity.html" class="dropdown-item" role="menuitem">Cybersecurity</a>
+                <a href="../cloud-services.html" class="dropdown-item" role="menuitem">Cloud Services</a>
+                <a href="../backup-disaster-recovery.html" class="dropdown-item" role="menuitem">Backup &amp; Disaster Recovery</a>
+                <a href="../network-design.html" class="dropdown-item" role="menuitem">Network Design</a>
+                <a href="../website-development.html" class="dropdown-item" role="menuitem">Web Development</a>
+                <a href="../ctpat.html" class="dropdown-item" role="menuitem">C-TPAT Compliance</a></div></div>
+            <a href="../pricing.html" class="navbar-link">Pricing</a>
+            <a href="index.html" class="navbar-link">Blog</a>
+            <a href="../contact.html" class="navbar-link">Contact</a>
+          </div>
+          <button class="navbar-mobile-toggle" id="mobileToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu"><i class="fi fi-rs-burger-menu" aria-hidden="true"></i></button>
+          <div class="navbar-buttons"><a class="navbar-btn navbar-phone" href="tel:+18312040501" aria-label="Call Ghosxt at (831) 204-0501"><i class="fi fi-rs-phone-call" aria-hidden="true"></i><span>(831)&nbsp;204-0501</span></a><a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer" class="navbar-btn btn-demo"><i class="fi fi-rs-calendar-day"></i><span>Book a Call</span></a></div>
+        </div>
+      </div>
+      <div class="navbar-overlay" id="navbarOverlay"></div>
+      <div class="navbar-mobile-menu" id="mobileMenu">
+        <a href="../index.html" class="mobile-link">Home</a>
+        <div class="mobile-accordion"><button class="mobile-accordion-trigger" aria-expanded="false">About <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></button><div class="mobile-accordion-content"><a href="../about.html" class="mobile-dropdown-item">About Ghosxt</a><a href="../ghosxt-cares.html" class="mobile-dropdown-item">Ghosxt Cares</a></div></div>
+        <div class="mobile-accordion"><button class="mobile-accordion-trigger" aria-expanded="false">Services <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></button><div class="mobile-accordion-content"><a href="../services.html" class="mobile-dropdown-item">All Services</a>
+            <a href="../managed-it-services.html" class="mobile-dropdown-item">Managed IT Services</a>
+            <a href="../help-desk-it-support.html" class="mobile-dropdown-item">IT Help Desk &amp; Support</a>
+            <a href="../it-consulting-vcio.html" class="mobile-dropdown-item">IT Consulting &amp; vCIO</a>
+            <a href="../cybersecurity.html" class="mobile-dropdown-item">Cybersecurity</a>
+            <a href="../cloud-services.html" class="mobile-dropdown-item">Cloud Services</a>
+            <a href="../backup-disaster-recovery.html" class="mobile-dropdown-item">Backup &amp; Disaster Recovery</a>
+            <a href="../network-design.html" class="mobile-dropdown-item">Network Design</a>
+            <a href="../website-development.html" class="mobile-dropdown-item">Web Development</a>
+            <a href="../ctpat.html" class="mobile-dropdown-item">C-TPAT Compliance</a></div></div>
+        <a href="../pricing.html" class="mobile-link">Pricing</a>
+        <a href="index.html" class="mobile-link">Blog</a>
+        <a href="../contact.html" class="mobile-link">Contact</a>
+        <div class="mobile-actions"><a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer" class="mobile-btn btn-demo"><i class="fi fi-rs-calendar-day"></i><span>Book a Call</span></a></div>
+      </div>
+    </nav>
+    <main id="main-content" class="blog-post">
+      <header class="blog-post-header">
+        <div class="container">
+          <nav class="blog-post-breadcrumbs" aria-label="Breadcrumb">
+            <a href="../index.html">Home</a><span class="sep">&rsaquo;</span><a href="index.html">Blog</a><span class="sep">&rsaquo;</span><span aria-current="page">Engineering and Architecture IT</span>
+          </nav>
+          <div class="blog-post-meta">
+            <time datetime="2026-06-02">June 2, 2026</time>
+            <span>&middot;</span>
+            <span>12 min read</span>
+            <span>&middot;</span>
+            <span class="blog-card-tag">Industry</span>
+          </div>
+          <h1>Engineering and Architecture IT on the Central Coast: CAD, BIM, and Protecting Your Project Data in 2026</h1>
+          <div class="blog-post-author">
+            <strong>Ulises Paiz</strong>, Founder, Ghosxt
+          </div>
+        </div>
+      </header>
+      <div class="blog-post-body">
+        <div class="container">
+          <aside class="blog-post-quickfix" aria-label="Summary and what to do today">
+            <span class="quickfix-label">TL;DR &mdash; Engineering and architecture IT comes down to six layers</span>
+            <h2>Your firm runs on large files, fast workstations, and project data that is both your most valuable asset and your biggest liability. Most A/E firms are losing real billable hours to slow file performance and quietly carrying real risk in an untested vault and an over-broad set of permissions.</h2>
+            <ul>
+              <li><strong>Layer 1:</strong> CAD and BIM workstations specced for the software, not consumer PCs fighting large models.</li>
+              <li><strong>Layer 2:</strong> Large-file storage and a managed PDM or BIM vault &mdash; SolidWorks PDM, Autodesk Vault, or the cloud equivalents.</li>
+              <li><strong>Layer 3:</strong> Remote-engineer patterns that deliver near-office performance without dragging files over a VPN.</li>
+              <li><strong>Layer 4:</strong> Engineering data security and IP protection &mdash; including the departing-engineer problem.</li>
+              <li><strong>Layer 5:</strong> Licensure and project compliance: PE e-stamps, ITAR/EAR data, and federal flow-down.</li>
+              <li><strong>Layer 6:</strong> Backup and continuity that can actually restore a multi-terabyte vault.</li>
+            </ul>
+            <p>If you only do three things this quarter:</p>
+            <ol>
+              <li>Test-restore your CAD/BIM vault and confirm how long a full recovery really takes.</li>
+              <li>Fix the slowest file-open workflow &mdash; the one taxing your highest-cost people all day.</li>
+              <li>Audit who can reach and export which projects, and put MFA on everything.</li>
+            </ol>
+            <p>The full <a href="../engineering-it-services.html">engineering and architecture IT service page</a> covers the underlying program.</p>
+          </aside>
+
+          <p>Most of the engineering and architecture firms I work with on the Central Coast grew project by project, and their IT grew the same way. A workstation here, a network drive there, a VPN so people could work from home during the pandemic, a BIM mandate from a public-agency client, and a few years later the firm is sitting on terabytes of models and drawings, a handful of expensive workstations of wildly different vintages, and a file-open workflow that everyone complains about and nobody owns. The projects ship. The drawings get sealed. But the firm is leaking billable hours to slow performance and carrying risk it has never measured.</p>
+
+          <p>This post is the version of the conversation I have with a principal at a civil, structural, MEP, or architecture firm in Salinas, Monterey, or up toward San Jose. The framing is six layers, and the theme that runs through all of them is that your project data is simultaneously the most valuable thing you own and the easiest thing to lose, to slow performance, to ransomware, to a departing engineer, or to a backup that never actually worked. A DoD-cleared engineering background is the right lens for this, because engineering data deserves the same rigor as defense data.</p>
+
+          <h2>Why engineering and A/E IT is different from generic SMB IT</h2>
+
+          <p>A generic small office runs email, a few SaaS apps, and some documents. An engineering firm runs 64-core analysis, multi-gigabyte assemblies and federated BIM models, a PDM or vault with revision control, GPU-hungry rendering, and a licensure obligation that puts a professional engineer's seal, and liability, on the output. The office cares if email is slow. The firm bleeds money if a model takes five minutes to open, because that delay is paid by people who bill at premium rates, all day, every day.</p>
+
+          <p>Concretely, engineering and architecture IT differs from generic small-business IT in five ways:</p>
+
+          <ul>
+            <li><strong>Files are enormous and reference-linked.</strong> CAD assemblies and BIM models are not documents; they are linked databases that misbehave badly over slow or high-latency connections.</li>
+            <li><strong>Workstation performance is billable.</strong> A correctly specced workstation versus a consumer PC is the difference between a model that spins and one that flows, multiplied across your most expensive staff.</li>
+            <li><strong>Your IP is your firm.</strong> Drawings, models, and calculations are the asset and the liability. They walk out the door easily if access is not controlled.</li>
+            <li><strong>Licensure and export rules apply.</strong> PE e-stamps, NCEES digital seals, and ITAR/EAR-controlled technical data add obligations a generic office never sees.</li>
+            <li><strong>Remote work is non-trivial.</strong> "Just use the VPN" does not work for heavy CAD and BIM, and getting remote performance right is its own discipline.</li>
+          </ul>
+
+          <h2>The six IT layers an engineering or architecture firm needs</h2>
+
+          <h3>Layer 1: CAD and BIM workstations</h3>
+
+          <p>The workstation is where billable time is won or lost. Revit, Civil 3D, SolidWorks, Bluebeam, and rendering engines each have real CPU, GPU, RAM, and storage profiles, and the difference between a properly specced workstation and a repurposed office PC shows up every time a model loads or a view regenerates. We spec to the software and the discipline, certified GPUs for the platforms that need them, enough RAM for the largest models in the office, fast local NVMe, rather than buying whatever was on sale. For firms moving toward centralized compute, cloud or VDI workstations are increasingly the better answer, which leads to Layer 3.</p>
+
+          <h3>Layer 2: Large-file storage and the PDM or BIM vault</h3>
+
+          <p>The vault, SolidWorks PDM, Autodesk Vault, or a cloud platform like Autodesk Construction Cloud, is the system of record for your models and revisions. The IT concerns are performance, integrity, and protection: the vault has to serve large files quickly to every engineer, maintain its file references and check-in/check-out integrity, and be backed up in a way that can actually be restored. Most firms have the first version of this, a vault that works in the main office, and discover the cracks the moment a second office or a remote engineer needs the same performance. Designing the vault topology for how your firm actually works is the highest-leverage storage decision you make. Our take on the related Microsoft 365 file question lives in the <a href="onedrive-vs-sharepoint-vs-teams-files-small-business.html">OneDrive vs SharePoint vs Teams post</a>.</p>
+
+          <h3>Layer 3: Remote-engineer performance</h3>
+
+          <p>The five-minute file-open over a VPN is the most common complaint I hear, and it is a design problem, not a bandwidth problem. A plain VPN forces a CAD or BIM application to do its chatty file-locking and reference resolution across a high-latency link, and that is slow no matter how fast the pipe. The patterns that work all share one idea: keep the computation next to the data. A cloud or VDI workstation puts the engineer's session in the same place as the vault so only pixels cross the wire. A managed cloud workspace such as Autodesk Construction Cloud or BIM Collaborate, or PDM replication for SolidWorks, gives each location a local cache. WAN acceleration and a tuned vault topology serve firms that need to stay on-premise. The <a href="../cloud-services.html">cloud services page</a> and the <a href="../network-design.html">network design page</a> cover how we choose and build these.</p>
+
+          <h3>Layer 4: Engineering data security and IP protection</h3>
+
+          <p>Your drawings and models are intellectual property and often a client's confidential data, and the most common way firms lose control of them is not a hacker, it is a departing engineer with broad access and no monitoring who copies the project archive on the way out. The controls are least-privilege named accounts so people reach only their projects, a same-day offboarding checklist that revokes vault and VPN access immediately, enforced device encryption so a synced copy is unreadable off a personal laptop, and export monitoring that flags a bulk download. On top of that sits the ordinary security stack, MFA, EDR, monitored email, that protects against ransomware and phishing. The <a href="identity-hardening-small-business-5-employees-microsoft-365.html">identity hardening post</a> and <a href="ransomware-2026-how-it-gets-in.html">ransomware post</a> cover those baselines, and the <a href="../cybersecurity.html">cybersecurity service page</a> covers the engineering approach.</p>
+
+          <h3>Layer 5: Licensure and project compliance</h3>
+
+          <p>Engineering adds obligations a generic office never touches. PE e-stamps and NCEES digital seals require secure handling of the credentials and signing process. ITAR and EAR export controls govern technical data on defense and aerospace projects, including who may access it and where it may be stored, which rules out systems administered by non-US persons or routed through certain foreign data centers. Federal and defense project work can carry Controlled Unclassified Information, which brings NIST SP 800-171 and CMMC flow-down, the same regime reaching manufacturers, covered in the <a href="manufacturing-it-cybersecurity-central-coast.html">manufacturing IT post</a>. ISO 9001 quality systems and California client-data privacy round out the list. None of this is overwhelming, but it has to be scoped to your actual project mix, which is where the <a href="../it-consulting-vcio.html">vCIO service</a> earns its keep.</p>
+
+          <h3>Layer 6: Backup and continuity</h3>
+
+          <p>The multi-terabyte vault is the backup most likely to fail when you need it, because large engineering data has real restore challenges that an untested job hides: how long a full restore takes, whether file references and the PDM database return consistent, and whether the offsite copy is immutable against ransomware. We treat the vault as a first-class system with immutable offsite copies, a documented and tested restore, and a known recovery time objective. And continuity means PG&amp;E: the Central Coast sits under the Public Safety Power Shutoff program, so UPS on servers and network gear, a clean-shutdown plan, and a path to keep deadlines moving during an outage all matter. The <a href="../backup-disaster-recovery.html">backup and disaster recovery service page</a>, the <a href="backup-disaster-recovery-small-business-2026.html">backup and DR post</a>, and the <a href="pge-psps-it-continuity-plan-central-coast.html">PSPS continuity plan</a> cover the playbook.</p>
+
+          <h2>The engineering IT problems we get called to fix</h2>
+
+          <h3>The five-minute file open</h3>
+
+          <p>A remote engineer or a second office opens a model and waits. It is a design problem, solved by moving to a cloud or VDI workstation, a cached cloud workspace, or vault replication, not by buying more bandwidth. Fixing it gives your most expensive people their day back.</p>
+
+          <h3>The terabyte vault with an untested backup</h3>
+
+          <p>The backup job reports success every night and has never produced a verified restore of the vault. We test it, find out what a real recovery actually takes, and redesign it with immutable offsite copies and a known recovery time objective so a ransomware hit or a server failure is a recoverable event, not an extinction event.</p>
+
+          <h3>The engineer who left with the archive</h3>
+
+          <p>A departing engineer downloaded the project archive because access was broad and nothing was watching. We close that with least-privilege access, same-day offboarding, enforced encryption, and export monitoring, so the firm's IP stays the firm's.</p>
+
+          <h3>The remote device with no encryption</h3>
+
+          <p>An unmanaged personal laptop with synced project files and no full-disk encryption is a breach waiting to be left in a car. Enforced encryption, MFA, and mobile device management turn that device into a controlled, wipeable endpoint.</p>
+
+          <h2>Backup on the harder work: co-managed support for other MSPs</h2>
+
+          <p>Not every firm with an engineering IT problem is an end client. Sometimes it is another managed service provider whose generalist team is excellent at the office side but out of their depth on SolidWorks PDM, an Autodesk Vault migration, BIM performance, or an ITAR data-handling question. We provide senior engineering escalation on a co-managed or white-label basis for exactly those situations, so the primary MSP keeps the relationship and the client gets the deep expertise on the hard problem. The <a href="../engineering-it-services.html">engineering IT service page</a> describes how that backup arrangement works.</p>
+
+          <h2>Office IT baseline for an A/E firm</h2>
+
+          <ul>
+            <li><strong>Microsoft 365 Business Premium per user,</strong> with EDR, MDM, and identity hardening included. See the <a href="microsoft-365-small-business-settings-to-turn-on-2026.html">Microsoft 365 settings post</a>.</li>
+            <li><strong>Properly specced CAD/BIM workstations or cloud/VDI workstations,</strong> matched to the software and the discipline.</li>
+            <li><strong>A managed PDM or BIM vault</strong> with a topology designed for your offices and remote staff.</li>
+            <li><strong>Business-class internet with strong upload</strong> and cellular failover, because large-file workflows are upload-heavy.</li>
+            <li><strong>MFA, enforced encryption, and MDM</strong> on every device that touches project data.</li>
+            <li><strong>Tested, immutable backup of the vault</strong> and a documented recovery time objective.</li>
+            <li><strong>UPS on servers and network gear</strong> and a documented PSPS plan.</li>
+          </ul>
+
+          <p>The full program lives on the <a href="../managed-it-services.html">managed IT services page</a>, and firms doing fabrication or product work should also read the <a href="manufacturing-it-cybersecurity-central-coast.html">manufacturing IT post</a> for the shop-floor and PLM side.</p>
+
+          <h2>What we steer engineering firms away from</h2>
+
+          <ul>
+            <li><strong>Consumer cloud sync (Dropbox, Google Drive) for managed CAD/BIM.</strong> It breaks file references and revision control and gives you no real IP control.</li>
+            <li><strong>A plain VPN as the remote-work answer for heavy models.</strong> Wrong tool; it guarantees the five-minute file open.</li>
+            <li><strong>A vault backup nobody has test-restored.</strong> Your most valuable asset, protected by an assumption.</li>
+            <li><strong>Over-broad project access.</strong> Everyone able to reach and export everything is an IP incident waiting for a resignation.</li>
+            <li><strong>Consumer PCs as engineering workstations.</strong> The cheapest line item that costs the most in lost billable time.</li>
+            <li><strong>Ignoring ITAR/CUI scope</strong> on government and aerospace work until a client audit asks.</li>
+            <li><strong>Unmanaged personal laptops</strong> with synced project files and no encryption.</li>
+          </ul>
+
+          <h2>A realistic budget for a Central Coast A/E firm</h2>
+
+          <p>Numbers for a representative 25-person engineering or architecture firm, mostly CAD/BIM users with some admin, hybrid in-office and remote, running a managed vault. Monthly, all-in, excluding workstation hardware, which is a periodic capital expense:</p>
+
+          <ul>
+            <li><strong>Microsoft 365 Business Premium:</strong> 25 users &times; $22 = $550</li>
+            <li><strong>MDR / managed security:</strong> 25 users &times; $25 = $625</li>
+            <li><strong>Managed IT (help desk, patching, identity, server and vault care):</strong> 25 users &times; $150&ndash;$200 = $3,750&ndash;$5,000</li>
+            <li><strong>Vault/PDM administration and large-file infrastructure:</strong> $500&ndash;$1,500</li>
+            <li><strong>Connectivity with strong upload + failover:</strong> $400&ndash;$900</li>
+            <li><strong>Tested, immutable backup of the vault and Microsoft 365:</strong> $400&ndash;$1,000</li>
+          </ul>
+
+          <p>Total monthly IT spend lands roughly between <strong>$6,500 and $10,500 per month</strong> for a 25-person firm, before workstation hardware and before optional cloud/VDI workstations (typically $150&ndash;$300 per remote user when used). The biggest mover is the per-user managed IT line. For comparison: a single corrupted-or-lost vault that cannot be restored can cost a firm months of redone work and a client relationship, and a ransomware event that locks the models stops every project at once. The IT budget is a fraction of one bad week.</p>
+
+          <h2>Where this fits</h2>
+
+          <ul>
+            <li>The <a href="../engineering-it-services.html">engineering and architecture IT service page</a>, for the full Ghosxt program, including co-managed MSP support.</li>
+            <li>The <a href="manufacturing-it-cybersecurity-central-coast.html">manufacturing IT post</a> and <a href="../manufacturing-it-services.html">manufacturing IT page</a>, for firms with a fabrication or PLM side.</li>
+            <li>The <a href="../cloud-services.html">cloud services page</a>, for cloud and VDI workstations and cloud workspaces.</li>
+            <li>The <a href="../cybersecurity.html">cybersecurity service page</a>, for IP protection and the security stack.</li>
+            <li>The <a href="../backup-disaster-recovery.html">backup and disaster recovery service page</a>, for vault protection.</li>
+            <li>The <a href="../network-design.html">network design service page</a>, for multi-office and large-file connectivity.</li>
+            <li>The <a href="onedrive-vs-sharepoint-vs-teams-files-small-business.html">OneDrive vs SharePoint vs Teams post</a>, for the document side of file management.</li>
+          </ul>
+
+          <p>We support engineering and architecture firms across <a href="../salinas.html">Salinas</a>, <a href="../monterey.html">Monterey</a>, <a href="../santa-cruz.html">Santa Cruz</a>, <a href="../san-jose.html">San Jose</a>, and the rest of the Central Coast and South Bay.</p>
+
+          <h2>FAQs about IT for engineering and architecture firms</h2>
+
+          <h3>Opening a Revit or SolidWorks model over the VPN takes five minutes. What actually fixes that?</h3>
+          <p>A plain VPN is the wrong tool for large CAD and BIM files, and no amount of bandwidth fully fixes it, because the slowness comes from latency and the chatty file-locking and reference-resolution that PDM systems and Revit central models do across a wide-area link. There are three patterns that do work. One: keep the work next to the data by giving each office or remote engineer a cloud or VDI workstation that lives in the same place as the vault, so only pixels travel over the wire. Two: use a managed cloud workspace built for the file type, such as Autodesk Construction Cloud or BIM Collaborate for Revit, or PDM replication for SolidWorks, so each location has a local cache. Three: WAN acceleration and a properly designed vault topology for firms that need to stay on-premise. The right choice depends on your tools and your offices, and picking it is exactly the kind of thing our assessment sorts out.</p>
+
+          <h3>Our BIM vault is several terabytes. Is our backup actually protecting it?</h3>
+          <p>Only if it has been test-restored, and in our experience large engineering vaults are the backups least likely to have ever been tested. A multi-terabyte vault has real restore challenges: how long a full restore actually takes, whether the file references and PDM database come back consistent, and whether your offsite copy is immutable so ransomware cannot encrypt it too. A backup job that reports success every night but has never produced a verified, usable restore of the vault is a guess, not protection. We treat the vault as a first-class system: immutable offsite copies, a documented and tested restore procedure, and a known recovery time objective so you know how long a real recovery would take before you need it.</p>
+
+          <h3>An engineer left and downloaded the entire project archive on the way out. Can we prevent that?</h3>
+          <p>Largely, yes, with a combination of access control and monitoring. Your drawings, models, and calculations are the firm's intellectual property and often a client's confidential data, and a departing engineer with broad vault access and no monitoring can copy years of work in an afternoon. The controls are named accounts with least-privilege access so people can only reach the projects they work on, a documented same-day offboarding checklist that revokes vault and VPN access the moment notice is given, enforced device encryption so a synced local copy is not readable off a personal laptop, and export or data-loss monitoring that flags a large bulk download before it leaves. The IP agreements matter legally, but the technical controls are what actually stop the copy.</p>
+
+          <h3>Do we need ITAR or CMMC compliance if we do government or aerospace project work?</h3>
+          <p>Possibly, and it depends on the data, not the size of your firm. If your technical data is subject to ITAR or EAR export controls, you have obligations around who can access it and where it is stored, including keeping it off systems that route through foreign data centers or are administered by non-US persons. If you are a subconsultant on federal work that involves Controlled Unclassified Information, NIST SP 800-171 and CMMC requirements can flow down to you the same way they reach manufacturers. Even civil, structural, and MEP firms get pulled in through prime-contractor flow-down on defense and federal facility projects. The right first step is to identify which of your projects carry export-controlled or CUI data, because that scopes everything else.</p>
+
+          <h3>Can our engineers work from home without killing performance or security?</h3>
+          <p>Yes, but the pattern matters. The approach that works for heavy CAD and BIM is to keep the computation and the data together: a cloud or VDI workstation the engineer connects into, or a properly cached cloud workspace, rather than dragging multi-gigabyte files back and forth over a home connection. On the security side, a remote engineering device needs enforced full-disk encryption, MFA on every login, mobile device management so the firm can wipe a lost or stolen laptop, and access scoped to the projects that person is on. Done right, a remote engineer gets near-office performance and the firm keeps its IP controlled. Done as a plain VPN with an unmanaged personal laptop, you get the worst of both.</p>
+
+          <h3>Is consumer cloud storage like Dropbox or Google Drive fine for our drawings?</h3>
+          <p>Not for managed CAD and BIM, and it is risky for your IP. SolidWorks and Revit projects rely on file references, check-in and check-out, and revision control that consumer sync tools break, you end up with broken links, overwritten work, and no clean revision history. And consumer storage gives you little control over who can access or export your clients' confidential project data, which is a problem for IP, for client contracts, and for any export-controlled work. The right setup is a managed PDM or BIM platform for the active models, backed by business-grade Microsoft 365 and SharePoint or Autodesk Construction Cloud for documents, all with named accounts, MFA, and an audit trail.</p>
+
+          <div class="blog-post-cta">
+            <h3>Want a written read on your firm's engineering IT?</h3>
+            <p>30 minutes with a DoD-cleared engineer. We will walk through your workstations, CAD/BIM vault and performance, remote-work setup, IP controls, and backup, and hand you back a written punch list of what to fix first, ordered by risk. No sales script, no obligation.</p>
+            <a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer">
+              <i class="fi fi-rs-calendar-day" aria-hidden="true"></i>
+              Book your free assessment
+            </a>
+          </div>
+
+          <p style="margin-top: 1.5rem; font-size: 0.95rem; color: rgba(0,0,0,0.7);">
+            Prefer to talk first? Email <a href="mailto:sales@ghosxt.com">sales@ghosxt.com</a> or call <a href="tel:+18312040501">(831) 204-0501</a>.
+          </p>
+        </div>
+      </div>
+    </main>
+    <footer class="footer" id="footerSection">
+      <div class="footer-container">
+        <div class="footer-brand-row">
+          <div class="footer-brand">
+            <img
+              src="../assets/img/ghosxt logo.webp"
+              alt="Ghosxt logo"
+              width="80"
+              height="80"
+              loading="lazy"
+            />
+            <div class="footer-brand-text">
+              <span class="footer-brand-name">GHOSXT</span>
+              <span class="footer-brand-tagline"
+                >Government-grade IT for small business.</span
+              >
+            </div>
+          </div>
+          <div class="footer-cta-block">
+            <a
+              href="https://calendly.com/ulises-ghosxt"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="footer-cta-btn"
+            >
+              <i class="fi fi-rs-calendar-day" aria-hidden="true"></i>
+              Schedule Free Assessment
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-grid">
+          <div class="footer-column">
+            <h3 class="footer-column-title">Company</h3>
+            <ul class="footer-links">
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="../about.html">About</a></li>
+              <li><a href="../services.html">Services</a></li>
+              <li><a href="../pricing.html">Pricing</a></li>
+              <li>
+                <a href="../website-development.html">Website Development</a>
+              </li>
+              <li><a href="../contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-column-title">Services</h3>
+            <ul class="footer-links">
+              <li><a href="../managed-it-services.html">Managed IT Services</a></li>
+              <li><a href="../help-desk-it-support.html">IT Help Desk &amp; Support</a></li>
+              <li><a href="../it-consulting-vcio.html">IT Consulting &amp; vCIO</a></li>
+              <li><a href="../cybersecurity.html">Cybersecurity</a></li>
+              <li><a href="../cloud-services.html">Cloud Services</a></li>
+              <li><a href="../backup-disaster-recovery.html">Backup &amp; Disaster Recovery</a></li>
+              <li><a href="../network-design.html">Network Design</a></li>
+              <li><a href="../website-development.html">Web Development</a></li>
+              <li><a href="../ctpat.html">C-TPAT Compliance</a></li>
+              <li><a href="../trucking-it-services.html">Trucking &amp; Logistics IT</a></li>
+              <li><a href="../agriculture-it-services.html">Agriculture &amp; Agribusiness IT</a></li>
+              <li><a href="../manufacturing-it-services.html">Manufacturing &amp; Industrial IT</a></li>
+              <li><a href="../professional-services-it.html">SMB Office &amp; Professional Services IT</a></li>
+              <li><a href="../healthcare-it-services.html">Healthcare &amp; Medical IT</a></li>
+              <li><a href="../property-management-it-services.html">Property Management IT</a></li>
+              <li><a href="../engineering-it-services.html">Engineering &amp; Architecture IT</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-column-title">Resources</h3>
+            <ul class="footer-links">
+              <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+              <li>
+                <a
+                  href="https://ticket.ghosxt.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Client Portal</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://calendly.com/ulises-ghosxt"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Free IT Assessment</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-column-title">Connect</h3>
+            <ul class="footer-links footer-social-links">
+              <li>
+                <a
+                  href="https://www.linkedin.com/company/ghosxt/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.063 2.063 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                  LinkedIn</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.facebook.com/GhosxtTech"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg>
+                  Facebook</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/ghosxttech/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+                  Instagram</a
+                >
+              </li>
+              <li>
+                <a href="mailto:sales@ghosxt.com"
+                  ><i class="fi fi-rs-envelope" aria-hidden="true"></i>
+                  sales@ghosxt.com</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <div class="footer-bottom">
+          <p class="footer-copyright">
+            &copy; 2026 Ghosxt. All rights reserved. Built by a cleared DoD
+            engineer.
+          </p>
+          <div class="footer-bottom-links">
+            <a href="../privacy-policy.html">Privacy Policy</a>
+            <span aria-hidden="true">&middot;</span>
+            <a
+              href="https://ticket.ghosxt.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Client Portal</a
+            >
+          </div>
+        </div>
+
+        <div class="service-areas-footer">
+          <h3>Service Areas</h3>
+          <ul>
+            <li><a href="../salinas.html">Salinas</a></li>
+            <li><a href="../monterey.html">Monterey</a></li>
+            <li><a href="../watsonville.html">Watsonville</a></li>
+            <li><a href="../hollister.html">Hollister</a></li>
+            <li><a href="../santa-cruz.html">Santa Cruz</a></li>
+            <li><a href="../gilroy.html">Gilroy</a></li>
+            <li><a href="../san-jose.html">San Jose</a></li>
+            <li><a href="../pacific-grove.html">Pacific Grove</a></li>
+            <li><a href="../carmel.html">Carmel</a></li>
+            <li><a href="../seaside.html">Seaside</a></li>
+            <li><a href="../marina.html">Marina</a></li>
+            <li><a href="../soledad.html">Soledad</a></li>
+            <li><a href="../king-city.html">King City</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="../assets/js/main.js?v=2026-05-31b" defer></script>
+    <!-- ghosxt:mobile-cta-bar -->
+    <div class="mobile-cta-bar" aria-label="Quick contact">
+      <a class="mcta-primary" href="tel:+18312040501">Call (831) 204-0501</a>
+      <a class="mcta-secondary" href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer">Book free assessment</a>
+    </div>
+  </body>
+</html>

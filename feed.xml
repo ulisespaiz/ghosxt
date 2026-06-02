@@ -7,7 +7,7 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from a DoD-cleared IT engineer.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Tue, 02 Jun 2026 21:23:11 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 02 Jun 2026 23:48:07 +0000</lastBuildDate>
     <pubDate>Tue, 02 Jun 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
     <item>
@@ -18,6 +18,33 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Industry IT</category>
       <description>A plain-talk IT and cybersecurity guide for property management companies and HOAs in Monterey and Santa Cruz Counties. Tenant-data protection, Yardi and AppFolio uptime, wire-fraud defense, multi-site networks, and compliance. From a DoD-cleared engineer.</description>
+    </item>
+    <item>
+      <title>Manufacturing IT and Cybersecurity on the Central Coast: OT/IT, CMMC, and Ransomware in 2026</title>
+      <link>https://ghosxt.com/blog/manufacturing-it-cybersecurity-central-coast.html</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/manufacturing-it-cybersecurity-central-coast.html</guid>
+      <pubDate>Tue, 02 Jun 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Industry IT</category>
+      <description>A plain-talk IT and cybersecurity guide for Central Coast and South Bay manufacturers. OT/IT segmentation, ERP/MES/PLM uptime, CAD and engineering data, CMMC 2.0 readiness, and ransomware defense for the most-targeted sector. From a DoD-cleared engineer.</description>
+    </item>
+    <item>
+      <title>IT and Cybersecurity for Salinas Valley Agriculture: A 2026 Guide for Growers, Packers, and Coolers</title>
+      <link>https://ghosxt.com/blog/agriculture-it-cybersecurity-salinas-valley.html</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/agriculture-it-cybersecurity-salinas-valley.html</guid>
+      <pubDate>Tue, 02 Jun 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Industry IT</category>
+      <description>A plain-talk IT and cybersecurity guide for Salinas Valley agriculture. Cold-chain and cooler monitoring, produce ERP and FSMA 204 traceability, food-safety audit IT, seasonal-ransomware and wire-fraud defense, and a realistic budget. From a DoD-cleared engineer on the Central Coast.</description>
+    </item>
+    <item>
+      <title>Engineering and Architecture IT on the Central Coast: CAD, BIM, and Protecting Your Project Data in 2026</title>
+      <link>https://ghosxt.com/blog/engineering-architecture-it-cad-bim-central-coast.html</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/engineering-architecture-it-cad-bim-central-coast.html</guid>
+      <pubDate>Tue, 02 Jun 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Industry IT</category>
+      <description>A plain-talk IT guide for engineering and architecture firms on the Central Coast. CAD and BIM workstations, large-file and PDM/vault workflows, remote-engineer performance, IP protection, ITAR and CMMC flow-down, and backup that actually restores. From a DoD-cleared engineer.</description>
     </item>
     <item>
       <title>The Microsoft Teams "IT Help Desk" That Isn't: A Ransomware Playbook</title>
@@ -252,33 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Managed IT in Salinas</category>
       <description>A plain-talk guide to IT support options for small businesses in Salinas, Monterey, Santa Cruz, San Jose, and Gilroy: in-house, break-fix, managed services, and hybrid. What to look for, what each path actually costs, and how Central Coast and South Bay buyers should evaluate it. From a DoD-cleared engineer.</description>
-    </item>
-    <item>
-      <title>Exchange Server Zero-Day CVE-2026-42897: What to Do Today</title>
-      <link>https://ghosxt.com/blog/exchange-server-zero-day-cve-2026-42897-may-2026-smb.html</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/exchange-server-zero-day-cve-2026-42897-may-2026-smb.html</guid>
-      <pubDate>Fri, 15 May 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>Microsoft confirmed active exploitation of CVE-2026-42897, an OWA cross-site scripting zero-day in on-prem Exchange Server 2016, 2019, and Subscription Edition. CVSS 8.1, no permanent patch yet, EEMS mitigation already applying. Plain-talk guidance from a DoD-cleared engineer.</description>
-    </item>
-    <item>
-      <title>May 2026 Patch Tuesday: What to Patch This Week</title>
-      <link>https://ghosxt.com/blog/may-2026-patch-tuesday-windows-dns-word-rce-smb.html</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/may-2026-patch-tuesday-windows-dns-word-rce-smb.html</guid>
-      <pubDate>Thu, 14 May 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>Microsoft's May 2026 Patch Tuesday fixed about 120 flaws, 17 of them critical, with no zero-days. The Word use-after-free (CVE-2026-40361) and the Windows DNS Client heap overflow (CVE-2026-41096) are the two SMBs should patch first. Plain-talk read on what to do this week.</description>
-    </item>
-    <item>
-      <title>Identity Hardening for the 5-Employee Company</title>
-      <link>https://ghosxt.com/blog/identity-hardening-small-business-5-employees-microsoft-365.html</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/identity-hardening-small-business-5-employees-microsoft-365.html</guid>
-      <pubDate>Wed, 13 May 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>The minimum identity controls that actually move the needle for a 5-employee business in 2026: phishing-resistant MFA, Conditional Access, no persistent local admins, separated admin accounts, and legacy auth turned off. From a DoD-cleared engineer.</description>
     </item>
   </channel>
 </rss>
