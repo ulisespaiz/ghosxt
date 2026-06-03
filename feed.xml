@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from a DoD-cleared IT engineer.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Tue, 02 Jun 2026 23:48:07 +0000</lastBuildDate>
-    <pubDate>Tue, 02 Jun 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Wed, 03 Jun 2026 16:30:06 +0000</lastBuildDate>
+    <pubDate>Wed, 03 Jun 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>IT for Law Firms, CPAs, and Professional Offices on the Central Coast: A 2026 Guide</title>
+      <link>https://ghosxt.com/blog/professional-services-it-law-cpa-central-coast.html</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/professional-services-it-law-cpa-central-coast.html</guid>
+      <pubDate>Wed, 03 Jun 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Industry IT</category>
+      <description>A plain-talk IT and cybersecurity guide for law firms, CPA and accounting practices, financial advisors, and professional offices on the Central Coast. BEC and wire-fraud defense, client confidentiality, the FTC Safeguards Rule and IRS WISP, and a realistic budget. From a DoD-cleared engineer.</description>
+    </item>
     <item>
       <title>Property Management IT in Monterey and Santa Cruz Counties: A 2026 Owner's Guide</title>
       <link>https://ghosxt.com/blog/property-management-it-monterey-santa-cruz.html</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>What cyber insurance carriers actually require in 2026: MFA, EDR, immutable backups, patch cadence, security awareness training, incident response plan. The 12 questions on every modern application and how a Salinas, Monterey, Santa Cruz, or Santa Clara County small business should prepare for renewal.</description>
-    </item>
-    <item>
-      <title>Best IT Support Options for Small Businesses in Salinas, CA</title>
-      <link>https://ghosxt.com/blog/best-it-support-in-salinas.html</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/best-it-support-in-salinas.html</guid>
-      <pubDate>Sat, 16 May 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Managed IT in Salinas</category>
-      <description>A plain-talk guide to IT support options for small businesses in Salinas, Monterey, Santa Cruz, San Jose, and Gilroy: in-house, break-fix, managed services, and hybrid. What to look for, what each path actually costs, and how Central Coast and South Bay buyers should evaluate it. From a DoD-cleared engineer.</description>
     </item>
   </channel>
 </rss>
