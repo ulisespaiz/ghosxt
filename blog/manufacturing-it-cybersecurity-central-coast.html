@@ -1,0 +1,567 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manufacturing IT and Cybersecurity on the Central Coast: OT/IT, CMMC, and Ransomware in 2026 | Ghosxt</title>
+    <meta name="description" content="A plain-talk IT and cybersecurity guide for Central Coast and South Bay manufacturers. OT/IT segmentation, ERP/MES/PLM uptime, CAD and engineering data, CMMC 2.0 readiness, and ransomware defense for the most-targeted sector. From a DoD-cleared engineer." />
+    <link rel="canonical" href="https://ghosxt.com/blog/manufacturing-it-cybersecurity-central-coast.html" />
+    <link rel="alternate" type="application/rss+xml" title="Ghosxt Blog" href="https://ghosxt.com/feed.xml" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://ghosxt.com/blog/manufacturing-it-cybersecurity-central-coast.html" />
+    <meta property="og:title" content="Manufacturing IT and Cybersecurity on the Central Coast: OT/IT, CMMC, and Ransomware in 2026 | Ghosxt" />
+    <meta property="og:description" content="A plain-talk IT and cybersecurity guide for Central Coast and South Bay manufacturers. OT/IT segmentation, ERP/MES/PLM uptime, CAD and engineering data, CMMC 2.0 readiness, and ransomware defense for the most-targeted sector. From a DoD-cleared engineer." />
+    <meta property="og:image" content="https://ghosxt.com/assets/img/og/blog-manufacturing-it-cybersecurity-central-coast.png" />
+    <meta property="og:site_name" content="Ghosxt" />
+    <meta property="article:published_time" content="2026-06-02" />
+    <meta property="article:author" content="Ulises Paiz" />
+    <meta name="robots" content="index, follow" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Manufacturing IT and Cybersecurity on the Central Coast: OT/IT, CMMC, and Ransomware in 2026 | Ghosxt" />
+    <meta name="twitter:description" content="The IT a Central Coast manufacturer actually needs: OT/IT segmentation, ERP/MES/PLM uptime, CAD data, CMMC 2.0 readiness, and ransomware defense for the most-targeted sector." />
+    <meta name="twitter:image" content="https://ghosxt.com/assets/img/og/blog-manufacturing-it-cybersecurity-central-coast.png" />
+    <link rel="icon" href="../assets/img/favicon.ico" sizes="any" />
+    <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- ghosxt:roboto-preload -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" />
+    <link rel="preconnect" href="https://cdn-uicons.flaticon.com" />
+    <link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" /></noscript>
+    <link rel="stylesheet" href="../assets/css/main.css?v=2026-05-31d" />
+    <link rel="stylesheet" href="../assets/css/blog.css?v=2026-05-15a" />
+    <link rel="stylesheet" media="print" onload="this.media='all'" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" />
+    <noscript><link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" /></noscript>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "BlogPosting",
+            "mainEntityOfPage": { "@type": "WebPage", "@id": "https://ghosxt.com/blog/manufacturing-it-cybersecurity-central-coast.html" },
+            "headline": "Manufacturing IT and Cybersecurity on the Central Coast: OT/IT, CMMC, and Ransomware in 2026",
+            "description": "A plain-talk IT and cybersecurity guide for Central Coast and South Bay manufacturers. OT/IT segmentation, ERP/MES/PLM uptime, CAD and engineering data, CMMC 2.0 readiness, and ransomware defense for the most-targeted sector. From a DoD-cleared engineer.",
+            "image": "https://ghosxt.com/assets/img/og/blog-manufacturing-it-cybersecurity-central-coast.png",
+            "author": { "@type": "Person", "name": "Ulises Paiz", "url": "https://ghosxt.com/about.html" },
+            "publisher": { "@type": "Organization", "name": "Ghosxt", "logo": { "@type": "ImageObject", "url": "https://ghosxt.com/assets/img/ghosxt logo.webp" } },
+            "datePublished": "2026-06-02",
+            "dateModified": "2026-06-02",
+            "articleSection": "Industry IT",
+            "keywords": "manufacturing IT, manufacturing cybersecurity, OT IT segmentation, shop floor network, ERP MES PLM uptime, CMMC 2.0 compliance, NIST 800-171, NIST 800-82, ITAR engineering data, CAD file management, manufacturing ransomware, Central Coast manufacturing IT, Salinas manufacturing, South Bay manufacturer IT"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ghosxt.com/" },
+              { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://ghosxt.com/blog/" },
+              { "@type": "ListItem", "position": 3, "name": "Manufacturing IT on the Central Coast", "item": "https://ghosxt.com/blog/manufacturing-it-cybersecurity-central-coast.html" }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "We're a small shop, not a prime defense contractor. Does CMMC really apply to us?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "If you handle Federal Contract Information or Controlled Unclassified Information anywhere in a defense supply chain, even as a third- or fourth-tier subcontractor making a bracket or a machined part, CMMC requirements flow down to you. The 48 CFR final rule that took effect in late 2025 makes that flow-down mandatory. Phase 1, which began November 10, 2025, brings Level 1 or Level 2 self-assessment requirements into many new contracts, and Phase 2, on November 10, 2026, brings third-party Level 2 certification for contractors who handle CUI. The honest answer for most Central Coast shops is: read your contracts and your customers' flow-down clauses now, because the smaller you are, the more likely you are to be caught flat-footed. Misrepresenting your status carries False Claims Act exposure, so this is not a box to guess at."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Our CNC machines run Windows XP or Windows 7. We can't patch or replace them. What do we do?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "You isolate them. Legacy machine controllers that cannot be patched are the single most common serious risk we find on a shop floor, and the answer is not to replace a working machine, it is to put it on a segmented operational-technology network that cannot reach the internet or the office, with tightly controlled access for the one vendor laptop that needs it. NIST SP 800-82, the standard for industrial control system security, is built around exactly this: compensating controls and segmentation for systems you cannot harden directly. A flat network where an XP controller sits next to the accounting PC means one phishing click can reach the machine that makes your parts. Segmentation is the control that lets a 15-year-old controller keep running safely."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Why is manufacturing the number-one ransomware target?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Because the economics favor the attacker. Manufacturing has been the most-targeted sector for ransomware for several years running across multiple industry reports, and the reasons are structural: downtime tolerance is near zero because a stopped line means missed customer ship dates and contract penalties, legacy operational technology is hard to patch, networks are often flat, and shops have historically under-invested in security relative to the value at risk. An attacker who can halt production knows you are under intense pressure to pay. The defense is the same stack that protects any high-value target, but applied with OT in mind: segmentation, EDR on everything that can run it, monitored email, identity hardening, and 24/7 detection that catches the intrusion before it reaches the floor."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Our ERP and MES are hosted by the vendor. Do we still need our own backup?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. Hosted and SaaS vendors back up their platform for their own resilience, not for your accidental deletion, a bad data import, or a compromised admin account. If someone corrupts a bill of materials or an attacker deletes production records, the vendor restores the platform, not your specific data, and rarely on the timeline a stopped line demands. Independent backup of your ERP and MES exports, your Microsoft 365, and especially your CAD and PDM vault is a separate control. The CAD vault matters most: it is often terabytes of irreplaceable engineering work, and we routinely find shops whose vault backup has never once been test-restored."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "An engineer left and still had VPN access to the PLM and CAD vault. How bad is that?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Bad, and common. Your CAD models, fixtures, programs, and customer drawings are the company's intellectual property, and a departing engineer with lingering VPN and vault access can copy the entire project archive on the way out. We have been called in after exactly this. The fix is named accounts, no shared logins, a documented same-day offboarding checklist that revokes VPN and PLM access the moment employment ends, and monitoring that flags a large vault export before it becomes a problem. If you cannot say with certainty that every former engineer's access is closed, that is the first assessment we would run."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is our shop-floor firewall enough cybersecurity for a manufacturer?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. A firewall at the internet edge does nothing about the flat network behind it, where an infected office laptop can reach a CNC controller, the ERP server, and the CAD vault on the same wire. Modern manufacturing security is segmentation plus identity: an operational-technology network separated from the office, MFA on every account, EDR on every device that can run it, monitored email security, and 24/7 detection and response. The edge firewall is one control among many, and on a flat shop network it is the one that gives the most false comfort."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+    <!-- ghosxt:cf-web-analytics -->
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"f3ce7e0e17f54050845d52d7f355cd98"}'></script>
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top"><i class="fi fi-rs-angle-up" aria-hidden="true"></i></button>
+    <div class="cookie-banner" id="cookieBanner"><div class="cookie-banner-container"><div class="cookie-content"><div class="cookie-icon"><i class="fi fi-rs-cookie"></i></div><div class="cookie-text"><p class="cookie-message">We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.</p><a href="../privacy-policy.html" class="cookie-link">Learn more about our Privacy Policy</a></div></div><div class="cookie-actions"><button class="cookie-btn cookie-btn-secondary" id="cookieDecline">Decline</button><button class="cookie-btn cookie-btn-primary" id="cookieAccept">Accept All</button></div></div></div>
+    <nav class="navbar" aria-label="Main navigation">
+      <div class="navbar-container">
+        <div class="navbar-left"><a href="../index.html" class="navbar-logo"><img fetchpriority="high" loading="eager" src="../assets/img/ghosxt logo.webp" alt="Ghosxt logo" width="48" height="48" /><span>GHOSXT</span></a></div>
+        <div class="navbar-right">
+          <div class="navbar-menu">
+            <a href="../index.html" class="navbar-link">Home</a>
+            <div class="navbar-dropdown"><a href="../about.html" class="navbar-link dropdown-trigger" aria-haspopup="menu">About <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></a><div class="dropdown-menu" role="menu"><a href="../about.html" class="dropdown-item" role="menuitem">About Ghosxt</a><a href="../ghosxt-cares.html" class="dropdown-item" role="menuitem">Ghosxt Cares</a></div></div>
+            <div class="navbar-dropdown"><a href="../services.html" class="navbar-link dropdown-trigger" aria-haspopup="menu">Services <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></a><div class="dropdown-menu" role="menu"><a href="../services.html" class="dropdown-item" role="menuitem">All Services</a>
+                <a href="../managed-it-services.html" class="dropdown-item" role="menuitem">Managed IT Services</a>
+                <a href="../help-desk-it-support.html" class="dropdown-item" role="menuitem">IT Help Desk &amp; Support</a>
+                <a href="../it-consulting-vcio.html" class="dropdown-item" role="menuitem">IT Consulting &amp; vCIO</a>
+                <a href="../cybersecurity.html" class="dropdown-item" role="menuitem">Cybersecurity</a>
+                <a href="../cloud-services.html" class="dropdown-item" role="menuitem">Cloud Services</a>
+                <a href="../backup-disaster-recovery.html" class="dropdown-item" role="menuitem">Backup &amp; Disaster Recovery</a>
+                <a href="../network-design.html" class="dropdown-item" role="menuitem">Network Design</a>
+                <a href="../website-development.html" class="dropdown-item" role="menuitem">Web Development</a>
+                <a href="../ctpat.html" class="dropdown-item" role="menuitem">C-TPAT Compliance</a></div></div>
+            <a href="../pricing.html" class="navbar-link">Pricing</a>
+            <a href="index.html" class="navbar-link">Blog</a>
+            <a href="../contact.html" class="navbar-link">Contact</a>
+          </div>
+          <button class="navbar-mobile-toggle" id="mobileToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu"><i class="fi fi-rs-burger-menu" aria-hidden="true"></i></button>
+          <div class="navbar-buttons"><a class="navbar-btn navbar-phone" href="tel:+18312040501" aria-label="Call Ghosxt at (831) 204-0501"><i class="fi fi-rs-phone-call" aria-hidden="true"></i><span>(831)&nbsp;204-0501</span></a><a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer" class="navbar-btn btn-demo"><i class="fi fi-rs-calendar-day"></i><span>Book a Call</span></a></div>
+        </div>
+      </div>
+      <div class="navbar-overlay" id="navbarOverlay"></div>
+      <div class="navbar-mobile-menu" id="mobileMenu">
+        <a href="../index.html" class="mobile-link">Home</a>
+        <div class="mobile-accordion"><button class="mobile-accordion-trigger" aria-expanded="false">About <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></button><div class="mobile-accordion-content"><a href="../about.html" class="mobile-dropdown-item">About Ghosxt</a><a href="../ghosxt-cares.html" class="mobile-dropdown-item">Ghosxt Cares</a></div></div>
+        <div class="mobile-accordion"><button class="mobile-accordion-trigger" aria-expanded="false">Services <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></button><div class="mobile-accordion-content"><a href="../services.html" class="mobile-dropdown-item">All Services</a>
+            <a href="../managed-it-services.html" class="mobile-dropdown-item">Managed IT Services</a>
+            <a href="../help-desk-it-support.html" class="mobile-dropdown-item">IT Help Desk &amp; Support</a>
+            <a href="../it-consulting-vcio.html" class="mobile-dropdown-item">IT Consulting &amp; vCIO</a>
+            <a href="../cybersecurity.html" class="mobile-dropdown-item">Cybersecurity</a>
+            <a href="../cloud-services.html" class="mobile-dropdown-item">Cloud Services</a>
+            <a href="../backup-disaster-recovery.html" class="mobile-dropdown-item">Backup &amp; Disaster Recovery</a>
+            <a href="../network-design.html" class="mobile-dropdown-item">Network Design</a>
+            <a href="../website-development.html" class="mobile-dropdown-item">Web Development</a>
+            <a href="../ctpat.html" class="mobile-dropdown-item">C-TPAT Compliance</a></div></div>
+        <a href="../pricing.html" class="mobile-link">Pricing</a>
+        <a href="index.html" class="mobile-link">Blog</a>
+        <a href="../contact.html" class="mobile-link">Contact</a>
+        <div class="mobile-actions"><a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer" class="mobile-btn btn-demo"><i class="fi fi-rs-calendar-day"></i><span>Book a Call</span></a></div>
+      </div>
+    </nav>
+    <main id="main-content" class="blog-post">
+      <header class="blog-post-header">
+        <div class="container">
+          <nav class="blog-post-breadcrumbs" aria-label="Breadcrumb">
+            <a href="../index.html">Home</a><span class="sep">&rsaquo;</span><a href="index.html">Blog</a><span class="sep">&rsaquo;</span><span aria-current="page">Manufacturing IT on the Central Coast</span>
+          </nav>
+          <div class="blog-post-meta">
+            <time datetime="2026-06-02">June 2, 2026</time>
+            <span>&middot;</span>
+            <span>12 min read</span>
+            <span>&middot;</span>
+            <span class="blog-card-tag">Industry</span>
+          </div>
+          <h1>Manufacturing IT and Cybersecurity on the Central Coast: OT/IT, CMMC, and Ransomware in 2026</h1>
+          <div class="blog-post-author">
+            <strong>Ulises Paiz</strong>, Founder, Ghosxt
+          </div>
+        </div>
+      </header>
+      <div class="blog-post-body">
+        <div class="container">
+          <aside class="blog-post-quickfix" aria-label="Summary and what to do today">
+            <span class="quickfix-label">TL;DR &mdash; Manufacturing IT on the Central Coast comes down to six layers</span>
+            <h2>Manufacturing has been the most-targeted ransomware sector for years running, because a stopped line is leverage. Your shop floor is full of operational technology that cannot be patched like a laptop, and most of the real risk lives in the layers between the office and the machines.</h2>
+            <ul>
+              <li><strong>Layer 1:</strong> OT/IT segmentation and a shop-floor network that keeps the machines off the office wire.</li>
+              <li><strong>Layer 2:</strong> ERP, MES, and PLM uptime &mdash; the systems that schedule, track, and define what you build.</li>
+              <li><strong>Layer 3:</strong> Engineering data and CAD file management, your most valuable and least-backed-up asset.</li>
+              <li><strong>Layer 4:</strong> CMMC 2.0 and NIST 800-171 readiness if you touch the defense supply chain &mdash; and the clock is already running.</li>
+              <li><strong>Layer 5:</strong> Cybersecurity built for legacy controllers and the attacks aimed at production downtime.</li>
+              <li><strong>Layer 6:</strong> Backup and continuity that survives ransomware, a CAD-server failure, and a PG&amp;E shutoff.</li>
+            </ul>
+            <p>If you only do three things this quarter:</p>
+            <ol>
+              <li>Segment the shop floor so a machine controller cannot be reached from the office network or the internet.</li>
+              <li>Test-restore your CAD/PDM vault and your ERP backup &mdash; prove it works, do not assume it.</li>
+              <li>Read your customer flow-down clauses for CMMC, and put MFA on every account today.</li>
+            </ol>
+            <p>The full <a href="../manufacturing-it-services.html">manufacturing and industrial IT service page</a> covers the underlying program.</p>
+          </aside>
+
+          <p>Most of the manufacturers I work with on the Central Coast and into the South Bay did not set out to build an IT department. They bought a CNC machine, then a second, added an ERP because a customer needed real lead times, brought CAD in house, added a MES to track jobs, and a decade later they have a shop floor full of networked machines, an engineering team sitting on terabytes of irreplaceable models, and a part-time IT person who is really the controls tech on Thursdays. The parts ship. The network mostly holds. Nobody has looked at the whole thing as one system that an attacker sees as one target.</p>
+
+          <p>This post is the version of the conversation I have with a Salinas, Gilroy, or South Bay shop owner. The framing is six layers, and the backdrop is a hard fact: across multiple 2025 industry reports, <strong>manufacturing is the single most-targeted sector for ransomware</strong>, and has been for several years. That is not because manufacturers are careless. It is because a stopped line is the best leverage an extortionist can ask for, and shop-floor technology is genuinely harder to defend than an office full of laptops. The good news is that the highest-impact fixes are structural and do not require replacing a single machine.</p>
+
+          <h2>Why manufacturing IT is different from generic SMB IT</h2>
+
+          <p>An insurance office has people, laptops, and a printer. A 40-person machine shop has an office, an engineering team on CAD workstations, a shop floor of CNC mills and lathes with embedded controllers, an ERP and a MES, a CAD/PDM vault, inspection equipment, and often a customer base that includes aerospace, defense, medical, or ag-equipment primes with their own compliance requirements. The office has one regulator. The shop may answer to the DoD through CMMC, to the State Department through ITAR, to ISO 9001 auditors, and to a cyber-insurance underwriter who has read the ransomware statistics.</p>
+
+          <p>Concretely, manufacturing IT differs from generic small-business IT in five ways:</p>
+
+          <ul>
+            <li><strong>The shop floor is operational technology.</strong> Machine controllers, PLCs, and inspection gear are networked computers, often running old, unpatchable operating systems that the machine vendor will not let you touch.</li>
+            <li><strong>Uptime is production.</strong> A network or server outage is not lost email; it is a stopped line, a missed ship date, and a contract penalty.</li>
+            <li><strong>Your IP is the business.</strong> CAD models, programs, fixtures, and customer drawings are the crown jewels, and they walk out the door easily if access is not controlled.</li>
+            <li><strong>Compliance flows down to you.</strong> CMMC, NIST 800-171, and ITAR reach small subcontractors through prime-contractor flow-down, whether or not you think of yourself as a defense shop.</li>
+            <li><strong>Legacy and modern coexist.</strong> A 15-year-old controller and a brand-new five-axis sit on the same floor and frequently the same network, which is exactly the problem.</li>
+          </ul>
+
+          <h2>The six IT layers a Central Coast manufacturer needs</h2>
+
+          <h3>Layer 1: OT/IT segmentation and the shop-floor network</h3>
+
+          <p>This is the layer that matters most and the one most shops have never addressed. Operational technology, the machine controllers, PLCs, and inspection systems, should live on a network that is segmented from the office and cannot reach the internet directly. On a flat network, an infected office laptop can reach a CNC controller, the ERP server, and the CAD vault on the same wire, and that is precisely how a ransomware click becomes a stopped line. The reference model here is NIST SP 800-82, the standard for industrial control system security, which is built around segmentation and compensating controls for systems you cannot harden directly.</p>
+
+          <p>In practice that means VLANs and firewall rules that separate the shop floor from the office, tightly controlled access for the vendor laptops that service the machines, and engineered, robust Wi-Fi for the handhelds and tablets that the floor actually depends on, because dead spots that kill a barcode scanner cost real throughput. The <a href="../network-design.html">network design service page</a> covers the shop-floor and segmentation work, and it is usually where we deliver both the biggest security win and the most visible daily improvement.</p>
+
+          <h3>Layer 2: ERP, MES, and PLM uptime</h3>
+
+          <p>The ERP schedules and costs the work, the MES tracks it on the floor, and the PLM or PDM system holds the definition of what you build. Whether you run Epicor, Global Shop, JobBOSS, Fishbowl, ProShop, or a Dynamics build, the IT concerns are the same: these systems have to be reachable from the floor and the office, integrated rather than siloed, patched and maintained on a real schedule, and independently backed up. A MES that only the office server can reach is a MES that stops the floor when that server hiccups. Most of the avoidable downtime we see in shops traces back to one of these systems running on an aging server nobody owns.</p>
+
+          <h3>Layer 3: Engineering data and CAD file management</h3>
+
+          <p>Your CAD and PDM vault, SolidWorks PDM, Autodesk Vault, or the equivalent, is simultaneously your most valuable asset and your least-protected one. Two problems recur. First, performance: large assemblies opened over a slow or misconfigured link turn a five-second file-open into a five-minute one, and that tax is paid by your highest-cost people all day. Second, protection: the vault is often terabytes of irreplaceable work, and its backup has frequently never been test-restored. We treat the vault as a first-class system, performance-tuned, access-controlled so engineers see what they should, and backed up with restores that are actually verified. The <a href="engineering-architecture-it-cad-bim-central-coast.html">engineering and architecture IT post</a> goes deeper on CAD and large-file workflows.</p>
+
+          <h3>Layer 4: CMMC 2.0 and NIST 800-171 readiness</h3>
+
+          <p>If any of your work touches the defense supply chain, this layer is now a live deadline rather than a someday. We dig into the timeline below, but the structural point is that the Cybersecurity Maturity Model Certification requirements flow down from primes to subcontractors, and the IT work behind them, access control, MFA, encryption, logging, and a written security program aligned to NIST SP 800-171, is substantial. Shops that start when they see the clause in a contract are already behind. The <a href="../it-consulting-vcio.html">vCIO service</a> is where we map your environment to the controls and build a realistic remediation plan.</p>
+
+          <h3>Layer 5: Cybersecurity for the shop floor</h3>
+
+          <p>Given that manufacturing is the top ransomware target, the security stack is not optional. What we run for shops:</p>
+
+          <ul>
+            <li><strong>Segmentation first</strong> &mdash; the OT/IT separation from Layer 1 is itself the highest-value security control.</li>
+            <li><strong>EDR on everything that can run it</strong> &mdash; office endpoints, engineering workstations, and servers. Legacy controllers that cannot get an agent are protected by isolation instead.</li>
+            <li><strong>MFA on every account</strong> &mdash; Microsoft 365, ERP, MES, PLM, VPN, and the bank.</li>
+            <li><strong>Monitored email security,</strong> because supplier-payment fraud and phishing are the common entry points.</li>
+            <li><strong>Identity hardening and named accounts,</strong> with Conditional Access and no shared logins. See the <a href="identity-hardening-small-business-5-employees-microsoft-365.html">identity hardening post</a>.</li>
+            <li><strong>24/7 monitored detection and response,</strong> because the intrusion that becomes a stopped line happens off-hours by design.</li>
+          </ul>
+
+          <p>The <a href="../cybersecurity.html">cybersecurity service page</a> covers the engineering approach, and the <a href="ransomware-2026-how-it-gets-in.html">2026 ransomware post</a> walks the attack chain that ends on your floor.</p>
+
+          <h3>Layer 6: Backup and continuity</h3>
+
+          <p>The systems that have to survive a bad day: the ERP and MES databases, the CAD/PDM vault, inspection and quality records, and email. Independent, tested backup of each, plus the CAD vault treated as the priority it is. The vendor backs up their platform for their resilience, not your bad import or your compromised admin. And continuity means PG&amp;E: the Central Coast sits under the Public Safety Power Shutoff program, and a shop that loses power loses the network, the servers, the phones, and any machine mid-cycle. UPS on the server and network gear, a clean-shutdown plan, and generator capacity sized to the operation are the baseline. The <a href="pge-psps-it-continuity-plan-central-coast.html">PSPS continuity plan post</a> and the <a href="../backup-disaster-recovery.html">backup and disaster recovery service page</a> cover the playbook.</p>
+
+          <h2>CMMC 2.0: the clock is already running</h2>
+
+          <p>This deserves its own section because the timeline is real and recent, and a lot of small shops still believe CMMC is a future problem. It is not. The 48 CFR final rule that brings CMMC into defense contracts was published in September 2025, and the phased rollout began on <strong>November 10, 2025</strong>. Here is what matters for a Central Coast subcontractor:</p>
+
+          <ul>
+            <li><strong>Phase 1 (began November 10, 2025):</strong> Level 1 or Level 2 self-assessment requirements appear in many new DoD contracts. The DoD estimates this reaches a large majority of the defense industrial base.</li>
+            <li><strong>Phase 2 (November 10, 2026):</strong> third-party Level 2 certification is required for contractors who handle Controlled Unclassified Information. A self-assessment is no longer enough at this tier.</li>
+            <li><strong>Phase 3 (November 10, 2027):</strong> Level 3 assessments phase in for the most sensitive work.</li>
+            <li><strong>Flow-down is mandatory.</strong> Primes must flow the appropriate level down to every subcontractor handling Federal Contract Information or CUI. If you make a part for a part for a weapons system, this reaches you.</li>
+            <li><strong>Misrepresentation has teeth.</strong> Certification must be maintained for the life of the contract, and false claims about your status carry False Claims Act exposure.</li>
+          </ul>
+
+          <p>The practical reading for a small shop: do not wait for the clause to surprise you. Find out now whether you handle FCI or CUI, get a gap assessment against NIST SP 800-171, and build the remediation into your budget over the next several quarters rather than in a panic when a renewal lands. The controls, MFA, encryption, access control, logging, and a written System Security Plan, are achievable for a small manufacturer with the right help, but they take time to implement and document properly.</p>
+
+          <h2>The threats hitting Central Coast manufacturers right now</h2>
+
+          <h3>Production-halting ransomware</h3>
+
+          <p>The headline threat. An attacker gets in through a phished credential or an exposed remote-access service, moves laterally across a flat network, and encrypts the servers that run the floor, timing it for a weekend so it is discovered Monday at startup. The leverage is your downtime. The defense is segmentation, EDR, monitored email, identity hardening, and 24/7 detection that catches the lateral movement first.</p>
+
+          <h3>Legacy controller exposure</h3>
+
+          <p>The unpatched Windows XP or 7 box driving a CNC or an inspection cell is a permanent soft target. You usually cannot patch or replace it without the machine vendor, and you should not have to: isolation on a segmented OT network with controlled access is the right control, and it lets a working machine keep working safely.</p>
+
+          <h3>Supplier and customer payment fraud</h3>
+
+          <p>Business email compromise aimed at your AP and AR. A spoofed or compromised email changes banking details on a supplier invoice, or redirects a customer's payment. Monitored email, MFA, and a verify-by-phone rule for any banking change shut it down.</p>
+
+          <h3>IP theft on departure</h3>
+
+          <p>A departing engineer with lingering VPN and vault access copies the project archive on the way out. Named accounts, same-day offboarding, and export monitoring are the controls. If you cannot confirm every former engineer's access is closed, that is where we would start.</p>
+
+          <h2>Office and shop-floor IT baseline</h2>
+
+          <ul>
+            <li><strong>Microsoft 365 Business Premium</strong> for office and engineering staff, with shop-floor and kiosk users on the appropriate lower-cost licensing. EDR, MDM, and identity hardening included. See the <a href="microsoft-365-small-business-settings-to-turn-on-2026.html">Microsoft 365 settings post</a>.</li>
+            <li><strong>Business-class internet with documented SLA</strong> and cellular failover, so the floor and the office do not go dark on a single fiber cut.</li>
+            <li><strong>Segmented network with real firewalls</strong> separating office, OT, and guest, plus engineered shop-floor Wi-Fi.</li>
+            <li><strong>Properly specced engineering workstations and a tuned CAD vault,</strong> not consumer PCs fighting large assemblies.</li>
+            <li><strong>UPS on servers and network gear</strong> and a documented PSPS plan.</li>
+            <li><strong>Tested backups</strong> of ERP, MES, and the CAD/PDM vault.</li>
+          </ul>
+
+          <p>The full program lives on the <a href="../managed-it-services.html">managed IT services page</a>, and the <a href="../engineering-it-services.html">engineering and A/E IT page</a> covers the CAD side in depth for shops with a heavy design function.</p>
+
+          <h2>What we steer manufacturers away from</h2>
+
+          <ul>
+            <li><strong>A flat network</strong> where the office and the machines share one segment. The single most common serious risk on a shop floor.</li>
+            <li><strong>Legacy controllers exposed to the internet</strong> for "remote support." Isolate and broker that access instead.</li>
+            <li><strong>A CAD vault backup nobody has test-restored.</strong> An untested backup of your most valuable asset is a guess.</li>
+            <li><strong>Shared logins</strong> on the floor or in the office. No audit trail, no offboarding, a CMMC and insurance finding.</li>
+            <li><strong>Treating CMMC as a future problem.</strong> The flow-down clock started in November 2025.</li>
+            <li><strong>Approving supplier banking changes by email.</strong> Every change gets a phone call.</li>
+            <li><strong>One overloaded server</strong> running ERP, the vault, and the domain with no redundancy and no monitoring.</li>
+          </ul>
+
+          <h2>A realistic budget for a Central Coast machine shop</h2>
+
+          <p>Numbers for a representative 40-person shop, roughly 25 office and engineering users plus shop-floor and kiosk accounts, running an ERP, a MES, and a CAD/PDM vault. Monthly, all-in, excluding CMMC remediation, which is a separate project:</p>
+
+          <ul>
+            <li><strong>Microsoft 365 (Business Premium for office/engineering, lower tiers for floor):</strong> $700&ndash;$1,000</li>
+            <li><strong>MDR / managed security:</strong> 25 core users &times; $25 = $625, plus OT monitoring</li>
+            <li><strong>Managed IT (help desk, patching, backup, identity, server care):</strong> 25 users &times; $150&ndash;$200 = $3,750&ndash;$5,000</li>
+            <li><strong>OT/shop-floor monitoring and segmentation management:</strong> $500&ndash;$1,500</li>
+            <li><strong>Connectivity + failover:</strong> $400&ndash;$800</li>
+            <li><strong>Managed firewalls and segmentation:</strong> $400&ndash;$800</li>
+            <li><strong>Tested backup (ERP, MES, CAD vault, Microsoft 365):</strong> $400&ndash;$900</li>
+          </ul>
+
+          <p>Total monthly IT spend lands roughly between <strong>$7,000 and $11,500 per month</strong> for a 40-person shop, before hardware and before CMMC remediation. The biggest mover is the per-user managed IT line. For comparison: industry reporting puts the median manufacturing ransomware breach around half a million dollars once downtime and recovery are counted, and a single missed aerospace or medical ship date can cost a contract. The IT budget is a fraction of one bad incident.</p>
+
+          <h2>Where this fits</h2>
+
+          <ul>
+            <li>The <a href="../manufacturing-it-services.html">manufacturing and industrial IT service page</a>, for the full Ghosxt program.</li>
+            <li>The <a href="../engineering-it-services.html">engineering and architecture IT page</a> and the <a href="engineering-architecture-it-cad-bim-central-coast.html">engineering IT post</a>, for the CAD and PLM side.</li>
+            <li>The <a href="../cybersecurity.html">cybersecurity service page</a>, for the underlying security stack.</li>
+            <li>The <a href="../network-design.html">network design service page</a>, for OT/IT segmentation and shop-floor Wi-Fi.</li>
+            <li>The <a href="../backup-disaster-recovery.html">backup and disaster recovery service page</a>, for the continuity layer.</li>
+            <li>The <a href="ransomware-2026-how-it-gets-in.html">2026 ransomware post</a>, for the attacker side.</li>
+            <li>The <a href="pge-psps-it-continuity-plan-central-coast.html">PSPS continuity plan</a>, for fire-season power loss.</li>
+          </ul>
+
+          <p>We support manufacturers across <a href="../salinas.html">Salinas</a>, <a href="../gilroy.html">Gilroy</a>, <a href="../hollister.html">Hollister</a>, <a href="../watsonville.html">Watsonville</a>, <a href="../san-jose.html">San Jose</a>, and the rest of the Central Coast and South Bay.</p>
+
+          <h2>FAQs about IT for manufacturers</h2>
+
+          <h3>We're a small shop, not a prime defense contractor. Does CMMC really apply to us?</h3>
+          <p>If you handle Federal Contract Information or Controlled Unclassified Information anywhere in a defense supply chain, even as a third- or fourth-tier subcontractor making a bracket or a machined part, CMMC requirements flow down to you. The 48 CFR final rule that took effect in late 2025 makes that flow-down mandatory. Phase 1, which began November 10, 2025, brings Level 1 or Level 2 self-assessment requirements into many new contracts, and Phase 2, on November 10, 2026, brings third-party Level 2 certification for contractors who handle CUI. The honest answer for most Central Coast shops is: read your contracts and your customers' flow-down clauses now, because the smaller you are, the more likely you are to be caught flat-footed. Misrepresenting your status carries False Claims Act exposure, so this is not a box to guess at.</p>
+
+          <h3>Our CNC machines run Windows XP or Windows 7. We can't patch or replace them. What do we do?</h3>
+          <p>You isolate them. Legacy machine controllers that cannot be patched are the single most common serious risk we find on a shop floor, and the answer is not to replace a working machine, it is to put it on a segmented operational-technology network that cannot reach the internet or the office, with tightly controlled access for the one vendor laptop that needs it. NIST SP 800-82, the standard for industrial control system security, is built around exactly this: compensating controls and segmentation for systems you cannot harden directly. A flat network where an XP controller sits next to the accounting PC means one phishing click can reach the machine that makes your parts. Segmentation is the control that lets a 15-year-old controller keep running safely.</p>
+
+          <h3>Why is manufacturing the number-one ransomware target?</h3>
+          <p>Because the economics favor the attacker. Manufacturing has been the most-targeted sector for ransomware for several years running across multiple industry reports, and the reasons are structural: downtime tolerance is near zero because a stopped line means missed customer ship dates and contract penalties, legacy operational technology is hard to patch, networks are often flat, and shops have historically under-invested in security relative to the value at risk. An attacker who can halt production knows you are under intense pressure to pay. The defense is the same stack that protects any high-value target, but applied with OT in mind: segmentation, EDR on everything that can run it, monitored email, identity hardening, and 24/7 detection that catches the intrusion before it reaches the floor.</p>
+
+          <h3>Our ERP and MES are hosted by the vendor. Do we still need our own backup?</h3>
+          <p>Yes. Hosted and SaaS vendors back up their platform for their own resilience, not for your accidental deletion, a bad data import, or a compromised admin account. If someone corrupts a bill of materials or an attacker deletes production records, the vendor restores the platform, not your specific data, and rarely on the timeline a stopped line demands. Independent backup of your ERP and MES exports, your Microsoft 365, and especially your CAD and PDM vault is a separate control. The CAD vault matters most: it is often terabytes of irreplaceable engineering work, and we routinely find shops whose vault backup has never once been test-restored.</p>
+
+          <h3>An engineer left and still had VPN access to the PLM and CAD vault. How bad is that?</h3>
+          <p>Bad, and common. Your CAD models, fixtures, programs, and customer drawings are the company's intellectual property, and a departing engineer with lingering VPN and vault access can copy the entire project archive on the way out. We have been called in after exactly this. The fix is named accounts, no shared logins, a documented same-day offboarding checklist that revokes VPN and PLM access the moment employment ends, and monitoring that flags a large vault export before it becomes a problem. If you cannot say with certainty that every former engineer's access is closed, that is the first assessment we would run.</p>
+
+          <h3>Is our shop-floor firewall enough cybersecurity for a manufacturer?</h3>
+          <p>No. A firewall at the internet edge does nothing about the flat network behind it, where an infected office laptop can reach a CNC controller, the ERP server, and the CAD vault on the same wire. Modern manufacturing security is segmentation plus identity: an operational-technology network separated from the office, MFA on every account, EDR on every device that can run it, monitored email security, and 24/7 detection and response. The edge firewall is one control among many, and on a flat shop network it is the one that gives the most false comfort.</p>
+
+          <div class="blog-post-cta">
+            <h3>Want a written read on your shop's IT and OT?</h3>
+            <p>30 minutes with a DoD-cleared engineer. We will walk through your shop-floor network, ERP/MES, CAD vault, CMMC exposure, and cybersecurity, and hand you back a written punch list of what to fix first, ordered by risk. No sales script, no obligation.</p>
+            <a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer">
+              <i class="fi fi-rs-calendar-day" aria-hidden="true"></i>
+              Book your free assessment
+            </a>
+          </div>
+
+          <p style="margin-top: 1.5rem; font-size: 0.95rem; color: rgba(0,0,0,0.7);">
+            Prefer to talk first? Email <a href="mailto:sales@ghosxt.com">sales@ghosxt.com</a> or call <a href="tel:+18312040501">(831) 204-0501</a>.
+          </p>
+        </div>
+      </div>
+    </main>
+    <footer class="footer" id="footerSection">
+      <div class="footer-container">
+        <div class="footer-brand-row">
+          <div class="footer-brand">
+            <img
+              src="../assets/img/ghosxt logo.webp"
+              alt="Ghosxt logo"
+              width="80"
+              height="80"
+              loading="lazy"
+            />
+            <div class="footer-brand-text">
+              <span class="footer-brand-name">GHOSXT</span>
+              <span class="footer-brand-tagline"
+                >Government-grade IT for small business.</span
+              >
+            </div>
+          </div>
+          <div class="footer-cta-block">
+            <a
+              href="https://calendly.com/ulises-ghosxt"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="footer-cta-btn"
+            >
+              <i class="fi fi-rs-calendar-day" aria-hidden="true"></i>
+              Schedule Free Assessment
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-grid">
+          <div class="footer-column">
+            <h3 class="footer-column-title">Company</h3>
+            <ul class="footer-links">
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="../about.html">About</a></li>
+              <li><a href="../services.html">Services</a></li>
+              <li><a href="../pricing.html">Pricing</a></li>
+              <li>
+                <a href="../website-development.html">Website Development</a>
+              </li>
+              <li><a href="../contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-column-title">Services</h3>
+            <ul class="footer-links">
+              <li><a href="../managed-it-services.html">Managed IT Services</a></li>
+              <li><a href="../help-desk-it-support.html">IT Help Desk &amp; Support</a></li>
+              <li><a href="../it-consulting-vcio.html">IT Consulting &amp; vCIO</a></li>
+              <li><a href="../cybersecurity.html">Cybersecurity</a></li>
+              <li><a href="../cloud-services.html">Cloud Services</a></li>
+              <li><a href="../backup-disaster-recovery.html">Backup &amp; Disaster Recovery</a></li>
+              <li><a href="../network-design.html">Network Design</a></li>
+              <li><a href="../website-development.html">Web Development</a></li>
+              <li><a href="../ctpat.html">C-TPAT Compliance</a></li>
+              <li><a href="../trucking-it-services.html">Trucking &amp; Logistics IT</a></li>
+              <li><a href="../agriculture-it-services.html">Agriculture &amp; Agribusiness IT</a></li>
+              <li><a href="../manufacturing-it-services.html">Manufacturing &amp; Industrial IT</a></li>
+              <li><a href="../professional-services-it.html">SMB Office &amp; Professional Services IT</a></li>
+              <li><a href="../healthcare-it-services.html">Healthcare &amp; Medical IT</a></li>
+              <li><a href="../property-management-it-services.html">Property Management IT</a></li>
+              <li><a href="../engineering-it-services.html">Engineering &amp; Architecture IT</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-column-title">Resources</h3>
+            <ul class="footer-links">
+              <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+              <li>
+                <a
+                  href="https://ticket.ghosxt.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Client Portal</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://calendly.com/ulises-ghosxt"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Free IT Assessment</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-column-title">Connect</h3>
+            <ul class="footer-links footer-social-links">
+              <li>
+                <a
+                  href="https://www.linkedin.com/company/ghosxt/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.063 2.063 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                  LinkedIn</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.facebook.com/GhosxtTech"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg>
+                  Facebook</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/ghosxttech/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+                  Instagram</a
+                >
+              </li>
+              <li>
+                <a href="mailto:sales@ghosxt.com"
+                  ><i class="fi fi-rs-envelope" aria-hidden="true"></i>
+                  sales@ghosxt.com</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <div class="footer-bottom">
+          <p class="footer-copyright">
+            &copy; 2026 Ghosxt. All rights reserved. Built by a cleared DoD
+            engineer.
+          </p>
+          <div class="footer-bottom-links">
+            <a href="../privacy-policy.html">Privacy Policy</a>
+            <span aria-hidden="true">&middot;</span>
+            <a
+              href="https://ticket.ghosxt.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Client Portal</a
+            >
+          </div>
+        </div>
+
+        <div class="service-areas-footer">
+          <h3>Service Areas</h3>
+          <ul>
+            <li><a href="../salinas.html">Salinas</a></li>
+            <li><a href="../monterey.html">Monterey</a></li>
+            <li><a href="../watsonville.html">Watsonville</a></li>
+            <li><a href="../hollister.html">Hollister</a></li>
+            <li><a href="../santa-cruz.html">Santa Cruz</a></li>
+            <li><a href="../gilroy.html">Gilroy</a></li>
+            <li><a href="../san-jose.html">San Jose</a></li>
+            <li><a href="../pacific-grove.html">Pacific Grove</a></li>
+            <li><a href="../carmel.html">Carmel</a></li>
+            <li><a href="../seaside.html">Seaside</a></li>
+            <li><a href="../marina.html">Marina</a></li>
+            <li><a href="../soledad.html">Soledad</a></li>
+            <li><a href="../king-city.html">King City</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="../assets/js/main.js?v=2026-05-31b" defer></script>
+    <!-- ghosxt:mobile-cta-bar -->
+    <div class="mobile-cta-bar" aria-label="Quick contact">
+      <a class="mcta-primary" href="tel:+18312040501">Call (831) 204-0501</a>
+      <a class="mcta-secondary" href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer">Book free assessment</a>
+    </div>
+  </body>
+</html>
