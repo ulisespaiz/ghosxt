@@ -7,7 +7,7 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from a DoD-cleared IT engineer.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Wed, 03 Jun 2026 16:30:06 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 04 Jun 2026 17:45:07 +0000</lastBuildDate>
     <pubDate>Wed, 03 Jun 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
     <item>
@@ -18,6 +18,15 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Industry IT</category>
       <description>A plain-talk IT and cybersecurity guide for law firms, CPA and accounting practices, financial advisors, and professional offices on the Central Coast. BEC and wire-fraud defense, client confidentiality, the FTC Safeguards Rule and IRS WISP, and a realistic budget. From a DoD-cleared engineer.</description>
+    </item>
+    <item>
+      <title>Cloud Services for Central Coast Small Business: What to Move, What to Keep, and How to Migrate in 2026</title>
+      <link>https://ghosxt.com/blog/cloud-services-small-business-central-coast-migration.html</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/cloud-services-small-business-central-coast-migration.html</guid>
+      <pubDate>Wed, 03 Jun 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cloud Services</category>
+      <description>A plain-talk cloud guide for Central Coast small business. What 'the cloud' actually means, what to move first, what to keep on-prem, a migration playbook with no surprise downtime, the real cost math, and how cloud helps through a PG&amp;amp;E shutoff. From a DoD-cleared engineer.</description>
     </item>
     <item>
       <title>Property Management IT in Monterey and Santa Cruz Counties: A 2026 Owner's Guide</title>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Industry IT</category>
       <description>What HIPAA actually requires of small medical and dental practices in Monterey County, Santa Cruz County, San Benito County, and Santa Clara County: the four IT pillars (identity, encryption, audit, backup), BAA basics, EHR considerations, common compliance gaps, and what it costs to do this right.</description>
-    </item>
-    <item>
-      <title>Cyber Insurance Renewal Checklist for Central Coast Small Businesses (2026)</title>
-      <link>https://ghosxt.com/blog/cyber-insurance-renewal-checklist-small-business-central-coast.html</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/cyber-insurance-renewal-checklist-small-business-central-coast.html</guid>
-      <pubDate>Sat, 16 May 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>What cyber insurance carriers actually require in 2026: MFA, EDR, immutable backups, patch cadence, security awareness training, incident response plan. The 12 questions on every modern application and how a Salinas, Monterey, Santa Cruz, or Santa Clara County small business should prepare for renewal.</description>
     </item>
   </channel>
 </rss>
