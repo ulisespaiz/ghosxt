@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from a DoD-cleared IT engineer.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Thu, 04 Jun 2026 17:45:07 +0000</lastBuildDate>
-    <pubDate>Wed, 03 Jun 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Fri, 05 Jun 2026 17:43:55 +0000</lastBuildDate>
+    <pubDate>Fri, 05 Jun 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>SPF, DKIM, and DMARC for Small Business: Stop Spoofing and Land in the Inbox (2026)</title>
+      <link>https://ghosxt.com/blog/email-authentication-spf-dkim-dmarc-small-business-2026.html</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/email-authentication-spf-dkim-dmarc-small-business-2026.html</guid>
+      <pubDate>Fri, 05 Jun 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>What SPF, DKIM, and DMARC actually do, why Google, Yahoo, and Microsoft now require them, how email authentication stops criminals spoofing your domain in invoice and wire-fraud scams, and a safe phased rollout that won't block your own mail. From a DoD-cleared engineer on the Central Coast.</description>
+    </item>
     <item>
       <title>IT for Law Firms, CPAs, and Professional Offices on the Central Coast: A 2026 Guide</title>
       <link>https://ghosxt.com/blog/professional-services-it-law-cpa-central-coast.html</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Managed IT in Salinas</category>
       <description>A plain-talk pricing guide for managed IT services in Salinas, Monterey County, Santa Cruz County, San Benito County, and Santa Clara County (San Jose, Gilroy): the four pricing models MSPs use, real 2026 ranges ($125-$250 per user per month), what should be included, and the hidden line items to watch for. Includes Ghosxt's actual published rates.</description>
-    </item>
-    <item>
-      <title>HIPAA-Compliant IT for Medical &amp;amp; Dental Practices in Monterey County</title>
-      <link>https://ghosxt.com/blog/hipaa-compliant-it-medical-dental-monterey-county.html</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/hipaa-compliant-it-medical-dental-monterey-county.html</guid>
-      <pubDate>Sat, 16 May 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Industry IT</category>
-      <description>What HIPAA actually requires of small medical and dental practices in Monterey County, Santa Cruz County, San Benito County, and Santa Clara County: the four IT pillars (identity, encryption, audit, backup), BAA basics, EHR considerations, common compliance gaps, and what it costs to do this right.</description>
     </item>
   </channel>
 </rss>
