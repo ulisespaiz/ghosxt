@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from a DoD-cleared IT engineer.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Sat, 06 Jun 2026 04:14:18 +0000</lastBuildDate>
-    <pubDate>Sat, 06 Jun 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Tue, 09 Jun 2026 18:10:34 +0000</lastBuildDate>
+    <pubDate>Tue, 09 Jun 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>June 2026 Patch Tuesday: 198 Fixes, 3 Zero-Days, and What an SMB Should Patch First</title>
+      <link>https://ghosxt.com/blog/june-2026-patch-tuesday-secure-boot-exchange-smb.html</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/june-2026-patch-tuesday-secure-boot-exchange-smb.html</guid>
+      <pubDate>Tue, 09 Jun 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>Microsoft's June 2026 Patch Tuesday is a heavy one: 198 vulnerabilities fixed and three zero-days, including a BitLocker bypass and an HTTP.sys server flaw. A plain-language breakdown of what's in it, what it means, and how a small business should protect itself this week, from a DoD-cleared engineer on the Central Coast.</description>
+    </item>
     <item>
       <title>Fake IT Workers Are Now Showing Up in Person: The Silent Ransom Group Escalation and How to Stop It</title>
       <link>https://ghosxt.com/blog/silent-ransom-group-fake-it-workers-in-person-access-smb-2026.html</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Managed IT in Salinas</category>
       <description>A plain-English guide to the difference between IT support, managed IT services, break-fix, MSPs, MSSPs, helpdesk, and co-managed IT. What each one actually means, what it costs, and which one a small business in Salinas, Monterey, Santa Cruz, or Santa Clara County actually needs.</description>
-    </item>
-    <item>
-      <title>IT Help, Help Desk &amp;amp; Tech Support for Small Businesses in Salinas</title>
-      <link>https://ghosxt.com/blog/it-help-help-desk-tech-support-small-business-salinas.html</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/it-help-help-desk-tech-support-small-business-salinas.html</guid>
-      <pubDate>Sat, 16 May 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Managed IT in Salinas</category>
-      <description>Need IT help, a help desk, break-fix support, or just someone to call when the printer dies? Ghosxt is the local Salinas option for small business IT support across Monterey, Santa Cruz, San Benito, and Santa Clara counties. Founder-led, fast response, flat-rate pricing.</description>
     </item>
   </channel>
 </rss>
