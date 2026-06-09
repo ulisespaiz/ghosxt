@@ -3,22 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>June 2026 Patch Tuesday: What an SMB Should Patch This Week (and the Secure Boot Deadline to Watch) | Ghosxt</title>
-    <meta name="description" content="June 2026 Patch Tuesday is a rare zero-day-free month, but two things still need attention: the permanent fix for the Exchange Outlook Web Access flaw that's been running on emergency mitigation, and a hard Secure Boot certificate deadline at the end of the month. What a small business should actually do this week, from a DoD-cleared engineer on the Central Coast." />
+    <title>June 2026 Patch Tuesday: 198 Fixes, 3 Zero-Days, and What an SMB Should Patch First | Ghosxt</title>
+    <meta name="description" content="Microsoft's June 2026 Patch Tuesday is a heavy one: 198 vulnerabilities fixed and three zero-days, including a BitLocker bypass and an HTTP.sys server flaw. A plain-language breakdown of what's in it, what it means, and how a small business should protect itself this week, from a DoD-cleared engineer on the Central Coast." />
     <link rel="canonical" href="https://ghosxt.com/blog/june-2026-patch-tuesday-secure-boot-exchange-smb.html" />
     <link rel="alternate" type="application/rss+xml" title="Ghosxt Blog" href="https://ghosxt.com/feed.xml" />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://ghosxt.com/blog/june-2026-patch-tuesday-secure-boot-exchange-smb.html" />
-    <meta property="og:title" content="June 2026 Patch Tuesday: What an SMB Should Patch This Week (and the Secure Boot Deadline to Watch) | Ghosxt" />
-    <meta property="og:description" content="June 2026 Patch Tuesday is a rare zero-day-free month, but two things still need attention: the permanent fix for the Exchange Outlook Web Access flaw that's been running on emergency mitigation, and a hard Secure Boot certificate deadline at the end of the month. What a small business should actually do this week, from a DoD-cleared engineer on the Central Coast." />
+    <meta property="og:title" content="June 2026 Patch Tuesday: 198 Fixes, 3 Zero-Days, and What an SMB Should Patch First | Ghosxt" />
+    <meta property="og:description" content="Microsoft's June 2026 Patch Tuesday is a heavy one: 198 vulnerabilities fixed and three zero-days, including a BitLocker bypass and an HTTP.sys server flaw. A plain-language breakdown of what's in it, what it means, and how a small business should protect itself this week, from a DoD-cleared engineer on the Central Coast." />
     <meta property="og:image" content="https://ghosxt.com/assets/img/og/blog-june-2026-patch-tuesday-secure-boot-exchange-smb.png" />
     <meta property="og:site_name" content="Ghosxt" />
     <meta property="article:published_time" content="2026-06-09" />
     <meta property="article:author" content="Ulises Paiz" />
     <meta name="robots" content="index, follow" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="June 2026 Patch Tuesday: What an SMB Should Patch This Week (and the Secure Boot Deadline to Watch) | Ghosxt" />
-    <meta name="twitter:description" content="A rare zero-day-free Patch Tuesday, the permanent Exchange OWA fix, and a Secure Boot certificate deadline at month's end. What a small business should do this week." />
+    <meta name="twitter:title" content="June 2026 Patch Tuesday: 198 Fixes, 3 Zero-Days, and What an SMB Should Patch First | Ghosxt" />
+    <meta name="twitter:description" content="198 vulnerabilities, three zero-days including a BitLocker bypass and an HTTP.sys server flaw. What's in June's Patch Tuesday and how a small business should protect itself this week." />
     <meta name="twitter:image" content="https://ghosxt.com/assets/img/og/blog-june-2026-patch-tuesday-secure-boot-exchange-smb.png" />
     <link rel="icon" href="../assets/img/favicon.ico" sizes="any" />
     <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml" />
@@ -41,15 +41,15 @@
           {
             "@type": "BlogPosting",
             "mainEntityOfPage": { "@type": "WebPage", "@id": "https://ghosxt.com/blog/june-2026-patch-tuesday-secure-boot-exchange-smb.html" },
-            "headline": "June 2026 Patch Tuesday: What an SMB Should Patch This Week (and the Secure Boot Deadline to Watch)",
-            "description": "June 2026 Patch Tuesday is a rare zero-day-free month, but two things still need attention: the permanent fix for the Exchange Outlook Web Access flaw that's been running on emergency mitigation, and a hard Secure Boot certificate deadline at the end of the month. What a small business should actually do this week.",
+            "headline": "June 2026 Patch Tuesday: 198 Fixes, 3 Zero-Days, and What an SMB Should Patch First",
+            "description": "Microsoft's June 2026 Patch Tuesday is a heavy one: 198 vulnerabilities fixed and three zero-days, including a BitLocker bypass and an HTTP.sys server flaw. A plain-language breakdown of what's in it, what it means, and how a small business should protect itself this week.",
             "image": "https://ghosxt.com/assets/img/og/blog-june-2026-patch-tuesday-secure-boot-exchange-smb.png",
             "author": { "@type": "Person", "name": "Ulises Paiz", "url": "https://ghosxt.com/about.html" },
             "publisher": { "@type": "Organization", "name": "Ghosxt", "logo": { "@type": "ImageObject", "url": "https://ghosxt.com/assets/img/ghosxt logo.webp" } },
             "datePublished": "2026-06-09",
             "dateModified": "2026-06-09",
             "articleSection": "Cybersecurity",
-            "keywords": "June 2026 Patch Tuesday, Microsoft security updates, CVE-2026-42897, Exchange Outlook Web Access, CVE-2026-45659, SharePoint RCE, Secure Boot certificate expiration, UEFI 2011 certificate, zero-day, patch management small business, Salinas, Monterey, Central Coast managed IT"
+            "keywords": "June 2026 Patch Tuesday, Microsoft security updates, 198 CVEs, zero-day, CVE-2026-50507 BitLocker, CVE-2026-49160 HTTP.sys, CVE-2026-45586, CVE-2026-42897 Exchange, CVE-2026-45659 SharePoint, Hyper-V, Remote Desktop, Secure Boot certificate, patch management small business, Salinas, Monterey, Central Coast managed IT"
           },
           {
             "@type": "BreadcrumbList",
@@ -64,10 +64,18 @@
             "mainEntity": [
               {
                 "@type": "Question",
-                "name": "Were there any zero-days in the June 2026 Patch Tuesday?",
+                "name": "How many vulnerabilities did Microsoft fix in the June 2026 Patch Tuesday, and were there zero-days?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "No, and that makes June unusual. This month's release shipped with no zero-day vulnerabilities, meaning nothing in it was being actively exploited or had been publicly disclosed before the patch arrived. That is a genuinely quiet Patch Tuesday and good news, but it is not a reason to skip the updates. A zero-day-free month simply means attackers were not yet using these specific flaws when Microsoft published the fix; once the patch is out, the vulnerabilities are public knowledge and criminals begin reverse-engineering them to attack the businesses that delay. The window between a patch being released and being applied is exactly when 'not exploited' turns into 'exploited.' Quiet months are the easy ones to get current on; take advantage of it."
+                  "text": "Microsoft fixed 198 vulnerabilities in the June 9, 2026 release, making it one of the heaviest Patch Tuesdays of the year so far, and it included three zero-days, flaws that were already being exploited or were publicly known before the fix shipped. By type, the release is dominated by elevation-of-privilege flaws (around 63) and remote-code-execution flaws (around 54), with multiple Critical-rated RCEs in Remote Desktop, Hyper-V, and Office. After a couple of lighter months, this is a busy one, and the combination of three zero-days and many Critical issues means it should be tested and deployed promptly rather than left for the end of your normal cycle."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What are the three zero-days and which matters most to a small business?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The three are CVE-2026-50507, a BitLocker security-feature bypass that lets someone with physical or local access to a device get around full-disk encryption; CVE-2026-49160, an HTTP.sys denial-of-service flaw in the HTTP/2 stack that can knock an internet-facing Windows web server offline with a crafted request; and CVE-2026-45586, a flaw confirmed as known to attackers before the patch was available. For most small businesses the BitLocker bypass is the one to feel in your gut, because it maps to a real everyday risk: a stolen or lost laptop. If you run any internet-facing Windows web server, the HTTP.sys flaw moves to the top of your list. The honest answer, though, is that all three are zero-days and the whole update should go out quickly."
                 }
               },
               {
@@ -75,15 +83,15 @@
                 "name": "What's the most important thing to patch this month?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "For most small businesses, the standard Windows and Office updates through Windows Update cover the essentials, and this month that includes the permanent fix for the Exchange Outlook Web Access flaw (CVE-2026-42897) that had been held off with emergency mitigation, plus a SharePoint Server remote-code-execution fix (CVE-2026-45659) rolled into the release. If you run an on-premises Exchange or SharePoint server, those are your priority and should be applied promptly. But the item with an actual deadline this month is not a CVE at all: it is the Secure Boot certificate update, which has a hard cutoff at the end of June and needs to be validated on every device before then."
+                  "text": "Install the full Windows and Office updates through Windows Update on every machine, because that covers the three zero-days and the bulk of the 198 fixes. Then prioritize by what you run: if you have laptops that leave the building, the BitLocker bypass makes prompt patching and confirmed disk encryption a priority; if you run an internet-facing Windows web server, the HTTP.sys flaw is urgent; and if you self-host Exchange or SharePoint, this release carries the permanent fix for the Exchange Outlook Web Access flaw CVE-2026-42897 and a SharePoint remote-code-execution fix CVE-2026-45659. Separately, this month also has the Secure Boot certificate deadline at the end of June, which needs to be confirmed on every device."
                 }
               },
               {
                 "@type": "Question",
-                "name": "What is the Secure Boot certificate expiration, and do we need to worry about it?",
+                "name": "What is the Secure Boot certificate deadline, and do we need to worry about it?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Secure Boot is the protection that stops malicious code from loading before Windows starts, and it works by trusting components signed with certificates that were issued back in 2011. Those original certificates are now reaching the end of their validity in 2026, with this cycle landing at the end of June. Microsoft has been distributing updated certificates so devices keep a valid chain of trust, but the rollout is not automatic and guaranteed on every machine, which is the catch. A device that does not receive the updated certificates in time can lose the ability to trust newly signed boot components and to receive certain boot-related security updates, quietly weakening one of its foundational protections. For a small business this is not a fire drill, but it is a real deadline that needs someone to confirm, device by device, that the certificate update has actually applied."
+                  "text": "Secure Boot is the protection that stops malicious code from loading before Windows starts, and it works by trusting components signed with certificates issued back in 2011. Those original certificates are reaching the end of their validity in 2026, with this cycle landing at the end of June. Microsoft has been distributing updated certificates so devices keep a valid chain of trust, but the rollout is not automatic and guaranteed on every machine, which is the catch. A device that does not receive the updated certificates in time can lose the ability to trust newly signed boot components and to receive certain boot-related security updates, quietly weakening one of its foundational protections. For a small business this is not a fire drill, but it is a real deadline that needs someone to confirm, device by device, that the certificate update has actually applied."
                 }
               },
               {
@@ -96,10 +104,10 @@
               },
               {
                 "@type": "Question",
-                "name": "If there are no zero-days this month, can we skip the updates?",
+                "name": "Can we wait to install this month's updates?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "No. The absence of zero-days describes the state of the world on the day the patch shipped, not the day after. Once Microsoft publishes the fixes, the underlying vulnerabilities are documented and attackers actively study them to build exploits aimed at the businesses that did not patch, which is why so many real-world breaches use vulnerabilities that had a fix available months earlier. Skipping a quiet month also lets you drift out of a routine that only works when it is consistent. And this particular month carries the Secure Boot certificate deadline, so skipping it has a concrete downside beyond the usual. Treat every Patch Tuesday as routine maintenance; the quiet ones are simply easier to stay on top of."
+                  "text": "Not on this one. June carries three zero-days that attackers already knew about, plus multiple Critical remote-code-execution flaws, which is exactly the profile where waiting is dangerous. The moment a patch ships, the underlying flaw is public and criminals build exploits aimed at whoever has not applied it, and with zero-days some of that work was already done before patch day. A short, sensible test-then-deploy window is fine and smart; leaving a 198-CVE, three-zero-day update sitting for weeks is not. If you cannot patch immediately, prioritize the zero-days and any internet-facing servers first, then catch up the rest quickly."
                 }
               }
             ]
@@ -168,11 +176,11 @@
           <div class="blog-post-meta">
             <time datetime="2026-06-09">June 9, 2026</time>
             <span>&middot;</span>
-            <span>9 min read</span>
+            <span>10 min read</span>
             <span>&middot;</span>
             <span class="blog-card-tag">Cybersecurity</span>
           </div>
-          <h1>June 2026 Patch Tuesday: What an SMB Should Patch This Week (and the Secure Boot Deadline to Watch)</h1>
+          <h1>June 2026 Patch Tuesday: 198 Fixes, 3 Zero-Days, and What an SMB Should Patch First</h1>
           <div class="blog-post-author">
             <strong>Ulises Paiz</strong>, Founder, Ghosxt
           </div>
@@ -181,93 +189,120 @@
       <div class="blog-post-body">
         <div class="container">
           <aside class="blog-post-quickfix" aria-label="Summary and what to do today">
-            <span class="quickfix-label">TL;DR &mdash; a quiet Patch Tuesday with one real deadline</span>
-            <h2>June's Patch Tuesday is a rare zero-day-free month, which is good news but not a reason to skip it. Two things still need attention: the permanent fix for the Exchange Outlook Web Access flaw that has been running on emergency mitigation, and a hard Secure Boot certificate deadline at the end of the month that needs to be confirmed on every device.</h2>
+            <span class="quickfix-label">TL;DR &mdash; a heavy month: patch promptly, prioritize the zero-days</span>
+            <h2>Microsoft's June 2026 Patch Tuesday fixes 198 vulnerabilities, including three zero-days &mdash; flaws already being exploited or publicly known before the patch shipped. This is one of the busiest releases of the year, so it should be tested and deployed quickly, not left for later.</h2>
             <ul>
-              <li><strong>No zero-days this month.</strong> Nothing in the release was being actively exploited when it shipped &mdash; unusual and welcome, but the clock starts the moment a patch is public.</li>
-              <li><strong>Exchange OWA gets its permanent fix.</strong> CVE-2026-42897, the Outlook Web Access flaw that had been held off with Microsoft's Emergency Mitigation Service, is properly patched this month. On-prem Exchange shops: apply it.</li>
-              <li><strong>SharePoint RCE rolled in.</strong> CVE-2026-45659, a remote-code-execution fix first shipped out-of-band on May 21, is folded into this release.</li>
-              <li><strong>The Secure Boot deadline is the real story.</strong> The 2011-era certificates underpinning Secure Boot reach end of validity this cycle, at the end of June. Updated certificates need to be confirmed on every machine before then.</li>
+              <li><strong>198 CVEs in total,</strong> dominated by elevation-of-privilege (~63) and remote-code-execution (~54) flaws, with multiple Critical RCEs in Remote Desktop, Hyper-V, and Office.</li>
+              <li><strong>Three zero-days:</strong> a BitLocker bypass (CVE-2026-50507), an HTTP.sys server denial-of-service (CVE-2026-49160), and a publicly-known flaw (CVE-2026-45586).</li>
+              <li><strong>The BitLocker bypass is the one most SMBs should feel</strong> &mdash; it maps to a lost or stolen laptop. If you run an internet-facing Windows web server, the HTTP.sys flaw jumps to the top.</li>
+              <li><strong>On-prem servers:</strong> the permanent fix for the Exchange Outlook Web Access flaw (CVE-2026-42897) and a SharePoint RCE (CVE-2026-45659) are both in this release.</li>
+              <li><strong>Plus a deadline:</strong> the 2011-era Secure Boot certificates expire at the end of June and need confirming on every device.</li>
             </ul>
             <p>What a small business should do this week:</p>
             <ol>
-              <li>Let Windows Update install this month's updates and reboot &mdash; on every PC and every server, not just the easy ones.</li>
-              <li>If you run on-prem Exchange or SharePoint, prioritize those server updates now.</li>
-              <li>Confirm the Secure Boot certificate update has actually applied to each device before the end-of-June cutoff.</li>
+              <li>Install this month's Windows and Office updates and reboot &mdash; every PC, every server, no exceptions.</li>
+              <li>Confirm disk encryption on laptops and patch them first; lock down any internet-facing Windows server.</li>
+              <li>Confirm the Secure Boot certificate update applied before the end-of-June cutoff.</li>
             </ol>
             <p>This continues the <a href="may-2026-patch-tuesday-windows-dns-word-rce-smb.html">May 2026 Patch Tuesday post</a>; the <a href="../managed-it-services.html">managed IT page</a> covers how we run patching so it is verified, not just hoped.</p>
           </aside>
 
-          <p>Microsoft shipped its June 2026 security updates today, the second Tuesday of the month, on schedule as always. Most months I lead this write-up with the one or two flaws that are already being exploited, because those are the ones that turn a slow patch cycle into a breach. This month is different, and in a good way: June is one of the rare Patch Tuesdays with no zero-days at all. Nothing in the release was under active attack or publicly disclosed before the fix arrived.</p>
+          <p>Microsoft shipped its June 2026 security updates today, the second Tuesday of the month, and after a couple of comparatively light releases this one is a doozy: <strong>198 vulnerabilities fixed, including three zero-days</strong>. The pre-Patch-Tuesday forecasts had this pegged as a quiet month; the actual release was anything but. When a single update carries that many fixes and three flaws that were already known to attackers, the message for a small business is simple: this is not one to leave sitting.</p>
 
-          <p>That does not mean there is nothing to do. It means the work this month is about staying current and hitting one specific deadline rather than racing an active exploit. There are still two items a Central Coast small business should care about: a long-running Exchange flaw finally getting its permanent fix, and a Secure Boot certificate deadline at the end of June that is easy to miss precisely because it is not a flashy CVE. Here is the plain-language version.</p>
+          <p>Below is the plain-language version, what is actually in it, what the shape of the release tells you, the three zero-days and what each one means for a Central Coast business, and a prioritized list of how to protect yourself this week. You do not need to read CVE bulletins to make good decisions here; you need to know what to do first.</p>
 
-          <h2>"No zero-days" is good news, with an asterisk</h2>
+          <h2>The headline number: 198 fixes, and what the shape tells you</h2>
 
-          <p>A zero-day is a vulnerability that attackers are already using, or that has been made public, before a patch exists, so defenders are starting from behind. A month with none means Microsoft got ahead of the attackers on everything in this release. That is genuinely reassuring and, frankly, a nice break from the recent run of months where something was already being exploited on day one.</p>
-
-          <p>The asterisk is important, though. The day a patch ships, the vulnerability it fixes stops being secret. Attackers download the same update everyone else does, compare it against the old code to find exactly what changed, and build exploits aimed at the organizations that have not yet applied it. This is why so many real breaches use vulnerabilities that had a fix available weeks or months earlier: the danger is rarely the zero-day, it is the patch gap. A quiet month is the <em>easiest</em> time to close that gap, not a reason to leave it open. The point of patching on a schedule, covered in the <a href="protect-small-business-cyberattack-10-essentials-2026.html">10 essentials</a>, is that it works only when it is consistent.</p>
-
-          <h2>The Exchange Outlook Web Access flaw finally gets a real patch</h2>
-
-          <p>If you have been following along, CVE-2026-42897 is not new. It is the cross-site-scripting flaw in Outlook Web Access on on-premises Exchange Server that we wrote about when it first surfaced, in the <a href="exchange-server-zero-day-cve-2026-42897-may-2026-smb.html">Exchange zero-day post</a>. Rated Critical, it had been held at bay by Microsoft's Exchange Emergency Mitigation Service, the automatic, on-by-default stopgap that buys time but is not a cure. This month it gets its permanent fix.</p>
-
-          <p>For the small businesses still running their own Exchange server, this is your priority update. Emergency mitigations are exactly that, temporary, and they can be disabled, fail to apply, or be incomplete; the actual patch is what closes the door. If you are not sure whether you still run on-prem Exchange or whether the mitigation has been active on your server, that uncertainty is itself worth a phone call. It is also one more nudge toward the cloud-hosted email that removes this whole category of server-maintenance risk, the trade-off we walk through in the <a href="cloud-services-small-business-central-coast-migration.html">cloud migration guide</a>.</p>
-
-          <h2>A SharePoint server fix, folded in</h2>
-
-          <p>The other server-side item is CVE-2026-45659, a remote-code-execution vulnerability in Windows SharePoint Server rated 8.8, which Microsoft first addressed in an out-of-band update on May 21 and has now rolled into the June Patch Tuesday release. SharePoint RCE flaws are a recurring theme, as we noted with a different one in the <a href="sharepoint-server-rce-cve-2026-33112-may-2026-smb.html">May SharePoint post</a>, and the pattern is consistent: if you run SharePoint on your own server, these are high-priority because a remote-code-execution flaw lets an attacker run their code on the machine. Most small businesses that use SharePoint do so through Microsoft 365, where Microsoft patches the back end for you; this one is aimed at the shrinking number who still self-host.</p>
-
-          <h2>The real deadline this month: Secure Boot certificates</h2>
-
-          <p>Here is the item with an actual date attached, and the one most likely to be overlooked because it is not a vulnerability in the usual sense. Secure Boot is the mechanism that stops malicious code from loading <em>before</em> Windows even starts, a foundational protection against some of the nastiest, hardest-to-detect malware. It works by trusting boot components that are cryptographically signed with certificates, and the certificates most devices have relied on were issued back in 2011.</p>
-
-          <p>Those 2011-era certificates are now reaching the end of their validity through 2026, and this cycle lands at the end of June. Microsoft has been distributing updated certificates so that devices keep an unbroken chain of trust, but, and this is the catch, the rollout is not silently guaranteed on every machine. A device that does not receive the updated Secure Boot certificates in time can lose the ability to trust newly signed boot components and to take certain boot-related security updates, quietly eroding a protection most owners do not even know they have.</p>
-
-          <p>For a small business, this is not a reason to panic, but it is a reason to act deliberately. The right move is to make sure this month's updates are installed and then <strong>confirm, device by device, that the Secure Boot certificate update has actually applied</strong> before the end-of-June cutoff. That verification step is the part that gets skipped, because "Windows Update ran" is not the same as "the certificate update landed and Secure Boot is healthy." On a handful of machines this is manageable by hand; across a couple dozen devices and a server or two, it is exactly the kind of thing a <a href="../managed-it-services.html">managed IT</a> setup tracks and proves rather than assumes.</p>
-
-          <h2>What a small business should actually do this week</h2>
+          <p>198 CVEs is one of the heaviest Patch Tuesdays of 2026 so far. Raw counts can be noise, but the <em>shape</em> of a release is informative, and this month it breaks down roughly like this:</p>
 
           <ul>
-            <li><strong>Install and reboot, everywhere.</strong> Let Windows Update apply this month's updates on every PC and every server, and reboot when prompted. The machine someone keeps deferring is the one that bites you.</li>
-            <li><strong>Prioritize on-prem Exchange and SharePoint.</strong> If you self-host either, apply the CVE-2026-42897 and CVE-2026-45659 fixes now rather than at the end of your normal cycle.</li>
-            <li><strong>Verify Secure Boot certificates.</strong> Confirm the certificate update has applied on each device before the end-of-June deadline, not just that updates "ran."</li>
-            <li><strong>Don't forget the orphans.</strong> The old PC running one critical app, the server in the closet, the laptop that lives in someone's bag, those are where patch gaps hide.</li>
-            <li><strong>Keep your backups current.</strong> Patching reduces the odds of an incident; a tested backup is what saves you when one happens anyway. See the <a href="backup-disaster-recovery-small-business-2026.html">backup and DR post</a>.</li>
+            <li><strong>~63 elevation-of-privilege flaws.</strong> These let an attacker who already has some access on a machine promote themselves to full administrator or system control. They are the workhorse of a real intrusion: rarely the way in, almost always the next step. A privilege-escalation-heavy month is a reminder that "they only got a normal user account" is not the same as "we're fine."</li>
+            <li><strong>~54 remote-code-execution flaws.</strong> These are the dangerous ones, because they let an attacker run their own code on your system, sometimes with little or no interaction from your staff. RCE is how a malicious document or a crafted network request turns into a foothold. Several of this month's RCEs are rated Critical.</li>
+            <li><strong>The rest</strong> spread across information disclosure, spoofing, denial of service, security-feature bypass, and tampering.</li>
+          </ul>
+
+          <p>The takeaway is not the arithmetic; it is that this release touches both halves of an attack, the break-in (RCE) and the takeover (EoP), in volume. That is exactly the profile you patch promptly.</p>
+
+          <h2>The three zero-days, and what to do about each</h2>
+
+          <p>A zero-day is a flaw that attackers already knew about, or that was publicly disclosed, before a fix existed, so the usual head start defenders get from patching early is gone. June has three:</p>
+
+          <ul>
+            <li><strong>CVE-2026-50507 &mdash; BitLocker security-feature bypass.</strong> Rated Important, this lets someone with physical or local access to a device get around BitLocker full-disk encryption. For a small business this is the one to feel in your gut, because it maps to an everyday risk: a laptop left in a car, lost at an airport, or stolen from an office. Encryption is what makes a stolen laptop a hardware loss instead of a data breach; a bypass chips at that. It is the same category of problem we covered in the <a href="yellowkey-greenplasma-windows-bitlocker-bypass-privesc.html">BitLocker bypass post</a>. Patch your laptops first and confirm encryption is actually on.</li>
+            <li><strong>CVE-2026-49160 &mdash; HTTP.sys denial of service.</strong> Rated Important, this flaw in the HTTP/2 stack lets a crafted stream of requests knock an internet-facing Windows web server offline. If you host anything public on a Windows server, this moves to the top of your list, because availability is the whole point of a public server and a DoS takes it down.</li>
+            <li><strong>CVE-2026-45586 &mdash; publicly known before patch.</strong> Microsoft confirmed this one was known to attackers ahead of the fix. The detail matters less than the principle: a flaw that is public on patch day is one attackers are already working with, which is the entire argument for not delaying.</li>
+          </ul>
+
+          <h2>Critical clusters worth knowing about</h2>
+
+          <p>Beyond the zero-days, a few groups of Critical remote-code-execution fixes stand out, and they map to things real small businesses run:</p>
+
+          <ul>
+            <li><strong>Remote Desktop Client.</strong> The Remote Desktop client picked up the most concentrated cluster of RCE patches this month, several Critical (for example CVE-2026-44801 and CVE-2026-44799). If your team connects to remote machines, this is relevant, and it is a reminder that exposed Remote Desktop remains one of the most attacked surfaces in small business.</li>
+            <li><strong>Windows Hyper-V.</strong> Several Critical RCEs (such as CVE-2026-47652 and CVE-2026-45607) allow a guest virtual machine to escape and run code on the host. If you run virtualization, a guest-to-host escape is the nightmare scenario, one compromised VM reaching everything.</li>
+            <li><strong>Microsoft Office.</strong> Critical RCEs in Outlook and Word (including CVE-2026-45458 and CVE-2026-45456) are exploitable through malicious documents. This is the everyday path: an attachment that does not just phish for a password but runs code when opened. It is why the email-side defenses in the <a href="email-authentication-spf-dkim-dmarc-small-business-2026.html">email authentication post</a> and staff awareness matter alongside the patch.</li>
+          </ul>
+
+          <h2>The on-prem server items: Exchange and SharePoint</h2>
+
+          <p>Two server-side fixes deserve a direct call-out for the businesses still self-hosting. The first is <strong>CVE-2026-42897</strong>, the Outlook Web Access flaw in on-premises Exchange Server we wrote about in the <a href="exchange-server-zero-day-cve-2026-42897-may-2026-smb.html">Exchange zero-day post</a>; it had been held at bay by Microsoft's Exchange Emergency Mitigation Service, and this month it finally gets its permanent patch. Emergency mitigations are temporary by design, so if you run on-prem Exchange, apply the real fix now. The second is <strong>CVE-2026-45659</strong>, a SharePoint Server remote-code-execution flaw (CVSS 8.8) first shipped out-of-band on May 21 and now rolled into this release, in the same family as the one in our <a href="sharepoint-server-rce-cve-2026-33112-may-2026-smb.html">May SharePoint post</a>. Most small businesses use Exchange and SharePoint through Microsoft 365, where Microsoft patches the back end; these are for the shrinking number who still self-host, and they are exactly the kind of server-maintenance burden the <a href="cloud-services-small-business-central-coast-migration.html">cloud migration guide</a> is about removing.</p>
+
+          <h2>Also this month: the Secure Boot certificate deadline</h2>
+
+          <p>One item this month is not a vulnerability in the usual sense but has a real date attached. Secure Boot is the protection that stops malicious code from loading <em>before</em> Windows even starts, and it works by trusting boot components signed with certificates, certificates that, on most devices, date to 2011. Those 2011-era certificates are reaching the end of their validity through 2026, and this cycle lands at the end of June.</p>
+
+          <p>Microsoft has been distributing updated certificates so devices keep an unbroken chain of trust, but the rollout is not silently guaranteed on every machine. A device that does not receive the updated certificates in time can lose the ability to trust newly signed boot components and to take certain boot-related security updates, quietly eroding a protection most owners do not know they have. This is not a panic, but it is a deadline: install this month's updates and then <strong>confirm, device by device, that the Secure Boot certificate update has actually applied</strong>. "Windows Update ran" is not the same as "the certificate landed," and that verification step is the one that gets skipped.</p>
+
+          <h2>How to protect yourself this week</h2>
+
+          <p>Translated into action, in priority order:</p>
+
+          <ul>
+            <li><strong>Install and reboot, everywhere.</strong> Run this month's Windows and Office updates on every PC and every server and reboot when prompted. That single step covers the three zero-days and the bulk of the 198 fixes. The machine someone keeps deferring is the one that bites you.</li>
+            <li><strong>Laptops first, and verify encryption.</strong> Because of the BitLocker bypass, prioritize portable devices and confirm full-disk encryption is actually enabled, so a lost or stolen laptop stays a hardware problem, not a data breach.</li>
+            <li><strong>Lock down internet-facing Windows servers.</strong> Patch them promptly for the HTTP.sys flaw, and while you are there, confirm that Remote Desktop is not exposed directly to the internet, it should sit behind a VPN or a gateway, never open to the world.</li>
+            <li><strong>Self-hosted Exchange or SharePoint: apply now.</strong> The CVE-2026-42897 and CVE-2026-45659 fixes are priority server updates, not end-of-cycle ones.</li>
+            <li><strong>Confirm Secure Boot certificates.</strong> Verify the certificate update applied on each device before the end-of-June deadline.</li>
+            <li><strong>Keep MFA and backups in place.</strong> Patching lowers the odds of an incident; multi-factor authentication limits what a foothold can reach, and a tested backup is what saves you when something gets through anyway. See the <a href="protect-small-business-cyberattack-10-essentials-2026.html">10 essentials</a> and the <a href="backup-disaster-recovery-small-business-2026.html">backup and DR post</a>.</li>
+            <li><strong>Do not forget the orphans.</strong> The old PC running one critical app, the server in the closet, the laptop that lives in a bag, those are where patch gaps hide.</li>
           </ul>
 
           <h2>Where this fits</h2>
 
           <ul>
-            <li>The <a href="may-2026-patch-tuesday-windows-dns-word-rce-smb.html">May 2026 Patch Tuesday post</a>, for last month's busier release and the patch-cadence habit.</li>
-            <li>The <a href="exchange-server-zero-day-cve-2026-42897-may-2026-smb.html">Exchange zero-day post</a> and the <a href="sharepoint-server-rce-cve-2026-33112-may-2026-smb.html">May SharePoint post</a>, for the on-prem server flaws getting attention this month.</li>
+            <li>The <a href="may-2026-patch-tuesday-windows-dns-word-rce-smb.html">May 2026 Patch Tuesday post</a>, for last month's release and the patch-cadence habit.</li>
+            <li>The <a href="yellowkey-greenplasma-windows-bitlocker-bypass-privesc.html">BitLocker bypass post</a>, for the encryption-bypass class behind this month's headline zero-day.</li>
+            <li>The <a href="exchange-server-zero-day-cve-2026-42897-may-2026-smb.html">Exchange zero-day post</a> and the <a href="sharepoint-server-rce-cve-2026-33112-may-2026-smb.html">May SharePoint post</a>, for the on-prem server flaws fixed this month.</li>
             <li>The <a href="windows-10-end-of-life-small-business-what-to-do-2026.html">Windows 10 end-of-life post</a>, for the machines that will stop getting any of these updates and what to do about them.</li>
-            <li>The <a href="protect-small-business-cyberattack-10-essentials-2026.html">10 essentials</a>, for where patching sits in the full priority order.</li>
-            <li>The <a href="../managed-it-services.html">managed IT page</a>, for patch management that is verified across every device, and the <a href="../cybersecurity.html">cybersecurity page</a> for the broader defense.</li>
+            <li>The <a href="protect-small-business-cyberattack-10-essentials-2026.html">10 essentials</a> and the <a href="../cybersecurity.html">cybersecurity page</a>, for where patching sits in the full defense.</li>
+            <li>The <a href="../managed-it-services.html">managed IT page</a>, for patch management that is verified across every device.</li>
           </ul>
 
           <p>We run monthly patch management for small businesses across <a href="../salinas.html">Salinas</a>, <a href="../monterey.html">Monterey</a>, <a href="../santa-cruz.html">Santa Cruz</a>, <a href="../watsonville.html">Watsonville</a>, and <a href="../san-jose.html">San Jose</a>, and the rest of the Central Coast, so "we patch every month" is something you can prove, not just hope.</p>
 
           <h2>FAQs about the June 2026 Patch Tuesday</h2>
 
-          <h3>Were there any zero-days in the June 2026 Patch Tuesday?</h3>
-          <p>No, and that makes June unusual. This month's release shipped with no zero-day vulnerabilities, meaning nothing in it was being actively exploited or had been publicly disclosed before the patch arrived. That is a genuinely quiet Patch Tuesday and good news, but it is not a reason to skip the updates. A zero-day-free month simply means attackers were not yet using these specific flaws when Microsoft published the fix; once the patch is out, the vulnerabilities are public knowledge and criminals begin reverse-engineering them to attack the businesses that delay. The window between a patch being released and being applied is exactly when "not exploited" turns into "exploited." Quiet months are the easy ones to get current on; take advantage of it.</p>
+          <h3>How many vulnerabilities did Microsoft fix in the June 2026 Patch Tuesday, and were there zero-days?</h3>
+          <p>Microsoft fixed 198 vulnerabilities in the June 9, 2026 release, making it one of the heaviest Patch Tuesdays of the year so far, and it included three zero-days, flaws that were already being exploited or were publicly known before the fix shipped. By type, the release is dominated by elevation-of-privilege flaws (around 63) and remote-code-execution flaws (around 54), with multiple Critical-rated RCEs in Remote Desktop, Hyper-V, and Office. After a couple of lighter months, this is a busy one, and the combination of three zero-days and many Critical issues means it should be tested and deployed promptly rather than left for the end of your normal cycle.</p>
+
+          <h3>What are the three zero-days and which matters most to a small business?</h3>
+          <p>The three are CVE-2026-50507, a BitLocker security-feature bypass that lets someone with physical or local access to a device get around full-disk encryption; CVE-2026-49160, an HTTP.sys denial-of-service flaw in the HTTP/2 stack that can knock an internet-facing Windows web server offline with a crafted request; and CVE-2026-45586, a flaw confirmed as known to attackers before the patch was available. For most small businesses the BitLocker bypass is the one to feel in your gut, because it maps to a real everyday risk: a stolen or lost laptop. If you run any internet-facing Windows web server, the HTTP.sys flaw moves to the top of your list. The honest answer, though, is that all three are zero-days and the whole update should go out quickly.</p>
 
           <h3>What's the most important thing to patch this month?</h3>
-          <p>For most small businesses, the standard Windows and Office updates through Windows Update cover the essentials, and this month that includes the permanent fix for the Exchange Outlook Web Access flaw (CVE-2026-42897) that had been held off with emergency mitigation, plus a SharePoint Server remote-code-execution fix (CVE-2026-45659) rolled into the release. If you run an on-premises Exchange or SharePoint server, those are your priority and should be applied promptly. But the item with an actual deadline this month is not a CVE at all: it is the Secure Boot certificate update, which has a hard cutoff at the end of June and needs to be validated on every device before then.</p>
+          <p>Install the full Windows and Office updates through Windows Update on every machine, because that covers the three zero-days and the bulk of the 198 fixes. Then prioritize by what you run: if you have laptops that leave the building, the BitLocker bypass makes prompt patching and confirmed disk encryption a priority; if you run an internet-facing Windows web server, the HTTP.sys flaw is urgent; and if you self-host Exchange or SharePoint, this release carries the permanent fix for the Exchange Outlook Web Access flaw CVE-2026-42897 and a SharePoint remote-code-execution fix CVE-2026-45659. Separately, this month also has the Secure Boot certificate deadline at the end of June, which needs to be confirmed on every device.</p>
 
-          <h3>What is the Secure Boot certificate expiration, and do we need to worry about it?</h3>
-          <p>Secure Boot is the protection that stops malicious code from loading before Windows starts, and it works by trusting components signed with certificates that were issued back in 2011. Those original certificates are now reaching the end of their validity in 2026, with this cycle landing at the end of June. Microsoft has been distributing updated certificates so devices keep a valid chain of trust, but the rollout is not automatic and guaranteed on every machine, which is the catch. A device that does not receive the updated certificates in time can lose the ability to trust newly signed boot components and to receive certain boot-related security updates, quietly weakening one of its foundational protections. For a small business this is not a fire drill, but it is a real deadline that needs someone to confirm, device by device, that the certificate update has actually applied.</p>
+          <h3>What is the Secure Boot certificate deadline, and do we need to worry about it?</h3>
+          <p>Secure Boot is the protection that stops malicious code from loading before Windows starts, and it works by trusting components signed with certificates issued back in 2011. Those original certificates are reaching the end of their validity in 2026, with this cycle landing at the end of June. Microsoft has been distributing updated certificates so devices keep a valid chain of trust, but the rollout is not automatic and guaranteed on every machine, which is the catch. A device that does not receive the updated certificates in time can lose the ability to trust newly signed boot components and to receive certain boot-related security updates, quietly weakening one of its foundational protections. For a small business this is not a fire drill, but it is a real deadline that needs someone to confirm, device by device, that the certificate update has actually applied.</p>
 
           <h3>We're a small business with no IT staff. How do we keep up with Patch Tuesday every month?</h3>
           <p>The honest answer is that doing it well by hand is hard, which is why most small businesses either fall behind or never confirm that updates actually landed. The practical baseline is to make sure Windows Update is enabled and not endlessly deferred on every machine, reboot when asked rather than clicking "remind me later" for weeks, and not forget the servers and the one old PC running a critical app that everyone avoids touching. Beyond that baseline, managed patch management is exactly the kind of unglamorous, high-value work a managed IT provider handles: updates are deployed centrally, tested, and then verified across every device, including the servers and the edge cases, so "we patch monthly" becomes something you can actually prove rather than hope.</p>
 
-          <h3>If there are no zero-days this month, can we skip the updates?</h3>
-          <p>No. The absence of zero-days describes the state of the world on the day the patch shipped, not the day after. Once Microsoft publishes the fixes, the underlying vulnerabilities are documented and attackers actively study them to build exploits aimed at the businesses that did not patch, which is why so many real-world breaches use vulnerabilities that had a fix available months earlier. Skipping a quiet month also lets you drift out of a routine that only works when it is consistent. And this particular month carries the Secure Boot certificate deadline, so skipping it has a concrete downside beyond the usual. Treat every Patch Tuesday as routine maintenance; the quiet ones are simply easier to stay on top of.</p>
+          <h3>Can we wait to install this month's updates?</h3>
+          <p>Not on this one. June carries three zero-days that attackers already knew about, plus multiple Critical remote-code-execution flaws, which is exactly the profile where waiting is dangerous. The moment a patch ships, the underlying flaw is public and criminals build exploits aimed at whoever has not applied it, and with zero-days some of that work was already done before patch day. A short, sensible test-then-deploy window is fine and smart; leaving a 198-CVE, three-zero-day update sitting for weeks is not. If you cannot patch immediately, prioritize the zero-days and any internet-facing servers first, then catch up the rest quickly.</p>
 
           <div class="blog-post-cta">
             <h3>Not sure your updates actually landed? Let's verify.</h3>
-            <p>30 minutes with a DoD-cleared engineer. We'll check whether this month's updates, the Exchange and SharePoint fixes, and the Secure Boot certificate update have truly applied across your machines, and set up patch management you can prove. No jargon, no obligation.</p>
+            <p>30 minutes with a DoD-cleared engineer. We'll check whether this month's updates, the three zero-days, the Exchange and SharePoint fixes, and the Secure Boot certificate update have truly applied across your machines, and set up patch management you can prove. No jargon, no obligation.</p>
             <a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer">
               <i class="fi fi-rs-calendar-day" aria-hidden="true"></i>
               Book your free assessment

@@ -7,17 +7,17 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from a DoD-cleared IT engineer.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Tue, 09 Jun 2026 18:00:54 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 09 Jun 2026 18:10:34 +0000</lastBuildDate>
     <pubDate>Tue, 09 Jun 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
     <item>
-      <title>June 2026 Patch Tuesday: What an SMB Should Patch This Week (and the Secure Boot Deadline to Watch)</title>
+      <title>June 2026 Patch Tuesday: 198 Fixes, 3 Zero-Days, and What an SMB Should Patch First</title>
       <link>https://ghosxt.com/blog/june-2026-patch-tuesday-secure-boot-exchange-smb.html</link>
       <guid isPermaLink="true">https://ghosxt.com/blog/june-2026-patch-tuesday-secure-boot-exchange-smb.html</guid>
       <pubDate>Tue, 09 Jun 2026 00:00:00 +0000</pubDate>
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
-      <description>June 2026 Patch Tuesday is a rare zero-day-free month, but two things still need attention: the permanent fix for the Exchange Outlook Web Access flaw that's been running on emergency mitigation, and a hard Secure Boot certificate deadline at the end of the month. What a small business should actually do this week, from a DoD-cleared engineer on the Central Coast.</description>
+      <description>Microsoft's June 2026 Patch Tuesday is a heavy one: 198 vulnerabilities fixed and three zero-days, including a BitLocker bypass and an HTTP.sys server flaw. A plain-language breakdown of what's in it, what it means, and how a small business should protect itself this week, from a DoD-cleared engineer on the Central Coast.</description>
     </item>
     <item>
       <title>Fake IT Workers Are Now Showing Up in Person: The Silent Ransom Group Escalation and How to Stop It</title>
