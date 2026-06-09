@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from a DoD-cleared IT engineer.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Fri, 05 Jun 2026 17:43:55 +0000</lastBuildDate>
-    <pubDate>Fri, 05 Jun 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Sat, 06 Jun 2026 04:14:18 +0000</lastBuildDate>
+    <pubDate>Sat, 06 Jun 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>Fake IT Workers Are Now Showing Up in Person: The Silent Ransom Group Escalation and How to Stop It</title>
+      <link>https://ghosxt.com/blog/silent-ransom-group-fake-it-workers-in-person-access-smb-2026.html</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/silent-ransom-group-fake-it-workers-in-person-access-smb-2026.html</guid>
+      <pubDate>Sat, 06 Jun 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>Google's Mandiant and the FBI warn that the Silent Ransom Group has escalated from phone calls to sending fake IT workers into offices in person to steal data. How the in-person attack works, why backups won't save you, why it's not just law firms, and the controls that actually stop it. From a DoD-cleared engineer on the Central Coast.</description>
+    </item>
     <item>
       <title>SPF, DKIM, and DMARC for Small Business: Stop Spoofing and Land in the Inbox (2026)</title>
       <link>https://ghosxt.com/blog/email-authentication-spf-dkim-dmarc-small-business-2026.html</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Managed IT in Salinas</category>
       <description>Need IT help, a help desk, break-fix support, or just someone to call when the printer dies? Ghosxt is the local Salinas option for small business IT support across Monterey, Santa Cruz, San Benito, and Santa Clara counties. Founder-led, fast response, flat-rate pricing.</description>
-    </item>
-    <item>
-      <title>How Much Does Managed IT Cost in Salinas in 2026?</title>
-      <link>https://ghosxt.com/blog/managed-it-services-cost-salinas-2026.html</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/managed-it-services-cost-salinas-2026.html</guid>
-      <pubDate>Sat, 16 May 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Managed IT in Salinas</category>
-      <description>A plain-talk pricing guide for managed IT services in Salinas, Monterey County, Santa Cruz County, San Benito County, and Santa Clara County (San Jose, Gilroy): the four pricing models MSPs use, real 2026 ranges ($125-$250 per user per month), what should be included, and the hidden line items to watch for. Includes Ghosxt's actual published rates.</description>
     </item>
   </channel>
 </rss>
