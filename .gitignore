@@ -426,3 +426,6 @@ FodyWeavers.xsd
 
 # Local-only OG-image build fonts (see scripts/generate-og-images.py)
 scripts/fonts/
+
+# Build output (scripts/build-dist.py)
+dist/

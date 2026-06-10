@@ -1462,30 +1462,7 @@
     <script src="assets/js/main.js?v=2026-05-31b" defer></script>
 
     <!-- FAQ Accordion -->
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const faqItems = document.querySelectorAll(".faq-item");
-        faqItems.forEach((item) => {
-          const question = item.querySelector(".faq-question");
-          question.addEventListener("click", () => {
-            faqItems.forEach((otherItem) => {
-              if (
-                otherItem !== item &&
-                otherItem.classList.contains("active")
-              ) {
-                otherItem.classList.remove("active");
-                otherItem
-                  .querySelector(".faq-question")
-                  .setAttribute("aria-expanded", "false");
-              }
-            });
-            item.classList.toggle("active");
-            const isExpanded = item.classList.contains("active");
-            question.setAttribute("aria-expanded", isExpanded);
-          });
-        });
-      });
-    </script>
+    <script src="assets/js/faq-accordion.js?v=2026-06-10a" defer></script>
     <!-- ghosxt:mobile-cta-bar -->
     <div class="mobile-cta-bar" aria-label="Quick contact">
       <a class="mcta-primary" href="tel:+18312040501">Call (831) 204-0501</a>

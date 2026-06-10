@@ -6087,3 +6087,56 @@ main > div:not(.hero-section) .problem-badge .badge-container,
     padding: 1.5rem;
   }
 }
+
+/* ============================================
+   TRUST BAR (ratings cards above testimonials)
+   ============================================ */
+
+.trust-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  max-width: 800px;
+  margin: 0 auto 3.5rem;
+}
+
+.trust-card {
+  flex: 1 1 200px;
+  min-width: 150px;
+  background: var(--ghosxt-white);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  padding: 1.75rem 1rem;
+  text-align: center;
+}
+
+.trust-stars {
+  color: #f4b400;
+  font-size: 1.3rem;
+  letter-spacing: 3px;
+  line-height: 1;
+  margin-bottom: 0.6rem;
+}
+
+.trust-number {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: var(--ghosxt-red-1);
+  line-height: 1;
+}
+
+.trust-label {
+  font-size: 0.78rem;
+  color: rgba(0, 0, 0, 0.55);
+  margin-top: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+.trust-label a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
