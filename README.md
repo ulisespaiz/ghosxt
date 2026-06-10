@@ -4,18 +4,20 @@ Ghosxt's website.
 
 ## Build and deploy
 
-`wrangler.jsonc` serves static assets from `dist/`, which is produced by the
-build script (it copies the site files and minifies CSS/JS with esbuild via
-`npx`). Always build before deploying or running the dev server:
+`wrangler.jsonc` serves static assets from `dist/`, which is produced by
+`scripts/build-dist.py` (it copies the site files and minifies CSS/JS with
+esbuild via `npx`). The script is wired into wrangler as a custom build
+command, so both `npx wrangler deploy` and `npx wrangler dev` run it
+automatically — including Cloudflare Workers Builds deploys triggered by Git
+pushes:
 
 ```bash
-python3 scripts/build-dist.py && npx wrangler deploy
+npx wrangler deploy
 ```
 
-For local development, `python3 scripts/build-dist.py --no-minify` is faster;
-then run `npx wrangler dev`. `dist/` is git-ignored — never edit files inside
-it, they are overwritten on every build. If esbuild is unavailable the script
-falls back to deploying unminified assets rather than failing.
+`dist/` is git-ignored — never edit files inside it, they are overwritten on
+every build. If esbuild is unavailable the script falls back to deploying
+unminified assets rather than failing.
 
 ## Content-Security-Policy notes
 

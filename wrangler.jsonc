@@ -3,11 +3,17 @@
   "name": "ghosxt",
   "compatibility_date": "2026-05-02",
   "main": "src/worker.js",
+  // Wrangler runs this before deploy/dev, so dist/ always exists — including
+  // in Cloudflare Workers Builds (Git integration), which deploys from a
+  // fresh checkout.
+  "build": {
+    "command": "python3 scripts/build-dist.py"
+  },
   "observability": {
     "enabled": true
   },
   "assets": {
-    // Built by scripts/build-dist.py — run it before `wrangler deploy`/`wrangler dev`.
+    // Built by scripts/build-dist.py via the build command above.
     "directory": "./dist",
     "binding": "ASSETS",
     "not_found_handling": "404-page"
