@@ -7,7 +7,8 @@
     "enabled": true
   },
   "assets": {
-    "directory": ".",
+    // Built by scripts/build-dist.py — run it before `wrangler deploy`/`wrangler dev`.
+    "directory": "./dist",
     "binding": "ASSETS",
     "not_found_handling": "404-page"
   }

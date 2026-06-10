@@ -2,6 +2,37 @@
 
 Ghosxt's website.
 
+## Build and deploy
+
+`wrangler.jsonc` serves static assets from `dist/`, which is produced by the
+build script (it copies the site files and minifies CSS/JS with esbuild via
+`npx`). Always build before deploying or running the dev server:
+
+```bash
+python3 scripts/build-dist.py && npx wrangler deploy
+```
+
+For local development, `python3 scripts/build-dist.py --no-minify` is faster;
+then run `npx wrangler dev`. `dist/` is git-ignored — never edit files inside
+it, they are overwritten on every build. If esbuild is unavailable the script
+falls back to deploying unminified assets rather than failing.
+
+## Content-Security-Policy notes
+
+`_headers` sets a CSP whose `script-src` does **not** allow `'unsafe-inline'`:
+
+- New pages must not use inline `<script>` blocks or inline `on*=` event
+  handler attributes. Put scripts in `assets/js/` and reference them with
+  `<script src="..." defer>`.
+- The one exception is the async-stylesheet pattern
+  `onload="this.media='all'"`, which is allowed via `'unsafe-hashes'` and a
+  sha256 hash of that exact string. The attribute value must stay
+  **byte-for-byte identical** on every page (no added spaces or quote
+  changes), or font/icon CSS will silently fail to load on that page.
+
+`style-src` still allows `'unsafe-inline'` because many pages use inline
+`style=""` attributes.
+
 ## Sitemap maintenance
 
 Run the sitemap generator whenever a root-level page or blog page is added, removed, or intentionally re-canonicalized:
@@ -13,6 +44,8 @@ python3 scripts/generate-sitemap.py
 The generator scans `*.html` and `blog/*.html`, skips pages with a `noindex` robots meta tag, reads each page's canonical URL, and writes `sitemap.xml`. It normalizes both `index.html` and `blog/index.html` canonicals to their directory URLs (`/` and `/blog/`) so the sitemap does not publish duplicate `/blog/` versus `/blog/index.html` entries.
 
 Existing `lastmod`, `changefreq`, and `priority` values in `sitemap.xml` are carried forward for URLs already listed there. New URLs get a `lastmod` date only; add `changefreq` or `priority` to the generated sitemap afterward only when that value is an intentional SEO signal, then rerun the generator to verify it is preserved.
+
+To resync every `lastmod` with each page's actual git last-commit date (e.g. after a batch of content edits), run `python3 scripts/generate-sitemap.py --refresh-lastmod` — commit the page changes first, since the dates come from `git log`.
 
 ## Blog file-explorer page
 
