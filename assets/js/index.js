@@ -770,7 +770,7 @@ function startConversation(scenario) {
 function showResetButton() {
     const chatOptions = document.getElementById('chatOptions');
     chatOptions.innerHTML = `
-        <button class="reset-btn" onclick="resetChat()">
+        <button class="reset-btn" data-action="reset">
             <i class="fi fi-rs-rotate-right"></i>
             Try Another Option
         </button>
@@ -787,18 +787,34 @@ function resetChat() {
 
     // Show initial options again
     chatOptions.innerHTML = `
-        <button class="option-btn" onclick="startConversation(0)">
+        <button class="option-btn" data-scenario="0">
             <i class="fi fi-rs-error-bug"></i> Our website homepage is broken, we need to fix it ASAP
         </button>
-        <button class="option-btn" onclick="startConversation(1)">
+        <button class="option-btn" data-scenario="1">
             <i class="fi fi-rs-error-bug"></i> We got a suspicious email, might be a security breach
         </button>
-        <button class="option-btn" onclick="startConversation(2)">
+        <button class="option-btn" data-scenario="2">
             <i class="fi fi-rs-error-bug"></i> Our database server is down, losing money by the minute
         </button>
     `;
     chatOptions.style.display = 'flex';
 }
+
+// Delegated handler for chat buttons (static and innerHTML-injected) so no
+// inline onclick attributes are needed, which lets CSP block inline script.
+(function () {
+    const chatOptions = document.getElementById('chatOptions');
+    if (!chatOptions) return;
+    chatOptions.addEventListener('click', function (e) {
+        const btn = e.target.closest('button');
+        if (!btn) return;
+        if (btn.dataset.scenario !== undefined) {
+            startConversation(Number(btn.dataset.scenario));
+        } else if (btn.dataset.action === 'reset') {
+            resetChat();
+        }
+    });
+})();
 
 
 // Add this to your script.js file
@@ -824,13 +840,13 @@ function unlockRemainingSections() {
 function showResetButton() {
     const chatOptions = document.getElementById('chatOptions');
     chatOptions.innerHTML = `
-        <button class="reset-btn" onclick="resetChat()">
+        <button class="reset-btn" data-action="reset">
             <i class="fi fi-rs-rotate-right"></i>
             Try Another Option
         </button>
     `;
     chatOptions.style.display = 'flex';
-    
+
     // Unlock remaining sections on first conversation completion
     unlockRemainingSections();
 }
