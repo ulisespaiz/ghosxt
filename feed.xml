@@ -7,9 +7,36 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from a DoD-cleared IT engineer.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Tue, 09 Jun 2026 18:10:34 +0000</lastBuildDate>
-    <pubDate>Tue, 09 Jun 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Fri, 12 Jun 2026 21:22:47 +0000</lastBuildDate>
+    <pubDate>Fri, 12 Jun 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>How Much Does Cybersecurity Cost for a Small Business in 2026?</title>
+      <link>https://ghosxt.com/blog/cybersecurity-cost-small-business-2026.html</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/cybersecurity-cost-small-business-2026.html</guid>
+      <pubDate>Fri, 12 Jun 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>A straight answer on what cybersecurity costs a small business in 2026: real monthly per-user ranges, what drives the price, what's actually included, what's free, and the far bigger cost of a breach. From a DoD-cleared engineer on the Central Coast.</description>
+    </item>
+    <item>
+      <title>Do I Need Managed IT Services? 7 Signs Your Small Business Has Outgrown Break-Fix</title>
+      <link>https://ghosxt.com/blog/do-i-need-managed-it-services-signs-small-business.html</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/do-i-need-managed-it-services-signs-small-business.html</guid>
+      <pubDate>Fri, 12 Jun 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Managed IT</category>
+      <description>Not sure if your small business needs a managed IT provider? Here are seven clear signs you've outgrown break-fix and ad-hoc support, what managed IT actually changes, and how to know when it's worth it. From a DoD-cleared engineer on the Central Coast.</description>
+    </item>
+    <item>
+      <title>Best IT Support in Monterey: How to Choose the Right Company (2026)</title>
+      <link>https://ghosxt.com/blog/best-it-support-in-monterey.html</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/best-it-support-in-monterey.html</guid>
+      <pubDate>Fri, 12 Jun 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Managed IT</category>
+      <description>Looking for the best IT support in Monterey? A practical guide to choosing a managed IT and cybersecurity provider on the Monterey Peninsula: what to look for, the questions to ask, the red flags to avoid, and why local matters. From a DoD-cleared engineer.</description>
+    </item>
     <item>
       <title>June 2026 Patch Tuesday: 198 Fixes, 3 Zero-Days, and What an SMB Should Patch First</title>
       <link>https://ghosxt.com/blog/june-2026-patch-tuesday-secure-boot-exchange-smb.html</link>
@@ -252,33 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Managed IT in Salinas</category>
       <description>An honest comparison of five real managed IT services providers serving Salinas, Monterey County, Santa Cruz County, San Benito County, and Santa Clara County (San Jose, Gilroy) in 2026: Ghosxt, SRS Networks, Alvarez Technology Group, Pinnacle Technology Services, and Adaptive Information Systems. Public-info only, with bias disclosed upfront.</description>
-    </item>
-    <item>
-      <title>Switching IT Providers: A Checklist for Salinas &amp;amp; Monterey Small Businesses</title>
-      <link>https://ghosxt.com/blog/switching-it-providers-salinas-monterey-checklist.html</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/switching-it-providers-salinas-monterey-checklist.html</guid>
-      <pubDate>Sat, 16 May 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Managed IT in Salinas</category>
-      <description>A practical, owner-tested checklist for switching managed IT providers in Salinas, Monterey, Santa Cruz, San Benito, and Santa Clara counties (including San Jose and Gilroy): how to know it's time, what you own vs what your MSP owns, the access-recovery sequence to run BEFORE giving notice, and a 30/14/0-day transition timeline.</description>
-    </item>
-    <item>
-      <title>PG&amp;amp;E PSPS Preparedness: IT Continuity Plan for Central Coast &amp;amp; South Bay Small Businesses</title>
-      <link>https://ghosxt.com/blog/pge-psps-it-continuity-plan-central-coast.html</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/pge-psps-it-continuity-plan-central-coast.html</guid>
-      <pubDate>Sat, 16 May 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Industry IT</category>
-      <description>A practical IT continuity plan for PG&amp;amp;E Public Safety Power Shutoff events in Monterey County, Santa Cruz County, San Benito County, and Santa Clara County. UPS sizing, generators, cellular failover, cloud-first architecture, and what to do in the 48-hour notice window.</description>
-    </item>
-    <item>
-      <title>IT Support vs. Managed IT Services: What's the Difference?</title>
-      <link>https://ghosxt.com/blog/it-support-vs-managed-it-services-difference.html</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/it-support-vs-managed-it-services-difference.html</guid>
-      <pubDate>Sat, 16 May 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Managed IT in Salinas</category>
-      <description>A plain-English guide to the difference between IT support, managed IT services, break-fix, MSPs, MSSPs, helpdesk, and co-managed IT. What each one actually means, what it costs, and which one a small business in Salinas, Monterey, Santa Cruz, or Santa Clara County actually needs.</description>
     </item>
   </channel>
 </rss>
