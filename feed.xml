@@ -7,7 +7,7 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from a DoD-cleared IT engineer.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Fri, 12 Jun 2026 21:10:35 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 12 Jun 2026 21:36:05 +0000</lastBuildDate>
     <pubDate>Fri, 12 Jun 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
     <item>
@@ -18,6 +18,15 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>This week CISA added actively-exploited flaws in Check Point VPN and Ivanti Sentry to its must-patch catalog, plus a Chrome browser bug. Edge devices are the ransomware front door, and attackers move within days. What it means for a small business and the steps to take now, from a DoD-cleared engineer on the Central Coast.</description>
+    </item>
+    <item>
+      <title>Shadow AI: Your Team Is Already Pasting Company Data Into ChatGPT — Here's How to Handle It</title>
+      <link>https://ghosxt.com/blog/shadow-ai-employees-chatgpt-data-small-business-2026.html</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/shadow-ai-employees-chatgpt-data-small-business-2026.html</guid>
+      <pubDate>Tue, 09 Jun 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>Your employees are already using ChatGPT and other AI tools at work, often with sensitive company and client data. The real risk isn't the robots, it's data leaving your control. Why banning backfires, what should never be pasted into a public AI tool, and how a small business can govern AI safely, from a DoD-cleared engineer on the Central Coast.</description>
     </item>
     <item>
       <title>June 2026 Patch Tuesday: 198 Fixes, 3 Zero-Days, and What an SMB Should Patch First</title>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Managed IT in Salinas</category>
       <description>A practical, owner-tested checklist for switching managed IT providers in Salinas, Monterey, Santa Cruz, San Benito, and Santa Clara counties (including San Jose and Gilroy): how to know it's time, what you own vs what your MSP owns, the access-recovery sequence to run BEFORE giving notice, and a 30/14/0-day transition timeline.</description>
-    </item>
-    <item>
-      <title>PG&amp;amp;E PSPS Preparedness: IT Continuity Plan for Central Coast &amp;amp; South Bay Small Businesses</title>
-      <link>https://ghosxt.com/blog/pge-psps-it-continuity-plan-central-coast.html</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/pge-psps-it-continuity-plan-central-coast.html</guid>
-      <pubDate>Sat, 16 May 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Industry IT</category>
-      <description>A practical IT continuity plan for PG&amp;amp;E Public Safety Power Shutoff events in Monterey County, Santa Cruz County, San Benito County, and Santa Clara County. UPS sizing, generators, cellular failover, cloud-first architecture, and what to do in the 48-hour notice window.</description>
     </item>
   </channel>
 </rss>
