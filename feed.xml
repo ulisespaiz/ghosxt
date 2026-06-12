@@ -7,7 +7,7 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from a DoD-cleared IT engineer.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Fri, 12 Jun 2026 21:36:05 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 12 Jun 2026 21:38:23 +0000</lastBuildDate>
     <pubDate>Fri, 12 Jun 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
     <item>
@@ -18,6 +18,33 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>This week CISA added actively-exploited flaws in Check Point VPN and Ivanti Sentry to its must-patch catalog, plus a Chrome browser bug. Edge devices are the ransomware front door, and attackers move within days. What it means for a small business and the steps to take now, from a DoD-cleared engineer on the Central Coast.</description>
+    </item>
+    <item>
+      <title>How Much Does Cybersecurity Cost for a Small Business in 2026?</title>
+      <link>https://ghosxt.com/blog/cybersecurity-cost-small-business-2026.html</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/cybersecurity-cost-small-business-2026.html</guid>
+      <pubDate>Fri, 12 Jun 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>A straight answer on what cybersecurity costs a small business in 2026: real monthly per-user ranges, what drives the price, what's actually included, what's free, and the far bigger cost of a breach. From a DoD-cleared engineer on the Central Coast.</description>
+    </item>
+    <item>
+      <title>Do I Need Managed IT Services? 7 Signs Your Small Business Has Outgrown Break-Fix</title>
+      <link>https://ghosxt.com/blog/do-i-need-managed-it-services-signs-small-business.html</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/do-i-need-managed-it-services-signs-small-business.html</guid>
+      <pubDate>Fri, 12 Jun 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Managed IT</category>
+      <description>Not sure if your small business needs a managed IT provider? Here are seven clear signs you've outgrown break-fix and ad-hoc support, what managed IT actually changes, and how to know when it's worth it. From a DoD-cleared engineer on the Central Coast.</description>
+    </item>
+    <item>
+      <title>Best IT Support in Monterey: How to Choose the Right Company (2026)</title>
+      <link>https://ghosxt.com/blog/best-it-support-in-monterey.html</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/best-it-support-in-monterey.html</guid>
+      <pubDate>Fri, 12 Jun 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Managed IT</category>
+      <description>Looking for the best IT support in Monterey? A practical guide to choosing a managed IT and cybersecurity provider on the Monterey Peninsula: what to look for, the questions to ask, the red flags to avoid, and why local matters. From a DoD-cleared engineer.</description>
     </item>
     <item>
       <title>Shadow AI: Your Team Is Already Pasting Company Data Into ChatGPT — Here's How to Handle It</title>
@@ -252,33 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>Adversary handoff from initial access to a second threat actor has dropped from 8 hours to 22 seconds in three years. Human-paced security operations cannot keep up. Plain-talk guidance for small business from a DoD-cleared engineer.</description>
-    </item>
-    <item>
-      <title>Top 5 Website Design Companies in Salinas &amp;amp; Monterey Bay (2026)</title>
-      <link>https://ghosxt.com/blog/top-website-design-companies-salinas-monterey-bay.html</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/top-website-design-companies-salinas-monterey-bay.html</guid>
-      <pubDate>Sat, 16 May 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Web Development</category>
-      <description>An honest comparison of five real website design companies serving Salinas, Monterey, Santa Cruz, San Benito, and Santa Clara counties in 2026: Ghosxt, Monterey Premier, Mag One Media, Peakify Marketing, and Zestful Media &amp;amp; Design. Public-info only; Ghosxt is on the list with bias disclosed upfront.</description>
-    </item>
-    <item>
-      <title>Top 5 Managed IT Services Providers in Salinas &amp;amp; Monterey Bay (2026)</title>
-      <link>https://ghosxt.com/blog/top-managed-it-providers-salinas-monterey-bay.html</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/top-managed-it-providers-salinas-monterey-bay.html</guid>
-      <pubDate>Sat, 16 May 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Managed IT in Salinas</category>
-      <description>An honest comparison of five real managed IT services providers serving Salinas, Monterey County, Santa Cruz County, San Benito County, and Santa Clara County (San Jose, Gilroy) in 2026: Ghosxt, SRS Networks, Alvarez Technology Group, Pinnacle Technology Services, and Adaptive Information Systems. Public-info only, with bias disclosed upfront.</description>
-    </item>
-    <item>
-      <title>Switching IT Providers: A Checklist for Salinas &amp;amp; Monterey Small Businesses</title>
-      <link>https://ghosxt.com/blog/switching-it-providers-salinas-monterey-checklist.html</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/switching-it-providers-salinas-monterey-checklist.html</guid>
-      <pubDate>Sat, 16 May 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Managed IT in Salinas</category>
-      <description>A practical, owner-tested checklist for switching managed IT providers in Salinas, Monterey, Santa Cruz, San Benito, and Santa Clara counties (including San Jose and Gilroy): how to know it's time, what you own vs what your MSP owns, the access-recovery sequence to run BEFORE giving notice, and a 30/14/0-day transition timeline.</description>
     </item>
   </channel>
 </rss>
