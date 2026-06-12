@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from a DoD-cleared IT engineer.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Fri, 12 Jun 2026 21:22:47 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 12 Jun 2026 21:38:23 +0000</lastBuildDate>
     <pubDate>Fri, 12 Jun 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>Your VPN Is the Front Door: This Week's Actively-Exploited Check Point and Ivanti Flaws, and What to Do</title>
+      <link>https://ghosxt.com/blog/vpn-edge-device-flaws-actively-exploited-smb-june-2026.html</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/vpn-edge-device-flaws-actively-exploited-smb-june-2026.html</guid>
+      <pubDate>Fri, 12 Jun 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>This week CISA added actively-exploited flaws in Check Point VPN and Ivanti Sentry to its must-patch catalog, plus a Chrome browser bug. Edge devices are the ransomware front door, and attackers move within days. What it means for a small business and the steps to take now, from a DoD-cleared engineer on the Central Coast.</description>
+    </item>
     <item>
       <title>How Much Does Cybersecurity Cost for a Small Business in 2026?</title>
       <link>https://ghosxt.com/blog/cybersecurity-cost-small-business-2026.html</link>
@@ -36,6 +45,15 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Managed IT</category>
       <description>Looking for the best IT support in Monterey? A practical guide to choosing a managed IT and cybersecurity provider on the Monterey Peninsula: what to look for, the questions to ask, the red flags to avoid, and why local matters. From a DoD-cleared engineer.</description>
+    </item>
+    <item>
+      <title>Shadow AI: Your Team Is Already Pasting Company Data Into ChatGPT — Here's How to Handle It</title>
+      <link>https://ghosxt.com/blog/shadow-ai-employees-chatgpt-data-small-business-2026.html</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/shadow-ai-employees-chatgpt-data-small-business-2026.html</guid>
+      <pubDate>Tue, 09 Jun 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>Your employees are already using ChatGPT and other AI tools at work, often with sensitive company and client data. The real risk isn't the robots, it's data leaving your control. Why banning backfires, what should never be pasted into a public AI tool, and how a small business can govern AI safely, from a DoD-cleared engineer on the Central Coast.</description>
     </item>
     <item>
       <title>June 2026 Patch Tuesday: 198 Fixes, 3 Zero-Days, and What an SMB Should Patch First</title>
@@ -261,24 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>Adversary handoff from initial access to a second threat actor has dropped from 8 hours to 22 seconds in three years. Human-paced security operations cannot keep up. Plain-talk guidance for small business from a DoD-cleared engineer.</description>
-    </item>
-    <item>
-      <title>Top 5 Website Design Companies in Salinas &amp;amp; Monterey Bay (2026)</title>
-      <link>https://ghosxt.com/blog/top-website-design-companies-salinas-monterey-bay.html</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/top-website-design-companies-salinas-monterey-bay.html</guid>
-      <pubDate>Sat, 16 May 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Web Development</category>
-      <description>An honest comparison of five real website design companies serving Salinas, Monterey, Santa Cruz, San Benito, and Santa Clara counties in 2026: Ghosxt, Monterey Premier, Mag One Media, Peakify Marketing, and Zestful Media &amp;amp; Design. Public-info only; Ghosxt is on the list with bias disclosed upfront.</description>
-    </item>
-    <item>
-      <title>Top 5 Managed IT Services Providers in Salinas &amp;amp; Monterey Bay (2026)</title>
-      <link>https://ghosxt.com/blog/top-managed-it-providers-salinas-monterey-bay.html</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/top-managed-it-providers-salinas-monterey-bay.html</guid>
-      <pubDate>Sat, 16 May 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Managed IT in Salinas</category>
-      <description>An honest comparison of five real managed IT services providers serving Salinas, Monterey County, Santa Cruz County, San Benito County, and Santa Clara County (San Jose, Gilroy) in 2026: Ghosxt, SRS Networks, Alvarez Technology Group, Pinnacle Technology Services, and Adaptive Information Systems. Public-info only, with bias disclosed upfront.</description>
     </item>
   </channel>
 </rss>
