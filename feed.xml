@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from a DoD-cleared IT engineer.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Tue, 09 Jun 2026 18:10:34 +0000</lastBuildDate>
-    <pubDate>Tue, 09 Jun 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Fri, 12 Jun 2026 21:10:35 +0000</lastBuildDate>
+    <pubDate>Fri, 12 Jun 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>Your VPN Is the Front Door: This Week's Actively-Exploited Check Point and Ivanti Flaws, and What to Do</title>
+      <link>https://ghosxt.com/blog/vpn-edge-device-flaws-actively-exploited-smb-june-2026.html</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/vpn-edge-device-flaws-actively-exploited-smb-june-2026.html</guid>
+      <pubDate>Fri, 12 Jun 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>This week CISA added actively-exploited flaws in Check Point VPN and Ivanti Sentry to its must-patch catalog, plus a Chrome browser bug. Edge devices are the ransomware front door, and attackers move within days. What it means for a small business and the steps to take now, from a DoD-cleared engineer on the Central Coast.</description>
+    </item>
     <item>
       <title>June 2026 Patch Tuesday: 198 Fixes, 3 Zero-Days, and What an SMB Should Patch First</title>
       <link>https://ghosxt.com/blog/june-2026-patch-tuesday-secure-boot-exchange-smb.html</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Industry IT</category>
       <description>A practical IT continuity plan for PG&amp;amp;E Public Safety Power Shutoff events in Monterey County, Santa Cruz County, San Benito County, and Santa Clara County. UPS sizing, generators, cellular failover, cloud-first architecture, and what to do in the 48-hour notice window.</description>
-    </item>
-    <item>
-      <title>IT Support vs. Managed IT Services: What's the Difference?</title>
-      <link>https://ghosxt.com/blog/it-support-vs-managed-it-services-difference.html</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/it-support-vs-managed-it-services-difference.html</guid>
-      <pubDate>Sat, 16 May 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Managed IT in Salinas</category>
-      <description>A plain-English guide to the difference between IT support, managed IT services, break-fix, MSPs, MSSPs, helpdesk, and co-managed IT. What each one actually means, what it costs, and which one a small business in Salinas, Monterey, Santa Cruz, or Santa Clara County actually needs.</description>
     </item>
   </channel>
 </rss>
