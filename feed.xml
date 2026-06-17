@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from a DoD-cleared IT engineer.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Wed, 17 Jun 2026 21:19:04 +0000</lastBuildDate>
-    <pubDate>Fri, 12 Jun 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Wed, 17 Jun 2026 21:20:38 +0000</lastBuildDate>
+    <pubDate>Wed, 17 Jun 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>Quishing: Why QR Code Phishing Slips Past Your Filters, and How to Stop It</title>
+      <link>https://ghosxt.com/blog/qr-code-phishing-quishing-small-business-2026.html</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/qr-code-phishing-quishing-small-business-2026.html</guid>
+      <pubDate>Wed, 17 Jun 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>QR code phishing, or 'quishing,' is at its highest level yet in 2026, because a QR code hides the malicious link from email filters and jumps the attack onto a personal phone. How it works, why it bypasses your security, the physical-sticker version, and how a small business defends against it. From a DoD-cleared engineer on the Central Coast.</description>
+    </item>
     <item>
       <title>Your VPN Is the Front Door: This Week's Actively-Exploited Check Point and Ivanti Flaws, and What to Do</title>
       <link>https://ghosxt.com/blog/vpn-edge-device-flaws-actively-exploited-smb-june-2026.html</link>
@@ -18,15 +27,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>This week CISA added actively-exploited flaws in Check Point VPN and Ivanti Sentry to its must-patch catalog, plus a Chrome browser bug. Edge devices are the ransomware front door, and attackers move within days. What it means for a small business and the steps to take now, from a DoD-cleared engineer on the Central Coast.</description>
-    </item>
-    <item>
-      <title>Quishing: Why QR Code Phishing Slips Past Your Filters, and How to Stop It</title>
-      <link>https://ghosxt.com/blog/qr-code-phishing-quishing-small-business-2026.html</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/qr-code-phishing-quishing-small-business-2026.html</guid>
-      <pubDate>Fri, 12 Jun 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>QR code phishing, or 'quishing,' is at its highest level yet in 2026, because a QR code hides the malicious link from email filters and jumps the attack onto a personal phone. How it works, why it bypasses your security, the physical-sticker version, and how a small business defends against it. From a DoD-cleared engineer on the Central Coast.</description>
     </item>
     <item>
       <title>How Much Does Cybersecurity Cost for a Small Business in 2026?</title>
