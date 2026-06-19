@@ -1,0 +1,604 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hospitality IT and Cybersecurity on the Monterey Bay: Restaurants, Hotels, and Wineries in 2026 | Ghosxt</title>
+    <meta name="description" content="A plain-talk IT and cybersecurity guide for Monterey Bay hospitality — restaurants, hotels, inns, and wineries. PCI and POS security, guest Wi-Fi segmentation, booking and wine-club uptime, seasonal-staff identity, ransomware defense, and PG&E continuity. From a DoD-cleared engineer." />
+    <link rel="canonical" href="https://ghosxt.com/blog/hospitality-it-cybersecurity-monterey-bay.html" />
+    <link rel="alternate" type="application/rss+xml" title="Ghosxt Blog" href="https://ghosxt.com/feed.xml" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://ghosxt.com/blog/hospitality-it-cybersecurity-monterey-bay.html" />
+    <meta property="og:title" content="Hospitality IT and Cybersecurity on the Monterey Bay: Restaurants, Hotels, and Wineries in 2026 | Ghosxt" />
+    <meta property="og:description" content="A plain-talk IT and cybersecurity guide for Monterey Bay hospitality — restaurants, hotels, inns, and wineries. PCI and POS security, guest Wi-Fi segmentation, booking and wine-club uptime, seasonal-staff identity, ransomware defense, and PG&E continuity. From a DoD-cleared engineer." />
+    <meta property="og:image" content="https://ghosxt.com/assets/img/og/blog-hospitality-it-cybersecurity-monterey-bay.png" />
+    <meta property="og:site_name" content="Ghosxt" />
+    <meta property="article:published_time" content="2026-06-19" />
+    <meta property="article:author" content="Ulises Paiz" />
+    <meta name="robots" content="index, follow" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Hospitality IT and Cybersecurity on the Monterey Bay: Restaurants, Hotels, and Wineries in 2026 | Ghosxt" />
+    <meta name="twitter:description" content="The IT a Monterey Bay restaurant, hotel, or winery actually needs: PCI/POS security, segmented guest Wi-Fi, booking and wine-club uptime, seasonal-staff identity, ransomware defense, and PSPS continuity." />
+    <meta name="twitter:image" content="https://ghosxt.com/assets/img/og/blog-hospitality-it-cybersecurity-monterey-bay.png" />
+    <link rel="icon" href="../assets/img/favicon.ico" sizes="any" />
+    <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- ghosxt:roboto-preload -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" />
+    <link rel="preconnect" href="https://cdn-uicons.flaticon.com" />
+    <link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" /></noscript>
+    <link rel="stylesheet" href="../assets/css/main.css?v=2026-05-31d" />
+    <link rel="stylesheet" href="../assets/css/blog.css?v=2026-05-15a" />
+    <link rel="stylesheet" media="print" onload="this.media='all'" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" />
+    <noscript><link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" /></noscript>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "BlogPosting",
+            "mainEntityOfPage": { "@type": "WebPage", "@id": "https://ghosxt.com/blog/hospitality-it-cybersecurity-monterey-bay.html" },
+            "headline": "Hospitality IT and Cybersecurity on the Monterey Bay: Restaurants, Hotels, and Wineries in 2026",
+            "description": "A plain-talk IT and cybersecurity guide for Monterey Bay hospitality — restaurants, hotels, inns, and wineries. PCI and POS security, guest Wi-Fi segmentation, booking and wine-club uptime, seasonal-staff identity, ransomware defense, and PG&E continuity. From a DoD-cleared engineer.",
+            "image": "https://ghosxt.com/assets/img/og/blog-hospitality-it-cybersecurity-monterey-bay.png",
+            "author": { "@type": "Person", "name": "Ulises Paiz", "url": "https://ghosxt.com/about.html" },
+            "publisher": { "@type": "Organization", "name": "Ghosxt", "logo": { "@type": "ImageObject", "url": "https://ghosxt.com/assets/img/ghosxt logo.webp" } },
+            "datePublished": "2026-06-19",
+            "dateModified": "2026-06-19",
+            "articleSection": "Industry IT",
+            "keywords": "hospitality IT, restaurant IT support, hotel IT support, winery IT, tasting room POS, PCI DSS compliance restaurant, guest Wi-Fi segmentation, Toast POS security, OpenTable Resy SevenRooms, wine club ecommerce security, Monterey hospitality IT, Carmel restaurant IT, Salinas Valley winery IT, Central Coast managed IT, ransomware hospitality"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ghosxt.com/" },
+              { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://ghosxt.com/blog/" },
+              { "@type": "ListItem", "position": 3, "name": "Hospitality IT", "item": "https://ghosxt.com/blog/hospitality-it-cybersecurity-monterey-bay.html" }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "We use Toast (or Square). Doesn't that make us PCI compliant?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Using a reputable cloud POS like Toast, Square, Clover, or Lightspeed shrinks your PCI scope a lot, because the card data is handled and tokenized by the vendor instead of sitting on your equipment. It does not make you compliant on its own. You still own the network the terminals sit on, the requirement to keep guest Wi-Fi separated from the payment network, your staff accounts and PINs, your devices, and the annual Self-Assessment Questionnaire that documents all of it. Which SAQ you qualify for depends on exactly how cards are handled and whether your network is segmented. The POS vendor secures their slice; the rest of the picture is still yours, and it is the part underwriters and acquiring banks ask about."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does guest Wi-Fi really need to be separate from our POS and back office?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, and it is the single most common finding we have at restaurants, inns, and tasting rooms. Guest Wi-Fi, the payment terminals, the back-office PCs, and the cameras and door locks should each live on their own segment, not on one flat network behind the modem the internet company dropped off. If a guest's malware-infected phone sits on the same network as your POS, an attacker who lands on the guest side can reach the side that processes cards and holds your books. Segmentation is inexpensive, it is an explicit PCI expectation, and it is exactly what a cyber-insurance underwriter looks for. A guest network should give visitors internet and nothing else."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Our restaurant uses QR codes for the menu and to pay at the table. Is that safe?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "QR menus and table-pay are fine when you control the code and the page behind it, but they are an attractive target because nobody can read a QR code with their eyes. The real-world attack is physical: someone sticks their own QR sticker over yours, and guests who scan it land on a lookalike payment or Wi-Fi page that harvests cards or logins. Print the QR as part of the menu or table tent rather than a loose sticker, check your tables periodically for tampering, make sure the code resolves to your own domain over HTTPS, and never ask guests to download an app or 'verify' a card to see a menu. We walk through this attack, called quishing, in a dedicated post."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "We're seasonal and hire a lot of summer and harvest staff. How should we handle their accounts?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Give every person a named account and a named POS login, never a shared 'server1' or a manager PIN that the whole shift knows. Scope each role so a seasonal host or tasting-room pourer can do their job and nothing more, and put company tablets and phones under mobile device management so a device left in an apron or lost at an event can be wiped. The payoff is offboarding: when a seasonal hire leaves, you disable one named account and the access is gone the same day, instead of changing a shared password that twenty people memorized. Shared logins destroy your audit trail, your PCI story, and your ability to prove who did what."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What happens to our restaurant or winery if PG&E shuts off the power?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "On a flat power outage you lose the POS, card processing, the Wi-Fi, the phones, the reservation tablet, the walk-in's monitoring, and often the door locks all at once, and on the Central Coast the Public Safety Power Shutoff program means that can last 12 to 72 hours during fire season. The fix is a continuity plan written before the outage: a UPS on the network and payment gear so nothing crashes hard, a cellular or 5G internet failover so cards keep clearing when the wired line drops, a documented offline-payment procedure your managers have actually practiced, and a generator for kitchens, walk-ins, and crush equipment where spoilage is on the line. We keep a Central Coast PSPS playbook that lays this out step by step."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is hospitality really a ransomware target? We're a small restaurant or inn.",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Hospitality is one of the most-attacked industries precisely because downtime converts to lost revenue instantly and a lot of card data flows through it. You do not have to be a big resort. The attacks that took down major hotel and casino operators in recent years did not start with exotic malware, they started with a convincing phone call to a help desk and a reset password, and that same social-engineering playbook scales down to a busy independent restaurant or a Carmel Valley tasting room. The defenses are the same boring ones that work everywhere: MFA on every account, endpoint detection on every device, monitored email, a verify-by-phone rule for anything involving money or passwords, and a tested backup so a bad night is a restore instead of a ransom."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+    <!-- ghosxt:cf-web-analytics -->
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"f3ce7e0e17f54050845d52d7f355cd98"}'></script>
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top"><i class="fi fi-rs-angle-up" aria-hidden="true"></i></button>
+    <div class="cookie-banner" id="cookieBanner"><div class="cookie-banner-container"><div class="cookie-content"><div class="cookie-icon"><i class="fi fi-rs-cookie"></i></div><div class="cookie-text"><p class="cookie-message">We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.</p><a href="../privacy-policy.html" class="cookie-link">Learn more about our Privacy Policy</a></div></div><div class="cookie-actions"><button class="cookie-btn cookie-btn-secondary" id="cookieDecline">Decline</button><button class="cookie-btn cookie-btn-primary" id="cookieAccept">Accept All</button></div></div></div>
+    <nav class="navbar" aria-label="Main navigation">
+      <div class="navbar-container">
+        <div class="navbar-left"><a href="../index.html" class="navbar-logo"><img fetchpriority="high" loading="eager" src="../assets/img/ghosxt logo.webp" alt="Ghosxt logo" width="48" height="48" /><span>GHOSXT</span></a></div>
+        <div class="navbar-right">
+          <div class="navbar-menu">
+            <a href="../index.html" class="navbar-link">Home</a>
+            <div class="navbar-dropdown"><a href="../about.html" class="navbar-link dropdown-trigger" aria-haspopup="menu">About <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></a><div class="dropdown-menu" role="menu"><a href="../about.html" class="dropdown-item" role="menuitem">About Ghosxt</a><a href="../ghosxt-cares.html" class="dropdown-item" role="menuitem">Ghosxt Cares</a></div></div>
+            <div class="navbar-dropdown"><a href="../services.html" class="navbar-link dropdown-trigger" aria-haspopup="menu">Services <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></a><div class="dropdown-menu" role="menu"><a href="../services.html" class="dropdown-item" role="menuitem">All Services</a>
+                <a href="../managed-it-services.html" class="dropdown-item" role="menuitem">Managed IT Services</a>
+                <a href="../help-desk-it-support.html" class="dropdown-item" role="menuitem">IT Help Desk &amp; Support</a>
+                <a href="../it-consulting-vcio.html" class="dropdown-item" role="menuitem">IT Consulting &amp; vCIO</a>
+                <a href="../cybersecurity.html" class="dropdown-item" role="menuitem">Cybersecurity</a>
+                <a href="../cloud-services.html" class="dropdown-item" role="menuitem">Cloud Services</a>
+                <a href="../backup-disaster-recovery.html" class="dropdown-item" role="menuitem">Backup &amp; Disaster Recovery</a>
+                <a href="../network-design.html" class="dropdown-item" role="menuitem">Network Design</a>
+                <a href="../website-development.html" class="dropdown-item" role="menuitem">Web Development</a>
+                <a href="../ctpat.html" class="dropdown-item" role="menuitem">C-TPAT Compliance</a></div></div>
+            <a href="../pricing.html" class="navbar-link">Pricing</a>
+            <a href="index.html" class="navbar-link">Blog</a>
+            <a href="../contact.html" class="navbar-link">Contact</a>
+          </div>
+          <button class="navbar-mobile-toggle" id="mobileToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu"><i class="fi fi-rs-burger-menu" aria-hidden="true"></i></button>
+          <div class="navbar-buttons"><a class="navbar-btn navbar-phone" href="tel:+18312040501" aria-label="Call Ghosxt at (831) 204-0501"><i class="fi fi-rs-phone-call" aria-hidden="true"></i><span>(831)&nbsp;204-0501</span></a><a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer" class="navbar-btn btn-demo"><i class="fi fi-rs-calendar-day"></i><span>Book a Call</span></a></div>
+        </div>
+      </div>
+      <div class="navbar-overlay" id="navbarOverlay"></div>
+      <div class="navbar-mobile-menu" id="mobileMenu">
+        <a href="../index.html" class="mobile-link">Home</a>
+        <div class="mobile-accordion"><button class="mobile-accordion-trigger" aria-expanded="false">About <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></button><div class="mobile-accordion-content"><a href="../about.html" class="mobile-dropdown-item">About Ghosxt</a><a href="../ghosxt-cares.html" class="mobile-dropdown-item">Ghosxt Cares</a></div></div>
+        <div class="mobile-accordion"><button class="mobile-accordion-trigger" aria-expanded="false">Services <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></button><div class="mobile-accordion-content"><a href="../services.html" class="mobile-dropdown-item">All Services</a>
+            <a href="../managed-it-services.html" class="mobile-dropdown-item">Managed IT Services</a>
+            <a href="../help-desk-it-support.html" class="mobile-dropdown-item">IT Help Desk &amp; Support</a>
+            <a href="../it-consulting-vcio.html" class="mobile-dropdown-item">IT Consulting &amp; vCIO</a>
+            <a href="../cybersecurity.html" class="mobile-dropdown-item">Cybersecurity</a>
+            <a href="../cloud-services.html" class="mobile-dropdown-item">Cloud Services</a>
+            <a href="../backup-disaster-recovery.html" class="mobile-dropdown-item">Backup &amp; Disaster Recovery</a>
+            <a href="../network-design.html" class="mobile-dropdown-item">Network Design</a>
+            <a href="../website-development.html" class="mobile-dropdown-item">Web Development</a>
+            <a href="../ctpat.html" class="mobile-dropdown-item">C-TPAT Compliance</a></div></div>
+        <a href="../pricing.html" class="mobile-link">Pricing</a>
+        <a href="index.html" class="mobile-link">Blog</a>
+        <a href="../contact.html" class="mobile-link">Contact</a>
+        <div class="mobile-actions"><a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer" class="mobile-btn btn-demo"><i class="fi fi-rs-calendar-day"></i><span>Book a Call</span></a></div>
+      </div>
+    </nav>
+    <main id="main-content" class="blog-post">
+      <header class="blog-post-header">
+        <div class="container">
+          <nav class="blog-post-breadcrumbs" aria-label="Breadcrumb">
+            <a href="../index.html">Home</a><span class="sep">&rsaquo;</span><a href="index.html">Blog</a><span class="sep">&rsaquo;</span><span aria-current="page">Hospitality IT</span>
+          </nav>
+          <div class="blog-post-meta">
+            <time datetime="2026-06-19">June 19, 2026</time>
+            <span>&middot;</span>
+            <span>12 min read</span>
+            <span>&middot;</span>
+            <span class="blog-card-tag">Industry</span>
+          </div>
+          <h1>Hospitality IT and Cybersecurity on the Monterey Bay: Restaurants, Hotels, and Wineries in 2026</h1>
+          <div class="blog-post-author">
+            <strong>Ulises Paiz</strong>, Founder, Ghosxt
+          </div>
+        </div>
+      </header>
+      <div class="blog-post-body">
+        <div class="container">
+          <aside class="blog-post-quickfix" aria-label="Summary and what to do today">
+            <span class="quickfix-label">TL;DR &mdash; Hospitality IT on the Monterey Bay comes down to six layers</span>
+            <h2>You take card payments all day, you put guests directly onto your technology, and you run a busy, seasonal floor that cannot afford a single hour of downtime in peak season. That combination makes a restaurant, hotel, or winery a richer target than its size suggests, and most of the risk lives in a few layers that are quietly broken.</h2>
+            <ul>
+              <li><strong>Layer 1:</strong> Payments and PCI &mdash; your POS and the way cards are actually handled, tokenized, and scoped.</li>
+              <li><strong>Layer 2:</strong> A segmented network that keeps guest Wi-Fi, the payment terminals, the back office, and the cameras and locks apart. They should never share one flat network.</li>
+              <li><strong>Layer 3:</strong> Booking and revenue systems &mdash; your hotel PMS, restaurant reservations, online ordering, and wine-club or e-commerce store &mdash; configured, integrated, and backed up.</li>
+              <li><strong>Layer 4:</strong> Guest-data protection: encryption, MFA, role-based access, and a real handle on where payment tokens, loyalty, and wine-club PII actually live.</li>
+              <li><strong>Layer 5:</strong> Staff identity and seasonal turnover, so the summer host or harvest pourer who leaves is a one-account, same-day task, not a shared-password scramble.</li>
+              <li><strong>Layer 6:</strong> Backup, power, and continuity that survives ransomware, a spoiled walk-in, and a PG&amp;E power shutoff during fire season.</li>
+            </ul>
+            <p>If you only do three things this quarter:</p>
+            <ol>
+              <li>Put MFA on Microsoft 365, your POS and PMS back office, the bank, and every booking and wine-club admin login.</li>
+              <li>Split the network so guest Wi-Fi cannot reach the payment terminals or the back office, and confirm your PCI Self-Assessment Questionnaire matches reality.</li>
+              <li>Adopt a written rule that no banking change, payroll change, or gift-card request is ever accepted from an email or text &mdash; it gets verified by phone.</li>
+            </ol>
+            <p>This is the in-depth version of the conversation; the <a href="../cybersecurity.html">cybersecurity service page</a> and <a href="../managed-it-services.html">managed IT services page</a> cover the underlying program.</p>
+          </aside>
+
+          <p>Most of the hospitality owners I sit down with on the Monterey Bay did not set out to build an IT department. They opened a restaurant on Cannery Row, took over an inn in Pacific Grove, or planted a tasting room in Carmel Valley, signed up for whatever point-of-sale the installer recommended, added online reservations because guests expected them, stood up a wine club because the margins are better direct, and a few seasons later they are running half a dozen connected systems with a back office that grew one busy Friday at a time. The POS works. The Wi-Fi mostly works. Nobody has looked at the whole thing as one system that handles other people's money.</p>
+
+          <p>This post is the version of the conversation I have over coffee with a restaurateur in Monterey, an innkeeper in Carmel, or a winemaker off River Road. The framing I use, and the one I will use here, is six layers. You are already running most of them. The question is whether you are running them well enough to survive a card-skimming breach, a phished manager account, a PCI audit after an incident, a ransomware crew that called your help desk, or a 48-hour power shutoff on a Car Week weekend.</p>
+
+          <h2>Why hospitality IT is different from generic SMB IT</h2>
+
+          <p>An accounting office in Monterey has eight people, eight laptops, and a printer. The whole environment fits in two rooms and closes at five. A restaurant or boutique hotel with the same headcount is running a different animal: a dining room or front desk full of payment terminals, public Wi-Fi that anyone can join, tablets for reservations and orders, kitchen display screens, gift cards, an online ordering page, a hotel property-management system or a wine-club store, cameras, smart door locks, and a card swiped or tapped every few minutes from open to close.</p>
+
+          <p>Concretely, hospitality IT differs from generic small-business IT in five ways:</p>
+
+          <ul>
+            <li><strong>You take card payments all day, in person and online.</strong> Every table, front desk, tasting bar, online booking, and wine-club renewal is a place a card number changes hands. That puts you squarely inside PCI DSS and makes you a standing target for card theft.</li>
+            <li><strong>Your guests are on your technology.</strong> Public Wi-Fi, QR-code menus, lobby tablets, and self-serve kiosks put untrusted people and devices one hop from your payment and back-office systems unless the network is deliberately segmented.</li>
+            <li><strong>You cannot close.</strong> A law office can reschedule a bad IT day. A restaurant on a Friday night, an inn at check-in, or a tasting room on a Concours Saturday cannot. Downtime is lost covers, walked guests, and refunded deposits in real time.</li>
+            <li><strong>Your staff turns over and spikes seasonally.</strong> Summer on the Peninsula and harvest in the valley bring a wave of seasonal hires sharing terminals and tablets. High turnover plus shared logins is how access sprawls and how social engineering gets its first foothold.</li>
+            <li><strong>You run many systems from many vendors.</strong> POS, a PMS or reservation platform, online ordering, gift cards, a wine club or e-commerce store, loyalty and email marketing, cameras, and door locks &mdash; usually from different vendors, rarely looked at as one connected system.</li>
+          </ul>
+
+          <h2>The six IT layers a Monterey Bay hospitality business needs</h2>
+
+          <h3>Layer 1: Payments and PCI</h3>
+
+          <p>Cards are the center of gravity. The good news is that a modern cloud POS &mdash; Toast, Square, Clover, Lightspeed, SpotOn, or TouchBistro on the restaurant side, Oracle Simphony or a hotel PMS payment module on the lodging side &mdash; does most of the heavy lifting by tokenizing card data so it never lives on your equipment. That shrinks your PCI DSS scope dramatically. It does not eliminate it. PCI DSS v4.0.1 is the current standard, and the requirements that were "best practice" under v4.0 became mandatory on March 31, 2025, so the bar in 2026 is higher than the one many merchants last looked at.</p>
+
+          <p>The realistic PCI picture for a Central Coast restaurant, inn, or winery: use a validated, point-to-point-encrypted POS so card data is tokenized at the reader; keep the payment devices on their own network segment; complete the correct Self-Assessment Questionnaire honestly (which SAQ you qualify for depends on how cards are handled and whether your network is segmented); change every default password on payment and network gear; and keep the firmware patched. The card brands and your acquiring bank can levy fees for non-compliance, and a breach traced to an unsegmented network or default credentials is exactly the kind of finding that turns a bad week into a five-figure one. The <a href="../cybersecurity.html">cybersecurity service page</a> covers the controls behind this.</p>
+
+          <h3>Layer 2: A segmented network</h3>
+
+          <p>This is the layer I find broken most often, and it underpins Layer 1. In too many restaurants and tasting rooms, the guest Wi-Fi, the payment terminals, the back-office PC, the security cameras, and the smart locks all sit on one flat network behind the modem the internet company dropped off. That means a guest's malware-infected phone is one hop from the device that processes cards.</p>
+
+          <p>The fix is segmentation: a real business firewall (not a consumer router), with separate VLANs for the payment systems, the back office, guest Wi-Fi, and the cameras-and-locks IoT gear. Guests get internet and nothing else, ideally behind a captive portal with your branding. The payment network can only talk to what it must. This is inexpensive, it is an explicit PCI expectation, and it is the first thing a cyber-insurance underwriter asks about. For a multi-location restaurant group or a winery with a downtown tasting room and an estate, the same pattern repeats at each site with a secure path back to central systems. The <a href="../network-design.html">network design service page</a> covers the multi-site and segmentation approach in detail.</p>
+
+          <h3>Layer 3: Booking and revenue systems</h3>
+
+          <p>The systems that take the money have to stay up and stay connected. They vary by format:</p>
+
+          <ul>
+            <li><strong>Restaurants:</strong> the POS plus a reservation and table-management platform &mdash; OpenTable, Resy, Tock, or SevenRooms &mdash; and often an online-ordering and gift-card system. The IT concerns are uptime, clean integration so reservations and orders flow into the POS without double entry, and a payment path that keeps working when the internet hiccups.</li>
+            <li><strong>Hotels and inns:</strong> a property-management system &mdash; Oracle OPERA, Mews, Cloudbeds, innRoad, or Little Hotelier &mdash; tied to a booking engine and the OTA channel managers (Expedia, Booking.com). A PMS outage means you cannot check guests in or take a reservation, so uptime and backup are not optional.</li>
+            <li><strong>Wineries:</strong> a tasting-room POS plus a wine-club and direct-to-consumer e-commerce platform such as Commerce7, WineDirect, or VineSpring, and frequently a reservations tool for tastings. The club is recurring, high-value revenue, which makes its customer and billing data worth protecting and worth backing up independently.</li>
+          </ul>
+
+          <p>We do not resell these platforms, and the brand matters less than how you run it: every admin has a named account with MFA, roles are scoped so a seasonal host cannot export the customer list, the integrations actually work, and the data is backed up somewhere you control. A platform you pay for but configure loosely leaks data through over-broad access and breaks your busiest night when one integration silently fails.</p>
+
+          <h3>Layer 4: Guest-data protection</h3>
+
+          <p>Hospitality holds more personal data than owners realize. A hotel guest profile carries names, addresses, stay history, and a card on file. A wine club holds names, shipping addresses, birthdates for age verification, and recurring billing. A restaurant loyalty or marketing list holds contact data for thousands of guests. None of that should be casually exportable or sitting in someone's personal inbox. The protection baseline:</p>
+
+          <ul>
+            <li><strong>MFA on every account</strong> that can reach guest data &mdash; Microsoft 365, the POS and PMS back office, the wine-club and e-commerce admin, the email-marketing tool, and the bank.</li>
+            <li><strong>Role-based access,</strong> so a seasonal pourer or host sees only what the shift requires and cannot export the full customer or club list.</li>
+            <li><strong>Encryption</strong> on every laptop, tablet, and phone, so a device lost at an event or in a back office is a lost asset, not a breach notification.</li>
+            <li><strong>Endpoint detection (EDR)</strong> on every back-office device, not just consumer antivirus.</li>
+            <li><strong>Monitored email security,</strong> because a phished manager account is how attackers reach all of the above.</li>
+            <li><strong>A real answer to "where does the data live?"</strong> Guest and club PII should stay inside the platforms that are built to hold it, not get exported to a spreadsheet on the manager's desktop.</li>
+          </ul>
+
+          <p>The <a href="identity-hardening-small-business-5-employees-microsoft-365.html">identity hardening post</a> walks the Microsoft 365 baseline most of this rests on, and the <a href="shadow-ai-employees-chatgpt-data-small-business-2026.html">shadow-AI post</a> covers the newer habit of staff pasting guest lists into chatbots.</p>
+
+          <h3>Layer 5: Staff identity and seasonal turnover</h3>
+
+          <p>Hospitality has the highest turnover of any industry we serve, and it spikes hard with the season: summer on the Monterey Peninsula, the run of fall events, and crush at the wineries. Every wave of seasonal hires needs access on day one and needs it gone on their last day. The way most floors handle this &mdash; a shared "server1" login, a manager PIN the whole shift knows, a tablet anyone can pick up &mdash; is exactly what makes offboarding impossible and social engineering easy.</p>
+
+          <ul>
+            <li><strong>Named accounts and named POS logins only.</strong> No shared credential that twenty seasonal staff have memorized. Shared logins destroy your audit trail, your PCI story, and your ability to prove who rang what.</li>
+            <li><strong>Role scoping,</strong> so a host, a server, a pourer, and a manager each have the access their job needs and no more.</li>
+            <li><strong>Mobile device management (MDM)</strong> on company tablets and phones, so a device left in an apron, lost at a festival booth, or pocketed by a departing employee can be remotely wiped.</li>
+            <li><strong>A documented offboarding checklist</strong> that runs the day someone leaves: disable the Microsoft 365 account, remove the POS and PMS login, revoke booking and wine-club admin access, and rotate any code or PIN they knew.</li>
+          </ul>
+
+          <p>The <a href="mfa-fatigue-push-bombing-smb-2026.html">MFA fatigue post</a> is worth a read here, because turning MFA on is step one and choosing phishing-resistant MFA is what holds up against the social-engineering aimed at a busy front desk.</p>
+
+          <h3>Layer 6: Backup, power, and continuity</h3>
+
+          <p>The records that have to survive a bad day: your accounting and POS history, the reservation or PMS database, the wine-club and customer lists, signed vendor and event contracts, and your email. Independent backup of Microsoft 365 (Outlook, OneDrive, SharePoint) and a documented export or backup path for your POS, PMS, and club platform are both needed. SaaS vendors back up their platform for their own resilience, not for your accidental deletion or your compromised admin account.</p>
+
+          <p>Continuity in hospitality also means power, and on the Central Coast that means PG&amp;E. The region sits under the Public Safety Power Shutoff program, and outages have run 12 to 72 hours in recent fire seasons. A dark restaurant loses its POS, card processing, Wi-Fi, phones, walk-in monitoring, and often its locks all at once; a winery during crush can lose temperature control. The fix is a written plan: a UPS on the network and payment gear, a cellular or 5G internet failover so cards keep clearing, a practiced offline-payment procedure, and a generator where spoilage or crush is on the line. The <a href="pge-psps-it-continuity-plan-central-coast.html">PSPS continuity plan post</a> lays out the playbook, and the <a href="../backup-disaster-recovery.html">backup and disaster recovery service page</a> covers tested restores, immutable copies, and a written RTO and RPO your underwriter will accept.</p>
+
+          <h2>The attacks hitting hospitality right now</h2>
+
+          <p>Hospitality has its own threat ecosystem, and it targets the two things you have plenty of: card transactions and busy, distracted staff. Five patterns we see often in 2026:</p>
+
+          <h3>Help-desk social engineering and ransomware</h3>
+
+          <p>The most disruptive hospitality breaches of recent years did not start with malware &mdash; they started with a phone call. An attacker calls posing as a staffer locked out before a shift, or as an IT vendor, and talks someone into resetting a password or approving an MFA prompt. From there it becomes account takeover and, often, ransomware that locks the POS and PMS at the worst possible moment. The defenses are a hard verify-by-phone rule for any password or access request, phishing-resistant MFA, EDR, and monitored email. We break the pattern down in the <a href="microsoft-teams-help-desk-impersonation-ransomware-smb-2026.html">Teams help-desk impersonation post</a> and the <a href="silent-ransom-group-fake-it-workers-in-person-access-smb-2026.html">fake-IT-worker post</a>, and the broader attacker playbook is in the <a href="ransomware-2026-how-it-gets-in.html">2026 ransomware post</a>.</p>
+
+          <h3>Card skimming, online and at the table</h3>
+
+          <p>Online, attackers plant web-skimming code (Magecart-style) on checkout pages &mdash; wine-club renewals, online ordering, gift-card purchases, reservation deposits &mdash; to harvest cards as guests type them. The risk is highest on self-managed websites with out-of-date plugins. In person, the risk is tampered or swapped card readers and unsegmented payment networks. The defenses are a maintained website, a tokenizing POS, a segmented payment network, and periodic physical checks of the readers. The <a href="wordpress-funnel-builder-compromise-smb-website-2026.html">WordPress compromise post</a> covers the website side most wineries and restaurants run on.</p>
+
+          <h3>QR-code (quishing) abuse</h3>
+
+          <p>QR menus and table-pay are convenient and impossible to read with the human eye, which is exactly why attackers like them. The common move is physical: a malicious QR sticker placed over yours, sending guests to a lookalike payment or Wi-Fi page. Print the code into the menu or table tent instead of using loose stickers, check tables for tampering, make sure it resolves to your own domain over HTTPS, and never make guests "verify" a card to see a menu. The full breakdown is in the <a href="qr-code-phishing-quishing-small-business-2026.html">quishing post</a>.</p>
+
+          <h3>Gift-card and payroll-diversion fraud</h3>
+
+          <p>A manager gets a text or email from the "owner" or "GM" asking them to quietly buy gift cards for a promotion, or an email asking payroll to redirect a paycheck to a new account. It is business email compromise aimed at the way hospitality actually communicates &mdash; fast, by text, across shifts. The defense is a standing rule: any request involving gift cards, payroll changes, or banking changes gets verified by a phone call to a known number, no exceptions. The <a href="email-authentication-spf-dkim-dmarc-small-business-2026.html">email authentication post</a> covers locking down your domain so attackers cannot spoof it as easily.</p>
+
+          <h3>Vendor invoice and banking-change fraud</h3>
+
+          <p>Restaurants and wineries pay a long list of suppliers &mdash; produce, beverage, linen, glass, distributors. Attackers, often from inside a compromised supplier mailbox, email "updated" ACH or banking details so the next payment lands with them. The defense is procedural and the same every time: no banking change is accepted from an email, every change is verified by phone against a number already on file, and a second person signs off before money moves. The <a href="../it-consulting-vcio.html">vCIO and IT consulting</a> engagement is where we usually write these payment controls down with a client.</p>
+
+          <h2>Compliance frameworks hospitality operates inside</h2>
+
+          <p>None of these require you to become a compliance lawyer. They do require the same handful of controls, documented:</p>
+
+          <ul>
+            <li><strong>PCI DSS v4.0.1.</strong> Anyone who accepts cards is in scope. A tokenizing POS and a segmented network keep that scope small and the annual Self-Assessment Questionnaire short and honest.</li>
+            <li><strong>CCPA and CPRA.</strong> California's privacy laws apply to businesses that meet the statutory thresholds, and guest, loyalty, wine-club, and employee data are all personal information. You need to know what you collect, secure it, and be able to respond to access and deletion requests.</li>
+            <li><strong>Website accessibility (ADA).</strong> Restaurant, hotel, and winery sites with menus, booking, and online ordering are routinely targeted by accessibility-related demand letters in California. Accessible, maintained sites are both a legal and an SEO win &mdash; see the <a href="../website-development.html">web development service page</a>.</li>
+            <li><strong>Alcohol and wine-shipping rules (wineries).</strong> Direct-to-consumer shipping is governed by a patchwork of state rules and California ABC licensing. Platforms and compliance tools handle the filings, but the customer, club, and order data behind them is yours to secure and back up.</li>
+            <li><strong>Cyber-insurance underwriting.</strong> Not a law, but the questionnaire is its own framework. MFA everywhere, EDR, backups, email security, and network segmentation are the controls that get you covered and keep a claim from being denied.</li>
+          </ul>
+
+          <h2>Office and operational IT for a Monterey Bay hospitality business</h2>
+
+          <p>Behind the floor there is still a back office. The baseline we recommend for a single-location restaurant, inn, or winery with a back-office team:</p>
+
+          <ul>
+            <li><strong>Microsoft 365 Business Premium per managed user.</strong> Includes Outlook, the Office apps, OneDrive, SharePoint, Teams, Defender for Business (EDR), Intune (MDM), and Entra ID P1 (identity hardening). At roughly $22 per user per month it is the most leveraged dollar in the stack. The <a href="microsoft-365-small-business-settings-to-turn-on-2026.html">Microsoft 365 settings post</a> covers what to turn on first.</li>
+            <li><strong>Business-class internet with a documented SLA</strong> and an LTE or 5G failover, so cards keep clearing when the wired line drops.</li>
+            <li><strong>A real firewall</strong> (Fortinet, Sophos, Palo Alto, or a managed Meraki) with separated payment, back-office, guest, and IoT networks.</li>
+            <li><strong>VoIP for the reservation and front-desk line,</strong> so calls can ring to a mobile after hours and the main number is never tied to a personal cell.</li>
+            <li><strong>MDM on every company tablet and phone</strong> on the floor and in the field.</li>
+            <li><strong>UPS on the network closet</strong> and a documented power-loss runbook for PSPS season.</li>
+          </ul>
+
+          <p>The full program lives on the <a href="../managed-it-services.html">managed IT services page</a>, day-to-day support on the <a href="../help-desk-it-support.html">help desk page</a>, and the operators who want a strategic plan rather than just support use our <a href="../it-consulting-vcio.html">vCIO service</a> to budget and sequence it.</p>
+
+          <h2>What we steer hospitality businesses away from</h2>
+
+          <p>The patterns we see at places that have not had a fresh set of eyes on their IT, and that we move clients off of:</p>
+
+          <ul>
+            <li><strong>Guest Wi-Fi on the same network as the POS.</strong> The fastest path from a stranger in the dining room to your payment systems and your books.</li>
+            <li><strong>Shared logins and a known manager PIN.</strong> No audit trail, no offboarding control, no real MFA story &mdash; and a PCI and cyber-insurance problem.</li>
+            <li><strong>The internet company's modem doing double duty as the firewall.</strong> It cannot segment, it is rarely patched, and its default password is on the sticker.</li>
+            <li><strong>Approving banking, payroll, or gift-card requests by text or email.</strong> The most expensive habit in the industry. Every one gets a phone call.</li>
+            <li><strong>Staff tablets and phones with no MDM.</strong> A device lost at a festival or pocketed on the way out becomes a data-loss event you cannot remediate.</li>
+            <li><strong>A self-managed website with stale plugins taking online orders or club payments.</strong> That is where web-skimming code gets planted.</li>
+            <li><strong>No independent backup of the POS, PMS, or club platform.</strong> "The vendor backs us up" is not a backup you control.</li>
+            <li><strong>Skipping cyber insurance because "we're just a restaurant."</strong> Hospitality is among the most-targeted industries, and the premium is a fraction of a single bad night.</li>
+          </ul>
+
+          <h2>A realistic IT budget for a Monterey Bay hospitality business</h2>
+
+          <p>Numbers for a representative single-location operation &mdash; a busy independent restaurant, a small inn, or a winery with a tasting room &mdash; with about 10 managed back-office and management users, a handful of POS terminals, guest Wi-Fi, and a website. Monthly, all-in, and excluding the POS, PMS, and club software itself, which you already pay per terminal or per order:</p>
+
+          <ul>
+            <li><strong>Microsoft 365 Business Premium:</strong> 10 users &times; $22 = $220</li>
+            <li><strong>MDR / managed security:</strong> 10 users &times; $25 = $250</li>
+            <li><strong>Managed IT (help desk, patching, backup, identity hardening):</strong> 10 users &times; $150&ndash;$200 = $1,500&ndash;$2,000</li>
+            <li><strong>Managed firewall and network segmentation, one site:</strong> $200&ndash;$400</li>
+            <li><strong>Business internet + LTE/5G failover:</strong> $300&ndash;$600</li>
+            <li><strong>VoIP for the reservation / front-desk line:</strong> $150&ndash;$300</li>
+            <li><strong>Independent backup (Microsoft 365 + platform exports):</strong> $100&ndash;$200</li>
+          </ul>
+
+          <p>Total monthly IT spend lands roughly between <strong>$2,700 and $4,000 per month</strong> for one location, before hardware. The biggest mover is the per-user managed IT line, which scales with back-office headcount rather than the number of covers or rooms, so a winery or restaurant group that adds a second tasting room or location without much new office staff sees the per-site IT cost fall.</p>
+
+          <p>For comparison: a card-data breach brings forensics, card-brand fines, and reissuance costs that start in the tens of thousands; a ransomware event that locks the POS and PMS over a Car Week or harvest weekend costs far more in lost revenue alone than a year of managed IT; and a single successful gift-card or vendor-banking fraud runs from a few thousand dollars into five figures, usually unrecoverable. The IT budget pays for itself in a single avoided incident.</p>
+
+          <h2>Where this fits</h2>
+
+          <p>This post sits alongside several other pieces in the Ghosxt industry and security cluster:</p>
+
+          <ul>
+            <li>The <a href="../cybersecurity.html">cybersecurity service page</a>, for the underlying security stack and PCI controls.</li>
+            <li>The <a href="../network-design.html">network design service page</a>, for the segmentation and multi-site work.</li>
+            <li>The <a href="../managed-it-services.html">managed IT services page</a>, for the help desk and platform layer.</li>
+            <li>The <a href="../backup-disaster-recovery.html">backup and disaster recovery service page</a>, for the continuity layer.</li>
+            <li>The <a href="../website-development.html">web development service page</a>, for accessible, maintained sites and online ordering.</li>
+            <li>The <a href="../it-consulting-vcio.html">IT consulting and vCIO page</a>, for budgeting and writing down the payment controls.</li>
+            <li>The <a href="qr-code-phishing-quishing-small-business-2026.html">quishing post</a>, for the QR-menu and table-pay risk.</li>
+            <li>The <a href="ransomware-2026-how-it-gets-in.html">2026 ransomware post</a> and <a href="microsoft-teams-help-desk-impersonation-ransomware-smb-2026.html">help-desk impersonation post</a>, for the attacker side.</li>
+            <li>The <a href="identity-hardening-small-business-5-employees-microsoft-365.html">identity hardening post</a>, for the MFA and Conditional Access baseline.</li>
+            <li>The <a href="pge-psps-it-continuity-plan-central-coast.html">PSPS continuity plan</a>, for fire-season power loss.</li>
+          </ul>
+
+          <p>We support restaurants, hotels, inns, and wineries across <a href="../monterey.html">Monterey</a>, <a href="../carmel.html">Carmel</a>, <a href="../pacific-grove.html">Pacific Grove</a>, <a href="../seaside.html">Seaside</a>, <a href="../salinas.html">Salinas</a>, <a href="../soledad.html">Soledad</a>, <a href="../santa-cruz.html">Santa Cruz</a>, and <a href="../watsonville.html">Watsonville</a>, and across <a href="../monterey-county.html">Monterey County</a> and <a href="../santa-cruz-county.html">Santa Cruz County</a>.</p>
+
+          <h2>FAQs about IT for restaurants, hotels, and wineries</h2>
+
+          <h3>We use Toast (or Square). Doesn't that make us PCI compliant?</h3>
+          <p>Using a reputable cloud POS like Toast, Square, Clover, or Lightspeed shrinks your PCI scope a lot, because the card data is handled and tokenized by the vendor instead of sitting on your equipment. It does not make you compliant on its own. You still own the network the terminals sit on, the requirement to keep guest Wi-Fi separated from the payment network, your staff accounts and PINs, your devices, and the annual Self-Assessment Questionnaire that documents all of it. Which SAQ you qualify for depends on exactly how cards are handled and whether your network is segmented. The POS vendor secures their slice; the rest of the picture is still yours, and it is the part underwriters and acquiring banks ask about.</p>
+
+          <h3>Does guest Wi-Fi really need to be separate from our POS and back office?</h3>
+          <p>Yes, and it is the single most common finding we have at restaurants, inns, and tasting rooms. Guest Wi-Fi, the payment terminals, the back-office PCs, and the cameras and door locks should each live on their own segment, not on one flat network behind the modem the internet company dropped off. If a guest's malware-infected phone sits on the same network as your POS, an attacker who lands on the guest side can reach the side that processes cards and holds your books. Segmentation is inexpensive, it is an explicit PCI expectation, and it is exactly what a cyber-insurance underwriter looks for. A guest network should give visitors internet and nothing else.</p>
+
+          <h3>Our restaurant uses QR codes for the menu and to pay at the table. Is that safe?</h3>
+          <p>QR menus and table-pay are fine when you control the code and the page behind it, but they are an attractive target because nobody can read a QR code with their eyes. The real-world attack is physical: someone sticks their own QR sticker over yours, and guests who scan it land on a lookalike payment or Wi-Fi page that harvests cards or logins. Print the QR as part of the menu or table tent rather than a loose sticker, check your tables periodically for tampering, make sure the code resolves to your own domain over HTTPS, and never ask guests to download an app or "verify" a card to see a menu. We walk through this attack, called quishing, in a <a href="qr-code-phishing-quishing-small-business-2026.html">dedicated post</a>.</p>
+
+          <h3>We're seasonal and hire a lot of summer and harvest staff. How should we handle their accounts?</h3>
+          <p>Give every person a named account and a named POS login, never a shared "server1" or a manager PIN that the whole shift knows. Scope each role so a seasonal host or tasting-room pourer can do their job and nothing more, and put company tablets and phones under mobile device management so a device left in an apron or lost at an event can be wiped. The payoff is offboarding: when a seasonal hire leaves, you disable one named account and the access is gone the same day, instead of changing a shared password that twenty people memorized. Shared logins destroy your audit trail, your PCI story, and your ability to prove who did what.</p>
+
+          <h3>What happens to our restaurant or winery if PG&amp;E shuts off the power?</h3>
+          <p>On a flat power outage you lose the POS, card processing, the Wi-Fi, the phones, the reservation tablet, the walk-in's monitoring, and often the door locks all at once, and on the Central Coast the Public Safety Power Shutoff program means that can last 12 to 72 hours during fire season. The fix is a continuity plan written before the outage: a UPS on the network and payment gear so nothing crashes hard, a cellular or 5G internet failover so cards keep clearing when the wired line drops, a documented offline-payment procedure your managers have actually practiced, and a generator for kitchens, walk-ins, and crush equipment where spoilage is on the line. We keep a Central Coast <a href="pge-psps-it-continuity-plan-central-coast.html">PSPS playbook</a> that lays this out step by step.</p>
+
+          <h3>Is hospitality really a ransomware target? We're a small restaurant or inn.</h3>
+          <p>Hospitality is one of the most-attacked industries precisely because downtime converts to lost revenue instantly and a lot of card data flows through it. You do not have to be a big resort. The attacks that took down major hotel and casino operators in recent years did not start with exotic malware, they started with a convincing phone call to a help desk and a reset password, and that same social-engineering playbook scales down to a busy independent restaurant or a Carmel Valley tasting room. The defenses are the same boring ones that work everywhere: MFA on every account, endpoint detection on every device, monitored email, a verify-by-phone rule for anything involving money or passwords, and a tested backup so a bad night is a restore instead of a ransom.</p>
+
+          <div class="blog-post-cta">
+            <h3>Want a written read on your hospitality IT setup?</h3>
+            <p>30 minutes with a DoD-cleared engineer. We will walk through your POS and PCI scope, guest Wi-Fi and network segmentation, booking and wine-club systems, seasonal-staff access, and continuity, and hand you back a written punch list of what to fix first, ordered by risk. No sales script, no obligation.</p>
+            <a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer">
+              <i class="fi fi-rs-calendar-day" aria-hidden="true"></i>
+              Book your free assessment
+            </a>
+          </div>
+
+          <p style="margin-top: 1.5rem; font-size: 0.95rem; color: rgba(0,0,0,0.7);">
+            Prefer to talk first? Email <a href="mailto:sales@ghosxt.com">sales@ghosxt.com</a> or call <a href="tel:+18312040501">(831) 204-0501</a>.
+          </p>
+        </div>
+      </div>
+    </main>
+    <footer class="footer" id="footerSection">
+      <div class="footer-container">
+        <div class="footer-brand-row">
+          <div class="footer-brand">
+            <img
+              src="../assets/img/ghosxt logo.webp"
+              alt="Ghosxt logo"
+              width="80"
+              height="80"
+              loading="lazy"
+            />
+            <div class="footer-brand-text">
+              <span class="footer-brand-name">GHOSXT</span>
+              <span class="footer-brand-tagline"
+                >Government-grade IT for small business.</span
+              >
+            </div>
+          </div>
+          <div class="footer-cta-block">
+            <a
+              href="https://calendly.com/ulises-ghosxt"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="footer-cta-btn"
+            >
+              <i class="fi fi-rs-calendar-day" aria-hidden="true"></i>
+              Schedule Free Assessment
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-grid">
+          <div class="footer-column">
+            <h3 class="footer-column-title">Company</h3>
+            <ul class="footer-links">
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="../about.html">About</a></li>
+              <li><a href="../services.html">Services</a></li>
+              <li><a href="../pricing.html">Pricing</a></li>
+              <li>
+                <a href="../website-development.html">Website Development</a>
+              </li>
+              <li><a href="../contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-column-title">Services</h3>
+            <ul class="footer-links">
+              <li><a href="../managed-it-services.html">Managed IT Services</a></li>
+              <li><a href="../help-desk-it-support.html">IT Help Desk &amp; Support</a></li>
+              <li><a href="../it-consulting-vcio.html">IT Consulting &amp; vCIO</a></li>
+              <li><a href="../cybersecurity.html">Cybersecurity</a></li>
+              <li><a href="../cloud-services.html">Cloud Services</a></li>
+              <li><a href="../backup-disaster-recovery.html">Backup &amp; Disaster Recovery</a></li>
+              <li><a href="../network-design.html">Network Design</a></li>
+              <li><a href="../website-development.html">Web Development</a></li>
+              <li><a href="../ctpat.html">C-TPAT Compliance</a></li>
+              <li><a href="../trucking-it-services.html">Trucking &amp; Logistics IT</a></li>
+              <li><a href="../agriculture-it-services.html">Agriculture &amp; Agribusiness IT</a></li>
+              <li><a href="../manufacturing-it-services.html">Manufacturing &amp; Industrial IT</a></li>
+              <li><a href="../professional-services-it.html">SMB Office &amp; Professional Services IT</a></li>
+              <li><a href="../healthcare-it-services.html">Healthcare &amp; Medical IT</a></li>
+              <li><a href="../property-management-it-services.html">Property Management IT</a></li>
+              <li><a href="../engineering-it-services.html">Engineering &amp; Architecture IT</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-column-title">Resources</h3>
+            <ul class="footer-links">
+              <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+              <li>
+                <a
+                  href="https://ticket.ghosxt.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Client Portal</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://calendly.com/ulises-ghosxt"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Free IT Assessment</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-column-title">Connect</h3>
+            <ul class="footer-links footer-social-links">
+              <li>
+                <a
+                  href="https://www.linkedin.com/company/ghosxt/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.063 2.063 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                  LinkedIn</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.facebook.com/GhosxtTech"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg>
+                  Facebook</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/ghosxttech/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+                  Instagram</a
+                >
+              </li>
+              <li>
+                <a href="mailto:sales@ghosxt.com"
+                  ><i class="fi fi-rs-envelope" aria-hidden="true"></i>
+                  sales@ghosxt.com</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <div class="footer-bottom">
+          <p class="footer-copyright">
+            &copy; 2026 Ghosxt. All rights reserved. Built by a cleared DoD
+            engineer.
+          </p>
+          <div class="footer-bottom-links">
+            <a href="../privacy-policy.html">Privacy Policy</a>
+            <span aria-hidden="true">&middot;</span>
+            <a
+              href="https://ticket.ghosxt.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Client Portal</a
+            >
+          </div>
+        </div>
+
+        <div class="service-areas-footer">
+          <h3>Service Areas</h3>
+          <ul>
+            <li><a href="../salinas.html">Salinas</a></li>
+            <li><a href="../monterey.html">Monterey</a></li>
+            <li><a href="../watsonville.html">Watsonville</a></li>
+            <li><a href="../hollister.html">Hollister</a></li>
+            <li><a href="../santa-cruz.html">Santa Cruz</a></li>
+            <li><a href="../gilroy.html">Gilroy</a></li>
+            <li><a href="../san-jose.html">San Jose</a></li>
+            <li><a href="../pacific-grove.html">Pacific Grove</a></li>
+            <li><a href="../carmel.html">Carmel</a></li>
+            <li><a href="../seaside.html">Seaside</a></li>
+            <li><a href="../marina.html">Marina</a></li>
+            <li><a href="../soledad.html">Soledad</a></li>
+            <li><a href="../king-city.html">King City</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="../assets/js/main.js?v=2026-05-31b" defer></script>
+    <!-- ghosxt:mobile-cta-bar -->
+    <div class="mobile-cta-bar" aria-label="Quick contact">
+      <a class="mcta-primary" href="tel:+18312040501">Call (831) 204-0501</a>
+      <a class="mcta-secondary" href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer">Book free assessment</a>
+    </div>
+  </body>
+</html>
