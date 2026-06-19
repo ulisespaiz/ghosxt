@@ -11,6 +11,7 @@ unless those values are deliberately added to the generated sitemap later.
 
 from __future__ import annotations
 
+import argparse
 import re
 import subprocess
 from datetime import datetime, timezone
@@ -131,7 +132,7 @@ def ordered_urls(urls: Iterable[str], current_order: Iterable[str]) -> list[str]
     return ordered
 
 
-def build_sitemap() -> str:
+def build_sitemap(refresh_lastmod: bool = False) -> str:
     existing_entries = current_sitemap_entries()
     pages = sitemap_pages()
     lines = [
@@ -141,7 +142,10 @@ def build_sitemap() -> str:
 
     for url in ordered_urls(pages.keys(), existing_entries.keys()):
         metadata = dict(existing_entries.get(url, {}))
-        metadata.setdefault("lastmod", git_last_modified(pages[url]))
+        if refresh_lastmod:
+            metadata["lastmod"] = git_last_modified(pages[url])
+        else:
+            metadata.setdefault("lastmod", git_last_modified(pages[url]))
 
         lines.extend(
             [
@@ -160,7 +164,15 @@ def build_sitemap() -> str:
 
 
 def main() -> None:
-    SITEMAP_PATH.write_text(build_sitemap(), encoding="utf-8")
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--refresh-lastmod",
+        action="store_true",
+        help="Overwrite every lastmod with each page's git last-commit date "
+        "instead of carrying forward the existing sitemap value.",
+    )
+    args = parser.parse_args()
+    SITEMAP_PATH.write_text(build_sitemap(refresh_lastmod=args.refresh_lastmod), encoding="utf-8")
 
 
 if __name__ == "__main__":

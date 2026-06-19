@@ -1027,33 +1027,7 @@
     <!-- SCRIPTS -->
     <script src="assets/js/main.js?v=2026-05-31b" defer></script>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        // Scroll to top button
-        const scrollBtn = document.getElementById("scrollToTop");
-        if (scrollBtn) {
-          window.addEventListener("scroll", function () {
-            if (window.scrollY > 400) {
-              scrollBtn.classList.add("visible");
-            } else {
-              scrollBtn.classList.remove("visible");
-            }
-          });
-          scrollBtn.addEventListener("click", function () {
-            window.scrollTo({ top: 0, behavior: "smooth" });
-          });
-        }
-
-        // FAQ accordion
-        document.querySelectorAll(".cares-faq-item").forEach(function (item) {
-          const question = item.querySelector(".cares-faq-question");
-          question.addEventListener("click", function () {
-            const isOpen = item.classList.toggle("active");
-            question.setAttribute("aria-expanded", String(isOpen));
-          });
-        });
-      });
-    </script>
+    <script src="assets/js/cares.js?v=2026-06-10a" defer></script>
     <!-- ghosxt:mobile-cta-bar -->
     <div class="mobile-cta-bar" aria-label="Quick contact">
       <a class="mcta-primary" href="tel:+18312040501">Call (831) 204-0501</a>

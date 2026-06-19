@@ -19,6 +19,10 @@ node_modules/
 README.md
 SETUP-CONTACT-FORM.md
 
+# Build / maintenance tooling (not part of the site)
+scripts/
+dist/
+
 # VCS
 .git/
 .gitignore
