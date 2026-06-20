@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from a DoD-cleared IT engineer.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Wed, 17 Jun 2026 21:20:38 +0000</lastBuildDate>
-    <pubDate>Wed, 17 Jun 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Fri, 19 Jun 2026 21:17:39 +0000</lastBuildDate>
+    <pubDate>Fri, 19 Jun 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>Hospitality IT and Cybersecurity on the Monterey Bay: Restaurants, Hotels, and Wineries in 2026</title>
+      <link>https://ghosxt.com/blog/hospitality-it-cybersecurity-monterey-bay.html</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/hospitality-it-cybersecurity-monterey-bay.html</guid>
+      <pubDate>Fri, 19 Jun 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Industry IT</category>
+      <description>A plain-talk IT and cybersecurity guide for Monterey Bay hospitality — restaurants, hotels, inns, and wineries. PCI and POS security, guest Wi-Fi segmentation, booking and wine-club uptime, seasonal-staff identity, ransomware defense, and PG&amp;E continuity. From a DoD-cleared engineer.</description>
+    </item>
     <item>
       <title>Quishing: Why QR Code Phishing Slips Past Your Filters, and How to Stop It</title>
       <link>https://ghosxt.com/blog/qr-code-phishing-quishing-small-business-2026.html</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>CVE-2026-33112 is an authenticated remote code execution flaw in on-prem SharePoint Server 2016, 2019, and Subscription Edition, fixed in the May 2026 Patch Tuesday cumulative update. Plain-talk guidance for SMBs from a DoD-cleared engineer.</description>
-    </item>
-    <item>
-      <title>Windows MiniPlasma SYSTEM Privilege Escalation: No Patch, Public PoC</title>
-      <link>https://ghosxt.com/blog/windows-miniplasma-cve-2020-17103-system-privesc-smb.html</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/windows-miniplasma-cve-2020-17103-system-privesc-smb.html</guid>
-      <pubDate>Mon, 18 May 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>A working PoC for a Windows Cloud Filter driver privilege-escalation bug (CVE-2020-17103) is on GitHub. Standard user to SYSTEM on fully patched Windows 11. Microsoft's 2020 patch did not fully fix the underlying issue, per the researcher. Plain-talk defensive guidance for SMBs from a DoD-cleared engineer.</description>
     </item>
   </channel>
 </rss>
