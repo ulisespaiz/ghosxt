@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from a DoD-cleared IT engineer.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Fri, 19 Jun 2026 21:17:39 +0000</lastBuildDate>
-    <pubDate>Fri, 19 Jun 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Sat, 20 Jun 2026 18:24:29 +0000</lastBuildDate>
+    <pubDate>Sat, 20 Jun 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>Data-Theft Extortion: When Attackers Steal Your Cloud Data Instead of Encrypting It</title>
+      <link>https://ghosxt.com/blog/cloud-data-theft-extortion-small-business-2026.html</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/cloud-data-theft-extortion-small-business-2026.html</guid>
+      <pubDate>Sat, 20 Jun 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>The fastest-growing extortion in 2026 doesn't encrypt anything. Attackers log into your cloud apps, steal the data, and threaten to leak it, using phone calls that impersonate IT and abused app connections. How the no-ransomware breach works and how a small business stops it. From a DoD-cleared engineer on the Central Coast.</description>
+    </item>
     <item>
       <title>Hospitality IT and Cybersecurity on the Monterey Bay: Restaurants, Hotels, and Wineries in 2026</title>
       <link>https://ghosxt.com/blog/hospitality-it-cybersecurity-monterey-bay.html</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>Active exploitation of a Funnel Builder plugin flaw is injecting card-skimming JavaScript into WooCommerce checkouts. Plain-talk verification steps for SMB site owners from a DoD-cleared engineer.</description>
-    </item>
-    <item>
-      <title>SharePoint Server RCE CVE-2026-33112: Patch This Week</title>
-      <link>https://ghosxt.com/blog/sharepoint-server-rce-cve-2026-33112-may-2026-smb.html</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/sharepoint-server-rce-cve-2026-33112-may-2026-smb.html</guid>
-      <pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>CVE-2026-33112 is an authenticated remote code execution flaw in on-prem SharePoint Server 2016, 2019, and Subscription Edition, fixed in the May 2026 Patch Tuesday cumulative update. Plain-talk guidance for SMBs from a DoD-cleared engineer.</description>
     </item>
   </channel>
 </rss>
