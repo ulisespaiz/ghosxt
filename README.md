@@ -14,6 +14,31 @@ The generator scans `*.html` and `blog/*.html`, skips pages with a `noindex` rob
 
 Existing `lastmod`, `changefreq`, and `priority` values in `sitemap.xml` are carried forward for URLs already listed there. New URLs get a `lastmod` date only; add `changefreq` or `priority` to the generated sitemap afterward only when that value is an intentional SEO signal, then rerun the generator to verify it is preserved.
 
+## IT help / IT support city pages
+
+`it-help-<city>.html` pages target the "IT support / IT help / help desk in
+<city>" intent for the major towns in the service area that do **not** already
+have a city hub page (Morgan Hill, Capitola, Scotts Valley, Aptos, Castroville,
+Greenfield, Gonzales, San Juan Bautista, Carmel Valley, Prunedale). They expand
+geographic coverage without cannibalizing the existing city hub pages
+(`salinas.html`, `monterey.html`, …) or county pages. Each page has genuinely
+distinct local prose and FAQs so it reads as a local page rather than a
+find-and-replace. Regenerate with:
+
+```bash
+python3 scripts/generate-it-help-pages.py            # only writes new pages
+python3 scripts/generate-it-help-pages.py --force    # overwrite existing
+python3 scripts/generate-sitemap.py                  # then refresh sitemap
+python3 scripts/generate-og-images.py                # and OG images
+```
+
+Shared chrome (head assets, nav, footer) is sliced verbatim from
+`cybersecurity-monterey.html`, so the pages stay byte-identical to the rest of
+the site; only the localized regions are templated from the per-city data model
+in the script. Each new city is also linked from its county page's "Cities we
+serve" list so the page is not orphaned. Keep `llms.txt` in sync when adding a
+city.
+
 ## Blog file-explorer page
 
 `blog/all.html` is the "file view" of every blog post. Regenerate it whenever a post is added, removed, re-dated, or re-categorized:

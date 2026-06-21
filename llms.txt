@@ -28,6 +28,12 @@ Key facts:
 - [Network Design & Architecture](https://ghosxt.com/network-design.html): VLAN segmentation, firewalls, and business-grade wireless with real documentation.
 - [Website Development](https://ghosxt.com/website-development.html): custom small-business websites and e-commerce that load fast and convert.
 - [C-TPAT Compliance](https://ghosxt.com/ctpat.html): IT controls and documentation for supply-chain security certification.
+- [CMMC & NIST 800-171](https://ghosxt.com/cmmc-compliance.html): CMMC and NIST SP 800-171 readiness for small defense contractors and subcontractors, from a cleared DoD IT engineer.
+- [HIPAA IT Compliance](https://ghosxt.com/hipaa-it-compliance.html): HIPAA technical safeguards for medical and dental practices — security risk analysis, access controls, encryption, BAAs, and backup.
+- [PCI DSS Compliance](https://ghosxt.com/pci-compliance.html): practical PCI compliance for retail, restaurants, and hospitality — segmentation, secure POS, scanning, and SAQ guidance.
+- [Co-Managed IT](https://ghosxt.com/co-managed-it.html): augments an existing in-house IT team with a 24/7 help desk, after-hours coverage, and cybersecurity depth, without replacing anyone.
+- [Ransomware Recovery & Emergency IT](https://ghosxt.com/ransomware-recovery.html): rapid containment, recovery from immutable backups, and hardening for businesses that are down or under active attack. Emergency line (831) 204-0501.
+- [Break-Fix vs. Managed IT](https://ghosxt.com/break-fix-vs-managed-it.html): an honest comparison of the two IT support models on cost, downtime, and security.
 - [Pricing](https://ghosxt.com/pricing.html): transparent, published managed IT service plans.
 
 ## Industries served
@@ -66,8 +72,11 @@ Cybersecurity, by city: [Salinas](https://ghosxt.com/cybersecurity-salinas.html)
 
 Cloud & Microsoft 365, by city: [Salinas](https://ghosxt.com/cloud-services-salinas.html), [Monterey](https://ghosxt.com/cloud-services-monterey.html), [Santa Cruz](https://ghosxt.com/cloud-services-santa-cruz.html), [San Jose](https://ghosxt.com/cloud-services-san-jose.html), [Watsonville](https://ghosxt.com/cloud-services-watsonville.html), [Carmel](https://ghosxt.com/cloud-services-carmel.html), [Pacific Grove](https://ghosxt.com/cloud-services-pacific-grove.html), [Seaside](https://ghosxt.com/cloud-services-seaside.html), [Marina](https://ghosxt.com/cloud-services-marina.html), [Gilroy](https://ghosxt.com/cloud-services-gilroy.html), [Hollister](https://ghosxt.com/cloud-services-hollister.html), [Soledad](https://ghosxt.com/cloud-services-soledad.html), [King City](https://ghosxt.com/cloud-services-king-city.html)
 
+IT support & help desk, by city: [Morgan Hill](https://ghosxt.com/it-help-morgan-hill.html), [Capitola](https://ghosxt.com/it-help-capitola.html), [Scotts Valley](https://ghosxt.com/it-help-scotts-valley.html), [Aptos](https://ghosxt.com/it-help-aptos.html), [Castroville](https://ghosxt.com/it-help-castroville.html), [Greenfield](https://ghosxt.com/it-help-greenfield.html), [Gonzales](https://ghosxt.com/it-help-gonzales.html), [San Juan Bautista](https://ghosxt.com/it-help-san-juan-bautista.html), [Carmel Valley](https://ghosxt.com/it-help-carmel-valley.html), [Prunedale](https://ghosxt.com/it-help-prunedale.html)
+
 ## About & contact
 - [About Ghosxt](https://ghosxt.com/about.html): the DoD-cleared engineer and approach behind the company.
+- [Client Stories](https://ghosxt.com/case-studies.html): real Ghosxt clients in their own words — transportation/logistics, manufacturing, and local projects.
 - [Contact / Free IT Assessment](https://ghosxt.com/contact.html): schedule a no-obligation 30-minute assessment.
 - [Ghosxt Cares](https://ghosxt.com/ghosxt-cares.html): community work and discounted IT for nonprofits.
 
