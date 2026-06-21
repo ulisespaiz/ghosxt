@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from a DoD-cleared IT engineer.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Sat, 20 Jun 2026 18:24:29 +0000</lastBuildDate>
-    <pubDate>Sat, 20 Jun 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Sun, 21 Jun 2026 17:52:40 +0000</lastBuildDate>
+    <pubDate>Sun, 21 Jun 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>The Deepfake CEO Call: Why Voice Cloning Is the New Wire-Fraud Threat, and How to Stop It</title>
+      <link>https://ghosxt.com/blog/deepfake-ceo-voice-clone-wire-fraud-small-business-2026.html</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/deepfake-ceo-voice-clone-wire-fraud-small-business-2026.html</guid>
+      <pubDate>Sun, 21 Jun 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>Scammers can now clone your boss's voice from a few seconds of audio and call an employee to authorize an urgent wire transfer. Deepfake CEO fraud is one of the fastest-growing scams of 2026. How the voice-clone and video versions work, why caller ID and a confirmation email won't save you, and the simple verification rule that stops it. From a DoD-cleared engineer on the Central Coast.</description>
+    </item>
     <item>
       <title>Data-Theft Extortion: When Attackers Steal Your Cloud Data Instead of Encrypting It</title>
       <link>https://ghosxt.com/blog/cloud-data-theft-extortion-small-business-2026.html</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Microsoft 365</category>
       <description>Microsoft 365 Copilot Business locks in at $18 per user per month if you buy before June 30, 2026; after that the standard rate is $21. A plain-talk read on whether your SMB should buy now, from a DoD-cleared engineer.</description>
-    </item>
-    <item>
-      <title>WordPress Funnel Builder Compromise: What Every SMB With a Website Should Check</title>
-      <link>https://ghosxt.com/blog/wordpress-funnel-builder-compromise-smb-website-2026.html</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/wordpress-funnel-builder-compromise-smb-website-2026.html</guid>
-      <pubDate>Wed, 20 May 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>Active exploitation of a Funnel Builder plugin flaw is injecting card-skimming JavaScript into WooCommerce checkouts. Plain-talk verification steps for SMB site owners from a DoD-cleared engineer.</description>
     </item>
   </channel>
 </rss>
