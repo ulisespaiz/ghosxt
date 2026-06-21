@@ -28,6 +28,9 @@ Key facts:
 - [Network Design & Architecture](https://ghosxt.com/network-design.html): VLAN segmentation, firewalls, and business-grade wireless with real documentation.
 - [Website Development](https://ghosxt.com/website-development.html): custom small-business websites and e-commerce that load fast and convert.
 - [C-TPAT Compliance](https://ghosxt.com/ctpat.html): IT controls and documentation for supply-chain security certification.
+- [CMMC & NIST 800-171](https://ghosxt.com/cmmc-compliance.html): CMMC and NIST SP 800-171 readiness for small defense contractors and subcontractors, from a cleared DoD IT engineer.
+- [HIPAA IT Compliance](https://ghosxt.com/hipaa-it-compliance.html): HIPAA technical safeguards for medical and dental practices — security risk analysis, access controls, encryption, BAAs, and backup.
+- [PCI DSS Compliance](https://ghosxt.com/pci-compliance.html): practical PCI compliance for retail, restaurants, and hospitality — segmentation, secure POS, scanning, and SAQ guidance.
 - [Co-Managed IT](https://ghosxt.com/co-managed-it.html): augments an existing in-house IT team with a 24/7 help desk, after-hours coverage, and cybersecurity depth, without replacing anyone.
 - [Ransomware Recovery & Emergency IT](https://ghosxt.com/ransomware-recovery.html): rapid containment, recovery from immutable backups, and hardening for businesses that are down or under active attack. Emergency line (831) 204-0501.
 - [Break-Fix vs. Managed IT](https://ghosxt.com/break-fix-vs-managed-it.html): an honest comparison of the two IT support models on cost, downtime, and security.
@@ -73,6 +76,7 @@ IT support & help desk, by city: [Morgan Hill](https://ghosxt.com/it-help-morgan
 
 ## About & contact
 - [About Ghosxt](https://ghosxt.com/about.html): the DoD-cleared engineer and approach behind the company.
+- [Client Stories](https://ghosxt.com/case-studies.html): real Ghosxt clients in their own words — transportation/logistics, manufacturing, and local projects.
 - [Contact / Free IT Assessment](https://ghosxt.com/contact.html): schedule a no-obligation 30-minute assessment.
 - [Ghosxt Cares](https://ghosxt.com/ghosxt-cares.html): community work and discounted IT for nonprofits.
 
