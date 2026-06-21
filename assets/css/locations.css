@@ -397,3 +397,49 @@
     margin: 0 0 0.7rem;
   }
 }
+
+/* Comparison table — used on break-fix vs. managed IT and similar guide pages */
+.compare-table-wrap {
+  overflow-x: auto;
+  margin: 1.5rem 0 0.5rem;
+}
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.97rem;
+  min-width: 520px;
+}
+.compare-table caption {
+  text-align: left;
+  color: #9aa3b2;
+  font-size: 0.85rem;
+  padding-bottom: 0.6rem;
+}
+.compare-table th,
+.compare-table td {
+  text-align: left;
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  vertical-align: top;
+}
+.compare-table thead th {
+  font-weight: 700;
+  color: #fff;
+  border-bottom: 2px solid rgba(244, 180, 0, 0.5);
+}
+.compare-table thead th.col-managed {
+  color: #f4b400;
+}
+.compare-table tbody th {
+  font-weight: 600;
+  color: #cfd6e2;
+  white-space: nowrap;
+}
+.compare-table td.col-managed {
+  color: #eaf0f7;
+  font-weight: 500;
+}
+.compare-table tbody tr:last-child th,
+.compare-table tbody tr:last-child td {
+  border-bottom: none;
+}

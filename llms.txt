@@ -28,6 +28,9 @@ Key facts:
 - [Network Design & Architecture](https://ghosxt.com/network-design.html): VLAN segmentation, firewalls, and business-grade wireless with real documentation.
 - [Website Development](https://ghosxt.com/website-development.html): custom small-business websites and e-commerce that load fast and convert.
 - [C-TPAT Compliance](https://ghosxt.com/ctpat.html): IT controls and documentation for supply-chain security certification.
+- [Co-Managed IT](https://ghosxt.com/co-managed-it.html): augments an existing in-house IT team with a 24/7 help desk, after-hours coverage, and cybersecurity depth, without replacing anyone.
+- [Ransomware Recovery & Emergency IT](https://ghosxt.com/ransomware-recovery.html): rapid containment, recovery from immutable backups, and hardening for businesses that are down or under active attack. Emergency line (831) 204-0501.
+- [Break-Fix vs. Managed IT](https://ghosxt.com/break-fix-vs-managed-it.html): an honest comparison of the two IT support models on cost, downtime, and security.
 - [Pricing](https://ghosxt.com/pricing.html): transparent, published managed IT service plans.
 
 ## Industries served
