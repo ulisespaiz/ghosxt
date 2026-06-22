@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from a DoD-cleared IT engineer.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Sun, 21 Jun 2026 17:52:40 +0000</lastBuildDate>
-    <pubDate>Sun, 21 Jun 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Mon, 22 Jun 2026 17:03:30 +0000</lastBuildDate>
+    <pubDate>Mon, 22 Jun 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>Password Managers for Small Business: The One Tool That Stops Most Credential-Based Attacks</title>
+      <link>https://ghosxt.com/blog/password-manager-small-business-2026.html</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/password-manager-small-business-2026.html</guid>
+      <pubDate>Mon, 22 Jun 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>Weak and reused passwords are behind the majority of small business breaches. A shared password manager costs less than a cup of coffee per employee per month and stops most of them. What to choose, how to roll it out, and why 'everyone uses strong passwords' is never true without a tool enforcing it. From a DoD-cleared engineer on the Central Coast.</description>
+    </item>
     <item>
       <title>The Deepfake CEO Call: Why Voice Cloning Is the New Wire-Fraud Threat, and How to Stop It</title>
       <link>https://ghosxt.com/blog/deepfake-ceo-voice-clone-wire-fraud-small-business-2026.html</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Backup and Disaster Recovery</category>
       <description>Most SMB backup plans look fine on paper and fall apart in a real incident. A DoD-cleared engineer's plain-talk read on what works in 2026: the 3-2-1-1-0 rule, immutable storage, recovery testing, and ransomware-aware design.</description>
-    </item>
-    <item>
-      <title>Microsoft 365 Copilot Business: Lock In $18 Before July 1, 2026</title>
-      <link>https://ghosxt.com/blog/microsoft-365-copilot-business-price-lock-2026.html</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/microsoft-365-copilot-business-price-lock-2026.html</guid>
-      <pubDate>Thu, 21 May 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Microsoft 365</category>
-      <description>Microsoft 365 Copilot Business locks in at $18 per user per month if you buy before June 30, 2026; after that the standard rate is $21. A plain-talk read on whether your SMB should buy now, from a DoD-cleared engineer.</description>
     </item>
   </channel>
 </rss>
