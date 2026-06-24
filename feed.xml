@@ -7,7 +7,7 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from a DoD-cleared IT engineer.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Wed, 24 Jun 2026 04:59:54 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 24 Jun 2026 11:08:23 +0000</lastBuildDate>
     <pubDate>Wed, 24 Jun 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
     <item>
@@ -18,6 +18,15 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>Most small businesses run a single Wi-Fi network for everything — staff computers, guest devices, cameras, and printers. That's a flat network, and one compromised device exposes all of it. Here's what proper segmentation looks like and why it matters.</description>
+    </item>
+    <item>
+      <title>Password Managers for Small Business: What to Use, What to Avoid, and How to Roll One Out in 2026</title>
+      <link>https://ghosxt.com/blog/password-manager-small-business-2026.html</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/password-manager-small-business-2026.html</guid>
+      <pubDate>Wed, 24 Jun 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>Stolen or reused passwords are behind the majority of small business breaches. A business password manager closes that gap for $3–7 per user per month. Here is what to use, what to avoid, and how to actually deploy it.</description>
     </item>
     <item>
       <title>Browser Extensions: The Hidden Security Risk Your Small Business Is Probably Ignoring</title>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Industry IT</category>
       <description>A plain-talk IT checklist for trucking and logistics businesses in Salinas, Watsonville, and Gilroy. ELDs, dispatch, compliance, cybersecurity, and the patterns that actually work for a 1-30 truck operation. From a DoD-cleared engineer.</description>
-    </item>
-    <item>
-      <title>OneDrive vs SharePoint vs Teams Files: Which Should Your Small Business Use?</title>
-      <link>https://ghosxt.com/blog/onedrive-vs-sharepoint-vs-teams-files-small-business.html</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/onedrive-vs-sharepoint-vs-teams-files-small-business.html</guid>
-      <pubDate>Sat, 23 May 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Microsoft 365</category>
-      <description>A plain-talk decision guide on when to use OneDrive, SharePoint, or Teams files for a 15-100 person business. Permissions, governance, and the patterns that actually work, from a DoD-cleared engineer.</description>
     </item>
   </channel>
 </rss>
