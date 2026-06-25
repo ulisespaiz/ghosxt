@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from a DoD-cleared IT engineer.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Wed, 24 Jun 2026 11:08:23 +0000</lastBuildDate>
-    <pubDate>Wed, 24 Jun 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Thu, 25 Jun 2026 11:06:40 +0000</lastBuildDate>
+    <pubDate>Thu, 25 Jun 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>Cyber Insurance for Small Business in 2026: What It Covers, What It Won't, and How to Lower Your Premium</title>
+      <link>https://ghosxt.com/blog/cyber-insurance-small-business-2026.html</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/cyber-insurance-small-business-2026.html</guid>
+      <pubDate>Thu, 25 Jun 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>Cyber insurance premiums have tripled since 2020 and insurers now require real security controls before they issue a policy. Here is what small business owners need to know before they shop.</description>
+    </item>
     <item>
       <title>Why Your Business Wi-Fi Is Probably One Device Away from a Breach</title>
       <link>https://ghosxt.com/blog/business-wifi-network-segmentation-small-business-2026.html</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>A plain-talk read on what a Monterey small business should buy for cybersecurity in 2026: identity, endpoint, monitoring, email, training, and what to skip. From a DoD-cleared engineer who runs cybersecurity programs across Monterey, Pacific Grove, Carmel, and Salinas.</description>
-    </item>
-    <item>
-      <title>Trucking and Logistics IT in Salinas: What Owner-Operators and Small Fleets Should Have in Place</title>
-      <link>https://ghosxt.com/blog/trucking-logistics-it-services-salinas-owner-operator.html</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/trucking-logistics-it-services-salinas-owner-operator.html</guid>
-      <pubDate>Sun, 24 May 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Industry IT</category>
-      <description>A plain-talk IT checklist for trucking and logistics businesses in Salinas, Watsonville, and Gilroy. ELDs, dispatch, compliance, cybersecurity, and the patterns that actually work for a 1-30 truck operation. From a DoD-cleared engineer.</description>
     </item>
   </channel>
 </rss>
