@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from a DoD-cleared IT engineer.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Thu, 25 Jun 2026 11:06:40 +0000</lastBuildDate>
-    <pubDate>Thu, 25 Jun 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Fri, 26 Jun 2026 11:08:17 +0000</lastBuildDate>
+    <pubDate>Fri, 26 Jun 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>IT Incident Response Plan for Small Business: What to Have Ready Before You Get Breached</title>
+      <link>https://ghosxt.com/blog/incident-response-plan-small-business-2026.html</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/incident-response-plan-small-business-2026.html</guid>
+      <pubDate>Fri, 26 Jun 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>Most small businesses have no incident response plan — or one nobody can find during an actual incident. Here is what your plan must include, and the one-hour exercise that makes it real.</description>
+    </item>
     <item>
       <title>Cyber Insurance for Small Business in 2026: What It Covers, What It Won't, and How to Lower Your Premium</title>
       <link>https://ghosxt.com/blog/cyber-insurance-small-business-2026.html</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>Attackers are not stealing the second factor anymore; they are getting your employees to hand it over. How MFA fatigue, push bombing, and help-desk social engineering work, and the SMB controls that actually stop them. From a DoD-cleared engineer.</description>
-    </item>
-    <item>
-      <title>Cybersecurity Services in Monterey: What Your Small Business Should Actually Buy in 2026</title>
-      <link>https://ghosxt.com/blog/cybersecurity-services-monterey-2026.html</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/cybersecurity-services-monterey-2026.html</guid>
-      <pubDate>Mon, 25 May 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>A plain-talk read on what a Monterey small business should buy for cybersecurity in 2026: identity, endpoint, monitoring, email, training, and what to skip. From a DoD-cleared engineer who runs cybersecurity programs across Monterey, Pacific Grove, Carmel, and Salinas.</description>
     </item>
   </channel>
 </rss>
