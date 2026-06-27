@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from a DoD-cleared IT engineer.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Fri, 26 Jun 2026 11:08:17 +0000</lastBuildDate>
-    <pubDate>Fri, 26 Jun 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Sat, 27 Jun 2026 11:07:33 +0000</lastBuildDate>
+    <pubDate>Sat, 27 Jun 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>Phishing Simulations for Small Business: Why Annual Security Training Isn't Enough</title>
+      <link>https://ghosxt.com/blog/phishing-simulation-security-awareness-training-small-business-2026.html</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/phishing-simulation-security-awareness-training-small-business-2026.html</guid>
+      <pubDate>Sat, 27 Jun 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>One annual compliance video does not change how your team responds to a real phishing email. What phishing simulations do differently, what the data shows, and how to run a program as a small business.</description>
+    </item>
     <item>
       <title>IT Incident Response Plan for Small Business: What to Have Ready Before You Get Breached</title>
       <link>https://ghosxt.com/blog/incident-response-plan-small-business-2026.html</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>The FBI warns that the Silent Ransom Group (Luna Moth) is targeting law firms with phone-based social engineering, fake IT support, and data-theft extortion. What law firms and professional-services SMBs on the Central Coast should do, from a DoD-cleared engineer.</description>
-    </item>
-    <item>
-      <title>MFA Fatigue: When the Attacker Just Asks Your Team for the Code</title>
-      <link>https://ghosxt.com/blog/mfa-fatigue-push-bombing-smb-2026.html</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/mfa-fatigue-push-bombing-smb-2026.html</guid>
-      <pubDate>Tue, 26 May 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>Attackers are not stealing the second factor anymore; they are getting your employees to hand it over. How MFA fatigue, push bombing, and help-desk social engineering work, and the SMB controls that actually stop them. From a DoD-cleared engineer.</description>
     </item>
   </channel>
 </rss>
