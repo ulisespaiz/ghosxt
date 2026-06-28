@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from a DoD-cleared IT engineer.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Sat, 27 Jun 2026 11:07:33 +0000</lastBuildDate>
-    <pubDate>Sat, 27 Jun 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Sun, 28 Jun 2026 11:06:20 +0000</lastBuildDate>
+    <pubDate>Sun, 28 Jun 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>Business Email Compromise: How Small Businesses Get Hit and How to Stop It</title>
+      <link>https://ghosxt.com/blog/business-email-compromise-bec-prevention-small-business-2026.html</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/business-email-compromise-bec-prevention-small-business-2026.html</guid>
+      <pubDate>Sun, 28 Jun 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>Business email compromise (BEC) costs small businesses more than ransomware. No malware, no alerts — just a convincing email that redirects a wire transfer. Here is how it works and how to stop it.</description>
+    </item>
     <item>
       <title>Phishing Simulations for Small Business: Why Annual Security Training Isn't Enough</title>
       <link>https://ghosxt.com/blog/phishing-simulation-security-awareness-training-small-business-2026.html</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>GitHub and GitLab banned the researcher Nightmare-Eclipse for dropping six unpatched Windows zero-days in six weeks. Here is what BlueHammer, RedSun, UnDefend, YellowKey, GreenPlasma, and MiniPlasma actually do, which are patched, and what a small business should do this week, from a DoD-cleared engineer.</description>
-    </item>
-    <item>
-      <title>FBI Warns: Silent Ransom Group Is Targeting Law Firms. What to Do</title>
-      <link>https://ghosxt.com/blog/fbi-silent-ransom-group-law-firms-2026.html</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/fbi-silent-ransom-group-law-firms-2026.html</guid>
-      <pubDate>Wed, 27 May 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>The FBI warns that the Silent Ransom Group (Luna Moth) is targeting law firms with phone-based social engineering, fake IT support, and data-theft extortion. What law firms and professional-services SMBs on the Central Coast should do, from a DoD-cleared engineer.</description>
     </item>
   </channel>
 </rss>
