@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from a DoD-cleared IT engineer.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Sun, 28 Jun 2026 11:06:20 +0000</lastBuildDate>
-    <pubDate>Sun, 28 Jun 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Mon, 29 Jun 2026 11:08:27 +0000</lastBuildDate>
+    <pubDate>Mon, 29 Jun 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>Shadow IT: The Unauthorized Apps Creating Security Gaps in Your Small Business</title>
+      <link>https://ghosxt.com/blog/shadow-it-small-business-security-risks.html</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/shadow-it-small-business-security-risks.html</guid>
+      <pubDate>Mon, 29 Jun 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>What shadow IT actually is, why AI tools and SaaS apps make it worse in 2026, and the three-step process for bringing unauthorized software under control before it becomes a breach entry point.</description>
+    </item>
     <item>
       <title>Business Email Compromise: How Small Businesses Get Hit and How to Stop It</title>
       <link>https://ghosxt.com/blog/business-email-compromise-bec-prevention-small-business-2026.html</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>A no-jargon checklist for owners: the 10 things that actually protect a small business from a cyberattack in 2026, in priority order, what each one stops, and how to tell if yours is really in place, from a DoD-cleared engineer on California's Central Coast.</description>
-    </item>
-    <item>
-      <title>Nightmare-Eclipse: The 6 Windows Zero-Days From the Banned Researcher</title>
-      <link>https://ghosxt.com/blog/nightmare-eclipse-windows-zero-days-github-ban-smb-2026.html</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/nightmare-eclipse-windows-zero-days-github-ban-smb-2026.html</guid>
-      <pubDate>Thu, 28 May 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>GitHub and GitLab banned the researcher Nightmare-Eclipse for dropping six unpatched Windows zero-days in six weeks. Here is what BlueHammer, RedSun, UnDefend, YellowKey, GreenPlasma, and MiniPlasma actually do, which are patched, and what a small business should do this week, from a DoD-cleared engineer.</description>
     </item>
   </channel>
 </rss>
