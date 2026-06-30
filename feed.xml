@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from a DoD-cleared IT engineer.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Mon, 29 Jun 2026 11:08:27 +0000</lastBuildDate>
-    <pubDate>Mon, 29 Jun 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Tue, 30 Jun 2026 11:07:58 +0000</lastBuildDate>
+    <pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>Dark Web Monitoring for Small Business: What It Finds, What It Misses, and Whether It's Worth It in 2026</title>
+      <link>https://ghosxt.com/blog/dark-web-monitoring-small-business-2026.html</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/dark-web-monitoring-small-business-2026.html</guid>
+      <pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>Dark web monitoring scans criminal marketplaces for your employees' stolen credentials. Here is what it actually catches, what it misses, and when it pays off for a small business.</description>
+    </item>
     <item>
       <title>Shadow IT: The Unauthorized Apps Creating Security Gaps in Your Small Business</title>
       <link>https://ghosxt.com/blog/shadow-it-small-business-security-risks.html</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Microsoft 365</category>
       <description>Microsoft 365 ships powerful security and productivity features turned off by default. The nine settings a small business should enable first, what each one does, and how to tell if yours are on, from a DoD-cleared engineer on California's Central Coast.</description>
-    </item>
-    <item>
-      <title>How to Protect Your Small Business From a Cyberattack: 10 Essentials</title>
-      <link>https://ghosxt.com/blog/protect-small-business-cyberattack-10-essentials-2026.html</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/protect-small-business-cyberattack-10-essentials-2026.html</guid>
-      <pubDate>Sat, 30 May 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>A no-jargon checklist for owners: the 10 things that actually protect a small business from a cyberattack in 2026, in priority order, what each one stops, and how to tell if yours is really in place, from a DoD-cleared engineer on California's Central Coast.</description>
     </item>
   </channel>
 </rss>
