@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from a DoD-cleared IT engineer.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Tue, 30 Jun 2026 11:07:58 +0000</lastBuildDate>
-    <pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Wed, 01 Jul 2026 11:05:47 +0000</lastBuildDate>
+    <pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>Employee Offboarding IT Checklist: Closing the Security Gaps When Someone Leaves</title>
+      <link>https://ghosxt.com/blog/employee-offboarding-it-security-checklist-small-business.html</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/employee-offboarding-it-security-checklist-small-business.html</guid>
+      <pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>Former employees keep access to email, cloud files, and business apps far longer than owners realize. The same-day IT offboarding checklist that closes the gap: accounts, devices, shared logins, and forwarding rules.</description>
+    </item>
     <item>
       <title>Dark Web Monitoring for Small Business: What It Finds, What It Misses, and Whether It's Worth It in 2026</title>
       <link>https://ghosxt.com/blog/dark-web-monitoring-small-business-2026.html</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>Windows 10 support ended October 14, 2025, and the consumer ESU lifeline expires in October 2026. A plain-language guide for small businesses: who can upgrade to Windows 11 free, who needs new PCs, what ESU really costs, and how to plan it without panic, from a DoD-cleared engineer.</description>
-    </item>
-    <item>
-      <title>Microsoft 365 for Small Business: 9 Settings to Turn On First</title>
-      <link>https://ghosxt.com/blog/microsoft-365-small-business-settings-to-turn-on-2026.html</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/microsoft-365-small-business-settings-to-turn-on-2026.html</guid>
-      <pubDate>Sat, 30 May 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Microsoft 365</category>
-      <description>Microsoft 365 ships powerful security and productivity features turned off by default. The nine settings a small business should enable first, what each one does, and how to tell if yours are on, from a DoD-cleared engineer on California's Central Coast.</description>
     </item>
   </channel>
 </rss>
