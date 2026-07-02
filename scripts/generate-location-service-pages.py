@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
 """Generate service x city combo pages (cybersecurity-<city>.html, cloud-services-<city>.html).
 
-Shared chrome (head assets, cookie banner, nav, footer) is sliced verbatim from an
-existing, hand-tuned combo page so generated pages stay byte-identical to the real
-site. Only the localized regions — title/meta/OG, JSON-LD, hero, body sections, and
-FAQs — are templated from the per-city data model below.
+Shared chrome (head assets, cookie banner, nav, footer) is sliced verbatim from
+scripts/_chrome_source.html — a frozen, non-live copy of the site chrome — so
+generated pages stay byte-identical to the real site regardless of what happens
+to the live pages afterward. Only the localized regions — title/meta/OG,
+JSON-LD, hero, body sections, and FAQs — are templated from the per-city data
+model below.
 
 Run from the repo root:
 
@@ -24,44 +26,10 @@ import os
 import re
 import sys
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from _chrome import extract_chrome  # noqa: E402
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-CYBER_TEMPLATE = os.path.join(ROOT, "cybersecurity-monterey.html")
-CLOUD_TEMPLATE = os.path.join(ROOT, "cloud-services-monterey.html")
-
-
-def slice_between(text, start_marker, end_marker, include_start=True, include_end=False):
-    s = text.index(start_marker)
-    e = text.index(end_marker, s + len(start_marker))
-    if not include_start:
-        s += len(start_marker)
-    if include_end:
-        e += len(end_marker)
-    return text[s:e]
-
-
-def extract_chrome(path):
-    """Pull the byte-identical shared blocks out of an existing combo page."""
-    t = open(path, encoding="utf-8").read()
-    head_assets = slice_between(
-        t,
-        '    <link rel="icon" href="assets/img/favicon.ico"',
-        '    <script type="application/ld+json">',
-    )
-    cf_analytics = slice_between(
-        t,
-        "    <!-- ghosxt:cf-web-analytics -->",
-        "  </head>",
-    )
-    body_top = slice_between(t, "  <body>", '    <nav class="navbar"')
-    nav = slice_between(t, '    <nav class="navbar"', '    <main id="main-content">')
-    footer = t[t.index('    <footer class="footer" id="footerSection">'):]
-    return {
-        "head_assets": head_assets.rstrip(),
-        "cf_analytics": cf_analytics.rstrip(),
-        "body_top": body_top.rstrip(),
-        "nav": nav.rstrip(),
-        "footer": footer.rstrip(),
-    }
 
 
 # ---------------------------------------------------------------------------
@@ -704,8 +672,8 @@ def build_page(chrome, service, slug, city):
 
 def main():
     force = "--force" in sys.argv
-    cyber_chrome = extract_chrome(CYBER_TEMPLATE)
-    cloud_chrome = extract_chrome(CLOUD_TEMPLATE)
+    cyber_chrome = extract_chrome()
+    cloud_chrome = extract_chrome()
 
     written = []
     skipped = []
