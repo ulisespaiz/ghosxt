@@ -81,7 +81,7 @@ CITIES = {
         "admin": "Santa Clara County, California",
         "county": ("santa-clara-county", "Santa Clara County"),
         "nearby": [("gilroy", "Gilroy"), ("san-jose", "San Jose"), ("hollister", "Hollister"), ("watsonville", "Watsonville")],
-        "lead": "Morgan Hill sits at the quiet end of Silicon Valley &mdash; close enough to the Bay Area's prices, far enough that the big-name IT firms treat a drive down 101 as an imposition. The result is a town full of professional offices, small manufacturers, wineries, and growing companies that get treated as an afterthought by their provider. Ghosxt is the opposite: a live help desk that answers, on-site response that actually shows up, and a cleared DoD IT engineer who treats a Morgan Hill ten-person office like it matters &mdash; because it does.",
+        "lead": "Morgan Hill sits at the quiet end of Silicon Valley &mdash; close enough to the Bay Area's prices, far enough that the big-name IT firms treat a drive down 101 as an imposition. The result is a town full of professional offices, small manufacturers, wineries, and growing companies that get treated as an afterthought by their provider. Ghosxt is the opposite: a live help desk that answers, on-site response that actually shows up, and a DoD-cleared engineer who treats a Morgan Hill ten-person office like it matters &mdash; because it does.",
         "economy": "Morgan Hill's economy is a mix that demands responsive support: dental and medical practices that cannot see patients when the system is down, law and accounting offices on deadline, light manufacturers and machine shops running job and design software, and wineries and tasting rooms taking payments seven days a week. What they share is a low tolerance for being on hold. When email stops or a workstation dies, they need a person, not a ticket number and a 48-hour window.",
         "response": "Based on the Central Coast with a footprint up the 101 corridor, we cover Morgan Hill with same-day or next-day on-site visits for non-emergencies and immediate remote response for anything urgent. Most issues never need a truck roll &mdash; they are fixed remotely within the hour &mdash; but when hands-on work is required, you are not waiting for someone to find time between Bay Area accounts.",
         "card_a": ("Practice &amp; Office Uptime", "Dental, medical, and professional offices in Morgan Hill kept running &mdash; fast help-desk response so a frozen workstation or down server does not turn into a day of canceled appointments."),
@@ -333,12 +333,12 @@ def build_page(chrome, slug, city):
         "DoD IT engineer. Free assessment."
     )
     og_title = f"IT Support &amp; Help Desk in {name}, CA | Ghosxt"
-    og_desc = f"A live help desk and genuinely local on-site IT support for {name} small business, from a cleared DoD IT engineer."
+    og_desc = f"A live help desk and genuinely local on-site IT support for {name} small business, from a DoD-cleared engineer."
     schema_name = f"IT Support and Help Desk in {name}"
     schema_desc = (
         f"Live, US-based help desk and on-site IT support for {name}, California small business: "
         "day-to-day end-user support, Microsoft 365, proactive monitoring and patching, backup, "
-        "and cybersecurity from a cleared DoD IT engineer."
+        "and cybersecurity from a DoD-cleared engineer."
     )
     h1 = f"IT Support &amp; Help Desk in {name}, California"
 
