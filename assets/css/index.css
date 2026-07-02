@@ -108,7 +108,29 @@
 .hero-buttons {
   display: flex;
   gap: 12px;
+  margin-bottom: 16px;
+}
+
+.hero-trust-callout {
+  text-align: center;
+  color: var(--ghosxt-black);
+  font-family: var(--font-family-2);
+  font-size: 0.95rem;
+  opacity: 0.75;
   margin-bottom: 24px;
+}
+
+.hero-trust-stars {
+  color: #f4b400;
+  letter-spacing: 1px;
+}
+
+.hero-trust-callout a {
+  color: var(--ghosxt-black);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  opacity: 1;
 }
 
 .hero-buttons .button-primary,
