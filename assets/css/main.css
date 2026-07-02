@@ -2237,6 +2237,12 @@ summary:focus-visible,
   body {
     padding-bottom: 64px;
   }
+  /* Keep the primary Call/Book CTAs above the cookie banner instead of
+     letting it cover them. Height is measured in JS (assets/js/main.js)
+     since the banner's rendered height varies with its wrapped text. */
+  .cookie-banner.visible ~ .mobile-cta-bar {
+    bottom: var(--cookie-banner-height, 140px);
+  }
 }
 
 /* Hide on the contact page where the form is the primary CTA */

@@ -7,11 +7,13 @@ they expand geographic coverage without cannibalizing the existing city pages
 (salinas.html, monterey.html, etc.) or the existing county pages.
 
 Shared chrome (head assets, cookie banner, nav, footer) is sliced verbatim from
-an existing, hand-tuned location page so generated pages stay byte-identical to
-the rest of the site. Only the localized regions — title/meta/OG, JSON-LD, hero,
-body sections, and FAQs — are templated from the per-city data model below. Each
-city has genuinely distinct prose so the pages read as local pages, not a
-find-and-replace, which is what keeps them out of duplicate-content filtering.
+scripts/_chrome_source.html — a frozen, non-live copy of the site chrome — so
+generated pages stay byte-identical to the rest of the site regardless of what
+happens to the live pages afterward. Only the localized regions — title/meta/OG,
+JSON-LD, hero, body sections, and FAQs — are templated from the per-city data
+model below. Each city has genuinely distinct prose so the pages read as local
+pages, not a find-and-replace, which is what keeps them out of duplicate-content
+filtering.
 
 Run from the repo root:
 
@@ -28,43 +30,10 @@ import os
 import re
 import sys
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from _chrome import extract_chrome  # noqa: E402
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-CHROME_TEMPLATE = os.path.join(ROOT, "cybersecurity-monterey.html")
-
-
-def slice_between(text, start_marker, end_marker, include_start=True, include_end=False):
-    s = text.index(start_marker)
-    e = text.index(end_marker, s + len(start_marker))
-    if not include_start:
-        s += len(start_marker)
-    if include_end:
-        e += len(end_marker)
-    return text[s:e]
-
-
-def extract_chrome(path):
-    """Pull the byte-identical shared blocks out of an existing location page."""
-    t = open(path, encoding="utf-8").read()
-    head_assets = slice_between(
-        t,
-        '    <link rel="icon" href="assets/img/favicon.ico"',
-        '    <script type="application/ld+json">',
-    )
-    cf_analytics = slice_between(
-        t,
-        "    <!-- ghosxt:cf-web-analytics -->",
-        "  </head>",
-    )
-    body_top = slice_between(t, "  <body>", '    <nav class="navbar"')
-    nav = slice_between(t, '    <nav class="navbar"', '    <main id="main-content">')
-    footer = t[t.index('    <footer class="footer" id="footerSection">'):]
-    return {
-        "head_assets": head_assets.rstrip(),
-        "cf_analytics": cf_analytics.rstrip(),
-        "body_top": body_top.rstrip(),
-        "nav": nav.rstrip(),
-        "footer": footer.rstrip(),
-    }
 
 
 # ---------------------------------------------------------------------------
@@ -81,7 +50,7 @@ CITIES = {
         "admin": "Santa Clara County, California",
         "county": ("santa-clara-county", "Santa Clara County"),
         "nearby": [("gilroy", "Gilroy"), ("san-jose", "San Jose"), ("hollister", "Hollister"), ("watsonville", "Watsonville")],
-        "lead": "Morgan Hill sits at the quiet end of Silicon Valley &mdash; close enough to the Bay Area's prices, far enough that the big-name IT firms treat a drive down 101 as an imposition. The result is a town full of professional offices, small manufacturers, wineries, and growing companies that get treated as an afterthought by their provider. Ghosxt is the opposite: a live help desk that answers, on-site response that actually shows up, and a cleared DoD IT engineer who treats a Morgan Hill ten-person office like it matters &mdash; because it does.",
+        "lead": "Morgan Hill sits at the quiet end of Silicon Valley &mdash; close enough to the Bay Area's prices, far enough that the big-name IT firms treat a drive down 101 as an imposition. The result is a town full of professional offices, small manufacturers, wineries, and growing companies that get treated as an afterthought by their provider. Ghosxt is the opposite: a live help desk that answers, on-site response that actually shows up, and a DoD-cleared engineer who treats a Morgan Hill ten-person office like it matters &mdash; because it does.",
         "economy": "Morgan Hill's economy is a mix that demands responsive support: dental and medical practices that cannot see patients when the system is down, law and accounting offices on deadline, light manufacturers and machine shops running job and design software, and wineries and tasting rooms taking payments seven days a week. What they share is a low tolerance for being on hold. When email stops or a workstation dies, they need a person, not a ticket number and a 48-hour window.",
         "response": "Based on the Central Coast with a footprint up the 101 corridor, we cover Morgan Hill with same-day or next-day on-site visits for non-emergencies and immediate remote response for anything urgent. Most issues never need a truck roll &mdash; they are fixed remotely within the hour &mdash; but when hands-on work is required, you are not waiting for someone to find time between Bay Area accounts.",
         "card_a": ("Practice &amp; Office Uptime", "Dental, medical, and professional offices in Morgan Hill kept running &mdash; fast help-desk response so a frozen workstation or down server does not turn into a day of canceled appointments."),
@@ -333,12 +302,12 @@ def build_page(chrome, slug, city):
         "DoD IT engineer. Free assessment."
     )
     og_title = f"IT Support &amp; Help Desk in {name}, CA | Ghosxt"
-    og_desc = f"A live help desk and genuinely local on-site IT support for {name} small business, from a cleared DoD IT engineer."
+    og_desc = f"A live help desk and genuinely local on-site IT support for {name} small business, from a DoD-cleared engineer."
     schema_name = f"IT Support and Help Desk in {name}"
     schema_desc = (
         f"Live, US-based help desk and on-site IT support for {name}, California small business: "
         "day-to-day end-user support, Microsoft 365, proactive monitoring and patching, backup, "
-        "and cybersecurity from a cleared DoD IT engineer."
+        "and cybersecurity from a DoD-cleared engineer."
     )
     h1 = f"IT Support &amp; Help Desk in {name}, California"
 
@@ -508,7 +477,7 @@ def build_page(chrome, slug, city):
 
 def main():
     force = "--force" in sys.argv
-    chrome = extract_chrome(CHROME_TEMPLATE)
+    chrome = extract_chrome()
 
     written, skipped = [], []
     for slug, city in CITIES.items():

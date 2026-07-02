@@ -33,7 +33,7 @@ BLOG_URL = f"{SITE}/blog/"
 FEED_TITLE = "Ghosxt Blog — Managed IT & Cybersecurity for the Central Coast"
 FEED_DESC = (
     "Practical IT, cybersecurity, and compliance guidance for small "
-    "businesses on California's Central Coast, from a DoD-cleared IT engineer."
+    "businesses on California's Central Coast, from a DoD-cleared engineer."
 )
 DEFAULT_AUTHOR = "Ulises Paiz"
 MAX_ITEMS = 30
