@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from a DoD-cleared IT engineer.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Wed, 01 Jul 2026 11:05:47 +0000</lastBuildDate>
-    <pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Thu, 02 Jul 2026 11:04:23 +0000</lastBuildDate>
+    <pubDate>Thu, 02 Jul 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>EDR vs. Antivirus: Why Small Businesses Need More Than a Signature Scanner in 2026</title>
+      <link>https://ghosxt.com/blog/edr-vs-antivirus-small-business-2026.html</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/edr-vs-antivirus-small-business-2026.html</guid>
+      <pubDate>Thu, 02 Jul 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>Traditional antivirus catches malware it already recognizes. It misses fileless attacks and the human-operated ransomware crews actually hitting small businesses in 2026. What EDR adds, what it costs, and the 10-minute check to see what you already have.</description>
+    </item>
     <item>
       <title>Employee Offboarding IT Checklist: Closing the Security Gaps When Someone Leaves</title>
       <link>https://ghosxt.com/blog/employee-offboarding-it-security-checklist-small-business.html</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>Attackers are flooding inboxes with spam, then messaging staff on Microsoft Teams while posing as the IT help desk, talking them into Quick Assist remote access, and dropping ransomware. How the email-bombing-plus-Teams-vishing playbook works and how a small business shuts it down, from a DoD-cleared engineer.</description>
-    </item>
-    <item>
-      <title>Still on Windows 10 in Mid-2026? What a Small Business Should Do Now</title>
-      <link>https://ghosxt.com/blog/windows-10-end-of-life-small-business-what-to-do-2026.html</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/windows-10-end-of-life-small-business-what-to-do-2026.html</guid>
-      <pubDate>Sat, 30 May 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>Windows 10 support ended October 14, 2025, and the consumer ESU lifeline expires in October 2026. A plain-language guide for small businesses: who can upgrade to Windows 11 free, who needs new PCs, what ESU really costs, and how to plan it without panic, from a DoD-cleared engineer.</description>
     </item>
   </channel>
 </rss>
