@@ -99,14 +99,25 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Check if user has already responded to cookies
     const cookieConsent = localStorage.getItem('cookieConsent');
-    
+
+    // Keep the mobile sticky CTA bar above the banner instead of letting it
+    // get covered — measured because the banner's height varies with how
+    // its text wraps across screen widths.
+    const syncCookieBannerHeight = () => {
+        document.documentElement.style.setProperty('--cookie-banner-height', `${cookieBanner.offsetHeight}px`);
+    };
+    window.addEventListener('resize', () => {
+        if (cookieBanner.classList.contains('visible')) syncCookieBannerHeight();
+    });
+
     // Show banner if no consent has been given
     if (!cookieConsent) {
         setTimeout(() => {
             cookieBanner.classList.add('visible');
+            syncCookieBannerHeight();
         }, 1000); // Delay 1 second before showing
     }
-    
+
     // Accept cookies
     cookieAccept.addEventListener('click', () => {
         localStorage.setItem('cookieConsent', 'accepted');
