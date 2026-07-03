@@ -31,7 +31,7 @@
     <link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" />
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" /></noscript>
     <link rel="stylesheet" href="../assets/css/main.css?v=2026-07-02a" />
-    <link rel="stylesheet" href="../assets/css/blog.css?v=2026-05-23a" />
+    <link rel="stylesheet" href="../assets/css/blog.css?v=2026-07-03a" />
     <link rel="stylesheet" media="print" onload="this.media='all'" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" />
     <noscript><link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" /></noscript>
     <script type="application/ld+json">
@@ -45,7 +45,7 @@
             "description": "A plain-talk decision guide on when to use OneDrive, SharePoint, or Teams files for a 15-100 person business. Permissions, governance, and the patterns that actually work, from a DoD-cleared engineer.",
             "image": "https://ghosxt.com/assets/img/og/blog-onedrive-vs-sharepoint-vs-teams-files-small-business.png",
             "author": { "@type": "Person", "name": "Ulises Paiz", "url": "https://ghosxt.com/about.html" },
-            "publisher": { "@type": "Organization", "name": "Ghosxt", "logo": { "@type": "ImageObject", "url": "https://ghosxt.com/assets/img/ghosxt logo.webp" } },
+            "publisher": { "@type": "Organization", "name": "Ghosxt", "logo": { "@type": "ImageObject", "url": "https://ghosxt.com/assets/img/ghosxt-logo-160.webp" } },
             "datePublished": "2026-05-23",
             "dateModified": "2026-05-23",
             "articleSection": "Microsoft 365",
@@ -124,7 +124,7 @@
     <div class="cookie-banner" id="cookieBanner"><div class="cookie-banner-container"><div class="cookie-content"><div class="cookie-icon"><i class="fi fi-rs-cookie"></i></div><div class="cookie-text"><p class="cookie-message">We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.</p><a href="../privacy-policy.html" class="cookie-link">Learn more about our Privacy Policy</a></div></div><div class="cookie-actions"><button class="cookie-btn cookie-btn-secondary" id="cookieDecline">Decline</button><button class="cookie-btn cookie-btn-primary" id="cookieAccept">Accept All</button></div></div></div>
     <nav class="navbar" aria-label="Main navigation">
       <div class="navbar-container">
-        <div class="navbar-left"><a href="../index.html" class="navbar-logo"><img fetchpriority="high" loading="eager" src="../assets/img/ghosxt logo.webp" alt="Ghosxt logo" width="48" height="48" /><span>GHOSXT</span></a></div>
+        <div class="navbar-left"><a href="../index.html" class="navbar-logo"><img fetchpriority="high" loading="eager" src="../assets/img/ghosxt-logo-160.webp" alt="Ghosxt logo" width="48" height="48" /><span>GHOSXT</span></a></div>
         <div class="navbar-right">
           <div class="navbar-menu">
             <a href="../index.html" class="navbar-link">Home</a>
@@ -183,6 +183,11 @@
           <h1>OneDrive vs SharePoint vs Teams Files: Which Should Your Small Business Use?</h1>
           <div class="blog-post-author">
             <strong>Ulises Paiz</strong>, Founder, Ghosxt
+          </div>
+          <div class="author-bio-box">
+            <!-- ghosxt:author-bio -->
+            <img src="../assets/img/ulises.avif" alt="Ulises Paiz" width="56" height="56" loading="lazy" />
+            <p>Ulises Paiz, Founder of Ghosxt, has 10+ years in IT infrastructure and cybersecurity, an Active Top Secret Clearance, and 9 certifications including CySA+, Security+, and AZ-104. Before founding Ghosxt, he served as a Senior Solutions Consultant for the DoD and built security programs for 40+ Central Coast businesses. <a href="../about.html">More about Ulises &rarr;</a></p>
           </div>
         </div>
       </header>
@@ -271,6 +276,54 @@
           </ul>
 
           <p>The right pattern: use Teams as the active-collaboration surface, and treat the underlying SharePoint site as the permanent home. When a project ends, you can either keep the Team archived for reference or move the surviving documents into a department SharePoint site and let the project Team retire.</p>
+
+          <h2>OneDrive vs. SharePoint vs. Teams, side by side</h2>
+
+          <div class="compare-table-wrap">
+            <table class="compare-table">
+              <caption>Where a file belongs, at a glance.</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Factor</th>
+                  <th scope="col">OneDrive</th>
+                  <th scope="col">SharePoint</th>
+                  <th scope="col">Teams Files</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Ownership</th>
+                  <td>One person</td>
+                  <td>A department or business function</td>
+                  <td>Same as its underlying SharePoint site</td>
+                </tr>
+                <tr>
+                  <th scope="row">Best for</th>
+                  <td>Drafts, personal notes, work-in-progress</td>
+                  <td>Official, permanent department and customer records</td>
+                  <td>Active collaboration happening right now</td>
+                </tr>
+                <tr>
+                  <th scope="row">What it actually is</th>
+                  <td>A personal document library</td>
+                  <td>A document library the business owns</td>
+                  <td>A SharePoint document library with a chat and meeting layer on top</td>
+                </tr>
+                <tr>
+                  <th scope="row">When the owner leaves</th>
+                  <td>Files can be lost or need manual reassignment</td>
+                  <td>Unaffected &mdash; the business owns the library, not the person</td>
+                  <td>Unaffected &mdash; same as SharePoint underneath</td>
+                </tr>
+                <tr>
+                  <th scope="row">Retention policy support</th>
+                  <td>Weak &mdash; not designed for org-level retention</td>
+                  <td>Full support, applied at the site level</td>
+                  <td>Inherited from the underlying SharePoint site</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
           <h2>Permissions, the SMB way</h2>
 
@@ -468,7 +521,7 @@
         <div class="footer-brand-row">
           <div class="footer-brand">
             <img
-              src="../assets/img/ghosxt logo.webp"
+              src="../assets/img/ghosxt-logo-160.webp"
               alt="Ghosxt logo"
               width="80"
               height="80"

@@ -31,7 +31,7 @@
     <link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" />
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" /></noscript>
     <link rel="stylesheet" href="../assets/css/main.css?v=2026-07-02a" />
-    <link rel="stylesheet" href="../assets/css/blog.css?v=2026-05-15a" />
+    <link rel="stylesheet" href="../assets/css/blog.css?v=2026-07-03a" />
     <link rel="stylesheet" media="print" onload="this.media='all'" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" />
     <noscript><link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" /></noscript>
     <script type="application/ld+json">
@@ -45,7 +45,7 @@
             "description": "Former employees keep access to email, cloud files, and business apps far longer than owners realize. The same-day IT offboarding checklist that closes the gap: accounts, devices, shared logins, and forwarding rules.",
             "image": "https://ghosxt.com/assets/img/og/blog-employee-offboarding-it-security-checklist-small-business.png",
             "author": { "@type": "Person", "name": "Ulises Paiz", "url": "https://ghosxt.com/about.html" },
-            "publisher": { "@type": "Organization", "name": "Ghosxt", "logo": { "@type": "ImageObject", "url": "https://ghosxt.com/assets/img/ghosxt logo.webp" } },
+            "publisher": { "@type": "Organization", "name": "Ghosxt", "logo": { "@type": "ImageObject", "url": "https://ghosxt.com/assets/img/ghosxt-logo-160.webp" } },
             "datePublished": "2026-07-01",
             "dateModified": "2026-07-01",
             "articleSection": "Cybersecurity",
@@ -57,6 +57,19 @@
               { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ghosxt.com/" },
               { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://ghosxt.com/blog/" },
               { "@type": "ListItem", "position": 3, "name": "Employee Offboarding IT Checklist", "item": "https://ghosxt.com/blog/employee-offboarding-it-security-checklist-small-business.html" }
+            ]
+          },
+          {
+            "@type": "HowTo",
+            "name": "The same-day employee offboarding IT checklist",
+            "description": "A working offboarding process that runs the same way every time, on the day employment ends.",
+            "step": [
+              { "@type": "HowToStep", "name": "Disable identity first", "text": "Turn off the employee's primary directory account (Microsoft 365, Google Workspace, or on-prem Active Directory) immediately. Because most other business apps use single sign-on tied to that identity, this one step closes a large share of the total access footprint in a single action." },
+              { "@type": "HowToStep", "name": "Revoke MFA and active sessions", "text": "Disabling the account is not enough on its own — existing login sessions and app passwords can remain valid until they are explicitly revoked. Force a sign-out of all active sessions and remove any registered MFA devices." },
+              { "@type": "HowToStep", "name": "Reassign, don't delete, the mailbox and files", "text": "Convert email to a shared mailbox or forward it to a manager for a transition period, and transfer ownership of any cloud files, shared drives, and CRM records the employee owned to someone still on the team, before the account is removed." },
+              { "@type": "HowToStep", "name": "Pull the device", "text": "Recover any company laptop, phone, or hardware token. If the employee used a personal device for email or Slack, remotely wipe the company data and confirm the device is removed from your mobile device management enrollment." },
+              { "@type": "HowToStep", "name": "Rotate shared and vendor credentials", "text": "Any login the employee knew that is not tied to their personal identity — a shared social media account, a vendor portal, a shared password vault entry — needs its password changed, not just their individual access removed." },
+              { "@type": "HowToStep", "name": "Remove them from every third-party app", "text": "Check your password manager and any SaaS admin console for standalone logins that were never connected to the main directory account — the accounts that get missed most often because they live outside the systems IT normally watches." }
             ]
           },
           {
@@ -100,7 +113,7 @@
     <div class="cookie-banner" id="cookieBanner"><div class="cookie-banner-container"><div class="cookie-content"><div class="cookie-icon"><i class="fi fi-rs-cookie"></i></div><div class="cookie-text"><p class="cookie-message">We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.</p><a href="../privacy-policy.html" class="cookie-link">Learn more about our Privacy Policy</a></div></div><div class="cookie-actions"><button class="cookie-btn cookie-btn-secondary" id="cookieDecline">Decline</button><button class="cookie-btn cookie-btn-primary" id="cookieAccept">Accept All</button></div></div></div>
     <nav class="navbar" aria-label="Main navigation">
       <div class="navbar-container">
-        <div class="navbar-left"><a href="../index.html" class="navbar-logo"><img fetchpriority="high" loading="eager" src="../assets/img/ghosxt logo.webp" alt="Ghosxt logo" width="48" height="48" /><span>GHOSXT</span></a></div>
+        <div class="navbar-left"><a href="../index.html" class="navbar-logo"><img fetchpriority="high" loading="eager" src="../assets/img/ghosxt-logo-160.webp" alt="Ghosxt logo" width="48" height="48" /><span>GHOSXT</span></a></div>
         <div class="navbar-right">
           <div class="navbar-menu">
             <a href="../index.html" class="navbar-link">Home</a>
@@ -160,6 +173,11 @@
           <div class="blog-post-author">
             <strong>Ulises Paiz</strong>, Founder, Ghosxt
           </div>
+          <div class="author-bio-box">
+            <!-- ghosxt:author-bio -->
+            <img src="../assets/img/ulises.avif" alt="Ulises Paiz" width="56" height="56" loading="lazy" />
+            <p>Ulises Paiz, Founder of Ghosxt, has 10+ years in IT infrastructure and cybersecurity, an Active Top Secret Clearance, and 9 certifications including CySA+, Security+, and AZ-104. Before founding Ghosxt, he served as a Senior Solutions Consultant for the DoD and built security programs for 40+ Central Coast businesses. <a href="../about.html">More about Ulises &rarr;</a></p>
+          </div>
         </div>
       </header>
       <div class="blog-post-body">
@@ -213,7 +231,7 @@
         <div class="footer-brand-row">
           <div class="footer-brand">
             <img
-              src="../assets/img/ghosxt logo.webp"
+              src="../assets/img/ghosxt-logo-160.webp"
               alt="Ghosxt logo"
               width="80"
               height="80"
