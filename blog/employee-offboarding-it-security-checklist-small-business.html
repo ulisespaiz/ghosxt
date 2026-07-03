@@ -31,7 +31,7 @@
     <link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" />
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" /></noscript>
     <link rel="stylesheet" href="../assets/css/main.css?v=2026-07-02a" />
-    <link rel="stylesheet" href="../assets/css/blog.css?v=2026-07-02a" />
+    <link rel="stylesheet" href="../assets/css/blog.css?v=2026-07-03a" />
     <link rel="stylesheet" media="print" onload="this.media='all'" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" />
     <noscript><link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" /></noscript>
     <script type="application/ld+json">
@@ -57,6 +57,19 @@
               { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ghosxt.com/" },
               { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://ghosxt.com/blog/" },
               { "@type": "ListItem", "position": 3, "name": "Employee Offboarding IT Checklist", "item": "https://ghosxt.com/blog/employee-offboarding-it-security-checklist-small-business.html" }
+            ]
+          },
+          {
+            "@type": "HowTo",
+            "name": "The same-day employee offboarding IT checklist",
+            "description": "A working offboarding process that runs the same way every time, on the day employment ends.",
+            "step": [
+              { "@type": "HowToStep", "name": "Disable identity first", "text": "Turn off the employee's primary directory account (Microsoft 365, Google Workspace, or on-prem Active Directory) immediately. Because most other business apps use single sign-on tied to that identity, this one step closes a large share of the total access footprint in a single action." },
+              { "@type": "HowToStep", "name": "Revoke MFA and active sessions", "text": "Disabling the account is not enough on its own — existing login sessions and app passwords can remain valid until they are explicitly revoked. Force a sign-out of all active sessions and remove any registered MFA devices." },
+              { "@type": "HowToStep", "name": "Reassign, don't delete, the mailbox and files", "text": "Convert email to a shared mailbox or forward it to a manager for a transition period, and transfer ownership of any cloud files, shared drives, and CRM records the employee owned to someone still on the team, before the account is removed." },
+              { "@type": "HowToStep", "name": "Pull the device", "text": "Recover any company laptop, phone, or hardware token. If the employee used a personal device for email or Slack, remotely wipe the company data and confirm the device is removed from your mobile device management enrollment." },
+              { "@type": "HowToStep", "name": "Rotate shared and vendor credentials", "text": "Any login the employee knew that is not tied to their personal identity — a shared social media account, a vendor portal, a shared password vault entry — needs its password changed, not just their individual access removed." },
+              { "@type": "HowToStep", "name": "Remove them from every third-party app", "text": "Check your password manager and any SaaS admin console for standalone logins that were never connected to the main directory account — the accounts that get missed most often because they live outside the systems IT normally watches." }
             ]
           },
           {

@@ -31,7 +31,7 @@
     <link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" />
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" /></noscript>
     <link rel="stylesheet" href="../assets/css/main.css?v=2026-07-02a" />
-    <link rel="stylesheet" href="../assets/css/blog.css?v=2026-07-02a" />
+    <link rel="stylesheet" href="../assets/css/blog.css?v=2026-07-03a" />
     <link rel="stylesheet" media="print" onload="this.media='all'" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" />
     <noscript><link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" /></noscript>
     <script type="application/ld+json">
@@ -57,6 +57,18 @@
               { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ghosxt.com/" },
               { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://ghosxt.com/blog/" },
               { "@type": "ListItem", "position": 3, "name": "Identity Hardening for the 5-Employee Company", "item": "https://ghosxt.com/blog/identity-hardening-small-business-5-employees-microsoft-365.html" }
+            ]
+          },
+          {
+            "@type": "HowTo",
+            "name": "The five identity controls that actually move the needle",
+            "description": "Five controls, roughly two days of work, that cut the realistic small-business attack surface by an order of magnitude.",
+            "step": [
+              { "@type": "HowToStep", "name": "Phishing-resistant MFA on admin accounts; regular MFA on everyone", "text": "Push-notification MFA is losing ground to push bombing and adversary-in-the-middle phishing. Deploy hardware FIDO2 keys or Windows Hello for Business on every admin account, with strong push MFA acceptable as a fallback for regular users." },
+              { "@type": "HowToStep", "name": "Separated admin accounts", "text": "Split the owner's daily-driver mailbox from their Global Administrator role into two accounts, so a phishing email that compromises the daily account can't also take over the entire Microsoft 365 tenant." },
+              { "@type": "HowToStep", "name": "Conditional Access: the rule engine you already paid for", "text": "Block legacy authentication, require MFA for all users, geo-block sign-ins from countries you don't operate in, and require a compliant device for sensitive apps — all included in Microsoft 365 Business Premium and rarely turned on." },
+              { "@type": "HowToStep", "name": "No persistent local administrators on workstations", "text": "Remove standing local administrator rights from every regular user account so a compromised standard-user session can't simply elevate itself to full control of the machine." },
+              { "@type": "HowToStep", "name": "Legacy authentication off, tenant-wide", "text": "Audit sign-in logs for legacy protocols that predate MFA (Basic auth, older Outlook, legacy ActiveSync), replace the few legitimate uses with modern equivalents, and disable legacy auth at the tenant level." }
             ]
           },
           {
