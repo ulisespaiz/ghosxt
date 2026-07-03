@@ -3,20 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PCI DSS Compliance for Small Business | Ghosxt</title>
-    <meta name="description" content="PCI DSS compliance for small retail, restaurants, and hospitality: network segmentation, secure POS, MFA and access control, vulnerability scanning, and SAQ guidance, from a DoD-cleared engineer. Free assessment." />
-    <link rel="canonical" href="https://ghosxt.com/pci-compliance.html" />
+    <title>Zero Trust Security for Small Business | Ghosxt</title>
+    <meta name="description" content="Zero Trust security architecture for small business: identity verification, least-privilege access, and network segmentation — from a DoD-cleared engineer." />
+    <link rel="canonical" href="https://ghosxt.com/zero-trust-security.html" />
     <link rel="alternate" type="application/rss+xml" title="Ghosxt Blog" href="https://ghosxt.com/feed.xml" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://ghosxt.com/pci-compliance.html" />
-    <meta property="og:title" content="PCI DSS Compliance for Retail, Restaurants & Hospitality | Ghosxt" />
-    <meta property="og:description" content="Network segmentation, secure POS, MFA, scanning, and SAQ guidance &mdash; practical PCI compliance for small merchants." />
-    <meta property="og:image" content="https://ghosxt.com/assets/img/og/pci-compliance.png" />
+    <meta property="og:url" content="https://ghosxt.com/zero-trust-security.html" />
+    <meta property="og:title" content="Zero Trust Security for Small Business | Ghosxt" />
+    <meta property="og:description" content="Zero Trust security architecture for small business: identity verification, least-privilege access, and network segmentation, from a DoD-cleared engineer." />
+    <meta property="og:image" content="https://ghosxt.com/assets/img/og/zero-trust-security.png" />
     <meta property="og:site_name" content="Ghosxt" />
     <meta name="robots" content="index, follow" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="PCI DSS Compliance for Retail, Restaurants & Hospitality | Ghosxt" />
-    <meta name="twitter:description" content="Network segmentation, secure POS, MFA, scanning, and SAQ guidance &mdash; practical PCI compliance for small merchants." />
+    <meta name="twitter:title" content="Zero Trust Security for Small Business | Ghosxt" />
+    <meta name="twitter:description" content="Zero Trust security architecture for small business, built by a DoD-cleared engineer." />
     <link rel="icon" href="assets/img/favicon.ico" sizes="any" />
     <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
@@ -37,11 +37,11 @@
         "@graph": [
           {
             "@type": "Service",
-            "@id": "https://ghosxt.com/pci-compliance.html#service",
-            "serviceType": "PCI DSS Compliance for Small Business",
-            "name": "PCI DSS Compliance for Retail, Restaurants & Hospitality",
-            "url": "https://ghosxt.com/pci-compliance.html",
-            "description": "PCI DSS compliance for small retail, restaurants, and hospitality: network segmentation, secure POS, MFA and access control, vulnerability scanning, and SAQ guidance, from a DoD-cleared engineer. Free assessment.",
+            "@id": "https://ghosxt.com/zero-trust-security.html#service",
+            "serviceType": "Zero Trust Security Architecture",
+            "name": "Zero Trust Security",
+            "url": "https://ghosxt.com/zero-trust-security.html",
+            "description": "Zero Trust security architecture for small business: identity verification and Conditional Access, least-privilege access control, network micro-segmentation, and continuous monitoring, implemented by a DoD-cleared engineer.",
             "provider": { "@id": "https://ghosxt.com/#business" },
             "areaServed": [
               { "@type": "AdministrativeArea", "name": "Monterey County, California" },
@@ -56,7 +56,7 @@
             "itemListElement": [
               { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ghosxt.com/" },
               { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://ghosxt.com/services.html" },
-              { "@type": "ListItem", "position": 3, "name": "PCI Compliance", "item": "https://ghosxt.com/pci-compliance.html" }
+              { "@type": "ListItem", "position": 3, "name": "Zero Trust Security", "item": "https://ghosxt.com/zero-trust-security.html" }
             ]
           },
           {
@@ -64,50 +64,34 @@
             "mainEntity": [
               {
                 "@type": "Question",
-                "name": "Who needs to be PCI compliant?",
+                "name": "What is Zero Trust in plain terms?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Any business that accepts, processes, stores, or transmits credit card data — which is nearly every retailer, restaurant, hotel, and service business that takes cards. PCI DSS is not a law, but it is a contractual requirement from the card brands and your payment processor, and non-compliance can mean fines, higher fees, or losing the ability to take cards at all."
+                  "text": "Zero Trust means no user, device, or connection is trusted by default just because it's inside your network. Every request has to prove who it is, that the device is healthy, and that it only gets access to what it actually needs — every time, not just at login. It's an architecture and a set of practices, not a single product you buy."
                 }
               },
               {
                 "@type": "Question",
-                "name": "What is an SAQ and which one applies to me?",
+                "name": "Do we need new hardware to do this?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "A Self-Assessment Questionnaire (SAQ) is how most small merchants validate PCI compliance. Which one you use depends on how you take payments — SAQ A for fully outsourced e-commerce, SAQ B for standalone terminals, SAQ C for integrated POS, and so on. Picking the right SAQ is half the battle, and we determine it for you before anything else."
+                  "text": "Usually not. Most of Zero Trust for a small business is configuration of tools you likely already have — Microsoft 365 Conditional Access, identity policies, and network segmentation on your existing firewall — rather than new hardware purchases. We'll tell you plainly if something genuinely needs replacing."
                 }
               },
               {
                 "@type": "Question",
-                "name": "Do I really need network segmentation?",
+                "name": "How does this fit with Microsoft 365?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "It is the highest-leverage thing you can do. Segmentation separates the systems that touch card data from everything else — guest Wi-Fi, back-office PCs, security cameras — so the scope of PCI (and the cost of compliance) shrinks dramatically, and a breach on the guest network cannot reach the payment systems. For most small merchants, segmentation is the whole game."
+                  "text": "Microsoft 365 and Entra ID already include most of the building blocks — Conditional Access, phishing-resistant MFA, device compliance policies — they're just rarely configured to actually enforce Zero Trust principles out of the box. We turn on and tune what you're already paying for."
                 }
               },
               {
                 "@type": "Question",
-                "name": "Do I need quarterly vulnerability scans?",
+                "name": "Is Zero Trust only for large enterprises?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "If your environment is in scope for external scanning (most integrated and e-commerce setups), yes — quarterly scans by an Approved Scanning Vendor are required, plus internal scanning and prompt remediation. We set up the scanning, interpret the results, and fix what they find, so a scan is a routine pass rather than a fire drill."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Isn't my POS vendor handling PCI for me?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Partly, and that is a dangerous assumption to leave unchecked. A modern POS or payment terminal handles part of the burden, but your network, Wi-Fi, access controls, and staff practices are still in scope and still your responsibility. We map exactly where your provider's responsibility ends and yours begins, then close your side."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "What if we have a card-data breach?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "A card breach can trigger forensic investigation, fines, and mandatory notification — expensive and reputation-damaging. We help you respond and, far more importantly, prevent it: segmentation, secure POS, MFA, and monitoring that stop the intrusions that lead to card theft. See cybersecurity and emergency IT."
+                  "text": "No. The term originated in large-enterprise security, but the core practices — enforce MFA everywhere, give people only the access they need, segment the network so one compromised device can't reach everything — are exactly as valuable, and just as achievable, for a 10-person business as a 10,000-person one."
                 }
               }
             ]
@@ -229,103 +213,100 @@
       <section class="location-hero">
         <div class="container">
           <nav class="location-breadcrumbs" aria-label="Breadcrumb">
-            <a href="index.html">Home</a><span class="sep">&rsaquo;</span><a href="services.html">Services</a><span class="sep">&rsaquo;</span><span aria-current="page">PCI Compliance</span>
+            <a href="index.html">Home</a><span class="sep">&rsaquo;</span><a href="services.html">Services</a><span class="sep">&rsaquo;</span><span aria-current="page">Zero Trust Security</span>
           </nav>
-          <h1>PCI DSS Compliance for Retail, Restaurants &amp; Hospitality</h1>
-          <p class="lead">If your business takes cards, PCI DSS applies &mdash; and assuming your POS vendor 'handles it' is exactly how small merchants end up breached and fined. Ghosxt makes PCI compliance practical for Central Coast retailers, restaurants, hotels, and service businesses: the right SAQ, real network segmentation, secure payment systems, and the monitoring to back it up, from a DoD-cleared engineer who secures payment networks the way they should be.</p>
+          <h1>Zero Trust Security for Small Business</h1>
+          <p class="lead">"Trusted because it's inside the network" is exactly how a stolen laptop or a phished password turns into a full breach. Zero Trust flips that: nothing is trusted by default &mdash; every user, device, and connection has to prove itself, every time. Ghosxt builds Zero Trust architecture for Central Coast small businesses using the tools you likely already own, configured to actually enforce it.</p>
           <div class="location-hero-ctas">
-            <a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer" class="location-btn location-btn-primary"><i class="fi fi-rs-calendar-day" aria-hidden="true"></i> Book a Free PCI Assessment</a>
+            <a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer" class="location-btn location-btn-primary"><i class="fi fi-rs-calendar-day" aria-hidden="true"></i> Book a Free Assessment</a>
             <a href="tel:+18312040501" class="location-btn location-btn-secondary"><i class="fi fi-rs-phone-call" aria-hidden="true"></i> (831) 204-0501</a>
           </div>
-          <p class="pricing-trust-callout"><a href="contact.html">Real segmentation and secure POS &mdash; not just a checkbox your processor handed you.</a></p>
+          <p class="pricing-trust-callout"><a href="contact.html">Built by a DoD-cleared engineer &mdash; an architecture, not a product pitch.</a></p>
         </div>
       </section>
       <section class="location-section">
         <div class="container">
-          <h2>What PCI DSS requires &mdash; and what it really protects</h2>
-          <p>PCI DSS is the card brands' security standard for everyone who touches cardholder data. For a small merchant it comes down to a manageable set of things done correctly: know where card data flows, segment those systems away from everything else, secure your point-of-sale and the network around it, control access with unique logins and MFA, scan for vulnerabilities, monitor and log, and validate with the right Self-Assessment Questionnaire. Do those, and both your compliance burden and your breach risk drop sharply.</p>
-          <p>The businesses that get breached are almost always the ones that assumed someone else had it covered. PCI is not just paperwork &mdash; it is the difference between a card-skimming attack that goes nowhere and one that ends up on the local news.</p>
+          <h2>Zero Trust is an architecture, not a product</h2>
+          <p>No single tool gets you to Zero Trust, and nobody selling one box that does is telling you the whole story. Zero Trust is a set of principles applied consistently across identity, devices, and network: verify explicitly, use least-privilege access, and assume a breach has already happened somewhere so you limit what it can reach.</p>
+          <p>For most small businesses, the building blocks already exist inside Microsoft 365 and your existing firewall &mdash; Conditional Access, device compliance policies, network segmentation &mdash; just rarely configured to actually enforce any of it. That's the gap we close.</p>
         </div>
       </section>
       <section class="location-section">
         <div class="container">
-          <h2>How we make PCI compliance practical</h2>
-          <p>Right-sized for a single storefront, restaurant, or small hotel &mdash; the controls PCI requires, implemented so they actually protect your customers' cards.</p>
+          <h2>Why a DoD-cleared engineer is different here</h2>
+          <p>Zero Trust originated in the environments Ghosxt's founder worked inside directly &mdash; DoD networks where "trusted because it's internal" was never an acceptable assumption. That's federal-grade discipline applied to a small business budget, not a marketing term borrowed from an enterprise vendor's slide deck.</p>
+        </div>
+      </section>
+      <section class="location-section">
+        <div class="container">
+          <h2>What we implement</h2>
+          <p>Most of this is configuration of tools you already own, tuned to actually enforce Zero Trust principles rather than sit at default settings.</p>
           <div class="services-grid">
             <article class="service-card">
-              <h3>Network Segmentation</h3>
-              <p>Separate the card-data environment from guest Wi-Fi, back-office systems, and everything else &mdash; the single highest-leverage move, shrinking both your PCI scope and your breach risk.</p>
+              <h3>Identity Verification &amp; Conditional Access</h3>
+              <p>Phishing-resistant MFA enforced on every account, and Conditional Access policies that check device health and location before granting access &mdash; not just a password at the door.</p>
             </article>
             <article class="service-card">
-              <h3>Secure Point-of-Sale</h3>
-              <p>POS and payment terminals configured and hardened correctly, with the network around them locked down &mdash; closing the gaps your POS vendor leaves as your responsibility.</p>
+              <h3>Least-Privilege Access Control</h3>
+              <p>Every user and service account gets only the access it needs to do its job, reviewed on a schedule &mdash; so a single compromised account can't reach everything.</p>
             </article>
             <article class="service-card">
-              <h3>Access Control &amp; MFA</h3>
-              <p>Unique logins, least-privilege access, and MFA on systems and remote access, so a shared password or a vendor's remote tool cannot become the entry point for card theft.</p>
+              <h3>Network Micro-Segmentation</h3>
+              <p>Your network split into isolated zones so a compromised device or a breached vendor connection can't move laterally to reach the rest of your systems.</p>
             </article>
             <article class="service-card">
-              <h3>Vulnerability Scanning</h3>
-              <p>Approved Scanning Vendor quarterly scans where required, plus internal scanning and remediation, set up and interpreted for you so a scan is a routine pass, not a scramble. PCI DSS also requires <a href="penetration-testing.html">annual penetration testing</a>, which we can scope alongside your ASV scans.</p>
+              <h3>Device Compliance &amp; Health Checks</h3>
+              <p>Only devices that meet your security baseline &mdash; patched, encrypted, protected &mdash; are allowed to connect, checked continuously, not just at enrollment.</p>
             </article>
             <article class="service-card">
-              <h3>SAQ Guidance</h3>
-              <p>We determine the right Self-Assessment Questionnaire for how you actually take payments and walk you through it, so you validate correctly instead of guessing.</p>
+              <h3>Continuous Monitoring &amp; Logging</h3>
+              <p>Access and identity events logged and watched on an ongoing basis, so unusual behavior gets caught instead of assumed safe because it came from "inside."</p>
             </article>
             <article class="service-card">
-              <h3>Monitoring &amp; Logging</h3>
-              <p>Logging and 24/7 monitoring around the payment environment so intrusions are caught early &mdash; and so you can demonstrate the controls PCI requires. Part of <a href="managed-it-services.html">managed IT</a>.</p>
+              <h3>Application &amp; Workload Isolation</h3>
+              <p>Sensitive applications and data isolated from the general network, so access to one system doesn't imply access to everything else.</p>
             </article>
           </div>
         </div>
       </section>
       <section class="location-cta">
         <div class="container">
-          <h2>See what PCI compliance takes for your business</h2>
-          <p>Book a free assessment. We will map how card data flows through your business, identify the right SAQ, and show you the shortest path to compliance &mdash; usually starting with segmentation &mdash; whether or not you hire us.</p>
+          <h2>Find out where your network still trusts by default</h2>
+          <p>Book a free assessment. We'll show you exactly where "inside the network" is still doing the work that identity and device verification should be doing instead &mdash; no obligation.</p>
           <a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer" class="location-btn location-btn-primary"><i class="fi fi-rs-calendar-day" aria-hidden="true"></i> Book your free assessment</a>
         </div>
       </section>
       <section class="location-section">
         <div class="container">
-          <h2>Segmentation is the whole game</h2>
-          <p>For most small merchants, the single most valuable thing we do is segment the network. When the systems that handle card data are properly isolated from guest Wi-Fi, back-office computers, cameras, and everything else, your PCI scope shrinks to just those systems &mdash; which means less to secure, less to validate, and a much smaller, cheaper compliance footprint. It also means an attacker who gets onto the guest Wi-Fi simply cannot reach the registers. We design that separation, then keep it enforced.</p>
-          <p>PCI work pairs naturally with our <a href="hospitality-it-services.html">hospitality IT</a> services and the <a href="cybersecurity.html">cybersecurity</a> controls that stop the intrusions behind most card breaches.</p>
+          <h2>Where this fits with what we already do</h2>
+          <p>Zero Trust builds directly on <a href="managed-it-services.html">managed IT</a> and <a href="cybersecurity.html">cybersecurity</a> fundamentals already in place for most clients &mdash; MFA, endpoint protection, and identity hardening are Zero Trust building blocks, not a separate project. Our posts on <a href="blog/identity-hardening-small-business-5-employees-microsoft-365.html">identity hardening for small teams</a> and <a href="blog/business-wifi-network-segmentation-small-business-2026.html">network segmentation</a> cover two of the pillars in more depth.</p>
         </div>
       </section>
       <section class="location-section location-faq">
         <div class="container">
-          <h2>PCI DSS compliance FAQs</h2>
+          <h2>Zero Trust FAQs</h2>
           <details>
-            <summary>Who needs to be PCI compliant?</summary>
-            <div class="answer">Any business that accepts, processes, stores, or transmits credit card data &mdash; which is nearly every retailer, restaurant, hotel, and service business that takes cards. PCI DSS is not a law, but it is a contractual requirement from the card brands and your payment processor, and non-compliance can mean fines, higher fees, or losing the ability to take cards at all.</div>
+            <summary>What is Zero Trust in plain terms?</summary>
+            <div class="answer">Zero Trust means no user, device, or connection is trusted by default just because it's inside your network. Every request has to prove who it is, that the device is healthy, and that it only gets access to what it actually needs &mdash; every time, not just at login. It's an architecture and a set of practices, not a single product you buy.</div>
           </details>
           <details>
-            <summary>What is an SAQ and which one applies to me?</summary>
-            <div class="answer">A Self-Assessment Questionnaire (SAQ) is how most small merchants validate PCI compliance. Which one you use depends on how you take payments &mdash; SAQ A for fully outsourced e-commerce, SAQ B for standalone terminals, SAQ C for integrated POS, and so on. Picking the right SAQ is half the battle, and we determine it for you before anything else.</div>
+            <summary>Do we need new hardware to do this?</summary>
+            <div class="answer">Usually not. Most of Zero Trust for a small business is configuration of tools you likely already have &mdash; Microsoft 365 Conditional Access, identity policies, and network segmentation on your existing firewall &mdash; rather than new hardware purchases. We'll tell you plainly if something genuinely needs replacing.</div>
           </details>
           <details>
-            <summary>Do I really need network segmentation?</summary>
-            <div class="answer">It is the highest-leverage thing you can do. Segmentation separates the systems that touch card data from everything else &mdash; guest Wi-Fi, back-office PCs, security cameras &mdash; so the scope of PCI (and the cost of compliance) shrinks dramatically, and a breach on the guest network cannot reach the payment systems. For most small merchants, segmentation is the whole game.</div>
+            <summary>How does this fit with Microsoft 365?</summary>
+            <div class="answer">Microsoft 365 and Entra ID already include most of the building blocks &mdash; Conditional Access, phishing-resistant MFA, device compliance policies &mdash; they're just rarely configured to actually enforce Zero Trust principles out of the box. We turn on and tune what you're already paying for.</div>
           </details>
           <details>
-            <summary>Do I need quarterly vulnerability scans?</summary>
-            <div class="answer">If your environment is in scope for external scanning (most integrated and e-commerce setups), yes &mdash; quarterly scans by an Approved Scanning Vendor are required, plus internal scanning and prompt remediation. We set up the scanning, interpret the results, and fix what they find, so a scan is a routine pass rather than a fire drill.</div>
-          </details>
-          <details>
-            <summary>Isn't my POS vendor handling PCI for me?</summary>
-            <div class="answer">Partly, and that is a dangerous assumption to leave unchecked. A modern POS or payment terminal handles part of the burden, but your network, Wi-Fi, access controls, and staff practices are still in scope and still your responsibility. We map exactly where your provider's responsibility ends and yours begins, then close your side.</div>
-          </details>
-          <details>
-            <summary>What if we have a card-data breach?</summary>
-            <div class="answer">A card breach can trigger forensic investigation, fines, and mandatory notification &mdash; expensive and reputation-damaging. We help you respond and, far more importantly, prevent it: segmentation, secure POS, MFA, and monitoring that stop the intrusions that lead to card theft. See <a href="cybersecurity.html">cybersecurity</a> and <a href="ransomware-recovery.html">emergency IT</a>.</div>
+            <summary>Is Zero Trust only for large enterprises?</summary>
+            <div class="answer">No. The term originated in large-enterprise security, but the core practices &mdash; enforce MFA everywhere, give people only the access they need, segment the network so one compromised device can't reach everything &mdash; are exactly as valuable, and just as achievable, for a 10-person business as a 10,000-person one.</div>
           </details>
         </div>
       </section>
       <section class="location-cta">
         <div class="container">
-          <h2>Take cards with confidence, not crossed fingers</h2>
-          <p>Book a free PCI assessment, or call (831) 204-0501. You will leave knowing your real scope, the right SAQ, and exactly what to fix first.</p>
+          <h2>Stop trusting "inside the network" to mean "safe"</h2>
+          <p>Book a free assessment, or call (831) 204-0501. See exactly where a Zero Trust approach would close a real gap in your environment.</p>
           <a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer" class="location-btn location-btn-primary"><i class="fi fi-rs-calendar-day" aria-hidden="true"></i> Book your free assessment</a>
           <a href="contact.html" class="location-btn location-btn-secondary"><i class="fi fi-rs-envelope" aria-hidden="true"></i> Send a Message</a>
         </div>

@@ -3,20 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PCI DSS Compliance for Small Business | Ghosxt</title>
-    <meta name="description" content="PCI DSS compliance for small retail, restaurants, and hospitality: network segmentation, secure POS, MFA and access control, vulnerability scanning, and SAQ guidance, from a DoD-cleared engineer. Free assessment." />
-    <link rel="canonical" href="https://ghosxt.com/pci-compliance.html" />
+    <title>Penetration Testing for Small Business | Ghosxt</title>
+    <meta name="description" content="Manual, adversarial penetration testing for small business networks and web apps — from a DoD-cleared engineer, not an automated scan. Free scoping call." />
+    <link rel="canonical" href="https://ghosxt.com/penetration-testing.html" />
     <link rel="alternate" type="application/rss+xml" title="Ghosxt Blog" href="https://ghosxt.com/feed.xml" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://ghosxt.com/pci-compliance.html" />
-    <meta property="og:title" content="PCI DSS Compliance for Retail, Restaurants & Hospitality | Ghosxt" />
-    <meta property="og:description" content="Network segmentation, secure POS, MFA, scanning, and SAQ guidance &mdash; practical PCI compliance for small merchants." />
-    <meta property="og:image" content="https://ghosxt.com/assets/img/og/pci-compliance.png" />
+    <meta property="og:url" content="https://ghosxt.com/penetration-testing.html" />
+    <meta property="og:title" content="Penetration Testing for Small Business | Ghosxt" />
+    <meta property="og:description" content="Manual, adversarial penetration testing for small business networks and web apps, led by a DoD-cleared engineer who has operated these controls." />
+    <meta property="og:image" content="https://ghosxt.com/assets/img/og/penetration-testing.png" />
     <meta property="og:site_name" content="Ghosxt" />
     <meta name="robots" content="index, follow" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="PCI DSS Compliance for Retail, Restaurants & Hospitality | Ghosxt" />
-    <meta name="twitter:description" content="Network segmentation, secure POS, MFA, scanning, and SAQ guidance &mdash; practical PCI compliance for small merchants." />
+    <meta name="twitter:title" content="Penetration Testing for Small Business | Ghosxt" />
+    <meta name="twitter:description" content="Manual, adversarial penetration testing for small business networks and web apps, led by a DoD-cleared engineer." />
     <link rel="icon" href="assets/img/favicon.ico" sizes="any" />
     <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
@@ -37,11 +37,11 @@
         "@graph": [
           {
             "@type": "Service",
-            "@id": "https://ghosxt.com/pci-compliance.html#service",
-            "serviceType": "PCI DSS Compliance for Small Business",
-            "name": "PCI DSS Compliance for Retail, Restaurants & Hospitality",
-            "url": "https://ghosxt.com/pci-compliance.html",
-            "description": "PCI DSS compliance for small retail, restaurants, and hospitality: network segmentation, secure POS, MFA and access control, vulnerability scanning, and SAQ guidance, from a DoD-cleared engineer. Free assessment.",
+            "@id": "https://ghosxt.com/penetration-testing.html#service",
+            "serviceType": "Penetration Testing",
+            "name": "Penetration Testing",
+            "url": "https://ghosxt.com/penetration-testing.html",
+            "description": "Manual, adversarial penetration testing for small business networks, web applications, and wireless environments, led by a DoD-cleared engineer — external, internal, web app, and social-engineering testing with a written report and remediation retest.",
             "provider": { "@id": "https://ghosxt.com/#business" },
             "areaServed": [
               { "@type": "AdministrativeArea", "name": "Monterey County, California" },
@@ -56,7 +56,7 @@
             "itemListElement": [
               { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ghosxt.com/" },
               { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://ghosxt.com/services.html" },
-              { "@type": "ListItem", "position": 3, "name": "PCI Compliance", "item": "https://ghosxt.com/pci-compliance.html" }
+              { "@type": "ListItem", "position": 3, "name": "Penetration Testing", "item": "https://ghosxt.com/penetration-testing.html" }
             ]
           },
           {
@@ -64,50 +64,34 @@
             "mainEntity": [
               {
                 "@type": "Question",
-                "name": "Who needs to be PCI compliant?",
+                "name": "How is penetration testing different from vulnerability scanning?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Any business that accepts, processes, stores, or transmits credit card data — which is nearly every retailer, restaurant, hotel, and service business that takes cards. PCI DSS is not a law, but it is a contractual requirement from the card brands and your payment processor, and non-compliance can mean fines, higher fees, or losing the ability to take cards at all."
+                  "text": "Vulnerability scanning is automated and continuous — a tool checks your systems against a database of known weaknesses on a schedule. Penetration testing is manual and adversarial: a real engineer actively tries to break in, chain small weaknesses together, and see how far they can get, the same way an actual attacker would. Most cyber-insurance carriers and compliance frameworks treat them as complementary, not interchangeable — continuous scanning catches known issues fast, and periodic testing catches the exploitable paths a scanner can't see."
                 }
               },
               {
                 "@type": "Question",
-                "name": "What is an SAQ and which one applies to me?",
+                "name": "How often should we test?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "A Self-Assessment Questionnaire (SAQ) is how most small merchants validate PCI compliance. Which one you use depends on how you take payments — SAQ A for fully outsourced e-commerce, SAQ B for standalone terminals, SAQ C for integrated POS, and so on. Picking the right SAQ is half the battle, and we determine it for you before anything else."
+                  "text": "Annually is the common baseline, and after any major change — a new application, a network redesign, a merger, or an acquisition. Some cyber-insurance policies and compliance frameworks (PCI DSS, CMMC) specify their own minimum cadence, which we'll confirm applies to you during scoping."
                 }
               },
               {
                 "@type": "Question",
-                "name": "Do I really need network segmentation?",
+                "name": "Do we need this for cyber insurance or compliance?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "It is the highest-leverage thing you can do. Segmentation separates the systems that touch card data from everything else — guest Wi-Fi, back-office PCs, security cameras — so the scope of PCI (and the cost of compliance) shrinks dramatically, and a breach on the guest network cannot reach the payment systems. For most small merchants, segmentation is the whole game."
+                  "text": "Often, yes. Many cyber-insurance renewals now ask whether you've had a penetration test in the last 12 months, and PCI DSS explicitly requires one annually and after significant changes. We'll tell you plainly whether your policy or framework requires it, and provide the documentation carriers and assessors expect."
                 }
               },
               {
                 "@type": "Question",
-                "name": "Do I need quarterly vulnerability scans?",
+                "name": "Will testing disrupt our systems?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "If your environment is in scope for external scanning (most integrated and e-commerce setups), yes — quarterly scans by an Approved Scanning Vendor are required, plus internal scanning and prompt remediation. We set up the scanning, interpret the results, and fix what they find, so a scan is a routine pass rather than a fire drill."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Isn't my POS vendor handling PCI for me?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Partly, and that is a dangerous assumption to leave unchecked. A modern POS or payment terminal handles part of the burden, but your network, Wi-Fi, access controls, and staff practices are still in scope and still your responsibility. We map exactly where your provider's responsibility ends and yours begins, then close your side."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "What if we have a card-data breach?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "A card breach can trigger forensic investigation, fines, and mandatory notification — expensive and reputation-damaging. We help you respond and, far more importantly, prevent it: segmentation, secure POS, MFA, and monitoring that stop the intrusions that lead to card theft. See cybersecurity and emergency IT."
+                  "text": "We scope testing windows and methods around your operations — production-safe techniques, agreed timing, and a clear rules-of-engagement document signed before anything starts. Disruptive techniques (like actual exploitation of a fragile system) are called out and approved in advance, not sprung on you."
                 }
               }
             ]
@@ -229,104 +213,102 @@
       <section class="location-hero">
         <div class="container">
           <nav class="location-breadcrumbs" aria-label="Breadcrumb">
-            <a href="index.html">Home</a><span class="sep">&rsaquo;</span><a href="services.html">Services</a><span class="sep">&rsaquo;</span><span aria-current="page">PCI Compliance</span>
+            <a href="index.html">Home</a><span class="sep">&rsaquo;</span><a href="services.html">Services</a><span class="sep">&rsaquo;</span><span aria-current="page">Penetration Testing</span>
           </nav>
-          <h1>PCI DSS Compliance for Retail, Restaurants &amp; Hospitality</h1>
-          <p class="lead">If your business takes cards, PCI DSS applies &mdash; and assuming your POS vendor 'handles it' is exactly how small merchants end up breached and fined. Ghosxt makes PCI compliance practical for Central Coast retailers, restaurants, hotels, and service businesses: the right SAQ, real network segmentation, secure payment systems, and the monitoring to back it up, from a DoD-cleared engineer who secures payment networks the way they should be.</p>
+          <h1>Penetration Testing for Small Business</h1>
+          <p class="lead">A vulnerability scanner tells you what's theoretically wrong. A penetration test tells you what an attacker could actually do with it. Ghosxt runs manual, adversarial testing on Central Coast small business networks and web applications &mdash; led by a DoD-cleared engineer who tests the way real attackers work, not a scanner running on autopilot.</p>
           <div class="location-hero-ctas">
-            <a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer" class="location-btn location-btn-primary"><i class="fi fi-rs-calendar-day" aria-hidden="true"></i> Book a Free PCI Assessment</a>
+            <a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer" class="location-btn location-btn-primary"><i class="fi fi-rs-calendar-day" aria-hidden="true"></i> Book a Free Scoping Call</a>
             <a href="tel:+18312040501" class="location-btn location-btn-secondary"><i class="fi fi-rs-phone-call" aria-hidden="true"></i> (831) 204-0501</a>
           </div>
-          <p class="pricing-trust-callout"><a href="contact.html">Real segmentation and secure POS &mdash; not just a checkbox your processor handed you.</a></p>
+          <p class="pricing-trust-callout"><a href="contact.html">Built by a DoD-cleared engineer &mdash; manual testing, not an automated scan with a report slapped on it.</a></p>
         </div>
       </section>
       <section class="location-section">
         <div class="container">
-          <h2>What PCI DSS requires &mdash; and what it really protects</h2>
-          <p>PCI DSS is the card brands' security standard for everyone who touches cardholder data. For a small merchant it comes down to a manageable set of things done correctly: know where card data flows, segment those systems away from everything else, secure your point-of-sale and the network around it, control access with unique logins and MFA, scan for vulnerabilities, monitor and log, and validate with the right Self-Assessment Questionnaire. Do those, and both your compliance burden and your breach risk drop sharply.</p>
-          <p>The businesses that get breached are almost always the ones that assumed someone else had it covered. PCI is not just paperwork &mdash; it is the difference between a card-skimming attack that goes nowhere and one that ends up on the local news.</p>
+          <h2>Scanning finds what's known. Testing finds what's exploitable.</h2>
+          <p>Automated vulnerability scanning &mdash; the kind we run continuously as part of <a href="cybersecurity.html">managed cybersecurity</a> &mdash; checks your systems against a database of known weaknesses and flags what it finds. It is fast, cheap, and necessary. It is not the same thing as penetration testing.</p>
+          <p>A penetration test is a person, actively trying to get in. We chain a misconfigured share here to a reused password there to an unpatched service somewhere else, the same way a real attacker strings together small weaknesses into a real breach. A scan tells you a door might be unlocked. A test tells you whether someone can actually walk through it, and what they'd find on the other side.</p>
         </div>
       </section>
       <section class="location-section">
         <div class="container">
-          <h2>How we make PCI compliance practical</h2>
-          <p>Right-sized for a single storefront, restaurant, or small hotel &mdash; the controls PCI requires, implemented so they actually protect your customers' cards.</p>
+          <h2>Why a DoD-cleared engineer is different here</h2>
+          <p>Most penetration tests sold to small businesses are a scan with a formatted report and a consultant's summary on top. Ghosxt is run by a DoD-cleared engineer and former Senior Solutions Consultant for the U.S. Department of Defense &mdash; someone who has tested and defended real networks, not just read about how attackers operate.</p>
+          <p>That means testing that reflects how your business actually gets attacked, not a generic checklist, and a report that tells you plainly what's exploitable, what's theoretical, and what to fix first.</p>
+        </div>
+      </section>
+      <section class="location-section">
+        <div class="container">
+          <h2>How we test your environment</h2>
+          <p>Scoped to what's realistic for your business &mdash; we'll tell you which of these apply before anything starts.</p>
           <div class="services-grid">
             <article class="service-card">
-              <h3>Network Segmentation</h3>
-              <p>Separate the card-data environment from guest Wi-Fi, back-office systems, and everything else &mdash; the single highest-leverage move, shrinking both your PCI scope and your breach risk.</p>
+              <h3>External Network Testing</h3>
+              <p>Everything your business exposes to the internet &mdash; firewalls, VPNs, remote access, public-facing servers &mdash; tested the way an outside attacker would probe it.</p>
             </article>
             <article class="service-card">
-              <h3>Secure Point-of-Sale</h3>
-              <p>POS and payment terminals configured and hardened correctly, with the network around them locked down &mdash; closing the gaps your POS vendor leaves as your responsibility.</p>
+              <h3>Internal Network Testing</h3>
+              <p>What happens once a foothold exists inside your network &mdash; lateral movement, privilege escalation, and how far a compromised laptop or stolen credential could actually reach.</p>
             </article>
             <article class="service-card">
-              <h3>Access Control &amp; MFA</h3>
-              <p>Unique logins, least-privilege access, and MFA on systems and remote access, so a shared password or a vendor's remote tool cannot become the entry point for card theft.</p>
+              <h3>Web Application Testing</h3>
+              <p>Manual testing of your customer-facing or internal web applications for the flaws automated scanners routinely miss &mdash; authentication bypass, business-logic errors, injection.</p>
             </article>
             <article class="service-card">
-              <h3>Vulnerability Scanning</h3>
-              <p>Approved Scanning Vendor quarterly scans where required, plus internal scanning and remediation, set up and interpreted for you so a scan is a routine pass, not a scramble. PCI DSS also requires <a href="penetration-testing.html">annual penetration testing</a>, which we can scope alongside your ASV scans.</p>
+              <h3>Wireless &amp; Physical Assessment</h3>
+              <p>Wi-Fi segmentation and rogue-access-point testing, plus physical and social walk-through assessment where it's relevant to your environment.</p>
             </article>
             <article class="service-card">
-              <h3>SAQ Guidance</h3>
-              <p>We determine the right Self-Assessment Questionnaire for how you actually take payments and walk you through it, so you validate correctly instead of guessing.</p>
+              <h3>Social Engineering &amp; Phishing</h3>
+              <p>Simulated phishing and pretexting to test whether your team &mdash; not just your systems &mdash; would catch a real attempt, with results used for training, not blame.</p>
             </article>
             <article class="service-card">
-              <h3>Monitoring &amp; Logging</h3>
-              <p>Logging and 24/7 monitoring around the payment environment so intrusions are caught early &mdash; and so you can demonstrate the controls PCI requires. Part of <a href="managed-it-services.html">managed IT</a>.</p>
+              <h3>Report, Remediation &amp; Retest</h3>
+              <p>A written report ranked by real-world exploitability, help fixing what's found, and a retest to confirm it's actually closed &mdash; the documentation cyber-insurance carriers and assessors expect.</p>
             </article>
           </div>
         </div>
       </section>
       <section class="location-cta">
         <div class="container">
-          <h2>See what PCI compliance takes for your business</h2>
-          <p>Book a free assessment. We will map how card data flows through your business, identify the right SAQ, and show you the shortest path to compliance &mdash; usually starting with segmentation &mdash; whether or not you hire us.</p>
-          <a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer" class="location-btn location-btn-primary"><i class="fi fi-rs-calendar-day" aria-hidden="true"></i> Book your free assessment</a>
+          <h2>Find out what a real attacker could actually reach</h2>
+          <p>Book a free scoping call. We'll talk through what's realistic for your environment, whether your cyber-insurance policy or compliance framework requires it, and what a test would cost &mdash; no obligation.</p>
+          <a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer" class="location-btn location-btn-primary"><i class="fi fi-rs-calendar-day" aria-hidden="true"></i> Book your free scoping call</a>
         </div>
       </section>
       <section class="location-section">
         <div class="container">
-          <h2>Segmentation is the whole game</h2>
-          <p>For most small merchants, the single most valuable thing we do is segment the network. When the systems that handle card data are properly isolated from guest Wi-Fi, back-office computers, cameras, and everything else, your PCI scope shrinks to just those systems &mdash; which means less to secure, less to validate, and a much smaller, cheaper compliance footprint. It also means an attacker who gets onto the guest Wi-Fi simply cannot reach the registers. We design that separation, then keep it enforced.</p>
-          <p>PCI work pairs naturally with our <a href="hospitality-it-services.html">hospitality IT</a> services and the <a href="cybersecurity.html">cybersecurity</a> controls that stop the intrusions behind most card breaches.</p>
+          <h2>Where this fits with what we already do</h2>
+          <p>Penetration testing pairs with the <a href="cybersecurity.html">continuous vulnerability management and monitoring</a> we run day to day &mdash; the scan catches known issues fast, the test catches what a scanner can't see. It's also frequently a documented requirement for <a href="cmmc-compliance.html">CMMC</a> and <a href="pci-compliance.html">PCI DSS</a>, and increasingly requested at cyber-insurance renewal; our <a href="blog/cyber-insurance-renewal-checklist-small-business-central-coast.html">cyber-insurance renewal checklist</a> covers what carriers are asking for.</p>
         </div>
       </section>
       <section class="location-section location-faq">
         <div class="container">
-          <h2>PCI DSS compliance FAQs</h2>
+          <h2>Penetration Testing FAQs</h2>
           <details>
-            <summary>Who needs to be PCI compliant?</summary>
-            <div class="answer">Any business that accepts, processes, stores, or transmits credit card data &mdash; which is nearly every retailer, restaurant, hotel, and service business that takes cards. PCI DSS is not a law, but it is a contractual requirement from the card brands and your payment processor, and non-compliance can mean fines, higher fees, or losing the ability to take cards at all.</div>
+            <summary>How is penetration testing different from vulnerability scanning?</summary>
+            <div class="answer">Vulnerability scanning is automated and continuous &mdash; a tool checks your systems against a database of known weaknesses on a schedule. Penetration testing is manual and adversarial: a real engineer actively tries to break in, chain small weaknesses together, and see how far they can get, the same way an actual attacker would. Most cyber-insurance carriers and compliance frameworks treat them as complementary, not interchangeable &mdash; continuous scanning catches known issues fast, and periodic testing catches the exploitable paths a scanner can't see.</div>
           </details>
           <details>
-            <summary>What is an SAQ and which one applies to me?</summary>
-            <div class="answer">A Self-Assessment Questionnaire (SAQ) is how most small merchants validate PCI compliance. Which one you use depends on how you take payments &mdash; SAQ A for fully outsourced e-commerce, SAQ B for standalone terminals, SAQ C for integrated POS, and so on. Picking the right SAQ is half the battle, and we determine it for you before anything else.</div>
+            <summary>How often should we test?</summary>
+            <div class="answer">Annually is the common baseline, and after any major change &mdash; a new application, a network redesign, a merger, or an acquisition. Some cyber-insurance policies and compliance frameworks (PCI DSS, CMMC) specify their own minimum cadence, which we'll confirm applies to you during scoping.</div>
           </details>
           <details>
-            <summary>Do I really need network segmentation?</summary>
-            <div class="answer">It is the highest-leverage thing you can do. Segmentation separates the systems that touch card data from everything else &mdash; guest Wi-Fi, back-office PCs, security cameras &mdash; so the scope of PCI (and the cost of compliance) shrinks dramatically, and a breach on the guest network cannot reach the payment systems. For most small merchants, segmentation is the whole game.</div>
+            <summary>Do we need this for cyber insurance or compliance?</summary>
+            <div class="answer">Often, yes. Many cyber-insurance renewals now ask whether you've had a penetration test in the last 12 months, and PCI DSS explicitly requires one annually and after significant changes. We'll tell you plainly whether your policy or framework requires it, and provide the documentation carriers and assessors expect.</div>
           </details>
           <details>
-            <summary>Do I need quarterly vulnerability scans?</summary>
-            <div class="answer">If your environment is in scope for external scanning (most integrated and e-commerce setups), yes &mdash; quarterly scans by an Approved Scanning Vendor are required, plus internal scanning and prompt remediation. We set up the scanning, interpret the results, and fix what they find, so a scan is a routine pass rather than a fire drill.</div>
-          </details>
-          <details>
-            <summary>Isn't my POS vendor handling PCI for me?</summary>
-            <div class="answer">Partly, and that is a dangerous assumption to leave unchecked. A modern POS or payment terminal handles part of the burden, but your network, Wi-Fi, access controls, and staff practices are still in scope and still your responsibility. We map exactly where your provider's responsibility ends and yours begins, then close your side.</div>
-          </details>
-          <details>
-            <summary>What if we have a card-data breach?</summary>
-            <div class="answer">A card breach can trigger forensic investigation, fines, and mandatory notification &mdash; expensive and reputation-damaging. We help you respond and, far more importantly, prevent it: segmentation, secure POS, MFA, and monitoring that stop the intrusions that lead to card theft. See <a href="cybersecurity.html">cybersecurity</a> and <a href="ransomware-recovery.html">emergency IT</a>.</div>
+            <summary>Will testing disrupt our systems?</summary>
+            <div class="answer">We scope testing windows and methods around your operations &mdash; production-safe techniques, agreed timing, and a clear rules-of-engagement document signed before anything starts. Disruptive techniques (like actual exploitation of a fragile system) are called out and approved in advance, not sprung on you.</div>
           </details>
         </div>
       </section>
       <section class="location-cta">
         <div class="container">
-          <h2>Take cards with confidence, not crossed fingers</h2>
-          <p>Book a free PCI assessment, or call (831) 204-0501. You will leave knowing your real scope, the right SAQ, and exactly what to fix first.</p>
-          <a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer" class="location-btn location-btn-primary"><i class="fi fi-rs-calendar-day" aria-hidden="true"></i> Book your free assessment</a>
+          <h2>Stop guessing whether your network would hold up</h2>
+          <p>Book a free scoping call, or call (831) 204-0501. Find out what's actually exploitable before someone else does.</p>
+          <a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer" class="location-btn location-btn-primary"><i class="fi fi-rs-calendar-day" aria-hidden="true"></i> Book your free scoping call</a>
           <a href="contact.html" class="location-btn location-btn-secondary"><i class="fi fi-rs-envelope" aria-hidden="true"></i> Send a Message</a>
         </div>
       </section>
