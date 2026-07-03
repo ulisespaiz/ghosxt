@@ -4,12 +4,21 @@
     <title>Ghosxt Blog — Managed IT &amp; Cybersecurity for the Central Coast</title>
     <link>https://ghosxt.com/blog/</link>
     <atom:link href="https://ghosxt.com/feed.xml" rel="self" type="application/rss+xml" />
-    <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from a DoD-cleared IT engineer.</description>
+    <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from a DoD-cleared engineer.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Thu, 02 Jul 2026 11:04:23 +0000</lastBuildDate>
-    <pubDate>Thu, 02 Jul 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Fri, 03 Jul 2026 11:04:22 +0000</lastBuildDate>
+    <pubDate>Fri, 03 Jul 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>Summer Travel &amp;amp; Remote Work Security: Protecting Company Data When Your Team Isn't in the Office (2026)</title>
+      <link>https://ghosxt.com/blog/remote-work-security-business-travel-small-business-2026.html</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/remote-work-security-business-travel-small-business-2026.html</guid>
+      <pubDate>Fri, 03 Jul 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>Employees working from airports, hotels, and vacation rentals this summer expand your attack surface past the office network you control. The public Wi-Fi, lost-device, and travel-phishing risks that actually cause breaches, and the small business checklist that closes them.</description>
+    </item>
     <item>
       <title>EDR vs. Antivirus: Why Small Businesses Need More Than a Signature Scanner in 2026</title>
       <link>https://ghosxt.com/blog/edr-vs-antivirus-small-business-2026.html</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Industry IT</category>
       <description>A plain-talk IT guide for engineering and architecture firms on the Central Coast. CAD and BIM workstations, large-file and PDM/vault workflows, remote-engineer performance, IP protection, ITAR and CMMC flow-down, and backup that actually restores. From a DoD-cleared engineer.</description>
-    </item>
-    <item>
-      <title>The Microsoft Teams "IT Help Desk" That Isn't: A Ransomware Playbook</title>
-      <link>https://ghosxt.com/blog/microsoft-teams-help-desk-impersonation-ransomware-smb-2026.html</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/microsoft-teams-help-desk-impersonation-ransomware-smb-2026.html</guid>
-      <pubDate>Sat, 30 May 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>Attackers are flooding inboxes with spam, then messaging staff on Microsoft Teams while posing as the IT help desk, talking them into Quick Assist remote access, and dropping ransomware. How the email-bombing-plus-Teams-vishing playbook works and how a small business shuts it down, from a DoD-cleared engineer.</description>
     </item>
   </channel>
 </rss>
