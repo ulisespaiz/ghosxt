@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from a DoD-cleared engineer.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Fri, 03 Jul 2026 11:04:22 +0000</lastBuildDate>
-    <pubDate>Fri, 03 Jul 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Sat, 04 Jul 2026 11:04:27 +0000</lastBuildDate>
+    <pubDate>Sat, 04 Jul 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>Domain Name Security: How Small Businesses Lose Their Website and Email Without Getting Hacked (2026)</title>
+      <link>https://ghosxt.com/blog/domain-name-security-small-business-2026.html</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/domain-name-security-small-business-2026.html</guid>
+      <pubDate>Sat, 04 Jul 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>An expired renewal, a stolen registrar login, or one unauthorized DNS change can take down your website and email overnight, with no malware involved. How small businesses lose their domain, and the checklist that locks it down in 2026.</description>
+    </item>
     <item>
       <title>Summer Travel &amp;amp; Remote Work Security: Protecting Company Data When Your Team Isn't in the Office (2026)</title>
       <link>https://ghosxt.com/blog/remote-work-security-business-travel-small-business-2026.html</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Industry IT</category>
       <description>A plain-talk IT and cybersecurity guide for Salinas Valley agriculture. Cold-chain and cooler monitoring, produce ERP and FSMA 204 traceability, food-safety audit IT, seasonal-ransomware and wire-fraud defense, and a realistic budget. From a DoD-cleared engineer on the Central Coast.</description>
-    </item>
-    <item>
-      <title>Engineering and Architecture IT on the Central Coast: CAD, BIM, and Protecting Your Project Data in 2026</title>
-      <link>https://ghosxt.com/blog/engineering-architecture-it-cad-bim-central-coast.html</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/engineering-architecture-it-cad-bim-central-coast.html</guid>
-      <pubDate>Tue, 02 Jun 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Industry IT</category>
-      <description>A plain-talk IT guide for engineering and architecture firms on the Central Coast. CAD and BIM workstations, large-file and PDM/vault workflows, remote-engineer performance, IP protection, ITAR and CMMC flow-down, and backup that actually restores. From a DoD-cleared engineer.</description>
     </item>
   </channel>
 </rss>
