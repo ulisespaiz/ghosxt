@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from a DoD-cleared engineer.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Sat, 04 Jul 2026 11:04:27 +0000</lastBuildDate>
-    <pubDate>Sat, 04 Jul 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Sun, 05 Jul 2026 11:05:42 +0000</lastBuildDate>
+    <pubDate>Sun, 05 Jul 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>Vendor &amp;amp; Third-Party Risk: What Happens When a Vendor You Trust Gets Breached (2026)</title>
+      <link>https://ghosxt.com/blog/vendor-third-party-risk-management-small-business-2026.html</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/vendor-third-party-risk-management-small-business-2026.html</guid>
+      <pubDate>Sun, 05 Jul 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>A breach at your payroll processor, CRM, or help desk vendor can expose your data even if your own network is never touched. How vendor risk actually works, and the checklist that manages it without a compliance team.</description>
+    </item>
     <item>
       <title>Domain Name Security: How Small Businesses Lose Their Website and Email Without Getting Hacked (2026)</title>
       <link>https://ghosxt.com/blog/domain-name-security-small-business-2026.html</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Industry IT</category>
       <description>A plain-talk IT and cybersecurity guide for Central Coast and South Bay manufacturers. OT/IT segmentation, ERP/MES/PLM uptime, CAD and engineering data, CMMC 2.0 readiness, and ransomware defense for the most-targeted sector. From a DoD-cleared engineer.</description>
-    </item>
-    <item>
-      <title>IT and Cybersecurity for Salinas Valley Agriculture: A 2026 Guide for Growers, Packers, and Coolers</title>
-      <link>https://ghosxt.com/blog/agriculture-it-cybersecurity-salinas-valley.html</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/agriculture-it-cybersecurity-salinas-valley.html</guid>
-      <pubDate>Tue, 02 Jun 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Industry IT</category>
-      <description>A plain-talk IT and cybersecurity guide for Salinas Valley agriculture. Cold-chain and cooler monitoring, produce ERP and FSMA 204 traceability, food-safety audit IT, seasonal-ransomware and wire-fraud defense, and a realistic budget. From a DoD-cleared engineer on the Central Coast.</description>
     </item>
   </channel>
 </rss>
