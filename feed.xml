@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from a DoD-cleared engineer.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Mon, 06 Jul 2026 11:10:54 +0000</lastBuildDate>
-    <pubDate>Mon, 06 Jul 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Tue, 07 Jul 2026 11:05:20 +0000</lastBuildDate>
+    <pubDate>Tue, 07 Jul 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>BYOD for Small Business: Securing Personal Phones and Laptops Without Locking Down Everyone's Devices (2026)</title>
+      <link>https://ghosxt.com/blog/byod-policy-small-business-2026.html</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/byod-policy-small-business-2026.html</guid>
+      <pubDate>Tue, 07 Jul 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>Your team is already checking company email on personal phones, whether or not you have a policy for it. What a BYOD policy actually needs to cover, and how to secure personal devices without an enterprise MDM budget.</description>
+    </item>
     <item>
       <title>The Seasonal Worker IT Checklist: Onboarding and Offboarding Summer Staff Without Leaving Accounts Open</title>
       <link>https://ghosxt.com/blog/seasonal-worker-it-security-checklist-central-coast.html</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cloud Services</category>
       <description>A plain-talk cloud guide for Central Coast small business. What 'the cloud' actually means, what to move first, what to keep on-prem, a migration playbook with no surprise downtime, the real cost math, and how cloud helps through a PG&amp;amp;E shutoff. From a DoD-cleared engineer.</description>
-    </item>
-    <item>
-      <title>Property Management IT in Monterey and Santa Cruz Counties: A 2026 Owner's Guide</title>
-      <link>https://ghosxt.com/blog/property-management-it-monterey-santa-cruz.html</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/property-management-it-monterey-santa-cruz.html</guid>
-      <pubDate>Tue, 02 Jun 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Industry IT</category>
-      <description>A plain-talk IT and cybersecurity guide for property management companies and HOAs in Monterey and Santa Cruz Counties. Tenant-data protection, Yardi and AppFolio uptime, wire-fraud defense, multi-site networks, and compliance. From a DoD-cleared engineer.</description>
     </item>
   </channel>
 </rss>
