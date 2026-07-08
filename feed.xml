@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from a DoD-cleared engineer.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Tue, 07 Jul 2026 11:05:20 +0000</lastBuildDate>
-    <pubDate>Tue, 07 Jul 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Wed, 08 Jul 2026 11:06:51 +0000</lastBuildDate>
+    <pubDate>Wed, 08 Jul 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>California Data Breach Notification Law: What Small Businesses Must Do After a Breach (2026)</title>
+      <link>https://ghosxt.com/blog/california-data-breach-notification-law-small-business-2026.html</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/california-data-breach-notification-law-small-business-2026.html</guid>
+      <pubDate>Wed, 08 Jul 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>California's data breach notification law applies to your business no matter how small it is. What actually counts as a reportable breach, what a compliant notice must say, and why the real financial risk is a CPRA lawsuit, not a fine.</description>
+    </item>
     <item>
       <title>BYOD for Small Business: Securing Personal Phones and Laptops Without Locking Down Everyone's Devices (2026)</title>
       <link>https://ghosxt.com/blog/byod-policy-small-business-2026.html</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Industry IT</category>
       <description>A plain-talk IT and cybersecurity guide for law firms, CPA and accounting practices, financial advisors, and professional offices on the Central Coast. BEC and wire-fraud defense, client confidentiality, the FTC Safeguards Rule and IRS WISP, and a realistic budget. From a DoD-cleared engineer.</description>
-    </item>
-    <item>
-      <title>Cloud Services for Central Coast Small Business: What to Move, What to Keep, and How to Migrate in 2026</title>
-      <link>https://ghosxt.com/blog/cloud-services-small-business-central-coast-migration.html</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/cloud-services-small-business-central-coast-migration.html</guid>
-      <pubDate>Wed, 03 Jun 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cloud Services</category>
-      <description>A plain-talk cloud guide for Central Coast small business. What 'the cloud' actually means, what to move first, what to keep on-prem, a migration playbook with no surprise downtime, the real cost math, and how cloud helps through a PG&amp;amp;E shutoff. From a DoD-cleared engineer.</description>
     </item>
   </channel>
 </rss>
