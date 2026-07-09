@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from a DoD-cleared engineer.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Wed, 08 Jul 2026 11:06:51 +0000</lastBuildDate>
-    <pubDate>Wed, 08 Jul 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Thu, 09 Jul 2026 11:05:17 +0000</lastBuildDate>
+    <pubDate>Thu, 09 Jul 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>OAuth App Phishing: How Attackers Get Into Microsoft 365 Without Stealing a Password (2026)</title>
+      <link>https://ghosxt.com/blog/oauth-app-phishing-microsoft-365-small-business-2026.html</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/oauth-app-phishing-microsoft-365-small-business-2026.html</guid>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>Attackers don't need your password or your MFA code anymore — they just need you to click 'Accept' on a fake app permission request. How OAuth consent phishing works, why it slips past MFA entirely, and the small-business controls that stop it.</description>
+    </item>
     <item>
       <title>California Data Breach Notification Law: What Small Businesses Must Do After a Breach (2026)</title>
       <link>https://ghosxt.com/blog/california-data-breach-notification-law-small-business-2026.html</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>What SPF, DKIM, and DMARC actually do, why Google, Yahoo, and Microsoft now require them, how email authentication stops criminals spoofing your domain in invoice and wire-fraud scams, and a safe phased rollout that won't block your own mail. From a DoD-cleared engineer on the Central Coast.</description>
-    </item>
-    <item>
-      <title>IT for Law Firms, CPAs, and Professional Offices on the Central Coast: A 2026 Guide</title>
-      <link>https://ghosxt.com/blog/professional-services-it-law-cpa-central-coast.html</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/professional-services-it-law-cpa-central-coast.html</guid>
-      <pubDate>Wed, 03 Jun 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Industry IT</category>
-      <description>A plain-talk IT and cybersecurity guide for law firms, CPA and accounting practices, financial advisors, and professional offices on the Central Coast. BEC and wire-fraud defense, client confidentiality, the FTC Safeguards Rule and IRS WISP, and a realistic budget. From a DoD-cleared engineer.</description>
     </item>
   </channel>
 </rss>
