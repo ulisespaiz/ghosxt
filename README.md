@@ -39,6 +39,26 @@ in the script. Each new city is also linked from its county page's "Cities we
 serve" list so the page is not orphaned. Keep `llms.txt` in sync when adding a
 city.
 
+## Web design city pages
+
+`web-design-<city>.html` pages target the "web design / website development in
+<city>" intent for the same 13 cities as the cybersecurity/cloud matrices, so
+every city hub cross-links a complete local service trio. They follow the same
+model as `generate-location-service-pages.py`: shared chrome is sliced from
+`scripts/_chrome_source.html`, and each city has genuinely distinct local
+prose, cards, and FAQs in the script's data model. Regenerate with:
+
+```bash
+python3 scripts/generate-web-design-pages.py             # only writes new pages
+python3 scripts/generate-web-design-pages.py --force     # overwrite existing
+python3 scripts/generate-sitemap.py                      # then refresh sitemap
+python3 scripts/generate-og-images.py                    # and OG images
+```
+
+Each page is linked from its city hub's local-services cards, from the
+"Local web design" section on `website-development.html`, and from `llms.txt`
+— keep all three in sync when adding a city.
+
 ## Blog file-explorer page
 
 `blog/all.html` is the "file view" of every blog post. Regenerate it whenever a post is added, removed, re-dated, or re-categorized:
