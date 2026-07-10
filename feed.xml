@@ -7,9 +7,27 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from a DoD-cleared engineer.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Thu, 09 Jul 2026 11:05:17 +0000</lastBuildDate>
-    <pubDate>Thu, 09 Jul 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Fri, 10 Jul 2026 08:02:25 +0000</lastBuildDate>
+    <pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>How Much Does a Small Business Website Cost in 2026? Real Numbers</title>
+      <link>https://ghosxt.com/blog/small-business-website-cost-2026.html</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/small-business-website-cost-2026.html</guid>
+      <pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Web Development</category>
+      <description>Real 2026 website pricing for small businesses: what a professional 5-page site, a full business site, and an e-commerce build actually cost, what drives the price up, why the $500 site and the $15,000 site are both usually the wrong buy, and what ongoing maintenance should run.</description>
+    </item>
+    <item>
+      <title>9 Signs Your Small Business Website Is Costing You Customers (2026)</title>
+      <link>https://ghosxt.com/blog/website-redesign-signs-small-business-2026.html</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/website-redesign-signs-small-business-2026.html</guid>
+      <pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Web Development</category>
+      <description>A website that loads slowly, breaks on phones, or runs on abandoned software isn't just dated — it's actively sending customers to competitors. The 9 warning signs that mean it's time to fix or rebuild, which ones are urgent security problems, and when a refresh beats a full redesign.</description>
+    </item>
     <item>
       <title>OAuth App Phishing: How Attackers Get Into Microsoft 365 Without Stealing a Password (2026)</title>
       <link>https://ghosxt.com/blog/oauth-app-phishing-microsoft-365-small-business-2026.html</link>
@@ -261,24 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>Microsoft's June 2026 Patch Tuesday is a heavy one: 198 vulnerabilities fixed and three zero-days, including a BitLocker bypass and an HTTP.sys server flaw. A plain-language breakdown of what's in it, what it means, and how a small business should protect itself this week, from a DoD-cleared engineer on the Central Coast.</description>
-    </item>
-    <item>
-      <title>Fake IT Workers Are Now Showing Up in Person: The Silent Ransom Group Escalation and How to Stop It</title>
-      <link>https://ghosxt.com/blog/silent-ransom-group-fake-it-workers-in-person-access-smb-2026.html</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/silent-ransom-group-fake-it-workers-in-person-access-smb-2026.html</guid>
-      <pubDate>Sat, 06 Jun 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>Google's Mandiant and the FBI warn that the Silent Ransom Group has escalated from phone calls to sending fake IT workers into offices in person to steal data. How the in-person attack works, why backups won't save you, why it's not just law firms, and the controls that actually stop it. From a DoD-cleared engineer on the Central Coast.</description>
-    </item>
-    <item>
-      <title>SPF, DKIM, and DMARC for Small Business: Stop Spoofing and Land in the Inbox (2026)</title>
-      <link>https://ghosxt.com/blog/email-authentication-spf-dkim-dmarc-small-business-2026.html</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/email-authentication-spf-dkim-dmarc-small-business-2026.html</guid>
-      <pubDate>Fri, 05 Jun 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>What SPF, DKIM, and DMARC actually do, why Google, Yahoo, and Microsoft now require them, how email authentication stops criminals spoofing your domain in invoice and wire-fraud scams, and a safe phased rollout that won't block your own mail. From a DoD-cleared engineer on the Central Coast.</description>
     </item>
   </channel>
 </rss>
