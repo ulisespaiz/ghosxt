@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from a DoD-cleared engineer.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Fri, 10 Jul 2026 08:02:25 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 10 Jul 2026 11:06:24 +0000</lastBuildDate>
     <pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>Smishing: How Text Message Phishing Is Hitting Small Businesses in 2026</title>
+      <link>https://ghosxt.com/blog/smishing-sms-phishing-small-business-2026.html</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/smishing-sms-phishing-small-business-2026.html</guid>
+      <pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>Fake delivery texts, fake toll bills, fake payroll alerts — smishing (SMS phishing) skips your spam filter and lands directly on employee phones. How it works, why it's outrunning email phishing, and the small-business controls that stop it.</description>
+    </item>
     <item>
       <title>How Much Does a Small Business Website Cost in 2026? Real Numbers</title>
       <link>https://ghosxt.com/blog/small-business-website-cost-2026.html</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>Your employees are already using ChatGPT and other AI tools at work, often with sensitive company and client data. The real risk isn't the robots, it's data leaving your control. Why banning backfires, what should never be pasted into a public AI tool, and how a small business can govern AI safely, from a DoD-cleared engineer on the Central Coast.</description>
-    </item>
-    <item>
-      <title>June 2026 Patch Tuesday: 198 Fixes, 3 Zero-Days, and What an SMB Should Patch First</title>
-      <link>https://ghosxt.com/blog/june-2026-patch-tuesday-secure-boot-exchange-smb.html</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/june-2026-patch-tuesday-secure-boot-exchange-smb.html</guid>
-      <pubDate>Tue, 09 Jun 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>Microsoft's June 2026 Patch Tuesday is a heavy one: 198 vulnerabilities fixed and three zero-days, including a BitLocker bypass and an HTTP.sys server flaw. A plain-language breakdown of what's in it, what it means, and how a small business should protect itself this week, from a DoD-cleared engineer on the Central Coast.</description>
     </item>
   </channel>
 </rss>
