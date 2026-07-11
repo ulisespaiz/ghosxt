@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from a DoD-cleared engineer.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Fri, 10 Jul 2026 11:06:24 +0000</lastBuildDate>
-    <pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Sat, 11 Jul 2026 11:05:48 +0000</lastBuildDate>
+    <pubDate>Sat, 11 Jul 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>ADA Website Accessibility for Small Business: What California Law Requires (2026)</title>
+      <link>https://ghosxt.com/blog/ada-website-accessibility-small-business-2026.html</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/ada-website-accessibility-small-business-2026.html</guid>
+      <pubDate>Sat, 11 Jul 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Web Development</category>
+      <description>Website accessibility demand letters are hitting small businesses across California, and the Unruh Act makes it more expensive here than almost anywhere else. What ADA and WCAG 2.1 AA actually require, why size doesn't exempt you, and the fixes that close most of the risk.</description>
+    </item>
     <item>
       <title>Smishing: How Text Message Phishing Is Hitting Small Businesses in 2026</title>
       <link>https://ghosxt.com/blog/smishing-sms-phishing-small-business-2026.html</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Managed IT</category>
       <description>Looking for the best IT support in Monterey? A practical guide to choosing a managed IT and cybersecurity provider on the Monterey Peninsula: what to look for, the questions to ask, the red flags to avoid, and why local matters. From a DoD-cleared engineer.</description>
-    </item>
-    <item>
-      <title>Shadow AI: Your Team Is Already Pasting Company Data Into ChatGPT — Here's How to Handle It</title>
-      <link>https://ghosxt.com/blog/shadow-ai-employees-chatgpt-data-small-business-2026.html</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/shadow-ai-employees-chatgpt-data-small-business-2026.html</guid>
-      <pubDate>Tue, 09 Jun 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>Your employees are already using ChatGPT and other AI tools at work, often with sensitive company and client data. The real risk isn't the robots, it's data leaving your control. Why banning backfires, what should never be pasted into a public AI tool, and how a small business can govern AI safely, from a DoD-cleared engineer on the Central Coast.</description>
     </item>
   </channel>
 </rss>
