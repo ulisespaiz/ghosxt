@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from a DoD-cleared engineer.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Sun, 12 Jul 2026 11:29:43 +0000</lastBuildDate>
-    <pubDate>Sun, 12 Jul 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Mon, 13 Jul 2026 11:05:45 +0000</lastBuildDate>
+    <pubDate>Mon, 13 Jul 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>AI Agents at Work: The Non-Human Identity Risk Small Businesses Aren't Managing</title>
+      <link>https://ghosxt.com/blog/ai-agents-non-human-identity-risk-small-business-2026.html</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/ai-agents-non-human-identity-risk-small-business-2026.html</guid>
+      <pubDate>Mon, 13 Jul 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>AI agents can now send email, book meetings, and update your CRM on their own, using real credentials plugged into your systems. Why these non-human identities are a growing small-business risk, and the checklist that governs them.</description>
+    </item>
     <item>
       <title>Zero Trust Security for Small Business: What It Actually Means in 2026</title>
       <link>https://ghosxt.com/blog/zero-trust-security-small-business-2026.html</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>A straight answer on what cybersecurity costs a small business in 2026: real monthly per-user ranges, what drives the price, what's actually included, what's free, and the far bigger cost of a breach. From a DoD-cleared engineer on the Central Coast.</description>
-    </item>
-    <item>
-      <title>Do I Need Managed IT Services? 7 Signs Your Small Business Has Outgrown Break-Fix</title>
-      <link>https://ghosxt.com/blog/do-i-need-managed-it-services-signs-small-business.html</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/do-i-need-managed-it-services-signs-small-business.html</guid>
-      <pubDate>Fri, 12 Jun 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Managed IT</category>
-      <description>Not sure if your small business needs a managed IT provider? Here are seven clear signs you've outgrown break-fix and ad-hoc support, what managed IT actually changes, and how to know when it's worth it. From a DoD-cleared engineer on the Central Coast.</description>
     </item>
   </channel>
 </rss>
