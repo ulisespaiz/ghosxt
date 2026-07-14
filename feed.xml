@@ -7,7 +7,7 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from a DoD-cleared engineer.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Tue, 14 Jul 2026 11:04:49 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 14 Jul 2026 20:39:12 +0000</lastBuildDate>
     <pubDate>Tue, 14 Jul 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
     <item>
@@ -18,6 +18,15 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>A phone call claiming to be your bank, the IRS, or your own IT department is one of the oldest scams in the book, and it still works. How vishing calls are targeting small businesses in 2026, why caller ID can't be trusted, and the verification habits that stop it.</description>
+    </item>
+    <item>
+      <title>July 2026 Patch Tuesday: A Record 570 Fixes, 3 Zero-Days, and What an SMB Should Patch First</title>
+      <link>https://ghosxt.com/blog/july-2026-patch-tuesday-record-570-fixes-smb.html</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/july-2026-patch-tuesday-record-570-fixes-smb.html</guid>
+      <pubDate>Tue, 14 Jul 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>Microsoft's July 2026 Patch Tuesday is the biggest in history: a record 570 vulnerabilities fixed and three zero-days, including actively exploited Active Directory Federation Services and SharePoint flaws and another BitLocker bypass. A plain-language breakdown of what's in it, why it's so large, and how a small business should protect itself this week, from a DoD-cleared engineer on the Central Coast.</description>
     </item>
     <item>
       <title>AI Agents at Work: The Non-Human Identity Risk Small Businesses Aren't Managing</title>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>QR code phishing, or 'quishing,' is at its highest level yet in 2026, because a QR code hides the malicious link from email filters and jumps the attack onto a personal phone. How it works, why it bypasses your security, the physical-sticker version, and how a small business defends against it. From a DoD-cleared engineer on the Central Coast.</description>
-    </item>
-    <item>
-      <title>Your VPN Is the Front Door: This Week's Actively-Exploited Check Point and Ivanti Flaws, and What to Do</title>
-      <link>https://ghosxt.com/blog/vpn-edge-device-flaws-actively-exploited-smb-june-2026.html</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/vpn-edge-device-flaws-actively-exploited-smb-june-2026.html</guid>
-      <pubDate>Fri, 12 Jun 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>This week CISA added actively-exploited flaws in Check Point VPN and Ivanti Sentry to its must-patch catalog, plus a Chrome browser bug. Edge devices are the ransomware front door, and attackers move within days. What it means for a small business and the steps to take now, from a DoD-cleared engineer on the Central Coast.</description>
     </item>
   </channel>
 </rss>

@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>July 2026 Patch Tuesday: A Record 570 Fixes, 3 Zero-Days, and What an SMB Should Patch First | Ghosxt</title>
+    <meta name="description" content="Microsoft's July 2026 Patch Tuesday is the biggest in history: a record 570 vulnerabilities fixed and three zero-days, including actively exploited Active Directory Federation Services and SharePoint flaws and another BitLocker bypass. A plain-language breakdown of what's in it, why it's so large, and how a small business should protect itself this week, from a DoD-cleared engineer on the Central Coast." />
+    <link rel="canonical" href="https://ghosxt.com/blog/july-2026-patch-tuesday-record-570-fixes-smb.html" />
+    <link rel="alternate" type="application/rss+xml" title="Ghosxt Blog" href="https://ghosxt.com/feed.xml" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://ghosxt.com/blog/july-2026-patch-tuesday-record-570-fixes-smb.html" />
+    <meta property="og:title" content="July 2026 Patch Tuesday: A Record 570 Fixes, 3 Zero-Days, and What an SMB Should Patch First | Ghosxt" />
+    <meta property="og:description" content="Microsoft's July 2026 Patch Tuesday is the biggest in history: a record 570 vulnerabilities fixed and three zero-days, including actively exploited Active Directory Federation Services and SharePoint flaws and another BitLocker bypass. A plain-language breakdown of what's in it, why it's so large, and how a small business should protect itself this week, from a DoD-cleared engineer on the Central Coast." />
+    <meta property="og:image" content="https://ghosxt.com/assets/img/og/blog-july-2026-patch-tuesday-record-570-fixes-smb.png" />
+    <meta property="og:site_name" content="Ghosxt" />
+    <meta property="article:published_time" content="2026-07-14" />
+    <meta property="article:author" content="Ulises Paiz" />
+    <meta name="robots" content="index, follow" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="July 2026 Patch Tuesday: A Record 570 Fixes, 3 Zero-Days, and What an SMB Should Patch First | Ghosxt" />
+    <meta name="twitter:description" content="A record 570 vulnerabilities — the biggest Patch Tuesday ever — with three zero-days, including actively exploited AD FS and SharePoint flaws. What's in July's release and how a small business should protect itself this week." />
+    <meta name="twitter:image" content="https://ghosxt.com/assets/img/og/blog-july-2026-patch-tuesday-record-570-fixes-smb.png" />
+    <link rel="icon" href="../assets/img/favicon.ico" sizes="any" />
+    <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- ghosxt:roboto-preload -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" />
+    <link rel="preconnect" href="https://cdn-uicons.flaticon.com" />
+    <link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" /></noscript>
+    <link rel="stylesheet" href="../assets/css/main.css?v=2026-07-02a" />
+    <link rel="stylesheet" href="../assets/css/blog.css?v=2026-07-03a" />
+    <link rel="stylesheet" media="print" onload="this.media='all'" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" />
+    <noscript><link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" /></noscript>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "BlogPosting",
+            "mainEntityOfPage": { "@type": "WebPage", "@id": "https://ghosxt.com/blog/july-2026-patch-tuesday-record-570-fixes-smb.html" },
+            "headline": "July 2026 Patch Tuesday: A Record 570 Fixes, 3 Zero-Days, and What an SMB Should Patch First",
+            "description": "Microsoft's July 2026 Patch Tuesday is the biggest in history: a record 570 vulnerabilities fixed and three zero-days, including actively exploited Active Directory Federation Services and SharePoint flaws and another BitLocker bypass. A plain-language breakdown of what's in it, why it's so large, and how a small business should protect itself this week.",
+            "image": "https://ghosxt.com/assets/img/og/blog-july-2026-patch-tuesday-record-570-fixes-smb.png",
+            "author": { "@type": "Person", "name": "Ulises Paiz", "url": "https://ghosxt.com/about.html" },
+            "publisher": { "@type": "Organization", "name": "Ghosxt", "logo": { "@type": "ImageObject", "url": "https://ghosxt.com/assets/img/ghosxt-logo-160.webp" } },
+            "datePublished": "2026-07-14",
+            "dateModified": "2026-07-14",
+            "articleSection": "Cybersecurity",
+            "keywords": "July 2026 Patch Tuesday, Microsoft security updates, 570 CVEs, largest Patch Tuesday ever, record Patch Tuesday, zero-day, CVE-2026-56155 AD FS, CVE-2026-56164 SharePoint, CVE-2026-50661 BitLocker, CVE-2026-48561 Copilot, CVE-2026-55944 Dynamics 365 Business Central, AI vulnerability discovery, Windows 10 ESU, patch management small business, Salinas, Monterey, Central Coast managed IT"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ghosxt.com/" },
+              { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://ghosxt.com/blog/" },
+              { "@type": "ListItem", "position": 3, "name": "July 2026 Patch Tuesday", "item": "https://ghosxt.com/blog/july-2026-patch-tuesday-record-570-fixes-smb.html" }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Is the July 2026 Patch Tuesday really the biggest ever, and how many vulnerabilities did Microsoft fix?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. The July 14, 2026 release fixes 570 vulnerabilities, making it the largest Patch Tuesday in the roughly two decades Microsoft has been shipping monthly updates — nearly triple the previous record of 198 set just last month. Fifty-nine of the fixes are rated Critical, most of those remote code execution. By type, the release is dominated by elevation-of-privilege flaws (254) and remote-code-execution flaws (145), with the rest spread across information disclosure, denial of service, security-feature bypass, and spoofing. It also includes three zero-days: two actively exploited flaws in Active Directory Federation Services and SharePoint Server, and a publicly disclosed BitLocker bypass."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What are the three zero-days and which matters most to a small business?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The three are CVE-2026-56155, an Active Directory Federation Services elevation-of-privilege flaw already being exploited in attacks, which lets an attacker with a foothold elevate to administrator on the server that handles your sign-ins; CVE-2026-56164, a SharePoint Server elevation-of-privilege flaw, also exploited in the wild, where a missing authentication check lets an unauthenticated attacker escalate privileges over the network on self-hosted SharePoint; and CVE-2026-50661, a publicly disclosed BitLocker security-feature bypass that lets someone with physical access to a device get at encrypted data. If you run AD FS or on-premises SharePoint, those servers are your first priority because attackers are using the flaws right now. For everyone else, the BitLocker bypass is the one that maps to everyday risk — a lost or stolen laptop — and it is the second month in a row a BitLocker bypass has shipped."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Why was this Patch Tuesday so big? Is Microsoft's software getting worse?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The short answer is AI. Microsoft says the pace of vulnerability discovery is changing because AI tooling makes it possible to find more issues, faster, across more code — and security researchers, bug-bounty hunters, and Microsoft's own teams are all using it. A record month does not mean Windows suddenly got 570 flaws worse; most of these bugs existed for years and are only now being found. The practical takeaway for a small business is that big patch months are the new normal, so a repeatable monthly patch process matters more than ever. One caution: researchers also warn that 'exploitation less likely' labels are less reliable in the AI era, since AI tooling has produced working exploits for flaws rated unlikely to be attacked — so patch the whole release, not just the headline items."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "We use Microsoft 365. Do the SharePoint and AD FS zero-days affect us?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Mostly no, and that is the good news. The SharePoint zero-day affects self-hosted SharePoint Server (2016, 2019, and Subscription Edition); if your files live in SharePoint Online through Microsoft 365, Microsoft patches that back end for you. AD FS is a federation server some organizations run on-premises to handle sign-ins for Microsoft 365 and other apps; most small businesses that sign in directly through Entra ID never deployed it. The catch is knowing which you are: plenty of businesses have an AD FS box or an old SharePoint server that a vendor set up years ago and nobody remembers. Ask whoever runs your IT to confirm, and if you are still on AD FS, this is a strong nudge to migrate sign-in to Entra ID and retire the server."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "We still have Windows 10 machines. Did we get any of these fixes?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Only if those machines are enrolled in Extended Security Updates. Windows 10 hit end of support in October 2025, and this month's Windows 10 fix (KB5099539) shipped only to ESU-enrolled devices. A Windows 10 machine without ESU received nothing from this record release and is now nine months past its last free patch, accumulating exposure to every flaw fixed since — including this month's zero-days. If you still have Windows 10 in the business, either confirm ESU enrollment as a bridge or, better, plan the upgrade or replacement now."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can we wait to install this month's updates?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No — this is exactly the release you do not sit on. It carries two zero-days that attackers are actively exploiting, a publicly disclosed BitLocker bypass, and 59 Critical flaws, 48 of them remote code execution. The moment patches ship, the flaws are public and exploit development starts against whoever has not applied them; with 570 fixes, attackers have their biggest-ever menu. A short test-then-deploy window is fine. If you cannot do everything at once, patch in this order: AD FS and on-premises SharePoint servers, internet-facing servers, laptops, then everything else — and reboot, because an installed-but-not-rebooted patch is not protecting anything."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+    <!-- ghosxt:cf-web-analytics -->
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"f3ce7e0e17f54050845d52d7f355cd98"}'></script>
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top"><i class="fi fi-rs-angle-up" aria-hidden="true"></i></button>
+    <div class="cookie-banner" id="cookieBanner"><div class="cookie-banner-container"><div class="cookie-content"><div class="cookie-icon"><i class="fi fi-rs-cookie"></i></div><div class="cookie-text"><p class="cookie-message">We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.</p><a href="../privacy-policy.html" class="cookie-link">Learn more about our Privacy Policy</a></div></div><div class="cookie-actions"><button class="cookie-btn cookie-btn-secondary" id="cookieDecline">Decline</button><button class="cookie-btn cookie-btn-primary" id="cookieAccept">Accept All</button></div></div></div>
+    <nav class="navbar" aria-label="Main navigation">
+      <div class="navbar-container">
+        <div class="navbar-left"><a href="../index.html" class="navbar-logo"><img fetchpriority="high" loading="eager" src="../assets/img/ghosxt-logo-160.webp" alt="Ghosxt logo" width="48" height="48" /><span>GHOSXT</span></a></div>
+        <div class="navbar-right">
+          <div class="navbar-menu">
+            <a href="../index.html" class="navbar-link">Home</a>
+            <div class="navbar-dropdown"><a href="../about.html" class="navbar-link dropdown-trigger" aria-haspopup="menu">About <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></a><div class="dropdown-menu" role="menu"><a href="../about.html" class="dropdown-item" role="menuitem">About Ghosxt</a><a href="../ghosxt-cares.html" class="dropdown-item" role="menuitem">Ghosxt Cares</a></div></div>
+            <div class="navbar-dropdown"><a href="../services.html" class="navbar-link dropdown-trigger" aria-haspopup="menu">Services <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></a><div class="dropdown-menu" role="menu"><a href="../services.html" class="dropdown-item" role="menuitem">All Services</a>
+                <a href="../managed-it-services.html" class="dropdown-item" role="menuitem">Managed IT Services</a>
+                <a href="../help-desk-it-support.html" class="dropdown-item" role="menuitem">IT Help Desk &amp; Support</a>
+                <a href="../it-consulting-vcio.html" class="dropdown-item" role="menuitem">IT Consulting &amp; vCIO</a>
+                <a href="../cybersecurity.html" class="dropdown-item" role="menuitem">Cybersecurity</a>
+                <a href="../cloud-services.html" class="dropdown-item" role="menuitem">Cloud Services</a>
+                <a href="../backup-disaster-recovery.html" class="dropdown-item" role="menuitem">Backup &amp; Disaster Recovery</a>
+                <a href="../network-design.html" class="dropdown-item" role="menuitem">Network Design</a>
+                <a href="../website-development.html" class="dropdown-item" role="menuitem">Web Development</a>
+                <a href="../website-development.html#calculator" class="dropdown-item" role="menuitem">Website Pricing</a>
+                <a href="../ctpat.html" class="dropdown-item" role="menuitem">C-TPAT Compliance</a></div></div>
+            <a href="../pricing.html" class="navbar-link">Pricing</a>
+            <a href="index.html" class="navbar-link">Blog</a>
+            <a href="../contact.html" class="navbar-link">Contact</a>
+          </div>
+          <button class="navbar-mobile-toggle" id="mobileToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu"><i class="fi fi-rs-burger-menu" aria-hidden="true"></i></button>
+          <div class="navbar-buttons"><a class="navbar-btn navbar-phone" href="tel:+18312040501" aria-label="Call Ghosxt at (831) 204-0501"><i class="fi fi-rs-phone-call" aria-hidden="true"></i><span>(831)&nbsp;204-0501</span></a><a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer" class="navbar-btn btn-demo"><i class="fi fi-rs-calendar-day"></i><span>Book a Call</span></a></div>
+        </div>
+      </div>
+      <div class="navbar-overlay" id="navbarOverlay"></div>
+      <div class="navbar-mobile-menu" id="mobileMenu">
+        <a href="../index.html" class="mobile-link">Home</a>
+        <div class="mobile-accordion"><button class="mobile-accordion-trigger" aria-expanded="false">About <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></button><div class="mobile-accordion-content"><a href="../about.html" class="mobile-dropdown-item">About Ghosxt</a><a href="../ghosxt-cares.html" class="mobile-dropdown-item">Ghosxt Cares</a></div></div>
+        <div class="mobile-accordion"><button class="mobile-accordion-trigger" aria-expanded="false">Services <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></button><div class="mobile-accordion-content"><a href="../services.html" class="mobile-dropdown-item">All Services</a>
+            <a href="../managed-it-services.html" class="mobile-dropdown-item">Managed IT Services</a>
+            <a href="../help-desk-it-support.html" class="mobile-dropdown-item">IT Help Desk &amp; Support</a>
+            <a href="../it-consulting-vcio.html" class="mobile-dropdown-item">IT Consulting &amp; vCIO</a>
+            <a href="../cybersecurity.html" class="mobile-dropdown-item">Cybersecurity</a>
+            <a href="../cloud-services.html" class="mobile-dropdown-item">Cloud Services</a>
+            <a href="../backup-disaster-recovery.html" class="mobile-dropdown-item">Backup &amp; Disaster Recovery</a>
+            <a href="../network-design.html" class="mobile-dropdown-item">Network Design</a>
+            <a href="../website-development.html" class="mobile-dropdown-item">Web Development</a>
+            <a href="../website-development.html#calculator" class="mobile-dropdown-item">Website Pricing</a>
+            <a href="../ctpat.html" class="mobile-dropdown-item">C-TPAT Compliance</a></div></div>
+        <a href="../pricing.html" class="mobile-link">Pricing</a>
+        <a href="index.html" class="mobile-link">Blog</a>
+        <a href="../contact.html" class="mobile-link">Contact</a>
+        <div class="mobile-actions"><a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer" class="mobile-btn btn-demo"><i class="fi fi-rs-calendar-day"></i><span>Book a Call</span></a></div>
+      </div>
+    </nav>
+    <main id="main-content" class="blog-post">
+      <header class="blog-post-header">
+        <div class="container">
+          <nav class="blog-post-breadcrumbs" aria-label="Breadcrumb">
+            <a href="../index.html">Home</a><span class="sep">&rsaquo;</span><a href="index.html">Blog</a><span class="sep">&rsaquo;</span><span aria-current="page">July 2026 Patch Tuesday</span>
+          </nav>
+          <div class="blog-post-meta">
+            <time datetime="2026-07-14">July 14, 2026</time>
+            <span>&middot;</span>
+            <span>11 min read</span>
+            <span>&middot;</span>
+            <span class="blog-card-tag">Cybersecurity</span>
+          </div>
+          <h1>July 2026 Patch Tuesday: A Record 570 Fixes, 3 Zero-Days, and What an SMB Should Patch First</h1>
+          <div class="blog-post-author">
+            <strong>Ulises Paiz</strong>, Founder, Ghosxt
+          </div>
+          <div class="author-bio-box">
+            <!-- ghosxt:author-bio -->
+            <img src="../assets/img/ulises.avif" alt="Ulises Paiz" width="56" height="56" loading="lazy" />
+            <p>Ulises Paiz, Founder of Ghosxt, has 10+ years in IT infrastructure and cybersecurity, an Active Top Secret Clearance, and 9 certifications including CySA+, Security+, and AZ-104. Before founding Ghosxt, he served as a Senior Solutions Consultant for the DoD and built security programs for 40+ Central Coast businesses. <a href="../about.html">More about Ulises &rarr;</a></p>
+          </div>
+        </div>
+      </header>
+      <div class="blog-post-body">
+        <div class="container">
+          <aside class="blog-post-quickfix" aria-label="Summary and what to do today">
+            <span class="quickfix-label">TL;DR &mdash; the biggest Patch Tuesday ever: patch promptly, servers first</span>
+            <h2>Microsoft's July 2026 Patch Tuesday fixes a record 570 vulnerabilities &mdash; the largest release in Patch Tuesday history, nearly triple last month's record of 198 &mdash; including three zero-days: two already being exploited in attacks and one publicly disclosed.</h2>
+            <ul>
+              <li><strong>570 CVEs in total, 59 of them Critical</strong> (48 of those remote code execution), dominated by elevation-of-privilege (254) and remote-code-execution (145) flaws.</li>
+              <li><strong>Two actively exploited zero-days:</strong> an Active Directory Federation Services privilege-escalation flaw (CVE-2026-56155) and a SharePoint Server privilege-escalation flaw (CVE-2026-56164). If you run either on-premises, patch those servers first.</li>
+              <li><strong>One publicly disclosed zero-day:</strong> a BitLocker bypass (CVE-2026-50661) &mdash; the second month in a row &mdash; that maps to the everyday risk of a lost or stolen laptop.</li>
+              <li><strong>Why so big:</strong> Microsoft credits AI-assisted vulnerability discovery. More flaws found faster, across more code &mdash; expect heavy months to be the new normal.</li>
+              <li><strong>Windows 10 machines got none of this</strong> unless they're enrolled in Extended Security Updates.</li>
+            </ul>
+            <p>What a small business should do this week:</p>
+            <ol>
+              <li>Install this month's Windows and Office updates and reboot &mdash; every PC, every server, no exceptions.</li>
+              <li>If you self-host AD FS or SharePoint, patch those servers first &mdash; both zero-days are being exploited right now.</li>
+              <li>Patch laptops and confirm BitLocker encryption is on; confirm any remaining Windows 10 machines are in ESU or have an exit plan.</li>
+            </ol>
+            <p>This continues the <a href="june-2026-patch-tuesday-secure-boot-exchange-smb.html">June 2026 Patch Tuesday post</a>; the <a href="../managed-it-services.html">managed IT page</a> covers how we run patching so it is verified, not just hoped.</p>
+          </aside>
+
+          <p>Microsoft shipped its July 2026 security updates today, and there is no way to undersell this one: <strong>570 vulnerabilities fixed, the largest Patch Tuesday ever released</strong>. For scale, last month's 198 was itself a record, and people called it a doozy. July nearly triples it. The release also carries <strong>three zero-days</strong> &mdash; two flaws attackers are actively exploiting right now and one that was publicly disclosed before the fix shipped &mdash; per <a href="https://msrc.microsoft.com/update-guide/releaseNote/2026-Jul" target="_blank" rel="noopener noreferrer">Microsoft's official July 2026 release notes</a>.</p>
+
+          <p>A number like 570 can push a business owner toward either panic or paralysis, and neither is useful. Below is the plain-language version: what is actually in the release, why it is so enormous (the answer is AI, and it is worth understanding), the three zero-days and what each one means for a Central Coast business, and a prioritized list of what to do this week. You do not need to read 570 CVE bulletins to make good decisions; you need to know what to patch first.</p>
+
+          <h2>The headline number: 570 fixes, the biggest Patch Tuesday in history</h2>
+
+          <p>Microsoft has been shipping monthly security updates on the second Tuesday of the month for over two decades, and there has never been a release this large. The count breaks down like this:</p>
+
+          <ul>
+            <li><strong>254 elevation-of-privilege flaws.</strong> These let an attacker who already has a toehold on a machine promote themselves to administrator or system control. They are the workhorse of a real intrusion: rarely the way in, almost always the next step. Both of this month's actively exploited zero-days are in this category, which tells you how attackers are actually using them.</li>
+            <li><strong>145 remote-code-execution flaws.</strong> The dangerous ones &mdash; they let an attacker run their own code on your systems, sometimes with no interaction from your staff at all. 48 of this month's 59 Critical-rated fixes are RCEs, touching Office, Exchange Server, SQL Server, Remote Desktop Client, Windows Media Foundation, and even Microsoft Defender itself.</li>
+            <li><strong>The rest:</strong> 102 information-disclosure flaws, 35 denial-of-service, 17 security-feature bypasses (including the BitLocker zero-day), and 16 spoofing flaws.</li>
+          </ul>
+
+          <p>Same lesson as every month, at nearly triple the scale: the release covers both halves of an attack &mdash; the break-in (RCE) and the takeover (EoP) &mdash; in volume. That is the profile you patch promptly.</p>
+
+          <h2>Why so big? AI is finding flaws faster than anyone can remember</h2>
+
+          <p>The obvious question is whether Microsoft's software suddenly got three times worse. It did not. What changed is how fast flaws are being <em>found</em>. Microsoft's own executive vice president for Windows, Pavan Davuluri, put it plainly: the pace of vulnerability discovery is changing, because advances in AI make it possible to find more issues, faster, across more code. Security researchers, bug-bounty hunters, and Microsoft's internal teams are all using AI tooling now, and the result is that bugs which sat undiscovered in the code for years are surfacing in bulk. We wrote about this exact dynamic when <a href="claude-mythos-firefox-271-vulnerabilities-patch-cadence-smb.html">an AI model found 271 vulnerabilities in Firefox</a>; July's record is the same story playing out across the much larger Windows codebase.</p>
+
+          <p>Two practical consequences for a small business. First, <strong>heavy patch months are the new normal</strong>, not a one-off &mdash; which means a repeatable, verified monthly patch process stops being nice-to-have and becomes the whole game. Second, and less comfortable: the same AI tooling that finds flaws for defenders also works for attackers. Researchers have already shown AI producing working exploits for the majority of a sample of flaws Microsoft had rated "exploitation less likely." The labels defenders used to lean on for triage are getting less reliable, and the safe response is to patch the whole release, not just the headliners.</p>
+
+          <h2>The three zero-days, and what to do about each</h2>
+
+          <p>A zero-day is a flaw attackers already knew about &mdash; or that was publicly disclosed &mdash; before a fix existed, so the usual head start defenders get from patching early is gone. July has three, and this month two of them are confirmed under active attack:</p>
+
+          <ul>
+            <li><strong><a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-56155" target="_blank" rel="noopener noreferrer">CVE-2026-56155</a> &mdash; Active Directory Federation Services elevation of privilege, actively exploited.</strong> AD FS is the on-premises server some organizations use to handle sign-ins for Microsoft 365 and other apps &mdash; identity infrastructure, the keys to everything. This flaw (CVSS 7.8) lets an attacker who has gained a foothold elevate to administrator, and Microsoft's own incident-response team found it while investigating real attacks. Most small businesses that sign in directly through Entra ID never deployed AD FS; if you did &mdash; or a vendor set one up years ago and it is still humming in a closet &mdash; that server is your first patch of the month, and a strong candidate for retirement in favor of Entra ID sign-in.</li>
+            <li><strong><a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-56164" target="_blank" rel="noopener noreferrer">CVE-2026-56164</a> &mdash; SharePoint Server elevation of privilege, actively exploited.</strong> A missing authentication check on a critical function lets an unauthenticated attacker escalate privileges over the network on self-hosted SharePoint (2016, 2019, and Subscription Edition). If your SharePoint is SharePoint Online through Microsoft 365, Microsoft patches the back end for you and you can exhale. If you still self-host, patch now &mdash; SharePoint servers have been a favorite ransomware entry point all year, as we covered in the <a href="sharepoint-server-rce-cve-2026-33112-may-2026-smb.html">May SharePoint post</a>, and this is another argument for the <a href="cloud-services-small-business-central-coast-migration.html">migration conversation</a>.</li>
+            <li><strong><a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50661" target="_blank" rel="noopener noreferrer">CVE-2026-50661</a> &mdash; BitLocker security-feature bypass, publicly disclosed.</strong> Someone with physical access to a device can get around BitLocker full-disk encryption and reach the data. Sound familiar? June's release had one too. Not yet seen exploited in the wild, but the details are public, and it maps to the most ordinary risk a small business has: a laptop left in a car, lost at an airport, or stolen from the office. Encryption is what makes a stolen laptop a hardware loss instead of a data breach. Patch the laptops, and while you are at it, confirm BitLocker is actually turned on &mdash; we still find machines where it never was.</li>
+          </ul>
+
+          <h2>Critical clusters worth knowing about</h2>
+
+          <p>Beyond the zero-days, a few of the 59 Critical fixes stand out because they map to things real small businesses run:</p>
+
+          <ul>
+            <li><strong>Dynamics 365 Business Central / NAV (CVE-2026-55944, CVSS 9.8).</strong> A remote-code-execution flaw requiring no authentication and no user interaction, rated "exploitation more likely." If your accounting or ERP runs on self-hosted Business Central or the older NAV, this is as urgent as the zero-days. Cloud-hosted Business Central is patched by Microsoft.</li>
+            <li><strong>Microsoft Copilot (CVE-2026-48561, CVSS 9.6).</strong> A malicious website could drive Microsoft Edge on Android into sending crafted prompts to Copilot and achieve code execution. The fix is largely on Microsoft's side, but it is a sign of the times: the AI assistants being wired into everything are now attack surface too &mdash; the same theme as our <a href="ai-agents-non-human-identity-risk-small-business-2026.html">AI agents post</a>. Keep mobile browsers and apps updating automatically.</li>
+            <li><strong>Windows DHCP Server.</strong> Five Critical flaws, three rated "exploitation more likely." DHCP is core network plumbing &mdash; the service that hands out addresses to every device in the building &mdash; and it usually lives on the same domain controller that runs everything else. Patch your Windows servers, not just the desktops.</li>
+            <li><strong>The everyday paths.</strong> Critical RCEs across Office (Word, Excel, PowerPoint), Exchange Server, SQL Server, Remote Desktop Client, and Windows Media Foundation. The Office ones are the classic malicious-attachment route &mdash; a document that does not just phish for a password but runs code when opened &mdash; which is why the defenses in the <a href="email-authentication-spf-dkim-dmarc-small-business-2026.html">email authentication post</a> matter alongside the patch.</li>
+          </ul>
+
+          <h2>Windows 10: this is what end-of-support looks like</h2>
+
+          <p>One more detail that deserves its own paragraph. Microsoft shipped this month's Windows 10 fix (KB5099539) <strong>only to devices enrolled in Extended Security Updates</strong>. Windows 10 hit end of support in October 2025; a Windows 10 machine without ESU received exactly none of this record release and is now nine months behind on security fixes, this month's zero-days included. Every record-size Patch Tuesday widens the gap between patched machines and the orphans. If you still have Windows 10 in the business &mdash; and many Central Coast offices do, often on the one PC that runs a critical app &mdash; the <a href="windows-10-end-of-life-small-business-what-to-do-2026.html">Windows 10 end-of-life post</a> lays out the options: enroll in ESU as a bridge, upgrade, or replace. "Do nothing" is the only wrong answer, and it gets more wrong every month.</p>
+
+          <h2>How to protect yourself this week</h2>
+
+          <p>Translated into action, in priority order:</p>
+
+          <ul>
+            <li><strong>Install and reboot, everywhere.</strong> Run this month's Windows and Office updates on every PC and every server and reboot when prompted. That single step covers all three zero-days and the bulk of the 570 fixes. An installed-but-not-rebooted patch protects nothing.</li>
+            <li><strong>Identity and collaboration servers first.</strong> If you run AD FS or self-hosted SharePoint, those two zero-days are under active exploitation &mdash; patch those servers before anything else, today if possible.</li>
+            <li><strong>Then laptops, and verify encryption.</strong> The BitLocker bypass is public. Prioritize portable devices and confirm full-disk encryption is actually enabled, so a lost laptop stays a hardware problem instead of a data breach.</li>
+            <li><strong>Self-hosted business apps next.</strong> Dynamics 365 Business Central / NAV, Exchange, SQL Server &mdash; the CVSS 9.8 no-authentication RCE makes self-hosted ERP a priority, and while you are on the servers, take the DHCP fixes too.</li>
+            <li><strong>Confirm your Windows 10 stragglers.</strong> Either they are enrolled in ESU and took KB5099539, or they are unprotected against everything in this release. Know which, this week.</li>
+            <li><strong>Keep MFA and backups in place.</strong> Patching lowers the odds of an incident; multi-factor authentication limits what a foothold can reach; a tested backup is what saves you when something gets through anyway. See the <a href="protect-small-business-cyberattack-10-essentials-2026.html">10 essentials</a> and the <a href="backup-disaster-recovery-small-business-2026.html">backup and DR post</a>.</li>
+            <li><strong>Do not let the number paralyze you.</strong> 570 sounds unmanageable; for a patched, auto-updating fleet it is mostly one big Windows Update cycle. The businesses that get hurt by a release like this are the ones where updates are deferred for months and nobody verifies anything landed.</li>
+          </ul>
+
+          <h2>Where this fits</h2>
+
+          <ul>
+            <li>The <a href="june-2026-patch-tuesday-secure-boot-exchange-smb.html">June 2026 Patch Tuesday post</a> and the <a href="may-2026-patch-tuesday-windows-dns-word-rce-smb.html">May post</a>, for the two previous releases and the patch-cadence habit.</li>
+            <li>The <a href="claude-mythos-firefox-271-vulnerabilities-patch-cadence-smb.html">AI-found Firefox flaws post</a>, for the AI-driven discovery wave behind this record and what it means for patch cadence.</li>
+            <li>The <a href="yellowkey-greenplasma-windows-bitlocker-bypass-privesc.html">BitLocker bypass post</a>, for the encryption-bypass class behind this month's disclosed zero-day.</li>
+            <li>The <a href="windows-10-end-of-life-small-business-what-to-do-2026.html">Windows 10 end-of-life post</a>, for the machines this release skipped entirely.</li>
+            <li>The <a href="protect-small-business-cyberattack-10-essentials-2026.html">10 essentials</a> and the <a href="../cybersecurity.html">cybersecurity page</a>, for where patching sits in the full defense.</li>
+            <li>The <a href="../managed-it-services.html">managed IT page</a>, for patch management that is verified across every device.</li>
+          </ul>
+
+          <p>We run monthly patch management for small businesses across <a href="../salinas.html">Salinas</a>, <a href="../monterey.html">Monterey</a>, <a href="../santa-cruz.html">Santa Cruz</a>, <a href="../watsonville.html">Watsonville</a>, and <a href="../san-jose.html">San Jose</a>, and the rest of the Central Coast, so "we patch every month" is something you can prove, not just hope &mdash; even in a month with 570 of them.</p>
+
+          <h2>FAQs about the July 2026 Patch Tuesday</h2>
+
+          <h3>Is the July 2026 Patch Tuesday really the biggest ever, and how many vulnerabilities did Microsoft fix?</h3>
+          <p>Yes. The July 14, 2026 release fixes 570 vulnerabilities, making it the largest Patch Tuesday in the roughly two decades Microsoft has been shipping monthly updates &mdash; nearly triple the previous record of 198 set just last month. Fifty-nine of the fixes are rated Critical, most of those remote code execution. By type, the release is dominated by elevation-of-privilege flaws (254) and remote-code-execution flaws (145), with the rest spread across information disclosure, denial of service, security-feature bypass, and spoofing. It also includes three zero-days: two actively exploited flaws in Active Directory Federation Services and SharePoint Server, and a publicly disclosed BitLocker bypass.</p>
+
+          <h3>What are the three zero-days and which matters most to a small business?</h3>
+          <p>The three are CVE-2026-56155, an Active Directory Federation Services elevation-of-privilege flaw already being exploited in attacks, which lets an attacker with a foothold elevate to administrator on the server that handles your sign-ins; CVE-2026-56164, a SharePoint Server elevation-of-privilege flaw, also exploited in the wild, where a missing authentication check lets an unauthenticated attacker escalate privileges over the network on self-hosted SharePoint; and CVE-2026-50661, a publicly disclosed BitLocker security-feature bypass that lets someone with physical access to a device get at encrypted data. If you run AD FS or on-premises SharePoint, those servers are your first priority because attackers are using the flaws right now. For everyone else, the BitLocker bypass is the one that maps to everyday risk &mdash; a lost or stolen laptop &mdash; and it is the second month in a row a BitLocker bypass has shipped.</p>
+
+          <h3>Why was this Patch Tuesday so big? Is Microsoft's software getting worse?</h3>
+          <p>The short answer is AI. Microsoft says the pace of vulnerability discovery is changing because AI tooling makes it possible to find more issues, faster, across more code &mdash; and security researchers, bug-bounty hunters, and Microsoft's own teams are all using it. A record month does not mean Windows suddenly got 570 flaws worse; most of these bugs existed for years and are only now being found. The practical takeaway for a small business is that big patch months are the new normal, so a repeatable monthly patch process matters more than ever. One caution: researchers also warn that "exploitation less likely" labels are less reliable in the AI era, since AI tooling has produced working exploits for flaws rated unlikely to be attacked &mdash; so patch the whole release, not just the headline items.</p>
+
+          <h3>We use Microsoft 365. Do the SharePoint and AD FS zero-days affect us?</h3>
+          <p>Mostly no, and that is the good news. The SharePoint zero-day affects self-hosted SharePoint Server (2016, 2019, and Subscription Edition); if your files live in SharePoint Online through Microsoft 365, Microsoft patches that back end for you. AD FS is a federation server some organizations run on-premises to handle sign-ins for Microsoft 365 and other apps; most small businesses that sign in directly through Entra ID never deployed it. The catch is knowing which you are: plenty of businesses have an AD FS box or an old SharePoint server that a vendor set up years ago and nobody remembers. Ask whoever runs your IT to confirm, and if you are still on AD FS, this is a strong nudge to migrate sign-in to Entra ID and retire the server.</p>
+
+          <h3>We still have Windows 10 machines. Did we get any of these fixes?</h3>
+          <p>Only if those machines are enrolled in Extended Security Updates. Windows 10 hit end of support in October 2025, and this month's Windows 10 fix (KB5099539) shipped only to ESU-enrolled devices. A Windows 10 machine without ESU received nothing from this record release and is now nine months past its last free patch, accumulating exposure to every flaw fixed since &mdash; including this month's zero-days. If you still have Windows 10 in the business, either confirm ESU enrollment as a bridge or, better, plan the upgrade or replacement now.</p>
+
+          <h3>Can we wait to install this month's updates?</h3>
+          <p>No &mdash; this is exactly the release you do not sit on. It carries two zero-days that attackers are actively exploiting, a publicly disclosed BitLocker bypass, and 59 Critical flaws, 48 of them remote code execution. The moment patches ship, the flaws are public and exploit development starts against whoever has not applied them; with 570 fixes, attackers have their biggest-ever menu. A short test-then-deploy window is fine. If you cannot do everything at once, patch in this order: AD FS and on-premises SharePoint servers, internet-facing servers, laptops, then everything else &mdash; and reboot, because an installed-but-not-rebooted patch is not protecting anything.</p>
+
+          <div class="blog-post-cta">
+            <h3>570 patches. Are yours actually installed? Let's verify.</h3>
+            <p>30 minutes with a DoD-cleared engineer. We'll check whether this record release &mdash; the three zero-days, the server fixes, and your Windows 10 stragglers &mdash; has truly applied across your machines, and set up patch management you can prove. No jargon, no obligation.</p>
+            <a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer">
+              <i class="fi fi-rs-calendar-day" aria-hidden="true"></i>
+              Book your free assessment
+            </a>
+          </div>
+
+          <p style="margin-top: 1.5rem; font-size: 0.95rem; color: rgba(0,0,0,0.7);">
+            Prefer to talk first? Email <a href="mailto:sales@ghosxt.com">sales@ghosxt.com</a> or call <a href="tel:+18312040501">(831) 204-0501</a>.
+          </p>
+        </div>
+      </div>
+    </main>
+    <footer class="footer" id="footerSection">
+      <div class="footer-container">
+        <div class="footer-brand-row">
+          <div class="footer-brand">
+            <img
+              src="../assets/img/ghosxt-logo-160.webp"
+              alt="Ghosxt logo"
+              width="80"
+              height="80"
+              loading="lazy"
+            />
+            <div class="footer-brand-text">
+              <span class="footer-brand-name">GHOSXT</span>
+              <span class="footer-brand-tagline"
+                >Government-grade IT for small business.</span
+              >
+            </div>
+          </div>
+          <div class="footer-cta-block">
+            <a
+              href="https://calendly.com/ulises-ghosxt"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="footer-cta-btn"
+            >
+              <i class="fi fi-rs-calendar-day" aria-hidden="true"></i>
+              Schedule Free Assessment
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-grid">
+          <div class="footer-column">
+            <h3 class="footer-column-title">Company</h3>
+            <ul class="footer-links">
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="../about.html">About</a></li>
+              <li><a href="../services.html">Services</a></li>
+              <li><a href="../pricing.html">Pricing</a></li>
+              <li>
+                <a href="../website-development.html">Website Development</a>
+              </li>
+              <li><a href="../msp-partners.html">MSP Partners</a></li>
+              <li><a href="../contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-column-title">Services</h3>
+            <ul class="footer-links">
+              <li><a href="../managed-it-services.html">Managed IT Services</a></li>
+              <li><a href="../help-desk-it-support.html">IT Help Desk &amp; Support</a></li>
+              <li><a href="../it-consulting-vcio.html">IT Consulting &amp; vCIO</a></li>
+              <li><a href="../cybersecurity.html">Cybersecurity</a></li>
+              <li><a href="../cloud-services.html">Cloud Services</a></li>
+              <li><a href="../backup-disaster-recovery.html">Backup &amp; Disaster Recovery</a></li>
+              <li><a href="../network-design.html">Network Design</a></li>
+              <li><a href="../website-development.html">Web Development</a></li>
+              <li><a href="../ctpat.html">C-TPAT Compliance</a></li>
+              <li><a href="../trucking-it-services.html">Trucking &amp; Logistics IT</a></li>
+              <li><a href="../agriculture-it-services.html">Agriculture &amp; Agribusiness IT</a></li>
+              <li><a href="../manufacturing-it-services.html">Manufacturing &amp; Industrial IT</a></li>
+              <li><a href="../professional-services-it.html">SMB Office &amp; Professional Services IT</a></li>
+              <li><a href="../healthcare-it-services.html">Healthcare &amp; Medical IT</a></li>
+              <li><a href="../property-management-it-services.html">Property Management IT</a></li>
+              <li><a href="../engineering-it-services.html">Engineering &amp; Architecture IT</a></li>
+              <li><a href="../hospitality-it-services.html">Hospitality &amp; Restaurants IT</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-column-title">Resources</h3>
+            <ul class="footer-links">
+              <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+              <li>
+                <a
+                  href="https://ticket.ghosxt.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Client Portal</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://calendly.com/ulises-ghosxt"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Free IT Assessment</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-column-title">Connect</h3>
+            <ul class="footer-links footer-social-links">
+              <li>
+                <a
+                  href="https://www.linkedin.com/company/ghosxt/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.063 2.063 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                  LinkedIn</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.facebook.com/GhosxtTech"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg>
+                  Facebook</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/ghosxttech/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+                  Instagram</a
+                >
+              </li>
+              <li>
+                <a href="mailto:sales@ghosxt.com"
+                  ><i class="fi fi-rs-envelope" aria-hidden="true"></i>
+                  sales@ghosxt.com</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <div class="footer-bottom">
+          <p class="footer-copyright">
+            &copy; 2026 Ghosxt. All rights reserved. Built by a DoD-cleared engineer.
+          </p>
+          <div class="footer-bottom-links">
+            <a href="../privacy-policy.html">Privacy Policy</a>
+            <span aria-hidden="true">&middot;</span>
+            <a
+              href="https://ticket.ghosxt.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Client Portal</a
+            >
+          </div>
+        </div>
+
+        <div class="service-areas-footer">
+          <h3>Service Areas</h3>
+          <ul>
+            <li><a href="../salinas.html">Salinas</a></li>
+            <li><a href="../monterey.html">Monterey</a></li>
+            <li><a href="../watsonville.html">Watsonville</a></li>
+            <li><a href="../hollister.html">Hollister</a></li>
+            <li><a href="../santa-cruz.html">Santa Cruz</a></li>
+            <li><a href="../gilroy.html">Gilroy</a></li>
+            <li><a href="../san-jose.html">San Jose</a></li>
+            <li><a href="../pacific-grove.html">Pacific Grove</a></li>
+            <li><a href="../carmel.html">Carmel</a></li>
+            <li><a href="../seaside.html">Seaside</a></li>
+            <li><a href="../marina.html">Marina</a></li>
+            <li><a href="../soledad.html">Soledad</a></li>
+            <li><a href="../king-city.html">King City</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="../assets/js/main.js?v=2026-07-02a" defer></script>
+    <!-- ghosxt:mobile-cta-bar -->
+    <div class="mobile-cta-bar" aria-label="Quick contact">
+      <a class="mcta-primary" href="tel:+18312040501">Call (831) 204-0501</a>
+      <a class="mcta-secondary" href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer">Book free assessment</a>
+    </div>
+  </body>
+</html>
