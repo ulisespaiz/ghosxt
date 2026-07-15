@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from a DoD-cleared engineer.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Tue, 14 Jul 2026 20:39:12 +0000</lastBuildDate>
-    <pubDate>Tue, 14 Jul 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Wed, 15 Jul 2026 11:07:36 +0000</lastBuildDate>
+    <pubDate>Wed, 15 Jul 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>Passkeys for Small Business: Should You Ditch Passwords in 2026?</title>
+      <link>https://ghosxt.com/blog/passkeys-passwordless-authentication-small-business-2026.html</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/passkeys-passwordless-authentication-small-business-2026.html</guid>
+      <pubDate>Wed, 15 Jul 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>Passkeys now work across Microsoft 365, Google Workspace, and most banking apps, and they can't be phished. What a passkey actually is, where it beats passwords and MFA, and a realistic rollout plan for a small business.</description>
+    </item>
     <item>
       <title>Vishing: How Voice Phishing Calls Are Scamming Small Businesses in 2026</title>
       <link>https://ghosxt.com/blog/vishing-voice-phishing-small-business-2026.html</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Industry IT</category>
       <description>A plain-talk IT and cybersecurity guide for Monterey Bay hospitality — restaurants, hotels, inns, and wineries. PCI and POS security, guest Wi-Fi segmentation, booking and wine-club uptime, seasonal-staff identity, ransomware defense, and PG&amp;E continuity. From a DoD-cleared engineer.</description>
-    </item>
-    <item>
-      <title>Quishing: Why QR Code Phishing Slips Past Your Filters, and How to Stop It</title>
-      <link>https://ghosxt.com/blog/qr-code-phishing-quishing-small-business-2026.html</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/qr-code-phishing-quishing-small-business-2026.html</guid>
-      <pubDate>Wed, 17 Jun 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>QR code phishing, or 'quishing,' is at its highest level yet in 2026, because a QR code hides the malicious link from email filters and jumps the attack onto a personal phone. How it works, why it bypasses your security, the physical-sticker version, and how a small business defends against it. From a DoD-cleared engineer on the Central Coast.</description>
     </item>
   </channel>
 </rss>
