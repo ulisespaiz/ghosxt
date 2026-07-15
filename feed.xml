@@ -7,7 +7,7 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from a DoD-cleared engineer.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Wed, 15 Jul 2026 11:07:36 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 15 Jul 2026 22:33:35 +0000</lastBuildDate>
     <pubDate>Wed, 15 Jul 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
     <item>
@@ -18,6 +18,15 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>Passkeys now work across Microsoft 365, Google Workspace, and most banking apps, and they can't be phished. What a passkey actually is, where it beats passwords and MFA, and a realistic rollout plan for a small business.</description>
+    </item>
+    <item>
+      <title>LegacyHive: Nightmare-Eclipse's New Windows Zero-Day, Explained</title>
+      <link>https://ghosxt.com/blog/nightmare-eclipse-legacyhive-windows-zero-day-smb-2026.html</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/nightmare-eclipse-legacyhive-windows-zero-day-smb-2026.html</guid>
+      <pubDate>Wed, 15 Jul 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>Nightmare-Eclipse's threatened July 14 sequel landed: LegacyHive, a Windows privilege-escalation zero-day in the User Profile Service and registry hive loading. No CVE yet, unpatched, and the public proof-of-concept is deliberately incomplete. What it does, how serious it really is, and what a small business should do this week, from a DoD-cleared engineer.</description>
     </item>
     <item>
       <title>Vishing: How Voice Phishing Calls Are Scamming Small Businesses in 2026</title>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>The fastest-growing extortion in 2026 doesn't encrypt anything. Attackers log into your cloud apps, steal the data, and threaten to leak it, using phone calls that impersonate IT and abused app connections. How the no-ransomware breach works and how a small business stops it. From a DoD-cleared engineer on the Central Coast.</description>
-    </item>
-    <item>
-      <title>Hospitality IT and Cybersecurity on the Monterey Bay: Restaurants, Hotels, and Wineries in 2026</title>
-      <link>https://ghosxt.com/blog/hospitality-it-cybersecurity-monterey-bay.html</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/hospitality-it-cybersecurity-monterey-bay.html</guid>
-      <pubDate>Fri, 19 Jun 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Industry IT</category>
-      <description>A plain-talk IT and cybersecurity guide for Monterey Bay hospitality — restaurants, hotels, inns, and wineries. PCI and POS security, guest Wi-Fi segmentation, booking and wine-club uptime, seasonal-staff identity, ransomware defense, and PG&amp;E continuity. From a DoD-cleared engineer.</description>
     </item>
   </channel>
 </rss>
