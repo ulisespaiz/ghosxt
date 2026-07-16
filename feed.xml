@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from a DoD-cleared engineer.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Wed, 15 Jul 2026 22:33:35 +0000</lastBuildDate>
-    <pubDate>Wed, 15 Jul 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Thu, 16 Jul 2026 11:05:49 +0000</lastBuildDate>
+    <pubDate>Thu, 16 Jul 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>Mobile Device Management (MDM) for Small Business: When You Actually Need It (2026)</title>
+      <link>https://ghosxt.com/blog/mobile-device-management-mdm-small-business-2026.html</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/mobile-device-management-mdm-small-business-2026.html</guid>
+      <pubDate>Thu, 16 Jul 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>BYOD policies cover personal phones, but company-owned devices, regulated data, and field teams often outgrow that. What MDM actually does, the signs you need more than conditional access, and how to roll it out without over-buying.</description>
+    </item>
     <item>
       <title>Passkeys for Small Business: Should You Ditch Passwords in 2026?</title>
       <link>https://ghosxt.com/blog/passkeys-passwordless-authentication-small-business-2026.html</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>Scammers can now clone your boss's voice from a few seconds of audio and call an employee to authorize an urgent wire transfer. Deepfake CEO fraud is one of the fastest-growing scams of 2026. How the voice-clone and video versions work, why caller ID and a confirmation email won't save you, and the simple verification rule that stops it. From a DoD-cleared engineer on the Central Coast.</description>
-    </item>
-    <item>
-      <title>Data-Theft Extortion: When Attackers Steal Your Cloud Data Instead of Encrypting It</title>
-      <link>https://ghosxt.com/blog/cloud-data-theft-extortion-small-business-2026.html</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/cloud-data-theft-extortion-small-business-2026.html</guid>
-      <pubDate>Sat, 20 Jun 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>The fastest-growing extortion in 2026 doesn't encrypt anything. Attackers log into your cloud apps, steal the data, and threaten to leak it, using phone calls that impersonate IT and abused app connections. How the no-ransomware breach works and how a small business stops it. From a DoD-cleared engineer on the Central Coast.</description>
     </item>
   </channel>
 </rss>
