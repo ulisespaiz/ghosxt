@@ -19,6 +19,13 @@ node_modules/
 README.md
 SETUP-CONTACT-FORM.md
 
+# Build/generator scripts — source, not part of the served site.
+# (Previously reachable at /scripts/*.py; excluding them closes that exposure.)
+scripts/
+
+# Internal site-audit harness — tooling + reports, never served to visitors.
+audit/
+
 # VCS
 .git/
 .gitignore

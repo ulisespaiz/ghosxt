@@ -426,3 +426,7 @@ FodyWeavers.xsd
 
 # Local-only OG-image build fonts (see scripts/generate-og-images.py)
 scripts/fonts/
+
+# Site-audit outputs — artifacts, screenshots, findings, generated reports.
+# These describe the live site's weaknesses and must never be committed or served.
+audit/reports/
