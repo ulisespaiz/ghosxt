@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from a DoD-cleared engineer.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Thu, 16 Jul 2026 11:05:49 +0000</lastBuildDate>
-    <pubDate>Thu, 16 Jul 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Fri, 17 Jul 2026 11:05:17 +0000</lastBuildDate>
+    <pubDate>Fri, 17 Jul 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>Credential Stuffing: How Reused Passwords Let Attackers Into Your Business Accounts (2026)</title>
+      <link>https://ghosxt.com/blog/credential-stuffing-small-business-2026.html</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/credential-stuffing-small-business-2026.html</guid>
+      <pubDate>Fri, 17 Jul 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>Credential stuffing doesn't hack your business — it logs in with a password your employee reused somewhere else. How the attack works, the warning signs, and the fixes that actually stop it in 2026.</description>
+    </item>
     <item>
       <title>Mobile Device Management (MDM) for Small Business: When You Actually Need It (2026)</title>
       <link>https://ghosxt.com/blog/mobile-device-management-mdm-small-business-2026.html</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>Browser extensions can read every page you visit, steal passwords, and exfiltrate data — and most employees install them freely. How malicious and over-permissioned extensions become a back door into your business, and the simple policy that shuts it down. From a DoD-cleared engineer on the Central Coast.</description>
-    </item>
-    <item>
-      <title>The Deepfake CEO Call: Why Voice Cloning Is the New Wire-Fraud Threat, and How to Stop It</title>
-      <link>https://ghosxt.com/blog/deepfake-ceo-voice-clone-wire-fraud-small-business-2026.html</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/deepfake-ceo-voice-clone-wire-fraud-small-business-2026.html</guid>
-      <pubDate>Sun, 21 Jun 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>Scammers can now clone your boss's voice from a few seconds of audio and call an employee to authorize an urgent wire transfer. Deepfake CEO fraud is one of the fastest-growing scams of 2026. How the voice-clone and video versions work, why caller ID and a confirmation email won't save you, and the simple verification rule that stops it. From a DoD-cleared engineer on the Central Coast.</description>
     </item>
   </channel>
 </rss>
