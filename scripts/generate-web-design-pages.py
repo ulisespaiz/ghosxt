@@ -35,6 +35,26 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # every city hub cross-links a complete local service trio.
 # ---------------------------------------------------------------------------
 
+# Per-city meta descriptions, hand-diversified for SEO and kept here so a
+# --force regeneration reproduces the unique descriptions instead of the
+# {name}-only boilerplate. Keep each <= ~155 chars. Cities not listed fall
+# back to the generic template below.
+WEB_DESIGN_META_DESC = {
+    "carmel": "Hand-coded, mobile-first web design for Carmel galleries, inns, and tasting rooms — presentation that matches the brand and ranks locally. From $1,800.",
+    "gilroy": "Web design for Gilroy retailers and B2B distributors — sites that convert Highway 101 traffic and win logistics and processing buyers. From $1,800.",
+    "hollister": "Mobile-first web design for Hollister businesses stuck with an outdated site, or none — get found before a competitor does. From $1,800.",
+    "king-city": "Web design for King City and South County businesses the big agencies skip — a real site, not just a Facebook page, from a local team. From $1,800.",
+    "marina": "First websites for Marina startups, ag-tech, and clinics near CSUMB and the Dunes — mobile-first sites built to grow with you. From $1,800.",
+    "monterey": "Web design for Monterey hospitality and visitor-facing businesses — menus, bookings, and galleries that win the trip-planning search. From $1,800.",
+    "pacific-grove": "Mobile-first websites for Pacific Grove inns, cafes, and retreats booked by visitors — clean, personal, and easy to find. From $1,800.",
+    "salinas": "Salinas web design from a local team — campaign, machine-shop, and nonprofit sites in our home-base portfolio, built to rank locally. From $1,800.",
+    "san-jose": "Web design and local SEO for San Jose small businesses fighting page-one competition — hand-coded, fast, mobile-first sites. From $1,800.",
+    "santa-cruz": "Web design for Santa Cruz independents — sites that carry a fiercely local, un-corporate brand and still rank and convert. From $1,800.",
+    "seaside": "No-flash, high-function web design for Seaside shops and services competing across the Peninsula — fast, findable, mobile-first. From $1,800.",
+    "soledad": "Web design for Soledad wineries, growers, and shops hard to find online — tasting-room and local sites built to be seen. From $1,800.",
+    "watsonville": "Web design for Watsonville ag, food-processing, and family businesses — bring an invisible economy online with a fast, mobile-first site. From $1,800.",
+}
+
 CITIES = {
     "salinas": {
         "name": "Salinas",
@@ -339,7 +359,7 @@ def build_page(chrome, slug, city):
 
     page_slug = f"web-design-{slug}"
     title = f"Web Design &amp; Development in {name}, CA | Ghosxt"
-    meta_desc = (
+    meta_desc = WEB_DESIGN_META_DESC.get(slug) or (
         f"Custom web design and development for {name}, California small business: "
         "hand-coded mobile-first websites, local SEO, e-commerce and booking systems, "
         "hosting and maintenance. Published pricing from $1,800. Free consultation."
