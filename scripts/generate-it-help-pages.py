@@ -44,6 +44,22 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 #   nearby : existing city pages to cross-link to (builds links into the hubs)
 # ---------------------------------------------------------------------------
 
+# Per-city meta descriptions, hand-diversified for SEO and kept here so a
+# --force regeneration reproduces the unique descriptions instead of the
+# {name}-only boilerplate. Cities not listed fall back to the template below.
+IT_HELP_META_DESC = {
+    'aptos': 'On-site IT support and US-based help desk for Aptos professional offices — real estate, law, and dental practices near Cabrillo. Free assessment.',
+    'capitola': 'IT support and help desk for Capitola Village shops, restaurants, and offices — fast local response, Microsoft 365, and security. Free assessment.',
+    'carmel-valley': 'On-site IT support for Carmel Valley tasting rooms, resorts, and professional offices — discreet, responsive help desk and security. Free assessment.',
+    'castroville': 'IT support and help desk for Castroville growers, coolers, and processors — reliable on-site help and security for a working economy. Free assessment.',
+    'gonzales': 'On-site IT support for Gonzales agriculture, food-processing, and distribution businesses — fast help desk, Microsoft 365, and security. Free assessment.',
+    'greenfield': 'IT support for Greenfield vineyards, growers, and processors most providers skip — genuine on-site help desk and security. Free assessment.',
+    'morgan-hill': "Responsive on-site IT support for Morgan Hill businesses the big Silicon Valley firms won't drive to — help desk, Microsoft 365, security. Free assessment.",
+    'prunedale': 'IT support and help desk for Prunedale trades, contractors, and growers along Highway 101 — fast on-site response and security. Free assessment.',
+    'san-juan-bautista': 'On-site IT support for San Juan Bautista restaurants, tasting rooms, and shops — dependable help desk and security for a tourism town. Free assessment.',
+    'scotts-valley': 'IT support and help desk for Scotts Valley tech firms, manufacturers, and offices — fast on-site response, Microsoft 365, and security. Free assessment.',
+}
+
 CITIES = {
     "morgan-hill": {
         "name": "Morgan Hill",
@@ -296,7 +312,7 @@ def build_page(chrome, slug, city):
     og_image = f"https://ghosxt.com/assets/img/og/{page_slug}.png"
 
     title = f"IT Support &amp; Help Desk in {name}, CA | Ghosxt"
-    meta_desc = (
+    meta_desc = IT_HELP_META_DESC.get(slug) or (
         f"Live US-based help desk and on-site IT support for {name}, California small "
         "businesses: fast response, Microsoft 365, monitoring, and security from a "
         "DoD-cleared engineer. Free assessment."

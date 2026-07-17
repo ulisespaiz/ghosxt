@@ -1,0 +1,17 @@
+{
+  "name": "ghosxt-site-audit",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Re-runnable, multi-agent audit harness for the deployed ghosxt.com. Kept OFF the served site via .assetsignore.",
+  "scripts": {
+    "crawl": "node crawl.mjs",
+    "render": "node render.mjs",
+    "synthesize": "node synthesize.mjs"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0",
+    "playwright-core": "^1.55.0",
+    "undici": "^6.21.1"
+  }
+}
