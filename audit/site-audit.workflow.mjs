@@ -49,8 +49,9 @@ function fileInstr(label) {
 
 function chunk(a, n) { const o = []; for (let i = 0; i < a.length; i += n) o.push(a.slice(i, i + n)); return o; }
 
-function shotList(batch) {
-  return batch.map((p) => `- ${p.url}\n    artifact: ${artifactPath(p.slug)}\n    mobile(390px): ${shot(p.slug, "mobile")}\n    desktop(1366px): ${shot(p.slug, "desktop")}`).join("\n");
+// Batches are lists of slugs; the agent reads each page's URL from its artifact.
+function shotList(slugs) {
+  return slugs.map((s) => `- artifact: ${artifactPath(s)}\n    mobile(390px): ${shot(s, "mobile")}\n    desktop(1366px): ${shot(s, "desktop")}`).join("\n");
 }
 
 // ---------- Phase 1: code dimensions (Sonnet) ----------
@@ -67,9 +68,11 @@ await parallel(code.map((c) => () =>
 // ---------- Phase 2: rendered dimensions (Sonnet) ----------
 phase("Rendered dimensions");
 // Curate a visual-review subset covering each template shape, split into 2 batches.
-const wantVisual = ["home", "contact", "pricing", "services", "salinas", "cybersecurity-monterey", "monterey-county", "about"];
-const visual = wantVisual.map((s) => renderedPages.find((p) => p.slug === s)).filter(Boolean);
-const vBatches = chunk(visual.length ? visual : renderedPages.slice(0, 8), 4);
+// Slugs are guaranteed rendered by render.mjs's selectRenderSet; deriving batches
+// from a fixed slug list (not the passed renderedPages) keeps this robust.
+const wantVisual = (renderedPages.length ? renderedPages.map((p) => p.slug) : [])
+  .filter((s) => ["home", "contact", "pricing", "services", "salinas", "cybersecurity-monterey", "monterey-county", "about"].includes(s));
+const vBatches = chunk(wantVisual.length ? wantVisual : ["home", "contact", "pricing", "services", "salinas", "cybersecurity-monterey", "monterey-county", "about"], 4);
 const metricsPath = `${reportsDir}/render-metrics.json`;
 
 const rendered = [];
