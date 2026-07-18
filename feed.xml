@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from a DoD-cleared engineer.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Fri, 17 Jul 2026 11:05:17 +0000</lastBuildDate>
-    <pubDate>Fri, 17 Jul 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Sat, 18 Jul 2026 11:05:53 +0000</lastBuildDate>
+    <pubDate>Sat, 18 Jul 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>SIM Swapping: How Attackers Hijack Your Phone Number to Get Into Business Accounts (2026)</title>
+      <link>https://ghosxt.com/blog/sim-swapping-phone-number-hijack-small-business-2026.html</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/sim-swapping-phone-number-hijack-small-business-2026.html</guid>
+      <pubDate>Sat, 18 Jul 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>SIM swapping hijacks your phone number to intercept SMS codes and reset passwords. How it works, the warning signs, and the fixes that stop it in 2026.</description>
+    </item>
     <item>
       <title>Credential Stuffing: How Reused Passwords Let Attackers Into Your Business Accounts (2026)</title>
       <link>https://ghosxt.com/blog/credential-stuffing-small-business-2026.html</link>
@@ -44,7 +53,7 @@
       <pubDate>Wed, 15 Jul 2026 00:00:00 +0000</pubDate>
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
-      <description>Nightmare-Eclipse's threatened July 14 sequel landed: LegacyHive, a Windows privilege-escalation zero-day in the User Profile Service and registry hive loading. No CVE yet, unpatched, and the public proof-of-concept is deliberately incomplete. What it does, how serious it really is, and what a small business should do this week, from a DoD-cleared engineer.</description>
+      <description>LegacyHive: Nightmare-Eclipse's new Windows privilege-escalation zero-day, unpatched with no CVE yet. What it does and what to do this week.</description>
     </item>
     <item>
       <title>Vishing: How Voice Phishing Calls Are Scamming Small Businesses in 2026</title>
@@ -62,7 +71,7 @@
       <pubDate>Tue, 14 Jul 2026 00:00:00 +0000</pubDate>
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
-      <description>Microsoft's July 2026 Patch Tuesday is the biggest in history: a record 570 vulnerabilities fixed and three zero-days, including actively exploited Active Directory Federation Services and SharePoint flaws and another BitLocker bypass. A plain-language breakdown of what's in it, why it's so large, and how a small business should protect itself this week, from a DoD-cleared engineer on the Central Coast.</description>
+      <description>July 2026 Patch Tuesday: a record 570 fixes and 3 zero-days, including AD FS and SharePoint flaws. What a small business should patch first.</description>
     </item>
     <item>
       <title>AI Agents at Work: The Non-Human Identity Risk Small Businesses Aren't Managing</title>
@@ -116,7 +125,7 @@
       <pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Web Development</category>
-      <description>A website that loads slowly, breaks on phones, or runs on abandoned software isn't just dated — it's actively sending customers to competitors. The 9 warning signs that mean it's time to fix or rebuild, which ones are urgent security problems, and when a refresh beats a full redesign.</description>
+      <description>A slow, broken, or outdated website sends customers to competitors. The 9 warning signs it's time to fix or rebuild, and which are security risks.</description>
     </item>
     <item>
       <title>OAuth App Phishing: How Attackers Get Into Microsoft 365 Without Stealing a Password (2026)</title>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>Stolen or reused passwords are behind the majority of small business breaches. A business password manager closes that gap for $3–7 per user per month. Here is what to use, what to avoid, and how to actually deploy it.</description>
-    </item>
-    <item>
-      <title>Browser Extensions: The Hidden Security Risk Your Small Business Is Probably Ignoring</title>
-      <link>https://ghosxt.com/blog/browser-extension-security-risks-small-business-2026.html</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/browser-extension-security-risks-small-business-2026.html</guid>
-      <pubDate>Tue, 23 Jun 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>Browser extensions can read every page you visit, steal passwords, and exfiltrate data — and most employees install them freely. How malicious and over-permissioned extensions become a back door into your business, and the simple policy that shuts it down. From a DoD-cleared engineer on the Central Coast.</description>
     </item>
   </channel>
 </rss>
