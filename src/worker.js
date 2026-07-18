@@ -212,7 +212,9 @@ async function handleContact(request, env) {
   return jsonResponse(200, { ok: true });
 }
 
-async function handleTrack(request) {
+const TRACK_MAX_BODY_BYTES = 4096;
+
+async function handleTrack(request, env) {
   // Lightweight conversion-event sink. Currently a no-op so that
   // navigator.sendBeacon calls from assets/js/main.js do not 404. Events also
   // surface in Cloudflare Web Analytics via the page beacon. Logged at
@@ -221,12 +223,19 @@ async function handleTrack(request) {
   if (request.method !== "POST") {
     return new Response(null, { status: 204 });
   }
-  try {
-    const text = await request.text();
-    if (text && text.length < 4096) {
-      console.log("track", text.slice(0, 500));
-    }
-  } catch {}
+  // Only log same-origin beacons within the size cap; skip reading the body
+  // for cross-origin or oversized POSTs. Always 204 — this is a fire-and-forget
+  // sendBeacon sink, so no caller inspects the status. isAllowedOrigin's
+  // fail-open-when-unset behavior is intentional and untouched here.
+  const contentLength = Number(request.headers.get("Content-Length") || 0);
+  if (isAllowedOrigin(request, env) && contentLength < TRACK_MAX_BODY_BYTES) {
+    try {
+      const text = await request.text();
+      if (text && text.length < TRACK_MAX_BODY_BYTES) {
+        console.log("track", text.slice(0, 500));
+      }
+    } catch {}
+  }
   return new Response(null, { status: 204, headers: { "Cache-Control": "no-store" } });
 }
 
@@ -237,7 +246,7 @@ export default {
       return handleContact(request, env);
     }
     if (url.pathname === "/api/track") {
-      return handleTrack(request);
+      return handleTrack(request, env);
     }
     return env.ASSETS.fetch(request);
   },

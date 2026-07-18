@@ -436,7 +436,7 @@ canvas {
   right: 0;
   background: var(--ghosxt-white);
   border-top: 1px solid var(--ghosxt-black);
-  z-index: 1000;
+  z-index: 1090;
   padding: 1.5rem 24px;
   transform: translateY(100%);
   transition: transform 0.4s ease;
@@ -1820,6 +1820,8 @@ footer.unlocked {
   display: flex;
   align-items: center;
   gap: 0.45rem;
+  min-height: 24px;
+  padding: 4px 0;
   transition: color 0.2s ease;
 }
 
@@ -2057,6 +2059,10 @@ a[target="_blank"]:not(.navbar-btn):not(.button-primary):not(.cta-primary-btn)::
 }
 
 .service-areas-footer a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  padding: 4px 0;
   color: rgba(255, 255, 255, 0.78);
   text-decoration: none;
   font-size: 0.875rem;
@@ -2235,7 +2241,10 @@ summary:focus-visible,
   }
   /* Avoid the bar covering the page footer / form action area */
   body {
-    padding-bottom: 64px;
+    padding-bottom: calc(88px + env(safe-area-inset-bottom));
+  }
+  html {
+    scroll-padding-bottom: 88px;
   }
   /* Keep the primary Call/Book CTAs above the cookie banner instead of
      letting it cover them. Height is measured in JS (assets/js/main.js)
