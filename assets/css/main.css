@@ -498,6 +498,8 @@ canvas {
   font-size: 0.875rem;
   color: var(--ghosxt-black);
   text-decoration: underline;
+  display: inline-block;
+  padding: 5px 0;
   transition: opacity 0.2s ease;
 }
 
@@ -1834,7 +1836,7 @@ footer.unlocked {
   font-size: 0.8rem;
   width: 1rem;
   text-align: center;
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.78);
   transition: color 0.2s ease;
 }
 
@@ -1868,6 +1870,8 @@ footer.unlocked {
   font-size: 0.78rem;
   color: rgba(255, 255, 255, 0.7);
   text-decoration: none;
+  display: inline-block;
+  padding: 6px 0;
   transition: color 0.2s ease;
   z-index: 100;
 }
@@ -1877,7 +1881,7 @@ footer.unlocked {
 }
 
 .footer-bottom-links span {
-  color: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.72);
 }
 
 .service-areas-footer {
@@ -2130,7 +2134,7 @@ summary:focus-visible,
   border-left: 3px solid var(--ghosxt-red-0, #b71c1c);
   border-radius: 4px;
   font-size: 0.9rem;
-  color: #2a2a2a;
+  color: #000;
   line-height: 1.4;
 }
 .form-response-promise i {

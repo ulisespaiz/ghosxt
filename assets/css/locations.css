@@ -21,6 +21,8 @@
 .location-breadcrumbs a {
   color: rgba(0, 0, 0, 0.6);
   text-decoration: none;
+  display: inline-block;
+  padding: 4px 0;
 }
 
 .location-breadcrumbs a:hover {
