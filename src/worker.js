@@ -102,7 +102,11 @@ async function handleContact(request, env) {
   if (request.method !== "POST") {
     return jsonResponse(405, { error: "Method Not Allowed", allow: "POST" });
   }
-  const missing = ["RESEND_API_KEY", "TURNSTILE_SECRET_KEY", "CONTACT_TO_EMAIL", "CONTACT_FROM_EMAIL"]
+  // ALLOWED_ORIGINS is included here (rather than left to isAllowedOrigin's
+  // shared default) so a missing/empty value fails closed for this route:
+  // isAllowedOrigin() fails open when unset, which is intentional for
+  // handleTrack but not safe for a form submission endpoint.
+  const missing = ["RESEND_API_KEY", "TURNSTILE_SECRET_KEY", "CONTACT_TO_EMAIL", "CONTACT_FROM_EMAIL", "ALLOWED_ORIGINS"]
     .filter((k) => !env[k]);
   if (missing.length > 0) {
     console.error("Missing required env vars", missing);
@@ -131,7 +135,8 @@ async function handleContact(request, env) {
   }
 
   if (data.website && String(data.website).trim() !== "") {
-    return jsonResponse(204, {});
+    // 204 No Content must not carry a body — jsonResponse always writes one.
+    return new Response(null, { status: 204, headers: { "Cache-Control": "no-store" } });
   }
 
   const fields = {
@@ -169,7 +174,9 @@ async function handleContact(request, env) {
   }
 
   const phoneDisplay = fields.phone || "(not provided)";
-  const subject = `New contact form submission — ${fields.company}`;
+  // Strip CR/LF from the subject to prevent header injection; the text/html
+  // body paths below are already escaped or plain-text-safe.
+  const subject = `New contact form submission — ${fields.company.replace(/[\r\n]+/g, " ")}`;
   const text = [
     `Name:    ${fields.name}`,
     `Company: ${fields.company}`,
