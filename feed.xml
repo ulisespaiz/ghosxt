@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from a DoD-cleared engineer.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Sat, 18 Jul 2026 11:05:53 +0000</lastBuildDate>
-    <pubDate>Sat, 18 Jul 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Sun, 19 Jul 2026 11:06:18 +0000</lastBuildDate>
+    <pubDate>Sun, 19 Jul 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>Typosquatting: How Lookalike Domains Impersonate Your Business (2026)</title>
+      <link>https://ghosxt.com/blog/typosquatting-lookalike-domains-small-business-2026.html</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/typosquatting-lookalike-domains-small-business-2026.html</guid>
+      <pubDate>Sun, 19 Jul 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>Typosquatting uses lookalike domains to impersonate your business or your vendors for phishing and invoice fraud. How it works and how to stop it in 2026.</description>
+    </item>
     <item>
       <title>SIM Swapping: How Attackers Hijack Your Phone Number to Get Into Business Accounts (2026)</title>
       <link>https://ghosxt.com/blog/sim-swapping-phone-number-hijack-small-business-2026.html</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>Most small businesses run a single Wi-Fi network for everything — staff computers, guest devices, cameras, and printers. That's a flat network, and one compromised device exposes all of it. Here's what proper segmentation looks like and why it matters.</description>
-    </item>
-    <item>
-      <title>Password Managers for Small Business: What to Use, What to Avoid, and How to Roll One Out in 2026</title>
-      <link>https://ghosxt.com/blog/password-manager-small-business-2026.html</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/password-manager-small-business-2026.html</guid>
-      <pubDate>Wed, 24 Jun 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>Stolen or reused passwords are behind the majority of small business breaches. A business password manager closes that gap for $3–7 per user per month. Here is what to use, what to avoid, and how to actually deploy it.</description>
     </item>
   </channel>
 </rss>
