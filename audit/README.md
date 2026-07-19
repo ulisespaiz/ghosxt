@@ -19,8 +19,9 @@ verification). The pipeline is four stages:
 |---|---|---|---|
 | 1. Crawl | `crawl.mjs` | Fetch the live sitemap's target URL set, extract a structured artifact per page, run every deterministic rule check. | no |
 | 2. Render | `render.mjs` | Drive headless Chromium over a representative subset at mobile+desktop: screenshots, Core Web Vitals, computed contrast, tap targets, landmarks, overflow. | no |
-| 3. Fleet | `site-audit.workflow.mjs` | The agent fleet (Workflow tool). Sonnet dimension workers judge the artifacts/screenshots; Opus agents do site-wide analysis + adversarial verification. | yes |
-| 4. Synthesize | `synthesize.mjs` | Merge deterministic + agent findings, apply verify verdicts, dedupe site-wide repeats, rank, emit the report. | no |
+| 3. Digest | `digest.mjs` | Fold all per-page artifacts into one compact `digest.json` for the code-dimension and site-wide agents (jsonLd types come from each entry's `.types` array — see the header comment). | no |
+| 4. Fleet | `site-audit.workflow.mjs` | The agent fleet (Workflow tool). Sonnet dimension workers judge the artifacts/screenshots; Opus agents do site-wide analysis + adversarial verification. | yes |
+| 5. Synthesize | `synthesize.mjs` | Merge deterministic + agent findings, apply verify verdicts, dedupe site-wide repeats, rank, emit the report. | no |
 
 The deterministic layer (stages 1–2) catches mechanical issues with zero LLM
 cost and zero hallucination. The agent layer (stage 3) adds judgment (visual UI
@@ -43,6 +44,7 @@ npm install                                   # playwright-core reuses /opt/pw-b
 
 node crawl.mjs                                 # → reports/artifacts/*.json, manifest.json, deterministic-findings.json
 node render.mjs                                # → reports/screenshots/*.png, render-metrics.json
+node digest.mjs                                # → reports/digest.json (compact all-pages digest for the fleet)
 # then, from Claude Code, run the fleet (Fable orchestrates Sonnet/Opus workers):
 #   Workflow({ scriptPath: 'audit/site-audit.workflow.mjs', args: {...} })
 node synthesize.mjs                            # → reports/audit-<date>.md and .html
