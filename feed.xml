@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from a DoD-cleared engineer.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Sun, 19 Jul 2026 11:06:18 +0000</lastBuildDate>
-    <pubDate>Sun, 19 Jul 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Mon, 20 Jul 2026 11:07:27 +0000</lastBuildDate>
+    <pubDate>Mon, 20 Jul 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>Session Hijacking: How Stolen Cookies Let Attackers Skip Past MFA (2026)</title>
+      <link>https://ghosxt.com/blog/session-hijacking-cookie-theft-small-business-2026.html</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/session-hijacking-cookie-theft-small-business-2026.html</guid>
+      <pubDate>Mon, 20 Jul 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>Session hijacking steals the cookie that proves you're already logged in, so attackers walk past MFA without a password or a code. How it works and how to stop it.</description>
+    </item>
     <item>
       <title>Typosquatting: How Lookalike Domains Impersonate Your Business (2026)</title>
       <link>https://ghosxt.com/blog/typosquatting-lookalike-domains-small-business-2026.html</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>Cyber insurance premiums have tripled since 2020 and insurers now require real security controls before they issue a policy. Here is what small business owners need to know before they shop.</description>
-    </item>
-    <item>
-      <title>Why Your Business Wi-Fi Is Probably One Device Away from a Breach</title>
-      <link>https://ghosxt.com/blog/business-wifi-network-segmentation-small-business-2026.html</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/business-wifi-network-segmentation-small-business-2026.html</guid>
-      <pubDate>Wed, 24 Jun 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>Most small businesses run a single Wi-Fi network for everything — staff computers, guest devices, cameras, and printers. That's a flat network, and one compromised device exposes all of it. Here's what proper segmentation looks like and why it matters.</description>
     </item>
   </channel>
 </rss>
