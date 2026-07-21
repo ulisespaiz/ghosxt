@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from a DoD-cleared engineer.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Mon, 20 Jul 2026 11:07:27 +0000</lastBuildDate>
-    <pubDate>Mon, 20 Jul 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Tue, 21 Jul 2026 11:06:55 +0000</lastBuildDate>
+    <pubDate>Tue, 21 Jul 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>Evil Twin Wi-Fi: How Fake Hotspots Steal Data From Remote Workers (2026)</title>
+      <link>https://ghosxt.com/blog/evil-twin-wifi-attacks-small-business-2026.html</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/evil-twin-wifi-attacks-small-business-2026.html</guid>
+      <pubDate>Tue, 21 Jul 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>Evil twin Wi-Fi hotspots copy a real network's name to intercept logins and files from remote and traveling employees. How the attack works and how to stop it.</description>
+    </item>
     <item>
       <title>Session Hijacking: How Stolen Cookies Let Attackers Skip Past MFA (2026)</title>
       <link>https://ghosxt.com/blog/session-hijacking-cookie-theft-small-business-2026.html</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>Most small businesses have no incident response plan — or one nobody can find during an actual incident. Here is what your plan must include, and the one-hour exercise that makes it real.</description>
-    </item>
-    <item>
-      <title>Cyber Insurance for Small Business in 2026: What It Covers, What It Won't, and How to Lower Your Premium</title>
-      <link>https://ghosxt.com/blog/cyber-insurance-small-business-2026.html</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/cyber-insurance-small-business-2026.html</guid>
-      <pubDate>Thu, 25 Jun 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>Cyber insurance premiums have tripled since 2020 and insurers now require real security controls before they issue a policy. Here is what small business owners need to know before they shop.</description>
     </item>
   </channel>
 </rss>
