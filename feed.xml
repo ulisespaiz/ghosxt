@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from a DoD-cleared engineer.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Tue, 21 Jul 2026 11:06:55 +0000</lastBuildDate>
-    <pubDate>Tue, 21 Jul 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Wed, 22 Jul 2026 11:06:23 +0000</lastBuildDate>
+    <pubDate>Wed, 22 Jul 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>ClickFix: The Fake CAPTCHA Attack Tricking Employees Into Infecting Their Own PC (2026)</title>
+      <link>https://ghosxt.com/blog/clickfix-fake-captcha-verification-attack-small-business-2026.html</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/clickfix-fake-captcha-verification-attack-small-business-2026.html</guid>
+      <pubDate>Wed, 22 Jul 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>ClickFix pages pose as a CAPTCHA or a Zoom error and talk employees into pasting a command into Windows Run. How the attack bypasses antivirus and how to stop it.</description>
+    </item>
     <item>
       <title>Evil Twin Wi-Fi: How Fake Hotspots Steal Data From Remote Workers (2026)</title>
       <link>https://ghosxt.com/blog/evil-twin-wifi-attacks-small-business-2026.html</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>One annual compliance video does not change how your team responds to a real phishing email. What phishing simulations do differently, what the data shows, and how to run a program as a small business.</description>
-    </item>
-    <item>
-      <title>IT Incident Response Plan for Small Business: What to Have Ready Before You Get Breached</title>
-      <link>https://ghosxt.com/blog/incident-response-plan-small-business-2026.html</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/incident-response-plan-small-business-2026.html</guid>
-      <pubDate>Fri, 26 Jun 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>Most small businesses have no incident response plan — or one nobody can find during an actual incident. Here is what your plan must include, and the one-hour exercise that makes it real.</description>
     </item>
   </channel>
 </rss>
