@@ -3,23 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>OAuth App Phishing: How Attackers Get Into Microsoft 365 Without Stealing a Password (2026) | Ghosxt</title>
-    <meta name="description" content="Attackers don't need your password or your MFA code anymore — they just need you to click 'Accept' on a fake app permission request. How OAuth consent phishing works, why it slips past MFA entirely, and the small-business controls that stop it." />
-    <link rel="canonical" href="https://ghosxt.com/blog/oauth-app-phishing-microsoft-365-small-business-2026.html" />
+    <title>ClickFix: The Fake CAPTCHA Attack Tricking Employees Into Infecting Their Own PC (2026) | Ghosxt</title>
+    <meta name="description" content="ClickFix pages pose as a CAPTCHA or a Zoom error and talk employees into pasting a command into Windows Run. How the attack bypasses antivirus and how to stop it." />
+    <link rel="canonical" href="https://ghosxt.com/blog/clickfix-fake-captcha-verification-attack-small-business-2026.html" />
     <link rel="alternate" type="application/rss+xml" title="Ghosxt Blog" href="https://ghosxt.com/feed.xml" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://ghosxt.com/blog/oauth-app-phishing-microsoft-365-small-business-2026.html" />
-    <meta property="og:title" content="OAuth App Phishing: How Attackers Get Into Microsoft 365 Without Stealing a Password" />
-    <meta property="og:description" content="Attackers don't need your password or your MFA code anymore — they just need you to click 'Accept' on a fake app permission request. How OAuth consent phishing works, and the small-business controls that stop it." />
-    <meta property="og:image" content="https://ghosxt.com/assets/img/og/blog-oauth-app-phishing-microsoft-365-small-business-2026.png" />
+    <meta property="og:url" content="https://ghosxt.com/blog/clickfix-fake-captcha-verification-attack-small-business-2026.html" />
+    <meta property="og:title" content="ClickFix: The Fake CAPTCHA Attack Tricking Employees Into Infecting Their Own PC" />
+    <meta property="og:description" content="ClickFix pages pose as a CAPTCHA or a Zoom error and talk employees into pasting a command into Windows Run. How the attack bypasses antivirus and how to stop it." />
+    <meta property="og:image" content="https://ghosxt.com/assets/img/og/blog-clickfix-fake-captcha-verification-attack-small-business-2026.png" />
     <meta property="og:site_name" content="Ghosxt" />
-    <meta property="article:published_time" content="2026-07-09" />
+    <meta property="article:published_time" content="2026-07-22" />
     <meta property="article:author" content="Ulises Paiz" />
     <meta name="robots" content="index, follow" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="OAuth App Phishing: How Attackers Get Into Microsoft 365 Without Stealing a Password" />
-    <meta name="twitter:description" content="No stolen password, no MFA code needed. How a fake 'app permission' request hands an attacker your mailbox, and the controls that stop it." />
-    <meta name="twitter:image" content="https://ghosxt.com/assets/img/og/blog-oauth-app-phishing-microsoft-365-small-business-2026.png" />
+    <meta name="twitter:title" content="ClickFix: The Fake CAPTCHA Attack Tricking Employees Into Infecting Their Own PC" />
+    <meta name="twitter:description" content="A fake 'verify you're human' page talks an employee through infecting their own computer, no attachment or exploit required. How ClickFix works and how to stop it." />
+    <meta name="twitter:image" content="https://ghosxt.com/assets/img/og/blog-clickfix-fake-captcha-verification-attack-small-business-2026.png" />
     <link rel="icon" href="../assets/img/favicon.ico" sizes="any" />
     <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png" />
@@ -40,23 +40,23 @@
         "@graph": [
           {
             "@type": "BlogPosting",
-            "mainEntityOfPage": { "@type": "WebPage", "@id": "https://ghosxt.com/blog/oauth-app-phishing-microsoft-365-small-business-2026.html" },
-            "headline": "OAuth App Phishing: How Attackers Get Into Microsoft 365 Without Stealing a Password",
-            "description": "Attackers don't need your password or your MFA code anymore — they just need you to click 'Accept' on a fake app permission request. How OAuth consent phishing works, why it slips past MFA entirely, and the small-business controls that stop it.",
-            "image": "https://ghosxt.com/assets/img/og/blog-oauth-app-phishing-microsoft-365-small-business-2026.png",
+            "mainEntityOfPage": { "@type": "WebPage", "@id": "https://ghosxt.com/blog/clickfix-fake-captcha-verification-attack-small-business-2026.html" },
+            "headline": "ClickFix: The Fake CAPTCHA Attack Tricking Employees Into Infecting Their Own PC",
+            "description": "ClickFix pages pose as a CAPTCHA or a Zoom error and talk employees into pasting a command into Windows Run. How the attack bypasses antivirus and how to stop it.",
+            "image": "https://ghosxt.com/assets/img/og/blog-clickfix-fake-captcha-verification-attack-small-business-2026.png",
             "author": { "@type": "Person", "name": "Ulises Paiz", "url": "https://ghosxt.com/about.html" },
             "publisher": { "@type": "Organization", "name": "Ghosxt", "logo": { "@type": "ImageObject", "url": "https://ghosxt.com/assets/img/ghosxt-logo-160.webp" } },
-            "datePublished": "2026-07-09",
-            "dateModified": "2026-07-09",
+            "datePublished": "2026-07-22",
+            "dateModified": "2026-07-22",
             "articleSection": "Cybersecurity",
-            "keywords": "OAuth consent phishing, illicit consent grant attack, malicious OAuth app Microsoft 365, app permissions security risk, third-party app access Google Workspace, small business cybersecurity, Salinas, Monterey, Central Coast"
+            "keywords": "ClickFix attack, fake captcha, fake verification, paste and run, PowerShell malware, Windows Run dialog, social engineering, small business, Salinas, Monterey, Central Coast"
           },
           {
             "@type": "BreadcrumbList",
             "itemListElement": [
               { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ghosxt.com/" },
               { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://ghosxt.com/blog/" },
-              { "@type": "ListItem", "position": 3, "name": "OAuth App Phishing", "item": "https://ghosxt.com/blog/oauth-app-phishing-microsoft-365-small-business-2026.html" }
+              { "@type": "ListItem", "position": 3, "name": "ClickFix for Small Business", "item": "https://ghosxt.com/blog/clickfix-fake-captcha-verification-attack-small-business-2026.html" }
             ]
           },
           {
@@ -64,26 +64,26 @@
             "mainEntity": [
               {
                 "@type": "Question",
-                "name": "If we already require MFA, are we protected from this?",
+                "name": "What is a ClickFix attack?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "No, and that's the point. OAuth consent phishing doesn't try to steal a password or a one-time code at all, so multi-factor authentication never gets a chance to trigger. The employee is genuinely logged in as themselves when they approve the request; they're just handing a token to an app they shouldn't trust. MFA remains essential for stopping password-based attacks, but it does nothing here."
+                  "text": "ClickFix is a social engineering technique where a fake webpage, often disguised as a CAPTCHA, a Cloudflare verification check, or a Zoom/Teams error message, instructs the visitor to open the Windows Run dialog, paste a block of text, and press Enter. The pasted text is actually a PowerShell or command-line instruction that downloads and runs malware. It works because the victim performs every step themselves, so there is no attachment, no exploit, and no macro for security software to flag."
                 }
               },
               {
                 "@type": "Question",
-                "name": "How do I know what apps already have access to our Microsoft 365 or Google Workspace?",
+                "name": "Can antivirus or EDR stop a ClickFix attack?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "In Microsoft 365, an admin can review every registered app and its granted permissions under Enterprise Applications in the Entra admin center. In Google Workspace, the equivalent list is under Security > API Controls > App Access Control. Most small businesses have never opened either screen, and it's common to find five or ten apps with access nobody remembers approving."
+                  "text": "Antivirus alone usually cannot, because nothing malicious touches the disk until after the victim pastes and runs the command themselves, and the initial payload is often a legitimate system tool like PowerShell or mshta.exe rather than a foreign executable. Modern EDR with behavioral detection has a much better shot, since it can flag unusual process chains such as a browser or explorer.exe spawning PowerShell with an encoded command. The most reliable stop is earlier in the chain: blocking the fake page itself and training employees never to paste anything into Run at a website's instruction."
                 }
               },
               {
                 "@type": "Question",
-                "name": "Is this different from the risk of a malicious browser extension?",
+                "name": "What should an employee do if a website asks them to open Run and paste a command?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Yes. A browser extension runs on one employee's device and reads what happens in that browser. An OAuth app grant lives at the cloud account level, follows the user to any device, and keeps working even after a password reset, until someone explicitly revokes it. It's a smaller attack surface to create but a harder one to notice and a harder one to fully shut off."
+                  "text": "Close the tab and don't paste anything. No legitimate CAPTCHA, software update, or video-call error ever requires opening the Windows Run dialog or a terminal and pasting text to 'verify' or 'fix' anything; that step exists in exactly zero real Microsoft, Google, Zoom, or Cloudflare workflows. If a laptop already had a command pasted and run, disconnect it from the network and report it immediately so IT can check for persistence, rather than assuming a restart cleared it out."
                 }
               }
             ]
@@ -149,16 +149,16 @@
       <header class="blog-post-header">
         <div class="container">
           <nav class="blog-post-breadcrumbs" aria-label="Breadcrumb">
-            <a href="../index.html">Home</a><span class="sep">&rsaquo;</span><a href="index.html">Blog</a><span class="sep">&rsaquo;</span><span aria-current="page">OAuth App Phishing</span>
+            <a href="../index.html">Home</a><span class="sep">&rsaquo;</span><a href="index.html">Blog</a><span class="sep">&rsaquo;</span><span aria-current="page">ClickFix for Small Business</span>
           </nav>
           <div class="blog-post-meta">
-            <time datetime="2026-07-09">July 9, 2026</time>
+            <time datetime="2026-07-22">July 22, 2026</time>
             <span>&middot;</span>
             <span>5 min read</span>
             <span>&middot;</span>
             <span class="blog-card-tag">Cybersecurity</span>
           </div>
-          <h1>OAuth App Phishing: How Attackers Get Into Microsoft 365 Without Stealing a Password</h1>
+          <h1>ClickFix: The Fake CAPTCHA Attack Tricking Employees Into Infecting Their Own PC</h1>
           <div class="blog-post-author">
             <strong>Ulises Paiz</strong>, Founder, Ghosxt
           </div>
@@ -172,72 +172,65 @@
       <div class="blog-post-body">
         <div class="container">
           <aside class="blog-post-quickfix" aria-label="Summary and what to do today">
-            <span class="quickfix-label">TL;DR &mdash; the phishing email isn't asking for your password anymore</span>
-            <h2>A newer phishing email doesn't ask an employee to type a password into a fake login page. It asks them to click "Accept" on what looks like a routine request from Microsoft, Adobe, or DocuSign to connect an app to their account. That one click hands the attacker a live access token to email, files, and contacts, and it works even if the account has strong MFA turned on, because no password or code is ever involved.</h2>
+            <span class="quickfix-label">TL;DR &mdash; the "verify you're human" step is the infection</span>
+            <h2>ClickFix is a fake CAPTCHA, browser error, or video-call popup that walks a visitor through opening the Windows Run dialog, pasting a short block of text, and pressing Enter. That text is a command that silently downloads and runs malware. Because the employee types nothing malicious and clicks no attachment, it slips past filters built to catch email attachments and macro-laced documents.</h2>
             <ul>
-              <li><strong>What it's called:</strong> OAuth consent phishing, or an illicit consent grant attack, and it's been a known Microsoft 365 and Google Workspace technique since 2017, resurfacing as older defenses lag behind AI-assisted phishing kits.</li>
-              <li><strong>Why MFA doesn't stop it:</strong> the employee is genuinely logged in as themselves. They're granting a permission, not exposing a credential.</li>
-              <li><strong>What the attacker gets:</strong> a token that keeps working after a password reset, until an admin finds it and revokes it directly.</li>
+              <li><strong>Why it works:</strong> the victim performs every step by hand, so there's no exploit, no malicious file download, and often no antivirus alert until well after the malware is already running.</li>
+              <li><strong>The tell:</strong> any prompt asking you to press Windows key + R, or open a terminal, and paste text to "verify," "fix an error," or "join a call" is not a real verification step.</li>
+              <li><strong>The fix:</strong> browser and DNS filtering to block the fake pages before they load, EDR that flags PowerShell spawned from a browser process, and a standing rule that no verification ever requires pasting a command.</li>
             </ul>
-            <p>Three things worth doing this week:</p>
-            <ol>
-              <li>Have an admin pull the list of third-party apps already connected to your Microsoft 365 or Google Workspace tenant and remove anything nobody recognizes.</li>
-              <li>Restrict who's allowed to consent to new app permissions, so it's not a standing "yes" for every employee by default.</li>
-              <li>Add "an app wants permission to your account" to whatever phishing awareness training you already run.</li>
-            </ol>
-            <p>This pairs with our <a href="identity-hardening-small-business-5-employees-microsoft-365.html">identity hardening post</a> and our <a href="mfa-fatigue-push-bombing-smb-2026.html">MFA fatigue post</a>, both about attackers routing around multi-factor authentication instead of through it. This one covers the newest route.</p>
+            <p>Read this with the <a href="edr-vs-antivirus-small-business-2026.html">EDR vs. antivirus post</a> (why signature-based tools miss an attack like this), the <a href="oauth-app-phishing-microsoft-365-small-business-2026.html">OAuth app phishing post</a> (another technique that skips malware files entirely), and the <a href="phishing-simulation-security-awareness-training-small-business-2026.html">phishing simulation post</a> (how to actually train a team to recognize this).</p>
           </aside>
 
-          <p>Every small business has spent the last few years training employees to spot the same thing: a fake login page asking for a username and password. That training is worth keeping, but it quietly created a blind spot. Attackers know phishing-resistant MFA and password managers have made credential theft harder, so a growing share of attacks now skip the password step entirely and go straight for something an employee will approve without a second thought: an app permission request.</p>
+          <p>Most employee security training still centers on one message: don't open suspicious attachments, don't click strange links. ClickFix doesn't send an attachment and doesn't need a click on a link to a malicious download. It sends someone to a webpage that looks like an everyday annoyance, a CAPTCHA, a "your browser needs an update" notice, a broken Zoom or Google Meet invite, and then talks them through infecting their own machine one copy-paste at a time. It's become one of the fastest-growing ways attackers get an initial foothold in 2026, precisely because it turns the employee into the one who runs the malware, not the attacker.</p>
 
-          <h2>How the attack actually works</h2>
+          <h2>How a ClickFix attack actually works</h2>
 
-          <p>The email looks routine. It might claim to be a shared-document notification, a new productivity add-in, or a security tool your IT provider is rolling out. Clicking through leads not to a fake login page, but to the real Microsoft or Google consent screen, because the app really is registered with Microsoft or Google, just by the attacker. The employee sees a legitimate-looking prompt asking to let the app read their email, access their files, or sign in as them, and clicks Accept the same way they'd accept a calendar invite. No password is typed. No MFA code is requested. The account was never technically "hacked."</p>
+          <p>The victim lands on a compromised or malicious page, often via a search result, a malicious ad, or a link in an email or text message. Instead of an obvious phishing form, the page shows something mundane: a CAPTCHA that "failed to load automatically," a Cloudflare-style human verification check, or a popup claiming a video call can't connect until an error is fixed. Each version ends the same way: instructions to press Windows key + R, paste a block of text already copied to the clipboard, and hit Enter. That text is a PowerShell or `mshta` command that reaches out to a remote server and pulls down the real payload, often an info-stealer, a remote access tool, or a loader for ransomware. Nothing about the process looks like a file download. The employee opened a built-in Windows tool and typed nothing themselves; they just followed instructions that felt like clearing a routine glitch.</p>
 
-          <h2>Why this slips past every control built for password theft</h2>
-
-          <p>Multi-factor authentication, conditional access policies, and password managers all defend the login step. OAuth consent phishing doesn't touch the login step. The employee authenticates as themselves, using their own credentials and their own MFA, and then separately grants a permission to an app. From the identity provider's point of view, nothing suspicious happened: a real user, on a real session, approved a real-looking request. The resulting access token can read mail, search files, or send email as that user, and it typically survives a forced password reset, since a reset changes the credential, not the grant. Someone has to go find the app registration and revoke it directly.</p>
-
-          <h2>Why small businesses are an easier target than they think</h2>
-
-          <p>Most small Microsoft 365 and Google Workspace tenants are configured with default settings that let any employee consent to any app requesting standard permissions, with no admin review required. Nobody set it up that way on purpose; it's simply what ships out of the box, and almost no small business has ever visited the screen that controls it. That means the only thing standing between a normal inbox and a compromised one is a single employee's judgment about whether an app permission prompt looks legitimate, on a busy day, in a design attackers have gotten very good at imitating.</p>
-
-          <h2>Closing the gap without a security team</h2>
+          <h2>Why this matters for a small business</h2>
 
           <ul>
-            <li><strong>Review what's already connected.</strong> In Microsoft 365, check Enterprise Applications in the Entra admin center; in Google Workspace, check Security &gt; API Controls &gt; App Access Control. Remove anything nobody remembers approving.</li>
-            <li><strong>Restrict user consent for new apps.</strong> Require admin approval for apps requesting anything beyond basic sign-in, instead of leaving it open to every employee by default.</li>
-            <li><strong>Set up periodic reviews, not a one-time cleanup.</strong> New apps get connected constantly as employees try new tools; a quarterly look at the list catches what slips through.</li>
-            <li><strong>Fold it into security awareness training.</strong> Employees who already know to distrust a fake login page usually haven't been shown what a malicious consent prompt looks like, because almost nobody has told them it exists.</li>
+            <li><strong>It bypasses the defenses built for attachments and links.</strong> Email filters, attachment scanning, and safe-link rewriting all target a different delivery method. ClickFix doesn't deliver a file until after the victim has already run the command themselves.</li>
+            <li><strong>It uses tools already on the machine.</strong> PowerShell and `mshta.exe` are legitimate Windows components IT relies on every day, which makes the first stage of the attack look like normal system activity to basic antivirus.</li>
+            <li><strong>It preys on a "fix the annoyance" instinct.</strong> A CAPTCHA that won't load or a call that won't connect is exactly the kind of low-stakes friction employees are used to clicking through without a second thought.</li>
+            <li><strong>The payload varies, and none of the options are good.</strong> Depending on the campaign, what lands is a password and session-token stealer, a remote access trojan, or a loader that hands off to ransomware operators, so the blast radius isn't limited to one type of damage.</li>
           </ul>
 
-          <p>None of this requires new software or a dedicated security hire. It requires someone spending twenty minutes in an admin console that most small businesses have never opened, and changing one default setting most small businesses never knew was on.</p>
+          <h2>What actually stops it</h2>
+
+          <ul>
+            <li><strong>DNS and web filtering</strong> that blocks known malicious and newly registered domains before the fake CAPTCHA page ever finishes loading, cutting the attack off before an employee sees the prompt.</li>
+            <li><strong>EDR with behavioral detection,</strong> not just signature-based antivirus, tuned to flag unusual process chains like a browser or Explorer window spawning PowerShell with an encoded, base64-style command.</li>
+            <li><strong>Restricting PowerShell execution policy</strong> and script execution for standard users where the business role allows it, so a pasted command has less room to run unimpeded.</li>
+            <li><strong>A specific, named training example,</strong> not just generic "don't click suspicious links" advice: no legitimate CAPTCHA, software update, or meeting fix ever asks a person to open Run and paste anything.</li>
+            <li><strong>A clear reporting path with no blame attached,</strong> so an employee who did paste and run a command tells IT immediately instead of quietly restarting the machine and hoping it goes away.</li>
+          </ul>
 
           <h2>Where this fits</h2>
 
           <ul>
-            <li>The <a href="identity-hardening-small-business-5-employees-microsoft-365.html">identity hardening post</a>, for the broader set of Microsoft 365 identity controls this one adds to.</li>
-            <li>The <a href="mfa-fatigue-push-bombing-smb-2026.html">MFA fatigue post</a>, for another way attackers route around multi-factor authentication instead of breaking it.</li>
-            <li>The <a href="business-email-compromise-bec-prevention-small-business-2026.html">business email compromise post</a>, for what an attacker typically does once they're sitting inside a compromised mailbox.</li>
-            <li>The <a href="browser-extension-security-risks-small-business-2026.html">browser extension security post</a>, for the closest cousin of this risk at the device level instead of the account level.</li>
-            <li>The <a href="clickfix-fake-captcha-verification-attack-small-business-2026.html">ClickFix post</a>, for another technique that skips malware files and gets an employee to do the work themselves.</li>
-            <li>The <a href="../cybersecurity.html">cybersecurity page</a>, for the underlying identity and email controls that reduce this exposure overall.</li>
+            <li>The <a href="edr-vs-antivirus-small-business-2026.html">EDR vs. antivirus post</a>, for why behavioral detection catches what signature scanning misses on an attack like this.</li>
+            <li>The <a href="oauth-app-phishing-microsoft-365-small-business-2026.html">OAuth app phishing post</a>, for another technique built to skip malware files and detection entirely.</li>
+            <li>The <a href="browser-extension-security-risks-small-business-2026.html">browser extension security post</a>, for the related risk of browser-based attacks that don't touch email at all.</li>
+            <li>The <a href="phishing-simulation-security-awareness-training-small-business-2026.html">phishing simulation post</a>, for how to build ClickFix-style scenarios into ongoing employee training instead of a once-a-year slideshow.</li>
+            <li>The <a href="../cybersecurity.html">cybersecurity page</a>, for where filtering, EDR, and training fit into a full security program.</li>
           </ul>
 
-          <h2>FAQs about OAuth app phishing</h2>
+          <h2>FAQs about ClickFix attacks</h2>
 
-          <h3>If we already require MFA, are we protected from this?</h3>
-          <p>No, and that's the point. OAuth consent phishing doesn't try to steal a password or a one-time code at all, so multi-factor authentication never gets a chance to trigger. The employee is genuinely logged in as themselves when they approve the request; they're just handing a token to an app they shouldn't trust. MFA remains essential for stopping password-based attacks, but it does nothing here.</p>
+          <h3>What is a ClickFix attack?</h3>
+          <p>ClickFix is a social engineering technique where a fake webpage, often disguised as a CAPTCHA, a Cloudflare verification check, or a Zoom/Teams error message, instructs the visitor to open the Windows Run dialog, paste a block of text, and press Enter. The pasted text is actually a PowerShell or command-line instruction that downloads and runs malware. It works because the victim performs every step themselves, so there is no attachment, no exploit, and no macro for security software to flag.</p>
 
-          <h3>How do I know what apps already have access to our Microsoft 365 or Google Workspace?</h3>
-          <p>In Microsoft 365, an admin can review every registered app and its granted permissions under Enterprise Applications in the Entra admin center. In Google Workspace, the equivalent list is under Security &gt; API Controls &gt; App Access Control. Most small businesses have never opened either screen, and it's common to find five or ten apps with access nobody remembers approving.</p>
+          <h3>Can antivirus or EDR stop a ClickFix attack?</h3>
+          <p>Antivirus alone usually cannot, because nothing malicious touches the disk until after the victim pastes and runs the command themselves, and the initial payload is often a legitimate system tool like PowerShell or mshta.exe rather than a foreign executable. Modern EDR with behavioral detection has a much better shot, since it can flag unusual process chains such as a browser or explorer.exe spawning PowerShell with an encoded command. The most reliable stop is earlier in the chain: blocking the fake page itself and training employees never to paste anything into Run at a website's instruction.</p>
 
-          <h3>Is this different from the risk of a malicious browser extension?</h3>
-          <p>Yes. A browser extension runs on one employee's device and reads what happens in that browser. An OAuth app grant lives at the cloud account level, follows the user to any device, and keeps working even after a password reset, until someone explicitly revokes it. It's a smaller attack surface to create but a harder one to notice and a harder one to fully shut off.</p>
+          <h3>What should an employee do if a website asks them to open Run and paste a command?</h3>
+          <p>Close the tab and don't paste anything. No legitimate CAPTCHA, software update, or video-call error ever requires opening the Windows Run dialog or a terminal and pasting text to "verify" or "fix" anything; that step exists in exactly zero real Microsoft, Google, Zoom, or Cloudflare workflows. If a laptop already had a command pasted and run, disconnect it from the network and report it immediately so IT can check for persistence, rather than assuming a restart cleared it out.</p>
 
           <div class="blog-post-cta">
-            <h3>Not sure what's already connected to your Microsoft 365 tenant?</h3>
-            <p>30 minutes with a DoD-cleared engineer. We'll pull your connected app list, flag anything that shouldn't have access, and lock down consent settings before it becomes an incident.</p>
+            <h3>Not sure your team would catch a ClickFix page?</h3>
+            <p>30 minutes with a DoD-cleared engineer. We'll check whether your DNS filtering blocks these pages before they load, confirm your EDR is tuned to catch PowerShell spawned from a browser, and run through what your team should do if someone already pasted a command.</p>
             <a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer">
               <i class="fi fi-rs-calendar-day" aria-hidden="true"></i>
               Book your free security assessment
@@ -417,7 +410,7 @@
         </div>
       </div>
     </footer>
-    <script src="../assets/js/main.js?v=2026-05-31b" defer></script>
+    <script src="../assets/js/main.js?v=2026-07-02a" defer></script>
     <!-- ghosxt:mobile-cta-bar -->
     <div class="mobile-cta-bar" aria-label="Quick contact">
       <a class="mcta-primary" href="tel:+18312040501">Call (831) 204-0501</a>
