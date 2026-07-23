@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from a DoD-cleared engineer.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Wed, 22 Jul 2026 11:06:23 +0000</lastBuildDate>
-    <pubDate>Wed, 22 Jul 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Thu, 23 Jul 2026 11:06:13 +0000</lastBuildDate>
+    <pubDate>Thu, 23 Jul 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>Malvertising: How Fake Software Ads Are Infecting Small Businesses (2026)</title>
+      <link>https://ghosxt.com/blog/malvertising-fake-software-ads-small-business-2026.html</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/malvertising-fake-software-ads-small-business-2026.html</guid>
+      <pubDate>Thu, 23 Jul 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>Malicious search ads impersonate PuTTY, Zoom, and other downloads, infecting employees before they reach the real site. How malvertising works and how to stop it.</description>
+    </item>
     <item>
       <title>ClickFix: The Fake CAPTCHA Attack Tricking Employees Into Infecting Their Own PC (2026)</title>
       <link>https://ghosxt.com/blog/clickfix-fake-captcha-verification-attack-small-business-2026.html</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>Business email compromise (BEC) costs small businesses more than ransomware. No malware, no alerts — just a convincing email that redirects a wire transfer. Here is how it works and how to stop it.</description>
-    </item>
-    <item>
-      <title>Phishing Simulations for Small Business: Why Annual Security Training Isn't Enough</title>
-      <link>https://ghosxt.com/blog/phishing-simulation-security-awareness-training-small-business-2026.html</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/phishing-simulation-security-awareness-training-small-business-2026.html</guid>
-      <pubDate>Sat, 27 Jun 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>One annual compliance video does not change how your team responds to a real phishing email. What phishing simulations do differently, what the data shows, and how to run a program as a small business.</description>
     </item>
   </channel>
 </rss>
