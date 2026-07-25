@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from a DoD-cleared engineer.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Fri, 24 Jul 2026 11:05:11 +0000</lastBuildDate>
-    <pubDate>Fri, 24 Jul 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Sat, 25 Jul 2026 11:05:40 +0000</lastBuildDate>
+    <pubDate>Sat, 25 Jul 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>VoIP Toll Fraud: How a Hacked Phone System Runs Up a Five-Figure Bill Overnight (2026)</title>
+      <link>https://ghosxt.com/blog/voip-toll-fraud-hacked-phone-system-small-business-2026.html</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/voip-toll-fraud-hacked-phone-system-small-business-2026.html</guid>
+      <pubDate>Sat, 25 Jul 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>A hacked business phone system can rack up thousands of dollars in international calls in a single weekend. How VoIP toll fraud works and how small businesses stop it.</description>
+    </item>
     <item>
       <title>USB Drop Attacks: How a "Lost" Flash Drive Becomes a Ransomware Foothold (2026)</title>
       <link>https://ghosxt.com/blog/usb-drop-attacks-small-business-2026.html</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>Dark web monitoring scans criminal marketplaces for your employees' stolen credentials. Here is what it actually catches, what it misses, and when it pays off for a small business.</description>
-    </item>
-    <item>
-      <title>Shadow IT: The Unauthorized Apps Creating Security Gaps in Your Small Business</title>
-      <link>https://ghosxt.com/blog/shadow-it-small-business-security-risks.html</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/shadow-it-small-business-security-risks.html</guid>
-      <pubDate>Mon, 29 Jun 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>What shadow IT actually is, why AI tools and SaaS apps make it worse in 2026, and the three-step process for bringing unauthorized software under control before it becomes a breach entry point.</description>
     </item>
   </channel>
 </rss>
