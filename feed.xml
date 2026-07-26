@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from a DoD-cleared engineer.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Sat, 25 Jul 2026 11:05:40 +0000</lastBuildDate>
-    <pubDate>Sat, 25 Jul 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Sun, 26 Jul 2026 11:05:33 +0000</lastBuildDate>
+    <pubDate>Sun, 26 Jul 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>Fileless Malware: The Attack That Leaves Nothing for Antivirus to Find (2026)</title>
+      <link>https://ghosxt.com/blog/fileless-malware-living-off-the-land-small-business-2026.html</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/fileless-malware-living-off-the-land-small-business-2026.html</guid>
+      <pubDate>Sun, 26 Jul 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>Fileless malware and living-off-the-land attacks run entirely in memory using tools already on your PC, so traditional antivirus never sees a file to scan. How it works and what actually stops it.</description>
+    </item>
     <item>
       <title>VoIP Toll Fraud: How a Hacked Phone System Runs Up a Five-Figure Bill Overnight (2026)</title>
       <link>https://ghosxt.com/blog/voip-toll-fraud-hacked-phone-system-small-business-2026.html</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>Former employees keep access to email, cloud files, and business apps far longer than owners realize. The same-day IT offboarding checklist that closes the gap: accounts, devices, shared logins, and forwarding rules.</description>
-    </item>
-    <item>
-      <title>Dark Web Monitoring for Small Business: What It Finds, What It Misses, and Whether It's Worth It in 2026</title>
-      <link>https://ghosxt.com/blog/dark-web-monitoring-small-business-2026.html</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/dark-web-monitoring-small-business-2026.html</guid>
-      <pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>Dark web monitoring scans criminal marketplaces for your employees' stolen credentials. Here is what it actually catches, what it misses, and when it pays off for a small business.</description>
     </item>
   </channel>
 </rss>
