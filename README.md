@@ -126,3 +126,20 @@ It is served at `https://ghosxt.com/llms.txt`. Update it whenever a service,
 city, or important page is added, removed, or renamed, and keep the phone,
 email, and pricing lines in sync with the rest of the site. It is not an
 indexable HTML page, so it is intentionally absent from `sitemap.xml`.
+
+## Asset minification
+
+`assets/css/*.css` and `assets/js/*.js` are the editable source of truth; the
+site serves minified `*.min.css` / `*.min.js` copies (~28% smaller uncompressed,
+on top of Cloudflare's brotli). **Regenerate them whenever you edit any CSS or
+JS, before deploying** — otherwise the deployed minified copy is stale:
+
+```bash
+pip install rcssmin rjsmin   # one-time
+python3 scripts/minify.py    # rebuild every assets/**/*.min.{css,js}
+```
+
+`python3 scripts/minify.py --refs` also rewrites the `<link>`/`<script>` tags in
+`*.html` + `blog/*.html` to point at the `.min` copies (already applied), and
+`--check` reports what `--refs` would change without writing. The safe
+whitespace/comment-only minifiers (rcssmin/rjsmin) apply no risky JS transforms.
