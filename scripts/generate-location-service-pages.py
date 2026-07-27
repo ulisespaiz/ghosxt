@@ -37,6 +37,44 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # the generated pages are local, not boilerplate.
 # ---------------------------------------------------------------------------
 
+# Per-city meta descriptions, hand-diversified for SEO and kept here so a
+# --force regeneration reproduces the trimmed per-city copy instead of the
+# generic {name}-only template below. Keep each <= ~155 chars.
+CYBER_META_DESC = {
+    'carmel': 'Cybersecurity for Carmel-by-the-Sea galleries, inns &amp; shops: EDR, wire-fraud defense, PCI, 24/7 monitoring. Discrete, local. Free assessment.',
+    'gilroy': 'Cybersecurity for Gilroy warehouses, 3PLs, food processors &amp; retailers: EDR, MFA, ransomware protection, 24/7 monitoring. Free assessment.',
+    'hollister': 'Cybersecurity for Hollister machine shops, vineyards &amp; family businesses in San Benito County: EDR, MFA, 24/7 monitoring. Free assessment.',
+    'king-city': 'Cybersecurity for King City &amp; South Monterey County: EDR, MFA, OT segmentation &amp; immutable backup vs harvest-window ransomware. DoD-cleared engineer.',
+    'marina': "Cybersecurity for Marina's fast-growing businesses: EDR, phishing-resistant MFA, identity hardening, immutable backup, 24/7 monitoring. Free assessment.",
+    'monterey': 'Cybersecurity for Monterey businesses: EDR, MFA, immutable backup, 24/7 monitoring. For hospitality, defense contractors &amp; healthcare. Free assessment.',
+    'pacific-grove': 'Government-grade cybersecurity for Pacific Grove small business: EDR, MFA, identity hardening, immutable backup, 24/7 monitoring. Free assessment.',
+    'salinas': 'Cybersecurity for Salinas businesses: EDR, MFA, immutable backup, 24/7 monitoring. Built for agriculture, food processing &amp; logistics. Free assessment.',
+    'san-jose': 'Cybersecurity for San Jose businesses: EDR, MFA, immutable backup, 24/7 monitoring. Silicon Valley security without the pricing. Free assessment.',
+    'santa-cruz': 'Cybersecurity for Santa Cruz businesses: EDR, MFA, immutable backup, 24/7 monitoring. Built for tech startups, tourism &amp; healthcare. Free assessment.',
+    'seaside': 'Government-grade cybersecurity for Seaside small business: EDR, MFA, identity hardening, immutable backup, 24/7 monitoring. Free assessment.',
+    'soledad': 'Cybersecurity for Soledad wineries, vineyards &amp; produce: EDR, MFA, cold-chain OT segmentation, winery POS protection, 24/7 monitoring. Free assessment.',
+    'watsonville': 'Cybersecurity for Watsonville businesses: EDR, MFA, immutable backup, 24/7 monitoring. For berry farms, food processing &amp; cold storage. Free assessment.',
+}
+
+# Per-city meta descriptions, hand-diversified for SEO and kept here so a
+# --force regeneration reproduces the trimmed per-city copy instead of the
+# generic {name}-only template below. Keep each <= ~155 chars.
+CLOUD_META_DESC = {
+    'carmel': 'Microsoft 365 &amp; cloud for Carmel-by-the-Sea galleries, inns &amp; realty offices: hardened tenant, no-downtime migrations, SharePoint, Teams. Free assessment.',
+    'gilroy': 'Microsoft 365 &amp; cloud for Gilroy distribution, logistics &amp; food processing: hardened tenant, no-downtime migrations, SharePoint, Teams. Free assessment.',
+    'hollister': 'Microsoft 365 &amp; cloud for Hollister machine shops, vineyards &amp; family ops: tenant hardening, migrations off aging servers, SharePoint. Free assessment.',
+    'king-city': 'Microsoft 365 &amp; cloud for King City: off the aging server onto a hardened tenant — email, files &amp; field access from the cooler &amp; ranch office. DoD-cleared.',
+    'marina': "Microsoft 365 &amp; cloud for Marina's growing businesses: scalable, hardened M365 setup, no-downtime migrations, SharePoint, Teams, Azure. Free assessment.",
+    'monterey': 'Microsoft 365 &amp; cloud for Monterey: hardened setup, no-downtime migrations, SharePoint, Teams, Azure &amp; GCC High for defense contractors. Free assessment.',
+    'pacific-grove': 'Microsoft 365 &amp; cloud for Pacific Grove: M365 setup &amp; hardening, no-downtime migrations, SharePoint, Teams, Azure. DoD-cleared engineer. Free assessment.',
+    'salinas': 'Microsoft 365 &amp; cloud for Salinas: M365 setup &amp; hardening, no-downtime migrations, SharePoint, Teams, Azure. DoD-cleared engineer. Free assessment.',
+    'san-jose': 'Microsoft 365 &amp; cloud for San Jose: hardened setup, no-downtime migrations, SharePoint, Teams. Silicon Valley standards without the price. Free assessment.',
+    'santa-cruz': 'Microsoft 365 &amp; cloud for Santa Cruz: hardened setup, no-downtime migrations, SharePoint, Teams. For tech, hybrid teams &amp; healthcare. Free assessment.',
+    'seaside': 'Microsoft 365 &amp; cloud for Seaside: M365 setup &amp; hardening, no-downtime migrations, SharePoint, Teams, Azure. DoD-cleared engineer. Free assessment.',
+    'soledad': 'Microsoft 365 &amp; cloud for Soledad wineries, vineyards &amp; produce: harvest-timed migrations, SharePoint &amp; Teams. DoD-cleared in Salinas. Free assessment.',
+    'watsonville': 'Microsoft 365 &amp; cloud for Watsonville: hardened setup, no-downtime migrations, SharePoint, Teams. For ag, food processing &amp; cold storage. Free assessment.',
+}
+
 CITIES = {
     "carmel": {
         "name": "Carmel",
@@ -369,7 +407,7 @@ def build_page(chrome, service, slug, city):
     if service == "cybersecurity":
         page_slug = f"cybersecurity-{slug}"
         title = f"Cybersecurity Services in {name}, CA | Ghosxt"
-        meta_desc = (
+        meta_desc = CYBER_META_DESC.get(slug) or (
             f"Government-grade cybersecurity for {name}, California small business: "
             "endpoint detection and response, phishing-resistant MFA, identity hardening, "
             "immutable backup, and 24/7 monitoring from a DoD-cleared engineer. Free assessment."
@@ -485,7 +523,7 @@ def build_page(chrome, service, slug, city):
     else:  # cloud-services
         page_slug = f"cloud-services-{slug}"
         title = f"Cloud &amp; Microsoft 365 Services in {name}, CA | Ghosxt"
-        meta_desc = (
+        meta_desc = CLOUD_META_DESC.get(slug) or (
             f"Cloud and Microsoft 365 services for {name}, California businesses: M365 setup and "
             "hardening, no-downtime email and file migrations, SharePoint and Teams, and Azure. "
             "DoD-cleared engineer. Free assessment."

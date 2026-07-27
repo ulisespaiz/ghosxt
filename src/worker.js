@@ -49,7 +49,10 @@ function isAllowedOrigin(request, env) {
     .split(",")
     .map((s) => s.trim())
     .filter(Boolean);
-  if (allowed.length === 0) return true;
+  if (allowed.length === 0) {
+    console.warn("ALLOWED_ORIGINS is unset \u2014 origin check disabled (fail-open); set it in production");
+    return true;
+  }
   const origin = request.headers.get("Origin");
   if (origin && allowed.includes(origin)) return true;
   const referer = request.headers.get("Referer");
