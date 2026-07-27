@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from a DoD-cleared engineer.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Sun, 26 Jul 2026 11:05:33 +0000</lastBuildDate>
-    <pubDate>Sun, 26 Jul 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Mon, 27 Jul 2026 11:05:53 +0000</lastBuildDate>
+    <pubDate>Mon, 27 Jul 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>IoT Device Security for Small Business: The Hidden Attack Surface (2026)</title>
+      <link>https://ghosxt.com/blog/iot-device-security-small-business-2026.html</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/iot-device-security-small-business-2026.html</guid>
+      <pubDate>Mon, 27 Jul 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>Smart cameras, thermostats, and printers on your business network often run default passwords and years-old firmware. How IoT devices become an entry point and how to lock them down.</description>
+    </item>
     <item>
       <title>Fileless Malware: The Attack That Leaves Nothing for Antivirus to Find (2026)</title>
       <link>https://ghosxt.com/blog/fileless-malware-living-off-the-land-small-business-2026.html</link>
@@ -17,7 +26,7 @@
       <pubDate>Sun, 26 Jul 2026 00:00:00 +0000</pubDate>
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
-      <description>Fileless malware and living-off-the-land attacks run entirely in memory using tools already on your PC, so traditional antivirus never sees a file to scan. How it works and what actually stops it.</description>
+      <description>Fileless malware and living-off-the-land attacks run entirely in memory using tools already on your PC, so antivirus never sees a file to scan.</description>
     </item>
     <item>
       <title>VoIP Toll Fraud: How a Hacked Phone System Runs Up a Five-Figure Bill Overnight (2026)</title>
@@ -26,7 +35,7 @@
       <pubDate>Sat, 25 Jul 2026 00:00:00 +0000</pubDate>
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
-      <description>A hacked business phone system can rack up thousands of dollars in international calls in a single weekend. How VoIP toll fraud works and how small businesses stop it.</description>
+      <description>A hacked business phone system can rack up thousands in international calls in a single weekend. How VoIP toll fraud works and how to stop it.</description>
     </item>
     <item>
       <title>USB Drop Attacks: How a "Lost" Flash Drive Becomes a Ransomware Foothold (2026)</title>
@@ -35,7 +44,7 @@
       <pubDate>Fri, 24 Jul 2026 00:00:00 +0000</pubDate>
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
-      <description>A USB drive left in a parking lot or mailed to your office can hand an attacker a foothold before anyone clicks a link. How USB drop attacks work and how to stop them.</description>
+      <description>A USB drive left in a parking lot can hand an attacker a foothold before anyone clicks a link. How USB drop attacks work and how to stop them.</description>
     </item>
     <item>
       <title>Malvertising: How Fake Software Ads Are Infecting Small Businesses (2026)</title>
@@ -44,7 +53,7 @@
       <pubDate>Thu, 23 Jul 2026 00:00:00 +0000</pubDate>
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
-      <description>Malicious search ads impersonate PuTTY, Zoom, and other downloads, infecting employees before they reach the real site. How malvertising works and how to stop it.</description>
+      <description>Malicious search ads impersonate PuTTY, Zoom, and other downloads, infecting employees before the real site loads. How malvertising works.</description>
     </item>
     <item>
       <title>ClickFix: The Fake CAPTCHA Attack Tricking Employees Into Infecting Their Own PC (2026)</title>
@@ -53,7 +62,7 @@
       <pubDate>Wed, 22 Jul 2026 00:00:00 +0000</pubDate>
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
-      <description>ClickFix pages pose as a CAPTCHA or a Zoom error and talk employees into pasting a command into Windows Run. How the attack bypasses antivirus and how to stop it.</description>
+      <description>ClickFix pages pose as a CAPTCHA or Zoom error, tricking employees into pasting a command into Windows Run. How it bypasses antivirus.</description>
     </item>
     <item>
       <title>Evil Twin Wi-Fi: How Fake Hotspots Steal Data From Remote Workers (2026)</title>
@@ -71,7 +80,7 @@
       <pubDate>Mon, 20 Jul 2026 00:00:00 +0000</pubDate>
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
-      <description>Session hijacking steals the cookie that proves you're already logged in, so attackers walk past MFA without a password or a code. How it works and how to stop it.</description>
+      <description>Session hijacking steals the cookie that proves you're logged in, letting attackers skip MFA without a password. How it works and how to stop it.</description>
     </item>
     <item>
       <title>Typosquatting: How Lookalike Domains Impersonate Your Business (2026)</title>
@@ -98,7 +107,7 @@
       <pubDate>Fri, 17 Jul 2026 00:00:00 +0000</pubDate>
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
-      <description>Credential stuffing doesn't hack your business — it logs in with a password your employee reused somewhere else. How the attack works, the warning signs, and the fixes that actually stop it in 2026.</description>
+      <description>Credential stuffing doesn't hack your business — it logs in with a password your employee reused elsewhere. How the attack works, and how to stop it.</description>
     </item>
     <item>
       <title>Mobile Device Management (MDM) for Small Business: When You Actually Need It (2026)</title>
@@ -107,7 +116,7 @@
       <pubDate>Thu, 16 Jul 2026 00:00:00 +0000</pubDate>
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
-      <description>BYOD policies cover personal phones, but company-owned devices, regulated data, and field teams often outgrow that. What MDM actually does, the signs you need more than conditional access, and how to roll it out without over-buying.</description>
+      <description>BYOD policies cover personal phones, but company-owned devices and field teams often outgrow that. What MDM does, and how to roll it out.</description>
     </item>
     <item>
       <title>Passkeys for Small Business: Should You Ditch Passwords in 2026?</title>
@@ -116,7 +125,7 @@
       <pubDate>Wed, 15 Jul 2026 00:00:00 +0000</pubDate>
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
-      <description>Passkeys now work across Microsoft 365, Google Workspace, and most banking apps, and they can't be phished. What a passkey actually is, where it beats passwords and MFA, and a realistic rollout plan for a small business.</description>
+      <description>Passkeys now work across Microsoft 365, Google Workspace, and banking apps, and can't be phished. What they are and a realistic rollout plan.</description>
     </item>
     <item>
       <title>LegacyHive: Nightmare-Eclipse's New Windows Zero-Day, Explained</title>
@@ -134,7 +143,7 @@
       <pubDate>Tue, 14 Jul 2026 00:00:00 +0000</pubDate>
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
-      <description>A phone call claiming to be your bank, the IRS, or your own IT department is one of the oldest scams in the book, and it still works. How vishing calls are targeting small businesses in 2026, why caller ID can't be trusted, and the verification habits that stop it.</description>
+      <description>A phone call claiming to be your bank, the IRS, or your IT department is one of the oldest scams, and it still works. Why caller ID can't be trusted.</description>
     </item>
     <item>
       <title>July 2026 Patch Tuesday: A Record 570 Fixes, 3 Zero-Days, and What an SMB Should Patch First</title>
@@ -152,7 +161,7 @@
       <pubDate>Mon, 13 Jul 2026 00:00:00 +0000</pubDate>
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
-      <description>AI agents can now send email, book meetings, and update your CRM on their own, using real credentials plugged into your systems. Why these non-human identities are a growing small-business risk, and the checklist that governs them.</description>
+      <description>AI agents can send email, book meetings, and update your CRM using real credentials. Why non-human identities are a growing small-business risk.</description>
     </item>
     <item>
       <title>Zero Trust Security for Small Business: What It Actually Means in 2026</title>
@@ -161,7 +170,7 @@
       <pubDate>Sun, 12 Jul 2026 00:00:00 +0000</pubDate>
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
-      <description>Zero Trust gets thrown around as a marketing buzzword, but the actual model is simple: never trust, always verify. What it really means for a 10-person business, what it costs, and where to start.</description>
+      <description>Zero Trust gets called a buzzword, but the model is simple: never trust, always verify. What it means for a 10-person business, and where to start.</description>
     </item>
     <item>
       <title>ADA Website Accessibility for Small Business: What California Law Requires (2026)</title>
@@ -170,7 +179,7 @@
       <pubDate>Sat, 11 Jul 2026 00:00:00 +0000</pubDate>
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Web Development</category>
-      <description>Website accessibility demand letters are hitting small businesses across California, and the Unruh Act makes it more expensive here than almost anywhere else. What ADA and WCAG 2.1 AA actually require, why size doesn't exempt you, and the fixes that close most of the risk.</description>
+      <description>Accessibility demand letters are hitting California businesses, and the Unruh Act raises the stakes. What ADA and WCAG 2.1 AA require.</description>
     </item>
     <item>
       <title>Smishing: How Text Message Phishing Is Hitting Small Businesses in 2026</title>
@@ -179,7 +188,7 @@
       <pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
-      <description>Fake delivery texts, fake toll bills, fake payroll alerts — smishing (SMS phishing) skips your spam filter and lands directly on employee phones. How it works, why it's outrunning email phishing, and the small-business controls that stop it.</description>
+      <description>Fake delivery texts, toll bills, and payroll alerts: smishing skips your spam filter and lands on employee phones. How it works and how to stop it.</description>
     </item>
     <item>
       <title>How Much Does a Small Business Website Cost in 2026? Real Numbers</title>
@@ -188,7 +197,7 @@
       <pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Web Development</category>
-      <description>Real 2026 website pricing for small businesses: what a professional 5-page site, a full business site, and an e-commerce build actually cost, what drives the price up, why the $500 site and the $15,000 site are both usually the wrong buy, and what ongoing maintenance should run.</description>
+      <description>Real 2026 website pricing for small businesses: what a 5-page site, a full site, and e-commerce cost, and why $500 or $15,000 sites are usually wrong.</description>
     </item>
     <item>
       <title>9 Signs Your Small Business Website Is Costing You Customers (2026)</title>
@@ -206,7 +215,7 @@
       <pubDate>Thu, 09 Jul 2026 00:00:00 +0000</pubDate>
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
-      <description>Attackers don't need your password or your MFA code anymore — they just need you to click 'Accept' on a fake app permission request. How OAuth consent phishing works, why it slips past MFA entirely, and the small-business controls that stop it.</description>
+      <description>Attackers don't need your password or MFA code, just a click on 'Accept' for a fake app. How OAuth consent phishing bypasses MFA, and how to stop it.</description>
     </item>
     <item>
       <title>California Data Breach Notification Law: What Small Businesses Must Do After a Breach (2026)</title>
@@ -215,7 +224,7 @@
       <pubDate>Wed, 08 Jul 2026 00:00:00 +0000</pubDate>
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
-      <description>California's data breach notification law applies to your business no matter how small it is. What actually counts as a reportable breach, what a compliant notice must say, and why the real financial risk is a CPRA lawsuit, not a fine.</description>
+      <description>California's breach notification law applies no matter how small your business is. What counts as a reportable breach, and the real CPRA lawsuit risk.</description>
     </item>
     <item>
       <title>BYOD for Small Business: Securing Personal Phones and Laptops Without Locking Down Everyone's Devices (2026)</title>
@@ -224,7 +233,7 @@
       <pubDate>Tue, 07 Jul 2026 00:00:00 +0000</pubDate>
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
-      <description>Your team is already checking company email on personal phones, whether or not you have a policy for it. What a BYOD policy actually needs to cover, and how to secure personal devices without an enterprise MDM budget.</description>
+      <description>Your team is already checking company email on personal phones, policy or not. What a BYOD policy needs to cover, and how to secure devices.</description>
     </item>
     <item>
       <title>The Seasonal Worker IT Checklist: Onboarding and Offboarding Summer Staff Without Leaving Accounts Open</title>
@@ -233,7 +242,7 @@
       <pubDate>Mon, 06 Jul 2026 00:00:00 +0000</pubDate>
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
-      <description>Harvest crews, tasting-room staff, and summer hospitality hires all need system access, and few businesses ever turn it back off. A simple onboarding and offboarding checklist for seasonal workers on the Central Coast, from a DoD-cleared engineer.</description>
+      <description>Harvest crews and summer hires need system access, and few businesses ever turn it back off. Onboarding and offboarding checklist for seasonal staff.</description>
     </item>
     <item>
       <title>Vendor &amp;amp; Third-Party Risk: What Happens When a Vendor You Trust Gets Breached (2026)</title>
@@ -242,7 +251,7 @@
       <pubDate>Sun, 05 Jul 2026 00:00:00 +0000</pubDate>
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
-      <description>A breach at your payroll processor, CRM, or help desk vendor can expose your data even if your own network is never touched. How vendor risk actually works, and the checklist that manages it without a compliance team.</description>
+      <description>A breach at your payroll processor, CRM, or vendor can expose your data without touching your network. How vendor risk works and how to manage it.</description>
     </item>
     <item>
       <title>Domain Name Security: How Small Businesses Lose Their Website and Email Without Getting Hacked (2026)</title>
@@ -251,7 +260,7 @@
       <pubDate>Sat, 04 Jul 2026 00:00:00 +0000</pubDate>
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
-      <description>An expired renewal, a stolen registrar login, or one unauthorized DNS change can take down your website and email overnight, with no malware involved. How small businesses lose their domain, and the checklist that locks it down in 2026.</description>
+      <description>An expired renewal, a stolen registrar login, or one bad DNS change can take down your website and email overnight. How to lock down your domain.</description>
     </item>
     <item>
       <title>Summer Travel &amp;amp; Remote Work Security: Protecting Company Data When Your Team Isn't in the Office (2026)</title>
@@ -260,7 +269,7 @@
       <pubDate>Fri, 03 Jul 2026 00:00:00 +0000</pubDate>
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
-      <description>Employees working from airports, hotels, and vacation rentals this summer expand your attack surface past the office network you control. The public Wi-Fi, lost-device, and travel-phishing risks that actually cause breaches, and the small business checklist that closes them.</description>
+      <description>Working from airports, hotels, and vacation rentals expands your attack surface: Wi-Fi and travel-phishing risks, and the checklist that closes them.</description>
     </item>
     <item>
       <title>EDR vs. Antivirus: Why Small Businesses Need More Than a Signature Scanner in 2026</title>
@@ -269,16 +278,7 @@
       <pubDate>Thu, 02 Jul 2026 00:00:00 +0000</pubDate>
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
-      <description>Traditional antivirus catches malware it already recognizes. It misses fileless attacks and the human-operated ransomware crews actually hitting small businesses in 2026. What EDR adds, what it costs, and the 10-minute check to see what you already have.</description>
-    </item>
-    <item>
-      <title>Employee Offboarding IT Checklist: Closing the Security Gaps When Someone Leaves</title>
-      <link>https://ghosxt.com/blog/employee-offboarding-it-security-checklist-small-business.html</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/employee-offboarding-it-security-checklist-small-business.html</guid>
-      <pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>Former employees keep access to email, cloud files, and business apps far longer than owners realize. The same-day IT offboarding checklist that closes the gap: accounts, devices, shared logins, and forwarding rules.</description>
+      <description>Traditional antivirus catches malware it recognizes but misses fileless attacks and the human-operated ransomware crews hitting small businesses.</description>
     </item>
   </channel>
 </rss>
