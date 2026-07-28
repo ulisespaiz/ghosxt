@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from a DoD-cleared engineer.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Mon, 27 Jul 2026 11:05:53 +0000</lastBuildDate>
-    <pubDate>Mon, 27 Jul 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Tue, 28 Jul 2026 11:06:21 +0000</lastBuildDate>
+    <pubDate>Tue, 28 Jul 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>Social Media Account Takeover: How Hackers Hijack Your Business Facebook or Instagram Page (2026)</title>
+      <link>https://ghosxt.com/blog/social-media-account-takeover-small-business-2026.html</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/social-media-account-takeover-small-business-2026.html</guid>
+      <pubDate>Tue, 28 Jul 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>A hacked Facebook or Instagram business page gets used to scam your customers, drain your ad budget, or held for ransom. How the takeover happens and how small businesses get pages back and lock them down.</description>
+    </item>
     <item>
       <title>IoT Device Security for Small Business: The Hidden Attack Surface (2026)</title>
       <link>https://ghosxt.com/blog/iot-device-security-small-business-2026.html</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>Working from airports, hotels, and vacation rentals expands your attack surface: Wi-Fi and travel-phishing risks, and the checklist that closes them.</description>
-    </item>
-    <item>
-      <title>EDR vs. Antivirus: Why Small Businesses Need More Than a Signature Scanner in 2026</title>
-      <link>https://ghosxt.com/blog/edr-vs-antivirus-small-business-2026.html</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/edr-vs-antivirus-small-business-2026.html</guid>
-      <pubDate>Thu, 02 Jul 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>Traditional antivirus catches malware it recognizes but misses fileless attacks and the human-operated ransomware crews hitting small businesses.</description>
     </item>
   </channel>
 </rss>
