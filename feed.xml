@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from a DoD-cleared engineer.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Tue, 28 Jul 2026 11:06:21 +0000</lastBuildDate>
-    <pubDate>Tue, 28 Jul 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Wed, 29 Jul 2026 11:05:09 +0000</lastBuildDate>
+    <pubDate>Wed, 29 Jul 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>Ransomware Negotiation: Should Your Small Business Ever Pay? (2026)</title>
+      <link>https://ghosxt.com/blog/ransomware-negotiation-should-you-pay-small-business-2026.html</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/ransomware-negotiation-should-you-pay-small-business-2026.html</guid>
+      <pubDate>Wed, 29 Jul 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>What actually happens during a ransomware negotiation, why paying doesn't guarantee your data back, and the questions a small business should answer before wiring a cent.</description>
+    </item>
     <item>
       <title>Social Media Account Takeover: How Hackers Hijack Your Business Facebook or Instagram Page (2026)</title>
       <link>https://ghosxt.com/blog/social-media-account-takeover-small-business-2026.html</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>An expired renewal, a stolen registrar login, or one bad DNS change can take down your website and email overnight. How to lock down your domain.</description>
-    </item>
-    <item>
-      <title>Summer Travel &amp;amp; Remote Work Security: Protecting Company Data When Your Team Isn't in the Office (2026)</title>
-      <link>https://ghosxt.com/blog/remote-work-security-business-travel-small-business-2026.html</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/remote-work-security-business-travel-small-business-2026.html</guid>
-      <pubDate>Fri, 03 Jul 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>Working from airports, hotels, and vacation rentals expands your attack surface: Wi-Fi and travel-phishing risks, and the checklist that closes them.</description>
     </item>
   </channel>
 </rss>
