@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from a DoD-cleared engineer.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Wed, 29 Jul 2026 11:05:09 +0000</lastBuildDate>
-    <pubDate>Wed, 29 Jul 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Thu, 30 Jul 2026 11:05:34 +0000</lastBuildDate>
+    <pubDate>Thu, 30 Jul 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>Insider Threats: The Cybersecurity Risk Already Inside Your Business (2026)</title>
+      <link>https://ghosxt.com/blog/insider-threat-small-business-2026.html</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/insider-threat-small-business-2026.html</guid>
+      <pubDate>Thu, 30 Jul 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>Most small business security spending targets outside attackers, but a careless click, a disgruntled ex-employee, or a departing hire's laptop can do just as much damage. How insider threats actually happen and what stops them.</description>
+    </item>
     <item>
       <title>Ransomware Negotiation: Should Your Small Business Ever Pay? (2026)</title>
       <link>https://ghosxt.com/blog/ransomware-negotiation-should-you-pay-small-business-2026.html</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>A breach at your payroll processor, CRM, or vendor can expose your data without touching your network. How vendor risk works and how to manage it.</description>
-    </item>
-    <item>
-      <title>Domain Name Security: How Small Businesses Lose Their Website and Email Without Getting Hacked (2026)</title>
-      <link>https://ghosxt.com/blog/domain-name-security-small-business-2026.html</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/domain-name-security-small-business-2026.html</guid>
-      <pubDate>Sat, 04 Jul 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>An expired renewal, a stolen registrar login, or one bad DNS change can take down your website and email overnight. How to lock down your domain.</description>
     </item>
   </channel>
 </rss>
