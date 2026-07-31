@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from a DoD-cleared engineer.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Thu, 30 Jul 2026 11:05:34 +0000</lastBuildDate>
-    <pubDate>Thu, 30 Jul 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Fri, 31 Jul 2026 11:04:49 +0000</lastBuildDate>
+    <pubDate>Fri, 31 Jul 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>Password Spray Attacks: How One Slow-Motion Guess Slips Past Lockout Policies (2026)</title>
+      <link>https://ghosxt.com/blog/password-spray-attacks-small-business-2026.html</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/password-spray-attacks-small-business-2026.html</guid>
+      <pubDate>Fri, 31 Jul 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>Password spraying tries one common password against hundreds of accounts instead of hammering one account with thousands of guesses, so it never trips a lockout policy. How the attack works and what actually stops it.</description>
+    </item>
     <item>
       <title>Insider Threats: The Cybersecurity Risk Already Inside Your Business (2026)</title>
       <link>https://ghosxt.com/blog/insider-threat-small-business-2026.html</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>Harvest crews and summer hires need system access, and few businesses ever turn it back off. Onboarding and offboarding checklist for seasonal staff.</description>
-    </item>
-    <item>
-      <title>Vendor &amp;amp; Third-Party Risk: What Happens When a Vendor You Trust Gets Breached (2026)</title>
-      <link>https://ghosxt.com/blog/vendor-third-party-risk-management-small-business-2026.html</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/vendor-third-party-risk-management-small-business-2026.html</guid>
-      <pubDate>Sun, 05 Jul 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>A breach at your payroll processor, CRM, or vendor can expose your data without touching your network. How vendor risk works and how to manage it.</description>
     </item>
   </channel>
 </rss>
