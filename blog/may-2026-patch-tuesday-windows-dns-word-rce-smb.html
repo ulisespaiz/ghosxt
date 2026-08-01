@@ -188,12 +188,12 @@
       <div class="blog-post-body">
         <div class="container">
           <aside class="blog-post-quickfix" aria-label="Summary and priorities for this week">
-            <span class="quickfix-label">TL;DR &mdash; The two CVEs to patch first</span>
+            <span class="quickfix-label">TL;DR: The two CVEs to patch first</span>
             <h2>120 fixes, 17 critical, no zero-days. Two of them deserve your full attention this week.</h2>
             <ul>
-              <li><strong>CVE-2026-40361</strong> &mdash; Microsoft Word use-after-free, CVSS 8.4. Critical RCE. Fires through the Outlook Preview Pane, so the user does not have to open the attachment. Anyone with a mailbox is exposed.</li>
-              <li><strong>CVE-2026-41096</strong> &mdash; Windows DNS Client heap-based buffer overflow. Critical RCE. <em>Unauthenticated</em> attacker can take over a target by responding to a DNS query. Every Windows machine resolves DNS.</li>
-              <li><strong>CVE-2026-35421</strong> &mdash; Windows GDI heap overflow, CVSS 7.8. Critical RCE in the graphics subsystem. Sits behind every Office, PDF reader, and browser document preview.</li>
+              <li><strong>CVE-2026-40361</strong>: Microsoft Word use-after-free, CVSS 8.4. Critical RCE. Fires through the Outlook Preview Pane, so the user does not have to open the attachment. Anyone with a mailbox is exposed.</li>
+              <li><strong>CVE-2026-41096</strong>: Windows DNS Client heap-based buffer overflow. Critical RCE. <em>Unauthenticated</em> attacker can take over a target by responding to a DNS query. Every Windows machine resolves DNS.</li>
+              <li><strong>CVE-2026-35421</strong>: Windows GDI heap overflow, CVSS 7.8. Critical RCE in the graphics subsystem. Sits behind every Office, PDF reader, and browser document preview.</li>
               <li><strong>Zero-days this month: zero.</strong> First clean-deck Patch Tuesday in a while. The patches still get reverse-engineered; the window between patch release and proof-of-concept is short.</li>
             </ul>
             <p>What to do this week:</p>
@@ -223,7 +223,7 @@
 
           <h2>The CVEs that actually matter for a small business</h2>
 
-          <h3>CVE-2026-40361 &mdash; Microsoft Word use-after-free RCE (CVSS 8.4)</h3>
+          <h3>CVE-2026-40361: Microsoft Word use-after-free RCE (CVSS 8.4)</h3>
 
           <p>A critical use-after-free vulnerability in Microsoft Word that an attacker can exploit to run code on the user's machine, in the context of that user. CVSS 8.4 puts it solidly in the Critical bucket. The piece that should focus an owner's attention is that this bug is reachable through the <strong>Outlook Preview Pane</strong>. The user does not have to double-click the attachment; they only have to receive an email where Outlook auto-previews the document.</p>
 
@@ -236,7 +236,7 @@
             <li>Anyone on the Monthly Enterprise Channel or Semi-Annual Channel is not stuck waiting for a delayed rollout. SMBs on Business Premium are usually on Current Channel, which gets the fix first; verify it.</li>
           </ul>
 
-          <h3>CVE-2026-41096 &mdash; Windows DNS Client heap-based buffer overflow</h3>
+          <h3>CVE-2026-41096: Windows DNS Client heap-based buffer overflow</h3>
 
           <p>A heap-based buffer overflow in the Windows DNS Client that allows an <strong>unauthenticated</strong> attacker to take over a target system by sending a malicious DNS response. The piece that makes this dangerous is "unauthenticated": the attacker does not need a foothold, a phishing click, or any prior access. They need to be in a position to answer a DNS query.</p>
 
@@ -244,7 +244,7 @@
 
           <p>This is the kind of CVE that does not show up in "I clicked a bad link" headlines but does show up in <a href="/blog/ransomware-2026-how-it-gets-in">post-incident reviews of how the attackers actually got in</a>. Patch the Windows cumulative update, and on managed fleets, force DNS through a known resolver (your domain controller, Cloudflare 1.1.1.1, Quad9, or a managed DNS filtering product) instead of whatever DHCP hands out.</p>
 
-          <h3>CVE-2026-35421 &mdash; Windows GDI heap overflow (CVSS 7.8)</h3>
+          <h3>CVE-2026-35421: Windows GDI heap overflow (CVSS 7.8)</h3>
 
           <p>The Windows Graphics Device Interface is the rendering pipeline that sits behind almost every document, image, and font that displays on a Windows screen. A heap overflow here is reachable from a long list of common file types (images, fonts, embedded objects in Office, PDFs that render through GDI). Less immediately scary than the Word and DNS bugs, but the breadth of the surface (every browser, every Office app, every image viewer) makes it worth not skipping.</p>
 
@@ -252,7 +252,7 @@
 
           <h2>MDASH: the new defender in the loop</h2>
 
-          <p>The other story this month is who found the bugs. Microsoft introduced <strong>MDASH</strong> &mdash; a multi-model agentic scanning harness that orchestrates more than 100 specialized AI agents across an ensemble of frontier and distilled models to discover, debate, and prove exploitable bugs end-to-end. Microsoft credited MDASH with 16 of this month's Patch Tuesday CVEs.</p>
+          <p>The other story this month is who found the bugs. Microsoft introduced <strong>MDASH</strong>, a multi-model agentic scanning harness that orchestrates more than 100 specialized AI agents across an ensemble of frontier and distilled models to discover, debate, and prove exploitable bugs end-to-end. Microsoft credited MDASH with 16 of this month's Patch Tuesday CVEs.</p>
 
           <p>The shorthand: <strong>MDASH is Microsoft's version of Anthropic's Claude Mythos.</strong> Mythos showed up in the <a href="/blog/claude-mythos-firefox-271-vulnerabilities-patch-cadence-smb">Firefox audit</a> last month and surfaced 271 sec-rated bugs in a single run. MDASH is the same idea applied to Microsoft's own codebase by Microsoft's own team. The implication is the same as it was for Mozilla: vendors are now hooked up to AI scanners that find more bugs per release than human reviewers do, and the public Patch Tuesday volume is going to climb on average for the foreseeable future.</p>
 

@@ -188,13 +188,13 @@
       <div class="blog-post-body">
         <div class="container">
           <aside class="blog-post-quickfix" aria-label="Summary and what to do today">
-            <span class="quickfix-label">TL;DR &mdash; The attacker timeline has compressed by three orders of magnitude in three years</span>
+            <span class="quickfix-label">TL;DR: The attacker timeline has compressed by three orders of magnitude in three years</span>
             <h2>If your IT plan still assumes someone will read an alert and react in the morning, it is the wrong plan for 2026.</h2>
             <ul>
               <li><strong>Three years ago,</strong> the median time between initial access and the next-stage attacker getting their hands on it was about <strong>eight hours</strong>.</li>
               <li><strong>Today,</strong> per recent incident-response data shared by Palo Alto Networks and corroborated by other major IR firms, that handoff averages <strong>22 seconds</strong>.</li>
               <li>The compression is driven by <strong>AI-assisted attacker tooling</strong> that automatically qualifies a stolen credential, packages the access, and posts it for sale or detonates it.</li>
-              <li><strong>Human-paced IT cannot react on that timeline.</strong> The control that moves the needle is automated detection plus a 24/7 response team &mdash; what the industry calls Managed Detection and Response (MDR).</li>
+              <li><strong>Human-paced IT cannot react on that timeline.</strong> The control that moves the needle is automated detection plus a 24/7 response team: what the industry calls Managed Detection and Response (MDR).</li>
             </ul>
             <p>What to do this quarter (in order):</p>
             <ol>
@@ -215,7 +215,7 @@
 
           <ol>
             <li>An initial access broker (IAB) lands access. That access is usually a valid credential to a Microsoft 365 tenant, a VPN, or a remote-access tool, captured by infostealer malware or phishing.</li>
-            <li>A second actor &mdash; a ransomware affiliate, a business-email-compromise crew, or a data-exfiltration group &mdash; takes possession of that access and starts using it.</li>
+            <li>A second actor (a ransomware affiliate, a business-email-compromise crew, or a data-exfiltration group) takes possession of that access and starts using it.</li>
           </ol>
 
           <p>In 2023, that handoff took most of a business day. There was a marketplace, a listing, a negotiation, and a sale. Defenders had hours to notice the original credential theft and act.</p>
@@ -238,7 +238,7 @@
 
           <p>The brokers do not pre-filter for company size. They harvest credentials at scale and qualify everything that lands. A small business's Microsoft 365 tenant is a fine target: easy to map, often missing Conditional Access, often shares an admin account with a vendor, and frequently has a backup story that is more vulnerable than its production. The 22-second handoff applies whether the captured credential belongs to a 30,000-employee bank or a 30-employee dental group.</p>
 
-          <p>What differs is the response side. The bank has a 24/7 security operations center watching its tenant. The dental group has an MSP that checks email in the morning. The attacker doesn't care which one they hit; the math just works out better against the smaller one. Most of the small-business compromises I have walked into over the past 18 months had detection signal somewhere in the environment &mdash; an Entra ID risky sign-in, a Defender alert, an unusual OAuth grant &mdash; that nobody read until the ransomware note showed up.</p>
+          <p>What differs is the response side. The bank has a 24/7 security operations center watching its tenant. The dental group has an MSP that checks email in the morning. The attacker doesn't care which one they hit; the math just works out better against the smaller one. Most of the small-business compromises I have walked into over the past 18 months had detection signal somewhere in the environment (an Entra ID risky sign-in, a Defender alert, an unusual OAuth grant) that nobody read until the ransomware note showed up.</p>
 
           <h2>What the realistic 2026 minimum looks like</h2>
 

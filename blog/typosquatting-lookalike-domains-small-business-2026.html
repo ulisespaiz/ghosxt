@@ -67,7 +67,7 @@
                 "name": "What's the difference between typosquatting and phishing?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Typosquatting is the infrastructure; phishing is often what it's used for. Typosquatting is registering a domain that looks almost identical to a real one &mdash; yours or a vendor's &mdash; by swapping a letter, adding a hyphen, or using a different ending. That lookalike domain then gets used to send phishing emails, host a fake login page, or receive replies to a spoofed invoice, all of which look more convincing because the domain passes a quick visual check. Not every typosquatted domain is used for phishing right away; some sit unused for months, or get used to intercept typos from people mistyping a real address."
+                  "text": "Typosquatting is the infrastructure; phishing is often what it's used for. Typosquatting is registering a domain that looks almost identical to a real one (yours or a vendor's) by swapping a letter, adding a hyphen, or using a different ending. That lookalike domain then gets used to send phishing emails, host a fake login page, or receive replies to a spoofed invoice, all of which look more convincing because the domain passes a quick visual check. Not every typosquatted domain is used for phishing right away; some sit unused for months, or get used to intercept typos from people mistyping a real address."
                 }
               },
               {
@@ -75,7 +75,7 @@
                 "name": "Do I need to register every possible misspelling of my domain?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "No, and trying to is a losing game &mdash; there are thousands of character-swap and TLD combinations for any domain name. It's worth registering the handful of common typos and the most obvious alternate endings (.net, .co, .biz) if they're cheap and available, but the higher-leverage move is DMARC enforcement, so attackers can't send email that appears to come from your real domain even if they own a similar-looking one, plus watching for new lookalike registrations so you catch the ones that matter."
+                  "text": "No, and trying to is a losing game: there are thousands of character-swap and TLD combinations for any domain name. It's worth registering the handful of common typos and the most obvious alternate endings (.net, .co, .biz) if they're cheap and available, but the higher-leverage move is DMARC enforcement, so attackers can't send email that appears to come from your real domain even if they own a similar-looking one, plus watching for new lookalike registrations so you catch the ones that matter."
                 }
               },
               {
@@ -172,8 +172,8 @@
       <div class="blog-post-body">
         <div class="container">
           <aside class="blog-post-quickfix" aria-label="Summary and what to do today">
-            <span class="quickfix-label">TL;DR &mdash; the domain doesn't have to be exactly right to fool someone</span>
-            <h2>Typosquatting is registering a domain that looks almost identical to a real one &mdash; yours or a vendor's &mdash; by swapping a letter, adding a hyphen, or changing the ending. Attackers use it to send convincing phishing email, host fake login pages, or redirect a reply to a spoofed invoice. A one-letter difference is nearly invisible on a phone screen, which is exactly the point.</h2>
+            <span class="quickfix-label">TL;DR: the domain doesn't have to be exactly right to fool someone</span>
+            <h2>Typosquatting is registering a domain that looks almost identical to a real one (yours or a vendor's) by swapping a letter, adding a hyphen, or changing the ending. Attackers use it to send convincing phishing email, host fake login pages, or redirect a reply to a spoofed invoice. A one-letter difference is nearly invisible on a phone screen, which is exactly the point.</h2>
             <ul>
               <li><strong>Why it works:</strong> most people scan an email address rather than read every character, and a domain one letter off passes that scan.</li>
               <li><strong>The tell:</strong> a vendor or customer flags an email "from you" that you never sent, or a reply-to address looks almost, but not quite, right.</li>
@@ -182,11 +182,11 @@
             <p>Read this with the <a href="/blog/business-email-compromise-bec-prevention-small-business-2026">business email compromise post</a> (where lookalike domains often get used), the <a href="/blog/email-authentication-spf-dkim-dmarc-small-business-2026">SPF/DKIM/DMARC post</a> (the fix that stops spoofing of your real domain), and the <a href="/blog/domain-name-security-small-business-2026">domain security post</a> (protecting the domain you actually own).</p>
           </aside>
 
-          <p>Most phishing training tells employees to check the sender's domain before trusting an email. Typosquatting is built to beat that exact habit. Instead of spoofing your domain outright, an attacker registers one that's close enough to pass a quick glance &mdash; <code>ghosxt-support.com</code> instead of <code>ghosxt.com</code>, a swapped letter, or a different ending entirely &mdash; and uses it to send invoices, password-reset lures, or urgent requests that look like they came from inside your business or from a vendor you already trust.</p>
+          <p>Most phishing training tells employees to check the sender's domain before trusting an email. Typosquatting is built to beat that exact habit. Instead of spoofing your domain outright, an attacker registers one that's close enough to pass a quick glance (<code>ghosxt-support.com</code> instead of <code>ghosxt.com</code>, a swapped letter, or a different ending entirely) and uses it to send invoices, password-reset lures, or urgent requests that look like they came from inside your business or from a vendor you already trust.</p>
 
           <h2>How a lookalike domain gets built and used</h2>
 
-          <p>Registering the domain itself takes minutes and costs less than dinner. The common patterns are character swaps (rn for m, 0 for o), an inserted hyphen, a doubled letter, or a different top-level ending (.net, .co, .biz instead of .com). Some attacks go further with homograph tricks, using look-alike characters from other alphabets that render almost identically in a browser address bar. Once the domain exists, it gets paired with a matching email setup and, often, a cloned copy of a real login page or invoice template &mdash; enough polish that the domain is the only thing actually wrong.</p>
+          <p>Registering the domain itself takes minutes and costs less than dinner. The common patterns are character swaps (rn for m, 0 for o), an inserted hyphen, a doubled letter, or a different top-level ending (.net, .co, .biz instead of .com). Some attacks go further with homograph tricks, using look-alike characters from other alphabets that render almost identically in a browser address bar. Once the domain exists, it gets paired with a matching email setup and, often, a cloned copy of a real login page or invoice template: enough polish that the domain is the only thing actually wrong.</p>
 
           <h2>Why this is a real risk for a small business</h2>
 
@@ -202,9 +202,9 @@
           <h2>What actually stops it</h2>
 
           <ul>
-            <li><strong>DMARC set to enforce, not just monitor,</strong> so mail claiming to be from your real domain fails without a valid SPF/DKIM alignment &mdash; this doesn't stop a lookalike domain from existing, but it does stop attackers from spoofing your exact domain in the first place.</li>
+            <li><strong>DMARC set to enforce, not just monitor,</strong> so mail claiming to be from your real domain fails without a valid SPF/DKIM alignment. This doesn't stop a lookalike domain from existing, but it does stop attackers from spoofing your exact domain in the first place.</li>
             <li><strong>A handful of defensive registrations</strong> covering the most obvious typos and alternate endings of your own domain, rather than trying to own every possible variation.</li>
-            <li><strong>A callback verification policy</strong> for any change to payment details or banking information, using a phone number you already have on file &mdash; not one in the email.</li>
+            <li><strong>A callback verification policy</strong> for any change to payment details or banking information, using a phone number you already have on file, not one in the email.</li>
             <li><strong>Domain monitoring</strong> that flags new registrations closely matching your business name, so you find out before a lookalike domain is used against you or your customers.</li>
             <li><strong>Training that emphasizes hovering and pasting</strong> the actual domain into a text field to compare character-by-character, since a quick visual scan is exactly what these attacks are built to survive.</li>
           </ul>
@@ -222,10 +222,10 @@
           <h2>FAQs about typosquatting</h2>
 
           <h3>What's the difference between typosquatting and phishing?</h3>
-          <p>Typosquatting is the infrastructure; phishing is often what it's used for. Typosquatting is registering a domain that looks almost identical to a real one &mdash; yours or a vendor's &mdash; by swapping a letter, adding a hyphen, or using a different ending. That lookalike domain then gets used to send phishing emails, host a fake login page, or receive replies to a spoofed invoice, all of which look more convincing because the domain passes a quick visual check. Not every typosquatted domain is used for phishing right away; some sit unused for months, or get used to intercept typos from people mistyping a real address.</p>
+          <p>Typosquatting is the infrastructure; phishing is often what it's used for. Typosquatting is registering a domain that looks almost identical to a real one (yours or a vendor's) by swapping a letter, adding a hyphen, or using a different ending. That lookalike domain then gets used to send phishing emails, host a fake login page, or receive replies to a spoofed invoice, all of which look more convincing because the domain passes a quick visual check. Not every typosquatted domain is used for phishing right away; some sit unused for months, or get used to intercept typos from people mistyping a real address.</p>
 
           <h3>Do I need to register every possible misspelling of my domain?</h3>
-          <p>No, and trying to is a losing game &mdash; there are thousands of character-swap and TLD combinations for any domain name. It's worth registering the handful of common typos and the most obvious alternate endings (.net, .co, .biz) if they're cheap and available, but the higher-leverage move is DMARC enforcement, so attackers can't send email that appears to come from your real domain even if they own a similar-looking one, plus watching for new lookalike registrations so you catch the ones that matter.</p>
+          <p>No, and trying to is a losing game: there are thousands of character-swap and TLD combinations for any domain name. It's worth registering the handful of common typos and the most obvious alternate endings (.net, .co, .biz) if they're cheap and available, but the higher-leverage move is DMARC enforcement, so attackers can't send email that appears to come from your real domain even if they own a similar-looking one, plus watching for new lookalike registrations so you catch the ones that matter.</p>
 
           <h3>How would I know if someone is impersonating my business with a lookalike domain?</h3>
           <p>The most common tip-off is a customer or vendor forwarding you an email that claims to be from you but wasn't, often because they noticed the reply address looked slightly off or the request itself seemed unusual (a change to payment details, an urgent invoice). Domain monitoring services can also flag new registrations that closely match your name before they're ever used against you, which is worth having if your business relies on email-based invoicing or client communication.</p>

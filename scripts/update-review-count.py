@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-update-review-count.py — one-command sync of the site's Google review
+update-review-count.py: one-command sync of the site's Google review
 count and rating.
 
 Every page that shows the "★★★★★ Rated 5.0 across 25+ Google reviews"
@@ -20,7 +20,7 @@ from a single source of truth, site-config.json:
     }
 
 so that updating the real-world review count in one place (the config
-file) and re-running this script updates every page consistently — no
+file) and re-running this script updates every page consistently: no
 more hunting down each occurrence by hand.
 
 USAGE
@@ -38,7 +38,7 @@ Notes
     correct even if the marker is added to new pages later.
   * Each marked block runs from the marker to the next "</p>" close tag.
     Only the rating and review-count text inside that window are
-    touched — nothing else on the page is modified.
+    touched: nothing else on the page is modified.
   * 54 of the marked pages also carry a second, unmarked "key-facts"
     dt/dd block with the same rating and review count
     ("<dt>Rated</dt><dd>...5.0 on ...25+ Google reviews</a></dd>"). Its
@@ -194,7 +194,7 @@ def main() -> int:
     apply_changes = args.apply
 
     print("=" * 78)
-    print(f"update-review-count.py — {'APPLY' if apply_changes else 'DRY RUN'}")
+    print(f"update-review-count.py: {'APPLY' if apply_changes else 'DRY RUN'}")
     print(f"root: {root}")
     print(f"config: {config_path}  (rating={rating!r}, review_count={review_count!r})")
     print(f"marked files found: {len(files)}")

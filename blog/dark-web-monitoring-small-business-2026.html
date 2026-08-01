@@ -67,7 +67,7 @@
                 "name": "What is the difference between HaveIBeenPwned and commercial dark web monitoring?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "HaveIBeenPwned is a free tool that checks your email address against a database of publicly disclosed breaches — data dumps that have already been published and indexed. It is useful for personal awareness but limited for business use because it only covers breaches that have been made public, it does not alert you in real time, and it cannot monitor your entire domain automatically. Commercial dark web monitoring services do all three: they watch criminal forums, Telegram channels, stealer malware log marketplaces, and paste sites that are never publicly disclosed, they send real-time alerts when your domain's credentials appear, and they monitor every address under your domain continuously. The difference is breadth and speed. Free tools catch historic breaches after the fact; commercial monitoring catches fresh credential theft while you still have time to act."
+                  "text": "HaveIBeenPwned is a free tool that checks your email address against a database of publicly disclosed breaches, data dumps that have already been published and indexed. It is useful for personal awareness but limited for business use because it only covers breaches that have been made public, it does not alert you in real time, and it cannot monitor your entire domain automatically. Commercial dark web monitoring services do all three: they watch criminal forums, Telegram channels, stealer malware log marketplaces, and paste sites that are never publicly disclosed, they send real-time alerts when your domain's credentials appear, and they monitor every address under your domain continuously. The difference is breadth and speed. Free tools catch historic breaches after the fact; commercial monitoring catches fresh credential theft while you still have time to act."
                 }
               },
               {
@@ -75,7 +75,7 @@
                 "name": "How quickly does dark web monitoring detect a stolen credential?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "It depends on what type of theft occurred and which monitoring service you use. For large third-party breaches — a vendor or SaaS platform your employee used their work email on — monitoring tools typically surface the credential within 24 to 72 hours of the dump appearing on criminal forums, compared to weeks or months for public disclosure. For stealer malware logs — where malware on an endpoint captures credentials directly — detection can be near-real-time if the monitoring service has access to those specific marketplaces. The important caveat: there is always a gap between when the credential was stolen and when it appears for sale. The monitoring alert means the credential is already in criminal hands; the question is whether an attacker has used it yet. Acting within hours of an alert is almost always fast enough, since most credential buyers do not deploy them immediately."
+                  "text": "It depends on what type of theft occurred and which monitoring service you use. For large third-party breaches (a vendor or SaaS platform your employee used their work email on), monitoring tools typically surface the credential within 24 to 72 hours of the dump appearing on criminal forums, compared to weeks or months for public disclosure. For stealer malware logs (where malware on an endpoint captures credentials directly), detection can be near-real-time if the monitoring service has access to those specific marketplaces. The important caveat: there is always a gap between when the credential was stolen and when it appears for sale. The monitoring alert means the credential is already in criminal hands; the question is whether an attacker has used it yet. Acting within hours of an alert is almost always fast enough, since most credential buyers do not deploy them immediately."
                 }
               },
               {
@@ -83,7 +83,7 @@
                 "name": "Does dark web monitoring tell me if my business was directly hacked?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "No. Dark web monitoring detects credentials associated with your domain appearing on criminal marketplaces — it does not detect intrusion into your own systems. Most dark web alerts involve credentials stolen from third-party services (a cloud app, a personal account your employee used their work email on, or a data broker breach) rather than a direct breach of your network. If you want to detect activity inside your own environment, that requires endpoint detection and response (EDR) and ideally a managed detection and response (MDR) service that monitors your network, logs, and endpoints in real time. Dark web monitoring and MDR are complementary: one watches what criminals are selling, the other watches what is happening inside your walls."
+                  "text": "No. Dark web monitoring detects credentials associated with your domain appearing on criminal marketplaces. It does not detect intrusion into your own systems. Most dark web alerts involve credentials stolen from third-party services (a cloud app, a personal account your employee used their work email on, or a data broker breach) rather than a direct breach of your network. If you want to detect activity inside your own environment, that requires endpoint detection and response (EDR) and ideally a managed detection and response (MDR) service that monitors your network, logs, and endpoints in real time. Dark web monitoring and MDR are complementary: one watches what criminals are selling, the other watches what is happening inside your walls."
                 }
               }
             ]
@@ -172,41 +172,41 @@
       <div class="blog-post-body">
         <div class="container">
           <aside class="blog-post-quickfix" aria-label="Summary and what to do today">
-            <span class="quickfix-label">TL;DR &mdash; dark web monitoring is an early-warning system for stolen credentials, not a replacement for MFA or EDR</span>
-            <h2>Dark web monitoring continuously scans criminal forums, breach dumps, and stealer malware marketplaces for employee credentials tied to your domain. When it fires, the credential is already stolen &mdash; the value is getting the alert before an attacker uses it.</h2>
+            <span class="quickfix-label">TL;DR: dark web monitoring is an early-warning system for stolen credentials, not a replacement for MFA or EDR</span>
+            <h2>Dark web monitoring continuously scans criminal forums, breach dumps, and stealer malware marketplaces for employee credentials tied to your domain. When it fires, the credential is already stolen. The value is getting the alert before an attacker uses it.</h2>
             <ul>
-              <li><strong>What it monitors:</strong> criminal forums, Telegram channels, paste sites, stealer malware logs, and third-party breach databases &mdash; all indexed continuously against your email domain.</li>
+              <li><strong>What it monitors:</strong> criminal forums, Telegram channels, paste sites, stealer malware logs, and third-party breach databases, all indexed continuously against your email domain.</li>
               <li><strong>What it finds:</strong> employee credentials stolen from third-party services (LinkedIn, Dropbox, SaaS vendors) and from info-stealer malware infections, often 24&ndash;72 hours after the data appears on criminal marketplaces.</li>
               <li><strong>What it misses:</strong> credentials being actively used against you right now, internal threats, and anything outside your monitored domain scope. It is not an intrusion detection tool.</li>
               <li><strong>The response window:</strong> most credential buyers do not deploy stolen credentials immediately. You typically have hours to days after an alert to rotate the password before it becomes an active attack.</li>
-              <li><strong>Is it worth it:</strong> yes if you are in a sensitive industry and have a process to act on alerts. Less urgent if you have MFA enforced everywhere &mdash; a stolen password without a second factor is significantly harder to weaponize.</li>
+              <li><strong>Is it worth it:</strong> yes if you are in a sensitive industry and have a process to act on alerts. Less urgent if you have MFA enforced everywhere: a stolen password without a second factor is significantly harder to weaponize.</li>
             </ul>
             <p>This post connects to the <a href="/blog/password-manager-small-business-2026">password managers post</a> (why credential reuse makes dark web alerts more dangerous), the <a href="/blog/mfa-fatigue-push-bombing-smb-2026">MFA fatigue post</a> (the control that most reduces the damage from a stolen credential), the <a href="/blog/credential-stuffing-small-business-2026">credential stuffing post</a> (what attackers do with those exposed credentials at scale), and the <a href="/blog/cyber-insurance-small-business-2026">cyber insurance post</a> (underwriters increasingly ask whether you have dark web monitoring in place).</p>
           </aside>
 
           <p>The scenario plays out the same way every time. An employee uses their work email address to sign up for a project management tool, a webinar platform, or a news site. That vendor gets breached six months later. The employee's work email and a reused password end up for sale on a criminal forum. Three weeks after that, someone in Eastern Europe uses those credentials to log into your Microsoft 365 account at 2 a.m. on a Sunday.</p>
 
-          <p>Dark web monitoring does not stop that breach from happening at the vendor. What it does is give you an alert between step two and step three &mdash; a window to change the password before someone walks through the door with it.</p>
+          <p>Dark web monitoring does not stop that breach from happening at the vendor. What it does is give you an alert between step two and step three: a window to change the password before someone walks through the door with it.</p>
 
           <h2>What dark web monitoring actually scans</h2>
 
           <p>There is a meaningful difference between free breach-check tools and commercial dark web monitoring, and it is worth understanding before you evaluate whether to pay for it.</p>
 
-          <p><strong>Free tools like HaveIBeenPwned</strong> check a specific email address against a database of publicly disclosed breaches &mdash; data dumps that have already been made public and indexed. They are useful for individual awareness, but they only cover historic breaches after public disclosure, they require manual lookups, and they cannot monitor your entire organization's domain automatically.</p>
+          <p><strong>Free tools like HaveIBeenPwned</strong> check a specific email address against a database of publicly disclosed breaches, data dumps that have already been made public and indexed. They are useful for individual awareness, but they only cover historic breaches after public disclosure, they require manual lookups, and they cannot monitor your entire organization's domain automatically.</p>
 
-          <p><strong>Commercial dark web monitoring</strong> does three things the free tools do not. First, it monitors continuously rather than waiting for you to check. Second, it covers sources that never go public: criminal forums on Tor, Telegram channels where credential logs are sold, private paste sites, and &mdash; critically &mdash; stealer malware log marketplaces where credentials captured directly from infected devices are sold in bulk. Third, it alerts on your entire domain, not just individual addresses, so you catch the new employee whose account was compromised before they even joined your company.</p>
+          <p><strong>Commercial dark web monitoring</strong> does three things the free tools do not. First, it monitors continuously rather than waiting for you to check. Second, it covers sources that never go public: criminal forums on Tor, Telegram channels where credential logs are sold, private paste sites, and, critically, stealer malware log marketplaces where credentials captured directly from infected devices are sold in bulk. Third, it alerts on your entire domain, not just individual addresses, so you catch the new employee whose account was compromised before they even joined your company.</p>
 
-          <p>The stealer malware coverage is where commercial tools earn their cost. Info-stealer malware (RedLine, Vidar, and their successors) captures every saved password in the browser and every credential typed on an infected machine, then uploads it to a central log. Those logs get sold on criminal marketplaces within hours of the infection. A good dark web monitoring service has access to those marketplaces and will flag your domain's credentials when they appear &mdash; often before the victim even knows their machine was compromised.</p>
+          <p>The stealer malware coverage is where commercial tools earn their cost. Info-stealer malware (RedLine, Vidar, and their successors) captures every saved password in the browser and every credential typed on an infected machine, then uploads it to a central log. Those logs get sold on criminal marketplaces within hours of the infection. A good dark web monitoring service has access to those marketplaces and will flag your domain's credentials when they appear, often before the victim even knows their machine was compromised.</p>
 
-          <h2>What happens when you get an alert &mdash; and what to do</h2>
+          <h2>What happens when you get an alert, and what to do</h2>
 
           <p>The alert does not mean you are being hacked right now. It means a credential tied to your domain appeared somewhere it should not be. The question that matters is: has anyone used it yet?</p>
 
-          <p>The answer, most of the time, is no &mdash; not yet. Criminal markets sell credentials in bulk. Buyers typically purchase large batches and work through them over days or weeks. That gap is your window, and it is usually wide enough to act.</p>
+          <p>The answer, most of the time, is no, not yet. Criminal markets sell credentials in bulk. Buyers typically purchase large batches and work through them over days or weeks. That gap is your window, and it is usually wide enough to act.</p>
 
           <p><strong>When a dark web alert fires, do this in order:</strong></p>
           <ul>
-            <li><strong>Immediately rotate the flagged credential.</strong> Force a password reset on the affected account. Do not wait for the employee to do it themselves &mdash; lock it from the admin side and require them to set a new one on next login.</li>
+            <li><strong>Immediately rotate the flagged credential.</strong> Force a password reset on the affected account. Do not wait for the employee to do it themselves. Lock it from the admin side and require them to set a new one on next login.</li>
             <li><strong>Check for password reuse.</strong> If the employee was reusing that password elsewhere in your environment, rotate everywhere it appears. This is why password managers matter: reuse turns one stolen credential into five attack vectors. See the <a href="/blog/password-manager-small-business-2026">password manager post</a> for the rollout approach.</li>
             <li><strong>Review recent login activity on that account.</strong> Check your Microsoft 365, Google Workspace, or VPN logs for any logins from unfamiliar IP addresses or locations in the past 30 days. If you find anomalies, treat it as an active incident and escalate.</li>
             <li><strong>Document the alert and your response.</strong> If you ever file a cyber insurance claim, being able to show that you acted on a dark web alert promptly is evidence of reasonable security diligence.</li>
@@ -214,22 +214,22 @@
 
           <h2>Is dark web monitoring worth the cost for a small business?</h2>
 
-          <p>Commercial dark web monitoring runs roughly $5 to $20 per user per month as a managed service add-on, or is bundled into some MDR platforms at no additional charge. At the low end, for a 10-person business that is $600 to $1,200 a year &mdash; less than a single hour of incident response from a forensic firm.</p>
+          <p>Commercial dark web monitoring runs roughly $5 to $20 per user per month as a managed service add-on, or is bundled into some MDR platforms at no additional charge. At the low end, for a 10-person business that is $600 to $1,200 a year, less than a single hour of incident response from a forensic firm.</p>
 
           <p>The honest answer on value depends on two factors: your risk profile and whether you will actually act on alerts.</p>
 
           <p><strong>Higher value if:</strong></p>
           <ul>
-            <li>You handle sensitive client data &mdash; legal, healthcare, financial, or real estate records. A stolen credential in those environments can trigger regulatory notification requirements and professional liability exposure.</li>
+            <li>You handle sensitive client data: legal, healthcare, financial, or real estate records. A stolen credential in those environments can trigger regulatory notification requirements and professional liability exposure.</li>
             <li>Your employees use their work email addresses to sign up for external services (most do, even if you have asked them not to).</li>
             <li>You do not yet have <a href="/cybersecurity">MFA enforced across all accounts</a>. Without MFA, a stolen password is all an attacker needs.</li>
-            <li>Your cyber insurance underwriter asks about it on the application &mdash; an increasing number do, and having it can lower your risk tier.</li>
+            <li>Your cyber insurance underwriter asks about it on the application, an increasing number do, and having it can lower your risk tier.</li>
           </ul>
 
           <p><strong>Lower value if:</strong></p>
           <ul>
             <li>You have MFA enforced on every account, including email, VPN, and business applications. A stolen password without the second factor is still a threat, but a much harder one to exploit quickly. Dark web monitoring is useful here, but not as time-sensitive.</li>
-            <li>You do not have a process to act on alerts. Monitoring that goes unread is not security &mdash; it is a line item. If you cannot commit to responding to an alert within a few hours, either build that process first or bundle monitoring with a managed service that handles response for you.</li>
+            <li>You do not have a process to act on alerts. Monitoring that goes unread is not security. It is a line item. If you cannot commit to responding to an alert within a few hours, either build that process first or bundle monitoring with a managed service that handles response for you.</li>
           </ul>
 
           <p>The combination I recommend for most small businesses is: MFA as the first priority, dark web monitoring as a complementary layer once MFA is in place. Together they mean that even if a credential is stolen, you get an alert fast and the attacker faces a second barrier. Neither alone is a complete answer.</p>
@@ -240,14 +240,14 @@
           <p>HaveIBeenPwned checks a specific email address against publicly disclosed breach databases after the fact and requires manual lookups. Commercial monitoring watches criminal forums, stealer malware marketplaces, and private paste sites continuously, sends real-time alerts, and covers your entire domain automatically. The coverage and speed gap between the two is significant for business use.</p>
 
           <h3>How quickly does dark web monitoring detect a stolen credential?</h3>
-          <p>For third-party breaches appearing on criminal forums, typically 24 to 72 hours after the dump surfaces &mdash; far faster than public disclosure, which often takes weeks or months. For stealer malware logs, detection can be near-real-time if the monitoring service has access to those specific marketplaces. In both cases, the credential was already stolen before the alert; the question is whether you rotate it before an attacker uses it.</p>
+          <p>For third-party breaches appearing on criminal forums, typically 24 to 72 hours after the dump surfaces, far faster than public disclosure, which often takes weeks or months. For stealer malware logs, detection can be near-real-time if the monitoring service has access to those specific marketplaces. In both cases, the credential was already stolen before the alert; the question is whether you rotate it before an attacker uses it.</p>
 
           <h3>Does dark web monitoring tell me if my business was directly hacked?</h3>
-          <p>No. Dark web monitoring detects credentials from your domain appearing on criminal markets &mdash; most of these come from third-party breaches or malware on an employee's personal device, not a direct attack on your network. To detect activity inside your own environment, you need endpoint detection and response (EDR) or a managed detection and response (MDR) service. Dark web monitoring and MDR are complementary: one watches what criminals are selling, the other watches what is happening inside your walls.</p>
+          <p>No. Dark web monitoring detects credentials from your domain appearing on criminal markets. Most of these come from third-party breaches or malware on an employee's personal device, not a direct attack on your network. To detect activity inside your own environment, you need endpoint detection and response (EDR) or a managed detection and response (MDR) service. Dark web monitoring and MDR are complementary: one watches what criminals are selling, the other watches what is happening inside your walls.</p>
 
           <div class="blog-post-cta">
             <h3>Want to know if your employees' credentials are already on the dark web?</h3>
-            <p>30 minutes with an engineer with DoD infrastructure experience. We will run a dark web scan against your domain, review your current credential hygiene, and give you a clear picture of your exposure &mdash; including whether your existing controls are enough to make stolen credentials a low-risk problem or a high-risk one.</p>
+            <p>30 minutes with an engineer with DoD infrastructure experience. We will run a dark web scan against your domain, review your current credential hygiene, and give you a clear picture of your exposure, including whether your existing controls are enough to make stolen credentials a low-risk problem or a high-risk one.</p>
             <a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer">
               <i class="fi fi-rs-calendar-day" aria-hidden="true"></i>
               Book your free security assessment

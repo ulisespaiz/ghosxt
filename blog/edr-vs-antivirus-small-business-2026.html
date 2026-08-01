@@ -67,7 +67,7 @@
                 "name": "Is EDR just a more expensive antivirus?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "No. Antivirus decides whether to allow a file to run. EDR assumes some threats will get past that first decision and instead watches what happens after a program is already running — process launches, script execution, credential access, lateral movement — so it can catch attacks that never use a malicious file at all. Most modern EDR products include antivirus-style scanning as one layer, not a replacement for it."
+                  "text": "No. Antivirus decides whether to allow a file to run. EDR assumes some threats will get past that first decision and instead watches what happens after a program is already running (process launches, script execution, credential access, lateral movement) so it can catch attacks that never use a malicious file at all. Most modern EDR products include antivirus-style scanning as one layer, not a replacement for it."
                 }
               },
               {
@@ -75,7 +75,7 @@
                 "name": "Do I need EDR if I only have 5 or 10 employees?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Attackers do not scale their tactics down for small targets — the same fileless techniques and human-operated ransomware playbooks used against large companies are run against 5-person businesses, often because they are easier to breach and less likely to notice. The honest answer is that business size affects how you buy EDR (bundled into a managed detection service rather than run in-house), not whether you need the visibility it provides."
+                  "text": "Attackers do not scale their tactics down for small targets: the same fileless techniques and human-operated ransomware playbooks used against large companies are run against 5-person businesses, often because they are easier to breach and less likely to notice. The honest answer is that business size affects how you buy EDR (bundled into a managed detection service rather than run in-house), not whether you need the visibility it provides."
                 }
               },
               {
@@ -171,36 +171,36 @@
       </header>
       <div class="blog-post-body">
         <div class="container">
-          <p>Almost every small business I assess for the first time already has antivirus running on every machine. Owners point to it as proof they're covered. Then I show them what it actually caught in the last twelve months &mdash; usually nothing, because nothing tripped a known-malware signature &mdash; and what it would have missed if an attacker had used a legitimate Windows tool to move through the network instead of dropping an obvious virus file. That gap between "antivirus is running" and "we would actually catch an attack" is where Endpoint Detection and Response, or EDR, fits.</p>
+          <p>Almost every small business I assess for the first time already has antivirus running on every machine. Owners point to it as proof they're covered. Then I show them what it actually caught in the last twelve months (usually nothing, because nothing tripped a known-malware signature) and what it would have missed if an attacker had used a legitimate Windows tool to move through the network instead of dropping an obvious virus file. That gap between "antivirus is running" and "we would actually catch an attack" is where Endpoint Detection and Response, or EDR, fits.</p>
 
           <p>EDR is not a buzzword IT providers use to sell you a bigger invoice. It reflects a real change in how attackers operate, and small businesses without it are increasingly the ones left exposed.</p>
 
           <h2>Antivirus answers one question; EDR answers a different one</h2>
 
-          <p>Traditional antivirus is built around a single decision: should this file be allowed to run? It checks a file against a database of known-bad signatures and behavioral heuristics, and it blocks or quarantines what it recognizes. That still matters &mdash; it stops the high volume of commodity malware that shows up in email attachments and drive-by downloads every day.</p>
+          <p>Traditional antivirus is built around a single decision: should this file be allowed to run? It checks a file against a database of known-bad signatures and behavioral heuristics, and it blocks or quarantines what it recognizes. That still matters: it stops the high volume of commodity malware that shows up in email attachments and drive-by downloads every day.</p>
 
-          <p>The problem is that a growing share of real intrusions never trip that check. Attackers increasingly use <strong>fileless techniques</strong> &mdash; scripts, macros, and legitimate admin tools like PowerShell or PsExec &mdash; to move through a network without ever writing a recognizable malicious file to disk. Human-operated ransomware crews, the kind actually hitting small businesses, spend hours or days quietly using stolen credentials and built-in Windows tools to explore a network before they ever deploy the ransomware payload that antivirus would flag. By the time a signature scanner sees something to block, the attacker has already been inside for a while.</p>
+          <p>The problem is that a growing share of real intrusions never trip that check. Attackers increasingly use <strong>fileless techniques</strong> (scripts, macros, and legitimate admin tools like PowerShell or PsExec) to move through a network without ever writing a recognizable malicious file to disk. Human-operated ransomware crews, the kind actually hitting small businesses, spend hours or days quietly using stolen credentials and built-in Windows tools to explore a network before they ever deploy the ransomware payload that antivirus would flag. By the time a signature scanner sees something to block, the attacker has already been inside for a while.</p>
 
-          <p>EDR is built around a different question: what is happening on this machine right now, and does the pattern look like an attack? It continuously monitors process activity, script execution, network connections, and credential use, and it can flag &mdash; or automatically isolate &mdash; a machine the moment its behavior looks like reconnaissance or lateral movement, whether or not a malicious file was ever involved.</p>
+          <p>EDR is built around a different question: what is happening on this machine right now, and does the pattern look like an attack? It continuously monitors process activity, script execution, network connections, and credential use, and it can flag (or automatically isolate) a machine the moment its behavior looks like reconnaissance or lateral movement, whether or not a malicious file was ever involved.</p>
 
           <h2>What EDR actually adds day to day</h2>
 
           <ul>
             <li><strong>Behavioral detection, not just signatures.</strong> It catches the attack technique, not just the malware file, which is what stops fileless and "living off the land" intrusions that never trigger a traditional scan.</li>
-            <li><strong>A record of what happened.</strong> When something does go wrong, EDR gives you an actual timeline &mdash; which machine was touched first, what process launched, where it tried to spread &mdash; instead of a guess based on which files look encrypted.</li>
+            <li><strong>A record of what happened.</strong> When something does go wrong, EDR gives you an actual timeline: which machine was touched first, what process launched, where it tried to spread, instead of a guess based on which files look encrypted.</li>
             <li><strong>The ability to act, not just alert.</strong> Most EDR platforms can isolate a compromised device from the network in seconds, containing an intrusion before it reaches a file server or a second machine, without physically unplugging anything.</li>
             <li><strong>Visibility across every endpoint at once.</strong> A single dashboard shows what's happening on every laptop, desktop, and server, rather than each machine's antivirus quietly making its own local decisions no one reviews.</li>
           </ul>
 
           <h2>Do you actually need it at your size?</h2>
 
-          <p>The tool alone is not the point &mdash; it's only useful if someone is watching what it reports. This is where <a href="/cybersecurity">Managed Detection and Response (MDR)</a> comes in: a security team monitors EDR alerts around the clock and responds to genuine threats, because an alert that sits unread in a dashboard overnight does not stop an attacker who is already moving. For a business without a dedicated security team, EDR bundled into a managed service is almost always the practical path, not a standalone tool someone has to babysit.</p>
+          <p>The tool alone is not the point: it's only useful if someone is watching what it reports. This is where <a href="/cybersecurity">Managed Detection and Response (MDR)</a> comes in: a security team monitors EDR alerts around the clock and responds to genuine threats, because an alert that sits unread in a dashboard overnight does not stop an attacker who is already moving. For a business without a dedicated security team, EDR bundled into a managed service is almost always the practical path, not a standalone tool someone has to babysit.</p>
 
-          <p>Cost has come down enough that this is no longer an enterprise-only tool. Managed EDR typically runs a modest per-device monthly fee, often bundled into a broader <a href="/managed-it-services">managed IT services</a> plan rather than billed separately. For most small businesses, the honest comparison isn't "EDR versus nothing" &mdash; it's the cost of a few dollars per device per month versus the cost of a ransomware incident that antivirus alone didn't catch.</p>
+          <p>Cost has come down enough that this is no longer an enterprise-only tool. Managed EDR typically runs a modest per-device monthly fee, often bundled into a broader <a href="/managed-it-services">managed IT services</a> plan rather than billed separately. For most small businesses, the honest comparison isn't "EDR versus nothing": it's the cost of a few dollars per device per month versus the cost of a ransomware incident that antivirus alone didn't catch.</p>
 
           <h2>The 10-minute check to run today</h2>
 
-          <p>Ask whoever manages your computers one question: if an employee's laptop were compromised right now through a method that doesn't drop a recognizable malware file, would anything alert your team? If the honest answer is "our antivirus would probably not catch it" or "I'm not sure," that's a real gap, not a hypothetical one. It's worth finding out before an attacker does. The <a href="/blog/clickfix-fake-captcha-verification-attack-small-business-2026">ClickFix attack</a> is a good real-world test case: it uses a legitimate Windows tool as the first stage, exactly the kind of activity signature-based antivirus is built to miss &mdash; see the <a href="/blog/fileless-malware-living-off-the-land-small-business-2026">fileless malware post</a> for how these "living off the land" techniques work in more depth.</p>
+          <p>Ask whoever manages your computers one question: if an employee's laptop were compromised right now through a method that doesn't drop a recognizable malware file, would anything alert your team? If the honest answer is "our antivirus would probably not catch it" or "I'm not sure," that's a real gap, not a hypothetical one. It's worth finding out before an attacker does. The <a href="/blog/clickfix-fake-captcha-verification-attack-small-business-2026">ClickFix attack</a> is a good real-world test case: it uses a legitimate Windows tool as the first stage, exactly the kind of activity signature-based antivirus is built to miss. See the <a href="/blog/fileless-malware-living-off-the-land-small-business-2026">fileless malware post</a> for how these "living off the land" techniques work in more depth.</p>
 
           <div class="blog-post-cta">
             <h3>Not sure if your endpoints are actually covered?</h3>

@@ -4,8 +4,8 @@ minified copies.
 
 The source files under assets/css/ and assets/js/ stay the editable source of
 truth. This produces a `*.min.css` / `*.min.js` next to each, using the
-safe, conservative rcssmin / rjsmin minifiers (whitespace/comment removal only
-— no risky JS transforms). Run it before deploying whenever CSS/JS changes,
+safe, conservative rcssmin / rjsmin minifiers (whitespace/comment removal only,
+no risky JS transforms). Run it before deploying whenever CSS/JS changes,
 the same way the other scripts/ generators are run.
 
     pip install rcssmin rjsmin        # one-time

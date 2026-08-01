@@ -42,7 +42,7 @@
             "@type": "BlogPosting",
             "mainEntityOfPage": { "@type": "WebPage", "@id": "https://ghosxt.com/blog/browser-extension-security-risks-small-business-2026" },
             "headline": "Browser Extensions: The Hidden Security Risk Your Small Business Is Probably Ignoring",
-            "description": "Browser extensions can read every page you visit, steal passwords, and exfiltrate data — and most employees install them freely. How malicious and over-permissioned extensions become a back door into your business, and the simple policy that shuts it down.",
+            "description": "Browser extensions can read every page you visit, steal passwords, and exfiltrate data. Most employees install them freely. How malicious and over-permissioned extensions become a back door into your business, and the simple policy that shuts it down.",
             "image": "https://ghosxt.com/assets/img/og/blog-browser-extension-security-risks-small-business-2026.png",
             "author": { "@type": "Person", "name": "Ulises Paiz", "url": "https://ghosxt.com/about" },
             "publisher": { "@type": "Organization", "name": "Ghosxt", "logo": { "@type": "ImageObject", "url": "https://ghosxt.com/assets/img/ghosxt-logo-160.webp" } },
@@ -67,7 +67,7 @@
                 "name": "Can a browser extension really steal passwords or business data?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Yes. Extensions that request 'read and change all your data on websites you visit' have permission to see everything typed into every page in that browser session — including passwords before they are masked, form data, emails, and anything rendered on screen. A malicious or compromised extension can quietly capture that data and send it to a remote server. This is not hypothetical: there have been multiple documented cases of popular extensions being quietly updated to harvest credentials after the developer sold the codebase to a bad actor."
+                  "text": "Yes. Extensions that request 'read and change all your data on websites you visit' have permission to see everything typed into every page in that browser session, including passwords before they are masked, form data, emails, and anything rendered on screen. A malicious or compromised extension can quietly capture that data and send it to a remote server. This is not hypothetical: there have been multiple documented cases of popular extensions being quietly updated to harvest credentials after the developer sold the codebase to a bad actor."
                 }
               },
               {
@@ -83,7 +83,7 @@
                 "name": "What permissions should a business be suspicious of?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "The red-flag permission is broad host access: 'Read and change all your data on all websites' or 'Access your data on all websites.' An extension with this permission can inspect every page you open in that browser. Legitimate coupon, grammar, or tab-management tools rarely need access to all sites — they need access to the specific sites they're designed for. Also watch for extensions requesting access to clipboard data, the ability to manage other extensions, or permissions to intercept network requests. If a permission request seems out of scope for what the extension claims to do, treat it as a warning sign."
+                  "text": "The red-flag permission is broad host access: 'Read and change all your data on all websites' or 'Access your data on all websites.' An extension with this permission can inspect every page you open in that browser. Legitimate coupon, grammar, or tab-management tools rarely need access to all sites. They need access to the specific sites they're designed for. Also watch for extensions requesting access to clipboard data, the ability to manage other extensions, or permissions to intercept network requests. If a permission request seems out of scope for what the extension claims to do, treat it as a warning sign."
                 }
               },
               {
@@ -91,7 +91,7 @@
                 "name": "What's a practical browser extension policy for a small business?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "A simple, enforceable policy has three parts. First, maintain a short approved list — extensions that have been reviewed and are needed for work. Second, restrict installation to that list, either by policy (honor system with audits) or technically via Chrome's ExtensionInstallAllowlist group policy on managed devices. Third, audit monthly: pull a list of installed extensions across company machines and investigate anything not on the approved list. This doesn't require a big budget or complex tooling, just a policy that people follow and a quick monthly check."
+                  "text": "A simple, enforceable policy has three parts. First, maintain a short approved list: extensions that have been reviewed and are needed for work. Second, restrict installation to that list, either by policy (honor system with audits) or technically via Chrome's ExtensionInstallAllowlist group policy on managed devices. Third, audit monthly: pull a list of installed extensions across company machines and investigate anything not on the approved list. This doesn't require a big budget or complex tooling, just a policy that people follow and a quick monthly check."
                 }
               }
             ]
@@ -180,8 +180,8 @@
       <div class="blog-post-body">
         <div class="container">
           <aside class="blog-post-quickfix" aria-label="Summary and what to do today">
-            <span class="quickfix-label">TL;DR &mdash; extensions are software running inside your browser</span>
-            <h2>That free grammar checker, coupon finder, or tab organizer your employee installed last month may have read and change access to every page they open — including your accounting system, email, and anything they type. Extensions can be sold to new owners who silently push malicious updates. The fix isn't banning all extensions; it's a short approved list and a monthly audit.</h2>
+            <span class="quickfix-label">TL;DR: extensions are software running inside your browser</span>
+            <h2>That free grammar checker, coupon finder, or tab organizer your employee installed last month may have read and change access to every page they open, including your accounting system, email, and anything they type. Extensions can be sold to new owners who silently push malicious updates. The fix isn't banning all extensions; it's a short approved list and a monthly audit.</h2>
             <ul>
               <li><strong>What the risk actually is:</strong> extensions with broad host access can see passwords, form data, and rendered page content across every site in the browser.</li>
               <li><strong>How good extensions go bad:</strong> developers sell their user base; new owners push a silent, malicious update via Chrome's auto-update within hours.</li>
@@ -230,7 +230,7 @@
           <h2>FAQs about browser extension security for small businesses</h2>
 
           <h3>Can a browser extension really steal passwords or business data?</h3>
-          <p>Yes. Extensions that request "read and change all your data on websites you visit" have permission to see everything typed into every page in that browser session — including passwords before they are masked, form data, emails, and anything rendered on screen. A malicious or compromised extension can quietly capture that data and send it to a remote server. This is not hypothetical: there have been multiple documented cases of popular extensions being quietly updated to harvest credentials after the developer sold the codebase to a bad actor.</p>
+          <p>Yes. Extensions that request "read and change all your data on websites you visit" have permission to see everything typed into every page in that browser session, including passwords before they are masked, form data, emails, and anything rendered on screen. A malicious or compromised extension can quietly capture that data and send it to a remote server. This is not hypothetical: there have been multiple documented cases of popular extensions being quietly updated to harvest credentials after the developer sold the codebase to a bad actor.</p>
 
           <h3>How do legitimate extensions turn malicious?</h3>
           <p>The most common path is acquisition: a developer builds a useful free extension with a large install base, then sells it. The new owner pushes a silent update containing data-harvesting code. Chrome's auto-update mechanism delivers it to every installed copy within hours, and users never see a prompt. A second path is account compromise: attackers gain access to a developer's Chrome Web Store account and push a malicious update directly. Extensions that look clean today can turn hostile overnight without any action by the user.</p>
@@ -239,7 +239,7 @@
           <p>The red-flag permission is broad host access: "Read and change all your data on all websites" or "Access your data on all websites." An extension with this permission can inspect every page you open in that browser. Legitimate coupon, grammar, or tab-management tools rarely need access to all sites. Also watch for extensions requesting access to clipboard data, the ability to manage other extensions, or permissions to intercept network requests. If a permission request seems out of scope for what the extension claims to do, treat it as a warning sign.</p>
 
           <h3>What's a practical browser extension policy for a small business?</h3>
-          <p>A simple, enforceable policy has three parts. First, maintain a short approved list of extensions that have been reviewed and are needed for work. Second, restrict installation to that list — either by written policy with audits, or technically via Chrome's ExtensionInstallAllowlist group policy on managed devices. Third, audit monthly: pull a list of installed extensions across company machines and investigate anything not on the approved list. This doesn't require a big budget or complex tooling, just a policy that people follow and a quick monthly check.</p>
+          <p>A simple, enforceable policy has three parts. First, maintain a short approved list of extensions that have been reviewed and are needed for work. Second, restrict installation to that list: either by written policy with audits, or technically via Chrome's ExtensionInstallAllowlist group policy on managed devices. Third, audit monthly: pull a list of installed extensions across company machines and investigate anything not on the approved list. This doesn't require a big budget or complex tooling, just a policy that people follow and a quick monthly check.</p>
 
           <div class="blog-post-cta">
             <h3>Want to know what's running inside your team's browsers?</h3>

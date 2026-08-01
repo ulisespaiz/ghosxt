@@ -1,18 +1,18 @@
 """Shared chrome-extraction logic for the location/service page generators.
 
 Chrome (head assets, cookie banner, nav, footer) is sliced verbatim out of
-`_chrome_source.html` — a frozen, non-live copy of the site chrome, not one
+`_chrome_source.html`, a frozen, non-live copy of the site chrome, not one
 of the actual served pages. Earlier, both generator scripts sliced chrome
 directly from `cybersecurity-monterey.html`, a real page that gets hand-
 edited over time (e.g. the `key-facts`/`trust-reviews` sections added after
-the generators were last run) — any generator run with `--force` would have
+the generators were last run), any generator run with `--force` would have
 silently reverted those hand edits back to whatever the live template page
 looked like at run time. Freezing the source here means the generators are
 stable regardless of what happens to the live pages.
 
 To update site-wide chrome (nav links, footer, cookie banner copy, etc.),
 edit `_chrome_source.html` directly, then use `apply-chrome.py` to propagate
-the change to every live page — do not edit chrome by hand-patching pages.
+the change to every live page. Do not edit chrome by hand-patching pages.
 """
 
 import os
@@ -48,14 +48,14 @@ def extract_chrome(path=CHROME_SOURCE):
     body_top = slice_between(t, "  <body>", '    <nav class="navbar"')
     nav = slice_between(t, '    <nav class="navbar"', '    <main id="main-content">')
     # "footer" runs to end-of-file (not just </footer>) because the page
-    # generators use it as a literal suffix — it also carries the trailing
+    # generators use it as a literal suffix: it also carries the trailing
     # main.js include, mobile-cta-bar markup, and closing tags that every
     # *generated* page needs verbatim. That makes it unsuitable for
     # drift-checking/applying against arbitrary hand-authored pages, which
     # often have their own distinct trailing scripts (a calculator, a form
     # widget, etc.) that would be wrongly clobbered by a blind footer-to-EOF
     # comparison. "footer_only" is the narrower <footer>...</footer> element
-    # for that purpose — see check-chrome-drift.py / apply-chrome.py.
+    # for that purpose, see check-chrome-drift.py / apply-chrome.py.
     footer = t[t.index('    <footer class="footer" id="footerSection">'):]
     footer_only = slice_between(
         t,
