@@ -57,7 +57,7 @@ def extract(path: Path):
 
     # Canonical URL: prefer <link rel="canonical">, fall back to constructed URL
     m = re.search(r'<link\s+rel="canonical"\s+href="([^"]+)"', text)
-    link = m.group(1).strip() if m else f"{BLOG_URL}{path.name}"
+    link = m.group(1).strip() if m else f"{BLOG_URL}{path.stem}"
 
     # Description: prefer meta description, then og:description
     m = re.search(r'<meta\s+name="description"\s+content="([^"]*)"', text)

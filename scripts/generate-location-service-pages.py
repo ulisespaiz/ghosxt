@@ -328,7 +328,7 @@ def cards_html(cards):
 
 
 def nearby_links(nearby, exclude_slug):
-    parts = [f'<a href="{slug}.html">{name}</a>' for slug, name in nearby if slug != exclude_slug]
+    parts = [f'<a href="/{slug}">{name}</a>' for slug, name in nearby if slug != exclude_slug]
     if len(parts) > 1:
         return ", ".join(parts[:-1]) + ", and " + parts[-1]
     return parts[0] if parts else ""
@@ -357,7 +357,7 @@ def build_page(chrome, service, slug, city):
             "detection and response, phishing-resistant MFA, identity hardening, immutable backup, "
             "vulnerability management, and 24/7 monitoring from an engineer with DoD infrastructure experience."
         )
-        crumb_parent = ("Cybersecurity", "https://ghosxt.com/cybersecurity.html")
+        crumb_parent = ("Cybersecurity", "https://ghosxt.com/cybersecurity")
         h1 = f"Cybersecurity Services in {name}, California"
         lead = c["cyber_lead"]
         cards = [
@@ -369,11 +369,11 @@ def build_page(chrome, service, slug, city):
             CYBER_SHARED_CARDS[2],
         ]
         faqs = c["cyber_faq"]
-        cloud_xlink = f'<a href="cloud-services-{slug}.html">cloud and Microsoft 365</a>' if True else '<a href="cloud-services.html">cloud and Microsoft 365</a>'
+        cloud_xlink = f'<a href="/cloud-services-{slug}">cloud and Microsoft 365</a>' if True else '<a href="/cloud-services">cloud and Microsoft 365</a>'
         body = f"""      <section class="location-hero">
         <div class="container">
           <nav class="location-breadcrumbs" aria-label="Breadcrumb">
-            <a href="index.html">Home</a><span class="sep">›</span><a href="cybersecurity.html">Cybersecurity</a><span class="sep">›</span><span aria-current="page">{name}</span>
+            <a href="/index">Home</a><span class="sep">›</span><a href="/cybersecurity">Cybersecurity</a><span class="sep">›</span><span aria-current="page">{name}</span>
           </nav>
           <h1>{h1}</h1>
           <p class="lead">{lead}</p>
@@ -387,7 +387,7 @@ def build_page(chrome, service, slug, city):
               (831) 204-0501
             </a>
           </div>
-          <p class="pricing-trust-callout"><a href="pricing.html">Cybersecurity is built into every managed plan — pricing published upfront.</a></p>
+          <p class="pricing-trust-callout"><a href="/pricing">Cybersecurity is built into every managed plan — pricing published upfront.</a></p>
         </div>
       </section>
 
@@ -430,7 +430,7 @@ def build_page(chrome, service, slug, city):
       <section class="location-section">
         <div class="container">
           <h2>Local cybersecurity, part of a complete IT program</h2>
-          <p>Security works best when the same team also runs the systems it protects. Our {name} cybersecurity sits inside <a href="managed-it-services.html">managed IT</a> — monitoring, patching, <a href="help-desk-it-support.html">help desk</a>, {cloud_xlink}, and backup — so controls are maintained, not installed once and forgotten. For our statewide approach, see the main <a href="cybersecurity.html">cybersecurity services</a> page; for everything local, the <a href="{slug}.html">{name} IT services</a> hub.</p>
+          <p>Security works best when the same team also runs the systems it protects. Our {name} cybersecurity sits inside <a href="/managed-it-services">managed IT</a> — monitoring, patching, <a href="/help-desk-it-support">help desk</a>, {cloud_xlink}, and backup — so controls are maintained, not installed once and forgotten. For our statewide approach, see the main <a href="/cybersecurity">cybersecurity services</a> page; for everything local, the <a href="/{slug}">{name} IT services</a> hub.</p>
           <p>We are based on the Central Coast, so on-site response is genuinely local — same-day or next-day for non-emergencies, immediate remote response for anything critical. We also serve {nearby}.</p>
         </div>
       </section>
@@ -450,7 +450,7 @@ def build_page(chrome, service, slug, city):
             <i class="fi fi-rs-calendar-day" aria-hidden="true"></i>
             Book your free assessment
           </a>
-          <a href="contact.html" class="location-btn location-btn-secondary">
+          <a href="/contact" class="location-btn location-btn-secondary">
             <i class="fi fi-rs-envelope" aria-hidden="true"></i>
             Send a Message
           </a>
@@ -473,7 +473,7 @@ def build_page(chrome, service, slug, city):
             "setup and tenant hardening, no-downtime email and file migrations, SharePoint, Teams, and "
             "OneDrive, and Azure and hybrid environments, from an engineer with DoD infrastructure experience."
         )
-        crumb_parent = ("Cloud Services", "https://ghosxt.com/cloud-services.html")
+        crumb_parent = ("Cloud Services", "https://ghosxt.com/cloud-services")
         h1 = f"Cloud &amp; Microsoft 365 Services in {name}, California"
         lead = c["cloud_lead"]
         cards = [
@@ -489,7 +489,7 @@ def build_page(chrome, service, slug, city):
         body = f"""      <section class="location-hero">
         <div class="container">
           <nav class="location-breadcrumbs" aria-label="Breadcrumb">
-            <a href="index.html">Home</a><span class="sep">›</span><a href="cloud-services.html">Cloud Services</a><span class="sep">›</span><span aria-current="page">{name}</span>
+            <a href="/index">Home</a><span class="sep">›</span><a href="/cloud-services">Cloud Services</a><span class="sep">›</span><span aria-current="page">{name}</span>
           </nav>
           <h1>{h1}</h1>
           <p class="lead">{lead}</p>
@@ -503,7 +503,7 @@ def build_page(chrome, service, slug, city):
               (831) 204-0501
             </a>
           </div>
-          <p class="pricing-trust-callout"><a href="pricing.html">Cloud and Microsoft 365 management is part of every managed plan — pricing published upfront.</a></p>
+          <p class="pricing-trust-callout"><a href="/pricing">Cloud and Microsoft 365 management is part of every managed plan — pricing published upfront.</a></p>
         </div>
       </section>
 
@@ -540,15 +540,15 @@ def build_page(chrome, service, slug, city):
         <div class="container">
           <h2>Migrations without losing a workday</h2>
           <p>The reason businesses put off a cloud move is fear of the cutover — the weekend where email breaks and Monday is chaos. We plan around that. Mailboxes and files are pre-staged and synced, the cutover happens on your schedule, and we validate everything before your team logs in Monday morning. Permissions, shared mailboxes, calendar sharing, and line-of-business integrations are tested, not assumed.</p>
-          <p>Because the same team manages the environment afterward, there is no handoff to a stranger — the engineer who moved you is the one who answers when you have a question. The cloud work sits inside <a href="managed-it-services.html">managed IT</a> and a real <a href="help-desk-it-support.html">help desk</a>.</p>
+          <p>Because the same team manages the environment afterward, there is no handoff to a stranger — the engineer who moved you is the one who answers when you have a question. The cloud work sits inside <a href="/managed-it-services">managed IT</a> and a real <a href="/help-desk-it-support">help desk</a>.</p>
         </div>
       </section>
 
       <section class="location-section">
         <div class="container">
           <h2>Local cloud support, part of a complete IT program</h2>
-          <p>The cloud and Microsoft 365 program is part of our complete <a href="{slug}.html">{name} IT services</a>, alongside <a href="cybersecurity-{slug}.html">cybersecurity</a> and a real <a href="help-desk-it-support.html">help desk</a>. We are based on the Central Coast, so on-site work is genuinely local, with the same remote management nationwide.</p>
-          <p>We also serve {nearby}. For the statewide picture of our cloud work, see the main <a href="cloud-services.html">cloud services</a> page.</p>
+          <p>The cloud and Microsoft 365 program is part of our complete <a href="/{slug}">{name} IT services</a>, alongside <a href="/cybersecurity-{slug}">cybersecurity</a> and a real <a href="/help-desk-it-support">help desk</a>. We are based on the Central Coast, so on-site work is genuinely local, with the same remote management nationwide.</p>
+          <p>We also serve {nearby}. For the statewide picture of our cloud work, see the main <a href="/cloud-services">cloud services</a> page.</p>
         </div>
       </section>
 
@@ -567,14 +567,14 @@ def build_page(chrome, service, slug, city):
             <i class="fi fi-rs-calendar-day" aria-hidden="true"></i>
             Book your free assessment
           </a>
-          <a href="contact.html" class="location-btn location-btn-secondary">
+          <a href="/contact" class="location-btn location-btn-secondary">
             <i class="fi fi-rs-envelope" aria-hidden="true"></i>
             Send a Message
           </a>
         </div>
       </section>"""
 
-    url = f"https://ghosxt.com/{page_slug}.html"
+    url = f"https://ghosxt.com/{page_slug}"
     og_image = f"https://ghosxt.com/assets/img/og/{page_slug}.png"
 
     jsonld = f"""    <script type="application/ld+json">

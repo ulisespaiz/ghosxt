@@ -66,7 +66,7 @@ def extract(path):
     category = CATEGORY_ALIASES.get(category, category)
 
     return {
-        "href": path.name,
+        "href": f"/blog/{path.stem}",
         "title": title,
         "date_iso": date_iso,
         "category": category,

@@ -295,7 +295,7 @@ def cards_html(cards):
 
 
 def nearby_links(nearby):
-    parts = [f'<a href="{slug}.html">{name}</a>' for slug, name in nearby]
+    parts = [f'<a href="/{slug}">{name}</a>' for slug, name in nearby]
     if len(parts) > 1:
         return ", ".join(parts[:-1]) + ", and " + parts[-1]
     return parts[0] if parts else ""
@@ -308,7 +308,7 @@ def build_page(chrome, slug, city):
     nearby = nearby_links(city["nearby"])
 
     page_slug = f"it-help-{slug}"
-    url = f"https://ghosxt.com/{page_slug}.html"
+    url = f"https://ghosxt.com/{page_slug}"
     og_image = f"https://ghosxt.com/assets/img/og/{page_slug}.png"
 
     title = f"IT Support &amp; Help Desk in {name}, CA | Ghosxt"
@@ -340,7 +340,7 @@ def build_page(chrome, slug, city):
     body = f"""      <section class="location-hero">
         <div class="container">
           <nav class="location-breadcrumbs" aria-label="Breadcrumb">
-            <a href="index.html">Home</a><span class="sep">&rsaquo;</span><a href="help-desk-it-support.html">IT Help Desk &amp; Support</a><span class="sep">&rsaquo;</span><span aria-current="page">{name}</span>
+            <a href="/index">Home</a><span class="sep">&rsaquo;</span><a href="/help-desk-it-support">IT Help Desk &amp; Support</a><span class="sep">&rsaquo;</span><span aria-current="page">{name}</span>
           </nav>
           <h1>{h1}</h1>
           <p class="lead">{city['lead']}</p>
@@ -354,7 +354,7 @@ def build_page(chrome, slug, city):
               (831) 204-0501
             </a>
           </div>
-          <p class="pricing-trust-callout"><a href="pricing.html">Help desk and IT support are built into every managed plan &mdash; pricing published upfront.</a></p>
+          <p class="pricing-trust-callout"><a href="/pricing">Help desk and IT support are built into every managed plan &mdash; pricing published upfront.</a></p>
         </div>
       </section>
 
@@ -397,8 +397,8 @@ def build_page(chrome, slug, city):
       <section class="location-section">
         <div class="container">
           <h2>A help desk that's part of complete IT</h2>
-          <p>Day-to-day support works best when the same team also runs and secures the systems behind it. Our {name} help desk sits inside <a href="managed-it-services.html">managed IT</a> &mdash; monitoring, patching, <a href="cybersecurity.html">cybersecurity</a>, <a href="cloud-services.html">Microsoft 365 and cloud</a>, and <a href="backup-disaster-recovery.html">backup</a> &mdash; so the engineer who answers your ticket is the one who knows your environment. For the full picture of our support model, see <a href="help-desk-it-support.html">IT help desk &amp; support</a>.</p>
-          <p>We serve {name} as part of our coverage across <a href="{county_slug}.html">{county_name}</a>, and also support nearby {nearby}. Based on the Central Coast, on-site response is genuinely local, with the same remote management nationwide.</p>
+          <p>Day-to-day support works best when the same team also runs and secures the systems behind it. Our {name} help desk sits inside <a href="/managed-it-services">managed IT</a> &mdash; monitoring, patching, <a href="/cybersecurity">cybersecurity</a>, <a href="/cloud-services">Microsoft 365 and cloud</a>, and <a href="/backup-disaster-recovery">backup</a> &mdash; so the engineer who answers your ticket is the one who knows your environment. For the full picture of our support model, see <a href="/help-desk-it-support">IT help desk &amp; support</a>.</p>
+          <p>We serve {name} as part of our coverage across <a href="/{county_slug}">{county_name}</a>, and also support nearby {nearby}. Based on the Central Coast, on-site response is genuinely local, with the same remote management nationwide.</p>
         </div>
       </section>
 
@@ -417,7 +417,7 @@ def build_page(chrome, slug, city):
             <i class="fi fi-rs-calendar-day" aria-hidden="true"></i>
             Book your free assessment
           </a>
-          <a href="contact.html" class="location-btn location-btn-secondary">
+          <a href="/contact" class="location-btn location-btn-secondary">
             <i class="fi fi-rs-envelope" aria-hidden="true"></i>
             Send a Message
           </a>
@@ -442,7 +442,7 @@ def build_page(chrome, slug, city):
             "@type": "BreadcrumbList",
             "itemListElement": [
               {{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ghosxt.com/" }},
-              {{ "@type": "ListItem", "position": 2, "name": "IT Help Desk & Support", "item": "https://ghosxt.com/help-desk-it-support.html" }},
+              {{ "@type": "ListItem", "position": 2, "name": "IT Help Desk & Support", "item": "https://ghosxt.com/help-desk-it-support" }},
               {{ "@type": "ListItem", "position": 3, "name": "{name}", "item": "{url}" }}
             ]
           }},

@@ -18,8 +18,38 @@
 /web-design-soledad                 /web-design-salinas   301
 /web-design-soledad.html            /web-design-salinas   301
 
-# Legacy URL fix: ghosxt-cares page was previously linked as /cares.html
-/cares.html   /ghosxt-cares.html   301
+# Legacy URL fix: ghosxt-cares page was previously linked as /cares.html and /cares
+/cares.html   /ghosxt-cares   301
+/cares        /ghosxt-cares   301
 
 # Renamed Salinas IT support post to a cleaner slug
-/blog/best-it-support-small-businesses-salinas-ca.html   /blog/best-it-support-in-salinas.html   301
+/blog/best-it-support-small-businesses-salinas-ca.html   /blog/best-it-support-in-salinas   301
+/blog/best-it-support-small-businesses-salinas-ca         /blog/best-it-support-in-salinas   301
+
+# Extensionless URL normalization (spec P0-1/P0-2): homepage and blog-index
+# special cases must come before the generic placeholder rules below, since
+# both would otherwise also match "/index.html" / "/blog/index.html" and send
+# them to "/index" / "/blog/index" instead of "/" / "/blog/".
+/index.html         /    301
+/blog/index.html     /blog/    301
+
+# Generic .html -> extensionless fallback for every other page. Cloudflare
+# Workers/Pages static-asset serving already does this automatically via the
+# default html_handling="auto-trailing-slash" behavior (e.g. /foo.html -> 307
+# to /foo) even with no _redirects rule at all -- these two explicit rules
+# exist to upgrade that to a real 301 (permanent) redirect for correct SEO
+# link-equity consolidation, and must stay LAST (top-to-bottom, first match
+# wins; static/exact rules above must precede these dynamic/placeholder ones
+# per Cloudflare's own redirect-ordering guidance).
+#
+# ":page" cannot contain "/" in Cloudflare's path-placeholder matching, so:
+#   /:page.html          matches only single-segment root paths, e.g.
+#                         /salinas.html, /about.html -- NOT /blog/foo.html
+#                         (two segments) and NOT anything under /assets/...
+#                         (assets never carry a bare ".html" single-segment
+#                         name in this repo; all assets live under /assets/).
+#   /blog/:page.html      matches only two-segment /blog/<name>.html paths --
+#                         NOT /blog/sub/foo.html (three segments) and NOT
+#                         /foo.html (wrong first segment).
+/:page.html          /:page         301
+/blog/:page.html      /blog/:page    301
