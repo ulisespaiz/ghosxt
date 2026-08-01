@@ -21,7 +21,6 @@ CITIES = {
     "carmel": "Carmel",
     "gilroy": "Gilroy",
     "hollister": "Hollister",
-    "king-city": "King City",
     "marina": "Marina",
     "monterey": "Monterey",
     "pacific-grove": "Pacific Grove",
@@ -29,7 +28,6 @@ CITIES = {
     "san-jose": "San Jose",
     "santa-cruz": "Santa Cruz",
     "seaside": "Seaside",
-    "soledad": "Soledad",
     "watsonville": "Watsonville",
 }
 
