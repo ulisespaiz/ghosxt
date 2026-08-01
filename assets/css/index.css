@@ -121,7 +121,7 @@
 }
 
 .hero-trust-stars {
-  color: #8f6b00;
+  color: var(--ghosxt-red-0);
   letter-spacing: 1px;
 }
 
@@ -153,7 +153,7 @@
   transform: translateY(-1px);
 }
 .hero-trust-chip .hero-trust-stars {
-  color: #8f6b00;
+  color: var(--ghosxt-red-0);
   letter-spacing: 1px;
 }
 .hero-trust-chip-sep {
@@ -627,7 +627,7 @@
 .solution-box.drag-over {
   border-color: var(--ghosxt-red-1);
   border-style: dashed;
-  box-shadow: 0 0 20px rgba(255, 23, 68, 0.3);
+  box-shadow: 0 0 20px rgba(183, 28, 28, 0.3);
 }
 
 .solution-box-icon {
@@ -1055,7 +1055,7 @@
 /* Add red glow to middle circle */
 .radar-circle:nth-child(2) {
   border-color: var(--ghosxt-red-1);
-  box-shadow: 0 0 4px rgba(255, 23, 68, 0.2);
+  box-shadow: 0 0 4px rgba(183, 28, 28, 0.2);
 }
 
 /* Infrastructure Illustration */
@@ -1089,9 +1089,9 @@
   height: 100%;
   background: linear-gradient(
     to right,
-    rgba(255, 23, 68, 0) 0%,
-    rgba(255, 23, 68, 0.8) 50%,
-    rgba(255, 23, 68, 1) 100%
+    rgba(183, 28, 28, 0) 0%,
+    rgba(183, 28, 28, 0.8) 50%,
+    rgba(183, 28, 28, 1) 100%
   );
   transform: translateY(-50%);
   animation: pulseLineHorizontal 3s ease-in-out infinite;
@@ -1150,9 +1150,9 @@
     height: 20px;
     background: linear-gradient(
       to bottom,
-      rgba(255, 23, 68, 0) 0%,
-      rgba(255, 23, 68, 0.8) 50%,
-      rgba(255, 23, 68, 1) 100%
+      rgba(183, 28, 28, 0) 0%,
+      rgba(183, 28, 28, 0.8) 50%,
+      rgba(183, 28, 28, 1) 100%
     );
     transform: translateX(-50%);
     animation: pulseLineVertical 3s ease-in-out infinite;
@@ -2443,9 +2443,8 @@
 
 .chat-header-status {
   font-size: 0.85rem;
-  color: var(--ghosxt-black);
+  color: var(--text-inverse-secondary);
   font-family: var(--font-family-2);
-  opacity: 0.7;
 }
 
 .chat-header-status.online {
@@ -3655,10 +3654,10 @@
 }
 
 .ctpat-promo-dot:nth-child(2) {
-  background: #fbbf24;
+  background: #9ca3af;
 }
 .ctpat-promo-dot:nth-child(3) {
-  background: #22c55e;
+  background: var(--ghosxt-success);
 }
 
 .ctpat-promo-card-label {
@@ -3689,16 +3688,16 @@
 }
 
 .ctpat-row-pass {
-  background: rgba(22, 163, 74, 0.05);
-  border-color: rgba(22, 163, 74, 0.15);
+  background: rgba(21, 121, 59, 0.05);
+  border-color: rgba(21, 121, 59, 0.15);
 }
 .ctpat-row-warn {
-  background: rgba(234, 179, 8, 0.05);
-  border-color: rgba(234, 179, 8, 0.2);
+  background: rgba(0, 0, 0, 0.05);
+  border-color: rgba(0, 0, 0, 0.18);
 }
 .ctpat-row-fail {
-  background: rgba(220, 38, 38, 0.05);
-  border-color: rgba(220, 38, 38, 0.15);
+  background: rgba(183, 28, 28, 0.05);
+  border-color: rgba(183, 28, 28, 0.15);
 }
 
 .ctpat-promo-icon {
@@ -3717,11 +3716,11 @@
 }
 
 .ctpat-icon-pass {
-  background: #16a34a;
+  background: var(--ghosxt-success);
   color: #fff;
 }
 .ctpat-icon-warn {
-  background: #ca8a04;
+  background: #4b5563;
   color: #fff;
 }
 .ctpat-icon-fail {
@@ -3754,15 +3753,15 @@
 }
 
 .ctpat-status-pass {
-  background: rgba(22, 163, 74, 0.1);
-  color: #15793b;
+  background: var(--ghosxt-success-tint);
+  color: var(--ghosxt-success);
 }
 .ctpat-status-warn {
-  background: rgba(234, 179, 8, 0.1);
-  color: #9a5408;
+  background: rgba(0, 0, 0, 0.06);
+  color: #4b5563;
 }
 .ctpat-status-fail {
-  background: rgba(220, 38, 38, 0.1);
+  background: rgba(183, 28, 28, 0.1);
   color: var(--ghosxt-red-0);
 }
 
@@ -4746,8 +4745,8 @@ main > div:not(.hero-section) .problem-badge .badge-container,
 /* Trust and CTA sections are intentionally more distinctive than content sections. */
 .testimonial-section {
   background:
-    radial-gradient(circle at 12% 16%, rgba(255, 23, 68, 0.1), transparent 30%),
-    linear-gradient(180deg, #fff 0%, rgba(255, 23, 68, 0.045) 100%);
+    radial-gradient(circle at 12% 16%, rgba(183, 28, 28, 0.1), transparent 30%),
+    linear-gradient(180deg, #fff 0%, rgba(183, 28, 28, 0.045) 100%);
 }
 
 .testimonial-card {
@@ -4765,7 +4764,7 @@ main > div:not(.hero-section) .problem-badge .badge-container,
 
 .cares-promo-section {
   background:
-    linear-gradient(135deg, rgba(255, 23, 68, 0.08), transparent 38%),
+    linear-gradient(135deg, rgba(183, 28, 28, 0.08), transparent 38%),
     var(--ghosxt-white);
 }
 

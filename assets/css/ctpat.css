@@ -218,10 +218,10 @@
 }
 
 .ctpat-dot:nth-child(2) {
-  background: #fbbf24;
+  background: #9ca3af;
 }
 .ctpat-dot:nth-child(3) {
-  background: #22c55e;
+  background: var(--ghosxt-success);
 }
 
 .ctpat-panel-label {
@@ -252,16 +252,16 @@
 }
 
 .ctpat-check-pass {
-  background: rgba(22, 163, 74, 0.05);
-  border-color: rgba(22, 163, 74, 0.15);
+  background: rgba(21, 121, 59, 0.05);
+  border-color: rgba(21, 121, 59, 0.15);
 }
 .ctpat-check-warn {
-  background: rgba(234, 179, 8, 0.05);
-  border-color: rgba(234, 179, 8, 0.2);
+  background: rgba(0, 0, 0, 0.05);
+  border-color: rgba(0, 0, 0, 0.18);
 }
 .ctpat-check-fail {
-  background: rgba(220, 38, 38, 0.05);
-  border-color: rgba(220, 38, 38, 0.15);
+  background: rgba(183, 28, 28, 0.05);
+  border-color: rgba(183, 28, 28, 0.15);
 }
 
 .ctpat-check-icon {
@@ -280,11 +280,11 @@
 }
 
 .ctpat-icon-pass {
-  background: #16a34a;
+  background: var(--ghosxt-success);
   color: #fff;
 }
 .ctpat-icon-warn {
-  background: #ca8a04;
+  background: #4b5563;
   color: #fff;
 }
 .ctpat-icon-fail {
@@ -317,15 +317,15 @@
 }
 
 .ctpat-status-pass {
-  background: rgba(22, 163, 74, 0.1);
-  color: #15793b;
+  background: var(--ghosxt-success-tint);
+  color: var(--ghosxt-success);
 }
 .ctpat-status-warn {
-  background: rgba(234, 179, 8, 0.1);
-  color: #9a5408;
+  background: rgba(0, 0, 0, 0.06);
+  color: #4b5563;
 }
 .ctpat-status-fail {
-  background: rgba(220, 38, 38, 0.1);
+  background: rgba(183, 28, 28, 0.1);
   color: var(--ghosxt-red-0);
 }
 
@@ -489,7 +489,7 @@
   display: block;
   font-size: 0.95rem;
   margin-bottom: 0.4rem;
-  font-family: var(--font-family-1, "Roboto", sans-serif);
+  font-family: var(--font-family-2, "Roboto", sans-serif);
   color: var(--ghosxt-black);
 }
 
@@ -674,9 +674,9 @@
 }
 
 .ctpat-criterion-badge {
-  background: rgba(220, 38, 38, 0.08);
+  background: rgba(183, 28, 28, 0.08);
   color: var(--ghosxt-red-0);
-  border: 1px solid rgba(220, 38, 38, 0.2);
+  border: 1px solid rgba(183, 28, 28, 0.2);
   border-radius: 20px;
   padding: 0.15rem 0.625rem;
   font-size: 0.7rem;

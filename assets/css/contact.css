@@ -302,14 +302,14 @@
 
 .form-status[data-kind="success"] {
     background: #e6f4ea;
-    border: 1px solid #137333;
-    color: #0d652d;
+    border: 1px solid var(--ghosxt-success, #15793b);
+    color: var(--ghosxt-success, #15793b);
 }
 
 .form-status[data-kind="error"] {
     background: #fce8e6;
-    border: 1px solid #b71c1c;
-    color: #8a1010;
+    border: 1px solid var(--ghosxt-red-0, #b71c1c);
+    color: var(--ghosxt-red-0, #b71c1c);
 }
 
 .cf-turnstile {

@@ -78,11 +78,11 @@
 }
 
 .cares-hero-badge .badge-container {
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--text-inverse);
 }
 
 .cares-hero-badge .badge-text {
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--text-inverse);
 }
 
 .cares-hero-badge i {
@@ -266,7 +266,7 @@
 .cares-mission-body p {
   font-size: 1.125rem;
   font-family: var(--font-family-2);
-  color: rgba(0, 0, 0, 0.7);
+  color: var(--text-primary);
   line-height: 1.7;
 }
 
@@ -342,7 +342,7 @@
 .cares-steps-subtitle {
   font-size: 1.125rem;
   font-family: var(--font-family-2);
-  color: rgba(0, 0, 0, 0.6);
+  color: var(--text-secondary);
   line-height: 1.6;
   max-width: 600px;
   margin: 0 auto 3rem;
@@ -394,7 +394,7 @@
 .cares-step-desc {
   font-size: 0.95rem;
   font-family: var(--font-family-2);
-  color: rgba(0, 0, 0, 0.65);
+  color: var(--text-secondary);
   line-height: 1.6;
 }
 
@@ -443,7 +443,7 @@
 .apply-note {
   font-family: var(--font-family-2);
   font-size: 0.95rem;
-  color: rgba(0, 0, 0, 0.6);
+  color: var(--text-secondary);
   text-align: center;
 }
 
@@ -586,7 +586,7 @@
   padding: 0 1.5rem 1.25rem;
   font-family: var(--font-family-2);
   font-size: 1rem;
-  color: rgba(0, 0, 0, 0.7);
+  color: var(--text-primary);
   line-height: 1.65;
 }
 
@@ -658,7 +658,7 @@
 .provides-subtitle {
   font-size: 1.125rem;
   font-family: var(--font-family-2);
-  color: rgba(0, 0, 0, 0.6);
+  color: var(--text-secondary);
   line-height: 1.6;
   max-width: 600px;
   margin-bottom: 3rem;
@@ -718,7 +718,7 @@
 .provides-card-desc {
   font-size: 0.95rem;
   font-family: var(--font-family-2);
-  color: rgba(0, 0, 0, 0.65);
+  color: var(--text-secondary);
   line-height: 1.6;
 }
 
@@ -795,7 +795,7 @@
 .covers-subtitle {
   font-size: 1.125rem;
   font-family: var(--font-family-2);
-  color: rgba(0, 0, 0, 0.6);
+  color: var(--text-secondary);
   line-height: 1.6;
   max-width: 600px;
   margin-bottom: 3rem;
@@ -912,7 +912,7 @@
 .eligibility-subtitle {
   font-size: 1.125rem;
   font-family: var(--font-family-2);
-  color: rgba(0, 0, 0, 0.6);
+  color: var(--text-secondary);
   line-height: 1.6;
   max-width: 600px;
   margin-bottom: 3rem;
@@ -1001,7 +1001,7 @@
 .apply-text {
   font-size: 1.125rem;
   font-family: var(--font-family-2);
-  color: rgba(0, 0, 0, 0.6);
+  color: var(--text-secondary);
   line-height: 1.6;
   max-width: 560px;
 }

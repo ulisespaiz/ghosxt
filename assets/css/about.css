@@ -978,7 +978,7 @@
 
 .why-exist-card:nth-child(2) {
     transform: rotate(0deg);
-    background: #FCE9CC;
+    background: #F5D6D6;
     grid-column: 2;
     margin-top: 3rem;
 }
