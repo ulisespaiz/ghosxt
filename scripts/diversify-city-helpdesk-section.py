@@ -53,11 +53,6 @@ CITIES = {
         'A machine shop or family business in Hollister does not want a ticket number &mdash; they want someone who picks up. Our <a href="help-desk-it-support.html">IT help desk</a> gives Hollister businesses live phone, email, and client-portal support, most issues resolved remotely the same hour, and on-site help right next door when hardware or a new-hire setup needs it.',
         'Most of what we fix day to day is ordinary: Microsoft 365 and Outlook hiccups, locked accounts, printers, Wi-Fi and VPN trouble, and computers that have slowed down &mdash; the stuff that quietly costs a small shop hours when there is no one local to call. It comes with every <a href="managed-it-services.html">managed IT</a> plan, so prevention and support are the same team, not a hand-off.',
     ),
-    "king-city": (
-        "King City",
-        'South County has long been the part of Monterey County most IT providers won\'t bother driving to. Our <a href="help-desk-it-support.html">IT help desk</a> gives King City businesses live phone, email, and client-portal support, most issues resolved remotely the same hour, and genuine on-site response &mdash; it\'s a regular stop on our route up the valley from Salinas, not a special trip.',
-        'Day to day, that covers Microsoft 365 and Outlook problems, locked accounts, printers, Wi-Fi and VPN drops, and slow computers &mdash; the everyday support that a grower, rancher, or clinic loses hours to when no one local answers the phone. It\'s included in every <a href="managed-it-services.html">managed IT</a> plan, so the same engineer who understands valley connectivity and ag seasonality is the one you reach.',
-    ),
     "marina": (
         "Marina",
         'A growing Marina business adds new hires, new hardware, and new accounts faster than most IT setups can keep up with. Our <a href="help-desk-it-support.html">IT help desk</a> gives Marina teams live phone, email, and client-portal support, most issues resolved remotely the same hour, and on-site help that\'s a five-minute drive when a new-hire laptop or a network drop needs hands on it.',
@@ -88,11 +83,6 @@ CITIES = {
         'Seaside\'s retail, restaurants, and auto shops have grown faster than the local IT options have kept up with. Our <a href="help-desk-it-support.html">IT help desk</a> gives live phone, email, and client-portal support, most issues resolved remotely the same hour, and on-site help across Seaside &mdash; a 10-minute drive, not a special trip.',
         'Day to day that\'s Microsoft 365 and Outlook trouble, locked accounts, printers, Wi-Fi and VPN drops, and slow computers &mdash; the everyday support a busy shop loses hours to when no one picks up. It\'s included in every <a href="managed-it-services.html">managed IT</a> plan, at pricing built for a business that watches every dollar.',
     ),
-    "soledad": (
-        "Soledad",
-        'South County businesses are used to being skipped by IT providers that won\'t make the drive. Our <a href="help-desk-it-support.html">IT help desk</a> gives Soledad businesses live phone, email, and client-portal support, most issues resolved remotely the same hour, and on-site response &mdash; we\'re just up US-101 in Salinas, so it\'s routine, not exceptional.',
-        'Day to day that\'s Microsoft 365 and Outlook problems, locked accounts, printers, Wi-Fi and VPN drops, and slow computers &mdash; the everyday friction that costs a grower or winery real hours when no one local answers. It\'s included in every <a href="managed-it-services.html">managed IT</a> plan, from an engineer who already understands valley connectivity and seasonal ag cycles.',
-    ),
     "watsonville": (
         "Watsonville",
         'Ag and food-processing businesses in Watsonville run on tight seasonal timelines, so downtime during a labor surge or a packing run isn\'t an option. Our <a href="help-desk-it-support.html">IT help desk</a> gives live phone, email, and client-portal support, most issues resolved remotely the same hour, and on-site help across Watsonville when hardware needs attention.',
@@ -101,9 +91,7 @@ CITIES = {
 }
 
 
-# king-city.html and soledad.html say "on-site help across South County"
-# instead of "...across <City>" in paragraph 1 — everything else matches.
-REGION_OVERRIDE = {"king-city": "South County", "soledad": "South County"}
+REGION_OVERRIDE = {}
 
 
 def main():

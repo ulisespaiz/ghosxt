@@ -44,7 +44,6 @@ CYBER_META_DESC = {
     'carmel': 'Cybersecurity for Carmel-by-the-Sea galleries, inns &amp; shops: EDR, wire-fraud defense, PCI, 24/7 monitoring. Discrete, local. Free assessment.',
     'gilroy': 'Cybersecurity for Gilroy warehouses, 3PLs, food processors &amp; retailers: EDR, MFA, ransomware protection, 24/7 monitoring. Free assessment.',
     'hollister': 'Cybersecurity for Hollister machine shops, vineyards &amp; family businesses in San Benito County: EDR, MFA, 24/7 monitoring. Free assessment.',
-    'king-city': 'Cybersecurity for King City &amp; South Monterey County: EDR, MFA, OT segmentation &amp; immutable backup vs harvest-window ransomware. DoD-cleared engineer.',
     'marina': "Cybersecurity for Marina's fast-growing businesses: EDR, phishing-resistant MFA, identity hardening, immutable backup, 24/7 monitoring. Free assessment.",
     'monterey': 'Cybersecurity for Monterey businesses: EDR, MFA, immutable backup, 24/7 monitoring. For hospitality, defense contractors &amp; healthcare. Free assessment.',
     'pacific-grove': 'Government-grade cybersecurity for Pacific Grove small business: EDR, MFA, identity hardening, immutable backup, 24/7 monitoring. Free assessment.',
@@ -52,7 +51,6 @@ CYBER_META_DESC = {
     'san-jose': 'Cybersecurity for San Jose businesses: EDR, MFA, immutable backup, 24/7 monitoring. Silicon Valley security without the pricing. Free assessment.',
     'santa-cruz': 'Cybersecurity for Santa Cruz businesses: EDR, MFA, immutable backup, 24/7 monitoring. Built for tech startups, tourism &amp; healthcare. Free assessment.',
     'seaside': 'Government-grade cybersecurity for Seaside small business: EDR, MFA, identity hardening, immutable backup, 24/7 monitoring. Free assessment.',
-    'soledad': 'Cybersecurity for Soledad wineries, vineyards &amp; produce: EDR, MFA, cold-chain OT segmentation, winery POS protection, 24/7 monitoring. Free assessment.',
     'watsonville': 'Cybersecurity for Watsonville businesses: EDR, MFA, immutable backup, 24/7 monitoring. For berry farms, food processing &amp; cold storage. Free assessment.',
 }
 
@@ -63,7 +61,6 @@ CLOUD_META_DESC = {
     'carmel': 'Microsoft 365 &amp; cloud for Carmel-by-the-Sea galleries, inns &amp; realty offices: hardened tenant, no-downtime migrations, SharePoint, Teams. Free assessment.',
     'gilroy': 'Microsoft 365 &amp; cloud for Gilroy distribution, logistics &amp; food processing: hardened tenant, no-downtime migrations, SharePoint, Teams. Free assessment.',
     'hollister': 'Microsoft 365 &amp; cloud for Hollister machine shops, vineyards &amp; family ops: tenant hardening, migrations off aging servers, SharePoint. Free assessment.',
-    'king-city': 'Microsoft 365 &amp; cloud for King City: off the aging server onto a hardened tenant — email, files &amp; field access from the cooler &amp; ranch office. DoD-cleared.',
     'marina': "Microsoft 365 &amp; cloud for Marina's growing businesses: scalable, hardened M365 setup, no-downtime migrations, SharePoint, Teams, Azure. Free assessment.",
     'monterey': 'Microsoft 365 &amp; cloud for Monterey: hardened setup, no-downtime migrations, SharePoint, Teams, Azure &amp; GCC High for defense contractors. Free assessment.',
     'pacific-grove': 'Microsoft 365 &amp; cloud for Pacific Grove: M365 setup &amp; hardening, no-downtime migrations, SharePoint, Teams, Azure. DoD-cleared engineer. Free assessment.',
@@ -71,7 +68,6 @@ CLOUD_META_DESC = {
     'san-jose': 'Microsoft 365 &amp; cloud for San Jose: hardened setup, no-downtime migrations, SharePoint, Teams. Silicon Valley standards without the price. Free assessment.',
     'santa-cruz': 'Microsoft 365 &amp; cloud for Santa Cruz: hardened setup, no-downtime migrations, SharePoint, Teams. For tech, hybrid teams &amp; healthcare. Free assessment.',
     'seaside': 'Microsoft 365 &amp; cloud for Seaside: M365 setup &amp; hardening, no-downtime migrations, SharePoint, Teams, Azure. DoD-cleared engineer. Free assessment.',
-    'soledad': 'Microsoft 365 &amp; cloud for Soledad wineries, vineyards &amp; produce: harvest-timed migrations, SharePoint &amp; Teams. DoD-cleared in Salinas. Free assessment.',
     'watsonville': 'Microsoft 365 &amp; cloud for Watsonville: hardened setup, no-downtime migrations, SharePoint, Teams. For ag, food processing &amp; cold storage. Free assessment.',
 }
 
@@ -94,12 +90,6 @@ CITIES = {
         "nearby": [("salinas", "Salinas"), ("gilroy", "Gilroy"), ("watsonville", "Watsonville"), ("san-jose", "San Jose")],
         "cloud_exists": False,
     },
-    "king-city": {
-        "name": "King City",
-        "admin": "Monterey County, California",
-        "nearby": [("soledad", "Soledad"), ("salinas", "Salinas"), ("monterey", "Monterey"), ("hollister", "Hollister")],
-        "cloud_exists": False,
-    },
     "marina": {
         "name": "Marina",
         "admin": "Monterey County, California",
@@ -116,12 +106,6 @@ CITIES = {
         "name": "Seaside",
         "admin": "Monterey County, California",
         "nearby": [("marina", "Marina"), ("monterey", "Monterey"), ("pacific-grove", "Pacific Grove"), ("salinas", "Salinas")],
-        "cloud_exists": False,
-    },
-    "soledad": {
-        "name": "Soledad",
-        "admin": "Monterey County, California",
-        "nearby": [("king-city", "King City"), ("salinas", "Salinas"), ("hollister", "Hollister"), ("monterey", "Monterey")],
         "cloud_exists": False,
     },
 }
@@ -202,30 +186,6 @@ CONTENT = {
             ("Is Microsoft 365 secure enough for a small Hollister business?", "Microsoft 365 is secure when configured correctly. We harden the tenant with phishing-resistant MFA and Conditional Access so a small shop or office gets cloud reliability without leaving the door open."),
         ],
     },
-    "king-city": {
-        "cyber_lead": "King City anchors the southern Salinas Valley — agriculture, ranching, vineyards, food processing, and the trucking that moves it all up US-101. It is the part of Monterey County most IT providers treat as too far to serve, which leaves real businesses running on no protection at all. Ghosxt does not write off South County. We bring government-grade cybersecurity, sized and priced for a King City small business, from a DoD-cleared engineer based up the valley in Salinas.",
-        "cyber_threat1": "Agriculture and food businesses are squarely in the crosshairs now: produce coolers, processing lines, and irrigation systems increasingly run on connected technology that was never built to be secured, and a ransomware hit during harvest can spoil product and stop shipments. Trucking and freight operations run on dispatch and ELD systems that cannot go dark. Ranches and growers run lean offices that are easy to phish for payment fraud.",
-        "cyber_threat2": "The controls that stop this are the same ones used to protect government endpoints — EDR, hardened identity, immutable backup, and segmentation of operational technology from the office network. The only thing rural South County has lacked is a provider willing to show up, and that is the gap we close.",
-        "cyber_card_a": ("Ag &amp; Food-Processing OT", "Coolers, processing lines, and irrigation controls segmented away from the office network and monitored, so a ransomware hit during harvest does not spoil product or stop shipments."),
-        "cyber_card_b": ("Trucking &amp; Dispatch Security", "EDR and immutable backup for dispatch and freight systems that cannot go dark, with email hardened against the invoice and payment fraud that targets logistics."),
-        "cyber_diff": "Ag, trucking, and food businesses face cyber-insurers requiring real controls and larger buyers — grocers, shippers, processors — sending security questionnaires before they sign. We put the controls in place that satisfy both and document them. Our <a href=\"blog/cyber-insurance-renewal-checklist-small-business-central-coast.html\">cyber-insurance renewal checklist</a> and <a href=\"agriculture-it-services.html\">agriculture IT</a> page cover what South County operations specifically need.",
-        "cyber_faq": [
-            ("Do you provide cybersecurity for small businesses in King City?", "Yes. Ghosxt provides full cybersecurity for King City and the southern Salinas Valley: endpoint detection and response, phishing-resistant MFA, identity hardening, immutable backup, and 24/7 monitoring. We are based up the valley in Salinas, so on-site response in South County is real, not theoretical."),
-            ("Do you actually serve South County, or just say you do?", "We genuinely serve it. Most providers treat King City, Greenfield, and Soledad as too far. We are based in Salinas and built our model around showing up for the businesses other shops skip."),
-            ("Can you protect farm, cooler, and processing systems from ransomware?", "Yes. We deploy EDR and immutable backup, and segment operational technology — coolers, processing lines, irrigation controls — away from the office network so a compromise cannot stop production during harvest."),
-            ("How much does cybersecurity cost for a King City business?", "Our pricing is published upfront. Most operations are best served by managed IT with cybersecurity built in. Start with a free assessment for a written, prioritized plan and a real number."),
-        ],
-        "cloud_lead": "King City and the southern Salinas Valley run on agriculture, ranching, food processing, and trucking — operations spread across fields, coolers, and the road, often tied to an aging server in an office no IT provider wants to drive to. Microsoft 365 and the right cloud foundation give a South County business reliable email, files, and remote access from anywhere. Ghosxt handles cloud and Microsoft 365 work for King City small business, from a DoD-cleared engineer based up the valley in Salinas.",
-        "cloud_economy": "Growers and ranchers want records, maps, and email reachable from the field, not chained to an office PC. Food processors want line-of-business and compliance data backed up and available, not trapped on one fragile server. Trucking operations want dispatch and documents on the road. Microsoft 365 and a clean cloud migration deliver that reach and resilience — when the environment is built and hardened correctly.",
-        "cloud_card_a": ("Field &amp; Road Access", "Email, files, and records reachable from the field, the cooler, and the cab on secured devices, so a South County operation is not tied to one office PC."),
-        "cloud_card_b": ("Off the Aging Server", "Grower, processor, and dispatch data moved off the old on-prem box into Microsoft 365 and Azure, with backups built in, so a hardware failure is no longer a harvest emergency."),
-        "cloud_faq": [
-            ("Do you provide Microsoft 365 support for King City businesses?", "Yes. We set up, harden, and manage Microsoft 365 for King City and southern Salinas Valley operations — email, Teams, SharePoint, OneDrive, and licensing. On-site from our Salinas base, remote nationwide."),
-            ("Do you really serve the southern Salinas Valley?", "Yes. We are based in Salinas and built our model around serving South County — King City, Greenfield, Soledad — that other providers treat as too far to bother with."),
-            ("Can you move our operation off an aging on-prem server?", "Yes. We migrate grower, processor, and dispatch data off old on-prem hardware into Microsoft 365 and Azure, with the cutover planned around harvest and your schedule so you do not lose a workday."),
-            ("Is Microsoft 365 secure enough for an ag or trucking business?", "Microsoft 365 is secure when configured correctly. We harden the tenant with phishing-resistant MFA and Conditional Access so a grower, processor, or carrier gets cloud reach without leaving the door open."),
-        ],
-    },
     "marina": {
         "cyber_lead": "Marina is the fastest-growing part of the Monterey Peninsula — built on the old Fort Ord footprint, anchored by CSU Monterey Bay, and increasingly home to ag-tech and small startups. Growth means new networks, new hires, and new ways to get breached, usually faster than a young company's security keeps up. Ghosxt brings government-grade cybersecurity that scales with a growing Marina business, from a DoD-cleared engineer.",
         "cyber_threat1": "Fast-growing companies are breached in predictable ways: identity and access sprawl as headcount climbs, devices added faster than they are secured, and the assumption that there is time to lock things down later. Startups and ag-tech firms hold IP and customer data that draw targeted phishing. Hybrid and student-adjacent teams around CSUMB widen the attack surface with personal devices and shared logins.",
@@ -296,30 +256,6 @@ CONTENT = {
             ("Can you migrate our email and files without downtime?", "Yes. We migrate email and shared files to Microsoft 365 with the cutover planned around your schedule, usually over a weekend, so your team does not lose a workday."),
             ("Can you move us off our old PC or server?", "Yes. We move the files and data your business depends on off aging hardware into Microsoft 365, with backups built in, so a failure is no longer an emergency."),
             ("Is Microsoft 365 secure enough for a small Seaside business?", "Microsoft 365 is secure when configured correctly. We harden the tenant with phishing-resistant MFA and Conditional Access so a shop, store, or office gets cloud reliability without leaving the door open."),
-        ],
-    },
-    "soledad": {
-        "cyber_lead": "Soledad sits in the heart of Salinas Valley wine and produce country — vineyards, growers, food processors, and the small businesses that keep South County running. Most are written off by Bay Area IT shops as too far to serve, which leaves them exposed at exactly the moment ag and food businesses have become ransomware targets. Ghosxt brings government-grade cybersecurity, sized and priced for a Soledad small business, from a DoD-cleared engineer just up the valley in Salinas.",
-        "cyber_threat1": "Food and produce operations now run connected technology end to end — coolers, processing and packing lines, irrigation, and logistics — much of it never designed to be secured, and all of it costly to lose during a harvest window. Wineries run point-of-sale and club and e-commerce systems holding card data. Growers run lean offices that are easy to phish for payment and invoice fraud.",
-        "cyber_threat2": "The defenses are the same proven controls used on government endpoints — EDR, hardened identity, immutable backup, and segmentation of operational technology from the office network. The thing South County has lacked is a provider who will actually drive out, and being based in Salinas is exactly what lets us.",
-        "cyber_card_a": ("Produce &amp; Cold-Chain OT", "Coolers, packing lines, and irrigation controls segmented from the office network and monitored, so a ransomware hit during harvest does not spoil product or stop shipments."),
-        "cyber_card_b": ("Winery POS &amp; Club Data", "PCI-aware protection for tasting-room point-of-sale, wine-club, and e-commerce systems that hold customer and card data, with email hardened against fraud."),
-        "cyber_diff": "Ag, wine, and food businesses face cyber-insurers requiring real controls and larger buyers — grocers, distributors, processors — sending security questionnaires before they sign. We put the controls in place that satisfy both and document them. Our <a href=\"blog/cyber-insurance-renewal-checklist-small-business-central-coast.html\">cyber-insurance renewal checklist</a> and <a href=\"agriculture-it-services.html\">agriculture IT</a> page cover what valley operations need.",
-        "cyber_faq": [
-            ("Do you provide cybersecurity for small businesses in Soledad?", "Yes. Ghosxt provides full cybersecurity for Soledad and the Salinas Valley: endpoint detection and response, phishing-resistant MFA, identity hardening, immutable backup, and 24/7 monitoring. We are based up the valley in Salinas, so on-site response in South County is real."),
-            ("Do you actually serve South County?", "Yes. Most providers treat Soledad, Greenfield, and King City as too far. We are based in Salinas and built our model around showing up for the valley businesses other shops skip."),
-            ("Can you protect cold-chain and processing systems from ransomware?", "Yes. We deploy EDR and immutable backup, and segment operational technology — coolers, packing lines, irrigation — from the office network so a compromise cannot stop production during harvest."),
-            ("Do you secure winery and tasting-room point-of-sale?", "Yes. We deliver PCI-aware protection for tasting-room point-of-sale, wine-club, and e-commerce systems, segment the payment network, and harden email against fraud."),
-        ],
-        "cloud_lead": "Soledad and the Salinas Valley run on vineyards, growers, and food processors — operations spread across fields, tasting rooms, and packing houses, usually tied to an aging server no Bay Area provider wants to drive out to maintain. Microsoft 365 and the right cloud foundation give a valley business reliable email, files, and remote access from anywhere. Ghosxt handles cloud and Microsoft 365 work for Soledad small business, from a DoD-cleared engineer based in Salinas.",
-        "cloud_economy": "Growers want records and email reachable from the field, not stuck on an office PC. Wineries want club, e-commerce, and tasting-room systems tied into reliable email and files. Processors want compliance and production data backed up and available rather than trapped on one server. Microsoft 365 and a clean cloud migration deliver that reach and resilience — when the environment is built and hardened correctly.",
-        "cloud_card_a": ("Field &amp; Tasting-Room Access", "Email, files, and records reachable from the vineyard, the tasting room, and the packing house on secured devices, so a valley operation is not tied to one office PC."),
-        "cloud_card_b": ("Off the Aging Server", "Grower, winery, and processor data moved off the old on-prem box into Microsoft 365 and Azure, with backups built in, so a hardware failure is no longer a harvest emergency."),
-        "cloud_faq": [
-            ("Do you provide Microsoft 365 support for Soledad businesses?", "Yes. We set up, harden, and manage Microsoft 365 for Soledad and Salinas Valley operations — email, Teams, SharePoint, OneDrive, and licensing. On-site from our Salinas base, remote nationwide."),
-            ("Do you really serve the Salinas Valley?", "Yes. We are based in Salinas and built our model around serving South County — Soledad, Greenfield, King City — that other providers treat as too far."),
-            ("Can you move our operation off an aging on-prem server?", "Yes. We migrate grower, winery, and processor data off old on-prem hardware into Microsoft 365 and Azure, with the cutover planned around harvest and your schedule so you do not lose a workday."),
-            ("Is Microsoft 365 secure enough for an ag or winery business?", "Microsoft 365 is secure when configured correctly. We harden the tenant with phishing-resistant MFA and Conditional Access so a grower, winery, or processor gets cloud reach without leaving the door open."),
         ],
     },
 }

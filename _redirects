@@ -1,3 +1,23 @@
+# Geo-trim: King City / Soledad / San Luis Obispo County pages removed, redirect to nearest surviving equivalent
+/king-city                          /salinas   301
+/king-city.html                     /salinas   301
+/soledad                            /salinas   301
+/soledad.html                       /salinas   301
+/san-luis-obispo-county              /managed-it-services      301
+/san-luis-obispo-county.html         /managed-it-services      301
+/cloud-services-king-city           /cloud-services-salinas   301
+/cloud-services-king-city.html      /cloud-services-salinas   301
+/cloud-services-soledad             /cloud-services-salinas   301
+/cloud-services-soledad.html        /cloud-services-salinas   301
+/cybersecurity-king-city            /cybersecurity-salinas   301
+/cybersecurity-king-city.html       /cybersecurity-salinas   301
+/cybersecurity-soledad              /cybersecurity-salinas   301
+/cybersecurity-soledad.html         /cybersecurity-salinas   301
+/web-design-king-city               /web-design-salinas   301
+/web-design-king-city.html          /web-design-salinas   301
+/web-design-soledad                 /web-design-salinas   301
+/web-design-soledad.html            /web-design-salinas   301
+
 # Legacy URL fix: ghosxt-cares page was previously linked as /cares.html
 /cares.html   /ghosxt-cares.html   301
 

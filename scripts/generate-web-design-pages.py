@@ -43,7 +43,6 @@ WEB_DESIGN_META_DESC = {
     "carmel": "Hand-coded, mobile-first web design for Carmel galleries, inns, and tasting rooms — presentation that matches the brand and ranks locally. From $1,800.",
     "gilroy": "Web design for Gilroy retailers and B2B distributors — sites that convert Highway 101 traffic and win logistics and processing buyers. From $1,800.",
     "hollister": "Mobile-first web design for Hollister businesses stuck with an outdated site, or none — get found before a competitor does. From $1,800.",
-    "king-city": "Web design for King City and South County businesses the big agencies skip — a real site, not just a Facebook page, from a local team. From $1,800.",
     "marina": "First websites for Marina startups, ag-tech, and clinics near CSUMB and the Dunes — mobile-first sites built to grow with you. From $1,800.",
     "monterey": "Web design for Monterey hospitality and visitor-facing businesses — menus, bookings, and galleries that win the trip-planning search. From $1,800.",
     "pacific-grove": "Mobile-first websites for Pacific Grove inns, cafes, and retreats booked by visitors — clean, personal, and easy to find. From $1,800.",
@@ -51,7 +50,6 @@ WEB_DESIGN_META_DESC = {
     "san-jose": "Web design and local SEO for San Jose small businesses fighting page-one competition — hand-coded, fast, mobile-first sites. From $1,800.",
     "santa-cruz": "Web design for Santa Cruz independents — sites that carry a fiercely local, un-corporate brand and still rank and convert. From $1,800.",
     "seaside": "No-flash, high-function web design for Seaside shops and services competing across the Peninsula — fast, findable, mobile-first. From $1,800.",
-    "soledad": "Web design for Soledad wineries, growers, and shops hard to find online — tasting-room and local sites built to be seen. From $1,800.",
     "watsonville": "Web design for Watsonville ag, food-processing, and family businesses — bring an invisible economy online with a fast, mobile-first site. From $1,800.",
 }
 
@@ -96,11 +94,6 @@ CITIES = {
         "admin": "San Benito County, California",
         "nearby": [("salinas", "Salinas"), ("gilroy", "Gilroy"), ("watsonville", "Watsonville"), ("san-jose", "San Jose")],
     },
-    "king-city": {
-        "name": "King City",
-        "admin": "Monterey County, California",
-        "nearby": [("soledad", "Soledad"), ("salinas", "Salinas"), ("monterey", "Monterey"), ("hollister", "Hollister")],
-    },
     "marina": {
         "name": "Marina",
         "admin": "Monterey County, California",
@@ -115,11 +108,6 @@ CITIES = {
         "name": "Seaside",
         "admin": "Monterey County, California",
         "nearby": [("marina", "Marina"), ("monterey", "Monterey"), ("pacific-grove", "Pacific Grove"), ("salinas", "Salinas")],
-    },
-    "soledad": {
-        "name": "Soledad",
-        "admin": "Monterey County, California",
-        "nearby": [("king-city", "King City"), ("salinas", "Salinas"), ("hollister", "Hollister"), ("monterey", "Monterey")],
     },
 }
 
@@ -225,18 +213,6 @@ CONTENT = {
             ("How much does a website cost in Hollister?", "Packages are published upfront: $1,800 Essential, $3,200 Business Pro, $5,900+ for e-commerce. No discovery phases, no surprise line items — the calculator on our web development page shows exactly what your scope costs."),
         ],
     },
-    "king-city": {
-        "lead": "King City and the southern valley get skipped — by IT providers, and by web designers who won't drive past Salinas. So South County businesses end up with no site, a Facebook page standing in for one, or something a relative built years ago. Ghosxt builds real websites for King City businesses at published prices, in English and Spanish, from a DoD-cleared engineer based up the valley in Salinas.",
-        "economy": "Ag operations, ranches, and processors need credible sites for buyers and compliance reviews. Trucking companies need a real web presence to win freight and recruit drivers. Local services, restaurants, and shops need to show up when someone in South County searches — because right now, mostly nobody does, which makes ranking here easier than anywhere else we work. And like the rest of the valley, King City works in two languages.",
-        "card_a": ("South County, Actually Served", "Real in-person service for King City, Greenfield, and San Lucas — we drive down, meet you at the shop, and build from what we see, not from a stock-photo template."),
-        "card_b": ("Ag &amp; Trucking Credibility", "Sites that hold up when a buyer, broker, or driver looks you up — capabilities, compliance, equipment, and a careers page that helps fill seats."),
-        "faq": [
-            ("Do you build websites for businesses in King City?", "Yes — and we actually come to King City. We're based up the valley in Salinas and built our model around serving the South County towns other providers skip. Published pricing, in-person meetings, English and Spanish builds."),
-            ("Most local businesses here have no website — does that matter?", "It's an opportunity. Because so few South County businesses have real sites, a well-built one ranks quickly and owns its searches. Being the one plumber, trucking company, or restaurant with a fast, findable site is a bigger edge in King City than it would be anywhere north."),
-            ("Can you build our site in Spanish and English?", "Yes. Our multilingual add-on ($950) builds real translated pages that rank in both languages — which in the southern valley is often the difference between reaching your actual customers and missing them."),
-            ("How much does a website cost in King City?", "The same published prices as everywhere: $1,800 Essential, $3,200 Business Pro, $5,900+ e-commerce. The instant calculator on our web development page gives you an exact number in about a minute."),
-        ],
-    },
     "marina": {
         "lead": "Marina's new businesses — startups, ag-tech, clinics, and the storefronts filling in around the Dunes and CSUMB — mostly need their first real website, and need it to grow with them instead of being rebuilt at every stage. Ghosxt hand-codes fast, scalable websites for Marina businesses, from a Peninsula-based, DoD-cleared engineer.",
         "economy": "Startups and ag-tech companies need a credible site before the first customer meeting or investor call — and a foundation that won't embarrass them at twice the headcount. New storefronts, gyms, and restaurants around the Dunes need to get found by a population that's still forming its habits, where showing up early in local search compounds. Clinics and services near CSUMB need booking and information that works for a young, phone-first clientele.",
@@ -271,18 +247,6 @@ CONTENT = {
             ("What actually gets my shop more calls from Google?", "Three things working together: a fast mobile site with a page for each service, correct schema and business data, and a properly configured Google Business Profile with your reviews. We set up all three — that combination is what wins 'near me' searches on the Peninsula."),
             ("Can customers book appointments on the site?", "Yes. Our booking add-on ($1,200) integrates scheduling for cuts, classes, estimates, or repairs directly into your site, so the calendar fills itself while you're working instead of trading voicemails."),
             ("How much does a website cost in Seaside?", "Packages are published upfront: $1,800 Essential, $3,200 Business Pro, $5,900+ e-commerce. The instant calculator on our web development page prices your exact project in about a minute — no sales call required."),
-        ],
-    },
-    "soledad": {
-        "lead": "Soledad sits in the middle of the valley's wine country, but most of its wineries, growers, and local businesses are barely visible online — tasting rooms that can't be found, wine clubs run by hand, town businesses with no site at all. Ghosxt builds real websites for Soledad and Salinas Valley businesses, from wine e-commerce to first websites, from a DoD-cleared engineer based up the valley in Salinas.",
-        "economy": "Wineries along the River Road trail need what the big Napa houses have, sized honestly: tasting-room hours and reservations, a wine club people can join online, and compliant direct-to-consumer sales. Growers and processors need credible pages for buyers and auditors. Local restaurants, shops, and services need the basics — findable, fast, bilingual where it matters. The valley's work deserves better than invisibility.",
-        "card_a": ("Winery DTC &amp; Wine Clubs", "Tasting-room reservations, online club signups, and compliant direct-to-consumer wine sales on your own site — the Napa toolkit, sized and priced for a River Road winery."),
-        "card_b": ("Valley Business Basics", "First websites and rebuilds for Soledad's shops, restaurants, and services — fast, bilingual where it matters, and built by someone who actually drives down."),
-        "faq": [
-            ("Do you build websites for businesses in Soledad?", "Yes — and we actually serve the valley. We're based in Salinas and built our model around South County towns other providers skip. Wineries, growers, and town businesses alike, at published prices starting at $1,800."),
-            ("Can you build online wine sales and a wine club for our winery?", "Yes. We build winery e-commerce with club signups, allocations, and age-verified, compliance-aware checkout, plus tasting-room reservations — so a River Road winery can sell direct like the big houses do, without the big-house budget."),
-            ("Can visitors find our tasting room from the highway?", "That's local SEO and it's very winnable here: a fast site, location schema, and a proper Google Business Profile put you in the map results a visitor checks between Soledad and Greenfield. Few valley wineries do this right, so those who do stand out."),
-            ("How much does a website cost in Soledad?", "The same published prices as everywhere: $1,800 Essential, $3,200 Business Pro, $5,900+ for e-commerce like wine clubs. The instant calculator on our web development page gives you an exact number in about a minute."),
         ],
     },
 }
