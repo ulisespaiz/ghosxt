@@ -19,7 +19,7 @@
 
 .blog-header .lead {
   font-size: 1.125rem;
-  color: rgba(0, 0, 0, 0.78);
+  color: var(--text-primary);
   line-height: 1.6;
   max-width: 720px;
 }
@@ -47,7 +47,7 @@
 
 .blog-topic-intro {
   font-size: 1rem;
-  color: rgba(0, 0, 0, 0.72);
+  color: var(--text-primary);
   margin: 0 0 1.5rem;
   line-height: 1.55;
 }
@@ -84,7 +84,7 @@
   align-items: center;
   gap: 0.75rem;
   font-size: 0.875rem;
-  color: rgba(0, 0, 0, 0.6);
+  color: var(--text-secondary);
   margin-bottom: 0.75rem;
   font-family: var(--font-family-2);
 }
@@ -107,7 +107,7 @@
 }
 
 .blog-card p {
-  color: rgba(0, 0, 0, 0.78);
+  color: var(--text-primary);
   line-height: 1.6;
   margin-bottom: 1rem;
 }
@@ -140,13 +140,13 @@
 
 .blog-post-breadcrumbs {
   font-size: 0.875rem;
-  color: rgba(0, 0, 0, 0.6);
+  color: var(--text-secondary);
   margin-bottom: 1.5rem;
   font-family: var(--font-family-2);
 }
 
 .blog-post-breadcrumbs a {
-  color: rgba(0, 0, 0, 0.6);
+  color: var(--text-secondary);
   text-decoration: none;
   display: inline-block;
   padding: 4px 0;
@@ -166,7 +166,7 @@
   align-items: center;
   gap: 0.75rem;
   font-size: 0.875rem;
-  color: rgba(0, 0, 0, 0.6);
+  color: var(--text-secondary);
   margin-bottom: 1rem;
   font-family: var(--font-family-2);
 }
@@ -183,7 +183,7 @@
   align-items: center;
   gap: 0.75rem;
   font-size: 0.95rem;
-  color: rgba(0, 0, 0, 0.7);
+  color: var(--text-primary);
   font-family: var(--font-family-2);
   margin-top: 1rem;
 }
@@ -214,7 +214,7 @@
   margin: 0;
   font-size: 0.9rem;
   line-height: 1.55;
-  color: rgba(0, 0, 0, 0.75);
+  color: var(--text-primary);
   font-family: var(--font-family-2);
 }
 
@@ -247,7 +247,7 @@
 .blog-post-body ol {
   font-size: 1.0625rem;
   line-height: 1.7;
-  color: rgba(0, 0, 0, 0.85);
+  color: var(--text-primary);
   margin-bottom: 1.25rem;
 }
 
@@ -291,7 +291,7 @@
   padding: 0.5rem 0 0.5rem 1.25rem;
   margin: 1.5rem 0;
   font-style: italic;
-  color: rgba(0, 0, 0, 0.78);
+  color: var(--text-primary);
 }
 
 .blog-post-cta {
@@ -316,7 +316,7 @@
 
 .blog-related p.blog-related-intro {
   margin: 0 0 1.25rem;
-  color: rgba(0, 0, 0, 0.72);
+  color: var(--text-primary);
 }
 
 .blog-related ul {
@@ -348,7 +348,7 @@
 .blog-related li span.blog-related-note {
   display: block;
   font-weight: 400;
-  color: rgba(0, 0, 0, 0.7);
+  color: var(--text-primary);
   font-size: 0.95rem;
   margin-top: 0.25rem;
 }
@@ -427,7 +427,7 @@
 .blog-post-quickfix p:last-child {
   margin-bottom: 0;
   font-size: 0.92rem;
-  color: rgba(0, 0, 0, 0.7);
+  color: var(--text-primary);
 }
 
 .compare-table-wrap {
@@ -444,7 +444,7 @@
 
 .compare-table caption {
   text-align: left;
-  color: rgba(0, 0, 0, 0.6);
+  color: var(--text-secondary);
   font-size: 0.85rem;
   padding-bottom: 0.6rem;
 }

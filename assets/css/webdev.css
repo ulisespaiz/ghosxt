@@ -1041,7 +1041,7 @@
 }
 
 .feature-web-name { font-weight: 600; font-family: var(--font-family-2); }
-.check-yes { color: #22c55e; font-size: 0.9rem; }
+.check-yes { color: var(--ghosxt-success); font-size: 0.9rem; }
 .check-no  { color: rgba(0, 0, 0, 0.18); font-size: 0.9rem; }
 
 /* CTA card — black strip */

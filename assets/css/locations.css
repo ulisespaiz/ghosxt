@@ -13,13 +13,13 @@
 
 .location-breadcrumbs {
   font-size: 0.875rem;
-  color: rgba(0, 0, 0, 0.6);
+  color: var(--text-secondary);
   margin-bottom: 1.5rem;
   font-family: var(--font-family-2);
 }
 
 .location-breadcrumbs a {
-  color: rgba(0, 0, 0, 0.6);
+  color: var(--text-secondary);
   text-decoration: none;
   display: inline-block;
   padding: 4px 0;
@@ -44,7 +44,7 @@
 .location-hero .lead {
   font-size: 1.125rem;
   line-height: 1.6;
-  color: rgba(0, 0, 0, 0.78);
+  color: var(--text-primary);
   margin-bottom: 2rem;
   max-width: 720px;
 }
@@ -99,7 +99,7 @@
 }
 
 .pricing-trust-callout a {
-  color: rgba(0, 0, 0, 0.72);
+  color: var(--text-primary);
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
@@ -128,7 +128,7 @@
 .location-section p {
   font-size: 1rem;
   line-height: 1.7;
-  color: rgba(0, 0, 0, 0.78);
+  color: var(--text-primary);
   margin-bottom: 1rem;
   max-width: 800px;
 }
@@ -164,7 +164,7 @@
   font-size: 0.95rem;
   line-height: 1.55;
   margin-bottom: 0.75rem;
-  color: rgba(0, 0, 0, 0.72);
+  color: var(--text-primary);
 }
 
 .service-card a {
@@ -227,7 +227,7 @@
 }
 
 .location-cta p {
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--text-inverse);
   margin: 0 auto 2rem;
 }
 
@@ -276,7 +276,7 @@
 .location-faq .answer {
   padding: 1rem 1.25rem 1.25rem;
   line-height: 1.6;
-  color: rgba(0, 0, 0, 0.78);
+  color: var(--text-primary);
 }
 
 .nearby-locations {
@@ -344,7 +344,7 @@
   align-items: center;
   min-height: 24px;
   padding: 4px 0;
-  color: rgba(255, 255, 255, 0.78);
+  color: var(--text-inverse-secondary);
   text-decoration: none;
   font-size: 0.875rem;
 }
@@ -383,7 +383,7 @@
 }
 .key-facts__list dt {
   font-weight: 700;
-  color: rgba(0, 0, 0, 0.55);
+  color: var(--text-secondary);
 }
 .key-facts__list dd {
   margin: 0;
@@ -395,7 +395,7 @@
   text-underline-offset: 2px;
 }
 .key-facts__stars {
-  color: #8f6b00;
+  color: var(--ghosxt-red-0);
   letter-spacing: 1px;
 }
 @media (max-width: 540px) {
@@ -435,10 +435,10 @@
 .compare-table thead th {
   font-weight: 700;
   color: #fff;
-  border-bottom: 2px solid rgba(244, 180, 0, 0.5);
+  border-bottom: 2px solid rgba(183, 28, 28, 0.5);
 }
 .compare-table thead th.col-managed {
-  color: #f4b400;
+  color: var(--ghosxt-red-1);
 }
 .compare-table tbody th {
   font-weight: 600;

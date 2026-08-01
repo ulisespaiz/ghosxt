@@ -700,7 +700,7 @@
 }
 
 .tier-option input:checked ~ .tier-option-inner .tier-option-price em {
-    color: rgba(255,255,255,0.9);
+    color: var(--text-inverse);
 }
 
 .tier-option input:checked ~ .tier-option-inner .tier-option-desc {
@@ -968,7 +968,7 @@
     width: 7px;
     height: 7px;
     border-radius: 50%;
-    background: #16a34a;
+    background: var(--ghosxt-success);
     animation: pulse-dot 2s infinite;
     flex-shrink: 0;
 }
@@ -1185,7 +1185,7 @@
     justify-content: space-between;
     font-family: var(--font-family-2);
     font-size: 0.65rem;
-    color: rgba(255,255,255,0.4);
+    color: var(--text-secondary);
     text-transform: uppercase;
     letter-spacing: 0.04em;
 }
@@ -1399,7 +1399,7 @@
     opacity: 0.9;
 }
 .plan-col-featured .plan-col-price {color: var(--ghosxt-white); }
-.plan-col-featured .plan-col-price span { color: rgba(255,255,255,0.9); }
+.plan-col-featured .plan-col-price span { color: var(--text-inverse); }
 
 /* Table body rows */
 .plans-table tbody tr {
@@ -1435,7 +1435,7 @@
     font-size: 0.72rem;
     font-weight: 400;
     line-height: 1.35;
-    color: rgba(0, 0, 0, 0.55);
+    color: var(--text-secondary);
 }
 
 .plans-backup-note {
@@ -1457,7 +1457,7 @@
 .plans-backup-note i {
     flex-shrink: 0;
     margin-top: 0.15rem;
-    color: #22c55e;
+    color: var(--ghosxt-success);
     font-size: 1rem;
 }
 
@@ -1473,7 +1473,7 @@
 
 .check-yes {
     font-size: 1.1rem;
-    color: #22c55e;
+    color: var(--ghosxt-success);
 }
 
 .check-no {
@@ -2091,7 +2091,7 @@
 .foundation-subtitle {
   font-size: 1.0625rem;
   line-height: 1.6;
-  color: rgba(0, 0, 0, 0.78);
+  color: var(--text-primary);
   max-width: 640px;
   margin: 0 auto;
 }
@@ -2133,14 +2133,14 @@
   font-style: normal;
   font-size: 1rem;
   font-weight: 500;
-  color: rgba(0, 0, 0, 0.65);
+  color: var(--text-secondary);
   margin-left: 0.4rem;
 }
 
 .foundation-card-sub {
   font-family: var(--font-family-2);
   font-size: 0.9375rem;
-  color: rgba(0, 0, 0, 0.7);
+  color: var(--text-primary);
 }
 
 .foundation-card-body {
@@ -2170,7 +2170,7 @@
   gap: 0.6rem;
   font-size: 0.9375rem;
   line-height: 1.5;
-  color: rgba(0, 0, 0, 0.85);
+  color: var(--text-primary);
 }
 
 .foundation-includes li i {
@@ -2187,7 +2187,7 @@
   margin-bottom: 1.5rem;
   font-size: 0.875rem;
   line-height: 1.5;
-  color: rgba(0, 0, 0, 0.78);
+  color: var(--text-primary);
   border-radius: 4px;
 }
 
@@ -2241,7 +2241,7 @@
   text-align: center;
   margin-top: 1.5rem;
   font-size: 0.9375rem;
-  color: rgba(0, 0, 0, 0.7);
+  color: var(--text-primary);
   font-family: var(--font-family-2);
 }
 
@@ -2298,7 +2298,7 @@
 .onboarding-subtitle {
   font-size: 1.0625rem;
   line-height: 1.6;
-  color: rgba(0, 0, 0, 0.78);
+  color: var(--text-primary);
   max-width: 640px;
   margin: 0 auto;
 }
@@ -2362,7 +2362,7 @@
 .onboarding-card-list li {
   font-size: 0.9375rem;
   line-height: 1.5;
-  color: rgba(0, 0, 0, 0.85);
+  color: var(--text-primary);
   padding-left: 1.1rem;
   position: relative;
 }
@@ -2382,7 +2382,7 @@
 .onboarding-card-desc {
   font-size: 0.9375rem;
   line-height: 1.55;
-  color: rgba(0, 0, 0, 0.75);
+  color: var(--text-primary);
 }
 
 /* ============================================================
@@ -2393,7 +2393,7 @@
   text-transform: uppercase;
   letter-spacing: 0.06em;
   font-weight: 700;
-  color: rgba(0, 0, 0, 0.55);
+  color: var(--text-secondary);
   margin-bottom: 0.6rem;
   padding-bottom: 0.4rem;
   border-bottom: 1px dashed rgba(0, 0, 0, 0.12);
@@ -2404,7 +2404,7 @@
 }
 
 .compare-row-role .compare-label {
-  color: rgba(0, 0, 0, 0.78);
+  color: var(--text-primary);
 }
 
 .compare-row-total {
@@ -2430,7 +2430,7 @@
 .compare-context {
   font-size: 0.875rem;
   line-height: 1.5;
-  color: rgba(0, 0, 0, 0.65);
+  color: var(--text-secondary);
   margin-bottom: 1rem;
   padding: 0.75rem;
   background: rgba(0, 0, 0, 0.03);
@@ -2452,7 +2452,7 @@
 
 .compare-role-desc {
   font-size: 0.8125rem;
-  color: rgba(0, 0, 0, 0.55);
+  color: var(--text-secondary);
   line-height: 1.4;
   font-family: var(--font-family-2);
 }

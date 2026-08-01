@@ -227,7 +227,10 @@ html {
      to #b71c1c (≈6.8:1 on white) so every brand accent across the site
      lands on the same AA-compliant dark red. Red-5 (#8b0000) and red-6
      (#3d0000) stay as deeper shades for elements that intentionally
-     need a heavier tone. */
+     need a heavier tone. --ghosxt-red-dark aliases red-5 and is the
+     one sanctioned shade for hover/depth states (footer CTA hover,
+     etc.) so new code has a name to reach for instead of a one-off
+     literal. */
   --ghosxt-red-0: #b71c1c;
 
   --ghosxt-red-1: #b71c1c;
@@ -236,22 +239,37 @@ html {
   --ghosxt-red-4: #b71c1c;
   --ghosxt-red-5: #8b0000;
   --ghosxt-red-6: #3d0000;
+  --ghosxt-red-dark: var(--ghosxt-red-5);
 
-  --ghosxt-green-1: #00c853;
+  /* Single success green. Of the old mix (#22c55e, #16a34a, #00c853,
+     #15793b) only #15793b clears WCAG AA on white (5.48:1) and as
+     white-on-green (5.48:1), so it is the one that survives as the
+     shared variable; --ghosxt-green-1 stays defined as an alias so
+     existing var(--ghosxt-green-1) references keep working. */
+  --ghosxt-success: #15793b;
+  --ghosxt-success-tint: rgba(21, 121, 59, 0.1);
+  --ghosxt-green-1: var(--ghosxt-success);
 
   --ghosxt-white: #ffffff;
   --ghosxt-black: #000000;
-  --ghosxt-green: #d4f4dd;
+  --ghosxt-green: var(--ghosxt-success-tint);
   --ghosxt-red: #ffe5e5;
   --ghosxt-gray: #f5f5f5;
-  --font-family-1:
-    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-family-2:
-    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 
-  --font-family-1: "Degular", sans-serif;
+  /* Text scale. Opacity-based black/white so it composites correctly
+     over whatever background sits underneath. Primary/secondary are
+     for body copy on the site's light sections; inverse/inverse-
+     secondary are the same idea in white, for dark sections (footer,
+     hero, CTA bands). Never go below inverse-secondary's 0.75 alpha
+     for real text: at 0.62 alpha it still clears 4.5:1 on the
+     footer's #000 background, which is the accessibility floor, but
+     0.75 is the shared default. */
+  --text-primary: rgba(0, 0, 0, 0.9);
+  --text-secondary: rgba(0, 0, 0, 0.65);
+  --text-inverse: #ffffff;
+  --text-inverse-secondary: rgba(255, 255, 255, 0.75);
+
   --font-family-2: "Roboto", sans-serif;
-  --font-family-3: "Do Hyeon", sans-serif;
 }
 
 .stars {
@@ -285,7 +303,7 @@ html {
   height: 6px;
   background: var(--ghosxt-red-1);
   border-radius: 50%;
-  box-shadow: 0 0 10px 2px rgba(255, 23, 68, 0.8);
+  box-shadow: 0 0 10px 2px rgba(183, 28, 28, 0.8);
   opacity: 0;
   z-index: 2;
 }
@@ -299,12 +317,12 @@ html {
   height: 4px;
   background: linear-gradient(
     to right,
-    rgba(255, 23, 68, 0),
-    rgba(255, 23, 68, 0.8)
+    rgba(183, 28, 28, 0),
+    rgba(183, 28, 28, 0.8)
   );
   transform: translate(-100%, -50%) rotate(135deg);
   transform-origin: right center;
-  box-shadow: 0 0 8px rgba(255, 23, 68, 0.5);
+  box-shadow: 0 0 8px rgba(183, 28, 28, 0.5);
 }
 
 @keyframes shootingStar {
@@ -368,7 +386,7 @@ html {
 }
 
 body {
-  font-family: var(--font-family-1);
+  font-family: var(--font-family-2);
 }
 
 .grid-divider,
@@ -1754,7 +1772,7 @@ footer.unlocked {
 
 .footer-brand-tagline {
   font-size: 0.78rem;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--text-inverse-secondary);
   letter-spacing: 0.02em;
 }
 
@@ -1763,7 +1781,7 @@ footer.unlocked {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: #e01c23;
+  background: var(--ghosxt-red-0);
   color: #fff;
   font-size: 0.8rem;
   font-weight: 600;
@@ -1779,7 +1797,7 @@ footer.unlocked {
 }
 
 .footer-cta-btn:hover {
-  background: #c01018;
+  background: var(--ghosxt-red-dark);
   transform: translateY(-1px);
   color: #fff;
   text-decoration: none;
@@ -1802,7 +1820,7 @@ footer.unlocked {
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--text-inverse-secondary);
   margin-bottom: 1rem;
 }
 
@@ -1817,7 +1835,7 @@ footer.unlocked {
 
 .footer-links a {
   font-size: 0.875rem;
-  color: rgba(255, 255, 255, 0.65);
+  color: var(--text-inverse-secondary);
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -1836,12 +1854,12 @@ footer.unlocked {
   font-size: 0.8rem;
   width: 1rem;
   text-align: center;
-  color: rgba(255, 255, 255, 0.78);
+  color: var(--text-inverse-secondary);
   transition: color 0.2s ease;
 }
 
 .footer-social-links a:hover i {
-  color: #e01c23;
+  color: var(--ghosxt-red-0);
 }
 
 /* ── Bottom Bar ──────────────────────────────── */
@@ -1856,7 +1874,7 @@ footer.unlocked {
 
 .footer-copyright {
   font-size: 0.78rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--text-inverse-secondary);
   margin: 0;
 }
 
@@ -1868,7 +1886,7 @@ footer.unlocked {
 
 .footer-bottom-links a {
   font-size: 0.78rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--text-inverse-secondary);
   text-decoration: none;
   display: inline-block;
   padding: 6px 0;
@@ -1877,11 +1895,11 @@ footer.unlocked {
 }
 
 .footer-bottom-links a:hover {
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--text-inverse-secondary);
 }
 
 .footer-bottom-links span {
-  color: rgba(255, 255, 255, 0.72);
+  color: var(--text-inverse-secondary);
 }
 
 .service-areas-footer {
@@ -2067,7 +2085,7 @@ a[target="_blank"]:not(.navbar-btn):not(.button-primary):not(.cta-primary-btn)::
   align-items: center;
   min-height: 24px;
   padding: 4px 0;
-  color: rgba(255, 255, 255, 0.78);
+  color: var(--text-inverse-secondary);
   text-decoration: none;
   font-size: 0.875rem;
 }
@@ -2130,7 +2148,7 @@ summary:focus-visible,
   gap: 8px;
   margin: 12px 0 8px;
   padding: 10px 12px;
-  background: rgba(230, 57, 70, 0.06);
+  background: rgba(183, 28, 28, 0.06);
   border-left: 3px solid var(--ghosxt-red-0, #b71c1c);
   border-radius: 4px;
   font-size: 0.9rem;
