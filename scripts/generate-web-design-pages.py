@@ -309,7 +309,7 @@ def cards_html(cards):
 
 
 def nearby_links(nearby, exclude_slug):
-    parts = [f'<a href="web-design-{slug}.html">{name}</a>' for slug, name in nearby if slug != exclude_slug]
+    parts = [f'<a href="/web-design-{slug}">{name}</a>' for slug, name in nearby if slug != exclude_slug]
     if len(parts) > 1:
         return ", ".join(parts[:-1]) + ", and " + parts[-1]
     return parts[0] if parts else ""
@@ -350,7 +350,7 @@ def build_page(chrome, slug, city):
     body = f"""      <section class="location-hero">
         <div class="container">
           <nav class="location-breadcrumbs" aria-label="Breadcrumb">
-            <a href="index.html">Home</a><span class="sep">›</span><a href="website-development.html">Web Development</a><span class="sep">›</span><span aria-current="page">{name}</span>
+            <a href="/index">Home</a><span class="sep">›</span><a href="/website-development">Web Development</a><span class="sep">›</span><span aria-current="page">{name}</span>
           </nav>
           <h1>{h1}</h1>
           <p class="lead">{c['lead']}</p>
@@ -364,7 +364,7 @@ def build_page(chrome, slug, city):
               (831) 204-0501
             </a>
           </div>
-          <p class="pricing-trust-callout"><a href="website-development.html">Websites from $1,800, published upfront — price your exact project with the instant calculator.</a></p>
+          <p class="pricing-trust-callout"><a href="/website-development">Websites from $1,800, published upfront — price your exact project with the instant calculator.</a></p>
         </div>
       </section>
 
@@ -382,7 +382,7 @@ def build_page(chrome, slug, city):
         <div class="container">
           <h2>Websites for the {name} economy</h2>
           <p>{c['economy']}</p>
-          <p>The pattern behind all of it: your customers decide from a phone, in seconds, based on how fast and clear your site is. That is an engineering problem before it is a design problem — and engineering is what we do. See the live work on our <a href="website-development.html">portfolio</a>, or read the <a href="blog/small-business-website-cost-2026.html">2026 pricing guide</a> for real numbers.</p>
+          <p>The pattern behind all of it: your customers decide from a phone, in seconds, based on how fast and clear your site is. That is an engineering problem before it is a design problem — and engineering is what we do. See the live work on our <a href="/website-development">portfolio</a>, or read the <a href="/blog/small-business-website-cost-2026">2026 pricing guide</a> for real numbers.</p>
         </div>
       </section>
 
@@ -400,15 +400,15 @@ def build_page(chrome, slug, city):
       <section class="location-section">
         <div class="container">
           <h2>Already have a website?</h2>
-          <p>Then the question is whether it's earning its keep. If it's slow on a phone, invisible in local search, or running on software nobody has updated in a year, it's quietly sending {name} customers to competitors — our guide to the <a href="blog/website-redesign-signs-small-business-2026.html">nine signs a website is costing you customers</a> walks through the checks you can run yourself in ten minutes. Where the foundation is sound we'll say so and quote a refresh, not a rebuild.</p>
+          <p>Then the question is whether it's earning its keep. If it's slow on a phone, invisible in local search, or running on software nobody has updated in a year, it's quietly sending {name} customers to competitors — our guide to the <a href="/blog/website-redesign-signs-small-business-2026">nine signs a website is costing you customers</a> walks through the checks you can run yourself in ten minutes. Where the foundation is sound we'll say so and quote a refresh, not a rebuild.</p>
         </div>
       </section>
 
       <section class="location-section">
         <div class="container">
           <h2>Local web design, backed by a real IT and security team</h2>
-          <p>Most web designers disappear after launch; most IT providers don't build websites. We're both, which changes what you get: a site maintained by the same team that runs <a href="cybersecurity-{slug}.html">cybersecurity</a> and <a href="managed-it-services.html">managed IT</a> for {name} businesses — patched, monitored, backed up, and never the abandoned software that gets a business breached. Everything local lives on the <a href="{slug}.html">{name} IT services</a> hub.</p>
-          <p>We also build websites for businesses in {nearby}, and remotely across California and the US — see the main <a href="website-development.html">web development</a> page for the portfolio, packages, and instant calculator.</p>
+          <p>Most web designers disappear after launch; most IT providers don't build websites. We're both, which changes what you get: a site maintained by the same team that runs <a href="/cybersecurity-{slug}">cybersecurity</a> and <a href="/managed-it-services">managed IT</a> for {name} businesses — patched, monitored, backed up, and never the abandoned software that gets a business breached. Everything local lives on the <a href="/{slug}">{name} IT services</a> hub.</p>
+          <p>We also build websites for businesses in {nearby}, and remotely across California and the US — see the main <a href="/website-development">web development</a> page for the portfolio, packages, and instant calculator.</p>
         </div>
       </section>
 
@@ -427,14 +427,14 @@ def build_page(chrome, slug, city):
             <i class="fi fi-rs-calendar-day" aria-hidden="true"></i>
             Book your free consultation
           </a>
-          <a href="website-development.html" class="location-btn location-btn-secondary">
+          <a href="/website-development" class="location-btn location-btn-secondary">
             <i class="fi fi-rs-calculator" aria-hidden="true"></i>
             Try the Instant Calculator
           </a>
         </div>
       </section>"""
 
-    url = f"https://ghosxt.com/{page_slug}.html"
+    url = f"https://ghosxt.com/{page_slug}"
     og_image = f"https://ghosxt.com/assets/img/og/{page_slug}.png"
 
     jsonld = f"""    <script type="application/ld+json">
@@ -455,7 +455,7 @@ def build_page(chrome, slug, city):
             "@type": "BreadcrumbList",
             "itemListElement": [
               {{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ghosxt.com/" }},
-              {{ "@type": "ListItem", "position": 2, "name": "Web Development", "item": "https://ghosxt.com/website-development.html" }},
+              {{ "@type": "ListItem", "position": 2, "name": "Web Development", "item": "https://ghosxt.com/website-development" }},
               {{ "@type": "ListItem", "position": 3, "name": "{name}", "item": "{url}" }}
             ]
           }},

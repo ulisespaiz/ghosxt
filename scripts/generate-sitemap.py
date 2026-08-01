@@ -55,7 +55,9 @@ def derived_url(path: Path) -> str:
         return f"{BASE_URL}/"
     if relative == "blog/index.html":
         return f"{BASE_URL}/blog/"
-    return f"{BASE_URL}/{relative}"
+    if relative.startswith("blog/"):
+        return f"{BASE_URL}/blog/{Path(relative).stem}"
+    return f"{BASE_URL}/{Path(relative).stem}"
 
 
 def canonical_url(path: Path, html: str) -> str:
