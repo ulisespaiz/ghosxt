@@ -227,7 +227,7 @@
       const shortTier = TIER_SHORT_LABELS[tier] || TIER_LABELS[tier];
       const label = `Book a call about this ${fmtDollar(ghosxt)}/mo ${shortTier} estimate`;
       ctaText.textContent = label;
-      ctaBtn.setAttribute('aria-label', label + ' — opens Calendly in a new tab');
+      ctaBtn.setAttribute('aria-label', label + ', opens Calendly in a new tab');
 
       const params = new URLSearchParams({
         utm_source:  'pricing-calc',

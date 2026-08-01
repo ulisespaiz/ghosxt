@@ -2,7 +2,7 @@
 """Replace the templated "IT Support & Help Desk in <City>" section on each
 city hub page with genuinely distinct copy, grounded in the same local
 details already established elsewhere on that page (its "Why <City>
-businesses pick Ghosxt" and "Common IT challenges" sections) — not new
+businesses pick Ghosxt" and "Common IT challenges" sections), not new
 claims, just de-duplicated wording so the section stops reading as a
 find-and-replace of the city name across 12 pages.
 
@@ -22,15 +22,15 @@ import os
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 OLD_TEMPLATE_P1 = (
-    'When something breaks in your {name} office, what your team wants is a person who picks up and fixes it '
-    '&mdash; not a ticket number and a callback tomorrow. Our <a href="help-desk-it-support.html">IT help desk</a> '
+    'When something breaks in your {name} office, what your team wants is a person who picks up and fixes it, '
+    'not a ticket number and a callback tomorrow. Our <a href="help-desk-it-support.html">IT help desk</a> '
     'gives {name} businesses live, US-based support by phone, email, or client portal, with most issues resolved '
     'remotely the same hour and on-site help across {name} when hardware, a network drop, or a new-hire setup '
     'needs hands on site.'
 )
 OLD_TEMPLATE_P2 = (
     'Day to day that means fast fixes for Microsoft 365 and Outlook, password and account lockouts, printers, '
-    'Wi-Fi and VPN, and slow or failing computers &mdash; the everyday {name} IT support that quietly costs a '
+    'Wi-Fi and VPN, and slow or failing computers, the everyday {name} IT support that quietly costs a '
     'small business hours when there is no one to call. It is included in every '
     '<a href="managed-it-services.html">managed IT</a> plan, so the same team that prevents problems is the one '
     'you reach when you have one.'
@@ -40,53 +40,53 @@ OLD_TEMPLATE_P2 = (
 CITIES = {
     "carmel": (
         "Carmel",
-        'A gallery on Ocean Avenue or a Carmel Valley brokerage cannot put a client on hold while a ticket sits in a queue. Our <a href="help-desk-it-support.html">IT help desk</a> answers live &mdash; phone, email, or client portal &mdash; and most issues are resolved remotely the same business day. When a POS terminal, a network drop, or a new hire\'s laptop needs hands on-site, we\'re there quietly and on your schedule, not a stranger\'s.',
-        'Most days that\'s Microsoft 365 and Outlook trouble, a locked account, a stalled Wi-Fi connection, or a machine that\'s slowed to a crawl &mdash; the small stuff that eats an afternoon when there\'s no one to call. It\'s included in every <a href="managed-it-services.html">managed IT</a> plan, so the same engineer who keeps your systems documented and monitored is the one who answers when something goes wrong.',
+        'A gallery on Ocean Avenue or a Carmel Valley brokerage cannot put a client on hold while a ticket sits in a queue. Our <a href="help-desk-it-support.html">IT help desk</a> answers live (phone, email, or client portal) and most issues are resolved remotely the same business day. When a POS terminal, a network drop, or a new hire\'s laptop needs hands on-site, we\'re there quietly and on your schedule, not a stranger\'s.',
+        'Most days that\'s Microsoft 365 and Outlook trouble, a locked account, a stalled Wi-Fi connection, or a machine that\'s slowed to a crawl, the small stuff that eats an afternoon when there\'s no one to call. It\'s included in every <a href="managed-it-services.html">managed IT</a> plan, so the same engineer who keeps your systems documented and monitored is the one who answers when something goes wrong.',
     ),
     "gilroy": (
         "Gilroy",
         'A warehouse or distribution office off the 101/152 corridor loses money every hour a system is down, so our <a href="help-desk-it-support.html">IT help desk</a> is built for speed: live phone, email, or client-portal support, most issues fixed remotely the same business day, and on-site help across Gilroy when a dispatch terminal, a network drop, or a new hire\'s setup needs hands on the floor.',
-        'Day to day, that\'s Microsoft 365 and Outlook problems, locked accounts, printers, Wi-Fi and VPN drops, and machines that have slowed to a crawl &mdash; the routine stuff that costs a logistics or food-processing business real hours during the seasonal rush around the outlets. It\'s included in every <a href="managed-it-services.html">managed IT</a> plan, so support and prevention come from the same team.',
+        'Day to day, that\'s Microsoft 365 and Outlook problems, locked accounts, printers, Wi-Fi and VPN drops, and machines that have slowed to a crawl, the routine stuff that costs a logistics or food-processing business real hours during the seasonal rush around the outlets. It\'s included in every <a href="managed-it-services.html">managed IT</a> plan, so support and prevention come from the same team.',
     ),
     "hollister": (
         "Hollister",
-        'A machine shop or family business in Hollister does not want a ticket number &mdash; they want someone who picks up. Our <a href="help-desk-it-support.html">IT help desk</a> gives Hollister businesses live phone, email, and client-portal support, most issues resolved remotely the same hour, and on-site help right next door when hardware or a new-hire setup needs it.',
-        'Most of what we fix day to day is ordinary: Microsoft 365 and Outlook hiccups, locked accounts, printers, Wi-Fi and VPN trouble, and computers that have slowed down &mdash; the stuff that quietly costs a small shop hours when there is no one local to call. It comes with every <a href="managed-it-services.html">managed IT</a> plan, so prevention and support are the same team, not a hand-off.',
+        'A machine shop or family business in Hollister does not want a ticket number. They want someone who picks up. Our <a href="help-desk-it-support.html">IT help desk</a> gives Hollister businesses live phone, email, and client-portal support, most issues resolved remotely the same hour, and on-site help right next door when hardware or a new-hire setup needs it.',
+        'Most of what we fix day to day is ordinary: Microsoft 365 and Outlook hiccups, locked accounts, printers, Wi-Fi and VPN trouble, and computers that have slowed down, the stuff that quietly costs a small shop hours when there is no one local to call. It comes with every <a href="managed-it-services.html">managed IT</a> plan, so prevention and support are the same team, not a hand-off.',
     ),
     "marina": (
         "Marina",
         'A growing Marina business adds new hires, new hardware, and new accounts faster than most IT setups can keep up with. Our <a href="help-desk-it-support.html">IT help desk</a> gives Marina teams live phone, email, and client-portal support, most issues resolved remotely the same hour, and on-site help that\'s a five-minute drive when a new-hire laptop or a network drop needs hands on it.',
-        'Day to day that\'s Microsoft 365 and Outlook trouble, locked accounts, printers, Wi-Fi and VPN drops, and machines that have slowed to a crawl &mdash; the routine friction that costs a scaling team real hours. It\'s included in every <a href="managed-it-services.html">managed IT</a> plan, so support scales with you instead of becoming something to rebuild at 50 employees.',
+        'Day to day that\'s Microsoft 365 and Outlook trouble, locked accounts, printers, Wi-Fi and VPN drops, and machines that have slowed to a crawl, the routine friction that costs a scaling team real hours. It\'s included in every <a href="managed-it-services.html">managed IT</a> plan, so support scales with you instead of becoming something to rebuild at 50 employees.',
     ),
     "monterey": (
         "Monterey",
         'Bandwidth gaps out toward Pebble Beach and salt air that eats cheap network gear mean Monterey businesses need support that already knows the terrain. Our <a href="help-desk-it-support.html">IT help desk</a> gives live phone, email, and client-portal support, most issues resolved remotely the same hour, and on-site help across Monterey when hardware or connectivity needs hands on it.',
-        'Most days that\'s Microsoft 365 and Outlook issues, locked accounts, printers, Wi-Fi and VPN drops, and slow computers &mdash; ordinary problems that turn into real downtime once seasonal tourist traffic strains local bandwidth. It\'s included in every <a href="managed-it-services.html">managed IT</a> plan, so the engineer who designed around Monterey\'s infrastructure quirks is the one who answers.',
+        'Most days that\'s Microsoft 365 and Outlook issues, locked accounts, printers, Wi-Fi and VPN drops, and slow computers, ordinary problems that turn into real downtime once seasonal tourist traffic strains local bandwidth. It\'s included in every <a href="managed-it-services.html">managed IT</a> plan, so the engineer who designed around Monterey\'s infrastructure quirks is the one who answers.',
     ),
     "pacific-grove": (
         "Pacific Grove",
         'Salt air kills cheap network gear and a bad weekend of guest Wi-Fi can dent reviews for months, so PG businesses need a help desk that catches problems before guests notice. Our <a href="help-desk-it-support.html">IT help desk</a> gives live phone, email, and client-portal support, most issues resolved remotely the same hour, and on-site help across Pacific Grove when hardware needs attention.',
-        'Day to day that\'s Microsoft 365 and Outlook trouble, locked accounts, printers, Wi-Fi and VPN drops, and slow computers &mdash; small stuff that costs an inn or boutique real hours during a busy season. It\'s included in every <a href="managed-it-services.html">managed IT</a> plan, so the same team watching your network is the one you reach when something breaks.',
+        'Day to day that\'s Microsoft 365 and Outlook trouble, locked accounts, printers, Wi-Fi and VPN drops, and slow computers, small stuff that costs an inn or boutique real hours during a busy season. It\'s included in every <a href="managed-it-services.html">managed IT</a> plan, so the same team watching your network is the one you reach when something breaks.',
     ),
     "san-jose": (
         "San Jose",
         'A 10-person professional services firm or a 25-person startup in San Jose gets the same hold-music treatment from South Bay MSPs sized for 200-seat companies. Our <a href="help-desk-it-support.html">IT help desk</a> gives live phone, email, and client-portal support, most issues resolved remotely the same hour, and on-site help across San Jose when hardware or a new-hire setup needs it.',
-        'Day to day that covers Microsoft 365 and Outlook problems, locked accounts, printers, Wi-Fi and VPN drops, and slow computers &mdash; routine friction that costs a hybrid team real hours, especially mid-migration out of a downtown office. It\'s included in every <a href="managed-it-services.html">managed IT</a> plan, priced for how a small business actually budgets.',
+        'Day to day that covers Microsoft 365 and Outlook problems, locked accounts, printers, Wi-Fi and VPN drops, and slow computers, routine friction that costs a hybrid team real hours, especially mid-migration out of a downtown office. It\'s included in every <a href="managed-it-services.html">managed IT</a> plan, priced for how a small business actually budgets.',
     ),
     "santa-cruz": (
         "Santa Cruz",
-        'Santa Cruz teams tend to know their way around technology, so our <a href="help-desk-it-support.html">IT help desk</a> doesn\'t waste your time with a script &mdash; live phone, email, or client-portal support, most issues resolved remotely the same hour, and on-site help across Santa Cruz, Westside, Aptos, and Scotts Valley when hardware needs hands on it.',
-        'Most days that\'s Microsoft 365 and Outlook issues, locked accounts, printers, Wi-Fi and VPN drops, and slow computers &mdash; ordinary problems, worse in the bandwidth dead zones up in the hills. It\'s included in every <a href="managed-it-services.html">managed IT</a> plan, documented and explained in plain language, not jargon.',
+        'Santa Cruz teams tend to know their way around technology, so our <a href="help-desk-it-support.html">IT help desk</a> doesn\'t waste your time with a script: live phone, email, or client-portal support, most issues resolved remotely the same hour, and on-site help across Santa Cruz, Westside, Aptos, and Scotts Valley when hardware needs hands on it.',
+        'Most days that\'s Microsoft 365 and Outlook issues, locked accounts, printers, Wi-Fi and VPN drops, and slow computers, ordinary problems, worse in the bandwidth dead zones up in the hills. It\'s included in every <a href="managed-it-services.html">managed IT</a> plan, documented and explained in plain language, not jargon.',
     ),
     "seaside": (
         "Seaside",
-        'Seaside\'s retail, restaurants, and auto shops have grown faster than the local IT options have kept up with. Our <a href="help-desk-it-support.html">IT help desk</a> gives live phone, email, and client-portal support, most issues resolved remotely the same hour, and on-site help across Seaside &mdash; a 10-minute drive, not a special trip.',
-        'Day to day that\'s Microsoft 365 and Outlook trouble, locked accounts, printers, Wi-Fi and VPN drops, and slow computers &mdash; the everyday support a busy shop loses hours to when no one picks up. It\'s included in every <a href="managed-it-services.html">managed IT</a> plan, at pricing built for a business that watches every dollar.',
+        'Seaside\'s retail, restaurants, and auto shops have grown faster than the local IT options have kept up with. Our <a href="help-desk-it-support.html">IT help desk</a> gives live phone, email, and client-portal support, most issues resolved remotely the same hour, and on-site help across Seaside (a 10-minute drive, not a special trip).',
+        'Day to day that\'s Microsoft 365 and Outlook trouble, locked accounts, printers, Wi-Fi and VPN drops, and slow computers, the everyday support a busy shop loses hours to when no one picks up. It\'s included in every <a href="managed-it-services.html">managed IT</a> plan, at pricing built for a business that watches every dollar.',
     ),
     "watsonville": (
         "Watsonville",
         'Ag and food-processing businesses in Watsonville run on tight seasonal timelines, so downtime during a labor surge or a packing run isn\'t an option. Our <a href="help-desk-it-support.html">IT help desk</a> gives live phone, email, and client-portal support, most issues resolved remotely the same hour, and on-site help across Watsonville when hardware needs attention.',
-        'Most days that\'s Microsoft 365 and Outlook issues, locked accounts, printers, Wi-Fi and VPN drops, and slow computers &mdash; ordinary problems, compounded by fixed-wireless gaps out in the valley. It\'s included in every <a href="managed-it-services.html">managed IT</a> plan, built around the fast user-provisioning a seasonal workforce needs.',
+        'Most days that\'s Microsoft 365 and Outlook issues, locked accounts, printers, Wi-Fi and VPN drops, and slow computers, ordinary problems, compounded by fixed-wireless gaps out in the valley. It\'s included in every <a href="managed-it-services.html">managed IT</a> plan, built around the fast user-provisioning a seasonal workforce needs.',
     ),
 }
 

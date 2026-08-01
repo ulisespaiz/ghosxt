@@ -196,18 +196,18 @@
       <div class="blog-post-body">
         <div class="container">
           <aside class="blog-post-quickfix" aria-label="Summary and what to do today">
-            <span class="quickfix-label">TL;DR &mdash; a heavy month: patch promptly, prioritize the zero-days</span>
-            <h2>Microsoft's June 2026 Patch Tuesday fixes 198 vulnerabilities, including three zero-days &mdash; flaws already being exploited or publicly known before the patch shipped. This is one of the busiest releases of the year, so it should be tested and deployed quickly, not left for later.</h2>
+            <span class="quickfix-label">TL;DR: a heavy month: patch promptly, prioritize the zero-days</span>
+            <h2>Microsoft's June 2026 Patch Tuesday fixes 198 vulnerabilities, including three zero-days: flaws already being exploited or publicly known before the patch shipped. This is one of the busiest releases of the year, so it should be tested and deployed quickly, not left for later.</h2>
             <ul>
               <li><strong>198 CVEs in total,</strong> dominated by elevation-of-privilege (~63) and remote-code-execution (~54) flaws, with multiple Critical RCEs in Remote Desktop, Hyper-V, and Office.</li>
               <li><strong>Three zero-days:</strong> a BitLocker bypass (CVE-2026-50507), an HTTP.sys server denial-of-service (CVE-2026-49160), and a publicly-known flaw (CVE-2026-45586).</li>
-              <li><strong>The BitLocker bypass is the one most SMBs should feel</strong> &mdash; it maps to a lost or stolen laptop. If you run an internet-facing Windows web server, the HTTP.sys flaw jumps to the top.</li>
+              <li><strong>The BitLocker bypass is the one most SMBs should feel</strong>: it maps to a lost or stolen laptop. If you run an internet-facing Windows web server, the HTTP.sys flaw jumps to the top.</li>
               <li><strong>On-prem servers:</strong> the permanent fix for the Exchange Outlook Web Access flaw (CVE-2026-42897) and a SharePoint RCE (CVE-2026-45659) are both in this release.</li>
               <li><strong>Plus a deadline:</strong> the 2011-era Secure Boot certificates expire at the end of June and need confirming on every device.</li>
             </ul>
             <p>What a small business should do this week:</p>
             <ol>
-              <li>Install this month's Windows and Office updates and reboot &mdash; every PC, every server, no exceptions.</li>
+              <li>Install this month's Windows and Office updates and reboot: every PC, every server, no exceptions.</li>
               <li>Confirm disk encryption on laptops and patch them first; lock down any internet-facing Windows server.</li>
               <li>Confirm the Secure Boot certificate update applied before the end-of-June cutoff.</li>
             </ol>
@@ -235,9 +235,9 @@
           <p>A zero-day is a flaw that attackers already knew about, or that was publicly disclosed, before a fix existed, so the usual head start defenders get from patching early is gone. June has three:</p>
 
           <ul>
-            <li><strong>CVE-2026-50507 &mdash; BitLocker security-feature bypass.</strong> Rated Important, this lets someone with physical or local access to a device get around BitLocker full-disk encryption. For a small business this is the one to feel in your gut, because it maps to an everyday risk: a laptop left in a car, lost at an airport, or stolen from an office. Encryption is what makes a stolen laptop a hardware loss instead of a data breach; a bypass chips at that. It is the same category of problem we covered in the <a href="/blog/yellowkey-greenplasma-windows-bitlocker-bypass-privesc">BitLocker bypass post</a>. Patch your laptops first and confirm encryption is actually on.</li>
-            <li><strong>CVE-2026-49160 &mdash; HTTP.sys denial of service.</strong> Rated Important, this flaw in the HTTP/2 stack lets a crafted stream of requests knock an internet-facing Windows web server offline. If you host anything public on a Windows server, this moves to the top of your list, because availability is the whole point of a public server and a DoS takes it down.</li>
-            <li><strong>CVE-2026-45586 &mdash; publicly known before patch.</strong> Microsoft confirmed this one was known to attackers ahead of the fix. The detail matters less than the principle: a flaw that is public on patch day is one attackers are already working with, which is the entire argument for not delaying.</li>
+            <li><strong>CVE-2026-50507: BitLocker security-feature bypass.</strong> Rated Important, this lets someone with physical or local access to a device get around BitLocker full-disk encryption. For a small business this is the one to feel in your gut, because it maps to an everyday risk: a laptop left in a car, lost at an airport, or stolen from an office. Encryption is what makes a stolen laptop a hardware loss instead of a data breach; a bypass chips at that. It is the same category of problem we covered in the <a href="/blog/yellowkey-greenplasma-windows-bitlocker-bypass-privesc">BitLocker bypass post</a>. Patch your laptops first and confirm encryption is actually on.</li>
+            <li><strong>CVE-2026-49160: HTTP.sys denial of service.</strong> Rated Important, this flaw in the HTTP/2 stack lets a crafted stream of requests knock an internet-facing Windows web server offline. If you host anything public on a Windows server, this moves to the top of your list, because availability is the whole point of a public server and a DoS takes it down.</li>
+            <li><strong>CVE-2026-45586: publicly known before patch.</strong> Microsoft confirmed this one was known to attackers ahead of the fix. The detail matters less than the principle: a flaw that is public on patch day is one attackers are already working with, which is the entire argument for not delaying.</li>
           </ul>
 
           <h2>Critical clusters worth knowing about</h2>

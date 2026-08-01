@@ -172,7 +172,7 @@
       <div class="blog-post-body">
         <div class="container">
           <aside class="blog-post-quickfix" aria-label="Summary and what to do today">
-            <span class="quickfix-label">TL;DR &mdash; MFA protects the login, not what happens after</span>
+            <span class="quickfix-label">TL;DR: MFA protects the login, not what happens after</span>
             <h2>Session hijacking steals the cookie your browser holds after you've already logged in and passed MFA, and hands it to an attacker as a ready-made, authenticated session. No password, no MFA code, no second factor required, because that step already happened. It's usually pulled off with adversary-in-the-middle phishing kits or infostealer malware already running on a device.</h2>
             <ul>
               <li><strong>Why it works:</strong> MFA verifies you once at login; the session cookie that follows is treated as proof enough for everything after, often for hours or days.</li>
@@ -200,7 +200,7 @@
           <h2>What actually stops it</h2>
 
           <ul>
-            <li><strong>Shorter session lifetimes and continuous conditional access,</strong> so a session token is re-checked against device compliance and location on an ongoing basis, not just once at login &mdash; this shrinks the window a stolen cookie is useful.</li>
+            <li><strong>Shorter session lifetimes and continuous conditional access,</strong> so a session token is re-checked against device compliance and location on an ongoing basis, not just once at login. This shrinks the window a stolen cookie is useful.</li>
             <li><strong>Phishing-resistant MFA like passkeys,</strong> which are tied to the real site's domain and can't be relayed through an AiTM proxy the way a typed password and code can.</li>
             <li><strong>Endpoint detection and response (EDR)</strong> on every device, to catch the infostealer malware that harvests saved cookies before it can exfiltrate anything.</li>
             <li><strong>A managed browser extension policy</strong> that blocks unapproved installs, since malicious extensions are one of the quieter ways cookies get read and sent out.</li>

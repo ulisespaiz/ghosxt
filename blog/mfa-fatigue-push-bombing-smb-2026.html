@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MFA Fatigue: When the Attacker Just Asks Your Team for the Code | Ghosxt</title>
-    <meta name="description" content="Attackers aren't stealing the second factor anymore — they're getting employees to hand it over. How MFA fatigue and push bombing work." />
+    <meta name="description" content="Attackers aren't stealing the second factor anymore. They're getting employees to hand it over. How MFA fatigue and push bombing work." />
     <link rel="canonical" href="https://ghosxt.com/blog/mfa-fatigue-push-bombing-smb-2026" />
     <link rel="alternate" type="application/rss+xml" title="Ghosxt Blog" href="https://ghosxt.com/feed.xml" />
     <meta property="og:type" content="article" />
@@ -196,7 +196,7 @@
       <div class="blog-post-body">
         <div class="container">
           <aside class="blog-post-quickfix" aria-label="Summary and what to do">
-            <span class="quickfix-label">TL;DR &mdash; The attacker is not stealing your second factor. They are getting your employee to hand it over.</span>
+            <span class="quickfix-label">TL;DR: The attacker is not stealing your second factor. They are getting your employee to hand it over.</span>
             <h2>If your team approves logins with a tap or types a texted code, that MFA can be socially engineered around. Phishing-resistant MFA is the fix.</h2>
             <ul>
               <li><strong>The shift:</strong> attackers already have the password (breaches, infostealers, phishing). The only thing left is the second factor, and they have learned it is easier to ask for it than to steal it.</li>
@@ -214,7 +214,7 @@
 
           <p>The reporting this week put a sharp point on something we have watched escalate all year: attackers have largely stopped trying to <em>steal</em> your multi-factor authentication and instead get your employees to <em>hand it over</em>. The phrasing in the security press is blunt: if your workforce authenticates with push-based MFA, this is a live threat to your organization today.</p>
 
-          <p>This is worth a clear explanation for every small business owner, because the instinct when you read it is "but we already turned on MFA." You did, and that was the right move. The problem is that the most common forms of MFA &mdash; a texted six-digit code, or a phone notification you approve with a tap &mdash; can be defeated without the attacker ever possessing your phone. Here is exactly how, and what to do about it without boiling the ocean.</p>
+          <p>This is worth a clear explanation for every small business owner, because the instinct when you read it is "but we already turned on MFA." You did, and that was the right move. The problem is that the most common forms of MFA (a texted six-digit code, or a phone notification you approve with a tap) can be defeated without the attacker ever possessing your phone. Here is exactly how, and what to do about it without boiling the ocean.</p>
 
           <h2>Why the attack moved to the second factor</h2>
 
@@ -226,19 +226,19 @@
 
           <h3>1. Push bombing (MFA fatigue)</h3>
 
-          <p>The attacker has your employee's password and simply tries to log in &mdash; over and over. Each attempt fires an approval prompt to the employee's phone. At 11 p.m., or in the middle of a busy workday, the phone lights up five, ten, twenty times. Eventually the employee taps "Approve" &mdash; to make it stop, or because they assume IT is doing something, or out of pure reflex. That one tap hands the attacker an authenticated session.</p>
+          <p>The attacker has your employee's password and simply tries to log in, over and over. Each attempt fires an approval prompt to the employee's phone. At 11 p.m., or in the middle of a busy workday, the phone lights up five, ten, twenty times. Eventually the employee taps "Approve," to make it stop, or because they assume IT is doing something, or out of pure reflex. That one tap hands the attacker an authenticated session.</p>
 
           <p>This is the simplest version and it has compromised some very large, very well-resourced companies. It works because a yes/no prompt with no context is easy to approve by mistake under pressure.</p>
 
           <h3>2. Adversary-in-the-middle phishing</h3>
 
-          <p>This one defeats even a careful employee. The user gets an email &mdash; an invoice, a shared document, a voicemail notification &mdash; and clicks the link. They land on a page that looks exactly like the Microsoft 365 sign-in, because it is a proxy sitting between the user and the real Microsoft. Everything the user types is relayed live to the genuine Microsoft site. The user enters the password, gets a real MFA prompt, approves it &mdash; and the proxy quietly captures the resulting <strong>session token</strong>, the cookie that proves "this person already passed MFA."</p>
+          <p>This one defeats even a careful employee. The user gets an email (an invoice, a shared document, a voicemail notification) and clicks the link. They land on a page that looks exactly like the Microsoft 365 sign-in, because it is a proxy sitting between the user and the real Microsoft. Everything the user types is relayed live to the genuine Microsoft site. The user enters the password, gets a real MFA prompt, approves it, and the proxy quietly captures the resulting <strong>session token</strong>, the cookie that proves "this person already passed MFA."</p>
 
           <p>The attacker reuses that token and is now inside the mailbox, having never needed the second factor again. The user saw a normal login and noticed nothing wrong. Off-the-shelf phishing kits automate this entire flow; it is not exotic.</p>
 
           <h3>3. Help-desk social engineering</h3>
 
-          <p>The lowest-tech and one of the most effective. The attacker calls your IT help desk (or your outsourced provider) posing as an employee who is locked out or got a new phone. They ask for an MFA reset or a new-device enrollment. If the help desk verifies identity with something an attacker can find on LinkedIn &mdash; name, manager, employee ID, last four of a phone number &mdash; the attacker enrolls <em>their own</em> device as the new second factor and walks in the front door. Several of the year's biggest breaches started with a phone call, not malware.</p>
+          <p>The lowest-tech and one of the most effective. The attacker calls your IT help desk (or your outsourced provider) posing as an employee who is locked out or got a new phone. They ask for an MFA reset or a new-device enrollment. If the help desk verifies identity with something an attacker can find on LinkedIn (name, manager, employee ID, last four of a phone number), the attacker enrolls <em>their own</em> device as the new second factor and walks in the front door. Several of the year's biggest breaches started with a phone call, not malware.</p>
 
           <h2>What actually stops it</h2>
 
@@ -261,15 +261,15 @@
 
           <h3>Lock down the help desk</h3>
 
-          <p>Technology does not fix the phone call. Every help desk &mdash; yours or your provider's &mdash; needs a written caller-verification procedure that does not rely on public information. Good options: a callback to the number on file, verification through a manager, a one-time code sent to a pre-registered channel, or in-person/video confirmation for high-risk requests like MFA resets. We build this verification runbook into the onboarding for every client we manage, precisely because attackers have learned the help desk is the soft spot.</p>
+          <p>Technology does not fix the phone call. Every help desk (yours or your provider's) needs a written caller-verification procedure that does not rely on public information. Good options: a callback to the number on file, verification through a manager, a one-time code sent to a pre-registered channel, or in-person/video confirmation for high-risk requests like MFA resets. We build this verification runbook into the onboarding for every client we manage, precisely because attackers have learned the help desk is the soft spot.</p>
 
           <h3>Back it with monitoring</h3>
 
-          <p>Even with strong MFA, you want eyes on the identity layer. Microsoft Entra flags risky sign-ins, impossible-travel events, and suspicious MFA-registration changes. Someone has to be watching those alerts and acting on them &mdash; which is the <a href="/blog/ai-attack-speed-22-seconds-mdr-smb">24/7 MDR</a> argument we have made all month. A new device enrolling as an MFA method for your CFO at 3 a.m. is exactly the kind of signal that should wake someone up.</p>
+          <p>Even with strong MFA, you want eyes on the identity layer. Microsoft Entra flags risky sign-ins, impossible-travel events, and suspicious MFA-registration changes. Someone has to be watching those alerts and acting on them, which is the <a href="/blog/ai-attack-speed-22-seconds-mdr-smb">24/7 MDR</a> argument we have made all month. A new device enrolling as an MFA method for your CFO at 3 a.m. is exactly the kind of signal that should wake someone up.</p>
 
           <h2>What this looks like for a Central Coast small business</h2>
 
-          <p>For a typical 15-to-50-person business on Microsoft 365 Business Premium &mdash; which most of our Salinas, Monterey, and Santa Cruz clients run &mdash; nearly everything above is already licensed. Conditional Access, number matching, passkeys, legacy-auth blocking, and Entra risk detection all come with Business Premium. The work is configuration and rollout, not new purchases. The only hard cost is hardware keys for your most sensitive accounts, which is a few hundred dollars for a small team.</p>
+          <p>For a typical 15-to-50-person business on Microsoft 365 Business Premium (which most of our Salinas, Monterey, and Santa Cruz clients run), nearly everything above is already licensed. Conditional Access, number matching, passkeys, legacy-auth blocking, and Entra risk detection all come with Business Premium. The work is configuration and rollout, not new purchases. The only hard cost is hardware keys for your most sensitive accounts, which is a few hundred dollars for a small team.</p>
 
           <p>The realistic project is one to two weeks: enable the phishing-resistant methods, enroll users in waves so the help desk is not overwhelmed, tighten Conditional Access to require the strong method for admins and finance first and then everyone, and document the help-desk verification procedure. None of it is exotic. It is the difference between "we have MFA" and "our MFA cannot be handed over."</p>
 

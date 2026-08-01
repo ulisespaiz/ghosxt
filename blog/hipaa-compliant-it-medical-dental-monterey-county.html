@@ -188,7 +188,7 @@
       <div class="blog-post-body">
         <div class="container">
           <aside class="blog-post-quickfix" aria-label="Summary of HIPAA IT requirements">
-            <span class="quickfix-label">TL;DR &mdash; What HIPAA actually requires of small practice IT</span>
+            <span class="quickfix-label">TL;DR: What HIPAA actually requires of small practice IT</span>
             <h2>HIPAA applies to every practice that handles PHI, regardless of size. The IT requirements are specific, documentable, and not optional.</h2>
             <ul>
               <li><strong>Risk assessment:</strong> documented, completed within the last 12 months, kept on file.</li>
@@ -196,7 +196,7 @@
               <li><strong>Encryption:</strong> ePHI encrypted at rest (full-disk on laptops and servers) and in transit (TLS for email and EHR). Encrypted laptops are an "addressable" requirement that becomes the practical floor.</li>
               <li><strong>Audit logs:</strong> who accessed which patient record, when, retained for at least 6 years.</li>
               <li><strong>Backup and DR:</strong> tested backups with a written disaster recovery plan and documented restore time.</li>
-              <li><strong>BAAs:</strong> a signed Business Associate Agreement with every vendor that touches ePHI &mdash; EHR, IT provider, cloud (Microsoft / Google), backup vendor, email if used for ePHI.</li>
+              <li><strong>BAAs:</strong> a signed Business Associate Agreement with every vendor that touches ePHI: EHR, IT provider, cloud (Microsoft / Google), backup vendor, email if used for ePHI.</li>
             </ul>
             <p>For a 5-to-15 person Monterey County medical or dental practice, the realistic cost of doing this right in 2026 is <strong>$175 to $300 per user per month</strong> for managed IT plus a one-time setup of $2,500 to $8,000 to bring an existing practice into compliance. The OCR settlement math (typical $50,000 to $250,000 per documented violation) makes the case for itself.</p>
           </aside>
@@ -209,17 +209,17 @@
 
           <h2>Does HIPAA actually apply to a small practice?</h2>
 
-          <p>Yes. HIPAA applies to any covered entity that handles PHI, regardless of size. The Office for Civil Rights (OCR) at the U.S. Department of Health and Human Services enforces it. Solo practitioners, two-dentist offices, three-MD primary care groups, five-provider specialty practices, mental health solo practices, physical therapy clinics, optometrists, chiropractors, podiatrists, audiologists &mdash; all covered entities. If the practice creates, receives, maintains, or transmits PHI, HIPAA applies.</p>
+          <p>Yes. HIPAA applies to any covered entity that handles PHI, regardless of size. The Office for Civil Rights (OCR) at the U.S. Department of Health and Human Services enforces it. Solo practitioners, two-dentist offices, three-MD primary care groups, five-provider specialty practices, mental health solo practices, physical therapy clinics, optometrists, chiropractors, podiatrists, audiologists: all covered entities. If the practice creates, receives, maintains, or transmits PHI, HIPAA applies.</p>
 
           <p>OCR routinely settles cases against small practices. Published examples include dental practices fined $50,000-plus for unsecured ePHI, single-physician practices fined for not encrypting laptops, and small physical therapy clinics fined for posting patient testimonials without authorization. The frequent pattern is that the practice did not realize the specific control was required until a complaint or a breach surfaced the issue.</p>
 
           <p>The relevant rules:</p>
 
           <ul>
-            <li><strong>Privacy Rule</strong> (2003) &mdash; governs how PHI can be used and disclosed.</li>
-            <li><strong>Security Rule</strong> (2005) &mdash; governs the technical safeguards for electronic PHI. This is the rule that drives most IT-specific requirements.</li>
-            <li><strong>Breach Notification Rule</strong> (2009) &mdash; requires notifying patients, OCR, and in some cases the media when ePHI is breached. 60-day notice window. Reports of breaches affecting 500+ individuals are posted publicly on the OCR breach portal.</li>
-            <li><strong>HITECH Act</strong> (2009) &mdash; increased enforcement and penalty tiers; clarified that business associates (including IT vendors) are directly liable.</li>
+            <li><strong>Privacy Rule</strong> (2003): governs how PHI can be used and disclosed.</li>
+            <li><strong>Security Rule</strong> (2005): governs the technical safeguards for electronic PHI. This is the rule that drives most IT-specific requirements.</li>
+            <li><strong>Breach Notification Rule</strong> (2009): requires notifying patients, OCR, and in some cases the media when ePHI is breached. 60-day notice window. Reports of breaches affecting 500+ individuals are posted publicly on the OCR breach portal.</li>
+            <li><strong>HITECH Act</strong> (2009): increased enforcement and penalty tiers; clarified that business associates (including IT vendors) are directly liable.</li>
           </ul>
 
           <p>The OCR enforcement website lists published settlements at <a href="https://www.hhs.gov/hipaa/for-professionals/compliance-enforcement/agreements/index.html" target="_blank" rel="noopener noreferrer">hhs.gov/hipaa/for-professionals/compliance-enforcement</a>. Reading a few of them is the fastest way to understand how OCR actually enforces and what the typical gaps look like.</p>
@@ -275,7 +275,7 @@
 
           <h3>Pillar 3: Audit logs</h3>
 
-          <p>Logs of who accessed what ePHI, when, from where. Retained for at least 6 years. This is mostly an EHR responsibility &mdash; modern EHRs generate access logs natively &mdash; but the underlying systems (Microsoft 365, file shares, network access) also need logging. The configuration is straightforward; the discipline is making sure the logs are actually retained and reviewed periodically for unusual patterns.</p>
+          <p>Logs of who accessed what ePHI, when, from where. Retained for at least 6 years. This is mostly an EHR responsibility (modern EHRs generate access logs natively), but the underlying systems (Microsoft 365, file shares, network access) also need logging. The configuration is straightforward; the discipline is making sure the logs are actually retained and reviewed periodically for unusual patterns.</p>
 
           <p>"Unusual patterns" includes things like: a front-desk account accessing 200 patient records in an hour, a clinician account logging in at 2am from a city the staff member does not live in, repeated failed logins on an admin account. A managed IT provider that includes a managed SIEM or security operations tier handles this monitoring; a provider that does not, leaves it to you.</p>
 

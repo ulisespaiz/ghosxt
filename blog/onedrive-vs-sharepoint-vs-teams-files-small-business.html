@@ -196,7 +196,7 @@
       <div class="blog-post-body">
         <div class="container">
           <aside class="blog-post-quickfix" aria-label="Summary and the default-correct pattern">
-            <span class="quickfix-label">TL;DR &mdash; All three live on top of SharePoint Online underneath</span>
+            <span class="quickfix-label">TL;DR: All three live on top of SharePoint Online underneath</span>
             <h2>The "right" answer depends on who owns the file and who needs access. There is a default-correct pattern for SMBs.</h2>
             <ul>
               <li><strong>OneDrive</strong> = "my drafts and personal work files."</li>
@@ -314,12 +314,12 @@
                 <tr>
                   <th scope="row">When the owner leaves</th>
                   <td>Files can be lost or need manual reassignment</td>
-                  <td>Unaffected &mdash; the business owns the library, not the person</td>
-                  <td>Unaffected &mdash; same as SharePoint underneath</td>
+                  <td>Unaffected: the business owns the library, not the person</td>
+                  <td>Unaffected: same as SharePoint underneath</td>
                 </tr>
                 <tr>
                   <th scope="row">Retention policy support</th>
-                  <td>Weak &mdash; not designed for org-level retention</td>
+                  <td>Weak: not designed for org-level retention</td>
                   <td>Full support, applied at the site level</td>
                   <td>Inherited from the underlying SharePoint site</td>
                 </tr>
@@ -342,9 +342,9 @@
           <p>Every SharePoint site has three default permission groups:</p>
 
           <ul>
-            <li><strong>Owners</strong> &mdash; can change permissions, manage the site, delete content. For a department, this is the department head and optionally an admin. Keep this list short.</li>
-            <li><strong>Members</strong> &mdash; can read and write content. This is the working population of the department.</li>
-            <li><strong>Visitors</strong> &mdash; read-only access. Useful when another department needs reference access without edit rights.</li>
+            <li><strong>Owners</strong>: can change permissions, manage the site, delete content. For a department, this is the department head and optionally an admin. Keep this list short.</li>
+            <li><strong>Members</strong>: can read and write content. This is the working population of the department.</li>
+            <li><strong>Visitors</strong>: read-only access. Useful when another department needs reference access without edit rights.</li>
           </ul>
 
           <p>The discipline is to populate these groups with security groups (or Entra ID groups), not individual users. Adding "Sales Team" as a group to the Sales site's Members group means new hires automatically get access when they are added to the group, and lose it when they are removed. Adding individuals one at a time creates the access drift that becomes the oversharing problem two years later.</p>
@@ -397,7 +397,7 @@
 
           <p>That sounds reassuring until you remember what the average tenant looks like. If the Finance SharePoint site was accidentally shared with "everyone except external users" three years ago and nobody noticed, Copilot will happily summarize the payroll spreadsheet for any user who asks "what does the leadership team get paid?" The oversharing that did not matter when nobody had a search bar in their face suddenly matters a lot when every user does.</p>
 
-          <p>The practical implication is that permissions hygiene becomes a prerequisite for Copilot deployment, not a nice-to-have. Run the SharePoint Advanced Management (SAM) oversharing report. Use restricted SharePoint search to limit Copilot's reach during initial rollout. Clean up stale external shares. Apply sensitivity labels to actually sensitive content. Identity hygiene matters too &mdash; see the <a href="/blog/identity-hardening-small-business-5-employees-microsoft-365">identity hardening post</a> for the prerequisites that have to be in place before you turn Copilot on.</p>
+          <p>The practical implication is that permissions hygiene becomes a prerequisite for Copilot deployment, not a nice-to-have. Run the SharePoint Advanced Management (SAM) oversharing report. Use restricted SharePoint search to limit Copilot's reach during initial rollout. Clean up stale external shares. Apply sensitivity labels to actually sensitive content. Identity hygiene matters too: see the <a href="/blog/identity-hardening-small-business-5-employees-microsoft-365">identity hardening post</a> for the prerequisites that have to be in place before you turn Copilot on.</p>
 
           <h2>Migrating off file servers, OneDrive Personal, or Dropbox to the right home</h2>
 
@@ -408,10 +408,10 @@
           <p>Walk the file server. Categorize content into four buckets:</p>
 
           <ul>
-            <li><strong>Active</strong> &mdash; used in the last 12 months, still relevant.</li>
-            <li><strong>Reference</strong> &mdash; not actively edited, but needed for lookups, compliance, or institutional memory.</li>
-            <li><strong>Archive</strong> &mdash; legally required to retain, but not consulted day to day.</li>
-            <li><strong>Junk</strong> &mdash; abandoned, duplicates, personal files that ended up on the share, screen recordings from 2017.</li>
+            <li><strong>Active</strong>: used in the last 12 months, still relevant.</li>
+            <li><strong>Reference</strong>: not actively edited, but needed for lookups, compliance, or institutional memory.</li>
+            <li><strong>Archive</strong>: legally required to retain, but not consulted day to day.</li>
+            <li><strong>Junk</strong>: abandoned, duplicates, personal files that ended up on the share, screen recordings from 2017.</li>
           </ul>
 
           <p>The junk bucket usually accounts for 30-60% of the file server. Do not migrate it. Delete it (or at least quarantine it).</p>
@@ -439,12 +439,12 @@
           <p><strong>SharePoint sites (one per business function):</strong></p>
 
           <ul>
-            <li><strong>HR</strong> &mdash; HR managers as owners, HR staff as members, leadership as visitors. External sharing off.</li>
-            <li><strong>Finance</strong> &mdash; CFO and controller as owners, finance team as members. External sharing off. Sensitivity labels applied to anything with employee compensation or banking detail.</li>
-            <li><strong>Operations</strong> &mdash; operations manager as owner, ops team as members, all staff as visitors for the procedures library.</li>
-            <li><strong>Sales</strong> &mdash; sales manager as owner, sales team as members, account managers in the Members group. External sharing on for the "Customer-Facing" document library, off for the rest of the site.</li>
-            <li><strong>Legal</strong> &mdash; general counsel (or outside counsel contact) as owner, leadership as members, no broad visitor access.</li>
-            <li><strong>Company-Wide</strong> &mdash; one site for the things everyone needs (employee handbook, IT policies, holiday schedule, the office wifi password). Everyone as visitors, HR and IT as members, IT as owner.</li>
+            <li><strong>HR</strong>: HR managers as owners, HR staff as members, leadership as visitors. External sharing off.</li>
+            <li><strong>Finance</strong>: CFO and controller as owners, finance team as members. External sharing off. Sensitivity labels applied to anything with employee compensation or banking detail.</li>
+            <li><strong>Operations</strong>: operations manager as owner, ops team as members, all staff as visitors for the procedures library.</li>
+            <li><strong>Sales</strong>: sales manager as owner, sales team as members, account managers in the Members group. External sharing on for the "Customer-Facing" document library, off for the rest of the site.</li>
+            <li><strong>Legal</strong>: general counsel (or outside counsel contact) as owner, leadership as members, no broad visitor access.</li>
+            <li><strong>Company-Wide</strong>: one site for the things everyone needs (employee handbook, IT policies, holiday schedule, the office wifi password). Everyone as visitors, HR and IT as members, IT as owner.</li>
           </ul>
 
           <p><strong>Teams:</strong></p>
@@ -472,13 +472,13 @@
           <p>This post is the foundation piece for the Microsoft 365 storage cluster. It pairs with:</p>
 
           <ul>
-            <li>The <a href="/blog/sharepoint-server-rce-cve-2026-33112-may-2026-smb">SharePoint Server zero-day post</a> &mdash; evidence for why SharePoint Online (cloud) beats running on-prem SharePoint at SMB scale.</li>
-            <li>The <a href="/blog/identity-hardening-small-business-5-employees-microsoft-365">identity hardening post</a> &mdash; the prerequisites that have to be in place before any of these permission patterns matter.</li>
-            <li>The <a href="/blog/microsoft-365-copilot-business-price-lock-2026">Copilot business price-lock post</a> &mdash; why permissions hygiene needs to come <em>before</em> you turn Copilot on, not after.</li>
-            <li>The <a href="/blog/backup-disaster-recovery-small-business-2026">backup and disaster recovery post</a> &mdash; how to back up the SharePoint, OneDrive, and Teams content once it is in the right place, because Microsoft's native retention is not a backup.</li>
-            <li><a href="/cloud-services">Ghosxt cloud services</a> &mdash; the wrap-around managed service for Microsoft 365, including governance, migrations, and ongoing tuning.</li>
-            <li><a href="/managed-it-services">Managed IT services</a> &mdash; the bigger umbrella, for the firms that want one provider handling identity, endpoints, storage, and security as a single program.</li>
-            <li><a href="/cybersecurity">Cybersecurity services</a> &mdash; the detection and response layer that watches all three surfaces.</li>
+            <li>The <a href="/blog/sharepoint-server-rce-cve-2026-33112-may-2026-smb">SharePoint Server zero-day post</a>, evidence for why SharePoint Online (cloud) beats running on-prem SharePoint at SMB scale.</li>
+            <li>The <a href="/blog/identity-hardening-small-business-5-employees-microsoft-365">identity hardening post</a>, the prerequisites that have to be in place before any of these permission patterns matter.</li>
+            <li>The <a href="/blog/microsoft-365-copilot-business-price-lock-2026">Copilot business price-lock post</a>, why permissions hygiene needs to come <em>before</em> you turn Copilot on, not after.</li>
+            <li>The <a href="/blog/backup-disaster-recovery-small-business-2026">backup and disaster recovery post</a>, how to back up the SharePoint, OneDrive, and Teams content once it is in the right place, because Microsoft's native retention is not a backup.</li>
+            <li><a href="/cloud-services">Ghosxt cloud services</a>, the wrap-around managed service for Microsoft 365, including governance, migrations, and ongoing tuning.</li>
+            <li><a href="/managed-it-services">Managed IT services</a>, the bigger umbrella, for the firms that want one provider handling identity, endpoints, storage, and security as a single program.</li>
+            <li><a href="/cybersecurity">Cybersecurity services</a>, the detection and response layer that watches all three surfaces.</li>
           </ul>
 
           <p>The honest read is that most SMB confusion about OneDrive, SharePoint, and Teams comes from treating them as three competing storage products rather than three views of the same SharePoint backend. Once the mental model lines up, the decision tree is straightforward. Personal scratch goes to OneDrive. Departmental and project content goes to SharePoint, accessed either via the SharePoint web UI or via the Teams Files tab depending on whether collaboration is happening right now. Permissions are governed by the SharePoint site, not by the app icon. Copilot will only see what the asking user can already see, so permissions hygiene becomes the project that unlocks everything else.</p>

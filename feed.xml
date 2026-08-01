@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
-    <title>Ghosxt Blog — Managed IT &amp; Cybersecurity for the Central Coast</title>
+    <title>Ghosxt Blog: Managed IT &amp; Cybersecurity for the Central Coast</title>
     <link>https://ghosxt.com/blog/</link>
     <atom:link href="https://ghosxt.com/feed.xml" rel="self" type="application/rss+xml" />
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from an engineer with DoD infrastructure experience.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Fri, 31 Jul 2026 11:04:49 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 01 Aug 2026 07:39:24 +0000</lastBuildDate>
     <pubDate>Fri, 31 Jul 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
     <item>
@@ -143,7 +143,7 @@
       <pubDate>Fri, 17 Jul 2026 00:00:00 +0000</pubDate>
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
-      <description>Credential stuffing doesn't hack your business — it logs in with a password your employee reused elsewhere. How the attack works, and how to stop it.</description>
+      <description>Credential stuffing doesn't hack your business. It logs in with a password your employee reused elsewhere. How the attack works, and how to stop it.</description>
     </item>
     <item>
       <title>Mobile Device Management (MDM) for Small Business: When You Actually Need It (2026)</title>

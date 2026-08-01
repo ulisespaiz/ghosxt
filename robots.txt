@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 Disallow: /admin/
 Disallow: /staging/
-# Note: /assets/css/ and /assets/js/ are intentionally crawlable —
+# Note: /assets/css/ and /assets/js/ are intentionally crawlable,
 # Googlebot needs both to render pages correctly.
 
 # AI / answer-engine crawlers are explicitly welcome to read and cite the site.

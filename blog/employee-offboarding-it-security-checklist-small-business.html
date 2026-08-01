@@ -65,11 +65,11 @@
             "description": "A working offboarding process that runs the same way every time, on the day employment ends.",
             "step": [
               { "@type": "HowToStep", "name": "Disable identity first", "text": "Turn off the employee's primary directory account (Microsoft 365, Google Workspace, or on-prem Active Directory) immediately. Because most other business apps use single sign-on tied to that identity, this one step closes a large share of the total access footprint in a single action." },
-              { "@type": "HowToStep", "name": "Revoke MFA and active sessions", "text": "Disabling the account is not enough on its own — existing login sessions and app passwords can remain valid until they are explicitly revoked. Force a sign-out of all active sessions and remove any registered MFA devices." },
+              { "@type": "HowToStep", "name": "Revoke MFA and active sessions", "text": "Disabling the account is not enough on its own: existing login sessions and app passwords can remain valid until they are explicitly revoked. Force a sign-out of all active sessions and remove any registered MFA devices." },
               { "@type": "HowToStep", "name": "Reassign, don't delete, the mailbox and files", "text": "Convert email to a shared mailbox or forward it to a manager for a transition period, and transfer ownership of any cloud files, shared drives, and CRM records the employee owned to someone still on the team, before the account is removed." },
               { "@type": "HowToStep", "name": "Pull the device", "text": "Recover any company laptop, phone, or hardware token. If the employee used a personal device for email or Slack, remotely wipe the company data and confirm the device is removed from your mobile device management enrollment." },
-              { "@type": "HowToStep", "name": "Rotate shared and vendor credentials", "text": "Any login the employee knew that is not tied to their personal identity — a shared social media account, a vendor portal, a shared password vault entry — needs its password changed, not just their individual access removed." },
-              { "@type": "HowToStep", "name": "Remove them from every third-party app", "text": "Check your password manager and any SaaS admin console for standalone logins that were never connected to the main directory account — the accounts that get missed most often because they live outside the systems IT normally watches." }
+              { "@type": "HowToStep", "name": "Rotate shared and vendor credentials", "text": "Any login the employee knew that is not tied to their personal identity (a shared social media account, a vendor portal, a shared password vault entry) needs its password changed, not just their individual access removed." },
+              { "@type": "HowToStep", "name": "Remove them from every third-party app", "text": "Check your password manager and any SaaS admin console for standalone logins that were never connected to the main directory account: the accounts that get missed most often because they live outside the systems IT normally watches." }
             ]
           },
           {
@@ -186,11 +186,11 @@
         <div class="container">
           <p>When I run a first-time security assessment for a new small business client, one of the first things I check is how many former employees still have working logins. The answer is almost never zero. I have found ex-employees with active email accounts eight months after their last day, VPN credentials that were never revoked, and a shared file drive still syncing to a personal laptop that left the building over a year earlier.</p>
 
-          <p>Offboarding gets far less attention than onboarding, because it usually happens during a stressful moment &mdash; a resignation, a layoff, a termination &mdash; when nobody is thinking about IT. That gap between "employment ends" and "access ends" is exactly where a former employee, or anyone who later gets hold of their credentials, can quietly walk back in.</p>
+          <p>Offboarding gets far less attention than onboarding, because it usually happens during a stressful moment (a resignation, a layoff, a termination) when nobody is thinking about IT. That gap between "employment ends" and "access ends" is exactly where a former employee, or anyone who later gets hold of their credentials, can quietly walk back in.</p>
 
           <h2>Why the gap is bigger than owners think</h2>
 
-          <p>A single employee typically touches more systems than a business owner can list from memory: email, a Microsoft 365 or Google Workspace login, a VPN or remote-desktop credential, a CRM, accounting software, a shared password vault, a handful of browser-saved logins, and often a personal phone with company email or Slack installed. Disabling the obvious one &mdash; the company email account &mdash; leaves most of that list untouched.</p>
+          <p>A single employee typically touches more systems than a business owner can list from memory: email, a Microsoft 365 or Google Workspace login, a VPN or remote-desktop credential, a CRM, accounting software, a shared password vault, a handful of browser-saved logins, and often a personal phone with company email or Slack installed. Disabling the obvious one (the company email account) leaves most of that list untouched.</p>
 
           <p>The risk is not usually a vengeful ex-employee. It is a stale account that becomes a target. A former employee's email, still active and still forwarding, is one phishing email away from compromise. A password they reused elsewhere and never changed is one dark web credential dump away from becoming an entry point into your Microsoft 365 tenant. The account does not need to be misused on purpose to cause a breach; it only needs to still exist.</p>
 
@@ -200,10 +200,10 @@
 
           <ul>
             <li><strong>Disable identity first.</strong> Turn off the employee's primary directory account (Microsoft 365, Google Workspace, or on-prem Active Directory) immediately. Because most other business apps use single sign-on tied to that identity, this one step closes a large share of the total access footprint in a single action.</li>
-            <li><strong>Revoke MFA and active sessions.</strong> Disabling the account is not enough on its own &mdash; existing login sessions and app passwords can remain valid until they are explicitly revoked. Force a sign-out of all active sessions and remove any registered MFA devices.</li>
+            <li><strong>Revoke MFA and active sessions.</strong> Disabling the account is not enough on its own: existing login sessions and app passwords can remain valid until they are explicitly revoked. Force a sign-out of all active sessions and remove any registered MFA devices.</li>
             <li><strong>Reassign, don't delete, the mailbox and files.</strong> Convert email to a shared mailbox or forward it to a manager for a transition period, and transfer ownership of any cloud files, shared drives, and CRM records the employee owned to someone still on the team, before the account is removed.</li>
             <li><strong>Pull the device.</strong> Recover any company laptop, phone, or hardware token. If the employee used a personal device for email or Slack (a common arrangement at small businesses), remotely wipe the company data and confirm the device is removed from your mobile device management enrollment.</li>
-            <li><strong>Rotate shared and vendor credentials.</strong> Any login the employee knew that is not tied to their personal identity &mdash; a shared social media account, a vendor portal, a shared password vault entry &mdash; needs its password changed, not just their individual access removed.</li>
+            <li><strong>Rotate shared and vendor credentials.</strong> Any login the employee knew that is not tied to their personal identity (a shared social media account, a vendor portal, a shared password vault entry) needs its password changed, not just their individual access removed.</li>
             <li><strong>Remove them from every third-party app.</strong> Check your <a href="/blog/password-manager-small-business-2026">password manager</a> and any SaaS admin console for standalone logins that were never connected to the main directory account. These are the accounts that get missed most often because they live outside the systems IT normally watches.</li>
           </ul>
 
@@ -211,11 +211,11 @@
 
           <p>The businesses that get this right treat offboarding as a fixed procedure, not a task someone remembers to do. That means a written list tied to your HR process, so IT is notified the same day a resignation is accepted or a termination is decided, not after the employee has already left the building. For involuntary departures, access should be disabled before or during the termination conversation, not afterward.</p>
 
-          <p>It also means someone owns the list end to end. In a business without dedicated IT staff, that responsibility often falls through the cracks between HR and whoever happens to manage the router. A <a href="/managed-it-services">managed IT provider</a> can run this as a standing procedure &mdash; a single ticket that triggers every step above and confirms each one is done, instead of hoping someone remembers the shared vault password.</p>
+          <p>It also means someone owns the list end to end. In a business without dedicated IT staff, that responsibility often falls through the cracks between HR and whoever happens to manage the router. A <a href="/managed-it-services">managed IT provider</a> can run this as a standing procedure: a single ticket that triggers every step above and confirms each one is done, instead of hoping someone remembers the shared vault password.</p>
 
           <h2>The five-minute audit to run today</h2>
 
-          <p>Pull up your employee directory and your active-user list in Microsoft 365 or Google Workspace side by side. Anyone on the active list who is not on payroll anymore is a live account that should not exist. If you find one, that is your offboarding process working in reverse &mdash; it caught the gap late instead of same-day, but it caught it. Use it as the reason to write the checklist down before the next departure happens.</p>
+          <p>Pull up your employee directory and your active-user list in Microsoft 365 or Google Workspace side by side. Anyone on the active list who is not on payroll anymore is a live account that should not exist. If you find one, that is your offboarding process working in reverse: it caught the gap late instead of same-day, but it caught it. Use it as the reason to write the checklist down before the next departure happens.</p>
 
           <div class="blog-post-cta">
             <h3>Not sure who still has access to your systems?</h3>

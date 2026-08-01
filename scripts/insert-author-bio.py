@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Insert a visible author-credential bio box into every blog post, right after
 the existing byline. Blog posts already carry the author's credentials in
-invisible schema.org JSON-LD (linking to about.html) — this surfaces the same
+invisible schema.org JSON-LD (linking to about.html): this surfaces the same
 facts on the page itself, which is what Google's E-E-A-T guidance rewards.
 
 Idempotent: posts that already contain the section are skipped, safe to re-run.
@@ -42,7 +42,7 @@ def main():
             skipped.append(name)
             continue
         if ANCHOR not in t:
-            print(f"!! anchor not found in {name} — skipping")
+            print(f"!! anchor not found in {name}, skipping")
             skipped.append(name)
             continue
         new = t.replace(ANCHOR, ANCHOR + BIO_HTML, 1)

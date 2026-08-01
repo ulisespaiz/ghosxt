@@ -67,7 +67,7 @@
                 "name": "What's the difference between SIM swapping and phishing?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Phishing tricks someone into handing over a credential; SIM swapping takes over the phone number itself, with no click required from the victim at all. The attacker convinces your mobile carrier &mdash; usually through social engineering or a bribed insider &mdash; to move your number onto a SIM they control. From that point on, every call and text meant for you goes to them instead, including the SMS codes and password-reset links that businesses still use to verify identity. It's often the second step after a phishing or data-broker lookup supplies the personal details (date of birth, last four of an account, a previous address) needed to pass the carrier's identity check."
+                  "text": "Phishing tricks someone into handing over a credential; SIM swapping takes over the phone number itself, with no click required from the victim at all. The attacker convinces your mobile carrier (usually through social engineering or a bribed insider) to move your number onto a SIM they control. From that point on, every call and text meant for you goes to them instead, including the SMS codes and password-reset links that businesses still use to verify identity. It's often the second step after a phishing or data-broker lookup supplies the personal details (date of birth, last four of an account, a previous address) needed to pass the carrier's identity check."
                 }
               },
               {
@@ -83,7 +83,7 @@
                 "name": "How would I know if my business phone number has been SIM-swapped?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "The clearest sign is sudden, total loss of cell service &mdash; no bars, no texts, no calls &mdash; with no outage on your carrier's end, because your number has just been reassigned to someone else's SIM. A close second is an unexpected \"your SIM has been activated on a new device\" text or email from your carrier, or password-reset confirmations for accounts you didn't touch. Anyone who owns or manages business accounts tied to a personal or company cell number should treat sudden signal loss as a possible takeover in progress and call the carrier from a different phone immediately, rather than assuming it's a network glitch."
+                  "text": "The clearest sign is sudden, total loss of cell service (no bars, no texts, no calls) with no outage on your carrier's end, because your number has just been reassigned to someone else's SIM. A close second is an unexpected \"your SIM has been activated on a new device\" text or email from your carrier, or password-reset confirmations for accounts you didn't touch. Anyone who owns or manages business accounts tied to a personal or company cell number should treat sudden signal loss as a possible takeover in progress and call the carrier from a different phone immediately, rather than assuming it's a network glitch."
                 }
               }
             ]
@@ -172,8 +172,8 @@
       <div class="blog-post-body">
         <div class="container">
           <aside class="blog-post-quickfix" aria-label="Summary and what to do today">
-            <span class="quickfix-label">TL;DR &mdash; your phone number can be stolen without anyone touching your phone</span>
-            <h2>SIM swapping is when an attacker convinces your mobile carrier to move your phone number onto a SIM they control, then uses it to intercept SMS codes and phone-based password resets. It doesn't require malware, a phishing click, or physical access to your device &mdash; just enough personal details to pass the carrier's identity check. A carrier account PIN plus authenticator-app or passkey-based MFA closes almost the entire hole.</h2>
+            <span class="quickfix-label">TL;DR: your phone number can be stolen without anyone touching your phone</span>
+            <h2>SIM swapping is when an attacker convinces your mobile carrier to move your phone number onto a SIM they control, then uses it to intercept SMS codes and phone-based password resets. It doesn't require malware, a phishing click, or physical access to your device: just enough personal details to pass the carrier's identity check. A carrier account PIN plus authenticator-app or passkey-based MFA closes almost the entire hole.</h2>
             <ul>
               <li><strong>Why it works:</strong> carrier support reps can be socially engineered, and stolen personal details from other breaches often supply the identity answers needed.</li>
               <li><strong>The tell:</strong> sudden, total loss of cell service with no outage on your end, followed by password-reset emails you didn't request.</li>
@@ -182,11 +182,11 @@
             <p>Read this with the <a href="/blog/passkeys-passwordless-authentication-small-business-2026">passkeys post</a> (removing SMS from the equation), the <a href="/blog/mfa-fatigue-push-bombing-smb-2026">MFA fatigue post</a> (a different way to bypass MFA), and the <a href="/blog/smishing-sms-phishing-small-business-2026">smishing post</a> (how attackers often gather the details a SIM swap needs).</p>
           </aside>
 
-          <p>Most account-takeover advice assumes the attacker needs a password, a click, or access to a device. SIM swapping needs none of that. It targets the phone number itself, at the carrier level, which means an employee can do everything right &mdash; strong password, careful about links, phone locked in a drawer &mdash; and still lose control of the accounts tied to that number. For a small business owner who uses a personal cell for banking alerts, wire approvals, or account recovery, that single number can be worth more to an attacker than any password on file.</p>
+          <p>Most account-takeover advice assumes the attacker needs a password, a click, or access to a device. SIM swapping needs none of that. It targets the phone number itself, at the carrier level, which means an employee can do everything right (strong password, careful about links, phone locked in a drawer) and still lose control of the accounts tied to that number. For a small business owner who uses a personal cell for banking alerts, wire approvals, or account recovery, that single number can be worth more to an attacker than any password on file.</p>
 
           <h2>How a SIM swap actually happens</h2>
 
-          <p>The attacker starts with research: a name, date of birth, the last four digits of an account, a previous address, or answers to security questions, often pulled from an old data breach, a data broker site, or a smishing or vishing attempt aimed at the target directly. Armed with enough of that, they call the mobile carrier, or use the carrier's own web self-service portal, and request that the phone number be ported to a new SIM &mdash; sometimes with a cooperating or careless support rep, sometimes by passing an identity check that was never that strong to begin with. Once the port completes, the victim's phone goes dead: no signal, no texts, no calls. Every SMS code and phone-based reset link now lands on the attacker's device instead.</p>
+          <p>The attacker starts with research: a name, date of birth, the last four digits of an account, a previous address, or answers to security questions, often pulled from an old data breach, a data broker site, or a smishing or vishing attempt aimed at the target directly. Armed with enough of that, they call the mobile carrier, or use the carrier's own web self-service portal, and request that the phone number be ported to a new SIM: sometimes with a cooperating or careless support rep, sometimes by passing an identity check that was never that strong to begin with. Once the port completes, the victim's phone goes dead: no signal, no texts, no calls. Every SMS code and phone-based reset link now lands on the attacker's device instead.</p>
 
           <h2>Why this is a real risk for a small business</h2>
 
@@ -195,7 +195,7 @@
           <ul>
             <li><strong>SMS is still the fallback MFA method</strong> on banking portals, payroll platforms, and even some business email tenants, and a hijacked number receives those codes exactly as intended.</li>
             <li><strong>Phone-based account recovery is common.</strong> "Forgot password, text me a code" is a normal flow on services that never expected the phone number itself to be compromised.</li>
-            <li><strong>Owners and executives are the highest-value targets.</strong> A hijacked owner's number can approve a wire transfer, reset a banking login, or unlock a domain registrar account &mdash; the same targets a business email compromise attack goes after.</li>
+            <li><strong>Owners and executives are the highest-value targets.</strong> A hijacked owner's number can approve a wire transfer, reset a banking login, or unlock a domain registrar account: the same targets a business email compromise attack goes after.</li>
             <li><strong>The victim often can't self-diagnose it fast.</strong> A dead phone reads as a network glitch or dead battery for the first hour, which is exactly the window an attacker needs.</li>
           </ul>
 
@@ -206,7 +206,7 @@
           <ul>
             <li><strong>A port-out PIN or account lock with your carrier</strong>, set on every business and executive phone line, so a port request fails without it. This is the single highest-leverage fix and takes minutes per line.</li>
             <li><strong>Authenticator apps or passkeys instead of SMS</strong> for MFA wherever the option exists, so a hijacked number no longer hands over a working second factor.</li>
-            <li><strong>Non-phone account recovery</strong> on banking, domain registrar, and email admin accounts &mdash; a recovery code stored securely, or a second verified email, instead of "text me a code."</li>
+            <li><strong>Non-phone account recovery</strong> on banking, domain registrar, and email admin accounts: a recovery code stored securely, or a second verified email, instead of "text me a code."</li>
             <li><strong>A response plan for sudden signal loss</strong>: call the carrier from a different phone immediately and check financial and email accounts for unauthorized password resets, rather than assuming a glitch.</li>
             <li><strong>Limiting what a personal number can reset.</strong> Don't tie your domain registrar, banking login, and business email recovery all to the same single phone number if you can avoid it.</li>
           </ul>
@@ -224,13 +224,13 @@
           <h2>FAQs about SIM swapping</h2>
 
           <h3>What's the difference between SIM swapping and phishing?</h3>
-          <p>Phishing tricks someone into handing over a credential; SIM swapping takes over the phone number itself, with no click required from the victim at all. The attacker convinces your mobile carrier &mdash; usually through social engineering or a bribed insider &mdash; to move your number onto a SIM they control. From that point on, every call and text meant for you goes to them instead, including the SMS codes and password-reset links that businesses still use to verify identity. It's often the second step after a phishing or data-broker lookup supplies the personal details (date of birth, last four of an account, a previous address) needed to pass the carrier's identity check.</p>
+          <p>Phishing tricks someone into handing over a credential; SIM swapping takes over the phone number itself, with no click required from the victim at all. The attacker convinces your mobile carrier (usually through social engineering or a bribed insider) to move your number onto a SIM they control. From that point on, every call and text meant for you goes to them instead, including the SMS codes and password-reset links that businesses still use to verify identity. It's often the second step after a phishing or data-broker lookup supplies the personal details (date of birth, last four of an account, a previous address) needed to pass the carrier's identity check.</p>
 
           <h3>Does switching off SMS-based MFA actually stop SIM swapping?</h3>
           <p>It removes the biggest reason to bother, yes. SIM swapping is valuable to an attacker mainly because it lets them intercept SMS one-time codes and phone-based password resets. If your accounts use an authenticator app or a passkey instead, a hijacked phone number no longer hands over a working second factor, so the attack loses most of its payoff. It doesn't stop the carrier account itself from being taken over, which is still disruptive and worth locking down separately, but it does close the door that makes SIM swapping worth attempting against your business in the first place.</p>
 
           <h3>How would I know if my business phone number has been SIM-swapped?</h3>
-          <p>The clearest sign is sudden, total loss of cell service &mdash; no bars, no texts, no calls &mdash; with no outage on your carrier's end, because your number has just been reassigned to someone else's SIM. A close second is an unexpected "your SIM has been activated on a new device" text or email from your carrier, or password-reset confirmations for accounts you didn't touch. Anyone who owns or manages business accounts tied to a personal or company cell number should treat sudden signal loss as a possible takeover in progress and call the carrier from a different phone immediately, rather than assuming it's a network glitch.</p>
+          <p>The clearest sign is sudden, total loss of cell service (no bars, no texts, no calls) with no outage on your carrier's end, because your number has just been reassigned to someone else's SIM. A close second is an unexpected "your SIM has been activated on a new device" text or email from your carrier, or password-reset confirmations for accounts you didn't touch. Anyone who owns or manages business accounts tied to a personal or company cell number should treat sudden signal loss as a possible takeover in progress and call the carrier from a different phone immediately, rather than assuming it's a network glitch.</p>
 
           <div class="blog-post-cta">
             <h3>Not sure how much of your MFA still depends on SMS?</h3>

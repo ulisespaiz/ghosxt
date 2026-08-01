@@ -2,7 +2,7 @@
 """Propagate scripts/_chrome_source.html to live pages that already contain
 the standard chrome markers (i.e. pages generate-location-service-pages.py /
 generate-it-help-pages.py could have built, or an equivalent hand-authored
-page — see check-chrome-drift.py for which pages qualify).
+page, see check-chrome-drift.py for which pages qualify).
 
 Defaults to a dry run (reports what would change, writes nothing). Pass
 --apply to actually write. Pass specific filenames to scope to just those
@@ -13,8 +13,8 @@ as drifted.
     python3 scripts/apply-chrome.py --apply index.html      # write just index.html
     python3 scripts/apply-chrome.py --apply                 # write all drifted pages
 
-This replaces each of the five chrome regions independently and in place —
-it does not touch anything between them (hero, body sections, FAQs, etc.),
+This replaces each of the five chrome regions independently and in place.
+It does not touch anything between them (hero, body sections, FAQs, etc.),
 so a page's unique content is preserved. Read the diff (or run with dry-run
 first) before applying broadly: some chrome differences are intentional
 per-page variance, not drift to fix.
@@ -54,7 +54,7 @@ def apply_to_file(path, canonical, dry_run=True):
         changed_regions.append(key)
 
     # footer_only is just the <footer>...</footer> element, deliberately
-    # NOT the footer-to-EOF field the generators use — a page's own trailing
+    # NOT the footer-to-EOF field the generators use: a page's own trailing
     # scripts (a calculator widget, a form handler, etc.) live after
     # </footer> and must be left alone.
     footer_marker = '    <footer class="footer" id="footerSection">'
@@ -100,7 +100,7 @@ def main():
         print(f"{verb} {name}: {', '.join(result)}")
 
     if dry_run:
-        print("\nDry run only — no files written. Re-run with --apply to write.")
+        print("\nDry run only: no files written. Re-run with --apply to write.")
 
 
 if __name__ == "__main__":

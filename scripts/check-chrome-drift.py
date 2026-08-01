@@ -7,10 +7,10 @@ Run from the repo root:
     python3 scripts/check-chrome-drift.py
 
 Only pages that contain all five chrome markers (i.e. pages built from the
-shared chrome layout — not every page on the site uses identical chrome,
-e.g. contact.html has its own extra CTA-bar suppression) are checked. A
-difference here isn't automatically a bug — some pages intentionally vary
-(e.g. active nav state) — read the diff before deciding to fix anything.
+shared chrome layout) are checked. Not every page on the site uses identical
+chrome, e.g. contact.html has its own extra CTA-bar suppression. A
+difference here isn't automatically a bug: some pages intentionally vary
+(e.g. active nav state). Read the diff before deciding to fix anything.
 """
 
 import difflib

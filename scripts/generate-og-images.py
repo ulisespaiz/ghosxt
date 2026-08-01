@@ -40,7 +40,7 @@ LOGO_PATH = ROOT / "assets" / "img" / "ghosxt logo.png"
 
 WIDTH, HEIGHT = 1200, 630
 
-# Brand palette — kept in sync with assets/css/main.css var --ghosxt-red-0.
+# Brand palette: kept in sync with assets/css/main.css var --ghosxt-red-0.
 BG_COLOR = (15, 15, 18)            # near-black
 ACCENT_COLOR = (230, 57, 70)       # Ghosxt red
 TEXT_COLOR = (245, 245, 245)
@@ -75,7 +75,7 @@ def load_title(html: str) -> str | None:
 
 def split_title(full_title: str) -> tuple[str, str]:
     """Split 'Page name | Site' style titles into (heading, subtitle)."""
-    for sep in (" | ", " – ", " — ", " - "):
+    for sep in (" | ", " – ", " \u2014 ", " - "):
         if sep in full_title:
             head, _, tail = full_title.partition(sep)
             return head.strip(), tail.strip()
@@ -115,7 +115,7 @@ def render_og(title: str, subtitle: str, out_path: Path, logo_img):
     LOGO_LEFT = 60
     WORDMARK_X = LOGO_LEFT + LOGO_SIZE + 20
     BRAND_BAND_BOTTOM = LOGO_TOP + LOGO_SIZE  # 128
-    HEADING_TOP = BRAND_BAND_BOTTOM + 56      # 184 — generous gap below brand row
+    HEADING_TOP = BRAND_BAND_BOTTOM + 56      # 184, generous gap below brand row
     FOOTER_TOP = HEIGHT - 120                 # 510
 
     if logo_img is not None:

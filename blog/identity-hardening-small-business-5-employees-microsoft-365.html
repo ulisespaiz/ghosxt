@@ -66,7 +66,7 @@
             "step": [
               { "@type": "HowToStep", "name": "Phishing-resistant MFA on admin accounts; regular MFA on everyone", "text": "Push-notification MFA is losing ground to push bombing and adversary-in-the-middle phishing. Deploy hardware FIDO2 keys or Windows Hello for Business on every admin account, with strong push MFA acceptable as a fallback for regular users." },
               { "@type": "HowToStep", "name": "Separated admin accounts", "text": "Split the owner's daily-driver mailbox from their Global Administrator role into two accounts, so a phishing email that compromises the daily account can't also take over the entire Microsoft 365 tenant." },
-              { "@type": "HowToStep", "name": "Conditional Access: the rule engine you already paid for", "text": "Block legacy authentication, require MFA for all users, geo-block sign-ins from countries you don't operate in, and require a compliant device for sensitive apps — all included in Microsoft 365 Business Premium and rarely turned on." },
+              { "@type": "HowToStep", "name": "Conditional Access: the rule engine you already paid for", "text": "Block legacy authentication, require MFA for all users, geo-block sign-ins from countries you don't operate in, and require a compliant device for sensitive apps, all included in Microsoft 365 Business Premium and rarely turned on." },
               { "@type": "HowToStep", "name": "No persistent local administrators on workstations", "text": "Remove standing local administrator rights from every regular user account so a compromised standard-user session can't simply elevate itself to full control of the machine." },
               { "@type": "HowToStep", "name": "Legacy authentication off, tenant-wide", "text": "Audit sign-in logs for legacy protocols that predate MFA (Basic auth, older Outlook, legacy ActiveSync), replace the few legitimate uses with modern equivalents, and disable legacy auth at the tenant level." }
             ]
@@ -200,7 +200,7 @@
       <div class="blog-post-body">
         <div class="container">
           <aside class="blog-post-quickfix" aria-label="Summary and the minimum identity controls">
-            <span class="quickfix-label">TL;DR &mdash; The minimum that actually works</span>
+            <span class="quickfix-label">TL;DR: The minimum that actually works</span>
             <h2>Five controls. Two days of work. Cuts the realistic small-business attack surface by an order of magnitude.</h2>
             <ul>
               <li><strong>Phishing-resistant MFA</strong> on every admin account, regular MFA on everything else. Push-notification MFA alone is no longer enough.</li>

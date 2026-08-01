@@ -196,19 +196,19 @@
       <div class="blog-post-body">
         <div class="container">
           <aside class="blog-post-quickfix" aria-label="Summary and what to do today">
-            <span class="quickfix-label">TL;DR &mdash; three DNS records that stop people forging your email</span>
+            <span class="quickfix-label">TL;DR: three DNS records that stop people forging your email</span>
             <h2>SPF, DKIM, and DMARC are three small records in your domain's DNS that prove your email is really yours. They do two jobs at once: keep your real mail out of clients' spam folders, and stop criminals from sending fake invoices and wire-change requests that show your exact address. The catch is that DMARC only protects you once it's set to enforce, and most small businesses never finish that step.</h2>
             <ul>
-              <li><strong>SPF</strong> lists which servers may send mail for your domain. <strong>DKIM</strong> signs each message so it can't be forged or altered. <strong>DMARC</strong> tells the world what to do with mail that fails both &mdash; and reports who is sending as you.</li>
+              <li><strong>SPF</strong> lists which servers may send mail for your domain. <strong>DKIM</strong> signs each message so it can't be forged or altered. <strong>DMARC</strong> tells the world what to do with mail that fails both, and reports who is sending as you.</li>
               <li><strong>The big mailbox providers now require it.</strong> Google and Yahoo since February 2024, and Microsoft Outlook.com starting May 2025, demand SPF, DKIM, and DMARC from high-volume senders. The direction is one-way: authenticated mail gets in, unauthenticated mail does not.</li>
               <li><strong>Even tiny senders need DMARC for security,</strong> because exact-domain spoofing is how business email compromise and invoice fraud start.</li>
               <li><strong>Microsoft 365 and Google Workspace don't finish the job for you.</strong> They give you SPF and DKIM; nobody publishes the DMARC enforcement policy unless you do.</li>
-              <li><strong>Roll out in stages</strong> &mdash; monitor first, fix every legitimate sender, then quarantine, then reject &mdash; so you block forgers without ever blocking yourself.</li>
+              <li><strong>Roll out in stages</strong>: monitor first, fix every legitimate sender, then quarantine, then reject, so you block forgers without ever blocking yourself.</li>
             </ul>
             <p>If you only do three things this month:</p>
             <ol>
-              <li>Check whether your domain even has a DMARC record &mdash; most small businesses don't, or have one stuck in monitor mode doing nothing.</li>
-              <li>Turn on DKIM signing for your own domain in Microsoft 365 or Google Workspace &mdash; it's frequently still off.</li>
+              <li>Check whether your domain even has a DMARC record: most small businesses don't, or have one stuck in monitor mode doing nothing.</li>
+              <li>Turn on DKIM signing for your own domain in Microsoft 365 or Google Workspace: it's frequently still off.</li>
               <li>Get to an enforcing DMARC policy the safe way, so spoofed mail in your name actually gets rejected.</li>
             </ol>
             <p>The <a href="/cybersecurity">cybersecurity service page</a> covers how this fits the rest of your defenses.</p>
@@ -229,9 +229,9 @@
           <p>You do not need to read DNS syntax to make good decisions here. You do need to understand what each record is for.</p>
 
           <ul>
-            <li><strong>SPF (Sender Policy Framework) &mdash; the guest list.</strong> A record in your DNS that lists the mail servers allowed to send email on your behalf: your Microsoft 365 or Google Workspace, plus any other service that sends as you. A receiving server checks the sending server against this list. If it is not on the list, that is a red flag.</li>
-            <li><strong>DKIM (DomainKeys Identified Mail) &mdash; the tamper-proof seal.</strong> Your mail server adds an invisible cryptographic signature to every message you send. The receiver checks that signature against a public key published in your DNS. A valid signature proves the message genuinely came from your domain and was not altered in transit. A missing or broken one is another red flag.</li>
-            <li><strong>DMARC (Domain-based Message Authentication, Reporting and Conformance) &mdash; the policy and the enforcement.</strong> This is the one that ties it together and the one businesses most often skip. DMARC tells receiving servers what to do when a message claiming to be from your domain fails both SPF and DKIM: do nothing, send it to spam, or reject it outright. It also sends you regular reports showing every system sending mail under your name, including the impersonators.</li>
+            <li><strong>SPF (Sender Policy Framework): the guest list.</strong> A record in your DNS that lists the mail servers allowed to send email on your behalf: your Microsoft 365 or Google Workspace, plus any other service that sends as you. A receiving server checks the sending server against this list. If it is not on the list, that is a red flag.</li>
+            <li><strong>DKIM (DomainKeys Identified Mail): the tamper-proof seal.</strong> Your mail server adds an invisible cryptographic signature to every message you send. The receiver checks that signature against a public key published in your DNS. A valid signature proves the message genuinely came from your domain and was not altered in transit. A missing or broken one is another red flag.</li>
+            <li><strong>DMARC (Domain-based Message Authentication, Reporting and Conformance): the policy and the enforcement.</strong> This is the one that ties it together and the one businesses most often skip. DMARC tells receiving servers what to do when a message claiming to be from your domain fails both SPF and DKIM: do nothing, send it to spam, or reject it outright. It also sends you regular reports showing every system sending mail under your name, including the impersonators.</li>
           </ul>
 
           <p>The mental model: SPF and DKIM are the two proofs of identity. DMARC is the bouncer who decides what happens to anyone whose proof does not check out, and who keeps the logbook. You can have SPF and DKIM perfectly configured and still be wide open to spoofing if DMARC is missing or set to take no action, which is exactly the state we find most often.</p>
@@ -241,7 +241,7 @@
           <p>For years, email authentication was a best practice that most small businesses ignored without obvious consequences. That changed when the largest mailbox providers ran out of patience with the flood of spam and fraud.</p>
 
           <ul>
-            <li><strong>February 2024:</strong> Google and Yahoo began requiring bulk senders &mdash; broadly, those sending more than 5,000 messages a day to their users &mdash; to authenticate with SPF, DKIM, <em>and</em> DMARC, offer one-click unsubscribe, and keep spam complaints below a set threshold. Mail that did not comply started getting rejected or buried.</li>
+            <li><strong>February 2024:</strong> Google and Yahoo began requiring bulk senders (broadly, those sending more than 5,000 messages a day to their users) to authenticate with SPF, DKIM, <em>and</em> DMARC, offer one-click unsubscribe, and keep spam complaints below a set threshold. Mail that did not comply started getting rejected or buried.</li>
             <li><strong>May 2025:</strong> Microsoft followed suit for high-volume senders to Outlook.com, Hotmail, and Live.com addresses, requiring the same SPF, DKIM, and DMARC baseline.</li>
           </ul>
 
@@ -249,7 +249,7 @@
 
           <h2>The security half: this is how invoice and wire fraud start</h2>
 
-          <p>Deliverability is the reason owners call. Security is the reason this matters more than they realize. Business email compromise &mdash; the FBI's costliest category of cybercrime year after year &mdash; very often begins with a spoofed email that shows a real, trusted domain in the From line.</p>
+          <p>Deliverability is the reason owners call. Security is the reason this matters more than they realize. Business email compromise (the FBI's costliest category of cybercrime year after year) very often begins with a spoofed email that shows a real, trusted domain in the From line.</p>
 
           <p>The script is familiar on the Central Coast: a property management office gets an email that appears to come from a vendor's exact address, with new banking details "for this month's payment." A law firm's bookkeeper gets a message that looks like it is from the managing partner, asking to push a wire before end of day. A grower's accounts-payable clerk receives an invoice that perfectly mimics a regular supplier. When the From address is genuinely forged to show the real domain, even careful people get fooled, because the one thing they were taught to check looks correct.</p>
 
@@ -265,9 +265,9 @@
             <li><strong>A genuinely compromised mailbox.</strong> If an attacker steals a real login and sends from the actual account, the mail is authentic by every measure. That is an identity problem, solved by multi-factor authentication and the controls in our <a href="/blog/identity-hardening-small-business-5-employees-microsoft-365">identity hardening post</a> and <a href="/blog/mfa-fatigue-push-bombing-smb-2026">MFA fatigue post</a>, not by DMARC.</li>
           </ul>
 
-          <p>Email authentication closes one specific, heavily abused door. It is necessary, not sufficient. It belongs in the stack alongside MFA, anti-phishing, backup, and training &mdash; the full set is in <a href="/blog/protect-small-business-cyberattack-10-essentials-2026">the 10 essentials</a>.</p>
+          <p>Email authentication closes one specific, heavily abused door. It is necessary, not sufficient. It belongs in the stack alongside MFA, anti-phishing, backup, and training: the full set is in <a href="/blog/protect-small-business-cyberattack-10-essentials-2026">the 10 essentials</a>.</p>
 
-          <h2>"We're on Microsoft 365 / Google Workspace &mdash; aren't we covered?"</h2>
+          <h2>"We're on Microsoft 365 / Google Workspace, aren't we covered?"</h2>
 
           <p>This is the most common and most dangerous assumption, because it is half true. Both platforms provide SPF and the ability to sign with DKIM. But there are two gaps that catch nearly everyone:</p>
 
@@ -283,14 +283,14 @@
           <p>The single way to get hurt here is to publish a DMARC record set to reject on day one and discover the next morning that the invoicing platform's mail is now bouncing. We never do that. The correct sequence is deliberate and mostly passive:</p>
 
           <ul>
-            <li><strong>1. Inventory your senders.</strong> List everything that sends email as your domain &mdash; the email platform plus every third-party app. This is the foundation; you cannot authorize what you have not found.</li>
+            <li><strong>1. Inventory your senders.</strong> List everything that sends email as your domain: the email platform plus every third-party app. This is the foundation; you cannot authorize what you have not found.</li>
             <li><strong>2. Get SPF and DKIM right.</strong> Publish an accurate SPF record covering every legitimate sender, and enable DKIM signing for your own domain on the mail platform.</li>
             <li><strong>3. Publish DMARC in monitor mode first.</strong> A DMARC policy of <code>p=none</code> changes nothing about delivery but starts sending you reports on every system using your domain. This is the listening period, and it is where the forgotten senders surface.</li>
             <li><strong>4. Read the reports and close the gaps.</strong> Over a few weeks, confirm from the reports that all your real mail passes and authorize anything that was missed. This is the step most do-it-yourself attempts skip, and skipping it is what breaks mail later.</li>
             <li><strong>5. Tighten to quarantine, then reject.</strong> Once the reports show your legitimate mail is clean, step the policy up to <code>p=quarantine</code> (forged mail goes to spam) and finally <code>p=reject</code> (forged mail is refused). Now, and only now, are you actually protected.</li>
           </ul>
 
-          <p>Done in that order, enforcement blocks the spoofers and never touches your own email. The reason to use a managed process rather than a one-time DNS edit is that senders change &mdash; you add a new tool, a vendor changes platforms &mdash; and the DMARC reports are what keep the policy honest over time. We run this as part of <a href="/managed-it-services">managed IT</a>, with the reports monitored rather than ignored.</p>
+          <p>Done in that order, enforcement blocks the spoofers and never touches your own email. The reason to use a managed process rather than a one-time DNS edit is that senders change (you add a new tool, a vendor changes platforms) and the DMARC reports are what keep the policy honest over time. We run this as part of <a href="/managed-it-services">managed IT</a>, with the reports monitored rather than ignored.</p>
 
           <h2>The bonus payoff: your logo in the inbox</h2>
 

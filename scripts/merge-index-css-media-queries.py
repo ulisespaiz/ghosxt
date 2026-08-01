@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """One-off: merge scattered `@media (max-width: Npx) { ... }` blocks in
 index.css into one block per breakpoint, run once during the site cleanup
-pass (see git history for before/after). Kept for reference — re-running
+pass (see git history for before/after). Kept for reference: re-running
 against an already-merged file is a no-op (find_media_blocks will only find
 the 3 consolidated blocks and merge each with itself).
 
@@ -16,7 +16,7 @@ whatever base rule it was meant to override" for every constituent block.
 This does NOT reorder the three breakpoint blocks relative to each other
 (they stay wherever their last occurrence happened to be), so some
 `!important` in the file remain load-bearing for breakpoint-priority
-ordering rather than being scattering artifacts — check before removing any.
+ordering rather than being scattering artifacts: check before removing any.
 """
 
 import os
@@ -30,7 +30,7 @@ TARGET_BREAKPOINTS = {"640px", "968px", "480px"}
 
 def find_media_blocks(text):
     """Find all top-level @media (max-width: Npx) { ... } blocks via brace
-    matching. Returns list of (start, end, breakpoint, body) — end is
+    matching. Returns list of (start, end, breakpoint, body): end is
     exclusive index just past the closing brace."""
     blocks = []
     pattern = re.compile(r"@media \(max-width: (\d+px)\) \{")

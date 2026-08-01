@@ -30,7 +30,7 @@ SKIP = {"index.html", "all.html"}
 SITE = "https://ghosxt.com"
 FEED_URL = f"{SITE}/feed.xml"
 BLOG_URL = f"{SITE}/blog/"
-FEED_TITLE = "Ghosxt Blog — Managed IT & Cybersecurity for the Central Coast"
+FEED_TITLE = "Ghosxt Blog: Managed IT & Cybersecurity for the Central Coast"
 FEED_DESC = (
     "Practical IT, cybersecurity, and compliance guidance for small "
     "businesses on California's Central Coast, from an engineer with DoD infrastructure experience."
