@@ -40,12 +40,12 @@ OLD_TEMPLATE_P2 = (
 CITIES = {
     "carmel": (
         "Carmel",
-        'A gallery on Ocean Avenue or a Carmel Valley brokerage cannot put a client on hold while a ticket sits in a queue. Our <a href="help-desk-it-support.html">IT help desk</a> answers live &mdash; phone, email, or client portal &mdash; and most issues are resolved remotely within the hour. When a POS terminal, a network drop, or a new hire\'s laptop needs hands on-site, we\'re there quietly and on your schedule, not a stranger\'s.',
+        'A gallery on Ocean Avenue or a Carmel Valley brokerage cannot put a client on hold while a ticket sits in a queue. Our <a href="help-desk-it-support.html">IT help desk</a> answers live &mdash; phone, email, or client portal &mdash; and most issues are resolved remotely the same business day. When a POS terminal, a network drop, or a new hire\'s laptop needs hands on-site, we\'re there quietly and on your schedule, not a stranger\'s.',
         'Most days that\'s Microsoft 365 and Outlook trouble, a locked account, a stalled Wi-Fi connection, or a machine that\'s slowed to a crawl &mdash; the small stuff that eats an afternoon when there\'s no one to call. It\'s included in every <a href="managed-it-services.html">managed IT</a> plan, so the same engineer who keeps your systems documented and monitored is the one who answers when something goes wrong.',
     ),
     "gilroy": (
         "Gilroy",
-        'A warehouse or distribution office off the 101/152 corridor loses money every hour a system is down, so our <a href="help-desk-it-support.html">IT help desk</a> is built for speed: live phone, email, or client-portal support, most issues fixed remotely within the hour, and on-site help across Gilroy when a dispatch terminal, a network drop, or a new hire\'s setup needs hands on the floor.',
+        'A warehouse or distribution office off the 101/152 corridor loses money every hour a system is down, so our <a href="help-desk-it-support.html">IT help desk</a> is built for speed: live phone, email, or client-portal support, most issues fixed remotely the same business day, and on-site help across Gilroy when a dispatch terminal, a network drop, or a new hire\'s setup needs hands on the floor.',
         'Day to day, that\'s Microsoft 365 and Outlook problems, locked accounts, printers, Wi-Fi and VPN drops, and machines that have slowed to a crawl &mdash; the routine stuff that costs a logistics or food-processing business real hours during the seasonal rush around the outlets. It\'s included in every <a href="managed-it-services.html">managed IT</a> plan, so support and prevention come from the same team.',
     ),
     "hollister": (

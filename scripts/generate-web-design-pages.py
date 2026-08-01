@@ -117,7 +117,7 @@ CITIES = {
 # leaves a complete sentence.
 CONTENT = {
     "salinas": {
-        "lead": "Salinas is our home base, and it shows in the portfolio — campaign sites, machine-shop sites, nonprofit and renter-advocacy sites, all built for real Salinas organizations. A Salinas business competes for customers who search first and drive second, so the site has to load fast, read clearly in the results, and make calling easy. Ghosxt hand-codes websites for Salinas small businesses — no page builders, no templates — from a local, DoD-cleared engineer.",
+        "lead": "Salinas is our home base, and it shows in the portfolio — campaign sites, machine-shop sites, nonprofit and renter-advocacy sites, all built for real Salinas organizations. A Salinas business competes for customers who search first and drive second, so the site has to load fast, read clearly in the results, and make calling easy. Ghosxt hand-codes websites for Salinas small businesses — no page builders, no templates — from a local engineer with deep DoD infrastructure experience.",
         "economy": "Valley ag companies need sites that hold up to the security questionnaires their buyers send. Downtown professional offices — law, insurance, accounting — need to rank for their practice area before the Main Street competition does. Restaurants and retail need menus, hours, and directions that work instantly on a phone. And Salinas trades in both languages, so a site that speaks Spanish as well as English reaches the whole market instead of half of it.",
         "card_a": ("Salinas-Proven Portfolio", "We've shipped sites for Salinas organizations you may already know — from advocacy groups to a mayoral campaign to industrial shops. See the live portfolio on the <a href=\"website-development.html\">web development page</a>."),
         "card_b": ("Bilingual Websites", "English/Spanish builds that serve the whole Salinas market — real translated pages that rank in both languages, not a translate widget bolted on."),
@@ -130,7 +130,7 @@ CONTENT = {
     },
     "monterey": {
         "name_note": "",
-        "lead": "Monterey businesses live or die on how they look to someone planning a visit — a diner checking the menu from Cannery Row, a family comparing hotels, a bride shortlisting venues. The website is the storefront before anyone reaches the storefront. Ghosxt hand-codes fast, mobile-first websites for Monterey small businesses — restaurants, inns, tour operators, and the professional offices that serve them — from a Central Coast, DoD-cleared engineer.",
+        "lead": "Monterey businesses live or die on how they look to someone planning a visit — a diner checking the menu from Cannery Row, a family comparing hotels, a bride shortlisting venues. The website is the storefront before anyone reaches the storefront. Ghosxt hand-codes fast, mobile-first websites for Monterey small businesses — restaurants, inns, tour operators, and the professional offices that serve them — from a Central Coast engineer with deep DoD infrastructure experience.",
         "economy": "Hospitality and tourism set the bar here: visitors decide from a phone, often on hotel Wi-Fi, and a slow or dated site loses the booking before a human ever gets a chance. Restaurants need menus and reservations that work in two taps. Tour and activity operators need booking systems that don't send customers to a competitor's calendar. And Monterey's professional and marine-science community needs credible, content-rich sites that rank beyond the tourist core.",
         "card_a": ("Booking &amp; Reservations", "Booking and appointment systems built into your own site — tours, tastings, tables, rooms — so the reservation happens on your domain, not a commission platform's."),
         "card_b": ("Tourism-Speed Mobile", "Pages tuned for visitors on phones and spotty hotel Wi-Fi — menus, hours, directions, and booking that load instantly, because that's where Monterey customers decide."),
@@ -154,7 +154,7 @@ CONTENT = {
         ],
     },
     "watsonville": {
-        "lead": "Watsonville works — berries and row crops, food processing, manufacturing, trucking, and the family businesses that serve them. Most of that economy is invisible online or represented by a site nobody has touched in years, which means lost bids, lost hires, and lost customers in a town where the work itself is first-rate. Ghosxt hand-codes websites for Watsonville businesses, in English and Spanish, from a Central Coast, DoD-cleared engineer.",
+        "lead": "Watsonville works — berries and row crops, food processing, manufacturing, trucking, and the family businesses that serve them. Most of that economy is invisible online or represented by a site nobody has touched in years, which means lost bids, lost hires, and lost customers in a town where the work itself is first-rate. Ghosxt hand-codes websites for Watsonville businesses, in English and Spanish, from a Central Coast engineer with deep DoD infrastructure experience.",
         "economy": "Ag and food companies need credible sites for the buyers and auditors who look them up before signing. Manufacturers and shops need capability pages that win bids and careers pages that actually help recruiting. Local services and restaurants need to show up when Watsonville searches for them. And this is a bilingual town — a site that works in Spanish as well as English serves the real market, not a fraction of it.",
         "card_a": ("Bilingual by Default", "English/Spanish builds with real translated pages that rank in both languages — because in Watsonville, half your customers and most of your workforce may search in Spanish first."),
         "card_b": ("B2B Credibility Pages", "Capability, certification, and food-safety pages that hold up when a buyer, auditor, or prime contractor looks you up before awarding work."),
@@ -166,7 +166,7 @@ CONTENT = {
         ],
     },
     "san-jose": {
-        "lead": "San Jose small businesses compete in the hardest local search market in Northern California — every plumber, dentist, restaurant, and firm is fighting page one against hundreds of others, plus agencies charging Silicon Valley rates to help. Ghosxt gives San Jose small businesses a different deal: hand-coded, performance-first websites at published Central Coast prices, from a DoD-cleared engineer, without the agency overhead.",
+        "lead": "San Jose small businesses compete in the hardest local search market in Northern California — every plumber, dentist, restaurant, and firm is fighting page one against hundreds of others, plus agencies charging Silicon Valley rates to help. Ghosxt gives San Jose small businesses a different deal: hand-coded, performance-first websites at published Central Coast prices, from an engineer with DoD infrastructure experience, without the agency overhead.",
         "economy": "In a market this dense, the technical margins decide who gets found: page speed, clean structure, real service-area pages, and schema markup are the difference between page one and invisible. Trades and home services need lead-generation sites that make calling effortless. Restaurants and retail need to stand out in map results. Small professional firms need credibility against downtown competitors with ten times the budget.",
         "card_a": ("Compete on Page One", "Deep local SEO — service pages, schema, speed, Search Console — built to compete in San Jose's crowded results, where the technical margins decide who gets the call."),
         "card_b": ("Small-Business Pricing", "Published prices, not Silicon Valley agency quotes: the same $1,800–$5,900 packages we build on the Central Coast, hand-coded, with no account-manager layer to fund."),
@@ -178,7 +178,7 @@ CONTENT = {
         ],
     },
     "carmel": {
-        "lead": "In Carmel, the website is part of the brand — a gallery, inn, tasting room, or firm here is judged on presentation before a visitor ever crosses Ocean Avenue. A generic template undercuts exactly the impression the business trades on. Ghosxt hand-codes elegant, fast websites for Carmel businesses, built and maintained with the discretion the town expects, from a DoD-cleared engineer.",
+        "lead": "In Carmel, the website is part of the brand — a gallery, inn, tasting room, or firm here is judged on presentation before a visitor ever crosses Ocean Avenue. A generic template undercuts exactly the impression the business trades on. Ghosxt hand-codes elegant, fast websites for Carmel businesses, built and maintained with the discretion the town expects, from an engineer with DoD infrastructure experience.",
         "economy": "Galleries need work presented the way it deserves — large imagery that still loads instantly, and inquiry flows that respect a collector's privacy. Inns and tasting rooms need bookings and allocations handled on their own domain, not a commission platform. Real estate, law, and wealth offices need quiet, credible sites where discretion is legible in the design itself. What they share is a clientele that notices craft.",
         "card_a": ("Gallery-Grade Presentation", "Large-format imagery, careful typography, and pages that stay fast despite them — presentation worthy of the work, engineered so elegance never costs performance."),
         "card_b": ("Bookings Without Commissions", "Reservation and inquiry systems on your own domain for inns, tasting rooms, and experiences — you keep the guest relationship and skip the platform's cut."),
@@ -190,7 +190,7 @@ CONTENT = {
         ],
     },
     "gilroy": {
-        "lead": "Gilroy businesses split between two audiences: freeway traffic deciding where to stop, and B2B buyers vetting distribution, processing, and logistics partners. Both judge you by the website first. Ghosxt hand-codes fast, practical websites for Gilroy businesses — from restaurants and retail off the 101 to warehouses and processors up the corridor — from a Central Coast, DoD-cleared engineer.",
+        "lead": "Gilroy businesses split between two audiences: freeway traffic deciding where to stop, and B2B buyers vetting distribution, processing, and logistics partners. Both judge you by the website first. Ghosxt hand-codes fast, practical websites for Gilroy businesses — from restaurants and retail off the 101 to warehouses and processors up the corridor — from a Central Coast engineer with deep DoD infrastructure experience.",
         "economy": "Retail and restaurants near the outlets live on 'near me' searches from travelers — map presence, hours, and menus that load instantly decide whether the car turns off. Logistics, 3PL, and food-processing companies need credible capability sites for the shippers and grocers who vet them, plus careers pages that help hire drivers and line staff in a tight market. Both get decided on a phone.",
         "card_a": ("Freeway 'Near Me' Visibility", "Map-pack and local-search presence tuned for traveler searches — hours, menus, and directions that load instantly and turn 101 traffic into foot traffic."),
         "card_b": ("Logistics &amp; Ag B2B Sites", "Capability pages, certifications, and facility credibility for the shippers, grocers, and processors who look you up before they sign — plus careers pages that actually help recruiting."),
@@ -202,7 +202,7 @@ CONTENT = {
         ],
     },
     "hollister": {
-        "lead": "Most Hollister businesses either have no website or have one that hasn't changed since it was built years ago — which means every customer who searches finds a competitor, an out-of-date page, or nothing. In a town where word of mouth carries far, the website just has to confirm what the handshake promised. Ghosxt hand-codes straightforward, fast websites for Hollister businesses at published prices, from a DoD-cleared engineer next door.",
+        "lead": "Most Hollister businesses either have no website or have one that hasn't changed since it was built years ago — which means every customer who searches finds a competitor, an out-of-date page, or nothing. In a town where word of mouth carries far, the website just has to confirm what the handshake promised. Ghosxt hand-codes straightforward, fast websites for Hollister businesses at published prices, from an engineer with DoD infrastructure experience next door.",
         "economy": "Machine shops and small manufacturers need capability pages that travel further than word of mouth — the buyer in another county checking you out before a bid. Family businesses and trades need the basics done right: services, photos of real work, hours, and a phone number that's one tap away. Wineries and growers need tasting-room hours and club signups that work. None of it needs to be fancy; all of it needs to be found.",
         "card_a": ("First Real Website", "For businesses running on word of mouth alone — a clean, fast site that confirms what the handshake promised: services, real photos, hours, and one-tap calling."),
         "card_b": ("Shop &amp; Manufacturer Pages", "Capability and equipment pages for machine shops and small manufacturers, so the out-of-county buyer vetting you before a bid finds proof instead of a dead end."),
@@ -214,7 +214,7 @@ CONTENT = {
         ],
     },
     "marina": {
-        "lead": "Marina's new businesses — startups, ag-tech, clinics, and the storefronts filling in around the Dunes and CSUMB — mostly need their first real website, and need it to grow with them instead of being rebuilt at every stage. Ghosxt hand-codes fast, scalable websites for Marina businesses, from a Peninsula-based, DoD-cleared engineer.",
+        "lead": "Marina's new businesses — startups, ag-tech, clinics, and the storefronts filling in around the Dunes and CSUMB — mostly need their first real website, and need it to grow with them instead of being rebuilt at every stage. Ghosxt hand-codes fast, scalable websites for Marina businesses, from a Peninsula-based engineer with deep DoD infrastructure experience.",
         "economy": "Startups and ag-tech companies need a credible site before the first customer meeting or investor call — and a foundation that won't embarrass them at twice the headcount. New storefronts, gyms, and restaurants around the Dunes need to get found by a population that's still forming its habits, where showing up early in local search compounds. Clinics and services near CSUMB need booking and information that works for a young, phone-first clientele.",
         "card_a": ("Startup-Credible, Fast", "A site that holds up in front of customers and investors — clean design, real content structure, and performance metrics you can put in a pitch deck."),
         "card_b": ("Built to Grow", "Architecture that scales from launch site to product site without a rebuild — add pages, a blog, careers, or a store later without starting over."),
@@ -226,7 +226,7 @@ CONTENT = {
         ],
     },
     "pacific-grove": {
-        "lead": "Pacific Grove businesses are small, personal, and booked by strangers — a couple choosing a B&amp;B for Butterfly Days, a family picking a cafe after the Aquarium, a retreat guest comparing venues from another state. The website does the persuading before anyone arrives. Ghosxt hand-codes warm, fast websites for PG's inns, cafes, retreats, and small offices, from a Peninsula-based, DoD-cleared engineer.",
+        "lead": "Pacific Grove businesses are small, personal, and booked by strangers — a couple choosing a B&amp;B for Butterfly Days, a family picking a cafe after the Aquarium, a retreat guest comparing venues from another state. The website does the persuading before anyone arrives. Ghosxt hand-codes warm, fast websites for PG's inns, cafes, retreats, and small offices, from a Peninsula-based engineer with deep DoD infrastructure experience.",
         "economy": "Inns and B&amp;Bs compete with big-brand hotels a mile away, so the site has to sell what the brands can't — character, story, and rooms photographed honestly — while taking direct bookings that skip the platform commissions. Cafes and restaurants need current menus and hours that survive the seasonal rhythm. Retreats and practitioners need calm, credible pages with scheduling built in. Small sites, done with care.",
         "card_a": ("Direct Bookings for Inns", "Reservation flows on your own domain that convert lookers into direct bookings — keeping the guest relationship and the 15-20% a platform would take."),
         "card_b": ("Character That Converts", "Design that carries a PG inn or cafe's personality — honest photography, story, warmth — engineered to load instantly for the traveler deciding from a phone."),
@@ -238,7 +238,7 @@ CONTENT = {
         ],
     },
     "seaside": {
-        "lead": "Seaside's shops, restaurants, and services compete for the whole Peninsula's customers — but only if those customers can find them. A working town's website doesn't need flash; it needs to rank, load fast on a phone, show real photos and prices, and make calling effortless. Ghosxt hand-codes practical, lead-generating websites for Seaside businesses at published prices, from a DoD-cleared engineer.",
+        "lead": "Seaside's shops, restaurants, and services compete for the whole Peninsula's customers — but only if those customers can find them. A working town's website doesn't need flash; it needs to rank, load fast on a phone, show real photos and prices, and make calling effortless. Ghosxt hand-codes practical, lead-generating websites for Seaside businesses at published prices, from an engineer with DoD infrastructure experience.",
         "economy": "Auto shops, trades, and repair services win on 'near me' searches and reviews — a fast site wired to a proper Google Business Profile turns searches into calls. Restaurants and markets need menus and hours that are always current. Barbershops, gyms, and studios need online booking that fills the schedule. Seaside businesses also serve the whole Peninsula's price-conscious side, which makes visible, honest pricing on the site itself a real advantage.",
         "card_a": ("'Near Me' Lead Generation", "Local SEO wired end to end — site, schema, Google Business Profile — so a Peninsula customer searching for what you do finds you first and calls in one tap."),
         "card_b": ("Booking for Shops &amp; Studios", "Online scheduling for barbershops, gyms, studios, and repair services that fills the calendar while you work, without double-booking or phone tag."),
@@ -333,7 +333,7 @@ def build_page(chrome, slug, city):
     schema_desc = (
         f"Custom web design and development for {name}, California small business: "
         "hand-coded mobile-first websites, local SEO, e-commerce and booking systems, "
-        "and ongoing hosting, maintenance, and security, from a DoD-cleared engineer."
+        "and ongoing hosting, maintenance, and security, from an engineer with DoD infrastructure experience."
     )
     h1 = f"Web Design &amp; Development in {name}, California"
 
