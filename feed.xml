@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from an engineer with DoD infrastructure experience.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Sat, 01 Aug 2026 07:39:24 +0000</lastBuildDate>
-    <pubDate>Fri, 31 Jul 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Sat, 01 Aug 2026 11:06:39 +0000</lastBuildDate>
+    <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>Cloud Misconfiguration: The Silent Data Leak in Your Sharing Settings (2026)</title>
+      <link>https://ghosxt.com/blog/cloud-misconfiguration-small-business-2026</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/cloud-misconfiguration-small-business-2026</guid>
+      <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>An 'anyone with the link' share or a forgotten guest account can expose company data for months, no hacker required. How it happens and how to fix it.</description>
+    </item>
     <item>
       <title>Password Spray Attacks: How One Slow-Motion Guess Slips Past Lockout Policies (2026)</title>
       <link>https://ghosxt.com/blog/password-spray-attacks-small-business-2026</link>
@@ -17,7 +26,7 @@
       <pubDate>Fri, 31 Jul 2026 00:00:00 +0000</pubDate>
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
-      <description>Password spraying tries one common password against hundreds of accounts instead of hammering one account with thousands of guesses, so it never trips a lockout policy. How the attack works and what actually stops it.</description>
+      <description>Password spraying tries one common password against hundreds of accounts, so it never trips a lockout policy. How the attack works and what actually stops it.</description>
     </item>
     <item>
       <title>Insider Threats: The Cybersecurity Risk Already Inside Your Business (2026)</title>
@@ -26,7 +35,7 @@
       <pubDate>Thu, 30 Jul 2026 00:00:00 +0000</pubDate>
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
-      <description>Most small business security spending targets outside attackers, but a careless click, a disgruntled ex-employee, or a departing hire's laptop can do just as much damage. How insider threats actually happen and what stops them.</description>
+      <description>Most small business security spending targets outsiders, but a careless click or a departing hire's laptop does as much damage. How insider threats work.</description>
     </item>
     <item>
       <title>Ransomware Negotiation: Should Your Small Business Ever Pay? (2026)</title>
@@ -35,7 +44,7 @@
       <pubDate>Wed, 29 Jul 2026 00:00:00 +0000</pubDate>
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
-      <description>What actually happens during a ransomware negotiation, why paying doesn't guarantee your data back, and the questions a small business should answer before wiring a cent.</description>
+      <description>What actually happens during a ransomware negotiation, why paying doesn't guarantee your data back, and what a small business must settle before wiring a cent.</description>
     </item>
     <item>
       <title>Social Media Account Takeover: How Hackers Hijack Your Business Facebook or Instagram Page (2026)</title>
@@ -44,7 +53,7 @@
       <pubDate>Tue, 28 Jul 2026 00:00:00 +0000</pubDate>
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
-      <description>A hacked Facebook or Instagram business page gets used to scam your customers, drain your ad budget, or held for ransom. How the takeover happens and how small businesses get pages back and lock them down.</description>
+      <description>A hacked Facebook or Instagram business page gets used to scam your customers or drain your ad budget. How the takeover happens and how to get it back.</description>
     </item>
     <item>
       <title>IoT Device Security for Small Business: The Hidden Attack Surface (2026)</title>
@@ -53,7 +62,7 @@
       <pubDate>Mon, 27 Jul 2026 00:00:00 +0000</pubDate>
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
-      <description>Smart cameras, thermostats, and printers on your business network often run default passwords and years-old firmware. How IoT devices become an entry point and how to lock them down.</description>
+      <description>Smart cameras, thermostats, and printers often run default passwords and years-old firmware. How IoT devices become an entry point and how to lock them down.</description>
     </item>
     <item>
       <title>Fileless Malware: The Attack That Leaves Nothing for Antivirus to Find (2026)</title>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>Your team is already checking company email on personal phones, policy or not. What a BYOD policy needs to cover, and how to secure devices.</description>
-    </item>
-    <item>
-      <title>The Seasonal Worker IT Checklist: Onboarding and Offboarding Summer Staff Without Leaving Accounts Open</title>
-      <link>https://ghosxt.com/blog/seasonal-worker-it-security-checklist-central-coast</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/seasonal-worker-it-security-checklist-central-coast</guid>
-      <pubDate>Mon, 06 Jul 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>Harvest crews and summer hires need system access, and few businesses ever turn it back off. Onboarding and offboarding checklist for seasonal staff.</description>
     </item>
   </channel>
 </rss>
