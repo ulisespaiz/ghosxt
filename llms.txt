@@ -1,8 +1,7 @@
 # Ghosxt
 
 > Ghosxt provides managed IT services and cybersecurity for small businesses on
-> California's Central Coast and beyond. The company is run by a DoD-cleared IT
-> engineer and delivers government-grade infrastructure, security, and 24/7
+> California's Central Coast and beyond. The company is run by an engineer with DoD infrastructure experience and delivers government-grade infrastructure, security, and 24/7
 > monitoring at small-business pricing. Based in Salinas, CA, Ghosxt serves the
 > Monterey Bay, Salinas Valley, San Benito County, and Silicon Valley.
 
@@ -11,7 +10,7 @@ Key facts:
 - Location: Salinas, California, USA (serves the surrounding region)
 - Phone: +1 (831) 204-0501
 - Email: sales@ghosxt.com
-- Differentiator: founded and run by a cleared DoD IT engineer; enterprise-grade
+- Differentiator: founded and run by an engineer with DoD infrastructure experience; enterprise-grade
   security without an enterprise price tag
 - Pricing (published): Core Managed IT $125/user/mo, Secure Growth $175/user/mo,
   Compliance & Continuity $250/user/mo; flat-rate Tiny Team Managed Security
@@ -28,7 +27,7 @@ Key facts:
 - [Network Design & Architecture](https://ghosxt.com/network-design.html): VLAN segmentation, firewalls, and business-grade wireless with real documentation.
 - [Website Development](https://ghosxt.com/website-development.html): custom small-business websites and e-commerce that load fast and convert. City pages: [Salinas](https://ghosxt.com/web-design-salinas.html), [Monterey](https://ghosxt.com/web-design-monterey.html), [Santa Cruz](https://ghosxt.com/web-design-santa-cruz.html), [Watsonville](https://ghosxt.com/web-design-watsonville.html), [San Jose](https://ghosxt.com/web-design-san-jose.html), [Carmel](https://ghosxt.com/web-design-carmel.html), [Gilroy](https://ghosxt.com/web-design-gilroy.html), [Hollister](https://ghosxt.com/web-design-hollister.html), [Marina](https://ghosxt.com/web-design-marina.html), [Pacific Grove](https://ghosxt.com/web-design-pacific-grove.html), and [Seaside](https://ghosxt.com/web-design-seaside.html).
 - [C-TPAT Compliance](https://ghosxt.com/ctpat.html): IT controls and documentation for supply-chain security certification.
-- [CMMC & NIST 800-171](https://ghosxt.com/cmmc-compliance.html): CMMC and NIST SP 800-171 readiness for small defense contractors and subcontractors, from a cleared DoD IT engineer.
+- [CMMC & NIST 800-171](https://ghosxt.com/cmmc-compliance.html): CMMC and NIST SP 800-171 readiness for small defense contractors and subcontractors, from an engineer with DoD infrastructure experience.
 - [HIPAA IT Compliance](https://ghosxt.com/hipaa-it-compliance.html): HIPAA technical safeguards for medical and dental practices — security risk analysis, access controls, encryption, BAAs, and backup.
 - [PCI DSS Compliance](https://ghosxt.com/pci-compliance.html): practical PCI compliance for retail, restaurants, and hospitality — segmentation, secure POS, scanning, and SAQ guidance.
 - [Co-Managed IT](https://ghosxt.com/co-managed-it.html): augments an existing in-house IT team with a 24/7 help desk, after-hours coverage, and cybersecurity depth, without replacing anyone.
@@ -72,7 +71,7 @@ Cloud & Microsoft 365, by city: [Salinas](https://ghosxt.com/cloud-services-sali
 IT support & help desk, by city: [Morgan Hill](https://ghosxt.com/it-help-morgan-hill.html), [Capitola](https://ghosxt.com/it-help-capitola.html), [Scotts Valley](https://ghosxt.com/it-help-scotts-valley.html), [Aptos](https://ghosxt.com/it-help-aptos.html), [Castroville](https://ghosxt.com/it-help-castroville.html), [Greenfield](https://ghosxt.com/it-help-greenfield.html), [Gonzales](https://ghosxt.com/it-help-gonzales.html), [San Juan Bautista](https://ghosxt.com/it-help-san-juan-bautista.html), [Carmel Valley](https://ghosxt.com/it-help-carmel-valley.html), [Prunedale](https://ghosxt.com/it-help-prunedale.html)
 
 ## About & contact
-- [About Ghosxt](https://ghosxt.com/about.html): the DoD-cleared engineer and approach behind the company.
+- [About Ghosxt](https://ghosxt.com/about.html): the engineer with DoD infrastructure experience and approach behind the company.
 - [Client Stories](https://ghosxt.com/case-studies.html): real Ghosxt clients in their own words — transportation/logistics, manufacturing, and local projects.
 - [Contact / Free IT Assessment](https://ghosxt.com/contact.html): schedule a no-obligation 30-minute assessment.
 - [Ghosxt Cares](https://ghosxt.com/ghosxt-cares.html): community work and discounted IT for nonprofits.
