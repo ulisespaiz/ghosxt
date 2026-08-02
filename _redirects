@@ -33,6 +33,12 @@
 /index.html         /    301
 /blog/index.html     /blog/    301
 
+# Wave H: /support page launch, redirect prior guesses/aliases to it
+/get-support        /support   301
+/get-support.html   /support   301
+/helpdesk           /support   301
+/client-support      /support   301
+
 # Generic .html -> extensionless fallback for every other page. Cloudflare
 # Workers/Pages static-asset serving already does this automatically via the
 # default html_handling="auto-trailing-slash" behavior (e.g. /foo.html -> 307

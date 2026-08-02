@@ -74,6 +74,7 @@ IT support & help desk, by city: [Morgan Hill](https://ghosxt.com/it-help-morgan
 - [About Ghosxt](https://ghosxt.com/about): the engineer with DoD infrastructure experience and approach behind the company.
 - [Client Stories](https://ghosxt.com/case-studies): real Ghosxt clients in their own words, from transportation/logistics, manufacturing, and local projects.
 - [Contact / Free IT Assessment](https://ghosxt.com/contact): schedule a no-obligation 30-minute assessment.
+- [Get Support](https://ghosxt.com/support): how existing clients reach the engineer. Call, remote session, or ticket portal. Support hours 8am to 6pm Pacific.
 - [Ghosxt Cares](https://ghosxt.com/ghosxt-cares): community work and discounted IT for nonprofits.
 
 ## Blog (selected guides)

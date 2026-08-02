@@ -2387,6 +2387,16 @@
   gap: 1.5rem;
 }
 
+.chat-demo-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  font-family: var(--font-family-2);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin: 0 0 0.5rem 0.25rem;
+}
+
 .chat-container {
   background: var(--ghosxt-white);
   border: 1px solid var(--ghosxt-black);
@@ -2574,6 +2584,19 @@
   border-top: 1px solid var(--ghosxt-black);
   position: relative;
   background: rgba(0, 0, 0, 0.03);
+}
+
+.chat-real-help {
+  font-size: 0.85rem;
+  font-family: var(--font-family-2);
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+.chat-real-help a {
+  color: var(--ghosxt-red-0);
+  font-weight: 600;
+  text-decoration: underline;
 }
 
 .chat-options {
