@@ -697,8 +697,10 @@ body:has(.top-banner.hidden) .hero-section {
   /* Above the content layer: many page cards/badges use z-index:1000, and
      now that the header is sticky they would otherwise paint over it as the
      page scrolls underneath. Sits below true overlays (scroll-to-top 10000,
-     skip-link 100000). */
-  z-index: 1050;
+     skip-link 100000). Must also sit above the cookie banner (1090): the
+     mobile menu is a child of this element, so the navbar's stacking context
+     caps it, and a lower value lets the banner cover the open menu. */
+  z-index: 1100;
   padding: 0 24px;
   border-top: 1px solid black;
   border-bottom: 1px solid black;
@@ -1024,6 +1026,13 @@ body:has(.top-banner.hidden) .hero-section {
   flex-direction: column;
   gap: 0.5rem;
   z-index: 1060;
+}
+
+/* Without this, an expanded accordion pushes past the menu's max-height and
+   the column flex children squash into each other instead of the menu
+   scrolling: the lower links overlap and become unreachable. */
+.navbar-mobile-menu > * {
+  flex-shrink: 0;
 }
 
 .navbar-mobile-menu.active {
