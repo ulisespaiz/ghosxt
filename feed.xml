@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from an engineer with DoD infrastructure experience.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Sat, 01 Aug 2026 11:06:39 +0000</lastBuildDate>
-    <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Sun, 02 Aug 2026 11:06:39 +0000</lastBuildDate>
+    <pubDate>Sun, 02 Aug 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>POS Malware and Card Skimming: The Hidden Threat to Restaurants and Retailers (2026)</title>
+      <link>https://ghosxt.com/blog/pos-malware-card-skimming-small-business-2026</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/pos-malware-card-skimming-small-business-2026</guid>
+      <pubDate>Sun, 02 Aug 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>A compromised POS system or a skimmer clipped onto a card reader can steal customer card data for months before anyone notices. How it happens and how to stop it.</description>
+    </item>
     <item>
       <title>Cloud Misconfiguration: The Silent Data Leak in Your Sharing Settings (2026)</title>
       <link>https://ghosxt.com/blog/cloud-misconfiguration-small-business-2026</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>California's breach notification law applies no matter how small your business is. What counts as a reportable breach, and the real CPRA lawsuit risk.</description>
-    </item>
-    <item>
-      <title>BYOD for Small Business: Securing Personal Phones and Laptops Without Locking Down Everyone's Devices (2026)</title>
-      <link>https://ghosxt.com/blog/byod-policy-small-business-2026</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/byod-policy-small-business-2026</guid>
-      <pubDate>Tue, 07 Jul 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>Your team is already checking company email on personal phones, policy or not. What a BYOD policy needs to cover, and how to secure devices.</description>
     </item>
   </channel>
 </rss>
