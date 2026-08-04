@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from an engineer with DoD infrastructure experience.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Mon, 03 Aug 2026 11:06:00 +0000</lastBuildDate>
-    <pubDate>Mon, 03 Aug 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Tue, 04 Aug 2026 11:07:28 +0000</lastBuildDate>
+    <pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>Software Supply Chain Attacks: When a Trusted Vendor's Update Becomes Your Breach (2026)</title>
+      <link>https://ghosxt.com/blog/software-supply-chain-attacks-small-business-2026</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/software-supply-chain-attacks-small-business-2026</guid>
+      <pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>A single compromised update from a vendor you trust can install malware across your business with zero clicks and no phishing email. How supply chain attacks work and how to catch one.</description>
+    </item>
     <item>
       <title>Network Printer and Copier Security: The Unpatched Server in Your Copy Room (2026)</title>
       <link>https://ghosxt.com/blog/network-printer-copier-security-small-business-2026</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Web Development</category>
       <description>A slow, broken, or outdated website sends customers to competitors. The 9 warning signs it's time to fix or rebuild, and which are security risks.</description>
-    </item>
-    <item>
-      <title>OAuth App Phishing: How Attackers Get Into Microsoft 365 Without Stealing a Password (2026)</title>
-      <link>https://ghosxt.com/blog/oauth-app-phishing-microsoft-365-small-business-2026</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/oauth-app-phishing-microsoft-365-small-business-2026</guid>
-      <pubDate>Thu, 09 Jul 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>Attackers don't need your password or MFA code, just a click on 'Accept' for a fake app. How OAuth consent phishing bypasses MFA, and how to stop it.</description>
     </item>
   </channel>
 </rss>
