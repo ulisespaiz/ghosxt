@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from an engineer with DoD infrastructure experience.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Tue, 04 Aug 2026 11:07:28 +0000</lastBuildDate>
-    <pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Wed, 05 Aug 2026 11:06:18 +0000</lastBuildDate>
+    <pubDate>Wed, 05 Aug 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>Tailgating and Physical Access: The Low-Tech Breach Small Businesses Don't Plan For (2026)</title>
+      <link>https://ghosxt.com/blog/tailgating-physical-security-small-business-2026</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/tailgating-physical-security-small-business-2026</guid>
+      <pubDate>Wed, 05 Aug 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>A stranger holding a box and a smile gets past your locked door more often than any firewall gets bypassed. How tailgating works and how a small business stops it.</description>
+    </item>
     <item>
       <title>Software Supply Chain Attacks: When a Trusted Vendor's Update Becomes Your Breach (2026)</title>
       <link>https://ghosxt.com/blog/software-supply-chain-attacks-small-business-2026</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Web Development</category>
       <description>Real 2026 website pricing for small businesses: what a 5-page site, a full site, and e-commerce cost, and why $500 or $15,000 sites are usually wrong.</description>
-    </item>
-    <item>
-      <title>9 Signs Your Small Business Website Is Costing You Customers (2026)</title>
-      <link>https://ghosxt.com/blog/website-redesign-signs-small-business-2026</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/website-redesign-signs-small-business-2026</guid>
-      <pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Web Development</category>
-      <description>A slow, broken, or outdated website sends customers to competitors. The 9 warning signs it's time to fix or rebuild, and which are security risks.</description>
     </item>
   </channel>
 </rss>
