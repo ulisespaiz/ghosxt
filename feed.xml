@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from an engineer with DoD infrastructure experience.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Wed, 05 Aug 2026 11:06:18 +0000</lastBuildDate>
-    <pubDate>Wed, 05 Aug 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Thu, 06 Aug 2026 11:09:10 +0000</lastBuildDate>
+    <pubDate>Thu, 06 Aug 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>Patch Management for Small Business: The Control Everyone Skips Until It's Too Late (2026)</title>
+      <link>https://ghosxt.com/blog/patch-management-small-business-2026</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/patch-management-small-business-2026</guid>
+      <pubDate>Thu, 06 Aug 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>Most breaches don't exploit a mystery flaw, they exploit a vulnerability that already had a patch available. Why patch management gets skipped at small businesses, and how to build one that actually works.</description>
+    </item>
     <item>
       <title>Tailgating and Physical Access: The Low-Tech Breach Small Businesses Don't Plan For (2026)</title>
       <link>https://ghosxt.com/blog/tailgating-physical-security-small-business-2026</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>Fake delivery texts, toll bills, and payroll alerts: smishing skips your spam filter and lands on employee phones. How it works and how to stop it.</description>
-    </item>
-    <item>
-      <title>How Much Does a Small Business Website Cost in 2026? Real Numbers</title>
-      <link>https://ghosxt.com/blog/small-business-website-cost-2026</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/small-business-website-cost-2026</guid>
-      <pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Web Development</category>
-      <description>Real 2026 website pricing for small businesses: what a 5-page site, a full site, and e-commerce cost, and why $500 or $15,000 sites are usually wrong.</description>
     </item>
   </channel>
 </rss>
