@@ -30,6 +30,7 @@ Key facts:
 - [CMMC & NIST 800-171](https://ghosxt.com/cmmc-compliance): CMMC and NIST SP 800-171 readiness for small defense contractors and subcontractors, from an engineer with DoD infrastructure experience.
 - [HIPAA IT Compliance](https://ghosxt.com/hipaa-it-compliance): HIPAA technical safeguards for medical and dental practices, covering security risk analysis, access controls, encryption, BAAs, and backup.
 - [PCI DSS Compliance](https://ghosxt.com/pci-compliance): practical PCI compliance for retail, restaurants, and hospitality, covering segmentation, secure POS, scanning, and SAQ guidance.
+- [Cyber Insurance Compliance](https://ghosxt.com/cyber-insurance-compliance): cyber insurance readiness and questionnaire help, covering MFA, EDR, immutable backups, and the evidence carriers require at underwriting and claim time.
 - [Co-Managed IT](https://ghosxt.com/co-managed-it): augments an existing in-house IT team with a 24/7 help desk, after-hours coverage, and cybersecurity depth, without replacing anyone.
 - [Ransomware Recovery & Emergency IT](https://ghosxt.com/ransomware-recovery): rapid containment, recovery from immutable backups, and hardening for businesses that are down or under active attack. Emergency line (831) 204-0501.
 - [Break-Fix vs. Managed IT](https://ghosxt.com/break-fix-vs-managed-it): an honest comparison of the two IT support models on cost, downtime, and security.
