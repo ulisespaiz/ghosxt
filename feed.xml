@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from an engineer with DoD infrastructure experience.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Thu, 06 Aug 2026 11:09:10 +0000</lastBuildDate>
-    <pubDate>Thu, 06 Aug 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Fri, 07 Aug 2026 11:07:30 +0000</lastBuildDate>
+    <pubDate>Fri, 07 Aug 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>Laptop and Device Encryption for Small Business: The Cheapest Insurance Policy You're Not Using (2026)</title>
+      <link>https://ghosxt.com/blog/laptop-encryption-small-business-2026</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/laptop-encryption-small-business-2026</guid>
+      <pubDate>Fri, 07 Aug 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>A lost or stolen laptop without full-disk encryption is a reportable data breach in California. BitLocker and FileVault already ship free with your hardware. Here's how to actually turn them on.</description>
+    </item>
     <item>
       <title>Patch Management for Small Business: The Control Everyone Skips Until It's Too Late (2026)</title>
       <link>https://ghosxt.com/blog/patch-management-small-business-2026</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Web Development</category>
       <description>Accessibility demand letters are hitting California businesses, and the Unruh Act raises the stakes. What ADA and WCAG 2.1 AA require.</description>
-    </item>
-    <item>
-      <title>Smishing: How Text Message Phishing Is Hitting Small Businesses in 2026</title>
-      <link>https://ghosxt.com/blog/smishing-sms-phishing-small-business-2026</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/smishing-sms-phishing-small-business-2026</guid>
-      <pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>Fake delivery texts, toll bills, and payroll alerts: smishing skips your spam filter and lands on employee phones. How it works and how to stop it.</description>
     </item>
   </channel>
 </rss>
