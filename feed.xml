@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from an engineer with DoD infrastructure experience.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Sat, 08 Aug 2026 11:08:03 +0000</lastBuildDate>
-    <pubDate>Sat, 08 Aug 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Mon, 10 Aug 2026 11:06:39 +0000</lastBuildDate>
+    <pubDate>Mon, 10 Aug 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>Attack Surface Management for Small Business: What's Exposed to the Internet Right Now (2026)</title>
+      <link>https://ghosxt.com/blog/attack-surface-management-small-business-2026</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/attack-surface-management-small-business-2026</guid>
+      <pubDate>Mon, 10 Aug 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>Old subdomains, forgotten VPN portals, an ex-employee's cloud login, a test server nobody decommissioned. What attack surface management finds, and why most small businesses have never actually looked.</description>
+    </item>
     <item>
       <title>Data Loss Prevention for Small Business: Stopping Data From Walking Out the Door (2026)</title>
       <link>https://ghosxt.com/blog/data-loss-prevention-small-business-2026</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>Zero Trust gets called a buzzword, but the model is simple: never trust, always verify. What it means for a 10-person business, and where to start.</description>
-    </item>
-    <item>
-      <title>ADA Website Accessibility for Small Business: What California Law Requires (2026)</title>
-      <link>https://ghosxt.com/blog/ada-website-accessibility-small-business-2026</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/ada-website-accessibility-small-business-2026</guid>
-      <pubDate>Sat, 11 Jul 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Web Development</category>
-      <description>Accessibility demand letters are hitting California businesses, and the Unruh Act raises the stakes. What ADA and WCAG 2.1 AA require.</description>
     </item>
   </channel>
 </rss>
