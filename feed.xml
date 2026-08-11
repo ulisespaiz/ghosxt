@@ -7,7 +7,7 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from an engineer with DoD infrastructure experience.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Tue, 11 Aug 2026 11:05:35 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 11 Aug 2026 19:28:53 +0000</lastBuildDate>
     <pubDate>Tue, 11 Aug 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
     <item>
@@ -18,6 +18,15 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>Almost everyone at a small business has more access than their job requires, and most owners have no idea how many admin accounts actually exist. What privileged access management fixes, and how to start without a big budget.</description>
+    </item>
+    <item>
+      <title>August 2026 Patch Tuesday: 400 Fixes, 3 Zero-Days, and What a Small Business Needs to Do</title>
+      <link>https://ghosxt.com/blog/august-2026-patch-tuesday-400-fixes-3-zero-days-smb</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/august-2026-patch-tuesday-400-fixes-3-zero-days-smb</guid>
+      <pubDate>Tue, 11 Aug 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>August 2026 Patch Tuesday: 400 fixes and 3 zero-days, including an actively exploited Windows flaw and the SharePoint RCE chain. What a small business should do.</description>
     </item>
     <item>
       <title>Attack Surface Management for Small Business: What's Exposed to the Internet Right Now (2026)</title>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>July 2026 Patch Tuesday: a record 570 fixes and 3 zero-days, including AD FS and SharePoint flaws. What a small business should patch first.</description>
-    </item>
-    <item>
-      <title>AI Agents at Work: The Non-Human Identity Risk Small Businesses Aren't Managing</title>
-      <link>https://ghosxt.com/blog/ai-agents-non-human-identity-risk-small-business-2026</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/ai-agents-non-human-identity-risk-small-business-2026</guid>
-      <pubDate>Mon, 13 Jul 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>AI agents can send email, book meetings, and update your CRM using real credentials. Why non-human identities are a growing small-business risk.</description>
     </item>
   </channel>
 </rss>
