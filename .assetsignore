@@ -18,6 +18,8 @@ node_modules/
 # Repo docs (not part of the site)
 README.md
 SETUP-CONTACT-FORM.md
+august-2026-patch-tuesday.md
+email-insert.md
 
 # Build/generator scripts — source, not part of the served site.
 # (Previously reachable at /scripts/*.py; excluding them closes that exposure.)
