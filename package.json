@@ -1,0 +1,7 @@
+{
+  "name": "ghosxt-site",
+  "private": true,
+  "devDependencies": {
+    "wrangler": "4.120.1"
+  }
+}
