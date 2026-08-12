@@ -308,20 +308,17 @@
           <h3>What order should a small business patch in?</h3>
           <p>Install the cumulative update and reboot everywhere; that single step covers the exploited zero-day and the bulk of the release. If some machines have to go first: self-hosted SharePoint servers (the completed CVE-2026-55040 plus CVE-2026-63520 chain needs no credentials), then domain controllers and any Windows server running the DNS role (CVE-2026-62878 is a wormable CVSS 9.8), then on-premises Exchange (CVE-2026-62911), then workstations. Verify Windows 11 machines land on build 26100.9168 or 26200.9168 and ESU-enrolled Windows 10 machines on 19045.7663, because an installed-but-not-rebooted patch protects nothing.</p>
 
-          <h2>Sources</h2>
-
-          <ul style="overflow-wrap: anywhere;">
-            <li><a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-august-2026-patch-tuesday-fixes-400-flaws-3-zero-days/" target="_blank" rel="noopener noreferrer">BleepingComputer: Microsoft August 2026 Patch Tuesday fixes 400 flaws, 3 zero-days</a></li>
-            <li><a href="https://www.thezdi.com/blog/2026/8/11/the-august-2026-security-update-review" target="_blank" rel="noopener noreferrer">Zero Day Initiative: The August 2026 Security Update Review</a></li>
-            <li><a href="https://www.rapid7.com/blog/post/etr-cve-2026-63520-microsoft-sharepoint-remote-code-execution-fixed/" target="_blank" rel="noopener noreferrer">Rapid7: CVE-2026-63520, Microsoft SharePoint remote code execution (fixed)</a></li>
-            <li><a href="https://www.rapid7.com/blog/post/ve-cve-2026-55040-microsoft-sharepoint-jwt-token-authentication-bypass-fixed/" target="_blank" rel="noopener noreferrer">Rapid7: CVE-2026-55040, Microsoft SharePoint JWT token authentication bypass (fixed)</a></li>
-            <li><a href="https://www.bleepingcomputer.com/news/security/windows-legacyhive-zero-day-flaw-gets-free-unofficial-patches/" target="_blank" rel="noopener noreferrer">BleepingComputer: Windows LegacyHive zero-day flaw gets free, unofficial patches</a></li>
-            <li><a href="https://www.lansweeper.com/blog/patch-tuesday/microsoft-patch-tuesday-august-2026/" target="_blank" rel="noopener noreferrer">Lansweeper: Microsoft Patch Tuesday, August 2026</a></li>
-            <li><a href="https://support.microsoft.com/en-US/servicing/os/windows-11/2026/08/kb5121003-windows-11-24h2-25h2-security-update" target="_blank" rel="noopener noreferrer">Microsoft Support: KB5121003, Windows 11 24H2 and 25H2 security update</a></li>
-            <li><a href="https://support.microsoft.com/en-US/servicing/os/windows-10/2026/08/kb5120249-windows-10-21h2-22h2-security-update" target="_blank" rel="noopener noreferrer">Microsoft Support: KB5120249, Windows 10 21H2 and 22H2 security update</a></li>
-            <li><a href="https://support.microsoft.com/en-us/topic/windows-server-2025-update-history-10f58da7-e57b-4a9d-9c16-9f1dcd72d7d7" target="_blank" rel="noopener noreferrer">Microsoft Support: Windows Server 2025 update history</a></li>
-            <li><a href="https://www.helpnetsecurity.com/2026/07/10/microsoft-windows-update-deployment-timelines/" target="_blank" rel="noopener noreferrer">Help Net Security: Microsoft is rewriting Windows patch guidance because of AI</a></li>
-          </ul>
+          <p style="margin-top: 2rem; font-size: 0.9rem; color: rgba(0,0,0,0.7); overflow-wrap: anywhere;">
+            <strong>Sources:</strong>
+            <a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-august-2026-patch-tuesday-fixes-400-flaws-3-zero-days/" target="_blank" rel="noopener noreferrer">BleepingComputer</a> &middot;
+            <a href="https://www.thezdi.com/blog/2026/8/11/the-august-2026-security-update-review" target="_blank" rel="noopener noreferrer">Zero Day Initiative</a> &middot;
+            <a href="https://www.rapid7.com/blog/post/etr-cve-2026-63520-microsoft-sharepoint-remote-code-execution-fixed/" target="_blank" rel="noopener noreferrer">Rapid7</a> &middot;
+            <a href="https://www.bleepingcomputer.com/news/security/windows-legacyhive-zero-day-flaw-gets-free-unofficial-patches/" target="_blank" rel="noopener noreferrer">LegacyHive patches</a> &middot;
+            <a href="https://www.lansweeper.com/blog/patch-tuesday/microsoft-patch-tuesday-august-2026/" target="_blank" rel="noopener noreferrer">Lansweeper</a> &middot;
+            <a href="https://support.microsoft.com/en-US/servicing/os/windows-11/2026/08/kb5121003-windows-11-24h2-25h2-security-update" target="_blank" rel="noopener noreferrer">KB5121003</a> &middot;
+            <a href="https://support.microsoft.com/en-US/servicing/os/windows-10/2026/08/kb5120249-windows-10-21h2-22h2-security-update" target="_blank" rel="noopener noreferrer">KB5120249</a> &middot;
+            <a href="https://www.helpnetsecurity.com/2026/07/10/microsoft-windows-update-deployment-timelines/" target="_blank" rel="noopener noreferrer">Help Net Security</a>
+          </p>
 
           <div class="blog-post-cta">
             <h3>400 patches this month. Are yours actually installed? Let's verify.</h3>
