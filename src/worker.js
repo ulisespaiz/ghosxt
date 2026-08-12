@@ -13,6 +13,16 @@
 //   CONTACT_TO_EMAIL      e.g. hello@ghosxt.com
 //   CONTACT_FROM_EMAIL    e.g. "Ghosxt Contact Form <noreply@ghosxt.com>"
 //   ALLOWED_ORIGINS       e.g. "https://ghosxt.com,https://www.ghosxt.com"
+//   TURNSTILE_HOSTNAMES   optional, extends the built-in Turnstile hostname
+//                         allowlist, e.g. "preview.ghosxt.com"
+
+// Origins accepted by /api/contact when ALLOWED_ORIGINS is unset or empty, so
+// the form endpoint fails closed instead of accepting any origin. /api/track
+// does not use this list; its fail-open behavior is intentional.
+const DEFAULT_CONTACT_ORIGINS = ["https://ghosxt.com", "https://www.ghosxt.com"];
+
+// Hostnames Turnstile siteverify may report for a token minted by this site.
+const DEFAULT_TURNSTILE_HOSTNAMES = ["ghosxt.com", "www.ghosxt.com"];
 
 const MAX_FIELD_LENGTH = {
   name: 120,
@@ -44,14 +54,21 @@ function escapeHtml(s) {
     .replace(/'/g, "&#39;");
 }
 
-function isAllowedOrigin(request, env) {
-  const allowed = (env.ALLOWED_ORIGINS || "")
+// fallbackAllowlist is the per-route answer to "ALLOWED_ORIGINS is unset".
+// Callers that pass one (handleContact) fail closed against it; callers that
+// omit it (handleTrack) keep the original fail-open behavior.
+function isAllowedOrigin(request, env, fallbackAllowlist) {
+  let allowed = (env.ALLOWED_ORIGINS || "")
     .split(",")
     .map((s) => s.trim())
     .filter(Boolean);
   if (allowed.length === 0) {
-    console.warn("ALLOWED_ORIGINS is unset \u2014 origin check disabled (fail-open); set it in production");
-    return true;
+    if (!fallbackAllowlist || fallbackAllowlist.length === 0) {
+      console.warn("ALLOWED_ORIGINS is unset \u2014 origin check disabled (fail-open); set it in production");
+      return true;
+    }
+    console.warn("ALLOWED_ORIGINS is unset \u2014 using the built-in allowlist for this route; set it in production");
+    allowed = fallbackAllowlist;
   }
   const origin = request.headers.get("Origin");
   if (origin && allowed.includes(origin)) return true;
@@ -65,7 +82,17 @@ function isAllowedOrigin(request, env) {
   return false;
 }
 
-async function verifyTurnstile(token, ip, secret) {
+// DEFAULT_TURNSTILE_HOSTNAMES plus anything TURNSTILE_HOSTNAMES adds (preview
+// deploys, staging domains). Env extends the built-in list, never replaces it.
+function turnstileHostnames(env) {
+  const extra = (env.TURNSTILE_HOSTNAMES || "")
+    .split(",")
+    .map((s) => s.trim().toLowerCase())
+    .filter(Boolean);
+  return DEFAULT_TURNSTILE_HOSTNAMES.concat(extra);
+}
+
+async function verifyTurnstile(token, ip, secret, allowedHostnames) {
   const body = new FormData();
   body.append("secret", secret);
   body.append("response", token);
@@ -74,9 +101,23 @@ async function verifyTurnstile(token, ip, secret) {
     "https://challenges.cloudflare.com/turnstile/v0/siteverify",
     { method: "POST", body },
   );
-  if (!res.ok) return { ok: false };
+  if (!res.ok) return { ok: false, errorCodes: [`siteverify-http-${res.status}`] };
   const data = await res.json();
-  return { ok: data.success === true, data };
+  const errorCodes = Array.isArray(data["error-codes"]) ? data["error-codes"] : [];
+  const hostname = typeof data.hostname === "string" ? data.hostname.toLowerCase() : "";
+  if (data.success !== true) {
+    return { ok: false, data, hostname, errorCodes };
+  }
+  // A token minted for another site verifies fine but is not ours: reject it
+  // exactly like a failed token. An absent hostname is logged, not rejected,
+  // so a response-shape change cannot silently 403 every legitimate lead.
+  if (hostname && !allowedHostnames.includes(hostname)) {
+    return { ok: false, data, hostname, errorCodes: errorCodes.concat("hostname-mismatch") };
+  }
+  if (!hostname) {
+    console.warn("Turnstile siteverify returned no hostname; hostname check skipped");
+  }
+  return { ok: true, data, hostname, errorCodes };
 }
 
 async function sendViaResend(env, payload) {
@@ -105,17 +146,17 @@ async function handleContact(request, env) {
   if (request.method !== "POST") {
     return jsonResponse(405, { error: "Method Not Allowed", allow: "POST" });
   }
-  // ALLOWED_ORIGINS is included here (rather than left to isAllowedOrigin's
-  // shared default) so a missing/empty value fails closed for this route:
-  // isAllowedOrigin() fails open when unset, which is intentional for
-  // handleTrack but not safe for a form submission endpoint.
-  const missing = ["RESEND_API_KEY", "TURNSTILE_SECRET_KEY", "CONTACT_TO_EMAIL", "CONTACT_FROM_EMAIL", "ALLOWED_ORIGINS"]
+  const missing = ["RESEND_API_KEY", "TURNSTILE_SECRET_KEY", "CONTACT_TO_EMAIL", "CONTACT_FROM_EMAIL"]
     .filter((k) => !env[k]);
   if (missing.length > 0) {
     console.error("Missing required env vars", missing);
     return jsonResponse(500, { error: "Server misconfigured" });
   }
-  if (!isAllowedOrigin(request, env)) {
+  // ALLOWED_ORIGINS is not required for this route, but it must never fail
+  // open: an unset/empty value falls back to DEFAULT_CONTACT_ORIGINS, so a
+  // forged Origin is still a 403 while real submissions keep working.
+  // isAllowedOrigin()'s fail-open path stays reserved for handleTrack.
+  if (!isAllowedOrigin(request, env, DEFAULT_CONTACT_ORIGINS)) {
     return jsonResponse(403, { error: "Forbidden" });
   }
 
@@ -171,8 +212,12 @@ async function handleContact(request, env) {
     return jsonResponse(400, { error: "Missing challenge token" });
   }
   const ip = request.headers.get("CF-Connecting-IP") || "";
-  const verify = await verifyTurnstile(token, ip, env.TURNSTILE_SECRET_KEY);
+  const verify = await verifyTurnstile(token, ip, env.TURNSTILE_SECRET_KEY, turnstileHostnames(env));
   if (!verify.ok) {
+    console.warn("Turnstile verification rejected", {
+      hostname: verify.hostname || "",
+      errorCodes: verify.errorCodes || [],
+    });
     return jsonResponse(403, { error: "Challenge failed" });
   }
 

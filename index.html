@@ -73,13 +73,13 @@
     <link rel="preconnect" href="https://cdn-uicons.flaticon.com" />
 
     <!-- FONTS -->
-    <link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" />
+    <link rel="stylesheet" media="print" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" />
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" /></noscript>
 
     <!-- STYLESHEETS -->
     <link rel="stylesheet" href="assets/css/main.min.css?v=2026-07-02a" />
     <link rel="stylesheet" href="assets/css/index.min.css?v=2026-07-02b" />
-    <link rel="stylesheet" media="print" onload="this.media='all'" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" />
+    <link rel="stylesheet" media="print" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" />
     <noscript><link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" /></noscript>
 
     <!-- STRUCTURED DATA: @graph pattern -->
@@ -260,6 +260,7 @@
       }
     </script>
     <!-- ghosxt:cf-web-analytics -->
+    <script defer src="assets/js/media-swap.min.js"></script>
     <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"f3ce7e0e17f54050845d52d7f355cd98"}'></script>
   </head>
   <body>
@@ -452,7 +453,7 @@
           <p class="hero-subtitle">
             Get government-grade IT and cybersecurity for less than one in-house
             hire. One engineer with DoD infrastructure experience, real local response across
-            California, no enterprise price tag. Local <a href="/salinas">managed IT services in Salinas</a> and across Monterey County.
+            California, no enterprise price tag. Local <a href="/salinas">managed IT services in Salinas</a> and <a href="/monterey-county">across Monterey County</a>.
           </p>
           <div class="hero-buttons">
             <a
@@ -1780,15 +1781,15 @@
                 </div>
 
                 <div class="chat-options" id="chatOptions">
-                  <button class="option-btn" onclick="startConversation(0)">
+                  <button class="option-btn" data-scenario="0">
                     <i class="fi fi-rs-error-bug"></i> Our website homepage is
                     broken, we need to fix it ASAP
                   </button>
-                  <button class="option-btn" onclick="startConversation(1)">
+                  <button class="option-btn" data-scenario="1">
                     <i class="fi fi-rs-error-bug"></i> We got a suspicious
                     email, might be a security breach
                   </button>
-                  <button class="option-btn" onclick="startConversation(2)">
+                  <button class="option-btn" data-scenario="2">
                     <i class="fi fi-rs-error-bug"></i> Our database server is
                     down, losing money by the minute
                   </button>
@@ -1975,6 +1976,7 @@
                 desk support, and strategic IT planning. Your entire IT
                 operation managed efficiently and reliably.
               </p>
+              <a class="service-card-link" href="/managed-it-services">Explore managed IT services</a>
             </div>
 
             <!-- Card 2 -->
@@ -1988,6 +1990,7 @@
                 automated response systems, and compliance management.
                 Protection that actually works when attacked.
               </p>
+              <a class="service-card-link" href="/cybersecurity">See cybersecurity services</a>
             </div>
 
             <!-- Card 3 -->
@@ -2001,6 +2004,7 @@
                 environments, and cloud optimization. Move to the cloud smoothly
                 without disrupting your business.
               </p>
+              <a class="service-card-link" href="/cloud-services">See cloud &amp; Microsoft 365 services</a>
             </div>
 
             <!-- Card 4 -->
@@ -2014,6 +2018,7 @@
                 need a strong online presence. Built for performance, security,
                 and results.
               </p>
+              <a class="service-card-link" href="/website-development">See website development</a>
             </div>
           </div>
         </div>
@@ -3510,12 +3515,15 @@
               <li><a href="/ctpat">C-TPAT Compliance</a></li>
               <li><a href="/trucking-it-services">Trucking &amp; Logistics IT</a></li>
               <li><a href="/agriculture-it-services">Agriculture &amp; Agribusiness IT</a></li>
+              <li><a href="/food-processing-it-services">Food Processing IT</a></li>
+              <li><a href="/cold-storage-it-services">Cold Storage IT</a></li>
               <li><a href="/manufacturing-it-services">Manufacturing &amp; Industrial IT</a></li>
               <li><a href="/professional-services-it">SMB Office &amp; Professional Services IT</a></li>
               <li><a href="/healthcare-it-services">Healthcare &amp; Medical IT</a></li>
               <li><a href="/property-management-it-services">Property Management IT</a></li>
               <li><a href="/engineering-it-services">Engineering &amp; Architecture IT</a></li>
               <li><a href="/hospitality-it-services">Hospitality &amp; Restaurants IT</a></li>
+              <li><a href="/defense-contractor-it-services">Defense Contractor IT</a></li>
             </ul>
           </div>
 

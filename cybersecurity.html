@@ -43,13 +43,13 @@
     <link rel="preconnect" href="https://cdn-uicons.flaticon.com" />
 
     <!-- FONTS -->
-    <link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" />
+    <link rel="stylesheet" media="print" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" />
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" /></noscript>
 
     <!-- STYLESHEETS -->
     <link rel="stylesheet" href="assets/css/main.min.css?v=2026-07-02a" />
     <link rel="stylesheet" href="assets/css/locations.min.css?v=2026-06-03a" />
-    <link rel="stylesheet" media="print" onload="this.media='all'" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" />
+    <link rel="stylesheet" media="print" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" />
     <noscript><link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" /></noscript>
 
     <!-- STRUCTURED DATA -->
@@ -372,63 +372,8 @@
       }
     </script>
     <!-- ghosxt:cf-web-analytics -->
+    <script defer src="assets/js/media-swap.min.js"></script>
     <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"f3ce7e0e17f54050845d52d7f355cd98"}'></script>
-    <!-- ghosxt:extra-schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "Home",
-              "item": "https://ghosxt.com/"
-            },
-            {
-              "@type": "ListItem",
-              "position": 2,
-              "name": "Cybersecurity",
-              "item": "https://ghosxt.com/cybersecurity"
-            }
-          ]
-        },
-        {
-          "@type": "Service",
-          "@id": "https://ghosxt.com/cybersecurity#service",
-          "name": "Cybersecurity",
-          "url": "https://ghosxt.com/cybersecurity",
-          "provider": {
-            "@id": "https://ghosxt.com/#business"
-          },
-          "areaServed": [
-            {
-              "@type": "State",
-              "name": "California"
-            },
-            {
-              "@type": "City",
-              "name": "Salinas"
-            },
-            {
-              "@type": "City",
-              "name": "Monterey"
-            },
-            {
-              "@type": "City",
-              "name": "Santa Cruz"
-            },
-            {
-              "@type": "City",
-              "name": "San Jose"
-            }
-          ]
-        }
-      ]
-    }
-    </script>
   </head>
   <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -591,7 +536,7 @@
           <h2>Why most small businesses get their cybersecurity wrong</h2>
           <p>Almost every small business breach we have ever opened up came down to the same handful of things: a missing MFA on email, backups nobody had ever tested, a shared password file, an unpatched workstation, or no plan for the day something went wrong. None of these are exotic. None of them require six-figure tools to fix. But fixing them properly takes someone who has actually done it before, on networks where the wrong move has real consequences.</p>
           <p>That is the experience we bring. Ghosxt is built around the cybersecurity discipline that comes from years inside Department of Defense IT environments, applied to the small businesses that have the most to lose and the smallest budgets to defend with. We do not sell fear. We do not sell shelfware. We build the controls that keep you off the breach list and out of your insurance carrier's claims pile.</p>
-          <p>Read more about <a href="/blog/small-business-cybersecurity-mistakes">the cybersecurity mistakes I see in almost every small business</a> for the specifics, or skip to <a href="#what-we-do">what we actually do</a> below.</p>
+          <p>Read more about <a href="/blog/small-business-cybersecurity-mistakes">the cybersecurity mistakes I see in almost every small business</a> for the specifics, work through <a href="/blog/protect-small-business-cyberattack-10-essentials-2026">the 10 essentials checklist</a> yourself, or skip to <a href="#what-we-do">what we actually do</a> below.</p>
         </div>
       </section>
 
@@ -614,7 +559,7 @@
             </article>
             <article class="service-card">
               <h3>Immutable Backup and Disaster Recovery</h3>
-              <p>Backups that ransomware cannot encrypt. Tested restores on a schedule. Documented recovery time objectives so when something does go wrong, you already know how long it takes to get back up.</p>
+              <p>Backups that ransomware cannot encrypt. Tested restores on a schedule. Documented recovery time objectives so when something does go wrong, you already know how long it takes to get back up. Full engineering detail on the <a href="/backup-disaster-recovery">backup &amp; disaster recovery</a> page.</p>
             </article>
             <article class="service-card">
               <h3>Vulnerability Management and Patching</h3>
@@ -630,7 +575,7 @@
             </article>
             <article class="service-card">
               <h3>Cloud Security (Microsoft 365, Azure, AWS)</h3>
-              <p>Hardened tenants, conditional access, secure score monitoring, and the security baselines most setups skip. We have done dozens of M365 migrations and the security gap between a fresh tenant and a hardened one is enormous.</p>
+              <p>Hardened tenants, conditional access, secure score monitoring, and the security baselines most setups skip. We have done dozens of M365 migrations and the security gap between a fresh tenant and a hardened one is enormous. See <a href="/cloud-services">cloud &amp; Microsoft 365 services</a> for the full scope.</p>
             </article>
             <article class="service-card">
               <h3>Vendor and Supply Chain Security</h3>
@@ -649,14 +594,15 @@
           <h2>Compliance frameworks we support</h2>
           <p>If your industry, your customers, or your contracts require a specific compliance framework, we can map your current state to the framework, identify the gaps, and implement the missing controls. We are equally comfortable with government, healthcare, retail, and SaaS-focused frameworks.</p>
           <ul class="industries-list">
-            <li>CMMC 2.0 and NIST 800-171 (DoD subcontractors)</li>
+            <li><a href="/cmmc-compliance">CMMC 2.0 and NIST 800-171</a> (DoD subcontractors; see also <a href="/defense-contractor-it-services">managed IT for defense contractors</a>)</li>
             <li><a href="/ctpat">C-TPAT cybersecurity</a> (importers, carriers, 3PLs)</li>
-            <li>HIPAA (healthcare and dental practices)</li>
-            <li>PCI-DSS (retail, restaurants, hospitality)</li>
+            <li><a href="/hipaa-it-compliance">HIPAA</a> (healthcare and dental practices)</li>
+            <li><a href="/pci-compliance">PCI-DSS</a> (retail, restaurants, hospitality)</li>
             <li>SOC 2 readiness (SaaS and B2B)</li>
             <li>CIS Controls v8 (general baseline)</li>
             <li>NIST Cybersecurity Framework</li>
             <li>CCPA and CPRA (California privacy)</li>
+            <li><a href="/cyber-insurance-compliance">Cyber-insurance requirements</a> (underwriter questionnaires and renewals)</li>
           </ul>
         </div>
       </section>
@@ -853,12 +799,15 @@
               <li><a href="/ctpat">C-TPAT Compliance</a></li>
               <li><a href="/trucking-it-services">Trucking &amp; Logistics IT</a></li>
               <li><a href="/agriculture-it-services">Agriculture &amp; Agribusiness IT</a></li>
+              <li><a href="/food-processing-it-services">Food Processing IT</a></li>
+              <li><a href="/cold-storage-it-services">Cold Storage IT</a></li>
               <li><a href="/manufacturing-it-services">Manufacturing &amp; Industrial IT</a></li>
               <li><a href="/professional-services-it">SMB Office &amp; Professional Services IT</a></li>
               <li><a href="/healthcare-it-services">Healthcare &amp; Medical IT</a></li>
               <li><a href="/property-management-it-services">Property Management IT</a></li>
               <li><a href="/engineering-it-services">Engineering &amp; Architecture IT</a></li>
               <li><a href="/hospitality-it-services">Hospitality &amp; Restaurants IT</a></li>
+              <li><a href="/defense-contractor-it-services">Defense Contractor IT</a></li>
             </ul>
           </div>
 

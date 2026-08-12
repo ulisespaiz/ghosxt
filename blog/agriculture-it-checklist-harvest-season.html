@@ -1,0 +1,494 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Pre-Harvest IT Checklist for Salinas Valley Agriculture | Ghosxt</title>
+    <meta name="description" content="A pre-harvest IT checklist for growers, packers, and coolers: accounts, email, endpoints, connectivity, backups, vendor access, and incident readiness." />
+    <link rel="canonical" href="https://ghosxt.com/blog/agriculture-it-checklist-harvest-season" />
+    <link rel="alternate" type="application/rss+xml" title="Ghosxt Blog" href="https://ghosxt.com/feed.xml" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://ghosxt.com/blog/agriculture-it-checklist-harvest-season" />
+    <meta property="og:title" content="The Pre-Harvest IT Checklist for Salinas Valley Agriculture" />
+    <meta property="og:description" content="Seven areas a grower, packer, or cooler can walk through in an afternoon before the season peaks, from account cleanup to a tested restore." />
+    <meta property="og:image" content="https://ghosxt.com/assets/img/og/blog-agriculture-it-checklist-harvest-season.png" />
+    <meta property="og:site_name" content="Ghosxt" />
+    <meta property="article:published_time" content="2026-08-12" />
+    <meta property="article:author" content="Ulises Paiz" />
+    <meta name="robots" content="index, follow" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="The Pre-Harvest IT Checklist for Salinas Valley Agriculture" />
+    <meta name="twitter:description" content="Seven areas a grower, packer, or cooler can walk through in an afternoon before the season peaks, from account cleanup to a tested restore." />
+    <meta name="twitter:image" content="https://ghosxt.com/assets/img/og/blog-agriculture-it-checklist-harvest-season.png" />
+    <link rel="icon" href="../assets/img/favicon.ico" sizes="any" />
+    <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- ghosxt:roboto-preload -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" />
+    <link rel="preconnect" href="https://cdn-uicons.flaticon.com" />
+    <link rel="stylesheet" media="print" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" /></noscript>
+    <link rel="stylesheet" href="../assets/css/main.min.css?v=2026-07-02a" />
+    <link rel="stylesheet" href="../assets/css/blog.min.css?v=2026-07-03a" />
+    <link rel="stylesheet" media="print" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" />
+    <noscript><link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" /></noscript>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "BlogPosting",
+            "mainEntityOfPage": { "@type": "WebPage", "@id": "https://ghosxt.com/blog/agriculture-it-checklist-harvest-season" },
+            "headline": "The Pre-Harvest IT Checklist: Get Your Systems Ready Before the Season Peaks",
+            "description": "A pre-harvest IT checklist for growers, packers, and coolers: accounts, email, endpoints, connectivity, backups, vendor access, and incident readiness.",
+            "image": "https://ghosxt.com/assets/img/og/blog-agriculture-it-checklist-harvest-season.png",
+            "author": { "@type": "Person", "name": "Ulises Paiz", "url": "https://ghosxt.com/about" },
+            "publisher": { "@type": "Organization", "name": "Ghosxt", "logo": { "@type": "ImageObject", "url": "https://ghosxt.com/assets/img/ghosxt-logo-160.webp" } },
+            "datePublished": "2026-08-12",
+            "dateModified": "2026-08-12",
+            "articleSection": "Industry IT",
+            "keywords": "agriculture IT checklist, pre-harvest IT readiness, harvest season IT, Salinas Valley agriculture IT, grower packer cooler IT, pack house network, cold storage monitoring, farm cybersecurity checklist, Salinas, Monterey, Central Coast"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ghosxt.com/" },
+              { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://ghosxt.com/blog/" },
+              { "@type": "ListItem", "position": 3, "name": "The Pre-Harvest IT Checklist", "item": "https://ghosxt.com/blog/agriculture-it-checklist-harvest-season" }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "How far ahead of harvest should we run this checklist?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Three to four weeks before your volume peaks is the useful window. That is early enough that a failed restore test, a dead zone in the cooler, or a workstation that needs replacing can still be handled on a normal schedule, and late enough that your crew list and season plan are real rather than projected. Running it the week before peak turns findings into emergencies, and running it deep in the off-season means you test the building empty, which is not the condition that breaks things."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "If we only have time for one item on this list, which one?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Test a restore. Everything else on the list makes an outage less likely, but a proven restore is what decides how bad your worst day gets. Bring back one real file and one real system, time it, and write the number down. A close second is keeping a pre-configured spare machine on the shelf for whichever station cannot go down, because that turns the most common hardware failure of the season into a short swap instead of a lost half day."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "We already pay for a backup internet line. Do we still need to test failover?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, and this is one of the most common gaps we find. A second line that gets billed every month is not the same as a second line that takes over automatically, and configurations drift after equipment swaps, firmware updates, or a provider change. Pull the primary connection during a quiet hour and watch what happens: whether the secondary comes up, how long it takes, whether the ERP and scale software reconnect on their own, and whether it fails back cleanly when the primary returns."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+    <!-- ghosxt:cf-web-analytics -->
+    <script defer src="../assets/js/media-swap.min.js"></script>
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"f3ce7e0e17f54050845d52d7f355cd98"}'></script>
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top"><i class="fi fi-rs-angle-up" aria-hidden="true"></i></button>
+    <div class="cookie-banner" id="cookieBanner"><div class="cookie-banner-container"><div class="cookie-content"><div class="cookie-icon"><i class="fi fi-rs-cookie"></i></div><div class="cookie-text"><p class="cookie-message">We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.</p><a href="/privacy-policy" class="cookie-link">Learn more about our Privacy Policy</a></div></div><div class="cookie-actions"><button class="cookie-btn cookie-btn-secondary" id="cookieDecline">Decline</button><button class="cookie-btn cookie-btn-primary" id="cookieAccept">Accept All</button></div></div></div>
+    <nav class="navbar" aria-label="Main navigation">
+      <div class="navbar-container">
+        <div class="navbar-left"><a href="/" class="navbar-logo"><img fetchpriority="high" loading="eager" src="../assets/img/ghosxt-logo-160.webp" alt="Ghosxt logo" width="48" height="48" /><span>GHOSXT</span></a></div>
+        <div class="navbar-right">
+          <div class="navbar-menu">
+            <a href="/" class="navbar-link">Home</a>
+            <div class="navbar-dropdown"><a href="/about" class="navbar-link dropdown-trigger">About <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></a><div class="dropdown-menu"><a href="/about" class="dropdown-item">About Ghosxt</a><a href="/ghosxt-cares" class="dropdown-item">Ghosxt Cares</a></div></div>
+            <div class="navbar-dropdown"><a href="/services" class="navbar-link dropdown-trigger">Services <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></a><div class="dropdown-menu"><a href="/services" class="dropdown-item">All Services</a>
+                <a href="/managed-it-services" class="dropdown-item">Managed IT Services</a>
+                <a href="/help-desk-it-support" class="dropdown-item">IT Help Desk &amp; Support</a>
+                <a href="/it-consulting-vcio" class="dropdown-item">IT Consulting &amp; vCIO</a>
+                <a href="/cybersecurity" class="dropdown-item">Cybersecurity</a>
+                <a href="/cloud-services" class="dropdown-item">Cloud Services</a>
+                <a href="/backup-disaster-recovery" class="dropdown-item">Backup &amp; Disaster Recovery</a>
+                <a href="/network-design" class="dropdown-item">Network Design</a>
+                <a href="/website-development" class="dropdown-item">Web Development</a>
+                <a href="/website-development#calculator" class="dropdown-item">Website Pricing</a>
+                <a href="/ctpat" class="dropdown-item">C-TPAT Compliance</a></div></div>
+            <a href="/pricing" class="navbar-link">Pricing</a>
+            <a href="/support" class="navbar-link">Support</a>
+            <a href="/blog/" class="navbar-link">Blog</a>
+            <a href="/contact" class="navbar-link">Contact</a>
+          </div>
+          <button class="navbar-mobile-toggle" id="mobileToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu"><i class="fi fi-rs-burger-menu" aria-hidden="true"></i></button>
+          <div class="navbar-buttons"><a class="navbar-btn navbar-phone" href="tel:+18312040501" aria-label="Call Ghosxt at (831) 204-0501"><i class="fi fi-rs-phone-call" aria-hidden="true"></i><span>(831)&nbsp;204-0501</span></a><a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer" class="navbar-btn btn-demo"><i class="fi fi-rs-calendar-day"></i><span>Book a Call</span></a></div>
+        </div>
+      </div>
+      <div class="navbar-overlay" id="navbarOverlay"></div>
+      <div class="navbar-mobile-menu" id="mobileMenu">
+        <a href="/" class="mobile-link">Home</a>
+        <div class="mobile-accordion"><button class="mobile-accordion-trigger" aria-expanded="false">About <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></button><div class="mobile-accordion-content"><a href="/about" class="mobile-dropdown-item">About Ghosxt</a><a href="/ghosxt-cares" class="mobile-dropdown-item">Ghosxt Cares</a></div></div>
+        <div class="mobile-accordion"><button class="mobile-accordion-trigger" aria-expanded="false">Services <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></button><div class="mobile-accordion-content"><a href="/services" class="mobile-dropdown-item">All Services</a>
+            <a href="/managed-it-services" class="mobile-dropdown-item">Managed IT Services</a>
+            <a href="/help-desk-it-support" class="mobile-dropdown-item">IT Help Desk &amp; Support</a>
+            <a href="/it-consulting-vcio" class="mobile-dropdown-item">IT Consulting &amp; vCIO</a>
+            <a href="/cybersecurity" class="mobile-dropdown-item">Cybersecurity</a>
+            <a href="/cloud-services" class="mobile-dropdown-item">Cloud Services</a>
+            <a href="/backup-disaster-recovery" class="mobile-dropdown-item">Backup &amp; Disaster Recovery</a>
+            <a href="/network-design" class="mobile-dropdown-item">Network Design</a>
+            <a href="/website-development" class="mobile-dropdown-item">Web Development</a>
+            <a href="/website-development#calculator" class="mobile-dropdown-item">Website Pricing</a>
+            <a href="/ctpat" class="mobile-dropdown-item">C-TPAT Compliance</a></div></div>
+        <a href="/pricing" class="mobile-link">Pricing</a>
+        <a href="/support" class="mobile-link">Support</a>
+        <a href="/blog/" class="mobile-link">Blog</a>
+        <a href="/contact" class="mobile-link">Contact</a>
+        <div class="mobile-actions"><a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer" class="mobile-btn btn-demo"><i class="fi fi-rs-calendar-day"></i><span>Book a Call</span></a></div>
+      </div>
+    </nav>
+    <main id="main-content" class="blog-post">
+      <header class="blog-post-header">
+        <div class="container">
+          <nav class="blog-post-breadcrumbs" aria-label="Breadcrumb">
+            <a href="/">Home</a><span class="sep">&rsaquo;</span><a href="/blog/">Blog</a><span class="sep">&rsaquo;</span><span aria-current="page">The Pre-Harvest IT Checklist</span>
+          </nav>
+          <div class="blog-post-meta">
+            <time datetime="2026-08-12">August 12, 2026</time>
+            <span>&middot;</span>
+            <span>8 min read</span>
+            <span>&middot;</span>
+            <span class="blog-card-tag">Industry IT</span>
+          </div>
+          <h1>The Pre-Harvest IT Checklist: Get Your Systems Ready Before the Season Peaks</h1>
+          <div class="blog-post-author">
+            <strong>Ulises Paiz</strong>, Founder, Ghosxt
+          </div>
+          <div class="author-bio-box">
+            <!-- ghosxt:author-bio -->
+            <img src="../assets/img/ulises.avif" alt="Ulises Paiz" width="56" height="56" loading="lazy" />
+            <p>Ulises Paiz, Founder of Ghosxt, has 10+ years in IT infrastructure and cybersecurity, deep DoD infrastructure experience, and 9 certifications including CySA+, Security+, and AZ-104. Before founding Ghosxt, he served as a Senior Solutions Consultant for the DoD and built security programs for 40+ Central Coast businesses. <a href="/about">More about Ulises &rarr;</a></p>
+          </div>
+        </div>
+      </header>
+      <div class="blog-post-body">
+        <div class="container">
+          <aside class="blog-post-quickfix" aria-label="Summary and what to do today">
+            <span class="quickfix-label">TL;DR: fix it in the quiet weeks, not at 5am on a shipping day</span>
+            <h2>Technology failures during harvest and shipping hit productivity, scheduling, and revenue at the same time, and almost none of them are surprises. Seven areas, one afternoon, before volume peaks: accounts, email, endpoints, connectivity, backups, vendor access, and a one-page plan for the day something breaks.</h2>
+            <ul>
+              <li><strong>Most of this is verification, not spending.</strong> You are proving that the things you already assume work actually work, while there is still time to fix the ones that do not.</li>
+              <li><strong>The expensive failures are the shared ones.</strong> The pack-house PC nobody owns, the wireless dead zone that only appears when the cooler is full, the backup line nobody has ever tested.</li>
+              <li><strong>Decisions made during an outage are bad decisions.</strong> A printed phone tree and a documented paper fallback are worth more mid-season than any tool you buy after the fact.</li>
+            </ul>
+            <p>This pairs with our <a href="/blog/agriculture-it-cybersecurity-salinas-valley">Salinas Valley agriculture IT and cybersecurity guide</a> (the strategy behind the checklist), the <a href="/blog/seasonal-worker-it-security-checklist-central-coast">seasonal worker IT checklist</a> (the full onboarding and offboarding process), and our <a href="/agriculture-it-services">agriculture IT services</a> page.</p>
+          </aside>
+          <p>Harvest does not wait for a support ticket. When the line is running and trucks are staged at the dock, a login that will not work, a scanner that keeps dropping, or a workstation stuck on a failed update stops product from moving, and that lands on productivity, scheduling, and revenue at once. Almost none of those failures are surprises. They are the predictable result of systems that were fine at half volume and never got checked before the season doubled the load on them.</p>
+
+          <p>What follows is a checklist an operations manager at a grower, packer, or cooler can walk through in an afternoon, ideally a few weeks before peak. Nothing here needs a project budget. Most of it is verification.</p>
+
+          <h2>1. Accounts and people</h2>
+
+          <p>Season start is when account sprawl happens, and it happens fast. Get the list clean before the first crew shows up.</p>
+
+          <ul>
+            <li><strong>Compare the full user list against current payroll.</strong> Pull every account from Microsoft 365 or Google Workspace and match it line by line to a person on the current roster. Anything you cannot match gets disabled, not deleted, until someone confirms what it is.</li>
+            <li><strong>Disable everything still active from last season.</strong> Last year's crew, last year's temp office help, last year's labor contractor contact. If it was created for a season that ended, it should not still authenticate.</li>
+            <li><strong>Create this season's accounts one per person, named, before day one.</strong> A shared login for the pack line or the scale house means you can never remove one person's access without cutting off the whole shift.</li>
+            <li><strong>Turn on MFA for everything that touches email or money.</strong> That includes admin accounts, the ERP, banking, payroll, and any shared mailbox someone signs into directly.</li>
+            <li><strong>Name who can approve a new account or a permission change.</strong> During harvest those requests arrive by text at odd hours, and a single named approver is what keeps that from becoming a free-for-all.</li>
+          </ul>
+
+          <p>The full process for adding and removing seasonal staff, including tying account expiration to the last scheduled shift so offboarding does not depend on anyone remembering, is in our <a href="/blog/seasonal-worker-it-security-checklist-central-coast">seasonal worker IT checklist</a>. Build that once and this section becomes a five-minute review instead of an afternoon of cleanup.</p>
+
+          <h2>2. Microsoft 365 and email</h2>
+
+          <p>Email is where the money gets stolen. Planting and harvest are when large payments move between growers, labor contractors, coolers, truckers, and buyers, and that is exactly when payment redirection attempts land, because an invoice with changed banking details does not look strange in a season when everything is moving fast.</p>
+
+          <ul>
+            <li><strong>Run an MFA coverage report, not a spot check.</strong> The question is not whether MFA is turned on, it is which accounts are still exempt. A legacy account, a service mailbox, or an owner who asked to be skipped: those are the ones that get compromised.</li>
+            <li><strong>Audit mailbox forwarding rules across the whole tenant.</strong> An attacker who gets into a mailbox usually leaves a quiet rule behind that copies invoices to an outside address or files replies from one vendor into a folder nobody opens. Look for external forwarding, and look for rules with blank or single-character names.</li>
+            <li><strong>Set a verbal callback rule before the money moves.</strong> Any request to change bank details, wire instructions, or a remittance address gets verified by phone using the number already on file, never a number printed in the email asking for the change.</li>
+            <li><strong>Brief the people who actually pay invoices.</strong> Accounts payable, the controller, and whoever approves labor contractor payments all need to know the callback rule exists and that nobody will be annoyed with them for using it.</li>
+          </ul>
+
+          <p>The threat patterns specific to Central Coast agriculture, including harvest-timed ransomware and banking-change scams aimed at growers, are covered in our <a href="/blog/agriculture-it-cybersecurity-salinas-valley">agriculture IT and cybersecurity guide</a>.</p>
+
+          <h2>3. Endpoints, especially the shared ones</h2>
+
+          <p>The machines that matter most during harvest are usually the ones nobody owns: the pack-house PC three people share, the scale-house terminal, the workstation driving the label printer. They get skipped because taking them offline is inconvenient, which is exactly why they are behind.</p>
+
+          <ul>
+            <li><strong>Check patch status on every shared machine and force the reboots now.</strong> A workstation sitting on a pending update for six weeks will install it at the worst possible moment.</li>
+            <li><strong>Confirm antivirus or EDR is reporting in, not just installed.</strong> Open the console and verify each machine has checked in recently. An agent that stopped reporting months ago is the same as no agent.</li>
+            <li><strong>Keep spare imaged machines on the shelf for stations that cannot go down.</strong> A pre-configured spare turns a dead scale-house PC from a half-day outage into a fifteen-minute swap. For most pack houses this is the highest-return item on the list.</li>
+            <li><strong>Test the peripherals on the spare, not just the computer.</strong> Label printers, scanners, scales, and their drivers all have to work. A spare that images cleanly and then cannot print a case label is not a working spare.</li>
+          </ul>
+
+          <h2>4. Connectivity, walked and tested</h2>
+
+          <p>Coverage that works with an empty cooler is not the coverage you get at peak with racks full, doors closed, and metal everywhere. Water and product absorb signal, and a dead zone that only appears when the room is full is the one you find on a shipping day.</p>
+
+          <ul>
+            <li><strong>Walk the warehouse and cooler with the scanner your crew actually uses,</strong> under realistic conditions: racks loaded, doors closed, forklifts moving. Note every spot where it drops and fix those now, whether the answer is another access point, a repositioned antenna, or a cable run.</li>
+            <li><strong>Test failover by pulling the primary line.</strong> Do not trust the configuration. Unplug the primary connection during a quiet hour and confirm the secondary picks up, the ERP reconnects, and it fails back cleanly afterward. A failover nobody has tested is a theory.</li>
+            <li><strong>Confirm what actually stops when the internet stops.</strong> If the ERP, scale software, or label system depends on the line, you need to know that in advance and you need a documented paper fallback for the hour it takes to restore service.</li>
+            <li><strong>Write the 5am call list.</strong> ISP support number, account number, circuit ID, and who at your operation is authorized to open a ticket. Print it. If the outage is the network, you will not be looking that up in a shared drive.</li>
+          </ul>
+
+          <p>If nobody has surveyed the pack house since the last expansion, do it before peak rather than during it. Our <a href="/network-support-salinas">network support in Salinas</a> covers warehouse and cooler wireless, failover, and the physical layer everything above sits on.</p>
+
+          <h2>5. Backups and recovery</h2>
+
+          <p>Backups are not the goal. Restores are. The only way to know a backup works is to bring something back from it.</p>
+
+          <ul>
+            <li><strong>Restore one real file and one real system before the season peaks.</strong> Pick something that matters, time the restore, and write the number down where the operations team can see it.</li>
+            <li><strong>Know the recovery time for the ERP and traceability system specifically.</strong> If your produce ERP or lot-tracking system went down this afternoon, how many hours until it is back, and what does the operation do in the meantime? If nobody can answer that in one sentence, that is your gap.</li>
+            <li><strong>Confirm your traceability records survive independently of the vendor.</strong> If the system is vendor-hosted, ask what your own copy of the data looks like, how you would get it, and test that export once.</li>
+            <li><strong>Test the cooler and monitoring alert path end to end.</strong> Trigger a real test alert and confirm it reaches a person who is awake and empowered to act at 2am on a weekend. An alert that emails an address nobody watches is not an alert.</li>
+          </ul>
+
+          <p>Our <a href="/backup-disaster-recovery">backup and disaster recovery</a> page covers retention and restore testing, and <a href="/cold-storage-it-services">cold storage IT services</a> covers the monitoring and alerting side for refrigerated environments.</p>
+
+          <h2>6. Vendors and remote access</h2>
+
+          <p>Every operation accumulates vendor access. The ERP implementer, the scale calibration company, the cooler controls integrator, the labor management platform, whoever installed the cameras years ago. Each one needed a way in at some point, and most of those ways in are still open.</p>
+
+          <ul>
+            <li><strong>List every vendor with access to anything.</strong> Remote sessions, VPN, a named account in the ERP, an admin login on a controller. If you cannot produce that list, that is the finding.</li>
+            <li><strong>Close what is not needed.</strong> A vendor you have not worked with in the past year does not need standing access. Turning it back on for a support call takes minutes.</li>
+            <li><strong>Scope what remains.</strong> Named accounts per vendor technician rather than one shared vendor login, MFA required, access limited to the system they actually support, and enabled for the window they need rather than left open permanently.</li>
+            <li><strong>Ask each remaining vendor one direct question:</strong> who at your company can reach our systems, and how do you remove that when one of them leaves? The answer tells you how much to trust the connection.</li>
+          </ul>
+
+          <h2>7. Incident readiness</h2>
+
+          <p>Decisions made at 5am on a shipping day are bad decisions. Make them now, on paper, while nothing is on fire.</p>
+
+          <ul>
+            <li><strong>Build a one-page phone tree.</strong> Your IT contact, the ISP, the ERP vendor, the cooler controls vendor, the bank fraud line, and your insurance carrier's incident number, with names, direct numbers, and account numbers. Print it and put a copy in the office, one in the pack house, and one in a truck.</li>
+            <li><strong>Write down the first three moves if ransomware hits mid-harvest.</strong> Disconnect affected machines from the network without powering them off, call IT and your insurance carrier before touching anything else, and switch shipping to the paper fallback from section four.</li>
+            <li><strong>Decide in advance who can authorize shipping on paper.</strong> During an outage the delay is rarely technical. It is waiting for someone with authority to make a call.</li>
+            <li><strong>Name one person who talks to buyers and carriers during an outage,</strong> so customers hear a single consistent status instead of five versions from five people.</li>
+          </ul>
+
+          <p>If you want the longer version of that plan, our <a href="/blog/incident-response-plan-small-business-2026">incident response plan post</a> covers what belongs in it and who owns each step.</p>
+
+          <h2>Where this fits</h2>
+
+          <ul>
+            <li>Our <a href="/agriculture-it-services">agriculture IT services</a> page, for how growers, packers, coolers, and processors each use these systems differently.</li>
+            <li>The <a href="/blog/agriculture-it-cybersecurity-salinas-valley">Salinas Valley agriculture IT and cybersecurity guide</a>, for the six layers behind this checklist.</li>
+            <li>The <a href="/blog/seasonal-worker-it-security-checklist-central-coast">seasonal worker IT checklist</a>, for the full seasonal onboarding and offboarding process.</li>
+            <li><a href="/network-support-salinas">Network support in Salinas</a>, for pack-house wireless, failover, and cabling.</li>
+            <li><a href="/backup-disaster-recovery">Backup and disaster recovery</a> and <a href="/cold-storage-it-services">cold storage IT services</a>, for restore testing and cooler monitoring.</li>
+          </ul>
+
+          <p>We run this checklist with growers, packers, coolers, and shippers across <a href="/salinas">Salinas</a>, <a href="/watsonville">Watsonville</a>, <a href="/gilroy">Gilroy</a>, <a href="/hollister">Hollister</a>, and the rest of the Central Coast, usually a few weeks ahead of their peak so the fixes land before the volume does.</p>
+
+          <h2>FAQs about pre-harvest IT readiness</h2>
+
+          <h3>How far ahead of harvest should we run this checklist?</h3>
+          <p>Three to four weeks before your volume peaks is the useful window. That is early enough that a failed restore test, a dead zone in the cooler, or a workstation that needs replacing can still be handled on a normal schedule, and late enough that your crew list and season plan are real rather than projected. Running it the week before peak turns findings into emergencies, and running it deep in the off-season means you test the building empty, which is not the condition that breaks things.</p>
+
+          <h3>If we only have time for one item on this list, which one?</h3>
+          <p>Test a restore. Everything else on the list makes an outage less likely, but a proven restore is what decides how bad your worst day gets. Bring back one real file and one real system, time it, and write the number down. A close second is keeping a pre-configured spare machine on the shelf for whichever station cannot go down, because that turns the most common hardware failure of the season into a short swap instead of a lost half day.</p>
+
+          <h3>We already pay for a backup internet line. Do we still need to test failover?</h3>
+          <p>Yes, and this is one of the most common gaps we find. A second line that gets billed every month is not the same as a second line that takes over automatically, and configurations drift after equipment swaps, firmware updates, or a provider change. Pull the primary connection during a quiet hour and watch what happens: whether the secondary comes up, how long it takes, whether the ERP and scale software reconnect on their own, and whether it fails back cleanly when the primary returns.</p>
+
+          <div class="blog-post-cta">
+            <h3>Want a second set of eyes on your operation before the season peaks?</h3>
+            <p>30 minutes with an engineer with DoD infrastructure experience. We'll walk your office, pack house, and cooler systems against this checklist and tell you which gaps are worth fixing before volume hits and which can wait for the off-season. No obligation.</p>
+            <a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer">
+              <i class="fi fi-rs-calendar-day" aria-hidden="true"></i>
+              Book your free IT assessment
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer" id="footerSection">
+      <div class="footer-container">
+        <div class="footer-brand-row">
+          <div class="footer-brand">
+            <img
+              src="../assets/img/ghosxt-logo-160.webp"
+              alt="Ghosxt logo"
+              width="80"
+              height="80"
+              loading="lazy"
+            />
+            <div class="footer-brand-text">
+              <span class="footer-brand-name">GHOSXT</span>
+              <span class="footer-brand-tagline"
+                >Government-grade IT for small business.</span
+              >
+            </div>
+          </div>
+          <div class="footer-cta-block">
+            <a
+              href="https://calendly.com/ulises-ghosxt"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="footer-cta-btn"
+            >
+              <i class="fi fi-rs-calendar-day" aria-hidden="true"></i>
+              Schedule Free Assessment
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-grid">
+          <div class="footer-column">
+            <h3 class="footer-column-title">Company</h3>
+            <ul class="footer-links">
+              <li><a href="/">Home</a></li>
+              <li><a href="/about">About</a></li>
+              <li><a href="/services">Services</a></li>
+              <li><a href="/pricing">Pricing</a></li>
+              <li>
+                <a href="/website-development">Website Development</a>
+              </li>
+              <li><a href="/contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-column-title">Services</h3>
+            <ul class="footer-links">
+              <li><a href="/managed-it-services">Managed IT Services</a></li>
+              <li><a href="/help-desk-it-support">IT Help Desk &amp; Support</a></li>
+              <li><a href="/it-consulting-vcio">IT Consulting &amp; vCIO</a></li>
+              <li><a href="/cybersecurity">Cybersecurity</a></li>
+              <li><a href="/cloud-services">Cloud Services</a></li>
+              <li><a href="/backup-disaster-recovery">Backup &amp; Disaster Recovery</a></li>
+              <li><a href="/network-design">Network Design</a></li>
+              <li><a href="/website-development">Web Development</a></li>
+              <li><a href="/ctpat">C-TPAT Compliance</a></li>
+              <li><a href="/trucking-it-services">Trucking &amp; Logistics IT</a></li>
+              <li><a href="/agriculture-it-services">Agriculture &amp; Agribusiness IT</a></li>
+              <li><a href="/food-processing-it-services">Food Processing IT</a></li>
+              <li><a href="/cold-storage-it-services">Cold Storage IT</a></li>
+              <li><a href="/manufacturing-it-services">Manufacturing &amp; Industrial IT</a></li>
+              <li><a href="/professional-services-it">SMB Office &amp; Professional Services IT</a></li>
+              <li><a href="/healthcare-it-services">Healthcare &amp; Medical IT</a></li>
+              <li><a href="/property-management-it-services">Property Management IT</a></li>
+              <li><a href="/engineering-it-services">Engineering &amp; Architecture IT</a></li>
+              <li><a href="/hospitality-it-services">Hospitality &amp; Restaurants IT</a></li>
+              <li><a href="/defense-contractor-it-services">Defense Contractor IT</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-column-title">Resources</h3>
+            <ul class="footer-links">
+              <li><a href="/support">Get Support</a></li>
+              <li><a href="/privacy-policy">Privacy Policy</a></li>
+              <li>
+                <a
+                  href="https://ticket.ghosxt.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Client Portal</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://calendly.com/ulises-ghosxt"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Free IT Assessment</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-column-title">Connect</h3>
+            <ul class="footer-links footer-social-links">
+              <li>
+                <a
+                  href="https://www.linkedin.com/company/ghosxt/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.063 2.063 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                  LinkedIn</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.facebook.com/GhosxtTech"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg>
+                  Facebook</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/ghosxttech/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+                  Instagram</a
+                >
+              </li>
+              <li>
+                <a href="mailto:sales@ghosxt.com"
+                  ><i class="fi fi-rs-envelope" aria-hidden="true"></i>
+                  sales@ghosxt.com</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <div class="footer-bottom">
+          <p class="footer-copyright">
+            &copy; 2026 Ghosxt. All rights reserved. Built by an engineer from the federal contracting world.
+          </p>
+          <div class="footer-bottom-links">
+            <a href="/privacy-policy">Privacy Policy</a>
+            <span aria-hidden="true">&middot;</span>
+            <a href="/support">Support</a>
+            <span aria-hidden="true">&middot;</span>
+            <a
+              href="https://ticket.ghosxt.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Client Portal</a
+            >
+          </div>
+        </div>
+
+        <div class="service-areas-footer">
+          <h3>Service Areas</h3>
+          <ul>
+            <li><a href="/salinas">Salinas</a></li>
+            <li><a href="/monterey">Monterey</a></li>
+            <li><a href="/watsonville">Watsonville</a></li>
+            <li><a href="/hollister">Hollister</a></li>
+            <li><a href="/santa-cruz">Santa Cruz</a></li>
+            <li><a href="/gilroy">Gilroy</a></li>
+            <li><a href="/san-jose">San Jose</a></li>
+            <li><a href="/pacific-grove">Pacific Grove</a></li>
+            <li><a href="/carmel">Carmel</a></li>
+            <li><a href="/seaside">Seaside</a></li>
+            <li><a href="/marina">Marina</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="../assets/js/main.min.js?v=2026-07-02a" defer></script>
+    <!-- ghosxt:mobile-cta-bar -->
+    <div class="mobile-cta-bar" aria-label="Quick contact">
+      <a class="mcta-primary" href="tel:+18312040501">Call (831) 204-0501</a>
+      <a class="mcta-secondary" href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer">Book free assessment</a>
+    </div>
+  </body>
+</html>

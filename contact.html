@@ -42,13 +42,13 @@
     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 
     <!-- FONTS -->
-    <link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" />
+    <link rel="stylesheet" media="print" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" />
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" /></noscript>
 
     <!-- STYLESHEETS -->
     <link rel="stylesheet" href="assets/css/main.min.css?v=2026-07-02a">
     <link rel="stylesheet" href="assets/css/contact.min.css?v=2026-05-15a">
-    <link rel="stylesheet" media="print" onload="this.media='all'" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css">
+    <link rel="stylesheet" media="print" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css">
     <noscript><link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css"></noscript>
 
     <!-- STRUCTURED DATA -->
@@ -163,6 +163,7 @@
     }
     </script>
     <!-- ghosxt:cf-web-analytics -->
+    <script defer src="assets/js/media-swap.min.js"></script>
     <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"f3ce7e0e17f54050845d52d7f355cd98"}'></script>
 </head>
 <body class="no-mobile-cta-bar">
@@ -419,8 +420,10 @@
                     </div>
 
                     <!-- Cloudflare Turnstile widget. data-sitekey is set at deploy time
-                         (public, safe to inline). -->
-                    <div class="cf-turnstile" data-sitekey="0x4AAAAAADMxvIb2SEzyfRtD" data-theme="light" data-action="contact"></div>
+                         (public, safe to inline). The three failure callbacks are
+                         defined in the contact form script at the end of this page. -->
+                    <div class="cf-turnstile" data-sitekey="0x4AAAAAADMxvIb2SEzyfRtD" data-theme="light" data-action="contact"
+                         data-error-callback="onTurnstileError" data-expired-callback="onTurnstileExpired" data-timeout-callback="onTurnstileTimeout"></div>
 
                     <p class="form-disclaimer" id="form-privacy-note">
                         We respect your privacy. Your information is only used to respond to your inquiry and is never shared with third parties.
@@ -676,12 +679,15 @@
               <li><a href="/ctpat">C-TPAT Compliance</a></li>
               <li><a href="/trucking-it-services">Trucking &amp; Logistics IT</a></li>
               <li><a href="/agriculture-it-services">Agriculture &amp; Agribusiness IT</a></li>
+              <li><a href="/food-processing-it-services">Food Processing IT</a></li>
+              <li><a href="/cold-storage-it-services">Cold Storage IT</a></li>
               <li><a href="/manufacturing-it-services">Manufacturing &amp; Industrial IT</a></li>
               <li><a href="/professional-services-it">SMB Office &amp; Professional Services IT</a></li>
               <li><a href="/healthcare-it-services">Healthcare &amp; Medical IT</a></li>
               <li><a href="/property-management-it-services">Property Management IT</a></li>
               <li><a href="/engineering-it-services">Engineering &amp; Architecture IT</a></li>
               <li><a href="/hospitality-it-services">Hospitality &amp; Restaurants IT</a></li>
+              <li><a href="/defense-contractor-it-services">Defense Contractor IT</a></li>
             </ul>
                 </div>
 
@@ -779,6 +785,43 @@
                 status.textContent = message;
                 status.dataset.kind = kind || '';
             }
+
+            // Same as setStatus, for the few messages that carry a mailto link.
+            // Only trusted, hard-coded markup is passed in.
+            function setStatusHtml(html, kind) {
+                status.innerHTML = html;
+                status.dataset.kind = kind || '';
+            }
+
+            // Turnstile failure handling. The widget's data-error-callback,
+            // data-expired-callback and data-timeout-callback point here: reset the
+            // challenge, keep the submit button usable, and never leave the visitor
+            // without a way to reach us. The reset cap avoids a callback loop if the
+            // challenge keeps failing (e.g. the browser blocks challenges.cloudflare.com).
+            const maxTurnstileResets = 3;
+            let turnstileResets = 0;
+
+            function turnstileFailure(reason) {
+                if (window.turnstile && turnstileResets < maxTurnstileResets) {
+                    turnstileResets++;
+                    window.turnstile.reset();
+                }
+                setStatusHtml(reason + ' Please try again, or email <a href="mailto:sales@ghosxt.com">sales@ghosxt.com</a> and we will follow up.', 'error');
+                submit.disabled = false;
+                submit.textContent = submitDefault;
+            }
+
+            window.onTurnstileError = function () {
+                turnstileFailure('Verification failed.');
+            };
+
+            window.onTurnstileExpired = function () {
+                turnstileFailure('Verification expired.');
+            };
+
+            window.onTurnstileTimeout = function () {
+                turnstileFailure('Verification timed out.');
+            };
 
             form.addEventListener('submit', async function (e) {
                 e.preventDefault();

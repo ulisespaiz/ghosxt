@@ -7,9 +7,27 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from an engineer with DoD infrastructure experience.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Wed, 12 Aug 2026 11:06:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 12 Aug 2026 15:08:56 +0000</lastBuildDate>
     <pubDate>Wed, 12 Aug 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>The Pre-Harvest IT Checklist for Salinas Valley Agriculture</title>
+      <link>https://ghosxt.com/blog/agriculture-it-checklist-harvest-season</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/agriculture-it-checklist-harvest-season</guid>
+      <pubDate>Wed, 12 Aug 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Industry IT</category>
+      <description>A pre-harvest IT checklist for growers, packers, and coolers: accounts, email, endpoints, connectivity, backups, vendor access, and incident readiness.</description>
+    </item>
+    <item>
+      <title>How Much Should a Small Business Pay for IT Support? (2026)</title>
+      <link>https://ghosxt.com/blog/it-support-cost-small-business-2026</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/it-support-cost-small-business-2026</guid>
+      <pubDate>Wed, 12 Aug 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Managed IT in Salinas</category>
+      <description>IT support is priced five different ways, and the model matters as much as the rate. What each one costs, what moves the number, and what to ask before signing.</description>
+    </item>
     <item>
       <title>DNS Filtering for Small Business: The Cheapest Security Control You're Probably Not Using (2026)</title>
       <link>https://ghosxt.com/blog/dns-filtering-small-business-2026</link>
@@ -17,7 +35,7 @@
       <pubDate>Wed, 12 Aug 2026 00:00:00 +0000</pubDate>
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
-      <description>DNS filtering blocks malicious and phishing sites before a browser ever loads them, for a few dollars per device a month. What it actually catches, what it doesn't, and how to turn it on without breaking anything.</description>
+      <description>DNS filtering blocks malicious and phishing sites before the browser ever loads them, for a few dollars per device a month. What it catches and how to turn it on.</description>
     </item>
     <item>
       <title>Privileged Access Management for Small Business: Getting Admin Rights Under Control (2026)</title>
@@ -26,7 +44,7 @@
       <pubDate>Tue, 11 Aug 2026 00:00:00 +0000</pubDate>
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
-      <description>Almost everyone at a small business has more access than their job requires, and most owners have no idea how many admin accounts actually exist. What privileged access management fixes, and how to start without a big budget.</description>
+      <description>Most small businesses have far more admin accounts than anyone realizes. What privileged access management fixes, and how to start without a big budget.</description>
     </item>
     <item>
       <title>August 2026 Patch Tuesday: 400 Fixes, 3 Zero-Days, and What a Small Business Needs to Do</title>
@@ -44,7 +62,7 @@
       <pubDate>Mon, 10 Aug 2026 00:00:00 +0000</pubDate>
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
-      <description>Old subdomains, forgotten VPN portals, an ex-employee's cloud login, a test server nobody decommissioned. What attack surface management finds, and why most small businesses have never actually looked.</description>
+      <description>Old subdomains, forgotten VPN portals, a test server nobody decommissioned. What attack surface management finds, and why most small businesses never look.</description>
     </item>
     <item>
       <title>Data Loss Prevention for Small Business: Stopping Data From Walking Out the Door (2026)</title>
@@ -62,7 +80,7 @@
       <pubDate>Thu, 06 Aug 2026 00:00:00 +0000</pubDate>
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
-      <description>Most breaches don't exploit a mystery flaw, they exploit a vulnerability that already had a patch available. Why patch management gets skipped at small businesses, and how to build one that actually works.</description>
+      <description>Most breaches exploit a vulnerability that already had a patch available. Why patch management gets skipped at small businesses, and how to build one that works.</description>
     </item>
     <item>
       <title>Tailgating and Physical Access: The Low-Tech Breach Small Businesses Don't Plan For (2026)</title>
@@ -80,7 +98,7 @@
       <pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
-      <description>A single compromised update from a vendor you trust can install malware across your business with zero clicks and no phishing email. How supply chain attacks work and how to catch one.</description>
+      <description>A single compromised update from a vendor you trust can install malware with zero clicks and no phishing email. How supply chain attacks work and how to catch one.</description>
     </item>
     <item>
       <title>Network Printer and Copier Security: The Unpatched Server in Your Copy Room (2026)</title>
@@ -261,24 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>Passkeys now work across Microsoft 365, Google Workspace, and banking apps, and can't be phished. What they are and a realistic rollout plan.</description>
-    </item>
-    <item>
-      <title>LegacyHive: Nightmare-Eclipse's New Windows Zero-Day, Explained</title>
-      <link>https://ghosxt.com/blog/nightmare-eclipse-legacyhive-windows-zero-day-smb-2026</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/nightmare-eclipse-legacyhive-windows-zero-day-smb-2026</guid>
-      <pubDate>Wed, 15 Jul 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>LegacyHive: Nightmare-Eclipse's new Windows privilege-escalation zero-day, unpatched with no CVE yet. What it does and what to do this week.</description>
-    </item>
-    <item>
-      <title>Vishing: How Voice Phishing Calls Are Scamming Small Businesses in 2026</title>
-      <link>https://ghosxt.com/blog/vishing-voice-phishing-small-business-2026</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/vishing-voice-phishing-small-business-2026</guid>
-      <pubDate>Tue, 14 Jul 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>A phone call claiming to be your bank, the IRS, or your IT department is one of the oldest scams, and it still works. Why caller ID can't be trusted.</description>
     </item>
   </channel>
 </rss>
