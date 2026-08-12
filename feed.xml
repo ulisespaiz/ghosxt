@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from an engineer with DoD infrastructure experience.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Tue, 11 Aug 2026 19:28:53 +0000</lastBuildDate>
-    <pubDate>Tue, 11 Aug 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Wed, 12 Aug 2026 11:06:00 +0000</lastBuildDate>
+    <pubDate>Wed, 12 Aug 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>DNS Filtering for Small Business: The Cheapest Security Control You're Probably Not Using (2026)</title>
+      <link>https://ghosxt.com/blog/dns-filtering-small-business-2026</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/dns-filtering-small-business-2026</guid>
+      <pubDate>Wed, 12 Aug 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>DNS filtering blocks malicious and phishing sites before a browser ever loads them, for a few dollars per device a month. What it actually catches, what it doesn't, and how to turn it on without breaking anything.</description>
+    </item>
     <item>
       <title>Privileged Access Management for Small Business: Getting Admin Rights Under Control (2026)</title>
       <link>https://ghosxt.com/blog/privileged-access-management-small-business-2026</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>A phone call claiming to be your bank, the IRS, or your IT department is one of the oldest scams, and it still works. Why caller ID can't be trusted.</description>
-    </item>
-    <item>
-      <title>July 2026 Patch Tuesday: A Record 570 Fixes, 3 Zero-Days, and What an SMB Should Patch First</title>
-      <link>https://ghosxt.com/blog/july-2026-patch-tuesday-record-570-fixes-smb</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/july-2026-patch-tuesday-record-570-fixes-smb</guid>
-      <pubDate>Tue, 14 Jul 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>July 2026 Patch Tuesday: a record 570 fixes and 3 zero-days, including AD FS and SharePoint flaws. What a small business should patch first.</description>
     </item>
   </channel>
 </rss>
