@@ -1767,6 +1767,21 @@
   opacity: 0.85;
 }
 
+.service-card-link {
+  display: inline-block;
+  margin-top: auto;
+  padding: 0.25rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ghosxt-red-0);
+  text-decoration: none;
+}
+
+.service-card-link:hover,
+.service-card-link:focus-visible {
+  text-decoration: underline;
+}
+
 /* RESPONSIVE STYLES */
 
 
