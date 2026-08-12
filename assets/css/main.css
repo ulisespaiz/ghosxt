@@ -1394,34 +1394,54 @@ footer.unlocked {
 }
 
 @media (max-width: 640px) {
+  /* Compact single-row banner so the bottom chrome stays small: icon hidden,
+     message capped at two lines, Decline/Accept side by side and equal. */
   .cookie-banner {
-    padding: 1.25rem 16px;
+    padding: 0.5rem 12px;
   }
 
-  .cookie-content {
+  .cookie-banner-container {
+    flex-direction: row;
+    align-items: center;
     gap: 0.75rem;
   }
 
-  .cookie-icon {
-    width: 36px;
-    height: 36px;
+  .cookie-content {
+    gap: 0;
+    min-width: 0;
   }
 
-  .cookie-icon i {
-    font-size: 1.125rem;
+  .cookie-icon {
+    display: none;
   }
 
   .cookie-message {
-    font-size: 0.875rem;
+    font-size: 0.78rem;
+    line-height: 1.3;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 
   .cookie-link {
-    font-size: 0.8rem;
+    font-size: 0.72rem;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .cookie-actions {
+    width: auto;
+    flex-shrink: 0;
+    gap: 0.5rem;
   }
 
   .cookie-btn {
-    padding: 0.5rem 1rem;
-    font-size: 0.875rem;
+    padding: 0.45rem 0.75rem;
+    font-size: 0.8rem;
+    white-space: nowrap;
   }
 
   .cookie-btn-primary {
@@ -2300,11 +2320,14 @@ summary:focus-visible,
   html {
     scroll-padding-bottom: 88px;
   }
-  /* Keep the primary Call/Book CTAs above the cookie banner instead of
-     letting it cover them. Height is measured in JS (assets/js/main.js)
-     since the banner's rendered height varies with its wrapped text. */
-  .cookie-banner.visible ~ .mobile-cta-bar {
-    bottom: var(--cookie-banner-height, 140px);
+  /* The cookie banner sits ABOVE the CTA bar from first paint, so the bar
+     never moves when the banner slides in (this was the page's main mobile
+     layout-shift source). The bar keeps bottom: 0 permanently. */
+  .cookie-banner {
+    bottom: calc(61px + env(safe-area-inset-bottom));
+  }
+  body.no-mobile-cta-bar .cookie-banner {
+    bottom: 0;
   }
 }
 

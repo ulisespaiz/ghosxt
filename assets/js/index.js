@@ -770,7 +770,7 @@ function startConversation(scenario) {
 function showResetButton() {
     const chatOptions = document.getElementById('chatOptions');
     chatOptions.innerHTML = `
-        <button class="reset-btn" onclick="resetChat()">
+        <button class="reset-btn" data-chat-reset>
             <i class="fi fi-rs-rotate-right"></i>
             Try Another Option
         </button>
@@ -787,18 +787,34 @@ function resetChat() {
 
     // Show initial options again
     chatOptions.innerHTML = `
-        <button class="option-btn" onclick="startConversation(0)">
+        <button class="option-btn" data-scenario="0">
             <i class="fi fi-rs-error-bug"></i> Our website homepage is broken, we need to fix it ASAP
         </button>
-        <button class="option-btn" onclick="startConversation(1)">
+        <button class="option-btn" data-scenario="1">
             <i class="fi fi-rs-error-bug"></i> We got a suspicious email, might be a security breach
         </button>
-        <button class="option-btn" onclick="startConversation(2)">
+        <button class="option-btn" data-scenario="2">
             <i class="fi fi-rs-error-bug"></i> Our database server is down, losing money by the minute
         </button>
     `;
     chatOptions.style.display = 'flex';
 }
+
+// One delegated listener covers the static option buttons in the page markup
+// and every button the chat re-renders via innerHTML. Inline onclick handlers
+// are not allowed once CSP drops 'unsafe-inline' from script-src.
+document.addEventListener('DOMContentLoaded', function () {
+    const chatOptions = document.getElementById('chatOptions');
+    if (!chatOptions) return;
+    chatOptions.addEventListener('click', function (e) {
+        const option = e.target.closest('.option-btn[data-scenario]');
+        if (option) {
+            startConversation(Number(option.dataset.scenario));
+            return;
+        }
+        if (e.target.closest('[data-chat-reset]')) resetChat();
+    });
+});
 
 
 // Add this to your script.js file
@@ -824,7 +840,7 @@ function unlockRemainingSections() {
 function showResetButton() {
     const chatOptions = document.getElementById('chatOptions');
     chatOptions.innerHTML = `
-        <button class="reset-btn" onclick="resetChat()">
+        <button class="reset-btn" data-chat-reset>
             <i class="fi fi-rs-rotate-right"></i>
             Try Another Option
         </button>
