@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from an engineer with DoD infrastructure experience.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Thu, 13 Aug 2026 11:06:30 +0000</lastBuildDate>
-    <pubDate>Thu, 13 Aug 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Fri, 14 Aug 2026 11:08:24 +0000</lastBuildDate>
+    <pubDate>Fri, 14 Aug 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>Penetration Testing for Small Business: What It Tests, How Often, and What It Costs (2026)</title>
+      <link>https://ghosxt.com/blog/penetration-testing-small-business-2026</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/penetration-testing-small-business-2026</guid>
+      <pubDate>Fri, 14 Aug 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>A vulnerability scan finds what's known; a penetration test finds what's exploitable. What a pentest actually covers, realistic pricing, and how often PCI, CMMC, and cyber insurance require one.</description>
+    </item>
     <item>
       <title>What Is a vCIO? Virtual CIO Services for Small Business, Explained (2026)</title>
       <link>https://ghosxt.com/blog/vcio-virtual-cio-small-business-2026</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>Passkeys now work across Microsoft 365, Google Workspace, and banking apps, and can't be phished. What they are and a realistic rollout plan.</description>
-    </item>
-    <item>
-      <title>LegacyHive: Nightmare-Eclipse's New Windows Zero-Day, Explained</title>
-      <link>https://ghosxt.com/blog/nightmare-eclipse-legacyhive-windows-zero-day-smb-2026</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/nightmare-eclipse-legacyhive-windows-zero-day-smb-2026</guid>
-      <pubDate>Wed, 15 Jul 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>LegacyHive: Nightmare-Eclipse's new Windows privilege-escalation zero-day, unpatched with no CVE yet. What it does and what to do this week.</description>
     </item>
   </channel>
 </rss>
