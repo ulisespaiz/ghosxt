@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from an engineer with DoD infrastructure experience.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Mon, 17 Aug 2026 11:06:58 +0000</lastBuildDate>
-    <pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Tue, 18 Aug 2026 11:05:28 +0000</lastBuildDate>
+    <pubDate>Tue, 18 Aug 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>Fake Remote Employees: Deepfake Hiring Fraud and How to Spot It (2026)</title>
+      <link>https://ghosxt.com/blog/fake-remote-employee-deepfake-hiring-fraud-small-business-2026</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/fake-remote-employee-deepfake-hiring-fraud-small-business-2026</guid>
+      <pubDate>Tue, 18 Aug 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>Fraud rings are using deepfake video and stolen identities to get hired as remote IT and admin staff. How fake remote employee scams work, the red flags in a hiring process, and the access controls that limit the damage.</description>
+    </item>
     <item>
       <title>IT Asset Management for Small Business: Tracking the Devices You Don't Know You Have (2026)</title>
       <link>https://ghosxt.com/blog/it-asset-management-small-business-2026</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>Credential stuffing doesn't hack your business. It logs in with a password your employee reused elsewhere. How the attack works, and how to stop it.</description>
-    </item>
-    <item>
-      <title>Mobile Device Management (MDM) for Small Business: When You Actually Need It (2026)</title>
-      <link>https://ghosxt.com/blog/mobile-device-management-mdm-small-business-2026</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/mobile-device-management-mdm-small-business-2026</guid>
-      <pubDate>Thu, 16 Jul 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>BYOD policies cover personal phones, but company-owned devices and field teams often outgrow that. What MDM does, and how to roll it out.</description>
     </item>
   </channel>
 </rss>
