@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from an engineer with DoD infrastructure experience.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Tue, 18 Aug 2026 11:05:28 +0000</lastBuildDate>
-    <pubDate>Tue, 18 Aug 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Wed, 19 Aug 2026 11:07:02 +0000</lastBuildDate>
+    <pubDate>Wed, 19 Aug 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>Holiday Season Cybersecurity: The Small Business Prep Checklist (2026)</title>
+      <link>https://ghosxt.com/blog/holiday-season-cybersecurity-checklist-small-business-2026</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/holiday-season-cybersecurity-checklist-small-business-2026</guid>
+      <pubDate>Wed, 19 Aug 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>Cyberattacks on small businesses spike every November and December while support teams run thin. The security checklist to run before Black Friday hits, not during it.</description>
+    </item>
     <item>
       <title>Fake Remote Employees: Deepfake Hiring Fraud and How to Spot It (2026)</title>
       <link>https://ghosxt.com/blog/fake-remote-employee-deepfake-hiring-fraud-small-business-2026</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>SIM swapping hijacks your phone number to intercept SMS codes and reset passwords. How it works, the warning signs, and the fixes that stop it in 2026.</description>
-    </item>
-    <item>
-      <title>Credential Stuffing: How Reused Passwords Let Attackers Into Your Business Accounts (2026)</title>
-      <link>https://ghosxt.com/blog/credential-stuffing-small-business-2026</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/credential-stuffing-small-business-2026</guid>
-      <pubDate>Fri, 17 Jul 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>Credential stuffing doesn't hack your business. It logs in with a password your employee reused elsewhere. How the attack works, and how to stop it.</description>
     </item>
   </channel>
 </rss>
