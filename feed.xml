@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from an engineer with DoD infrastructure experience.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Wed, 19 Aug 2026 11:07:02 +0000</lastBuildDate>
-    <pubDate>Wed, 19 Aug 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Thu, 20 Aug 2026 11:07:02 +0000</lastBuildDate>
+    <pubDate>Thu, 20 Aug 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>IT Budget Planning for Small Business: A Realistic 2027 Tech Budget</title>
+      <link>https://ghosxt.com/blog/it-budget-planning-small-business-2027</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/it-budget-planning-small-business-2027</guid>
+      <pubDate>Thu, 20 Aug 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Managed IT</category>
+      <description>Most small business IT budgets are last year's number with a percentage tacked on. How to build a real 2027 tech budget from an asset inventory, and the line items owners forget.</description>
+    </item>
     <item>
       <title>Holiday Season Cybersecurity: The Small Business Prep Checklist (2026)</title>
       <link>https://ghosxt.com/blog/holiday-season-cybersecurity-checklist-small-business-2026</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>Typosquatting uses lookalike domains to impersonate your business or your vendors for phishing and invoice fraud. How it works and how to stop it in 2026.</description>
-    </item>
-    <item>
-      <title>SIM Swapping: How Attackers Hijack Your Phone Number to Get Into Business Accounts (2026)</title>
-      <link>https://ghosxt.com/blog/sim-swapping-phone-number-hijack-small-business-2026</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/sim-swapping-phone-number-hijack-small-business-2026</guid>
-      <pubDate>Sat, 18 Jul 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>SIM swapping hijacks your phone number to intercept SMS codes and reset passwords. How it works, the warning signs, and the fixes that stop it in 2026.</description>
     </item>
   </channel>
 </rss>
