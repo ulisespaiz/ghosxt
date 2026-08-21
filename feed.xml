@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from an engineer with DoD infrastructure experience.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Thu, 20 Aug 2026 11:07:02 +0000</lastBuildDate>
-    <pubDate>Thu, 20 Aug 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Fri, 21 Aug 2026 11:05:48 +0000</lastBuildDate>
+    <pubDate>Fri, 21 Aug 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>Multi-Factor Authentication for Small Business: Which Type to Use in 2026</title>
+      <link>https://ghosxt.com/blog/multi-factor-authentication-small-business-2026</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/multi-factor-authentication-small-business-2026</guid>
+      <pubDate>Fri, 21 Aug 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>SMS codes can be intercepted and push prompts can be worn down by fatigue attacks. Which type of MFA actually protects a small business, and how to roll it out.</description>
+    </item>
     <item>
       <title>IT Budget Planning for Small Business: A Realistic 2027 Tech Budget</title>
       <link>https://ghosxt.com/blog/it-budget-planning-small-business-2027</link>
@@ -17,7 +26,7 @@
       <pubDate>Thu, 20 Aug 2026 00:00:00 +0000</pubDate>
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Managed IT</category>
-      <description>Most small business IT budgets are last year's number with a percentage tacked on. How to build a real 2027 tech budget from an asset inventory, and the line items owners forget.</description>
+      <description>Most small business IT budgets are a guess carried over from last year. How to build a realistic 2027 tech budget: the line items owners forget, and where a vCIO fits.</description>
     </item>
     <item>
       <title>Holiday Season Cybersecurity: The Small Business Prep Checklist (2026)</title>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>Session hijacking steals the cookie that proves you're logged in, letting attackers skip MFA without a password. How it works and how to stop it.</description>
-    </item>
-    <item>
-      <title>Typosquatting: How Lookalike Domains Impersonate Your Business (2026)</title>
-      <link>https://ghosxt.com/blog/typosquatting-lookalike-domains-small-business-2026</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/typosquatting-lookalike-domains-small-business-2026</guid>
-      <pubDate>Sun, 19 Jul 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>Typosquatting uses lookalike domains to impersonate your business or your vendors for phishing and invoice fraud. How it works and how to stop it in 2026.</description>
     </item>
   </channel>
 </rss>
