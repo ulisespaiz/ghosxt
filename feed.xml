@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from an engineer with DoD infrastructure experience.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Fri, 21 Aug 2026 11:05:48 +0000</lastBuildDate>
-    <pubDate>Fri, 21 Aug 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Sat, 22 Aug 2026 11:05:01 +0000</lastBuildDate>
+    <pubDate>Sat, 22 Aug 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>RDP Security for Small Business: Closing Ransomware's Favorite Front Door</title>
+      <link>https://ghosxt.com/blog/rdp-security-small-business-2026</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/rdp-security-small-business-2026</guid>
+      <pubDate>Sat, 22 Aug 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>Exposed Remote Desktop Protocol is still the single most common way ransomware gets into a small business network. How RDP gets found, brute-forced, and how to lock it down.</description>
+    </item>
     <item>
       <title>Multi-Factor Authentication for Small Business: Which Type to Use in 2026</title>
       <link>https://ghosxt.com/blog/multi-factor-authentication-small-business-2026</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>Evil twin Wi-Fi hotspots copy a real network's name to intercept logins and files from remote and traveling employees. How the attack works and how to stop it.</description>
-    </item>
-    <item>
-      <title>Session Hijacking: How Stolen Cookies Let Attackers Skip Past MFA (2026)</title>
-      <link>https://ghosxt.com/blog/session-hijacking-cookie-theft-small-business-2026</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/session-hijacking-cookie-theft-small-business-2026</guid>
-      <pubDate>Mon, 20 Jul 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>Session hijacking steals the cookie that proves you're logged in, letting attackers skip MFA without a password. How it works and how to stop it.</description>
     </item>
   </channel>
 </rss>
