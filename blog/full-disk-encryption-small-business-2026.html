@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Full-Disk Encryption for Small Business: BitLocker and FileVault Rollout Guide (2026) | Ghosxt</title>
+    <meta name="description" content="A lost laptop with encryption on is a non-event. Without it, it's a breach notification. How to roll out BitLocker and FileVault across a small business fleet." />
+    <link rel="canonical" href="https://ghosxt.com/blog/full-disk-encryption-small-business-2026" />
+    <link rel="alternate" type="application/rss+xml" title="Ghosxt Blog" href="https://ghosxt.com/feed.xml" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://ghosxt.com/blog/full-disk-encryption-small-business-2026" />
+    <meta property="og:title" content="Full-Disk Encryption for Small Business: BitLocker and FileVault Rollout Guide (2026)" />
+    <meta property="og:description" content="A lost laptop with encryption on is a non-event. Without it, it's a breach notification. How to roll out BitLocker and FileVault across a small business fleet." />
+    <meta property="og:image" content="https://ghosxt.com/assets/img/og/blog-full-disk-encryption-small-business-2026.png" />
+    <meta property="og:site_name" content="Ghosxt" />
+    <meta property="article:published_time" content="2026-08-23" />
+    <meta property="article:author" content="Ulises Paiz" />
+    <meta name="robots" content="index, follow" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Full-Disk Encryption for Small Business: BitLocker and FileVault Rollout Guide (2026)" />
+    <meta name="twitter:description" content="A lost laptop with encryption on is a non-event. Without it, it's a breach notification. How to roll out BitLocker and FileVault across a fleet." />
+    <meta name="twitter:image" content="https://ghosxt.com/assets/img/og/blog-full-disk-encryption-small-business-2026.png" />
+    <link rel="icon" href="../assets/img/favicon.ico" sizes="any" />
+    <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- ghosxt:roboto-preload -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" />
+    <link rel="preconnect" href="https://cdn-uicons.flaticon.com" />
+    <link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" /></noscript>
+    <link rel="stylesheet" href="../assets/css/main.min.css?v=2026-07-02a" />
+    <link rel="stylesheet" href="../assets/css/blog.min.css?v=2026-07-03a" />
+    <link rel="stylesheet" media="print" onload="this.media='all'" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" />
+    <noscript><link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" /></noscript>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "BlogPosting",
+            "mainEntityOfPage": { "@type": "WebPage", "@id": "https://ghosxt.com/blog/full-disk-encryption-small-business-2026" },
+            "headline": "Full-Disk Encryption for Small Business: The BitLocker and FileVault Rollout Guide",
+            "description": "A lost laptop with encryption on is a non-event. Without it, it's a breach notification. How to roll out BitLocker and FileVault across a small business fleet.",
+            "image": "https://ghosxt.com/assets/img/og/blog-full-disk-encryption-small-business-2026.png",
+            "author": { "@type": "Person", "name": "Ulises Paiz", "url": "https://ghosxt.com/about" },
+            "publisher": { "@type": "Organization", "name": "Ghosxt", "logo": { "@type": "ImageObject", "url": "https://ghosxt.com/assets/img/ghosxt-logo-160.webp" } },
+            "datePublished": "2026-08-23",
+            "dateModified": "2026-08-23",
+            "articleSection": "Cybersecurity",
+            "keywords": "full disk encryption small business, bitlocker small business, filevault small business, encrypt company laptops, laptop encryption 2026, bitlocker recovery key, lost laptop data breach, cyber insurance encryption requirement"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ghosxt.com/" },
+              { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://ghosxt.com/blog/" },
+              { "@type": "ListItem", "position": 3, "name": "Full-Disk Encryption for Small Business", "item": "https://ghosxt.com/blog/full-disk-encryption-small-business-2026" }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Does Windows Home come with BitLocker?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. BitLocker requires Windows 10/11 Pro, Enterprise, or Education. Windows Home ships with a more limited feature called Device Encryption, which only activates automatically on certain modern hardware and ties recovery to a personal Microsoft account rather than a business-managed one, which is a poor fit for a company fleet."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What happens if an employee forgets their BitLocker or FileVault password?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "As long as the recovery key was escrowed somewhere the business controls, such as Microsoft Entra ID, Intune, or Jamf, an admin can look it up and unlock the drive without any data loss. This is exactly why escrowing recovery keys before rollout matters; without it, a forgotten password can mean the data on that drive is gone for good."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does encrypting a laptop slow it down?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "On any machine built in the last several years, no. Both BitLocker and FileVault use hardware-accelerated AES encryption built into modern CPUs, and the performance difference is not noticeable in day-to-day use. The exception is old hardware without that acceleration, which is one more reason overdue replacements should get folded into the rollout instead of encrypted as-is."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+    <!-- ghosxt:cf-web-analytics -->
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"f3ce7e0e17f54050845d52d7f355cd98"}'></script>
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top"><i class="fi fi-rs-angle-up" aria-hidden="true"></i></button>
+    <div class="cookie-banner" id="cookieBanner"><div class="cookie-banner-container"><div class="cookie-content"><div class="cookie-icon"><i class="fi fi-rs-cookie"></i></div><div class="cookie-text"><p class="cookie-message">We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.</p><a href="/privacy-policy" class="cookie-link">Learn more about our Privacy Policy</a></div></div><div class="cookie-actions"><button class="cookie-btn cookie-btn-secondary" id="cookieDecline">Decline</button><button class="cookie-btn cookie-btn-primary" id="cookieAccept">Accept All</button></div></div></div>
+    <nav class="navbar" aria-label="Main navigation">
+      <div class="navbar-container">
+        <div class="navbar-left"><a href="/" class="navbar-logo"><img fetchpriority="high" loading="eager" src="../assets/img/ghosxt-logo-160.webp" alt="Ghosxt logo" width="48" height="48" /><span>GHOSXT</span></a></div>
+        <div class="navbar-right">
+          <div class="navbar-menu">
+            <a href="/" class="navbar-link">Home</a>
+            <div class="navbar-dropdown"><a href="/about" class="navbar-link dropdown-trigger">About <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></a><div class="dropdown-menu"><a href="/about" class="dropdown-item">About Ghosxt</a><a href="/ghosxt-cares" class="dropdown-item">Ghosxt Cares</a></div></div>
+            <div class="navbar-dropdown"><a href="/services" class="navbar-link dropdown-trigger">Services <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></a><div class="dropdown-menu"><a href="/services" class="dropdown-item">All Services</a>
+                <a href="/managed-it-services" class="dropdown-item">Managed IT Services</a>
+                <a href="/help-desk-it-support" class="dropdown-item">IT Help Desk &amp; Support</a>
+                <a href="/it-consulting-vcio" class="dropdown-item">IT Consulting &amp; vCIO</a>
+                <a href="/cybersecurity" class="dropdown-item">Cybersecurity</a>
+                <a href="/cloud-services" class="dropdown-item">Cloud Services</a>
+                <a href="/backup-disaster-recovery" class="dropdown-item">Backup &amp; Disaster Recovery</a>
+                <a href="/network-design" class="dropdown-item">Network Design</a>
+                <a href="/website-development" class="dropdown-item">Web Development</a>
+                <a href="/website-development#calculator" class="dropdown-item">Website Pricing</a>
+                <a href="/ctpat" class="dropdown-item">C-TPAT Compliance</a></div></div>
+            <a href="/pricing" class="navbar-link">Pricing</a>
+            <a href="/support" class="navbar-link">Support</a>
+            <a href="/blog/" class="navbar-link">Blog</a>
+            <a href="/contact" class="navbar-link">Contact</a>
+          </div>
+          <button class="navbar-mobile-toggle" id="mobileToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu"><i class="fi fi-rs-burger-menu" aria-hidden="true"></i></button>
+          <div class="navbar-buttons"><a class="navbar-btn navbar-phone" href="tel:+18312040501" aria-label="Call Ghosxt at (831) 204-0501"><i class="fi fi-rs-phone-call" aria-hidden="true"></i><span>(831)&nbsp;204-0501</span></a><a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer" class="navbar-btn btn-demo"><i class="fi fi-rs-calendar-day"></i><span>Book a Call</span></a></div>
+        </div>
+      </div>
+      <div class="navbar-overlay" id="navbarOverlay"></div>
+      <div class="navbar-mobile-menu" id="mobileMenu">
+        <a href="/" class="mobile-link">Home</a>
+        <div class="mobile-accordion"><button class="mobile-accordion-trigger" aria-expanded="false">About <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></button><div class="mobile-accordion-content"><a href="/about" class="mobile-dropdown-item">About Ghosxt</a><a href="/ghosxt-cares" class="mobile-dropdown-item">Ghosxt Cares</a></div></div>
+        <div class="mobile-accordion"><button class="mobile-accordion-trigger" aria-expanded="false">Services <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></button><div class="mobile-accordion-content"><a href="/services" class="mobile-dropdown-item">All Services</a>
+            <a href="/managed-it-services" class="mobile-dropdown-item">Managed IT Services</a>
+            <a href="/help-desk-it-support" class="mobile-dropdown-item">IT Help Desk &amp; Support</a>
+            <a href="/it-consulting-vcio" class="mobile-dropdown-item">IT Consulting &amp; vCIO</a>
+            <a href="/cybersecurity" class="mobile-dropdown-item">Cybersecurity</a>
+            <a href="/cloud-services" class="mobile-dropdown-item">Cloud Services</a>
+            <a href="/backup-disaster-recovery" class="mobile-dropdown-item">Backup &amp; Disaster Recovery</a>
+            <a href="/network-design" class="mobile-dropdown-item">Network Design</a>
+            <a href="/website-development" class="mobile-dropdown-item">Web Development</a>
+            <a href="/website-development#calculator" class="mobile-dropdown-item">Website Pricing</a>
+            <a href="/ctpat" class="mobile-dropdown-item">C-TPAT Compliance</a></div></div>
+        <a href="/pricing" class="mobile-link">Pricing</a>
+        <a href="/support" class="mobile-link">Support</a>
+        <a href="/blog/" class="mobile-link">Blog</a>
+        <a href="/contact" class="mobile-link">Contact</a>
+        <div class="mobile-actions"><a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer" class="mobile-btn btn-demo"><i class="fi fi-rs-calendar-day"></i><span>Book a Call</span></a></div>
+      </div>
+    </nav>
+    <main id="main-content" class="blog-post">
+      <header class="blog-post-header">
+        <div class="container">
+          <nav class="blog-post-breadcrumbs" aria-label="Breadcrumb">
+            <a href="/">Home</a><span class="sep">&rsaquo;</span><a href="/blog/">Blog</a><span class="sep">&rsaquo;</span><span aria-current="page">Full-Disk Encryption for Small Business</span>
+          </nav>
+          <div class="blog-post-meta">
+            <time datetime="2026-08-23">August 23, 2026</time>
+            <span>&middot;</span>
+            <span>4 min read</span>
+            <span>&middot;</span>
+            <span class="blog-card-tag">Cybersecurity</span>
+          </div>
+          <h1>Full-Disk Encryption for Small Business: The BitLocker and FileVault Rollout Guide</h1>
+          <div class="blog-post-author">
+            <strong>Ulises Paiz</strong>, Founder, Ghosxt
+          </div>
+          <div class="author-bio-box">
+            <!-- ghosxt:author-bio -->
+            <img src="../assets/img/ulises.avif" alt="Ulises Paiz" width="56" height="56" loading="lazy" />
+            <p>Ulises Paiz, Founder of Ghosxt, has 10+ years in IT infrastructure and cybersecurity, deep DoD infrastructure experience, and 9 certifications including CySA+, Security+, and AZ-104. Before founding Ghosxt, he served as a Senior Solutions Consultant for the DoD and built security programs for 40+ Central Coast businesses. <a href="/about">More about Ulises &rarr;</a></p>
+          </div>
+        </div>
+      </header>
+      <div class="blog-post-body">
+        <div class="container">
+          <aside class="blog-post-quickfix" aria-label="Summary and what to do today">
+            <span class="quickfix-label">TL;DR: one setting turns a lost laptop into a non-event</span>
+            <h2>A laptop left in a car, a coffee shop, or a rideshare is one of the most common ways small business data goes missing. Without full-disk encryption, whoever finds it can pull the drive and read every file on it. With it turned on, the data is unreadable without the key. It's a free setting most fleets still don't have on everywhere.</h2>
+            <ul>
+              <li><strong>Windows needs Pro or Enterprise, not Home.</strong> BitLocker isn't available on Windows Home, and a lot of small business laptops still ship with it.</li>
+              <li><strong>Escrow the recovery key before you enable anything.</strong> Skip this step and a forgotten password becomes permanent data loss instead of a five-minute admin lookup.</li>
+              <li><strong>Insurers are starting to ask.</strong> Encryption is showing up as a checkbox on cyber insurance applications and renewals, and "no" can mean a higher premium or a declined policy.</li>
+            </ul>
+            <p>This pairs well with our <a href="/blog/mobile-device-management-mdm-small-business-2026">MDM post</a> (the management layer that makes recovery-key escrow possible) and our <a href="/blog/cyber-insurance-renewal-checklist-small-business-central-coast">cyber insurance renewal checklist</a> (where encryption now shows up as a line item).</p>
+          </aside>
+
+          <p>Most of the cybersecurity conversation with small business owners is about stopping someone from breaking in remotely: phishing, MFA, patching. Full-disk encryption solves a quieter, more physical problem: what happens when a device with company data on it simply leaves the building without permission, whether that's theft, a lost bag, or a laptop that gets sold or recycled without being wiped first. It's one of the few controls that's already built into every modern operating system, costs nothing extra, and takes minutes to turn on, yet it's still missing on a large share of small business fleets.</p>
+
+          <h2>What full-disk encryption actually protects against</h2>
+
+          <p>Full-disk encryption scrambles everything on a drive so it's unreadable without the correct key, which is normally unlocked automatically by a logged-in, authorized user and invisible day to day. The scenario it defends against is specific: someone with physical possession of the device trying to read the data directly, by pulling the drive and connecting it to another machine, which completely bypasses a Windows or Mac login password. A login password stops a casual snoop; it does nothing against someone who removes the drive. Encryption is the control that closes that gap, and it's exactly the scenario behind a lost laptop, a stolen delivery vehicle with a mounted tablet, or old hardware that gets donated or resold with data still on it.</p>
+
+          <h2>BitLocker, FileVault, and the edition trap</h2>
+
+          <p>Windows has shipped BitLocker for over a decade, and every current Mac ships with FileVault, so for most businesses this isn't a purchase, it's a setting. The catch on the Windows side is licensing: BitLocker requires Windows 10 or 11 Pro, Enterprise, or Education. Windows Home only gets the lighter Device Encryption feature, which activates automatically on limited hardware and ties recovery to a personal Microsoft account rather than one the business controls. A fair number of small business laptops, especially ones bought retail instead of through a business channel, are quietly running Home edition with no real encryption option at all, which is worth auditing before assuming the fleet is covered.</p>
+
+          <h2>The step that actually matters: escrowing the key</h2>
+
+          <p>Turning encryption on is the easy part. The step that prevents it from becoming a support disaster is escrowing the recovery key somewhere the business controls before rollout, not after the first forgotten password. For Windows fleets, that means Microsoft Entra ID or Intune; for Macs, Apple Business Manager or a tool like Jamf. Done this way, a forgotten password or a failed login after a hardware repair is a five-minute admin lookup. Skipped, it's a permanently locked drive with no way back in, which is the one scenario that turns encryption from a safety net into a liability. Roll it out in a batch, confirm every key escrowed successfully, and only then push it fleet-wide.</p>
+
+          <h2>Where this fits</h2>
+
+          <ul>
+            <li>The <a href="/blog/mobile-device-management-mdm-small-business-2026">MDM post</a>, for the management layer that makes key escrow and enforcement possible across a fleet.</li>
+            <li>The <a href="/blog/byod-policy-small-business-2026">BYOD policy post</a>, for the personal-device side of the same physical-loss risk.</li>
+            <li>The <a href="/blog/cyber-insurance-renewal-checklist-small-business-central-coast">cyber insurance renewal checklist</a>, for where encryption now shows up on carrier applications.</li>
+            <li>The <a href="/blog/california-data-breach-notification-law-small-business-2026">California data breach notification law post</a>, for why encrypted data can change whether a lost device is even a reportable incident.</li>
+            <li>The <a href="/blog/remote-work-security-business-travel-small-business-2026">remote work and travel security post</a>, for the broader checklist a device leaving the office should meet.</li>
+          </ul>
+
+          <p>We roll this out for clients across <a href="/salinas">Salinas</a>, <a href="/monterey">Monterey</a>, <a href="/santa-cruz">Santa Cruz</a>, <a href="/watsonville">Watsonville</a>, and <a href="/san-jose">San Jose</a>, as a standard part of onboarding every managed device.</p>
+
+          <h2>FAQs about full-disk encryption for small business</h2>
+
+          <h3>Does Windows Home come with BitLocker?</h3>
+          <p>No. BitLocker requires Windows 10/11 Pro, Enterprise, or Education. Windows Home ships with a more limited feature called Device Encryption, which only activates automatically on certain modern hardware and ties recovery to a personal Microsoft account rather than a business-managed one, which is a poor fit for a company fleet.</p>
+
+          <h3>What happens if an employee forgets their BitLocker or FileVault password?</h3>
+          <p>As long as the recovery key was escrowed somewhere the business controls, such as Microsoft Entra ID, Intune, or Jamf, an admin can look it up and unlock the drive without any data loss. This is exactly why escrowing recovery keys before rollout matters; without it, a forgotten password can mean the data on that drive is gone for good.</p>
+
+          <h3>Does encrypting a laptop slow it down?</h3>
+          <p>On any machine built in the last several years, no. Both BitLocker and FileVault use hardware-accelerated AES encryption built into modern CPUs, and the performance difference is not noticeable in day-to-day use. The exception is old hardware without that acceleration, which is one more reason overdue replacements should get folded into the rollout instead of encrypted as-is.</p>
+
+          <div class="blog-post-cta">
+            <h3>Not sure which laptops in your fleet are actually encrypted?</h3>
+            <p>30 minutes with an engineer with DoD infrastructure experience. We'll audit which devices are covered, which are on the wrong Windows edition to even support it, and hand you a rollout plan for the rest.</p>
+            <a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer">
+              <i class="fi fi-rs-calendar-day" aria-hidden="true"></i>
+              Book your free encryption review
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer" id="footerSection">
+      <div class="footer-container">
+        <div class="footer-brand-row">
+          <div class="footer-brand">
+            <img
+              src="../assets/img/ghosxt-logo-160.webp"
+              alt="Ghosxt logo"
+              width="80"
+              height="80"
+              loading="lazy"
+            />
+            <div class="footer-brand-text">
+              <span class="footer-brand-name">GHOSXT</span>
+              <span class="footer-brand-tagline"
+                >Government-grade IT for small business.</span
+              >
+            </div>
+          </div>
+          <div class="footer-cta-block">
+            <a
+              href="https://calendly.com/ulises-ghosxt"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="footer-cta-btn"
+            >
+              <i class="fi fi-rs-calendar-day" aria-hidden="true"></i>
+              Schedule Free Assessment
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-grid">
+          <div class="footer-column">
+            <h3 class="footer-column-title">Company</h3>
+            <ul class="footer-links">
+              <li><a href="/">Home</a></li>
+              <li><a href="/about">About</a></li>
+              <li><a href="/services">Services</a></li>
+              <li><a href="/pricing">Pricing</a></li>
+              <li>
+                <a href="/website-development">Website Development</a>
+              </li>
+              <li><a href="/contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-column-title">Services</h3>
+            <ul class="footer-links">
+              <li><a href="/managed-it-services">Managed IT Services</a></li>
+              <li><a href="/help-desk-it-support">IT Help Desk &amp; Support</a></li>
+              <li><a href="/it-consulting-vcio">IT Consulting &amp; vCIO</a></li>
+              <li><a href="/cybersecurity">Cybersecurity</a></li>
+              <li><a href="/cloud-services">Cloud Services</a></li>
+              <li><a href="/backup-disaster-recovery">Backup &amp; Disaster Recovery</a></li>
+              <li><a href="/network-design">Network Design</a></li>
+              <li><a href="/website-development">Web Development</a></li>
+              <li><a href="/ctpat">C-TPAT Compliance</a></li>
+              <li><a href="/trucking-it-services">Trucking &amp; Logistics IT</a></li>
+              <li><a href="/agriculture-it-services">Agriculture &amp; Agribusiness IT</a></li>
+              <li><a href="/manufacturing-it-services">Manufacturing &amp; Industrial IT</a></li>
+              <li><a href="/professional-services-it">SMB Office &amp; Professional Services IT</a></li>
+              <li><a href="/healthcare-it-services">Healthcare &amp; Medical IT</a></li>
+              <li><a href="/property-management-it-services">Property Management IT</a></li>
+              <li><a href="/engineering-it-services">Engineering &amp; Architecture IT</a></li>
+              <li><a href="/hospitality-it-services">Hospitality &amp; Restaurants IT</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-column-title">Resources</h3>
+            <ul class="footer-links">
+              <li><a href="/support">Get Support</a></li>
+              <li><a href="/privacy-policy">Privacy Policy</a></li>
+              <li>
+                <a
+                  href="https://ticket.ghosxt.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Client Portal</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://calendly.com/ulises-ghosxt"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Free IT Assessment</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-column-title">Connect</h3>
+            <ul class="footer-links footer-social-links">
+              <li>
+                <a
+                  href="https://www.linkedin.com/company/ghosxt/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.063 2.063 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                  LinkedIn</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.facebook.com/GhosxtTech"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg>
+                  Facebook</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/ghosxttech/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+                  Instagram</a
+                >
+              </li>
+              <li>
+                <a href="mailto:sales@ghosxt.com"
+                  ><i class="fi fi-rs-envelope" aria-hidden="true"></i>
+                  sales@ghosxt.com</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <div class="footer-bottom">
+          <p class="footer-copyright">
+            &copy; 2026 Ghosxt. All rights reserved. Built by an engineer from the federal contracting world.
+          </p>
+          <div class="footer-bottom-links">
+            <a href="/privacy-policy">Privacy Policy</a>
+            <span aria-hidden="true">&middot;</span>
+            <a href="/support">Support</a>
+            <span aria-hidden="true">&middot;</span>
+            <a
+              href="https://ticket.ghosxt.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Client Portal</a
+            >
+          </div>
+        </div>
+
+        <div class="service-areas-footer">
+          <h3>Service Areas</h3>
+          <ul>
+            <li><a href="/salinas">Salinas</a></li>
+            <li><a href="/monterey">Monterey</a></li>
+            <li><a href="/watsonville">Watsonville</a></li>
+            <li><a href="/hollister">Hollister</a></li>
+            <li><a href="/santa-cruz">Santa Cruz</a></li>
+            <li><a href="/gilroy">Gilroy</a></li>
+            <li><a href="/san-jose">San Jose</a></li>
+            <li><a href="/pacific-grove">Pacific Grove</a></li>
+            <li><a href="/carmel">Carmel</a></li>
+            <li><a href="/seaside">Seaside</a></li>
+            <li><a href="/marina">Marina</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="../assets/js/main.min.js?v=2026-07-02a" defer></script>
+    <!-- ghosxt:mobile-cta-bar -->
+    <div class="mobile-cta-bar" aria-label="Quick contact">
+      <a class="mcta-primary" href="tel:+18312040501">Call (831) 204-0501</a>
+      <a class="mcta-secondary" href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer">Book free assessment</a>
+    </div>
+  </body>
+</html>
