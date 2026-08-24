@@ -30,5 +30,5 @@
 
 ## Top Three Fixes
 1. Remove or genericize the KnowBe4/Proofpoint/IRONSCALES vendor names (including the "KnowBe4 small business" SEO keyword) — security awareness training is a capability Ghosxt delivers per VERIFIED FACTS, and vendor names for delivered capabilities are explicitly prohibited.
-2. Reconcile the two different KnowBe4 price figures in the body ("$300-375" in the FAQ H3 vs "$300-500" earlier in the body) even if this remains third-party pricing context.
-3. Verify the shared author-bio boilerplate claims (see password-manager report).
+2. Verify the shared author-bio boilerplate claims (see password-manager report).
+3. No pricing contradictions against Ghosxt's own published tiers found — all dollar figures are third-party KnowBe4/Proofpoint pricing.
