@@ -26,6 +26,10 @@
 /blog/best-it-support-small-businesses-salinas-ca.html   /blog/best-it-support-in-salinas   301
 /blog/best-it-support-small-businesses-salinas-ca         /blog/best-it-support-in-salinas   301
 
+# Renamed HIPAA blog post: retargeted to medical-only, dropped "dental" from the slug
+/blog/hipaa-compliant-it-medical-dental-monterey-county.html   /blog/hipaa-compliant-it-medical-monterey-county   301
+/blog/hipaa-compliant-it-medical-dental-monterey-county         /blog/hipaa-compliant-it-medical-monterey-county   301
+
 # Extensionless URL normalization (spec P0-1/P0-2): homepage and blog-index
 # special cases must come before the generic placeholder rules below, since
 # both would otherwise also match "/index.html" / "/blog/index.html" and send

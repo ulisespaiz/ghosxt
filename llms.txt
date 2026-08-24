@@ -85,7 +85,7 @@ IT support & help desk, by city: [Morgan Hill](https://ghosxt.com/it-help-morgan
 - [Common small-business cybersecurity mistakes](https://ghosxt.com/blog/small-business-cybersecurity-mistakes)
 - [How ransomware actually gets in (2026)](https://ghosxt.com/blog/ransomware-2026-how-it-gets-in)
 - [Identity hardening for a small Microsoft 365 team](https://ghosxt.com/blog/identity-hardening-small-business-5-employees-microsoft-365)
-- [HIPAA-compliant IT for medical and dental practices](https://ghosxt.com/blog/hipaa-compliant-it-medical-dental-monterey-county)
+- [HIPAA-compliant IT for medical practices](https://ghosxt.com/blog/hipaa-compliant-it-medical-monterey-county)
 - [Switching IT providers: a Salinas/Monterey checklist](https://ghosxt.com/blog/switching-it-providers-salinas-monterey-checklist)
 - [What a small business website costs (2026, real numbers)](https://ghosxt.com/blog/small-business-website-cost-2026)
 - [9 signs your website is costing you customers](https://ghosxt.com/blog/website-redesign-signs-small-business-2026)
