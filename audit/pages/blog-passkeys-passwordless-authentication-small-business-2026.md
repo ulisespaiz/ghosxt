@@ -6,10 +6,10 @@
 ## Claims Table
 | Claim | Value | Location | Status |
 |-------|-------|----------|--------|
-| Author bio: shared blurb | — | line 178 | Cert count MATCHES VERIFIED FACTS; "10+ years," job title, "40+ businesses" UNVERIFIABLE (see group-wide note) |
-| "engineer with DoD infrastructure experience" (CTA) | — | line 255 | MATCHES VERIFIED FACTS |
-| No clearance level stated | — | whole page | MATCHES house rule |
-| "typically runs a few days of focused work for a managed IT provider" (rollout cost) | scoping estimate | lines 94 (FAQ), 237 | Generic estimate, not a specific Ghosxt price — does not contradict published pricing table |
+| Author bio: shared blurb | - | line 178 | Cert count MATCHES VERIFIED FACTS; "10+ years," job title, "40+ businesses" UNVERIFIABLE (see group-wide note) |
+| "engineer with DoD infrastructure experience" (CTA) | - | line 255 | MATCHES VERIFIED FACTS |
+| No clearance level stated | - | whole page | MATCHES house rule |
+| "typically runs a few days of focused work for a managed IT provider" (rollout cost) | scoping estimate | lines 94 (FAQ), 237 | Generic estimate, not a specific Ghosxt price - does not contradict published pricing table |
 | "a number of carriers now ask specifically about phishing-resistant authentication on renewal questionnaires" | industry-general claim | line 208 | Generic/educational, out of scope for VERIFIED FACTS |
 
 ## Legibility Checklist

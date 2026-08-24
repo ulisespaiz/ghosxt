@@ -6,9 +6,9 @@
 ## Claims Table
 | Claim | Value | Location | Status |
 |-------|-------|----------|--------|
-| MFA / patch automation cost | "$0" (free, no dollar cost) | body, lines ~225, 228 | MATCHES — these are genuinely free configuration steps (turning on existing MFA/auto-update settings), not a Ghosxt service price |
-| Author bio boilerplate | — | author-bio-box, line ~189 | 9-certs claim MATCHES; other claims UNVERIFIABLE |
-| No other pricing claims | — | — | N/A |
+| MFA / patch automation cost | "$0" (free, no dollar cost) | body, lines ~225, 228 | MATCHES - these are genuinely free configuration steps (turning on existing MFA/auto-update settings), not a Ghosxt service price |
+| Author bio boilerplate | - | author-bio-box, line ~189 | 9-certs claim MATCHES; other claims UNVERIFIABLE |
+| No other pricing claims | - | - | N/A |
 
 ## Legibility Checklist
 | Item | Pass/Fail | Notes |
@@ -24,9 +24,9 @@
 ## House-Rule Violations
 | Violation | Location |
 |-----------|----------|
-| None found | — |
+| None found | - |
 
 ## Top Three Fixes
 1. Verify the shared author-bio boilerplate claims (see password-manager report).
 2. No other fixes needed; page is clean.
-3. —
+3. -

@@ -21,15 +21,15 @@ No article-specific prices, review counts, or capability claims about Ghosxt in 
 | BlogPosting JSON-LD: datePublished, dateModified, author as Person | Pass | |
 | Exactly one H1 | Pass | |
 | Title, meta description, canonical present | Pass | |
-| FAQ JSON-LD matches visible text | Pass | No visible FAQ H2/H3 section in body — FAQPage JSON-LD (3 Q&As) has no corresponding visible text on the page |
+| FAQ JSON-LD matches visible text | Pass | No visible FAQ H2/H3 section in body - FAQPage JSON-LD (3 Q&As) has no corresponding visible text on the page |
 | Internal links to relevant service pages | Fail/Weak | No links to /cybersecurity or any other Ghosxt service page; only nav/footer links |
 
 ## House-Rule Violations
 | Violation | Location |
 |-----------|----------|
-| None found | — |
+| None found | - |
 
 ## Top Three Fixes
-1. FAQPage JSON-LD has no matching visible FAQ content on the page — either add a visible FAQ section (as other posts have) or remove the schema to avoid a structured-data/content mismatch.
+1. FAQPage JSON-LD has no matching visible FAQ content on the page - either add a visible FAQ section (as other posts have) or remove the schema to avoid a structured-data/content mismatch.
 2. Add at least one in-body internal link to /cybersecurity (this post has no service-page link, unlike sibling posts).
 3. Verify shared bio-box claims (see vcio report) since the block is reused verbatim across posts.

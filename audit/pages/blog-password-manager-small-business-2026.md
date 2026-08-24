@@ -29,9 +29,9 @@
 ## House-Rule Violations
 | Violation | Location |
 |-----------|----------|
-| None found (no em dash, no Cisco cert claim, no dental, no security-stack vendor names, no clearance level, no SIEM claim, no pricing contradiction) | — |
+| None found (no em dash, no Cisco cert claim, no dental, no security-stack vendor names, no clearance level, no SIEM claim, no pricing contradiction) | - |
 
 ## Top Three Fixes
-1. Verify or source the "40+ Central Coast businesses" and "Senior Solutions Consultant for the DoD" claims in the shared author-bio boilerplate (appears on every post) — tag [VERIFY] or remove if not sourced from VERIFIED FACTS.
+1. Verify or source the "40+ Central Coast businesses" and "Senior Solutions Consultant for the DoD" claims in the shared author-bio boilerplate (appears on every post) - tag [VERIFY] or remove if not sourced from VERIFIED FACTS.
 2. Verify "10+ years in IT infrastructure and cybersecurity" against actual career history.
 3. No other fixes needed; page is otherwise clean.

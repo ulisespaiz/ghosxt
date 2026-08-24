@@ -7,13 +7,13 @@
 | Claim | Value | Location | Status |
 |-------|-------|----------|--------|
 | Microsoft 365 Business Premium | ~$22/user/mo, both in office-IT section (line 343) and budget table (10 users x $22 = $220, line 372) | body | UNVERIFIABLE (Microsoft's own retail licensing cost, not Ghosxt's; plausible market rate) |
-| "MDR / managed security" | 10 users x $25 = $250/mo | body budget table, line 373 | CONTRADICTS — presented as part of Ghosxt's own recommended budget (references "the full program lives on the managed IT services page"); VERIFIED FACTS' published pricing bundles MDR into the per-user tiers, no separate $25/user MDR line exists |
-| "Managed IT (help desk, patching, backup, identity hardening)" | 10 users x $150-$200 = $1,500-$2,000/mo | body budget table, line 374 | CONTRADICTS — $150-$200/user/month matches none of the published tiers (Core $125, Secure Growth $175, Compliance & Continuity $250 per user/month); capabilities named are exactly VERIFIED FACTS' bundled capabilities, so this reads as Ghosxt's own price |
+| "MDR / managed security" | 10 users x $25 = $250/mo | body budget table, line 373 | CONTRADICTS - presented as part of Ghosxt's own recommended budget (references "the full program lives on the managed IT services page"); VERIFIED FACTS' published pricing bundles MDR into the per-user tiers, no separate $25/user MDR line exists |
+| "Managed IT (help desk, patching, backup, identity hardening)" | 10 users x $150-$200 = $1,500-$2,000/mo | body budget table, line 374 | CONTRADICTS - $150-$200/user/month matches none of the published tiers (Core $125, Secure Growth $175, Compliance & Continuity $250 per user/month); capabilities named are exactly VERIFIED FACTS' bundled capabilities, so this reads as Ghosxt's own price |
 | "VoIP for the leasing lines" | 10 users x $25 = $250/mo | body budget table, line 375 | UNVERIFIABLE (plausible separate line item, not addressed in VERIFIED FACTS pricing, which covers the core MSP tiers only) |
 | Total monthly IT spend | $3,000-$4,500/mo for 10 office users | body, line 381 | CONTRADICTS (downstream of the MDR + Managed IT line items above) |
 | Office internet/failover, managed firewalls, independent backup | $400-$700 / $300-$500 / $100-$200 | body, lines 376-378 | UNVERIFIABLE (generic infrastructure cost ranges) |
-| Author bio boilerplate | — | author-bio-box, line ~188 | 9-certs claim MATCHES; other claims UNVERIFIABLE |
-| "dental" grep hits (lines 209, 302) | false positive | — | Not a violation — substring is inside "accidental" ("accidental deletion"), not a dentist/dental client mention |
+| Author bio boilerplate | - | author-bio-box, line ~188 | 9-certs claim MATCHES; other claims UNVERIFIABLE |
+| "dental" grep hits (lines 209, 302) | false positive | - | Not a violation - substring is inside "accidental" ("accidental deletion"), not a dentist/dental client mention |
 
 ## Legibility Checklist
 | Item | Pass/Fail | Notes |

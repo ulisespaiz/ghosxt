@@ -27,9 +27,9 @@
 | Violation | Location |
 |-----------|----------|
 | Author-bio numbers not traceable to VERIFIED FACTS | author-bio-box |
-| None else found (no em dash, no Cisco, no dental, no vendor name, no clearance level, no SIEM, no price contradiction) | — |
+| None else found (no em dash, no Cisco, no dental, no vendor name, no clearance level, no SIEM, no price contradiction) | - |
 
 ## Top Three Fixes
-1. Verify or soften the shared author-bio's unverified specifics (10+ years, DoD title, 40+ businesses) — repeats across nearly every post in this batch.
+1. Verify or soften the shared author-bio's unverified specifics (10+ years, DoD title, 40+ businesses) - repeats across nearly every post in this batch.
 2. Consider adding a direct link to /managed-it-services or /pricing in the body, not just to sibling posts.
 3. No other structural issues; JSON-LD and FAQ content are consistent and accurate.

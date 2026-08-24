@@ -8,7 +8,7 @@
 |-------|-------|----------|--------|
 | Cert count in author bio | "9 certifications including CySA+, Security+, and AZ-104" | line 190 | MATCHES |
 | Prior role / track record | "Senior Solutions Consultant for the DoD," "40+ Central Coast businesses" | line 190 | UNVERIFIABLE |
-| California breach notification window (generic legal fact) | "within 72 hours depending on the type of data compromised" | line 245, JSON-LD line 82 | Not a Ghosxt claim — generic regulatory description, no verification needed |
+| California breach notification window (generic legal fact) | "within 72 hours depending on the type of data compromised" | line 245, JSON-LD line 82 | Not a Ghosxt claim - generic regulatory description, no verification needed |
 
 ## Legibility Checklist (blog-adapted)
 | Item | Pass/Fail | Notes |
@@ -27,4 +27,4 @@ None found.
 ## Top Three Fixes
 1. Tag or verify the "Senior Solutions Consultant for the DoD" / "40+ Central Coast businesses" bio claims.
 2. None otherwise urgent.
-3. —
+3. -

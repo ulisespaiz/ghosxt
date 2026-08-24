@@ -6,20 +6,20 @@
 ## Claims Table
 | Claim | Value | Location | Status |
 |-------|-------|----------|--------|
-| Google review count/rating | "5.0" across "26 Google reviews" | line 228 (hero trust callout), line 241 (key-facts) | MATCHES (VERIFIED FACTS: "26 at 5.0 as of August 2026 [VERIFY live count]" — source flagged [VERIFY], recommend live-count refresh) |
-| Engineer background | "An engineer with DoD infrastructure experience" (repeated: lines 217, 237, 291, 338) | multiple | MATCHES (VERIFIED FACTS: "prior DoD/federal contractor infrastructure experience"). No clearance level stated — compliant. |
-| Response time SLA | "Same-day remote support; on-site within 24–48 hours" | line 238 (key-facts) | UNVERIFIABLE — not itemized as such in VERIFIED FACTS contracted deliverables. VERIFY WITH ULI. |
-| On-site turnaround (body copy) | "same-day or next-day for non-emergencies, with immediate remote response for anything urgent" | line 310 | UNVERIFIABLE — plausible but not an exact match to the key-facts 24–48hr figure or to the 4-hour critical-incident notification SLA in VERIFIED FACTS. |
-| Capability: EDR with 24/7 SOC | "Huntress EDR with a 24/7 SOC" | line 262 | CONTRADICTS house rule — names a vendor ("Huntress"). VERIFIED FACTS: "describe these; never publish vendor names." The underlying capability (managed detection and response with a 24/7 SOC) itself MATCHES the approved capability list; the vendor name does not belong on the page. |
+| Google review count/rating | "5.0" across "26 Google reviews" | line 228 (hero trust callout), line 241 (key-facts) | MATCHES (VERIFIED FACTS: "26 at 5.0 as of August 2026 [VERIFY live count]" - source flagged [VERIFY], recommend live-count refresh) |
+| Engineer background | "An engineer with DoD infrastructure experience" (repeated: lines 217, 237, 291, 338) | multiple | MATCHES (VERIFIED FACTS: "prior DoD/federal contractor infrastructure experience"). No clearance level stated - compliant. |
+| Response time SLA | "Same-day remote support; on-site within 24–48 hours" | line 238 (key-facts) | UNVERIFIABLE - not itemized as such in VERIFIED FACTS contracted deliverables. VERIFY WITH ULI. |
+| On-site turnaround (body copy) | "same-day or next-day for non-emergencies, with immediate remote response for anything urgent" | line 310 | UNVERIFIABLE - plausible but not an exact match to the key-facts 24–48hr figure or to the 4-hour critical-incident notification SLA in VERIFIED FACTS. |
+| Capability: EDR with 24/7 SOC | "Huntress EDR with a 24/7 SOC" | line 262 | CONTRADICTS house rule - names a vendor ("Huntress"). VERIFIED FACTS: "describe these; never publish vendor names." The underlying capability (managed detection and response with a 24/7 SOC) itself MATCHES the approved capability list; the vendor name does not belong on the page. |
 | Capability: Phishing-resistant MFA / Conditional Access | line 266 | MATCHES capability list |
-| Capability: Immutable backup | "Our backups are immutable and stored off the production network" | line 278 | UNVERIFIABLE — VERIFIED FACTS lists "cloud backup for Microsoft 365 and Google Workspace" without confirming immutability. VERIFY WITH ULI. |
-| Capability: Network/OT segmentation | "network segmentation," full "OT & Network Segmentation" service card | lines 251, 257–258, 273–275, JSON-LD line 44, FAQ lines 319, 323 | CONTRADICTS house rule — network/OT segmentation is not on the VERIFIED FACTS capabilities list ("Do not claim ... anything not listed"). Treat as an unlisted capability pending confirmation. |
-| Capability: Vulnerability management | "vulnerability management" | JSON-LD Service description, line 44 | CONTRADICTS house rule — not on the VERIFIED FACTS capabilities list (patching is listed; "vulnerability management" as a distinct service is not). |
+| Capability: Immutable backup | "Our backups are immutable and stored off the production network" | line 278 | UNVERIFIABLE - VERIFIED FACTS lists "cloud backup for Microsoft 365 and Google Workspace" without confirming immutability. VERIFY WITH ULI. |
+| Capability: Network/OT segmentation | "network segmentation," full "OT & Network Segmentation" service card | lines 251, 257–258, 273–275, JSON-LD line 44, FAQ lines 319, 323 | CONTRADICTS house rule - network/OT segmentation is not on the VERIFIED FACTS capabilities list ("Do not claim ... anything not listed"). Treat as an unlisted capability pending confirmation. |
+| Capability: Vulnerability management | "vulnerability management" | JSON-LD Service description, line 44 | CONTRADICTS house rule - not on the VERIFIED FACTS capabilities list (patching is listed; "vulnerability management" as a distinct service is not). |
 | Pricing | "our pricing is published upfront" (FAQ, links to /pricing) | line 331 | MATCHES general structure; no specific dollar figures stated on-page to check against the published tiers. |
-| No Cisco certification claimed | — | whole page | MATCHES (no Cisco mention — compliant) |
-| No dental/dentist vertical | — | whole page | MATCHES (not present — compliant) |
-| No clearance level stated | — | whole page | MATCHES (compliant; only "DoD infrastructure experience" used) |
-| No SIEM claimed | — | whole page | MATCHES (term "SIEM" does not appear — compliant) |
+| No Cisco certification claimed | - | whole page | MATCHES (no Cisco mention - compliant) |
+| No dental/dentist vertical | - | whole page | MATCHES (not present - compliant) |
+| No clearance level stated | - | whole page | MATCHES (compliant; only "DoD infrastructure experience" used) |
+| No SIEM claimed | - | whole page | MATCHES (term "SIEM" does not appear - compliant) |
 
 ## Legibility Checklist
 | Item | Pass/Fail | Notes |
@@ -44,6 +44,6 @@
 | Unlisted capability: "vulnerability management" | JSON-LD Service description, line 44 |
 
 ## Top Three Fixes
-1. Remove "Huntress" from line 262 — describe the capability generically ("managed EDR with a 24/7 SOC") per VERIFIED FACTS, which explicitly bars vendor names.
+1. Remove "Huntress" from line 262 - describe the capability generically ("managed EDR with a 24/7 SOC") per VERIFIED FACTS, which explicitly bars vendor names.
 2. Resolve network/OT segmentation and "vulnerability management": either get these added to VERIFIED FACTS as confirmed capabilities, or strip them from the page (service card, body copy, FAQ answer, and JSON-LD description all currently claim them).
 3. Move the cookie banner after `<main>` in DOM order, and confirm the "immutable" backup claim and the stated response-time SLA with Uli.

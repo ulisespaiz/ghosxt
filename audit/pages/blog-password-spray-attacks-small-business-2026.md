@@ -10,7 +10,7 @@
 | Author bio: "10+ years in IT infrastructure and cybersecurity" | 10+ years | author-bio-box, line 178 | UNVERIFIABLE |
 | Author bio: "Senior Solutions Consultant for the DoD" | specific job title | author-bio-box, line 178 | UNVERIFIABLE |
 | Author bio: "built security programs for 40+ Central Coast businesses" | 40+ businesses | author-bio-box, line 178 | UNVERIFIABLE (possible invented number) |
-| No pricing claims in this post | — | — | N/A |
+| No pricing claims in this post | - | - | N/A |
 
 ## Legibility Checklist
 | Item | Pass/Fail | Notes |
@@ -26,7 +26,7 @@
 ## House-Rule Violations
 | Violation | Location |
 |-----------|----------|
-| None found | — |
+| None found | - |
 
 ## Top Three Fixes
 1. Same shared author-bio boilerplate needs sourcing/verification (see password-manager report; identical text on every post in this group).

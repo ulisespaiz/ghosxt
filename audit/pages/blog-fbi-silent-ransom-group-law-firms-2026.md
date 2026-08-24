@@ -27,6 +27,6 @@
 | Dental listed as an in-scope target/client vertical ("medical and dental practices" among businesses invited to "read 'law firm' below as 'your firm'" and book an assessment) | JSON-LD FAQ answer line 102; body paragraph line 246; visible FAQ line 327 |
 
 ## Top Three Fixes
-1. Remove "dental" from the professional-services target-industry list in all three locations (JSON-LD, body, visible FAQ) — excluded vertical per house rules.
+1. Remove "dental" from the professional-services target-industry list in all three locations (JSON-LD, body, visible FAQ) - excluded vertical per house rules.
 2. Tag or verify the "Senior Solutions Consultant for the DoD" / "40+ Central Coast businesses" bio claims.
 3. None otherwise; rest of page (FAQ schema, structure) is clean.

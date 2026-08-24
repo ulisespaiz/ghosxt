@@ -28,6 +28,6 @@
 No em dash, no Cisco claim, no dental mention, no security-stack vendor names, no clearance level, no SIEM claim, no pricing contradicting published tiers.
 
 ## Top Three Fixes
-1. Tag the "Senior Solutions Consultant for the DoD" title and "40+ Central Coast businesses" figure in the shared author-bio-box as [VERIFY] or remove — site-wide fix.
+1. Tag the "Senior Solutions Consultant for the DoD" title and "40+ Central Coast businesses" figure in the shared author-bio-box as [VERIFY] or remove - site-wide fix.
 2. No page-specific issues found; page is otherwise clean.
 3. No further action.

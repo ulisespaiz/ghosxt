@@ -35,6 +35,6 @@
 | Dental as target vertical (via link) | line 299: links to "/blog/hipaa-compliant-it-medical-dental-monterey-county" with slug naming "medical-dental" as a served/target compliance vertical |
 
 ## Top Three Fixes
-1. Strip the five vendor-name lists (EDR, backup, email security, training, vulnerability scanning products) at lines 271, 275, 287, 291, 303 — replace with generic capability descriptions per house rule ("no vendor names").
-2. Investigate the linked page `/blog/hipaa-compliant-it-medical-dental-monterey-county` (out of this audit's scope but referenced twice from this page) — its slug presents dental as a served/target vertical, which directly violates "Excluded vertical: dentists." Either the target page needs remediation or this link/anchor text needs to stop pointing readers toward a dental-labeled compliance page.
+1. Strip the five vendor-name lists (EDR, backup, email security, training, vulnerability scanning products) at lines 271, 275, 287, 291, 303 - replace with generic capability descriptions per house rule ("no vendor names").
+2. Investigate the linked page `/blog/hipaa-compliant-it-medical-dental-monterey-county` (out of this audit's scope but referenced twice from this page) - its slug presents dental as a served/target vertical, which directly violates "Excluded vertical: dentists." Either the target page needs remediation or this link/anchor text needs to stop pointing readers toward a dental-labeled compliance page.
 3. This is the longest and most vendor-dense page in the batch; a full pass for vendor names specifically is warranted before publish.

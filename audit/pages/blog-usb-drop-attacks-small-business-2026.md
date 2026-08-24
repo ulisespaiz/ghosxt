@@ -7,8 +7,8 @@
 | Claim | Value | Location | Status |
 |-------|-------|----------|--------|
 | Author credentials/bio | Sitewide bio: 10+ years, 9 certs, DoD experience, 40+ businesses | line 170 | MATCHES (cert count matches VERIFIED FACTS; years/business-count UNVERIFIABLE, not contradicted) |
-| "EDR" used as generic reader-facing advice (not an explicit first-person Ghosxt capability claim) | "EDR that flags unusual command execution," "EDR with behavioral detection," CTA: "confirm EDR is watching for post-connection command activity" | lines 182, 206, 236 | Lower-priority than an explicit "we provide EDR" claim — this is advisory language about what a good security posture includes and what Ghosxt would check on a prospect's environment during a free assessment, not a direct claim that "EDR" is Ghosxt's own delivered capability. Still uses a term not in VERIFIED FACTS' capability list (MDR w/ 24/7 SOC is listed, not EDR); worth reconciling for consistency with other pages in this batch. |
-| No pricing claims | — | — | N/A |
+| "EDR" used as generic reader-facing advice (not an explicit first-person Ghosxt capability claim) | "EDR that flags unusual command execution," "EDR with behavioral detection," CTA: "confirm EDR is watching for post-connection command activity" | lines 182, 206, 236 | Lower-priority than an explicit "we provide EDR" claim - this is advisory language about what a good security posture includes and what Ghosxt would check on a prospect's environment during a free assessment, not a direct claim that "EDR" is Ghosxt's own delivered capability. Still uses a term not in VERIFIED FACTS' capability list (MDR w/ 24/7 SOC is listed, not EDR); worth reconciling for consistency with other pages in this batch. |
+| No pricing claims | - | - | N/A |
 
 ## Legibility Checklist
 | Item | Pass/Fail | Notes |
@@ -29,6 +29,6 @@
 No em dashes, no Cisco certification claims, no dental/dentist, no security-stack vendor names, no clearance level, no SIEM, no price contradicting published pricing.
 
 ## Top Three Fixes
-1. Reconcile the repeated "EDR" language (lines 182, 206, 236, plus the link-post title at 219) with VERIFIED FACTS' listed capability term ("managed detection and response with a 24/7 SOC") for consistency across the site — lower priority than pages making an explicit "our stack includes EDR" claim, but the term should still be standardized.
+1. Reconcile the repeated "EDR" language (lines 182, 206, 236, plus the link-post title at 219) with VERIFIED FACTS' listed capability term ("managed detection and response with a 24/7 SOC") for consistency across the site - lower priority than pages making an explicit "our stack includes EDR" claim, but the term should still be standardized.
 2. No other issues found.
 3. None.

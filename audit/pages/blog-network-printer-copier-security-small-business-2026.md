@@ -6,10 +6,10 @@
 ## Claims Table
 | Claim | Value | Location | Status |
 |-------|-------|----------|--------|
-| Author bio: shared blurb | — | line 178 | Cert count MATCHES VERIFIED FACTS; "10+ years," job title, "40+ businesses" UNVERIFIABLE (see group-wide note) |
-| "engineer with DoD infrastructure experience" (CTA) | — | line 240 | MATCHES VERIFIED FACTS |
-| No clearance level stated | — | whole page | MATCHES house rule |
-| "Most multifunction copiers ... built in the last 15 years include an internal hard drive or flash storage" | industry-general technical claim | line 230 | Generic technical/educational claim, not a Ghosxt capability claim — out of scope for VERIFIED FACTS |
+| Author bio: shared blurb | - | line 178 | Cert count MATCHES VERIFIED FACTS; "10+ years," job title, "40+ businesses" UNVERIFIABLE (see group-wide note) |
+| "engineer with DoD infrastructure experience" (CTA) | - | line 240 | MATCHES VERIFIED FACTS |
+| No clearance level stated | - | whole page | MATCHES house rule |
+| "Most multifunction copiers ... built in the last 15 years include an internal hard drive or flash storage" | industry-general technical claim | line 230 | Generic technical/educational claim, not a Ghosxt capability claim - out of scope for VERIFIED FACTS |
 
 ## Legibility Checklist
 | Item | Pass/Fail | Notes |

@@ -11,7 +11,7 @@
 | Prior role | "Senior Solutions Consultant for the DoD" | author-bio-box | UNVERIFIABLE [VERIFY] |
 | Client count | "built security programs for 40+ Central Coast businesses" | author-bio-box | UNVERIFIABLE [VERIFY] |
 | OFAC/sanctions rules re: ransom payment | General statement re: Treasury/OFAC sanctioned-entity list | body + FAQ | UNVERIFIABLE (general legal claim, not Ghosxt-specific, plausible/factual) |
-| No pricing or capability claims specific to Ghosxt | — | — | N/A |
+| No pricing or capability claims specific to Ghosxt | - | - | N/A |
 
 ## Legibility Checklist
 | Item | Pass/Fail | Notes |
@@ -28,9 +28,9 @@
 | Violation | Location |
 |-----------|----------|
 | Author-bio numbers not traceable to VERIFIED FACTS | author-bio-box |
-| None else found (no em dash, no Cisco, no dental, no vendor name, no clearance level, no SIEM, no price contradiction) | — |
+| None else found (no em dash, no Cisco, no dental, no vendor name, no clearance level, no SIEM, no price contradiction) | - |
 
 ## Top Three Fixes
 1. Add at least one direct in-body link to a relevant service page (/cybersecurity or /backup-disaster-recovery) rather than only linking to sibling blog posts.
 2. Verify or soften the shared author-bio's unverified specifics (10+ years, DoD title, 40+ businesses).
-3. Confirm the referenced sibling posts (incident-response-plan-small-business-2026, cyber-insurance-small-business-2026, backup-disaster-recovery-small-business-2026) actually exist and are published — several internal links depend on them.
+3. Confirm the referenced sibling posts (incident-response-plan-small-business-2026, cyber-insurance-small-business-2026, backup-disaster-recovery-small-business-2026) actually exist and are published - several internal links depend on them.

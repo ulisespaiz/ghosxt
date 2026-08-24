@@ -6,11 +6,11 @@
 ## Claims Table
 | Claim | Value | Location | Status |
 |-------|-------|----------|--------|
-| Author bio: shared blurb | — | line 194 | Cert count MATCHES VERIFIED FACTS; "10+ years," job title, "40+ businesses" UNVERIFIABLE (see group-wide note) |
-| "engineer with DoD infrastructure experience" (CTA) | — | line 306 | MATCHES VERIFIED FACTS |
-| No clearance level stated | — | whole page | MATCHES house rule |
+| Author bio: shared blurb | - | line 194 | Cert count MATCHES VERIFIED FACTS; "10+ years," job title, "40+ businesses" UNVERIFIABLE (see group-wide note) |
+| "engineer with DoD infrastructure experience" (CTA) | - | line 306 | MATCHES VERIFIED FACTS |
+| No clearance level stated | - | whole page | MATCHES house rule |
 | CVE numbers, patch dates, GitHub/GitLab ban details, "six zero-days in six weeks" | third-party security-news claims | throughout | External/journalistic reporting, out of scope for VERIFIED FACTS verification |
-| "EDR plus 24/7 monitoring" / "managed detection and response" | generic capability | lines 213, 268, 299 | MATCHES VERIFIED FACTS MDR/24-7 SOC capability — no vendor name |
+| "EDR plus 24/7 monitoring" / "managed detection and response" | generic capability | lines 213, 268, 299 | MATCHES VERIFIED FACTS MDR/24-7 SOC capability - no vendor name |
 
 ## Legibility Checklist
 | Item | Pass/Fail | Notes |

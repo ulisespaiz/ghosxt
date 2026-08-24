@@ -7,8 +7,8 @@
 | Claim | Value | Location | Status |
 |-------|-------|----------|--------|
 | Author credentials/bio | Sitewide bio: 10+ years, 9 certs, DoD experience, 40+ businesses | line 168 | MATCHES (cert count matches VERIFIED FACTS; years/business-count UNVERIFIABLE, not contradicted) |
-| Statistical claim | "currently getting clicked at a higher rate than email phishing" (smishing vs. email phishing click rate) | line 176 (quickfix h2), JSON-LD description line 45 | UNVERIFIABLE — no source or citation given for the comparative statistic. VERIFY WITH ULI (source it or soften to unquantified language) |
-| No pricing or capability claims about Ghosxt's own stack | — | — | N/A |
+| Statistical claim | "currently getting clicked at a higher rate than email phishing" (smishing vs. email phishing click rate) | line 176 (quickfix h2), JSON-LD description line 45 | UNVERIFIABLE - no source or citation given for the comparative statistic. VERIFY WITH ULI (source it or soften to unquantified language) |
+| No pricing or capability claims about Ghosxt's own stack | - | - | N/A |
 
 ## Legibility Checklist
 | Item | Pass/Fail | Notes |

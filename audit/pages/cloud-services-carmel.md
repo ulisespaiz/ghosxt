@@ -9,19 +9,19 @@
 | Owner/operator is an engineer with DoD infrastructure experience | "an engineer with DoD infrastructure experience" | :217 (lead), :44 (JSON-LD Service description) | MATCHES |
 | No clearance level stated | DoD experience described without a clearance level | :217, :44 | MATCHES (experience framing only, no level named) |
 | Google review count/rating, client history | "5.0" across "26 Google reviews," "trusted by businesses across Monterey County since 2021 and beyond" | :228 (trust callout), :241 (key-facts) | MATCHES VERIFIED FACTS (26 at 5.0; serving clients since 2021), both of which carry [VERIFY] tags in CLAUDE.md |
-| Response time | "Same-day remote support; on-site within 24–48 hours" | :238 (key-facts) | UNVERIFIABLE — not itemized in VERIFIED FACTS; the only response-time figure there is the 4-hour critical-incident notification, a different metric. VERIFY WITH ULI |
-| Pricing structure | "Cloud and Microsoft 365 management is part of every managed plan: pricing published upfront" → links to /pricing | :229, :239 | MATCHES — no specific dollar figures stated on this page to check against the four published tiers |
-| Phone number | (831) 204-0501 | :163, :223, :242, :533 | UNVERIFIABLE — not itemized in VERIFIED FACTS but consistent site-wide |
-| Azure & Hybrid as a delivered service line | Full service card: line-of-business apps, secure remote access, hybrid identity | :273–274 | UNVERIFIABLE — Azure/hybrid infrastructure work is not in the VERIFIED FACTS capability list (scoped to M365 hardening: Intune, Defender for Business, Conditional Access). VERIFY WITH ULI |
-| "SharePoint, Teams & OneDrive" governance as a distinct deliverable | Rebuilding file storage into a SharePoint/Teams structure with permissions | :261–263 | UNVERIFIABLE — not itemized in the VERIFIED FACTS capability list. VERIFY WITH ULI |
-| Email & file migration (Exchange/Google Workspace/hosting → M365) | "Moving from on-prem Exchange, Google Workspace, or a shared hosting inbox to Microsoft 365...pre-staged and validated before any cutover" | :257–259 | UNVERIFIABLE — not itemized in the VERIFIED FACTS capability list. VERIFY WITH ULI |
-| "Immutable" backup for Microsoft 365 data | "Immutable backup for Microsoft 365 data (email, SharePoint, and OneDrive)" | :278 | UNVERIFIABLE — VERIFIED FACTS lists "cloud backup for Microsoft 365 and Google Workspace," not immutability specifically. VERIFY WITH ULI |
-| Entra ID hardening + Conditional Access | Identity layer claim, "every account is covered" | :278 | MATCHES in part — Conditional Access is explicitly listed; "Entra ID" framing is a reasonable description of the listed M365 identity work |
-| Gallery & Inn systems tie-in (inventory, CRM, booking, POS) | POS/CRM/booking systems "tied into a hardened Microsoft 365 tenant," segmented from back office | :269–270 | UNVERIFIABLE — not itemized in the VERIFIED FACTS capability list. VERIFY WITH ULI |
-| Cutover scheduled around a "quietest window" (e.g. a slow Tuesday in January) | Operational/process claim | :306 | UNVERIFIABLE — plausible, not covered by VERIFIED FACTS, not contradicted |
+| Response time | "Same-day remote support; on-site within 24–48 hours" | :238 (key-facts) | UNVERIFIABLE - not itemized in VERIFIED FACTS; the only response-time figure there is the 4-hour critical-incident notification, a different metric. VERIFY WITH ULI |
+| Pricing structure | "Cloud and Microsoft 365 management is part of every managed plan: pricing published upfront" → links to /pricing | :229, :239 | MATCHES - no specific dollar figures stated on this page to check against the four published tiers |
+| Phone number | (831) 204-0501 | :163, :223, :242, :533 | UNVERIFIABLE - not itemized in VERIFIED FACTS but consistent site-wide |
+| Azure & Hybrid as a delivered service line | Full service card: line-of-business apps, secure remote access, hybrid identity | :273–274 | UNVERIFIABLE - Azure/hybrid infrastructure work is not in the VERIFIED FACTS capability list (scoped to M365 hardening: Intune, Defender for Business, Conditional Access). VERIFY WITH ULI |
+| "SharePoint, Teams & OneDrive" governance as a distinct deliverable | Rebuilding file storage into a SharePoint/Teams structure with permissions | :261–263 | UNVERIFIABLE - not itemized in the VERIFIED FACTS capability list. VERIFY WITH ULI |
+| Email & file migration (Exchange/Google Workspace/hosting → M365) | "Moving from on-prem Exchange, Google Workspace, or a shared hosting inbox to Microsoft 365...pre-staged and validated before any cutover" | :257–259 | UNVERIFIABLE - not itemized in the VERIFIED FACTS capability list. VERIFY WITH ULI |
+| "Immutable" backup for Microsoft 365 data | "Immutable backup for Microsoft 365 data (email, SharePoint, and OneDrive)" | :278 | UNVERIFIABLE - VERIFIED FACTS lists "cloud backup for Microsoft 365 and Google Workspace," not immutability specifically. VERIFY WITH ULI |
+| Entra ID hardening + Conditional Access | Identity layer claim, "every account is covered" | :278 | MATCHES in part - Conditional Access is explicitly listed; "Entra ID" framing is a reasonable description of the listed M365 identity work |
+| Gallery & Inn systems tie-in (inventory, CRM, booking, POS) | POS/CRM/booking systems "tied into a hardened Microsoft 365 tenant," segmented from back office | :269–270 | UNVERIFIABLE - not itemized in the VERIFIED FACTS capability list. VERIFY WITH ULI |
+| Cutover scheduled around a "quietest window" (e.g. a slow Tuesday in January) | Operational/process claim | :306 | UNVERIFIABLE - plausible, not covered by VERIFIED FACTS, not contradicted |
 | "Senior engineer" leads the free assessment | :295, :344 | UNVERIFIABLE phrasing but consistent with "Owner and sole engineer: Ulises Paiz" (singular, not "team") |
-| No dental/dentist mention | — (absent) | (confirmed via search) | MATCHES exclusion rule |
-| No case examples, testimonials, or named clients present | — (absent) | (confirmed via read) | N/A — nothing to verify |
+| No dental/dentist mention | - (absent) | (confirmed via search) | MATCHES exclusion rule |
+| No case examples, testimonials, or named clients present | - (absent) | (confirmed via read) | N/A - nothing to verify |
 
 ## Legibility Checklist
 | Item | Pass/Fail | Notes |

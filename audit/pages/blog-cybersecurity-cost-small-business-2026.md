@@ -30,5 +30,5 @@
 
 ## Top Three Fixes
 1. Fix the pricing contradiction: this page states Ghosxt's own managed cybersecurity costs "$50 to $150 per user per month" (repeated in TL;DR, H2, and two FAQ answers, under a section literally titled "How we price it at Ghosxt"), which does not match the published per-user tiers of $125/$175/$250 or the $600/mo flat Tiny Team plan. Rewrite the range to align with actual published pricing, or make explicit that the figure is an industry-wide benchmark rather than Ghosxt's own rate card.
-2. Remove "dental" from the line-214 list of example regulated-data verticals ("medical, dental, legal, or financial practice") — dental must not appear as a client or target industry anywhere on the site.
+2. Remove "dental" from the line-214 list of example regulated-data verticals ("medical, dental, legal, or financial practice") - dental must not appear as a client or target industry anywhere on the site.
 3. Cross-check the FAQ JSON-LD text (lines 70, 102) against the body once the pricing fix is made, since the same $50-$150 figure and the "medical or legal" framing are duplicated there.

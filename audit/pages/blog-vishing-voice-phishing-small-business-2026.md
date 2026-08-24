@@ -27,9 +27,9 @@ No pricing, capability, or client-vertical claims in body; content is generic vi
 ## House-Rule Violations
 | Violation | Location |
 |-----------|----------|
-| None found | — |
+| None found | - |
 
 ## Top Three Fixes
 1. Verify shared bio-box claims (see vcio report).
-2. None structural — page is clean.
-3. —
+2. None structural - page is clean.
+3. -

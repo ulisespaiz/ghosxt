@@ -6,11 +6,11 @@
 ## Claims Table
 | Claim | Value | Location | Status |
 |-------|-------|----------|--------|
-| Author bio (boilerplate) | "10+ years...," "9 certifications...," "Senior Solutions Consultant for the DoD," "40+ Central Coast businesses" | june-2026-patch-tuesday-secure-boot-exchange-smb.html:194 | UNVERIFIABLE — recurring bio block |
-| Byline title | "Founder, Ghosxt" | :189 | UNVERIFIABLE — VERIFIED FACTS says "Owner and sole engineer" |
-| DoD infrastructure experience (general) | "engineer with DoD infrastructure experience" | :194, :314 | MATCHES — no clearance level stated |
-| CVE/vulnerability counts, CVSS scores, patch counts | 198 fixes, 3 zero-days, specific CVE IDs, Secure Boot certificate deadline | throughout | N/A — third-party Microsoft security-bulletin facts, outside VERIFIED FACTS scope |
-| No pricing claims on this page | — | — | N/A |
+| Author bio (boilerplate) | "10+ years...," "9 certifications...," "Senior Solutions Consultant for the DoD," "40+ Central Coast businesses" | june-2026-patch-tuesday-secure-boot-exchange-smb.html:194 | UNVERIFIABLE - recurring bio block |
+| Byline title | "Founder, Ghosxt" | :189 | UNVERIFIABLE - VERIFIED FACTS says "Owner and sole engineer" |
+| DoD infrastructure experience (general) | "engineer with DoD infrastructure experience" | :194, :314 | MATCHES - no clearance level stated |
+| CVE/vulnerability counts, CVSS scores, patch counts | 198 fixes, 3 zero-days, specific CVE IDs, Secure Boot certificate deadline | throughout | N/A - third-party Microsoft security-bulletin facts, outside VERIFIED FACTS scope |
+| No pricing claims on this page | - | - | N/A |
 
 ## Legibility Checklist
 | Item | Pass/Fail | Notes |

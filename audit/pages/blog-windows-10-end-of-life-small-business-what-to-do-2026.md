@@ -12,7 +12,7 @@
 | Client count | "built security programs for 40+ Central Coast businesses" | author-bio-box | UNVERIFIABLE |
 | Windows 10 EOL date | October 14, 2025 | body, FAQ | UNVERIFIABLE by this audit (external Microsoft date, plausible/consistent with public record) |
 | Consumer ESU deadline | October 13, 2026 | body, FAQ | UNVERIFIABLE by this audit (external Microsoft date) |
-| ESU pricing | "$61/device yr1, doubling to $122 yr2, $244 yr3" | body, FAQ | UNVERIFIABLE — Microsoft's pricing, not Ghosxt's; does not contradict Ghosxt's published pricing (different product/vendor) |
+| ESU pricing | "$61/device yr1, doubling to $122 yr2, $244 yr3" | body, FAQ | UNVERIFIABLE - Microsoft's pricing, not Ghosxt's; does not contradict Ghosxt's published pricing (different product/vendor) |
 
 ## Legibility Checklist
 | Item | Pass/Fail | Notes |
@@ -28,9 +28,9 @@
 ## House-Rule Violations
 | Violation | Location |
 |-----------|----------|
-| None found | — |
+| None found | - |
 
 ## Top Three Fixes
 1. Verify shared bio-box claims (see vcio report).
 2. Spot-check Microsoft ESU pricing figures against current Microsoft pricing before long-term publication (time-sensitive).
-3. None structural otherwise — page is clean.
+3. None structural otherwise - page is clean.

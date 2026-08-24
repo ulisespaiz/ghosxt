@@ -25,6 +25,6 @@
 None found. No em dash, no dental, no Cisco certification claim, no vendor names, no clearance level, no SIEM claim, no pricing.
 
 ## Top Three Fixes
-1. None required — page is clean against house rules and legibility checklist.
+1. None required - page is clean against house rules and legibility checklist.
 2. Tag the shared bio block's job title/business count as [VERIFY] (site-wide fix).
 3. No further action.

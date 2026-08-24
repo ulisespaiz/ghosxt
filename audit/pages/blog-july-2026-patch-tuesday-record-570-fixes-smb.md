@@ -6,11 +6,11 @@
 ## Claims Table
 | Claim | Value | Location | Status |
 |-------|-------|----------|--------|
-| Author bio (boilerplate) | "10+ years...," "9 certifications...," "Senior Solutions Consultant for the DoD," "40+ Central Coast businesses" | july-2026-patch-tuesday-record-570-fixes-smb.html:194 | UNVERIFIABLE — recurring bio block |
-| Byline title | "Founder, Ghosxt" | :189 | UNVERIFIABLE — VERIFIED FACTS says "Owner and sole engineer" |
-| DoD infrastructure experience (general) | "engineer with DoD infrastructure experience" | :194, :316 | MATCHES — no clearance level stated |
-| CVE/vulnerability counts, CVSS scores, patch counts | 570 fixes, 3 zero-days, 59 Critical, specific CVE IDs, etc. | throughout | N/A — third-party Microsoft security-bulletin facts, outside VERIFIED FACTS scope; not checkable against site's own facts and not contradicting anything on file |
-| No pricing claims on this page | — | — | N/A |
+| Author bio (boilerplate) | "10+ years...," "9 certifications...," "Senior Solutions Consultant for the DoD," "40+ Central Coast businesses" | july-2026-patch-tuesday-record-570-fixes-smb.html:194 | UNVERIFIABLE - recurring bio block |
+| Byline title | "Founder, Ghosxt" | :189 | UNVERIFIABLE - VERIFIED FACTS says "Owner and sole engineer" |
+| DoD infrastructure experience (general) | "engineer with DoD infrastructure experience" | :194, :316 | MATCHES - no clearance level stated |
+| CVE/vulnerability counts, CVSS scores, patch counts | 570 fixes, 3 zero-days, 59 Critical, specific CVE IDs, etc. | throughout | N/A - third-party Microsoft security-bulletin facts, outside VERIFIED FACTS scope; not checkable against site's own facts and not contradicting anything on file |
+| No pricing claims on this page | - | - | N/A |
 
 ## Legibility Checklist
 | Item | Pass/Fail | Notes |

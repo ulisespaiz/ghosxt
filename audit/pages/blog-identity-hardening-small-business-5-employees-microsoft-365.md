@@ -8,8 +8,8 @@
 |-------|-------|----------|--------|
 | Cert count in author bio | "9 certifications including CySA+, Security+, and AZ-104" | line 198 | MATCHES |
 | Prior role / track record | "Senior Solutions Consultant for the DoD," "40+ Central Coast businesses" | line 198 | UNVERIFIABLE |
-| M365 Business Premium cost reference | "approximately $22 per user per month" | lines 98, 214, 289, 326 | Not a Ghosxt price — Microsoft's own SKU price cited as a cost input; no contradiction with Ghosxt's published tiers |
-| Median SMB ransomware IR engagement cost (industry reference) | "$25,000 to $75,000" | line 294 | Not a Ghosxt claim — industry reference, no verification needed |
+| M365 Business Premium cost reference | "approximately $22 per user per month" | lines 98, 214, 289, 326 | Not a Ghosxt price - Microsoft's own SKU price cited as a cost input; no contradiction with Ghosxt's published tiers |
+| Median SMB ransomware IR engagement cost (industry reference) | "$25,000 to $75,000" | line 294 | Not a Ghosxt claim - industry reference, no verification needed |
 
 ## Legibility Checklist (blog-adapted)
 | Item | Pass/Fail | Notes |

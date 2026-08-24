@@ -7,7 +7,7 @@
 | Claim | Value | Location | Status |
 |-------|-------|----------|--------|
 | Founder credentials/bio | Same boilerplate as other posts | author-bio-box | MATCHES cert count; job title/business count UNVERIFIABLE |
-| No pricing, review-count, client, or vertical claims present | — | — | N/A — general security-education post |
+| No pricing, review-count, client, or vertical claims present | - | - | N/A - general security-education post |
 
 ## Legibility Checklist
 | Item | Pass/Fail | Notes |
@@ -24,6 +24,6 @@
 None found. No em dash, no dental, no Cisco certification claim, no vendor names, no clearance level, no SIEM claim, no pricing.
 
 ## Top Three Fixes
-1. None required — page is clean against house rules and legibility checklist.
+1. None required - page is clean against house rules and legibility checklist.
 2. Tag the shared bio block's job title/business count as [VERIFY] (site-wide fix).
 3. No further action.

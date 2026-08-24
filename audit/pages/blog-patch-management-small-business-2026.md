@@ -10,8 +10,8 @@
 | Author bio: "10+ years in IT infrastructure and cybersecurity" | 10+ years | author-bio-box, line 178 | UNVERIFIABLE |
 | Author bio: "Senior Solutions Consultant for the DoD" | job title | author-bio-box, line 178 | UNVERIFIABLE |
 | Author bio: "built security programs for 40+ Central Coast businesses" | 40+ businesses | author-bio-box, line 178 | UNVERIFIABLE (possible invented number) |
-| "Patched within 24 to 72 hours" for actively-exploited flaws | SLA-style claim | body line 216, 238 | UNVERIFIABLE (operational claim, not in VERIFIED FACTS' 4-hour notification deliverable, but different topic — patch SLA vs incident notification) |
-| No pricing claims | — | — | N/A |
+| "Patched within 24 to 72 hours" for actively-exploited flaws | SLA-style claim | body line 216, 238 | UNVERIFIABLE (operational claim, not in VERIFIED FACTS' 4-hour notification deliverable, but different topic - patch SLA vs incident notification) |
+| No pricing claims | - | - | N/A |
 
 ## Legibility Checklist
 | Item | Pass/Fail | Notes |
@@ -27,9 +27,9 @@
 ## House-Rule Violations
 | Violation | Location |
 |-----------|----------|
-| None found | — |
+| None found | - |
 
 ## Top Three Fixes
-1. Verify the shared author-bio boilerplate (40+ businesses, DoD title, 10+ years) — same issue across the whole blog group.
+1. Verify the shared author-bio boilerplate (40+ businesses, DoD title, 10+ years) - same issue across the whole blog group.
 2. Consider tagging the "24 to 72 hours" patch SLA claim [VERIFY] since it is not explicitly listed among contracted deliverables.
 3. No other fixes needed.

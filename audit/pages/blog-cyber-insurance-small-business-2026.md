@@ -34,6 +34,6 @@
 | Security-stack vendor names | line 232: "SentinelOne, CrowdStrike, or Microsoft Defender for Business" |
 
 ## Top Three Fixes
-1. Remove "or SIEM" from line 218 — VERIFIED FACTS lists MDR with 24/7 SOC as a Ghosxt capability but explicitly says never claim SIEM or anything not listed.
+1. Remove "or SIEM" from line 218 - VERIFIED FACTS lists MDR with 24/7 SOC as a Ghosxt capability but explicitly says never claim SIEM or anything not listed.
 2. Remove the vendor names at line 232 ("SentinelOne, CrowdStrike, or Microsoft Defender for Business") and describe EDR/next-gen antivirus generically instead.
 3. None else required; the various dollar figures are third-party insurance-market context, not Ghosxt pricing, and do not contradict the published rate card.

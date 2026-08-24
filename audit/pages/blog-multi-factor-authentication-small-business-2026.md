@@ -6,9 +6,9 @@
 ## Claims Table
 | Claim | Value | Location | Status |
 |-------|-------|----------|--------|
-| Author bio: shared blurb | — | line 170 | Cert count MATCHES VERIFIED FACTS; "10+ years," job title, "40+ businesses" UNVERIFIABLE (see group-wide note) |
-| "engineer with DoD infrastructure experience" (CTA) | — | line 244 | MATCHES VERIFIED FACTS |
-| No clearance level stated | — | whole page | MATCHES house rule |
+| Author bio: shared blurb | - | line 170 | Cert count MATCHES VERIFIED FACTS; "10+ years," job title, "40+ businesses" UNVERIFIABLE (see group-wide note) |
+| "engineer with DoD infrastructure experience" (CTA) | - | line 244 | MATCHES VERIFIED FACTS |
+| No clearance level stated | - | whole page | MATCHES house rule |
 | MFA hierarchy descriptions (SMS, TOTP, push, hardware keys/passkeys) | generic technical explainer | throughout | Factual/educational, no Ghosxt capability claims involved |
 
 ## Legibility Checklist
@@ -20,7 +20,7 @@
 | Exactly one H1 | Pass | line 163 |
 | Title, meta description, canonical present | Pass | lines 6-8 |
 | FAQ JSON-LD matching visible text | Pass | 3 Q&As, verbatim match (lines 66-88 vs 233-240) |
-| Internal links to relevant service pages | **Partial** | Body links only to /about, five city pages (Salinas, Monterey, Santa Cruz, Watsonville, San Jose), and other blog posts — no in-body link to /cybersecurity, /managed-it-services, or /pricing (those only appear in nav/footer boilerplate) |
+| Internal links to relevant service pages | **Partial** | Body links only to /about, five city pages (Salinas, Monterey, Santa Cruz, Watsonville, San Jose), and other blog posts - no in-body link to /cybersecurity, /managed-it-services, or /pricing (those only appear in nav/footer boilerplate) |
 
 ## House-Rule Violations
 None found.

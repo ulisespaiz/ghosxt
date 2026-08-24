@@ -6,11 +6,11 @@
 ## Claims Table
 | Claim | Value | Location | Status |
 |-------|-------|----------|--------|
-| Author bio (boilerplate) | "10+ years in IT infrastructure and cybersecurity," "9 certifications including CySA+, Security+, and AZ-104," "Senior Solutions Consultant for the DoD," "built security programs for 40+ Central Coast businesses" | iot-device-security-small-business-2026.html:170 | UNVERIFIABLE — not in VERIFIED FACTS (same category as about.html's flagged bio claims); "9 certifications" count is at least consistent with the 9 non-degree credentials on file |
-| Byline title | "Founder, Ghosxt" | :165, :189 (Person schema uses no jobTitle) | UNVERIFIABLE — VERIFIED FACTS says "Owner and sole engineer," not "Founder" |
-| DoD infrastructure experience (general) | "engineer with DoD infrastructure experience" | :170, :234 | MATCHES — no clearance level stated |
-| Capabilities described (VLAN segmentation, EDR-adjacent, DNS/UPnP hardening) | generic IoT security guidance | body | MATCHES / N/A — general educational content, not a specific capability list |
-| No pricing claims on this page | — | — | N/A |
+| Author bio (boilerplate) | "10+ years in IT infrastructure and cybersecurity," "9 certifications including CySA+, Security+, and AZ-104," "Senior Solutions Consultant for the DoD," "built security programs for 40+ Central Coast businesses" | iot-device-security-small-business-2026.html:170 | UNVERIFIABLE - not in VERIFIED FACTS (same category as about.html's flagged bio claims); "9 certifications" count is at least consistent with the 9 non-degree credentials on file |
+| Byline title | "Founder, Ghosxt" | :165, :189 (Person schema uses no jobTitle) | UNVERIFIABLE - VERIFIED FACTS says "Owner and sole engineer," not "Founder" |
+| DoD infrastructure experience (general) | "engineer with DoD infrastructure experience" | :170, :234 | MATCHES - no clearance level stated |
+| Capabilities described (VLAN segmentation, EDR-adjacent, DNS/UPnP hardening) | generic IoT security guidance | body | MATCHES / N/A - general educational content, not a specific capability list |
+| No pricing claims on this page | - | - | N/A |
 
 ## Legibility Checklist
 | Item | Pass/Fail | Notes |

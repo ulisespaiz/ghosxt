@@ -7,8 +7,8 @@
 | Claim | Value | Location | Status |
 |-------|-------|----------|--------|
 | "We run privileged access reviews as part of security assessments" | capability claim | body, line 220 | UNVERIFIABLE (not itemized in VERIFIED FACTS but consistent in spirit with the "annual independent risk assessment" and general MSP account-hardening scope; no direct contradiction) |
-| Author bio boilerplate | — | author-bio-box, line 170 | 9-certs claim MATCHES; other claims UNVERIFIABLE |
-| No pricing claims | — | — | N/A |
+| Author bio boilerplate | - | author-bio-box, line 170 | 9-certs claim MATCHES; other claims UNVERIFIABLE |
+| No pricing claims | - | - | N/A |
 
 ## Legibility Checklist
 | Item | Pass/Fail | Notes |
@@ -24,9 +24,9 @@
 ## House-Rule Violations
 | Violation | Location |
 |-----------|----------|
-| None found | — |
+| None found | - |
 
 ## Top Three Fixes
 1. Verify the shared author-bio boilerplate claims (see password-manager report).
 2. No other fixes needed; page is clean and well cross-linked.
-3. —
+3. -

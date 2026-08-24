@@ -6,9 +6,9 @@
 ## Claims Table
 | Claim | Value | Location | Status |
 |-------|-------|----------|--------|
-| Author bio: shared blurb | — | line 170 | Cert count MATCHES VERIFIED FACTS; "10+ years," job title, "40+ businesses" UNVERIFIABLE (see group-wide note) |
-| "engineer with DoD infrastructure experience" (CTA) | — | line 242 | MATCHES VERIFIED FACTS |
-| No clearance level stated | — | whole page | MATCHES house rule |
+| Author bio: shared blurb | - | line 170 | Cert count MATCHES VERIFIED FACTS; "10+ years," job title, "40+ businesses" UNVERIFIABLE (see group-wide note) |
+| "engineer with DoD infrastructure experience" (CTA) | - | line 242 | MATCHES VERIFIED FACTS |
+| No clearance level stated | - | whole page | MATCHES house rule |
 | "a known Microsoft 365 and Google Workspace technique since 2017" | industry-general date claim | line 180 | Generic technical/educational claim, out of scope for VERIFIED FACTS |
 
 ## Legibility Checklist

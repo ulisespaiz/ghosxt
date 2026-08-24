@@ -9,7 +9,7 @@
 | Author credentials | "9 certifications including CySA+, Security+, and AZ-104" | author-bio-box | MATCHES (AZ-104, SecurityX, CySA+, Security+, Network+, Cloud+, Project+, ITIL4, Linux Essentials = 9, excl. M.S. degree) |
 | DoD experience | "deep DoD infrastructure experience," "Senior Solutions Consultant for the DoD" | author-bio-box | MATCHES general claim / job title UNVERIFIABLE |
 | Career length | "10+ years in IT infrastructure and cybersecurity" | author-bio-box | UNVERIFIABLE (VERIFIED FACTS only states serving clients since 2021 [VERIFY]) |
-| Client count | "built security programs for 40+ Central Coast businesses" | author-bio-box | UNVERIFIABLE — specific number not in VERIFIED FACTS, worth confirming isn't invented |
+| Client count | "built security programs for 40+ Central Coast businesses" | author-bio-box | UNVERIFIABLE - specific number not in VERIFIED FACTS, worth confirming isn't invented |
 | Fractional CIO market rate | "$1,500 to $4,000 a month" for standalone vCIO engagements | body + FAQ JSON-LD | UNVERIFIABLE (market/industry figure, not a Ghosxt price; does not contradict published Ghosxt pricing) |
 
 ## Legibility Checklist
@@ -26,9 +26,9 @@
 ## House-Rule Violations
 | Violation | Location |
 |-----------|----------|
-| None found | — |
+| None found | - |
 
 ## Top Three Fixes
-1. Verify/source the "40+ Central Coast businesses" and "10+ years" bio claims (repeated shared bio block across many posts — fix once, propagates everywhere).
+1. Verify/source the "40+ Central Coast businesses" and "10+ years" bio claims (repeated shared bio block across many posts - fix once, propagates everywhere).
 2. Consider sourcing or softening the $1,500–$4,000/mo market-rate FAQ claim if not independently verifiable.
 3. No structural or house-rule issues; page is otherwise clean.

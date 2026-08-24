@@ -27,7 +27,7 @@
 | Violation | Location |
 |-----------|----------|
 | Author-bio numbers not traceable to VERIFIED FACTS | author-bio-box |
-| None else found (no em dash, no Cisco, no dental, no vendor name, no clearance level, no SIEM, no price contradiction) | — |
+| None else found (no em dash, no Cisco, no dental, no vendor name, no clearance level, no SIEM, no price contradiction) | - |
 
 ## Top Three Fixes
 1. Verify or soften the shared author-bio's unverified specifics (10+ years, DoD title, 40+ businesses).

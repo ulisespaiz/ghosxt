@@ -6,12 +6,12 @@
 ## Claims Table
 | Claim | Value | Location | Status |
 |-------|-------|----------|--------|
-| Author bio (boilerplate) | "10+ years...," "9 certifications...," "Senior Solutions Consultant for the DoD," "40+ Central Coast businesses" | may-2026-patch-tuesday-windows-dns-word-rce-smb.html:186 | UNVERIFIABLE — recurring bio block |
-| Byline title | "Founder, Ghosxt" | :181 | UNVERIFIABLE — VERIFIED FACTS says "Owner and sole engineer" |
-| DoD infrastructure experience (general) | "engineer with DoD infrastructure experience" | :186, :314 | MATCHES — no clearance level stated |
-| CVE/vulnerability counts, CVSS scores, MDASH/Claude Mythos discussion | ~120 fixes, 17 Critical, specific CVE IDs, "16 CVEs credited to MDASH" | throughout | N/A — third-party Microsoft/security-research facts, outside VERIFIED FACTS scope |
-| JSON-LD image field | uses generic fallback `og-image.png` instead of the page-specific OG image | :46 | Minor site bug (not a house-rule violation) — meta `og:image` at :14 correctly points to the page-specific image; JSON-LD `image` field does not match |
-| No pricing claims on this page | — | — | N/A |
+| Author bio (boilerplate) | "10+ years...," "9 certifications...," "Senior Solutions Consultant for the DoD," "40+ Central Coast businesses" | may-2026-patch-tuesday-windows-dns-word-rce-smb.html:186 | UNVERIFIABLE - recurring bio block |
+| Byline title | "Founder, Ghosxt" | :181 | UNVERIFIABLE - VERIFIED FACTS says "Owner and sole engineer" |
+| DoD infrastructure experience (general) | "engineer with DoD infrastructure experience" | :186, :314 | MATCHES - no clearance level stated |
+| CVE/vulnerability counts, CVSS scores, MDASH/Claude Mythos discussion | ~120 fixes, 17 Critical, specific CVE IDs, "16 CVEs credited to MDASH" | throughout | N/A - third-party Microsoft/security-research facts, outside VERIFIED FACTS scope |
+| JSON-LD image field | uses generic fallback `og-image.png` instead of the page-specific OG image | :46 | Minor site bug (not a house-rule violation) - meta `og:image` at :14 correctly points to the page-specific image; JSON-LD `image` field does not match |
+| No pricing claims on this page | - | - | N/A |
 
 ## Legibility Checklist
 | Item | Pass/Fail | Notes |

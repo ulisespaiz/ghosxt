@@ -11,9 +11,9 @@
 | Years of experience | "10+ years in IT infrastructure and cybersecurity" | author-bio-box | UNVERIFIABLE [VERIFY] |
 | Prior role | "Senior Solutions Consultant for the DoD" | author-bio-box | UNVERIFIABLE [VERIFY] |
 | Client count | "built security programs for 40+ Central Coast businesses" | author-bio-box | UNVERIFIABLE [VERIFY] |
-| EDR vendor recommendations | "Common picks for small business include CrowdStrike, SentinelOne, Microsoft Defender for Business, and Huntress" | body, "What to do this week" list | CONTRADICTS — VERIFIED FACTS: "never publish vendor names" for security capabilities |
-| CVE-vulnerable edge vendors | "Fortinet, SonicWall, Citrix, Ivanti" | body, "Unpatched edge devices" section | CONTEXT — factual reference to vendors with disclosed CVEs, not Ghosxt's own stack; lower-confidence violation, flag for PM review |
-| Supply-chain incidents | "2024 Kaseya and 2024 ConnectWise incidents" | body | CONTEXT — historical incident references, not stack endorsement |
+| EDR vendor recommendations | "Common picks for small business include CrowdStrike, SentinelOne, Microsoft Defender for Business, and Huntress" | body, "What to do this week" list | CONTRADICTS - VERIFIED FACTS: "never publish vendor names" for security capabilities |
+| CVE-vulnerable edge vendors | "Fortinet, SonicWall, Citrix, Ivanti" | body, "Unpatched edge devices" section | CONTEXT - factual reference to vendors with disclosed CVEs, not Ghosxt's own stack; lower-confidence violation, flag for PM review |
+| Supply-chain incidents | "2024 Kaseya and 2024 ConnectWise incidents" | body | CONTEXT - historical incident references, not stack endorsement |
 | Free assessment offer | "our free cybersecurity assessment... 30 minutes, no sales pitch" | body, CTA | MATCHES general offer pattern used site-wide |
 
 ## Legibility Checklist
@@ -34,6 +34,6 @@
 | Author-bio numbers not traceable to VERIFIED FACTS ("10+ years," "Senior Solutions Consultant for the DoD," "40+ Central Coast businesses") | author-bio-box |
 
 ## Top Three Fixes
-1. Remove or genericize the named EDR vendor list (CrowdStrike, SentinelOne, Microsoft Defender for Business, Huntress) — replace with a description of the capability, per VERIFIED FACTS instruction to never publish vendor names.
+1. Remove or genericize the named EDR vendor list (CrowdStrike, SentinelOne, Microsoft Defender for Business, Huntress) - replace with a description of the capability, per VERIFIED FACTS instruction to never publish vendor names.
 2. Verify or soften the author-bio's unverified specifics (years, prior DoD title, "40+ businesses" client count) that repeat across every post via the shared bio template.
-3. Consider whether naming Fortinet/SonicWall/Citrix/Ivanti/ConnectWise as vulnerable edge vendors (factual CVE reporting) is acceptable under the vendor-name house rule, or should be genericized too — flag for PM decision.
+3. Consider whether naming Fortinet/SonicWall/Citrix/Ivanti/ConnectWise as vulnerable edge vendors (factual CVE reporting) is acceptable under the vendor-name house rule, or should be genericized too - flag for PM decision.

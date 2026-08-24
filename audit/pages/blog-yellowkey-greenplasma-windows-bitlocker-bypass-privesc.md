@@ -26,7 +26,7 @@
 ## House-Rule Violations
 | Violation | Location |
 |-----------|----------|
-| None found (no em dash, Cisco, dental, clearance level, SIEM, or security-stack vendor names) | — |
+| None found (no em dash, Cisco, dental, clearance level, SIEM, or security-stack vendor names) | - |
 | Minor: og:image points to generic fallback `/assets/img/og-image.png` instead of a post-specific image like sibling posts use | JSON-LD `image` field, line 46 | Cosmetic/social-share inconsistency, not a content-accuracy violation. |
 
 ## Top Three Fixes

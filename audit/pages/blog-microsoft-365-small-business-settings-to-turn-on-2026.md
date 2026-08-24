@@ -7,9 +7,9 @@
 | Claim | Value | Location | Status |
 |-------|-------|----------|--------|
 | Author bio: "10+ years", "9 certifications incl. CySA+, Security+, AZ-104", "Senior Solutions Consultant for the DoD", "40+ Central Coast businesses" | shared bio blurb | line 187 (author-bio-box) | Same as all pages in this group: cert count MATCHES VERIFIED FACTS; "10+ years," job title, and "40+ businesses" are UNVERIFIABLE (not sourced in VERIFIED FACTS) |
-| "an engineer with DoD infrastructure experience" (CTA, meta description) | — | lines 45, 267 | MATCHES VERIFIED FACTS |
-| No clearance level stated | — | whole page | MATCHES house rule |
-| Description of security defaults / MFA / Conditional Access / Defender for Office 365 / Intune | Microsoft's own product feature set (not a Ghosxt capability claim) | throughout (educational content) | Factual description of Microsoft 365 admin settings, not a Ghosxt capability list — no conflict with VERIFIED FACTS capability list |
+| "an engineer with DoD infrastructure experience" (CTA, meta description) | - | lines 45, 267 | MATCHES VERIFIED FACTS |
+| No clearance level stated | - | whole page | MATCHES house rule |
+| Description of security defaults / MFA / Conditional Access / Defender for Office 365 / Intune | Microsoft's own product feature set (not a Ghosxt capability claim) | throughout (educational content) | Factual description of Microsoft 365 admin settings, not a Ghosxt capability list - no conflict with VERIFIED FACTS capability list |
 
 ## Legibility Checklist
 | Item | Pass/Fail | Notes |
@@ -26,6 +26,6 @@
 None found.
 
 ## Top Three Fixes
-1. Verify the shared author-bio numbers ("10+ years," "40+ Central Coast businesses," exact DoD job title) — same blurb repeats site-wide, so one fix here fixes the whole blog.
+1. Verify the shared author-bio numbers ("10+ years," "40+ Central Coast businesses," exact DoD job title) - same blurb repeats site-wide, so one fix here fixes the whole blog.
 2. No content changes needed otherwise; page is clean.
 3. n/a

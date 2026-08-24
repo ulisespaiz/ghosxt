@@ -7,8 +7,8 @@
 | Claim | Value | Location | Status |
 |-------|-------|----------|--------|
 | Author credentials/bio | Sitewide bio: 10+ years, 9 certs, DoD experience, 40+ businesses | line 170 | MATCHES (cert count matches VERIFIED FACTS; years/business-count UNVERIFIABLE, not contradicted) |
-| No pricing claims | — | — | N/A |
-| No capability claims about Ghosxt's own security stack | — | — | N/A (purely educational content about DMARC/domain-monitoring concepts, no vendor or stack claims) |
+| No pricing claims | - | - | N/A |
+| No capability claims about Ghosxt's own security stack | - | - | N/A (purely educational content about DMARC/domain-monitoring concepts, no vendor or stack claims) |
 
 ## Legibility Checklist
 | Item | Pass/Fail | Notes |
@@ -25,4 +25,4 @@
 None found. No em dashes, no Cisco certification claims, no dental/dentist, no security-stack vendor names, no clearance level, no SIEM, no capability outside VERIFIED FACTS, no pricing claims.
 
 ## Top Three Fixes
-No issues found — page is clean.
+No issues found - page is clean.

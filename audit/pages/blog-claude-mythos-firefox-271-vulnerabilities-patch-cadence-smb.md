@@ -30,6 +30,6 @@
 | Security-stack vendor names (EDR market list) | line 334: "CrowdStrike, SentinelOne, Microsoft Defender for Business, and Huntress" |
 
 ## Top Three Fixes
-1. Remove or genericize the vendor list at line 334 ("EDR with vulnerability telemetry... CrowdStrike, SentinelOne, Microsoft Defender for Business, and Huntress") — replace with a description of the capability without naming vendors, per house rule.
+1. Remove or genericize the vendor list at line 334 ("EDR with vulnerability telemetry... CrowdStrike, SentinelOne, Microsoft Defender for Business, and Huntress") - replace with a description of the capability without naming vendors, per house rule.
 2. Tag the Claude Mythos / Firefox 150 statistics as [VERIFY] since they describe a third-party news event not covered by VERIFIED FACTS and cannot be confirmed from this repo.
 3. None else required.

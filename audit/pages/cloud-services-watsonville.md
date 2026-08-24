@@ -6,24 +6,24 @@
 ## Claims Table
 | Claim | Value | Location | Status |
 |-------|-------|----------|--------|
-| Owner/engineer background | "Engineer with DoD infrastructure experience" | cloud-services-watsonville.html:6, 19, 45, 220, 240 | MATCHES — VERIFIED FACTS: "Active DoD clearance and prior DoD/federal contractor infrastructure experience" |
+| Owner/engineer background | "Engineer with DoD infrastructure experience" | cloud-services-watsonville.html:6, 19, 45, 220, 240 | MATCHES - VERIFIED FACTS: "Active DoD clearance and prior DoD/federal contractor infrastructure experience" |
 | Footer background line | "Built by an engineer from the federal contracting world." | cloud-services-watsonville.html:494 | MATCHES |
-| Google reviews count/rating | "26 Google reviews," 5.0 stars | cloud-services-watsonville.html:231, 244 | MATCHES — VERIFIED FACTS: "26 at 5.0 as of August 2026" |
-| "Trusted... since 2021" | Client-serving start year 2021 | cloud-services-watsonville.html:231 | UNVERIFIABLE — VERIFIED FACTS itself flags this year "[VERIFY year]"; the page states it as settled fact. VERIFY WITH ULI. |
-| Response time | "Same-day remote support; on-site within 24–48 hours" | cloud-services-watsonville.html:241 | UNVERIFIABLE — not stated anywhere in VERIFIED FACTS (which only documents a 4-hour notification SLA for critical incidents, a different metric). VERIFY WITH ULI. |
-| Free assessment length | "No-obligation 30-minute IT assessment" | cloud-services-watsonville.html:243, 294 | UNVERIFIABLE — not specified in VERIFIED FACTS |
-| Phone number | (831) 204-0501 | cloud-services-watsonville.html:166, 226, 245, 532 | UNVERIFIABLE — not covered by VERIFIED FACTS, but consistent throughout the page |
-| Pricing | "Cloud and Microsoft 365 management is part of every managed plan: pricing published upfront" (links to /pricing, no dollar figures stated on this page) | cloud-services-watsonville.html:232 | Not contradicted — page states no specific numbers to check against the VERIFIED FACTS pricing table |
+| Google reviews count/rating | "26 Google reviews," 5.0 stars | cloud-services-watsonville.html:231, 244 | MATCHES - VERIFIED FACTS: "26 at 5.0 as of August 2026" |
+| "Trusted... since 2021" | Client-serving start year 2021 | cloud-services-watsonville.html:231 | UNVERIFIABLE - VERIFIED FACTS itself flags this year "[VERIFY year]"; the page states it as settled fact. VERIFY WITH ULI. |
+| Response time | "Same-day remote support; on-site within 24–48 hours" | cloud-services-watsonville.html:241 | UNVERIFIABLE - not stated anywhere in VERIFIED FACTS (which only documents a 4-hour notification SLA for critical incidents, a different metric). VERIFY WITH ULI. |
+| Free assessment length | "No-obligation 30-minute IT assessment" | cloud-services-watsonville.html:243, 294 | UNVERIFIABLE - not specified in VERIFIED FACTS |
+| Phone number | (831) 204-0501 | cloud-services-watsonville.html:166, 226, 245, 532 | UNVERIFIABLE - not covered by VERIFIED FACTS, but consistent throughout the page |
+| Pricing | "Cloud and Microsoft 365 management is part of every managed plan: pricing published upfront" (links to /pricing, no dollar figures stated on this page) | cloud-services-watsonville.html:232 | Not contradicted - page states no specific numbers to check against the VERIFIED FACTS pricing table |
 | M365 hardening detail | "Phishing-resistant MFA, Conditional Access, and a healthy Secure Score" | cloud-services-watsonville.html:257, 323 | MATCHES capability list ("Microsoft 365 hardening with Intune, Defender for Business, and Conditional Access"); "Secure Score" is a native Microsoft feature name, not a third-party vendor |
 | Cloud Backup detail | "Immutable backup for Microsoft 365 (which Microsoft does not do for you), plus Entra ID and Conditional Access" | cloud-services-watsonville.html:277 | MATCHES capability "cloud backup for Microsoft 365 and Google Workspace"; Entra ID is Microsoft's own identity-platform name, already implied by the listed "Conditional Access" capability, not a third-party vendor |
-| Seasonal identity management | Provision/deprovision seasonal hires "in minutes" via Microsoft 365 identity | cloud-services-watsonville.html:89, 273, 335 | UNVERIFIABLE — plausible operational description, not a specific figure to check, no contradiction |
-| Migration approach | "Cutover planned around your schedule, typically over a weekend or in stages," validated before/after | cloud-services-watsonville.html:81, 305, 331 | UNVERIFIABLE — process description, no contradiction |
-| Industries named | Agriculture, food processing, cold storage, distribution (Pajaro Valley) | cloud-services-watsonville.html:45, 220, 286 | UNVERIFIABLE — not enumerated in VERIFIED FACTS (only "excluded: dentists; wineries fine" is stated); no dental/excluded-vertical mention found |
-| Credentials/certifications | none named on this page | — | N/A — page makes no specific credential claims |
-| Cisco certification | none found | — | N/A — no Cisco/Meraki claim present (correct) |
+| Seasonal identity management | Provision/deprovision seasonal hires "in minutes" via Microsoft 365 identity | cloud-services-watsonville.html:89, 273, 335 | UNVERIFIABLE - plausible operational description, not a specific figure to check, no contradiction |
+| Migration approach | "Cutover planned around your schedule, typically over a weekend or in stages," validated before/after | cloud-services-watsonville.html:81, 305, 331 | UNVERIFIABLE - process description, no contradiction |
+| Industries named | Agriculture, food processing, cold storage, distribution (Pajaro Valley) | cloud-services-watsonville.html:45, 220, 286 | UNVERIFIABLE - not enumerated in VERIFIED FACTS (only "excluded: dentists; wineries fine" is stated); no dental/excluded-vertical mention found |
+| Credentials/certifications | none named on this page | - | N/A - page makes no specific credential claims |
+| Cisco certification | none found | - | N/A - no Cisco/Meraki claim present (correct) |
 | Clearance level | none stated, only "DoD infrastructure experience" | cloud-services-watsonville.html:6, 220 | MATCHES (no specific level stated, per house rule) |
-| SIEM / vendor names / dental | none found | — | N/A — no violations on this page |
-| Case examples / testimonials | none present on this page | — | N/A |
+| SIEM / vendor names / dental | none found | - | N/A - no violations on this page |
+| Case examples / testimonials | none present on this page | - | N/A |
 
 ## Legibility Checklist
 | Item | Pass/Fail | Notes |
@@ -45,9 +45,9 @@ No em-dash, Cisco-certification, dental, vendor-name, clearance-level, or SIEM/u
 
 | Violation | Location |
 |-----------|----------|
-| None found | — |
+| None found | - |
 
 ## Top Three Fixes
 1. Move the cookie banner (cloud-services-watsonville.html:107-121) so it no longer sits before `<nav>`/`<main>` in the DOM order.
-2. VERIFY WITH ULI: the "since 2021" founding-year claim (line 231) — VERIFIED FACTS itself flags this year as unconfirmed, so it should not be stated as settled fact.
-3. VERIFY WITH ULI: the response-time claim ("Same-day remote support; on-site within 24–48 hours," line 241) and the "30-minute" free-assessment length (lines 243, 294) — neither is sourced in VERIFIED FACTS.
+2. VERIFY WITH ULI: the "since 2021" founding-year claim (line 231) - VERIFIED FACTS itself flags this year as unconfirmed, so it should not be stated as settled fact.
+3. VERIFY WITH ULI: the response-time claim ("Same-day remote support; on-site within 24–48 hours," line 241) and the "30-minute" free-assessment length (lines 243, 294) - neither is sourced in VERIFIED FACTS.

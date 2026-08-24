@@ -26,6 +26,6 @@
 None found. No em dash, no dental, no Cisco certification claim, no vendor names (Microsoft 365 Defender mentioned generically, matches VERIFIED FACTS capability), no clearance level, no SIEM claim.
 
 ## Top Three Fixes
-1. None required — page is clean against house rules.
+1. None required - page is clean against house rules.
 2. Consider adding a direct link to the /cybersecurity service page alongside the existing cluster links, consistent with sibling posts.
 3. Tag the shared bio block's job title/business count as [VERIFY] (site-wide fix).

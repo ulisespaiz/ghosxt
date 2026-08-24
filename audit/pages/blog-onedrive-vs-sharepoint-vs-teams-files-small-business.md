@@ -6,12 +6,12 @@
 ## Claims Table
 | Claim | Value | Location | Status |
 |-------|-------|----------|--------|
-| Author bio: shared blurb | — | line 194 | Cert count MATCHES VERIFIED FACTS; "10+ years," job title, "40+ businesses" UNVERIFIABLE (see group-wide note) |
-| "engineer with DoD infrastructure experience" (CTA + meta) | — | lines 45, 511 | MATCHES VERIFIED FACTS |
-| No clearance level stated | — | whole page | MATCHES house rule |
+| Author bio: shared blurb | - | line 194 | Cert count MATCHES VERIFIED FACTS; "10+ years," job title, "40+ businesses" UNVERIFIABLE (see group-wide note) |
+| "engineer with DoD infrastructure experience" (CTA + meta) | - | lines 45, 511 | MATCHES VERIFIED FACTS |
+| No clearance level stated | - | whole page | MATCHES house rule |
 | "By default, Microsoft 365 retains the departed user's OneDrive contents for 30 days"; "deleted files are recoverable for 93 days" | Microsoft product-behavior facts | lines 78 (FAQ), 392 | Third-party product facts, out of scope for VERIFIED FACTS |
-| Recommends third-party migration tool "ShareGate" alongside "Microsoft 365 Migration Manager" | tool name | lines 427, 507 | Not a security-stack vendor (data-migration tool, mentioned as general advice, not part of Ghosxt's delivered security capabilities) — not a house-rule violation |
-| "I have walked into enough Microsoft 365 tenants..."; "About once a week, a Central Coast business owner asks me..." | first-person track-record claims | lines 212, 364 | UNVERIFIABLE — anecdotal frequency/volume claims not sourced in VERIFIED FACTS |
+| Recommends third-party migration tool "ShareGate" alongside "Microsoft 365 Migration Manager" | tool name | lines 427, 507 | Not a security-stack vendor (data-migration tool, mentioned as general advice, not part of Ghosxt's delivered security capabilities) - not a house-rule violation |
+| "I have walked into enough Microsoft 365 tenants..."; "About once a week, a Central Coast business owner asks me..." | first-person track-record claims | lines 212, 364 | UNVERIFIABLE - anecdotal frequency/volume claims not sourced in VERIFIED FACTS |
 
 ## Legibility Checklist
 | Item | Pass/Fail | Notes |

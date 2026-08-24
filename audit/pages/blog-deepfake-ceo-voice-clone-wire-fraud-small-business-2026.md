@@ -7,7 +7,7 @@
 | Claim | Value | Location | Status |
 |-------|-------|----------|--------|
 | Founder credentials/bio | "10+ years... 9 certifications including CySA+, Security+, and AZ-104... Senior Solutions Consultant for the DoD... 40+ Central Coast businesses" | author-bio-box, line 194 | MATCHES cert count (9); "Senior Solutions Consultant for the DoD" and "40+ businesses" are invented specifics not in VERIFIED FACTS |
-| Illustrative wire-fraud amount | "wire $48,000 to this account" | line 218 | Not a Ghosxt claim — hypothetical narrative scenario, not a factual claim about Ghosxt; no contradiction |
+| Illustrative wire-fraud amount | "wire $48,000 to this account" | line 218 | Not a Ghosxt claim - hypothetical narrative scenario, not a factual claim about Ghosxt; no contradiction |
 | IC3.gov recovery guidance | "report it to the FBI's Internet Crime Complaint Center (IC3.gov)" | lines 110, 293 | UNVERIFIABLE (third-party fact, not Ghosxt-specific) |
 
 ## Legibility Checklist
@@ -29,6 +29,6 @@
 No em dash, no Cisco claim, no dental mention, no security-stack vendor names, no clearance level, no SIEM claim, no pricing contradicting published tiers.
 
 ## Top Three Fixes
-1. Tag the "Senior Solutions Consultant for the DoD" title and "40+ Central Coast businesses" figure in the shared author-bio-box as [VERIFY] or remove — site-wide fix.
+1. Tag the "Senior Solutions Consultant for the DoD" title and "40+ Central Coast businesses" figure in the shared author-bio-box as [VERIFY] or remove - site-wide fix.
 2. No page-specific issues found; page is otherwise clean.
 3. No further action.

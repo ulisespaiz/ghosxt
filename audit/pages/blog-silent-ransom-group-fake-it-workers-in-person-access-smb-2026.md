@@ -11,7 +11,7 @@
 | Prior role | "Senior Solutions Consultant for the DoD" | author-bio-box | UNVERIFIABLE [VERIFY] |
 | Client count | "built security programs for 40+ Central Coast businesses" | author-bio-box | UNVERIFIABLE [VERIFY] |
 | Threat intelligence claims (Silent Ransom Group / Luna Moth, Mandiant, FBI warnings, quotes) | Detailed attribution and quotes | body + FAQ | Not a Ghosxt-specific claim; external attributed reporting, outside VERIFIED FACTS scope, not independently verified here |
-| "Dozens of firms were hit from January through May 2026" | Specific claim | quickfix aside | UNVERIFIABLE [VERIFY] — no citation given |
+| "Dozens of firms were hit from January through May 2026" | Specific claim | quickfix aside | UNVERIFIABLE [VERIFY] - no citation given |
 
 ## Legibility Checklist
 | Item | Pass/Fail | Notes |
@@ -27,10 +27,10 @@
 ## House-Rule Violations
 | Violation | Location |
 |-----------|----------|
-| "Dental" mentioned as an example vertical facing this attack — borderline: appears in generic educational context listing at-risk business types ("Medical and dental practices, accounting and tax firms, property management companies..."), not framed as a Ghosxt client. Repeated 3x (FAQ schema x2, body x1, FAQ visible x1). Flag for PM review given the house-rule instruction to scan for any dental mention. | FAQ JSON-LD "We're not a law firm..." answer (line 94), body "Not just law firms" section (line 250), visible FAQ answer (line 303) |
+| "Dental" mentioned as an example vertical facing this attack - borderline: appears in generic educational context listing at-risk business types ("Medical and dental practices, accounting and tax firms, property management companies..."), not framed as a Ghosxt client. Repeated 3x (FAQ schema x2, body x1, FAQ visible x1). Flag for PM review given the house-rule instruction to scan for any dental mention. | FAQ JSON-LD "We're not a law firm..." answer (line 94), body "Not just law firms" section (line 250), visible FAQ answer (line 303) |
 | Author-bio numbers not traceable to VERIFIED FACTS | author-bio-box |
 
 ## Top Three Fixes
 1. **Flag for PM review**: "medical and dental practices" appears as an example at-risk vertical three times. It reads as educational/universal-risk framing (not a client claim), but given the strict house rule ("dental must not appear... anywhere"), recommend either removing "dental" from these lists or confirming with PM that this usage is acceptable.
 2. Verify or soften the shared author-bio's unverified specifics (10+ years, DoD title, 40+ businesses).
-3. Source or remove the unverified statistic "dozens of firms were hit from January through May 2026" — no citation provided.
+3. Source or remove the unverified statistic "dozens of firms were hit from January through May 2026" - no citation provided.

@@ -8,7 +8,7 @@
 |-------|-------|----------|--------|
 | Cert count in author bio | "9 certifications including CySA+, Security+, and AZ-104" | line 178 | MATCHES |
 | Prior role / track record | "Senior Solutions Consultant for the DoD," "40+ Central Coast businesses" | line 178 | UNVERIFIABLE |
-| "dental" false-positive check | grep hit was "accidentally" (line 189), not the word "dental" | line 189 | Not a violation — false positive, no dental client/vertical language present |
+| "dental" false-positive check | grep hit was "accidentally" (line 189), not the word "dental" | line 189 | Not a violation - false positive, no dental client/vertical language present |
 
 ## Legibility Checklist (blog-adapted)
 | Item | Pass/Fail | Notes |
@@ -27,4 +27,4 @@ None found.
 ## Top Three Fixes
 1. Tag or verify the "Senior Solutions Consultant for the DoD" / "40+ Central Coast businesses" bio claims.
 2. None otherwise urgent.
-3. —
+3. -

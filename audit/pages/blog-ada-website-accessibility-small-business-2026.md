@@ -25,6 +25,6 @@
 None found. No em dash, no Cisco certification claim, no dental mention, no security-stack vendor names, no clearance level, no SIEM/uncleared capability claim, no pricing contradicting published tiers.
 
 ## Top Three Fixes
-1. None required — page is clean against house rules and legibility checklist.
+1. None required - page is clean against house rules and legibility checklist.
 2. Consider tagging the "Senior Solutions Consultant for the DoD" job title and "40+ Central Coast businesses" figure as [VERIFY] since neither is itemized in VERIFIED FACTS (this bio block is identical across all blog posts, so fixing it once fixes it everywhere).
 3. No further action.

@@ -6,22 +6,22 @@
 ## Claims Table
 | Claim | Value | Location | Status |
 |-------|-------|----------|--------|
-| Owner/engineer background | "an engineer with DoD infrastructure experience"; "the same standard we held inside DoD networks" | it-help-carmel-valley.html:13, 19, 44, 72 (JSON-LD), 308 (visible FAQ) | MATCHES — consistent with VERIFIED FACTS ("prior DoD/federal contractor infrastructure experience"); no clearance level stated anywhere, including in the "DoD networks" phrasing. |
-| Footer tagline | "Government-grade IT for small business." | it-help-carmel-valley.html:351 | UNVERIFIABLE — marketing gloss, not itemized separately. |
+| Owner/engineer background | "an engineer with DoD infrastructure experience"; "the same standard we held inside DoD networks" | it-help-carmel-valley.html:13, 19, 44, 72 (JSON-LD), 308 (visible FAQ) | MATCHES - consistent with VERIFIED FACTS ("prior DoD/federal contractor infrastructure experience"); no clearance level stated anywhere, including in the "DoD networks" phrasing. |
+| Footer tagline | "Government-grade IT for small business." | it-help-carmel-valley.html:351 | UNVERIFIABLE - marketing gloss, not itemized separately. |
 | Footer copyright line | "Built by an engineer from the federal contracting world." | it-help-carmel-valley.html:475 | MATCHES. |
-| Staffing model: "Real people who answer" (plural) on a "Live, US-Based Help Desk" | service card | it-help-carmel-valley.html:246-248 | UNVERIFIABLE — tension with VERIFIED FACTS "Owner and sole engineer: Ulises Paiz." VERIFY WITH ULI. |
-| Ticket resolution time | "most tickets resolved the same hour" | it-help-carmel-valley.html:247 | UNVERIFIABLE — not itemized in VERIFIED FACTS. |
+| Staffing model: "Real people who answer" (plural) on a "Live, US-Based Help Desk" | service card | it-help-carmel-valley.html:246-248 | UNVERIFIABLE - tension with VERIFIED FACTS "Owner and sole engineer: Ulises Paiz." VERIFY WITH ULI. |
+| Ticket resolution time | "most tickets resolved the same hour" | it-help-carmel-valley.html:247 | UNVERIFIABLE - not itemized in VERIFIED FACTS. |
 | Remote resolution time | "Most issues are resolved remotely the same business day" | it-help-carmel-valley.html:88, 287, 316 | UNVERIFIABLE. |
 | On-site response time | "same-day or next-day for non-emergencies" | it-help-carmel-valley.html:88, 251, 287, 316 | UNVERIFIABLE. |
 | Free assessment length | "30 minutes with a senior engineer" | it-help-carmel-valley.html:276 | UNVERIFIABLE. |
-| Wire-fraud email hardening | "harden email with enforced multi-factor authentication and anti-spoofing, add impersonation and banking-change alerts" | it-help-carmel-valley.html:80, 312 (JSON-LD + visible FAQ) | UNVERIFIABLE / flagged as unlisted capability — enforced MFA loosely maps to VERIFIED FACTS' "phishing-resistant MFA" and Conditional Access, but anti-spoofing configuration and impersonation/banking-change alerts are not itemized on the capabilities list. VERIFY WITH ULI. |
-| Winery/booking-system support | "point-of-sale, wine-club, and booking systems" | it-help-carmel-valley.html:64, 254-255, 304 | UNVERIFIABLE / flagged as unlisted capability — POS and booking-system support is not itemized on the VERIFIED FACTS capabilities list. VERIFY WITH ULI. |
-| Carmel Valley AVA founding date | "its own federally recognized wine appellation since 1983" | it-help-carmel-valley.html:235 | UNVERIFIABLE — third-party historical/geographic fact not covered by VERIFIED FACTS; not about Ghosxt itself but still a specific, checkable date claim. |
-| Location/base | "We cover the Peninsula on-site and work discreetly" | it-help-carmel-valley.html:64 | MATCHES — consistent with VERIFIED FACTS "Based in Salinas, CA" and plausible regional coverage. |
-| Google reviews count/rating, founding year | not present on this page | — | N/A |
-| Credentials/certifications | not named on this page | — | N/A |
-| Cisco certification, dental, clearance level, vendor/product names, SIEM | none found | — | N/A — correctly absent |
-| Case examples / testimonials | none present | — | N/A |
+| Wire-fraud email hardening | "harden email with enforced multi-factor authentication and anti-spoofing, add impersonation and banking-change alerts" | it-help-carmel-valley.html:80, 312 (JSON-LD + visible FAQ) | UNVERIFIABLE / flagged as unlisted capability - enforced MFA loosely maps to VERIFIED FACTS' "phishing-resistant MFA" and Conditional Access, but anti-spoofing configuration and impersonation/banking-change alerts are not itemized on the capabilities list. VERIFY WITH ULI. |
+| Winery/booking-system support | "point-of-sale, wine-club, and booking systems" | it-help-carmel-valley.html:64, 254-255, 304 | UNVERIFIABLE / flagged as unlisted capability - POS and booking-system support is not itemized on the VERIFIED FACTS capabilities list. VERIFY WITH ULI. |
+| Carmel Valley AVA founding date | "its own federally recognized wine appellation since 1983" | it-help-carmel-valley.html:235 | UNVERIFIABLE - third-party historical/geographic fact not covered by VERIFIED FACTS; not about Ghosxt itself but still a specific, checkable date claim. |
+| Location/base | "We cover the Peninsula on-site and work discreetly" | it-help-carmel-valley.html:64 | MATCHES - consistent with VERIFIED FACTS "Based in Salinas, CA" and plausible regional coverage. |
+| Google reviews count/rating, founding year | not present on this page | - | N/A |
+| Credentials/certifications | not named on this page | - | N/A |
+| Cisco certification, dental, clearance level, vendor/product names, SIEM | none found | - | N/A - correctly absent |
+| Case examples / testimonials | none present | - | N/A |
 
 ## Legibility Checklist
 | Item | Pass/Fail | Notes |

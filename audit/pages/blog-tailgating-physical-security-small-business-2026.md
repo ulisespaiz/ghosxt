@@ -7,8 +7,8 @@
 | Claim | Value | Location | Status |
 |-------|-------|----------|--------|
 | Author credentials/bio | Sitewide bio: 10+ years, 9 certs, DoD experience, 40+ businesses | line 178 | MATCHES (cert count matches VERIFIED FACTS; years/business-count UNVERIFIABLE, not contradicted) |
-| No pricing claims | — | — | N/A |
-| No capability claims about Ghosxt's own security stack | — | — | N/A (purely physical-security educational content) |
+| No pricing claims | - | - | N/A |
+| No capability claims about Ghosxt's own security stack | - | - | N/A (purely physical-security educational content) |
 
 ## Legibility Checklist
 | Item | Pass/Fail | Notes |
@@ -25,6 +25,6 @@
 None found. No em dashes, no Cisco certification claims, no dental/dentist, no security-stack vendor names, no clearance level, no SIEM, no capability outside VERIFIED FACTS, no pricing claims.
 
 ## Top Three Fixes
-1. Add a link to /cybersecurity (or a relevant service page) — this page currently links only to other blog posts, with no path to a service/pricing page.
+1. Add a link to /cybersecurity (or a relevant service page) - this page currently links only to other blog posts, with no path to a service/pricing page.
 2. No other issues found.
 3. None.

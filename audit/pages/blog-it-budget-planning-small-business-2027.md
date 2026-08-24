@@ -6,11 +6,11 @@
 ## Claims Table
 | Claim | Value | Location | Status |
 |-------|-------|----------|--------|
-| Author bio (boilerplate) | "10+ years...," "9 certifications including CySA+, Security+, and AZ-104," "Senior Solutions Consultant for the DoD," "40+ Central Coast businesses" | it-budget-planning-small-business-2027.html:170 | UNVERIFIABLE — recurring bio block, not in VERIFIED FACTS |
-| Byline title | "Founder, Ghosxt" | :165, :189 | UNVERIFIABLE — VERIFIED FACTS says "Owner and sole engineer" |
-| DoD infrastructure experience (general) | "engineer with DoD infrastructure experience" | :170, :240 | MATCHES — no clearance level stated |
-| IT budget benchmark | "somewhere between 3% and 7% of revenue on technology" | :209, :230 (FAQ) | N/A — generic industry benchmark, not a Ghosxt-specific or pricing claim |
-| No pricing claims for Ghosxt's own tiers on this page | — | — | N/A — page links out to the cost-guide post rather than restating tier pricing |
+| Author bio (boilerplate) | "10+ years...," "9 certifications including CySA+, Security+, and AZ-104," "Senior Solutions Consultant for the DoD," "40+ Central Coast businesses" | it-budget-planning-small-business-2027.html:170 | UNVERIFIABLE - recurring bio block, not in VERIFIED FACTS |
+| Byline title | "Founder, Ghosxt" | :165, :189 | UNVERIFIABLE - VERIFIED FACTS says "Owner and sole engineer" |
+| DoD infrastructure experience (general) | "engineer with DoD infrastructure experience" | :170, :240 | MATCHES - no clearance level stated |
+| IT budget benchmark | "somewhere between 3% and 7% of revenue on technology" | :209, :230 (FAQ) | N/A - generic industry benchmark, not a Ghosxt-specific or pricing claim |
+| No pricing claims for Ghosxt's own tiers on this page | - | - | N/A - page links out to the cost-guide post rather than restating tier pricing |
 
 ## Legibility Checklist
 | Item | Pass/Fail | Notes |

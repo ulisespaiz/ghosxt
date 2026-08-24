@@ -6,11 +6,11 @@
 ## Claims Table
 | Claim | Value | Location | Status |
 |-------|-------|----------|--------|
-| Author bio (boilerplate) | "10+ years...," "9 certifications including CySA+, Security+, and AZ-104," "Senior Solutions Consultant for the DoD," "40+ Central Coast businesses" | it-asset-management-small-business-2026.html:170 | UNVERIFIABLE — same recurring bio block, not in VERIFIED FACTS |
-| Byline title | "Founder, Ghosxt" | :165, :181 | UNVERIFIABLE — VERIFIED FACTS says "Owner and sole engineer" |
-| DoD infrastructure experience (general) | "engineer with DoD infrastructure experience" | :170, :226 | MATCHES — no clearance level stated |
-| CIS Controls reference | "first control in the CIS Critical Security Controls framework" | :180, :191 | N/A — general industry reference, not a Ghosxt-specific capability claim |
-| No pricing claims on this page | — | — | N/A |
+| Author bio (boilerplate) | "10+ years...," "9 certifications including CySA+, Security+, and AZ-104," "Senior Solutions Consultant for the DoD," "40+ Central Coast businesses" | it-asset-management-small-business-2026.html:170 | UNVERIFIABLE - same recurring bio block, not in VERIFIED FACTS |
+| Byline title | "Founder, Ghosxt" | :165, :181 | UNVERIFIABLE - VERIFIED FACTS says "Owner and sole engineer" |
+| DoD infrastructure experience (general) | "engineer with DoD infrastructure experience" | :170, :226 | MATCHES - no clearance level stated |
+| CIS Controls reference | "first control in the CIS Critical Security Controls framework" | :180, :191 | N/A - general industry reference, not a Ghosxt-specific capability claim |
+| No pricing claims on this page | - | - | N/A |
 
 ## Legibility Checklist
 | Item | Pass/Fail | Notes |

@@ -10,7 +10,7 @@
 | Headline statistic | "400 vulnerabilities... 42 rated Critical," released "August 11, 2026" | title, TL;DR, body, FAQ | UNVERIFIABLE (third-party Microsoft/BleepingComputer data, sourced with citations at bottom of page; not a Ghosxt claim) |
 | Zero-day attribution | CVE-2026-68820 exploitation attributed to "the Lazarus group, a North Korean state operation" per Check Point | body + FAQ | UNVERIFIABLE (third-party attribution, sourced) |
 | KB/CVE numbers throughout | Multiple specific CVE and KB identifiers | body | UNVERIFIABLE (external technical facts, sourced with outbound citations) |
-| Managed patch deployment description | "ring-based" deployment, ~48-hour soak, RMM verification | body, ~lines 255-261 | Describes Ghosxt's own patch-management process in generic operational terms — no vendor names, MATCHES house-rule of describing capabilities without naming vendors |
+| Managed patch deployment description | "ring-based" deployment, ~48-hour soak, RMM verification | body, ~lines 255-261 | Describes Ghosxt's own patch-management process in generic operational terms - no vendor names, MATCHES house-rule of describing capabilities without naming vendors |
 
 ## Legibility Checklist
 | Item | Pass/Fail | Notes |
@@ -27,6 +27,6 @@
 None found. No em dash, no dental, no Cisco certification claim, no vendor names for Ghosxt's own security stack (Microsoft product names are the subject matter, not a stack disclosure), no clearance level, no SIEM claim, no pricing.
 
 ## Top Three Fixes
-1. None required — page is clean against house rules; heavy external CVE/statistic sourcing is appropriately cited with outbound links.
+1. None required - page is clean against house rules; heavy external CVE/statistic sourcing is appropriately cited with outbound links.
 2. Tag the shared bio block's job title/business count as [VERIFY] (site-wide fix).
 3. No further action.

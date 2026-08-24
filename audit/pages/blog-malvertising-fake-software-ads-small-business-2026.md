@@ -6,11 +6,11 @@
 ## Claims Table
 | Claim | Value | Location | Status |
 |-------|-------|----------|--------|
-| Author bio (boilerplate) | "10+ years...," "9 certifications...," "Senior Solutions Consultant for the DoD," "40+ Central Coast businesses" | malvertising-fake-software-ads-small-business-2026.html:170 | UNVERIFIABLE — recurring bio block |
-| Byline title | "Founder, Ghosxt" | :165 | UNVERIFIABLE — VERIFIED FACTS says "Owner and sole engineer" |
-| DoD infrastructure experience (general) | "engineer with DoD infrastructure experience" | :170, :235 | MATCHES — no clearance level stated |
-| Capabilities referenced as defenses | DNS/web filtering, EDR with behavioral detection, managed software deployment, removing local admin rights | :182, :204-209 | MATCHES — all within the VERIFIED FACTS capabilities list (DNS/web filtering, EDR-equivalent detection described generically without vendor names) |
-| No pricing claims on this page | — | — | N/A |
+| Author bio (boilerplate) | "10+ years...," "9 certifications...," "Senior Solutions Consultant for the DoD," "40+ Central Coast businesses" | malvertising-fake-software-ads-small-business-2026.html:170 | UNVERIFIABLE - recurring bio block |
+| Byline title | "Founder, Ghosxt" | :165 | UNVERIFIABLE - VERIFIED FACTS says "Owner and sole engineer" |
+| DoD infrastructure experience (general) | "engineer with DoD infrastructure experience" | :170, :235 | MATCHES - no clearance level stated |
+| Capabilities referenced as defenses | DNS/web filtering, EDR with behavioral detection, managed software deployment, removing local admin rights | :182, :204-209 | MATCHES - all within the VERIFIED FACTS capabilities list (DNS/web filtering, EDR-equivalent detection described generically without vendor names) |
+| No pricing claims on this page | - | - | N/A |
 
 ## Legibility Checklist
 | Item | Pass/Fail | Notes |

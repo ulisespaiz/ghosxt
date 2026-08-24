@@ -7,8 +7,8 @@
 | Claim | Value | Location | Status |
 |-------|-------|----------|--------|
 | Author credentials/bio | Sitewide bio: 10+ years, 9 certs, DoD experience, 40+ businesses | line 178 | MATCHES (cert count matches VERIFIED FACTS; years/business-count UNVERIFIABLE, not contradicted) |
-| "EDR" reference | link anchor text "EDR vs. antivirus post" | line 221 | Not a capability claim — it's a hyperlink to another blog post's title, not a statement that Ghosxt delivers EDR. Not flagged. |
-| No pricing claims | — | — | N/A |
+| "EDR" reference | link anchor text "EDR vs. antivirus post" | line 221 | Not a capability claim - it's a hyperlink to another blog post's title, not a statement that Ghosxt delivers EDR. Not flagged. |
+| No pricing claims | - | - | N/A |
 
 ## Legibility Checklist
 | Item | Pass/Fail | Notes |
@@ -25,6 +25,6 @@
 None found. No em dashes, no Cisco certification claims, no dental/dentist, no security-stack vendor names, no clearance level, no SIEM, no capability outside VERIFIED FACTS, no pricing claims.
 
 ## Top Three Fixes
-1. Add a direct link to /cybersecurity or /managed-it-services in the "Where this fits" section — currently only links to sibling blog posts, not a core service page.
+1. Add a direct link to /cybersecurity or /managed-it-services in the "Where this fits" section - currently only links to sibling blog posts, not a core service page.
 2. No violations to fix otherwise.
 3. None.
