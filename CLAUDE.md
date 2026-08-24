@@ -21,6 +21,18 @@ Branch note: in this remote session the working branch is `claude/ghosxt-ai-sear
 
 No CSS, font, color, or layout changes. No em dashes in anything written. No new city or vertical pages in this pass. Hidden crawlable text uses an sr-only utility, never display:none. Anything uncertain is tagged [VERIFY]. Never invent a client, a number, a story, a quote, or a capability. No vendor names, no clearance level, no dental, no Cisco certification. Work on branch geo-audit. Only the PM commits.
 
+## PHASE 4 DECISIONS (approved by Uli; these govern all fixes)
+
+- D1 Dental: retarget to medical-only. The HIPAA compliance page and the dental blog post are reframed to medical practices only (blog post gets a new medical-only slug plus a 301 from the old URL). The healthcare page's dental case example is rewritten as a generic healthcare practice. All one-line "healthcare and dental" industry mentions are removed site-wide, including JSON-LD and FAQ mirrors.
+- D2 Vendor names: strip our-stack names only. Remove every vendor name describing what Ghosxt deploys or delivers (Huntress, Veeam, Datto, Wasabi, Backblaze, pfSense, OPNsense, Sophos, WatchGuard, UniFi, Aruba, Hyper-V, VMware in stack context). Keep educational tool lists in blog posts and client-side software names (Yardi, SolidWorks, ELD vendors) that describe the reader's environment. Cisco or Meraki equipment mentions stay only if describing equipment we deploy and get tagged [VERIFY].
+- D3 Capabilities: reword to the VERIFIED FACTS list. EDR wording becomes "managed detection and response with a 24/7 SOC"; "immutable backups" becomes "cloud backup for Microsoft 365 and Google Workspace"; SIEM and ITDR claims are removed; in-house penetration testing, image-backup RTO/RPO promises, Azure service menus, CMMC SSP authoring, and ransomware recovery as a named service are reworded to verified phrasing, and anything that cannot be reworded without gutting a page gets tagged [VERIFY] and listed for Uli.
+- D4 Response time: the only stated commitment is the 4-hour notification on actual or reasonably suspected critical incidents, plus "you talk directly to the owner." All other response-time promises (instant, same hour, same day, 24-48h) are removed; any remaining response-time line is tagged [VERIFY].
+- D5 City addresses: fabricated LocalBusiness street addresses and geo-coordinates on city pages are replaced with the real Salinas-based organization plus areaServed for that city.
+- D6 Bio numbers: "10+ years", "40+ Central Coast businesses", "Senior Solutions Consultant for the DoD", "multinational corporation" and similar unverified specifics are removed or tagged [VERIFY]; credentials follow VERIFIED FACTS exactly.
+- D7 sr-only: adding one sr-only utility class to the shared CSS is approved (the sole permitted CSS addition).
+- D8 AggregateRating: skip; keep the visible "26 Google reviews" text only.
+- D9 At-a-glance: extend the key-facts block to all root pages missing it, using the existing key-facts markup and styles.
+
 ## PAGE REPORT TEMPLATE
 
 Each page audit report is written to `/audit/pages/<route-slug>.md` and follows this structure:
