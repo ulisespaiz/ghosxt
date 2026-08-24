@@ -21,13 +21,13 @@
 | BlogPosting JSON-LD with datePublished, dateModified, author as Person | Pass | |
 | Exactly one H1 | Pass | |
 | Title, meta description, canonical present | Pass | |
-| FAQ JSON-LD matching visible text | Pass | 4 Q&A pairs verbatim-match body FAQ (a 5th FAQ, "Is it worth hiring a Bay Area IT company," appears in body but not in JSON-LD — see violation-adjacent note below) |
+| FAQ JSON-LD matching visible text | Fail | JSON-LD has 5 Question entries (all verbatim-matching); visible body has 6 FAQ `<h3>` blocks — "Is it worth hiring a Bay Area IT company instead?" (line 331) is in the body but missing from the FAQPage structured data |
 | Internal links to relevant service pages | Pass | Links to /pricing, /managed-it-services, /ctpat, plus a dedicated "Related reading" block linking to Salinas-cluster posts |
 
 ## House-Rule Violations
 None found. No em dash, no dental, no Cisco certification claim, no vendor names, no clearance level, no SIEM claim.
 
 ## Top Three Fixes
-1. The visible FAQ section has 5 questions but the FAQPage JSON-LD only lists 4 ("Is it worth hiring a Bay Area IT company instead?" is missing from the structured data) — add the 5th Q&A to the JSON-LD so it matches the visible text.
+1. The visible FAQ section has 6 questions but the FAQPage JSON-LD only lists 5 ("Is it worth hiring a Bay Area IT company instead?" is missing from the structured data) — add that Q&A to the JSON-LD so it matches the visible text.
 2. Since "How Ghosxt fits" explicitly discusses the company's own pricing model, consider citing the actual published tier names/numbers (Core $125 / Secure Growth $175 / Compliance & Continuity $250) rather than leaving readers to infer them from the generic "$125-$200 Salinas market rate" figure used throughout.
 3. Tag the shared bio block's job title/business count as [VERIFY] (site-wide fix).

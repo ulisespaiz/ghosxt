@@ -1,0 +1,30 @@
+# Page Audit: /blog/fake-remote-employee-deepfake-hiring-fraud-small-business-2026.html
+
+## Route
+/blog/fake-remote-employee-deepfake-hiring-fraud-small-business-2026.html
+
+## Claims Table
+| Claim | Value | Location | Status |
+|-------|-------|----------|--------|
+| Cert count in author bio | "9 certifications including CySA+, Security+, and AZ-104" | line 170 | MATCHES |
+| Prior role | "Senior Solutions Consultant for the DoD" | line 170 | UNVERIFIABLE |
+| Track record | "built security programs for 40+ Central Coast businesses" | line 170 | UNVERIFIABLE |
+
+## Legibility Checklist (blog-adapted)
+| Item | Pass/Fail | Notes |
+|------|-----------|-------|
+| Visible byline naming the author | Pass | line 165 |
+| Visible publish date | Pass | "August 18, 2026" (line 157) |
+| BlogPosting JSON-LD: datePublished, dateModified, author as Person | Pass | lines 47-50 |
+| Exactly one H1 | Pass | line 163 |
+| Title, meta description, canonical present | Pass | lines 6-8 |
+| FAQ JSON-LD matching visible text | Pass | 3 Q&As in schema (lines 63-90) match 3 visible FAQs (lines 215-222) |
+| Internal links to relevant service pages | Pass | /help-desk-it-support plus cross-links |
+
+## House-Rule Violations
+None found.
+
+## Top Three Fixes
+1. Tag or verify the "Senior Solutions Consultant for the DoD" / "40+ Central Coast businesses" bio claims against VERIFIED FACTS.
+2. None otherwise urgent.
+3. —
