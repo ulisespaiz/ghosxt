@@ -231,7 +231,7 @@
                 "name": "Should we move to Azure or stay on-prem?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Sometimes the answer is hybrid. Some workloads belong in Azure, some belong on a Hyper-V or VMware host in your office. We make the call based on your data, your latency requirements, your line-of-business apps, and your budget, not based on what we sell."
+                  "text": "Sometimes the answer is hybrid. Some workloads belong in Azure, some belong on an on-premises virtualization host in your office. We make the call based on your data, your latency requirements, your line-of-business apps, and your budget, not based on what we sell."
                 }
               },
               {
@@ -468,7 +468,7 @@
         <div class="container">
           <h2>What "cloud" actually means for a small business</h2>
           <p>Stripped of the marketing, three things matter. First, productivity software you rent rather than install: Microsoft 365 with Exchange Online, SharePoint, Teams, OneDrive, and the Office apps. Second, infrastructure you rent rather than buy: Azure virtual machines, storage accounts, and managed databases that replace a server in a closet. Third, the identity layer that makes everything else work: Microsoft Entra ID (formerly Azure AD), the directory that decides which user can do what across every cloud service you use.</p>
-          <p>The cloud is not a single thing and it is not always the right answer. Some workloads belong in M365. Some belong on a Hyper-V host on your premises. Some belong in Azure. The decision is rarely about technology and almost always about latency, data sovereignty, line-of-business app compatibility, and cost over a five-year window. We make the call honestly because we are not selling cloud licenses on commission.</p>
+          <p>The cloud is not a single thing and it is not always the right answer. Some workloads belong in M365. Some belong on an on-premises virtualization host<!-- [VERIFY] -->. Some belong in Azure. The decision is rarely about technology and almost always about latency, data sovereignty, line-of-business app compatibility, and cost over a five-year window. We make the call honestly because we are not selling cloud licenses on commission.</p>
         </div>
       </section>
 
@@ -529,13 +529,13 @@
       <section class="location-section">
         <div class="container">
           <h2>Azure and hybrid environments</h2>
-          <p>Azure is the right answer for some workloads and overkill for others. We design hybrid environments where it makes sense: line-of-business apps that live happily on a Hyper-V host in your office while authentication, email, and file storage live in M365 and Azure. We also handle full lift-and-shift migrations to Azure VMs, with Azure Site Recovery for disaster recovery and Azure Backup for long-term retention.</p>
+          <p>Azure is the right answer for some workloads and overkill for others. We design hybrid environments where it makes sense: line-of-business apps that live happily on an on-premises virtualization host<!-- [VERIFY] --> in your office while authentication, email, and file storage live in M365 and Azure. We also handle full lift-and-shift migrations to Azure VMs, with Azure Site Recovery for disaster recovery and Azure Backup for long-term retention.</p>
           <p>The pieces we deploy:</p>
           <ul class="industries-list">
             <li>Microsoft Entra ID with Conditional Access, hybrid join for on-prem AD environments, and Privileged Identity Management for admin accounts</li>
             <li>Azure Virtual Machines, sized correctly the first time, with reserved-instance pricing where it pays off</li>
             <li>Azure Files and Azure Blob Storage replacing aging on-prem file servers</li>
-            <li>Azure Site Recovery as a warm-DR target for critical Hyper-V or VMware workloads</li>
+            <li>Azure Site Recovery as a warm-DR target for critical on-premises virtualization workloads<!-- [VERIFY] --></li>
             <li>Azure Backup with long-term retention for compliance-driven clients</li>
             <li>Azure Virtual Desktop or Windows 365 for distributed teams and contractor access</li>
           </ul>
@@ -553,7 +553,7 @@
       <section class="location-section">
         <div class="container">
           <h2>What we will not do</h2>
-          <p>We will not move you to the cloud because it sounds modern. If a workload runs better and cheaper on a Hyper-V host in your closet, that is where it stays. We will not lift-and-shift a janky on-prem app to Azure to inflate the project; we will refactor what makes sense and leave the rest alone. We will not deploy Microsoft Copilot for Business on a tenant that has not been hardened first; that is a data-leak headline waiting to happen. We will not lock you into our tenant ownership. Everything we deploy, you own and can take with you.</p>
+          <p>We will not move you to the cloud because it sounds modern. If a workload runs better and cheaper on an on-premises virtualization host<!-- [VERIFY] --> in your closet, that is where it stays. We will not lift-and-shift a janky on-prem app to Azure to inflate the project; we will refactor what makes sense and leave the rest alone. We will not deploy Microsoft Copilot for Business on a tenant that has not been hardened first; that is a data-leak headline waiting to happen. We will not lock you into our tenant ownership. Everything we deploy, you own and can take with you.</p>
         </div>
       </section>
 
@@ -577,7 +577,7 @@
           </details>
           <details>
             <summary>Should we move to Azure or stay on-prem?</summary>
-            <div class="answer">Sometimes the answer is hybrid. Some workloads belong in Azure, some belong on a Hyper-V or VMware host in your office. We make the call based on your data, your latency requirements, your line-of-business apps, and your budget, not based on what we sell.</div>
+            <div class="answer">Sometimes the answer is hybrid. Some workloads belong in Azure, some belong on an on-premises virtualization host in your office<!-- [VERIFY] -->. We make the call based on your data, your latency requirements, your line-of-business apps, and your budget, not based on what we sell.</div>
           </details>
           <details>
             <summary>Do you handle SharePoint and Teams structure, or just email?</summary>
