@@ -41,6 +41,7 @@ Key facts:
 - [Trucking & Logistics IT](https://ghosxt.com/trucking-it-services): C-TPAT, ELD, fleet, and dispatch systems.
 - [Manufacturing IT](https://ghosxt.com/manufacturing-it-services): OT/IT, ERP, and CMMC.
 - [Healthcare & Medical IT](https://ghosxt.com/healthcare-it-services): HIPAA, EHR, and PHI protection.
+- [Hospitality IT](https://ghosxt.com/hospitality-it-services): restaurants, hotels, and wineries.
 - [Professional Services IT](https://ghosxt.com/professional-services-it): law firms, CPAs, and small offices.
 - [Property Management IT](https://ghosxt.com/property-management-it-services): Yardi and AppFolio environments.
 - [Engineering & A/E IT](https://ghosxt.com/engineering-it-services): CAD, BIM, and ITAR.
