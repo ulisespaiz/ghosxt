@@ -27,3 +27,44 @@ audit but are not themselves file changes to review in a PR.
   so `llms-full.txt` reflects the same numbers as the live pages. This is a
   manual, sequential dependency: regenerate the count first, then
   regenerate llms-full.txt.
+
+## Numbers data file
+
+- `site-config.json` is the single source of truth for the review counts
+  and the published tier and onboarding prices. It now holds two top-level
+  sections:
+  - The existing review keys: `google_review_count`, `google_rating`.
+  - A `pricing` object: `tiny_team_monthly` (600), `core_per_user` (125),
+    `secure_growth_per_user` (175), `compliance_continuity_per_user` (250),
+    `onboarding_tiny_team` (1000), `onboarding_5_to_15` (1500), an
+    `onboarding_scope_note` string describing the Microsoft 365 default
+    scope, and `incident_notification_hours` (4).
+- Two scripts read this file; a third depends on them having been run
+  first:
+  - `scripts/update-review-count.py` rewrites the marked review-count and
+    rating trust blocks from the `google_review_count` / `google_rating`
+    keys.
+  - `scripts/update-site-numbers.py --check` scans root `*.html` and
+    `blog/*.html` for dollar figures anchored to the four tier names
+    (Tiny Team, Core Managed IT, Secure Growth, Compliance & Continuity)
+    and to the two onboarding fees, and reports anything that does not
+    match the `pricing` object, including inside JSON-LD Offer blocks. It
+    also reports (never rewrites) `assets/js/pricing.js`'s `TIER_PRICES`
+    constant against the same config. `--apply` rewrites only the
+    confidently-anchored dollar figures it finds mismatched; everything
+    else is left for a human to fix and re-run the checker. As of this
+    pass, `--check` reports zero mismatches: every published price on the
+    site already matches `site-config.json`.
+  - `scripts/generate-llms-full.py` does not read `site-config.json`
+    itself (see the note above); it only copies whatever pricing text is
+    currently live on each page, so it depends on the other two scripts
+    having already been run first.
+- Update workflow when a real price or fee changes: edit the `pricing`
+  object in `site-config.json`, run `update-site-numbers.py --apply` to
+  rewrite the confidently-anchored occurrences, hand-fix anything the
+  `--check` output flags as a low-confidence or ignored match (the script
+  deliberately does not touch those), update `assets/js/pricing.js`'s
+  `TIER_PRICES` by hand since it is report-only, run `scripts/minify.py
+  --refs` to regenerate `pricing.min.js`, then run
+  `scripts/generate-llms-full.py --apply` to bring `llms-full.txt` back in
+  sync, then redeploy.

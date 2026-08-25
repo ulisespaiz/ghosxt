@@ -1,4 +1,14 @@
 {
   "google_review_count": 26,
-  "google_rating": "5.0"
+  "google_rating": "5.0",
+  "pricing": {
+    "tiny_team_monthly": 600,
+    "core_per_user": 125,
+    "secure_growth_per_user": 175,
+    "compliance_continuity_per_user": 250,
+    "onboarding_tiny_team": 1000,
+    "onboarding_5_to_15": 1500,
+    "onboarding_scope_note": "Microsoft 365 default scope; Google Workspace and Apple fleet onboarding is scoped and quoted separately",
+    "incident_notification_hours": 4
+  }
 }
