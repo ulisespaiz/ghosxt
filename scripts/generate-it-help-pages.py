@@ -358,6 +358,17 @@ def build_page(chrome, slug, city):
         </div>
       </section>
 
+      <!-- ghosxt:key-facts -->
+      <aside class="key-facts" aria-label="IT Support &amp; Help Desk in {name}, California: key facts">
+        <p class="key-facts__title">IT Support &amp; Help Desk in {name}: at a glance</p>
+        <dl class="key-facts__list">
+          <dt>Service area</dt><dd>{name}, California</dd>
+          <dt>Who you talk to</dt><dd>Ulises Paiz, the owner, directly. No tier-1 queue.</dd>
+          <dt>Response</dt><dd>Critical incidents: 4-hour notification commitment. Direct line to the owner.</dd>
+          <dt>Pricing</dt><dd><a href="/pricing">Published pricing from $600 per month flat for 1 to 4 users</a></dd>
+        </dl>
+      </aside>
+
       <section class="location-section">
         <div class="container">
           <h2>What IT help looks like in {name}</h2>
