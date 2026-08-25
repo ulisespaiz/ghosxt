@@ -156,7 +156,7 @@
           "name": "How do you handle after-hours emergencies?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Critical system failures get immediate attention. Our monitoring systems alert us 24/7 to critical issues. For planned after-hours work (infrastructure upgrades, migrations), we schedule in advance to minimize business disruption."
+            "text": "Critical incidents get a 4-hour notification commitment, with a direct line to the owner. Our monitoring systems watch 24/7 for critical issues. For planned after-hours work (infrastructure upgrades, migrations), we schedule in advance to minimize business disruption."
           }
         }
       ]
@@ -335,7 +335,7 @@
                         </div>
                         <div class="info-content">
                             <div class="info-value"><a href="mailto:sales@ghosxt.com"><span>sales@ghosxt.com</span></a></div>
-                            <div class="info-label">We respond within 24 hours</div>
+                            <div class="info-label">Reply as soon as possible<!-- [VERIFY] -->, straight from the owner</div>
                             
                         </div>
                     </div>
@@ -377,7 +377,7 @@
             <div class="contact-right">
                 <div class="form-header">
                     <h2 class="form-title">Talk to the engineer, or try for free</h2>
-                    <p class="form-subtitle">Fill out the form and we'll get back to you within 24 hours.</p>
+                    <p class="form-subtitle">Fill out the form and we'll get back to you as soon as possible<!-- [VERIFY] -->. You'll hear directly from the owner.</p>
                 </div>
 
                 <form class="contact-form" id="contactForm" action="/api/contact" method="POST" novalidate>
@@ -428,7 +428,7 @@
 
                     <p class="form-response-promise">
                         <i class="fi fi-rs-clock" aria-hidden="true"></i>
-                        We reply within 1 business day. No sales scripts, just straight answers from an engineer.
+                        We reply as soon as possible<!-- [VERIFY] -->. No sales scripts, just straight answers from an engineer.
                     </p>
 
                     <button type="submit" class="form-submit" id="form-submit">Send Message</button>
@@ -621,7 +621,7 @@
                         <i class="fi fi-rs-angle-small-down faq-icon"></i>
                     </button>
                     <div class="faq-answer">
-                        <p>Critical system failures get immediate attention. Our monitoring systems alert us 24/7 to critical issues. For planned after-hours work (infrastructure upgrades, migrations), we schedule in advance to minimize business disruption.</p>
+                        <p>Critical incidents get a 4-hour notification commitment, with a direct line to the owner. Our monitoring systems watch 24/7 for critical issues. For planned after-hours work (infrastructure upgrades, migrations), we schedule in advance to minimize business disruption.</p>
                     </div>
                 </div>
             </div>
@@ -805,7 +805,7 @@
                     if (res.ok) {
                         form.reset();
                         if (window.turnstile) window.turnstile.reset();
-                        setStatus('Thanks, we received your message and will reply within 1 business day.', 'success');
+                        setStatus('Thanks, we received your message. We reply as soon as possible, straight from the owner.', 'success'); // [VERIFY] response-time wording
                         document.dispatchEvent(new CustomEvent('contact:success'));
                     } else {
                         let msg = 'Something went wrong. Please try again or email sales@ghosxt.com.';
