@@ -21,18 +21,18 @@ Key facts:
 - [Managed IT Services](https://ghosxt.com/managed-it-services): 24/7 monitoring, helpdesk, patching, Microsoft 365, and backup for small business.
 - [IT Help Desk & Support](https://ghosxt.com/help-desk-it-support): live, US-based IT help desk and end-user support, remote and on-site across the Central Coast.
 - [IT Consulting & vCIO](https://ghosxt.com/it-consulting-vcio): strategic IT roadmap, budget, security and compliance strategy, and vendor-neutral vCIO guidance.
-- [Cybersecurity](https://ghosxt.com/cybersecurity): endpoint protection, MFA, immutable backups, and audits with government-grade rigor.
+- [Cybersecurity](https://ghosxt.com/cybersecurity): endpoint protection, MFA, cloud backup, and audits with government-grade rigor.
 - [Cloud Services & Microsoft 365](https://ghosxt.com/cloud-services): Microsoft 365, Azure, and hybrid cloud with hardened tenants and no-downtime migrations.
-- [Backup & Disaster Recovery](https://ghosxt.com/backup-disaster-recovery): immutable backups, tested restores, and ransomware-ready recovery.
+- [Backup & Disaster Recovery](https://ghosxt.com/backup-disaster-recovery): cloud backup, tested restores, and ransomware-ready recovery.
 - [Network Design & Architecture](https://ghosxt.com/network-design): VLAN segmentation, firewalls, and business-grade wireless with real documentation.
 - [Website Development](https://ghosxt.com/website-development): custom small-business websites and e-commerce that load fast and convert. City pages: [Salinas](https://ghosxt.com/web-design-salinas), [Monterey](https://ghosxt.com/web-design-monterey), [Santa Cruz](https://ghosxt.com/web-design-santa-cruz), [Watsonville](https://ghosxt.com/web-design-watsonville), [San Jose](https://ghosxt.com/web-design-san-jose), [Carmel](https://ghosxt.com/web-design-carmel), [Gilroy](https://ghosxt.com/web-design-gilroy), [Hollister](https://ghosxt.com/web-design-hollister), [Marina](https://ghosxt.com/web-design-marina), [Pacific Grove](https://ghosxt.com/web-design-pacific-grove), and [Seaside](https://ghosxt.com/web-design-seaside).
 - [C-TPAT Compliance](https://ghosxt.com/ctpat): IT controls and documentation for supply-chain security certification.
 - [CMMC & NIST 800-171](https://ghosxt.com/cmmc-compliance): CMMC and NIST SP 800-171 readiness for small defense contractors and subcontractors, from an engineer with DoD infrastructure experience.
-- [HIPAA IT Compliance](https://ghosxt.com/hipaa-it-compliance): HIPAA technical safeguards for medical and dental practices, covering security risk analysis, access controls, encryption, BAAs, and backup.
+- [HIPAA IT Compliance](https://ghosxt.com/hipaa-it-compliance): HIPAA technical safeguards for medical practices, covering security risk analysis, access controls, encryption, BAAs, and backup.
 - [PCI DSS Compliance](https://ghosxt.com/pci-compliance): practical PCI compliance for retail, restaurants, and hospitality, covering segmentation, secure POS, scanning, and SAQ guidance.
-- [Cyber Insurance Compliance](https://ghosxt.com/cyber-insurance-compliance): cyber insurance readiness and questionnaire help, covering MFA, EDR, immutable backups, and the evidence carriers require at underwriting and claim time.
+- [Cyber Insurance Compliance](https://ghosxt.com/cyber-insurance-compliance): cyber insurance readiness and questionnaire help, covering MFA, MDR, cloud backup, and the evidence carriers require at underwriting and claim time.
 - [Co-Managed IT](https://ghosxt.com/co-managed-it): augments an existing in-house IT team with a 24/7 help desk, after-hours coverage, and cybersecurity depth, without replacing anyone.
-- [Ransomware Recovery & Emergency IT](https://ghosxt.com/ransomware-recovery): rapid containment, recovery from immutable backups, and hardening for businesses that are down or under active attack. Emergency line (831) 204-0501.
+- [Ransomware Recovery & Emergency IT](https://ghosxt.com/ransomware-recovery): rapid containment, recovery from cloud backup, and hardening for businesses that are down or under active attack. Emergency line (831) 204-0501.
 - [Break-Fix vs. Managed IT](https://ghosxt.com/break-fix-vs-managed-it): an honest comparison of the two IT support models on cost, downtime, and security.
 - [Pricing](https://ghosxt.com/pricing): transparent, published managed IT service plans.
 
@@ -41,6 +41,7 @@ Key facts:
 - [Trucking & Logistics IT](https://ghosxt.com/trucking-it-services): C-TPAT, ELD, fleet, and dispatch systems.
 - [Manufacturing IT](https://ghosxt.com/manufacturing-it-services): OT/IT, ERP, and CMMC.
 - [Healthcare & Medical IT](https://ghosxt.com/healthcare-it-services): HIPAA, EHR, and PHI protection.
+- [Hospitality IT](https://ghosxt.com/hospitality-it-services): restaurants, hotels, and wineries.
 - [Professional Services IT](https://ghosxt.com/professional-services-it): law firms, CPAs, and small offices.
 - [Property Management IT](https://ghosxt.com/property-management-it-services): Yardi and AppFolio environments.
 - [Engineering & A/E IT](https://ghosxt.com/engineering-it-services): CAD, BIM, and ITAR.
@@ -85,7 +86,7 @@ IT support & help desk, by city: [Morgan Hill](https://ghosxt.com/it-help-morgan
 - [Common small-business cybersecurity mistakes](https://ghosxt.com/blog/small-business-cybersecurity-mistakes)
 - [How ransomware actually gets in (2026)](https://ghosxt.com/blog/ransomware-2026-how-it-gets-in)
 - [Identity hardening for a small Microsoft 365 team](https://ghosxt.com/blog/identity-hardening-small-business-5-employees-microsoft-365)
-- [HIPAA-compliant IT for medical and dental practices](https://ghosxt.com/blog/hipaa-compliant-it-medical-dental-monterey-county)
+- [HIPAA-compliant IT for medical practices](https://ghosxt.com/blog/hipaa-compliant-it-medical-monterey-county)
 - [Switching IT providers: a Salinas/Monterey checklist](https://ghosxt.com/blog/switching-it-providers-salinas-monterey-checklist)
 - [What a small business website costs (2026, real numbers)](https://ghosxt.com/blog/small-business-website-cost-2026)
 - [9 signs your website is costing you customers](https://ghosxt.com/blog/website-redesign-signs-small-business-2026)

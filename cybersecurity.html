@@ -140,10 +140,6 @@
                 "name": "California"
               },
               {
-                "@type": "Country",
-                "name": "United States"
-              },
-              {
                 "@type": "City",
                 "name": "Salinas"
               },
@@ -200,7 +196,7 @@
                   "@type": "Offer",
                   "itemOffered": {
                     "@type": "Service",
-                    "name": "Endpoint Detection and Response (EDR)"
+                    "name": "Managed Detection and Response (MDR)"
                   }
                 },
                 {
@@ -221,7 +217,7 @@
                   "@type": "Offer",
                   "itemOffered": {
                     "@type": "Service",
-                    "name": "Immutable Backup and Disaster Recovery"
+                    "name": "Cloud Backup and Disaster Recovery"
                   }
                 },
                 {
@@ -307,7 +303,7 @@
                 "name": "What does small business cybersecurity actually include?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "At a minimum: endpoint protection on every device, multi-factor authentication on every account, immutable and tested backups, email security and anti-phishing, security awareness training, vulnerability management with regular patching, and a written incident response plan. Most small business breaches happen because one or more of these are missing or misconfigured."
+                  "text": "At a minimum: endpoint protection on every device, multi-factor authentication on every account, tested cloud backups, email security and anti-phishing, security awareness training, vulnerability management with regular patching, and a written incident response plan. Most small business breaches happen because one or more of these are missing or misconfigured."
                 }
               },
               {
@@ -323,7 +319,7 @@
                 "name": "Are you qualified to handle sensitive cybersecurity work?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Yes. Ghosxt is run by an engineer with DoD infrastructure experience with CompTIA CySA+, Security+, Network+, A+, Cloud+, ITIL 4, Linux Essentials, and Microsoft AZ-104 credentials. We design controls to government-grade standards and bring that rigor to small business."
+                  "text": "Yes. Ghosxt is run by an engineer with DoD infrastructure experience, an M.S. in Cybersecurity and Information Assurance (WGU, 2026), CompTIA SecurityX (CAS-005), CySA+, Security+, Network+, Cloud+, and Project+, plus ITIL 4 Foundation, Linux Essentials, and Microsoft AZ-104. We design controls to government-grade standards and bring that rigor to small business."
                 }
               },
               {
@@ -339,7 +335,7 @@
                 "name": "What happens if we get hit by ransomware or a breach?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Clients on a managed plan get immediate incident response: containment, forensic preservation where possible, recovery from immutable backups, and a written post-incident report. Non-clients can engage us for emergency response on a project basis. The faster you call, the more options we have."
+                  "text": "Clients on a managed plan get our 4-hour notification commitment on critical incidents, with direct access to the engineer: containment, forensic preservation where possible, recovery from cloud backups, and a written post-incident report. Non-clients can engage us for emergency response on a project basis. The faster you call, the more options we have."
                 }
               },
               {
@@ -355,7 +351,7 @@
                 "name": "How fast can you respond to a security incident?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Remote response is immediate during business hours and within minutes after-hours for critical issues. On-site response in our local service area is typically same-day. The faster you reach us, the more options we have, so do not wait to \"see if it gets worse\" before calling."
+                  "text": "You reach the engineer directly, and critical incidents carry our 4-hour notification commitment. On-site response in our local service area is scheduled to fit your business. The faster you reach us, the more options we have, so do not wait to \"see if it gets worse\" before calling."
                 }
               },
               {
@@ -365,6 +361,14 @@
                   "@type": "Answer",
                   "text": "Yes. We frequently come in as a cybersecurity-focused partner alongside an existing IT generalist or in-house team. We can also lead the cybersecurity work and coordinate with whoever owns the rest of the stack."
                 }
+              },
+              {
+                "@type": "Question",
+                "name": "Who will I actually talk to?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Ulises Paiz, the owner, directly. There is no tier-1 queue and no offshore call center: the engineer who knows your environment answers the phone, and critical incidents carry our 4-hour notification commitment."
+                }
               }
             ]
           }
@@ -373,62 +377,6 @@
     </script>
     <!-- ghosxt:cf-web-analytics -->
     <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"f3ce7e0e17f54050845d52d7f355cd98"}'></script>
-    <!-- ghosxt:extra-schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "Home",
-              "item": "https://ghosxt.com/"
-            },
-            {
-              "@type": "ListItem",
-              "position": 2,
-              "name": "Cybersecurity",
-              "item": "https://ghosxt.com/cybersecurity"
-            }
-          ]
-        },
-        {
-          "@type": "Service",
-          "@id": "https://ghosxt.com/cybersecurity#service",
-          "name": "Cybersecurity",
-          "url": "https://ghosxt.com/cybersecurity",
-          "provider": {
-            "@id": "https://ghosxt.com/#business"
-          },
-          "areaServed": [
-            {
-              "@type": "State",
-              "name": "California"
-            },
-            {
-              "@type": "City",
-              "name": "Salinas"
-            },
-            {
-              "@type": "City",
-              "name": "Monterey"
-            },
-            {
-              "@type": "City",
-              "name": "Santa Cruz"
-            },
-            {
-              "@type": "City",
-              "name": "San Jose"
-            }
-          ]
-        }
-      ]
-    }
-    </script>
   </head>
   <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -436,25 +384,6 @@
     <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
       <i class="fi fi-rs-angle-up" aria-hidden="true"></i>
     </button>
-
-    <div class="cookie-banner" id="cookieBanner">
-      <div class="cookie-banner-container">
-        <div class="cookie-content">
-          <div class="cookie-icon"><i class="fi fi-rs-cookie"></i></div>
-          <div class="cookie-text">
-            <p class="cookie-message">
-              We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.
-            </p>
-            <a href="/privacy-policy" class="cookie-link">Learn more about our Privacy Policy</a>
-          </div>
-        </div>
-        <div class="cookie-actions">
-          <button class="cookie-btn cookie-btn-secondary" id="cookieDecline">Decline</button>
-          <button class="cookie-btn cookie-btn-primary" id="cookieAccept">Accept All</button>
-        </div>
-      </div>
-    </div>
-
 
     <nav class="navbar" aria-label="Main navigation">
       <div class="navbar-container">
@@ -577,7 +506,8 @@
         <dl class="key-facts__list">
           <dt>Service area</dt><dd>California's Central Coast &amp; Bay Area</dd>
           <dt>Led by</dt><dd>An engineer with DoD infrastructure experience</dd>
-          <dt>Response</dt><dd>Same-day remote support; on-site within 24–48 hours</dd>
+          <dt>Who you talk to</dt><dd>Ulises Paiz, the owner, directly. No tier-1 queue.</dd>
+          <dt>Response</dt><dd>Critical incidents: 4-hour notification commitment. Direct line to the owner.</dd>
           <dt>Pricing</dt><dd><a href="/pricing">Published upfront</a>, free assessment for a written quote</dd>
           <dt>Free</dt><dd>No-obligation 30-minute IT assessment</dd>
           <dt>Rated</dt><dd><span class="key-facts__stars" aria-hidden="true">★★★★★</span> 5.0 on <a href="https://share.google/88vsSuams5s62RdPJ" target="_blank" rel="noopener noreferrer">26 Google reviews</a></dd>
@@ -601,7 +531,7 @@
           <p>Every Ghosxt managed plan includes a complete cybersecurity stack. Standalone audits and one-time engagements are also available.</p>
           <div class="services-grid">
             <article class="service-card">
-              <h3>Endpoint Detection and Response (EDR)</h3>
+              <h3>Managed Detection and Response (MDR)</h3>
               <p>Modern endpoint protection with behavioral detection on every laptop, desktop, and server. We watch for ransomware behavior in real time and isolate compromised devices automatically.</p>
             </article>
             <article class="service-card">
@@ -613,8 +543,8 @@
               <p>Inbound filtering, impersonation protection, attachment sandboxing, and DMARC, SPF, and DKIM configured properly. Email is where the majority of attacks start. We close that door first.</p>
             </article>
             <article class="service-card">
-              <h3>Immutable Backup and Disaster Recovery</h3>
-              <p>Backups that ransomware cannot encrypt. Tested restores on a schedule. Documented recovery time objectives so when something does go wrong, you already know how long it takes to get back up.</p>
+              <h3>Cloud Backup and Disaster Recovery</h3>
+              <p>Off-network backup copies designed to resist ransomware encryption. Tested restores on a schedule. Documented recovery time objectives so when something does go wrong, you already know how long it takes to get back up. <!-- [VERIFY] --></p>
             </article>
             <article class="service-card">
               <h3>Vulnerability Management and Patching</h3>
@@ -651,7 +581,7 @@
           <ul class="industries-list">
             <li>CMMC 2.0 and NIST 800-171 (DoD subcontractors)</li>
             <li><a href="/ctpat">C-TPAT cybersecurity</a> (importers, carriers, 3PLs)</li>
-            <li>HIPAA (healthcare and dental practices)</li>
+            <li>HIPAA (healthcare practices)</li>
             <li>PCI-DSS (retail, restaurants, hospitality)</li>
             <li>SOC 2 readiness (SaaS and B2B)</li>
             <li>CIS Controls v8 (general baseline)</li>
@@ -693,7 +623,7 @@
           <ul class="industries-list">
             <li>Logistics, trucking, and 3PL (often paired with C-TPAT)</li>
             <li>Manufacturing and machine shops</li>
-            <li>Healthcare and dental (HIPAA-regulated)</li>
+            <li>Healthcare (HIPAA-regulated)</li>
             <li>Legal firms and professional services</li>
             <li>Tech startups and SaaS (SOC 2 readiness)</li>
             <li>Agriculture, food processing, and distribution</li>
@@ -722,7 +652,7 @@
       <section class="location-section">
         <div class="container">
           <h2>Service areas</h2>
-          <p>We serve California small business across the central coast and beyond. On-site response in our local service area is typically same-day or next-day. Remote response is immediate.</p>
+          <p>We serve California small business across the central coast and beyond. On-site response in our local service area is scheduled to fit your business, and critical incidents carry our 4-hour notification commitment.</p>
           <div class="nearby-locations">
             <h3>Cybersecurity in your city</h3>
             <ul>
@@ -758,7 +688,7 @@
           <h2>Cybersecurity FAQs</h2>
           <details>
             <summary>What does small business cybersecurity actually include?</summary>
-            <div class="answer">At a minimum: endpoint protection on every device, multi-factor authentication on every account, immutable and tested backups, email security and anti-phishing, security awareness training, vulnerability management with regular patching, and a written incident response plan. Most small business breaches happen because one or more of these are missing or misconfigured.</div>
+            <div class="answer">At a minimum: endpoint protection on every device, multi-factor authentication on every account, tested cloud backups, email security and anti-phishing, security awareness training, vulnerability management with regular patching, and a written incident response plan. Most small business breaches happen because one or more of these are missing or misconfigured.</div>
           </details>
           <details>
             <summary>How much do cybersecurity services cost for a small business in California?</summary>
@@ -766,7 +696,7 @@
           </details>
           <details>
             <summary>Are you qualified to handle sensitive cybersecurity work?</summary>
-            <div class="answer">Yes. Ghosxt is run by an engineer with DoD infrastructure experience with CompTIA CySA+, Security+, Network+, A+, Cloud+, ITIL 4, Linux Essentials, and Microsoft AZ-104 credentials. We design controls to government-grade standards and bring that rigor to small business.</div>
+            <div class="answer">Yes. Ghosxt is run by an engineer with DoD infrastructure experience, an M.S. in Cybersecurity and Information Assurance (WGU, 2026), CompTIA SecurityX (CAS-005), CySA+, Security+, Network+, Cloud+, and Project+, plus ITIL 4 Foundation, Linux Essentials, and Microsoft AZ-104. We design controls to government-grade standards and bring that rigor to small business.</div>
           </details>
           <details>
             <summary>Do you handle compliance frameworks like HIPAA, CMMC, or PCI?</summary>
@@ -774,7 +704,7 @@
           </details>
           <details>
             <summary>What happens if we get hit by ransomware or a breach?</summary>
-            <div class="answer">Clients on a managed plan get immediate incident response: containment, forensic preservation where possible, recovery from immutable backups, and a written post-incident report. Non-clients can engage us for emergency response on a project basis. The faster you call, the more options we have.</div>
+            <div class="answer">Clients on a managed plan get our 4-hour notification commitment on critical incidents, with direct access to the engineer: containment, forensic preservation where possible, recovery from cloud backups, and a written post-incident report. Non-clients can engage us for emergency response on a project basis. The faster you call, the more options we have.</div>
           </details>
           <details>
             <summary>Do you do one-time security audits without a long-term contract?</summary>
@@ -782,15 +712,35 @@
           </details>
           <details>
             <summary>How fast can you respond to a security incident?</summary>
-            <div class="answer">Remote response is immediate during business hours and within minutes after-hours for critical issues. On-site response in our local service area is typically same-day. The faster you reach us, the more options we have, so do not wait to "see if it gets worse" before calling.</div>
+            <div class="answer">You reach the engineer directly, and critical incidents carry our 4-hour notification commitment. On-site response in our local service area is scheduled to fit your business. The faster you reach us, the more options we have, so do not wait to "see if it gets worse" before calling.</div>
           </details>
           <details>
             <summary>Will you work with our existing IT team or vendor?</summary>
             <div class="answer">Yes. We frequently come in as a cybersecurity-focused partner alongside an existing IT generalist or in-house team. We can also lead the cybersecurity work and coordinate with whoever owns the rest of the stack.</div>
           </details>
+          <details>
+            <summary>Who will I actually talk to?</summary>
+            <div class="answer">Ulises Paiz, the owner, directly. There is no tier-1 queue and no offshore call center: the engineer who knows your environment answers the phone, and critical incidents carry our 4-hour notification commitment.</div>
+          </details>
         </div>
       </section>
     </main>
+
+    <div class="cookie-banner" id="cookieBanner">
+      <div class="cookie-banner-container">
+        <div class="cookie-content">
+          <div class="cookie-icon"><i class="fi fi-rs-cookie"></i></div>
+          <div class="cookie-text">
+            <p class="cookie-message">We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.</p>
+            <a href="/privacy-policy" class="cookie-link">Learn more about our Privacy Policy</a>
+          </div>
+        </div>
+        <div class="cookie-actions">
+          <button class="cookie-btn cookie-btn-secondary" id="cookieDecline">Decline</button>
+          <button class="cookie-btn cookie-btn-primary" id="cookieAccept">Accept All</button>
+        </div>
+      </div>
+    </div>
 
     <footer class="footer" id="footerSection">
       <div class="footer-container">

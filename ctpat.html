@@ -80,13 +80,33 @@
         "@context": "https://schema.org",
         "@graph": [
           {
+            "@type": "LocalBusiness",
+            "@id": "https://ghosxt.com/ctpat#business",
+            "name": "Ghosxt",
+            "description": "Managed IT services and C-TPAT-aligned cybersecurity compliance for California importers, carriers, and logistics companies.",
+            "url": "https://ghosxt.com/ctpat",
+            "image": "https://ghosxt.com/assets/img/ghosxt-logo-160.webp",
+            "telephone": "+18312040501",
+            "email": "sales@ghosxt.com",
+            "priceRange": "$$",
+            "address": { "@type": "PostalAddress", "addressLocality": "Salinas", "addressRegion": "CA", "postalCode": "93901", "addressCountry": "US" },
+            "geo": { "@type": "GeoCoordinates", "latitude": 36.6777, "longitude": -121.6555 },
+            "areaServed": [
+              { "@type": "State", "name": "California" },
+              { "@type": "City", "name": "Salinas" },
+              { "@type": "City", "name": "Monterey" },
+              { "@type": "City", "name": "Santa Cruz" },
+              { "@type": "City", "name": "San Jose" }
+            ]
+          },
+          {
             "@type": "WebPage",
             "@id": "https://ghosxt.com/ctpat",
             "name": "C-TPAT Cybersecurity Compliance | Ghosxt",
             "url": "https://ghosxt.com/ctpat",
-            "description": "Ghosxt provides C-TPAT-aligned IT security and cybersecurity compliance services for importers, carriers, and logistics companies across the United States.",
-            "isPartOf": { "@id": "https://ghosxt.com/#business" },
-            "about": { "@id": "https://ghosxt.com/#business" },
+            "description": "Ghosxt provides C-TPAT-aligned IT security and cybersecurity compliance services for California importers, carriers, and logistics companies.",
+            "isPartOf": { "@id": "https://ghosxt.com/ctpat#business" },
+            "about": { "@id": "https://ghosxt.com/ctpat#business" },
             "inLanguage": "en-US"
           },
           {
@@ -94,34 +114,58 @@
             "mainEntity": [
               {
                 "@type": "Question",
-                "name": "What is C-TPAT?",
+                "name": "What is C-TPAT and is it mandatory?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "C-TPAT (Customs-Trade Partnership Against Terrorism) is a voluntary U.S. Customs and Border Protection (CBP) program that strengthens international supply chain and U.S. border security. Members must meet minimum security criteria across their supply chain, including cybersecurity standards that have expanded significantly in recent years."
+                  "text": "C-TPAT (Customs-Trade Partnership Against Terrorism) is a voluntary CBP program for businesses involved in U.S. international trade. While participation is not mandatory, it provides significant operational benefits, including reduced cargo inspections and border crossing priority, and is increasingly required or preferred by supply chain partners and large clients."
                 }
               },
               {
                 "@type": "Question",
-                "name": "Does C-TPAT require cybersecurity controls?",
+                "name": "Does C-TPAT actually require cybersecurity controls?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Yes. CBP's updated Minimum Security Criteria include a dedicated Cybersecurity section requiring C-TPAT members to implement risk assessments, access controls, security awareness training, incident response planning, and protection of IT systems used in the supply chain."
+                  "text": "Yes. CBP's updated Minimum Security Criteria include a dedicated Cybersecurity section with six core requirements: risk assessments, access controls, security awareness training, incident response planning, IT infrastructure security, and third-party vendor security management. These are assessed during CBP validation visits."
                 }
               },
               {
                 "@type": "Question",
-                "name": "How can Ghosxt help with C-TPAT cybersecurity compliance?",
+                "name": "How long does it take to become C-TPAT cybersecurity compliant?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Ghosxt conducts a C-TPAT-aligned cybersecurity assessment, identifies gaps against CBP's Minimum Security Criteria, implements required controls, documents your security posture for CBP validation, and provides ongoing managed IT services to maintain compliance."
+                  "text": "It depends on your starting point. Businesses with some existing IT controls already have less ground to cover than those starting from scratch. We start with an assessment, then give you a realistic timeline based on where your environment actually stands before any work begins."
                 }
               },
               {
                 "@type": "Question",
-                "name": "Who needs C-TPAT compliance?",
+                "name": "Can Ghosxt help us if we're already C-TPAT members but failed a validation?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "C-TPAT membership is open to importers, customs brokers, carriers (air, sea, rail, truck), consolidators, licensed customs brokers, freight forwarders, and third-party logistics providers (3PLs) operating in the U.S. international supply chain."
+                  "text": "Absolutely. If CBP identified cybersecurity deficiencies during a validation, we can step in. We'll review the validation findings, implement the required corrective actions, update your documentation, and prepare you for the follow-up review."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does C-TPAT compliance also help with other frameworks like NIST or ISO 27001?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Often, yes. C-TPAT's cybersecurity requirements (risk assessments, access controls, security awareness training, incident response planning) draw on the same fundamentals as other common security frameworks, so the work we do for C-TPAT frequently supports broader compliance goals as well."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What makes Ghosxt different from a general IT consultant for C-TPAT work?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Most IT consultants approach C-TPAT like a checklist. Ghosxt is led by an engineer with prior DoD and federal contractor infrastructure experience. We know the difference between documentation that looks good on paper and controls that actually work, and CBP validators do too."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Who will I actually talk to?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Ulises Paiz, the owner, directly. There is no tier-1 queue and no offshore call center: the engineer who knows your environment answers the phone, and critical incidents carry our 4-hour notification commitment."
                 }
               }
             ]
@@ -142,7 +186,7 @@
           "name": "C-TPAT Compliance",
           "url": "https://ghosxt.com/ctpat",
           "provider": {
-            "@id": "https://ghosxt.com/#business"
+            "@id": "https://ghosxt.com/ctpat#business"
           },
           "areaServed": [
             {
@@ -180,33 +224,6 @@
     <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
       <i class="fi fi-rs-angle-up" aria-hidden="true"></i>
     </button>
-
-    <div class="cookie-banner" id="cookieBanner">
-      <div class="cookie-banner-container">
-        <div class="cookie-content">
-          <div class="cookie-icon"><i class="fi fi-rs-cookie"></i></div>
-          <div class="cookie-text">
-            <p class="cookie-message">
-              We use cookies to enhance your browsing experience, serve
-              personalized content, and analyze our traffic. By clicking "Accept
-              All", you consent to our use of cookies.
-            </p>
-            <a href="/privacy-policy" class="cookie-link"
-              >Learn more about our Privacy Policy</a
-            >
-          </div>
-        </div>
-        <div class="cookie-actions">
-          <button class="cookie-btn cookie-btn-secondary" id="cookieDecline">
-            Decline
-          </button>
-          <button class="cookie-btn cookie-btn-primary" id="cookieAccept">
-            Accept All
-          </button>
-        </div>
-      </div>
-    </div>
-
 
     <nav class="navbar" aria-label="Main navigation">
       <div class="navbar-container">
@@ -509,6 +526,17 @@
         </div>
       </section>
 
+      <!-- ghosxt:key-facts -->
+      <aside class="key-facts" aria-label="C-TPAT Compliance: key facts">
+        <p class="key-facts__title">C-TPAT Compliance: at a glance</p>
+        <dl class="key-facts__list">
+          <dt>Service area</dt><dd>California's Central Coast &amp; Bay Area</dd>
+          <dt>Who you talk to</dt><dd>Ulises Paiz, the owner, directly. No tier-1 queue.</dd>
+          <dt>Response</dt><dd>Critical incidents: 4-hour notification commitment. Direct line to the owner.</dd>
+          <dt>Pricing</dt><dd><a href="/pricing">Published pricing from $600 per month flat for 1 to 4 users</a></dd>
+        </dl>
+      </aside>
+
       <!-- ═══════════════════════════════════════════
              WHAT IS C-TPAT
         ════════════════════════════════════════════ -->
@@ -802,8 +830,8 @@
                     >How Ghosxt Covers It</span
                   >
                   <p class="ctpat-criterion-how-text">
-                    We deploy automated patch management, EDR endpoint
-                    protection, network segmentation, and produce a full asset
+                    We deploy automated patch management, managed detection
+                    and response, network segmentation, and produce a full asset
                     inventory and architecture diagram for CBP records.
                   </p>
                 </div>
@@ -1074,152 +1102,32 @@
         </div>
       </section>
 
-      <!--
-      <section class="faq-section ctpat-faq-section">
+      <section class="ctpat-faq-section">
         <div class="faq-container">
-          <div class="faq-header">
-            <div class="problem-badge">
-              <div class="badge-lines">
-                <div class="badge-line"></div>
-                <div class="badge-line"></div>
-                <div class="badge-line"></div>
-                <div class="badge-line"></div>
-                <div class="badge-line"></div>
-                <div class="badge-line"></div>
-                <div class="badge-line"></div>
-              </div>
-              <div class="badge-container">
-                <i class="fi fi-rs-interrogation" aria-hidden="true"></i>
-                <div class="problem-badge-text">FAQ</div>
-              </div>
-              <div class="badge-lines">
-                <div class="badge-line"></div>
-                <div class="badge-line"></div>
-                <div class="badge-line"></div>
-                <div class="badge-line"></div>
-                <div class="badge-line"></div>
-                <div class="badge-line"></div>
-                <div class="badge-line"></div>
-              </div>
-            </div>
-            <h2 class="faq-title">
-              Common <span class="hero-span-text">Questions</span>
-            </h2>
-            <p class="faq-subtitle">
-              Everything you need to know about C-TPAT cybersecurity compliance
-              and how Ghosxt can help.
-            </p>
-          </div>
+          <h2>FAQs about C-TPAT cybersecurity compliance</h2>
 
-          <div class="faq-items">
-            <div class="faq-item">
-              <button class="faq-question" aria-expanded="false">
-                What is C-TPAT and is it mandatory?
-                <i class="fi fi-rs-angle-down faq-icon" aria-hidden="true"></i>
-              </button>
-              <div class="faq-answer">
-                <p>
-                  C-TPAT (Customs-Trade Partnership Against Terrorism) is a
-                  voluntary CBP program for businesses involved in U.S.
-                  international trade. While participation is not mandatory, it
-                  provides significant operational benefits, including reduced
-                  cargo inspections and border crossing priority, and is
-                  increasingly required or preferred by supply chain partners
-                  and large clients.
-                </p>
-              </div>
-            </div>
+          <h3>What is C-TPAT and is it mandatory?</h3>
+          <p>C-TPAT (Customs-Trade Partnership Against Terrorism) is a voluntary CBP program for businesses involved in U.S. international trade. While participation is not mandatory, it provides significant operational benefits, including reduced cargo inspections and border crossing priority, and is increasingly required or preferred by supply chain partners and large clients.</p>
 
-            <div class="faq-item">
-              <button class="faq-question" aria-expanded="false">
-                Does C-TPAT actually require cybersecurity controls?
-                <i class="fi fi-rs-angle-down faq-icon" aria-hidden="true"></i>
-              </button>
-              <div class="faq-answer">
-                <p>
-                  Yes. CBP's updated Minimum Security Criteria include a
-                  dedicated Cybersecurity section with six core requirements:
-                  risk assessments, access controls, security awareness
-                  training, incident response planning, IT infrastructure
-                  security, and third-party vendor security management. These
-                  are assessed during CBP validation visits.
-                </p>
-              </div>
-            </div>
+          <h3>Does C-TPAT actually require cybersecurity controls?</h3>
+          <p>Yes. CBP's updated Minimum Security Criteria include a dedicated Cybersecurity section with six core requirements: risk assessments, access controls, security awareness training, incident response planning, IT infrastructure security, and third-party vendor security management. These are assessed during CBP validation visits.</p>
 
-            <div class="faq-item">
-              <button class="faq-question" aria-expanded="false">
-                How long does it take to become C-TPAT cybersecurity compliant?
-                <i class="fi fi-rs-angle-down faq-icon" aria-hidden="true"></i>
-              </button>
-              <div class="faq-answer">
-                <p>
-                  It depends on your starting point. For companies with some
-                  existing IT controls, we typically achieve a validation-ready
-                  security posture in 60–90 days. For organizations starting
-                  from scratch, plan for 90–120 days. Either way, we work
-                  efficiently: we've done this before and know exactly what CBP
-                  looks for.
-                </p>
-              </div>
-            </div>
+          <h3>How long does it take to become C-TPAT cybersecurity compliant?</h3>
+          <p>It depends on your starting point. Businesses with some existing IT controls already have less ground to cover than those starting from scratch. We start with an assessment, then give you a realistic timeline based on where your environment actually stands before any work begins.</p>
 
-            <div class="faq-item">
-              <button class="faq-question" aria-expanded="false">
-                Can Ghosxt help us if we're already C-TPAT members but failed a
-                validation?
-                <i class="fi fi-rs-angle-down faq-icon" aria-hidden="true"></i>
-              </button>
-              <div class="faq-answer">
-                <p>
-                  Absolutely. If CBP identified cybersecurity deficiencies
-                  during a validation, we can step in immediately. We'll review
-                  the validation findings, implement the required corrective
-                  actions, update your documentation, and prepare you for the
-                  follow-up review. We move fast when timelines are tight.
-                </p>
-              </div>
-            </div>
+          <h3>Can Ghosxt help us if we're already C-TPAT members but failed a validation?</h3>
+          <p>Absolutely. If CBP identified cybersecurity deficiencies during a validation, we can step in. We'll review the validation findings, implement the required corrective actions, update your documentation, and prepare you for the follow-up review.</p>
 
-            <div class="faq-item">
-              <button class="faq-question" aria-expanded="false">
-                Does C-TPAT compliance also help with other frameworks like NIST
-                or ISO 27001?
-                <i class="fi fi-rs-angle-down faq-icon" aria-hidden="true"></i>
-              </button>
-              <div class="faq-answer">
-                <p>
-                  Yes, and intentionally so. Ghosxt maps C-TPAT cybersecurity
-                  controls to NIST CSF (Cybersecurity Framework) and CIS
-                  Controls, meaning the work we do for C-TPAT often satisfies
-                  requirements for other frameworks simultaneously. This is
-                  especially valuable for companies pursuing multiple compliance
-                  goals at once.
-                </p>
-              </div>
-            </div>
+          <h3>Does C-TPAT compliance also help with other frameworks like NIST or ISO 27001?</h3>
+          <p>Often, yes. C-TPAT's cybersecurity requirements (risk assessments, access controls, security awareness training, incident response planning) draw on the same fundamentals as other common security frameworks, so the work we do for C-TPAT frequently supports broader compliance goals as well.</p>
 
-            <div class="faq-item">
-              <button class="faq-question" aria-expanded="false">
-                What makes Ghosxt different from a general IT consultant for
-                C-TPAT work?
-                <i class="fi fi-rs-angle-down faq-icon" aria-hidden="true"></i>
-              </button>
-              <div class="faq-answer">
-                <p>
-                  Most IT consultants approach C-TPAT like a checklist. Ghosxt
-                  is led by an engineer with DoD infrastructure experience who has built security
-                  programs for government environments where the bar is far
-                  higher than C-TPAT. We know the difference between
-                  documentation that looks good on paper and controls that
-                  actually work, and CBP validators do too.
-                </p>
-              </div>
-            </div>
-          </div>
+          <h3>What makes Ghosxt different from a general IT consultant for C-TPAT work?</h3>
+          <p>Most IT consultants approach C-TPAT like a checklist. Ghosxt is led by an engineer with prior DoD and federal contractor infrastructure experience. We know the difference between documentation that looks good on paper and controls that actually work, and CBP validators do too.</p>
+
+          <h3>Who will I actually talk to?</h3>
+          <p>Ulises Paiz, the owner, directly. There is no tier-1 queue and no offshore call center: the engineer who knows your environment answers the phone, and critical incidents carry our 4-hour notification commitment.</p>
         </div>
       </section>
-      -->
 
       <!-- ═══════════════════════════════════════════
              CTA SECTION
@@ -1259,6 +1167,22 @@
         </div>
       </section>
     </main>
+
+    <div class="cookie-banner" id="cookieBanner">
+      <div class="cookie-banner-container">
+        <div class="cookie-content">
+          <div class="cookie-icon"><i class="fi fi-rs-cookie"></i></div>
+          <div class="cookie-text">
+            <p class="cookie-message">We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.</p>
+            <a href="/privacy-policy" class="cookie-link">Learn more about our Privacy Policy</a>
+          </div>
+        </div>
+        <div class="cookie-actions">
+          <button class="cookie-btn cookie-btn-secondary" id="cookieDecline">Decline</button>
+          <button class="cookie-btn cookie-btn-primary" id="cookieAccept">Accept All</button>
+        </div>
+      </div>
+    </div>
 
     <footer class="footer" id="footerSection">
       <div class="footer-container">

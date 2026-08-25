@@ -82,12 +82,19 @@
           },
           {
             "@type": "Service",
+            "@id": "https://ghosxt.com/professional-services-it#service",
             "name": "Managed IT Services for Small and Medium Business Offices",
             "provider": { "@id": "https://ghosxt.com/#business" },
             "serviceType": "Managed IT Services",
             "url": "https://ghosxt.com/professional-services-it",
             "areaServed": [
-              { "@type": "State", "name": "California" }
+              { "@type": "State", "name": "California" },
+              { "@type": "City", "name": "Salinas" },
+              { "@type": "City", "name": "Monterey" },
+              { "@type": "City", "name": "Carmel" },
+              { "@type": "City", "name": "Santa Cruz" },
+              { "@type": "City", "name": "Pacific Grove" },
+              { "@type": "City", "name": "San Jose" }
             ],
             "audience": {
               "@type": "BusinessAudience",
@@ -133,7 +140,7 @@
                 "name": "Our cyber-insurance renewal added 30 questions. Can you help us answer them?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Yes. Cyber-insurance underwriting has gotten sharper across every carrier and the questionnaire is now the cheapest way for them to set your rate. We answer the technical sections (MFA coverage, EDR deployment, backup immutability, mean time to patch, incident response plan, vendor risk management, privileged access) with a real number rather than a checkbox, and we close the gaps in advance so the renewal lands at the rate you want."
+                  "text": "Yes. Cyber-insurance underwriting has gotten sharper across every carrier and the questionnaire is now the cheapest way for them to set your rate. We answer the technical sections (MFA coverage, managed detection and response deployment, backup resilience, mean time to patch, incident response plan, vendor risk management, privileged access) with a real number rather than a checkbox, and we close the gaps in advance so the renewal lands at the rate you want."
                 }
               },
               {
@@ -143,6 +150,14 @@
                   "@type": "Answer",
                   "text": "Same-day offboarding done right is a fifteen-minute procedure if the systems are set up for it. We script the revocations: email and SSO disabled at a specific time, MFA tokens revoked, VPN and conditional-access exceptions removed, mailbox forwarded to a designated partner for client continuity, mailbox put on legal hold for the retention window, and any matter-system access logged for the audit. If you do not have those scripts ready when a partner walks out, the right time to build them is before the next one does."
                 }
+              },
+              {
+                "@type": "Question",
+                "name": "Who will I actually talk to?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Ulises Paiz, the owner, directly. There is no tier-1 queue and no offshore call center: the engineer who knows your environment answers the phone, and critical incidents carry our 4-hour notification commitment."
+                }
               }
             ]
           }
@@ -151,87 +166,12 @@
     </script>
     <!-- ghosxt:cf-web-analytics -->
     <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"f3ce7e0e17f54050845d52d7f355cd98"}'></script>
-    <!-- ghosxt:extra-schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "Home",
-              "item": "https://ghosxt.com/"
-            },
-            {
-              "@type": "ListItem",
-              "position": 2,
-              "name": "Professional Services IT",
-              "item": "https://ghosxt.com/professional-services-it"
-            }
-          ]
-        },
-        {
-          "@type": "Service",
-          "@id": "https://ghosxt.com/professional-services-it#service",
-          "name": "Professional Services IT",
-          "url": "https://ghosxt.com/professional-services-it",
-          "provider": {
-            "@id": "https://ghosxt.com/#business"
-          },
-          "areaServed": [
-            {
-              "@type": "State",
-              "name": "California"
-            },
-            {
-              "@type": "City",
-              "name": "Salinas"
-            },
-            {
-              "@type": "City",
-              "name": "Monterey"
-            },
-            {
-              "@type": "City",
-              "name": "Santa Cruz"
-            },
-            {
-              "@type": "City",
-              "name": "San Jose"
-            }
-          ]
-        }
-      ]
-    }
-    </script>
   </head>
   <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
     <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
       <i class="fi fi-rs-angle-up" aria-hidden="true"></i>
     </button>
-
-    <div class="cookie-banner" id="cookieBanner">
-      <div class="cookie-banner-container">
-        <div class="cookie-content">
-          <div class="cookie-icon"><i class="fi fi-rs-cookie"></i></div>
-          <div class="cookie-text">
-            <p class="cookie-message">
-              We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.
-            </p>
-            <a href="/privacy-policy" class="cookie-link">Learn more about our Privacy Policy</a>
-          </div>
-        </div>
-        <div class="cookie-actions">
-          <button class="cookie-btn cookie-btn-secondary" id="cookieDecline">Decline</button>
-          <button class="cookie-btn cookie-btn-primary" id="cookieAccept">Accept All</button>
-        </div>
-      </div>
-    </div>
-
 
     <nav class="navbar" aria-label="Main navigation">
       <div class="navbar-container">
@@ -333,7 +273,7 @@
             <a href="/">Home</a><span class="sep">›</span><span aria-current="page">SMB Office &amp; Professional Services IT</span>
           </nav>
           <h1>Managed IT Services for Small and Medium Business Offices</h1>
-          <p class="lead">A 12-person law office, a four-partner CPA firm, an architecture studio, a regional insurance agency, a nonprofit foundation. Different revenue, same IT pressure: a flood of phishing every week, a Microsoft 365 tenant nobody has hardened, a cyber-insurance renewal that just added thirty questions, and a partner who is leaving on Friday and still has full access to every client file on Monday. Ghosxt runs the IT, cybersecurity, and Microsoft 365 environment for professional offices across the Central Coast and the Bay Area. federal-grade engineering, transparent pricing, no outsourced helpdesk.</p>
+          <p class="lead">A 12-person law office, a four-partner CPA firm, an architecture studio, a regional insurance agency, a nonprofit foundation. Different revenue, same IT pressure: a flood of phishing every week, a Microsoft 365 tenant nobody has hardened, a cyber-insurance renewal that just added thirty questions, and a partner who is leaving on Friday and still has full access to every client file on Monday. Ghosxt runs the IT, cybersecurity, and Microsoft 365 environment for professional offices across the Central Coast and the Bay Area: federal-grade engineering, transparent pricing, no outsourced helpdesk.</p>
           <div class="location-hero-ctas">
             <a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer" class="location-btn location-btn-primary">
               <i class="fi fi-rs-calendar-day" aria-hidden="true"></i>
@@ -354,7 +294,8 @@
         <dl class="key-facts__list">
           <dt>Service area</dt><dd>California's Central Coast &amp; Bay Area</dd>
           <dt>Led by</dt><dd>An engineer with DoD infrastructure experience</dd>
-          <dt>Response</dt><dd>Same-day remote support; on-site within 24–48 hours</dd>
+          <dt>Who you talk to</dt><dd>Ulises Paiz, the owner, directly. No tier-1 queue.</dd>
+          <dt>Response</dt><dd>Critical incidents: 4-hour notification commitment. Direct line to the owner.</dd>
           <dt>Pricing</dt><dd><a href="/pricing">Published upfront</a>, free assessment for a written quote</dd>
           <dt>Free</dt><dd>No-obligation 30-minute IT assessment</dd>
           <dt>Rated</dt><dd><span class="key-facts__stars" aria-hidden="true">★★★★★</span> 5.0 on <a href="https://share.google/88vsSuams5s62RdPJ" target="_blank" rel="noopener noreferrer">26 Google reviews</a></dd>
@@ -476,7 +417,7 @@
                 </svg>
               </div>
               <h3>Cyber-insurance underwriting baseline</h3>
-              <p>Not a regulation, but the practical compliance program every small office now runs whether they meant to or not. Modern carrier questionnaires ask about MFA coverage, EDR deployment, backup immutability, mean time to patch, incident response, vendor risk, privileged access, and dark-web exposure. We answer with a real number and a real artifact, and we close the gaps before the renewal window opens.</p>
+              <p>Not a regulation, but the practical compliance program every small office now runs whether they meant to or not. Modern carrier questionnaires ask about MFA coverage, managed detection and response deployment, backup resilience, mean time to patch, incident response, vendor risk, privileged access, and dark-web exposure. We answer with a real number and a real artifact, and we close the gaps before the renewal window opens.</p>
             </article>
           </div>
 
@@ -607,7 +548,7 @@
       <section class="location-section">
         <div class="container">
           <h2>Service area across the Central Coast and South Bay</h2>
-          <p>Our home base is Salinas. We work with professional offices across the Central Coast and the South Bay. On-site response is fast across the corridor; most issues for office IT are resolved remotely the same hour.</p>
+          <p>Our home base is Salinas. We work with professional offices across the Central Coast and the South Bay. On-site response is fast across the corridor, and most issues for office IT are resolved remotely.</p>
           <div class="nearby-locations">
             <h3>We support SMB offices based in:</h3>
             <ul>
@@ -663,15 +604,35 @@
           </details>
           <details>
             <summary>Our cyber-insurance renewal added 30 questions. Can you help us answer them?</summary>
-            <div class="answer">Yes. Cyber-insurance underwriting has gotten sharper across every carrier and the questionnaire is now the cheapest way for them to set your rate. We answer the technical sections (MFA coverage, EDR deployment, backup immutability, mean time to patch, incident response plan, vendor risk management, privileged access) with a real number rather than a checkbox, and we close the gaps in advance so the renewal lands at the rate you want.</div>
+            <div class="answer">Yes. Cyber-insurance underwriting has gotten sharper across every carrier and the questionnaire is now the cheapest way for them to set your rate. We answer the technical sections (MFA coverage, managed detection and response deployment, backup resilience, mean time to patch, incident response plan, vendor risk management, privileged access) with a real number rather than a checkbox, and we close the gaps in advance so the renewal lands at the rate you want.</div>
           </details>
           <details>
             <summary>A partner is leaving and we need to lock them out fast. What does that look like?</summary>
             <div class="answer">Same-day offboarding done right is a fifteen-minute procedure if the systems are set up for it. We script the revocations: email and SSO disabled at a specific time, MFA tokens revoked, VPN and conditional-access exceptions removed, mailbox forwarded to a designated partner for client continuity, mailbox put on legal hold for the retention window, and any matter-system access logged for the audit. If you do not have those scripts ready when a partner walks out, the right time to build them is before the next one does.</div>
           </details>
+          <details>
+            <summary>Who will I actually talk to?</summary>
+            <div class="answer">Ulises Paiz, the owner, directly. There is no tier-1 queue and no offshore call center: the engineer who knows your environment answers the phone, and critical incidents carry our 4-hour notification commitment.</div>
+          </details>
         </div>
       </section>
     </main>
+
+    <div class="cookie-banner" id="cookieBanner">
+      <div class="cookie-banner-container">
+        <div class="cookie-content">
+          <div class="cookie-icon"><i class="fi fi-rs-cookie"></i></div>
+          <div class="cookie-text">
+            <p class="cookie-message">We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.</p>
+            <a href="/privacy-policy" class="cookie-link">Learn more about our Privacy Policy</a>
+          </div>
+        </div>
+        <div class="cookie-actions">
+          <button class="cookie-btn cookie-btn-secondary" id="cookieDecline">Decline</button>
+          <button class="cookie-btn cookie-btn-primary" id="cookieAccept">Accept All</button>
+        </div>
+      </div>
+    </div>
 
     <footer class="footer" id="footerSection">
       <div class="footer-container">

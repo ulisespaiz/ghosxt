@@ -21,7 +21,7 @@
 
   /* ── STATE ───────────────────────────────────────────────── */
   let state = {
-    projectType: 'business',
+    projectType: 'essential',
     addons: {
       cms: false,
       seo: false,
@@ -201,9 +201,9 @@
     }
 
     // Set default selected radio
-    const defaultRadio = document.querySelector('input[name="projectType"][value="business"]');
+    const defaultRadio = document.querySelector('input[name="projectType"][value="essential"]');
     if (defaultRadio) defaultRadio.checked = true;
-    state.projectType = 'business';
+    state.projectType = 'essential';
 
     render();
   }

@@ -110,7 +110,7 @@
                 {
                   "@type": "Offer",
                   "name": "Tiny Team Managed Security",
-                  "description": "Real managed IT coverage for very small teams (1-4 users) that still need serious protection. Flat-rate plan including 24/7 monitoring, helpdesk, patching, EDR, MFA, Microsoft 365 baseline hardening, email security, cloud backup for Microsoft 365 and OneDrive, vulnerability management, and security awareness training. Server image-based backup and hardware management sold separately.",
+                  "description": "Real managed IT coverage for very small teams (1-4 users) that still need serious protection. Flat-rate plan including 24/7 monitoring, helpdesk, patching, managed detection and response (MDR), MFA, Microsoft 365 baseline hardening, email security, cloud backup for Microsoft 365 and OneDrive, vulnerability management, and security awareness training. Server image-based backup and hardware management sold separately.",
                   "price": "600",
                   "priceCurrency": "USD",
                   "priceSpecification": {
@@ -133,7 +133,7 @@
                 {
                   "@type": "Offer",
                   "name": "Core Managed IT",
-                  "description": "Per user per month. Keeps devices patched, monitored, supported, and stable with MFA and identity basics built in. Includes 24/7 RMM, patch management, EDR, help desk, backup monitoring, MFA enforcement, Microsoft 365 baseline hardening, security awareness training, and monthly reporting. Minimum 5 users.",
+                  "description": "Per user per month. Keeps devices patched, monitored, supported, and stable with MFA and identity basics built in. Includes 24/7 RMM, patch management, managed detection and response (MDR), help desk, backup monitoring, MFA enforcement, Microsoft 365 baseline hardening, security awareness training, and monthly reporting. Minimum 5 users.",
                   "price": "125",
                   "priceCurrency": "USD",
                   "priceSpecification": {
@@ -167,7 +167,7 @@
                 {
                   "@type": "Offer",
                   "name": "Compliance & Continuity",
-                  "description": "Per user per month. For businesses where downtime, compliance gaps, or breach response would be expensive: regulated, logistics, healthcare, after-hours, cyber-insurance-heavy clients. Includes everything in Secure Growth plus Identity Threat Detection, Managed SIEM, compliance support, compliance-grade backup retention, vCIO, QBRs, and priority escalation queue.",
+                  "description": "Per user per month. For businesses where downtime, compliance gaps, or breach response would be expensive: regulated, logistics, healthcare, after-hours, cyber-insurance-heavy clients. Includes everything in Secure Growth plus managed detection and response with a 24/7 SOC, compliance support, compliance-grade backup retention, vCIO, QBRs, and priority escalation queue.",
                   "price": "250",
                   "priceCurrency": "USD",
                   "priceSpecification": {
@@ -217,7 +217,7 @@
                 "name": "What does onboarding cost?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Onboarding is a one-time fee. It's $1,000 for the Tiny Team plan. For the per-user tiers it's based on size: $1,500 for 5–15 users, $2,500 for 15–30 users, $4,000 for 30–50 users, and a custom quote above 50. It covers environment audit, agent deployment, identity and MFA hardening, Microsoft 365 hardening, any needed migration, and team training."
+                  "text": "Onboarding is a one-time fee. It's $1,000 for the Tiny Team plan. For the per-user tiers it's based on size: $1,500 for 5–15 users, $2,500 for 15–30 users, $4,000 for 30–50 users, and a custom quote above 50. Those per-user prices are for the Microsoft 365 default onboarding scope; Google Workspace and Apple fleet onboarding are scoped and quoted separately. It covers environment audit, agent deployment, identity and MFA hardening, Microsoft 365 hardening, any needed migration, and team training."
                 }
               },
               {
@@ -225,7 +225,7 @@
                 "name": "What's the difference between the three tiers?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Core Managed IT ($125/user/mo) keeps devices patched, monitored, supported, and stable with MFA and security fundamentals built in. Secure Growth ($175/user/mo) is the recommended default and adds advanced email filtering, dark web and DNS filtering, password management, and Microsoft 365 & OneDrive cloud backup. Compliance & Continuity ($250/user/mo) adds Managed SIEM, identity threat detection, vCIO and QBRs, compliance support, compliance-grade backup retention, and a priority escalation queue."
+                  "text": "Core Managed IT ($125/user/mo) keeps devices patched, monitored, supported, and stable with MFA and security fundamentals built in. Secure Growth ($175/user/mo) is the recommended default and adds advanced email filtering, dark web and DNS filtering, password management, and Microsoft 365 & OneDrive cloud backup. Compliance & Continuity ($250/user/mo) adds managed detection and response with a 24/7 SOC, vCIO and QBRs, compliance support, compliance-grade backup retention, and a priority escalation queue."
                 }
               },
               {
@@ -261,33 +261,6 @@
     <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
       <i class="fi fi-rs-angle-up" aria-hidden="true"></i>
     </button>
-
-    <div class="cookie-banner" id="cookieBanner">
-      <div class="cookie-banner-container">
-        <div class="cookie-content">
-          <div class="cookie-icon"><i class="fi fi-rs-cookie"></i></div>
-          <div class="cookie-text">
-            <p class="cookie-message">
-              We use cookies to enhance your browsing experience, serve
-              personalized content, and analyze our traffic. By clicking "Accept
-              All", you consent to our use of cookies.
-            </p>
-            <a href="/privacy-policy" class="cookie-link"
-              >Learn more about our Privacy Policy</a
-            >
-          </div>
-        </div>
-        <div class="cookie-actions">
-          <button class="cookie-btn cookie-btn-secondary" id="cookieDecline">
-            Decline
-          </button>
-          <button class="cookie-btn cookie-btn-primary" id="cookieAccept">
-            Accept All
-          </button>
-        </div>
-      </div>
-    </div>
-
 
     <nav class="navbar" aria-label="Main navigation">
       <div class="navbar-container">
@@ -464,7 +437,7 @@
                     <div class="pricing-stat-card stat-wide">
                         <div class="stat-label">Includes with every plan</div>
                         <div class="stat-pills">
-                            <span class="stat-pill"><i class="fi fi-rs-shield-check"></i> EDR</span>
+                            <span class="stat-pill"><i class="fi fi-rs-shield-check"></i> MDR</span>
                             <span class="stat-pill"><i class="fi fi-rs-settings"></i> Patches</span>
                             <span class="stat-pill"><i class="fi fi-rs-network"></i> Monitoring</span>
                             <span class="stat-pill"><i class="fi fi-rs-backup"></i> Backup monitoring</span>
@@ -474,6 +447,17 @@
             </div>
         </div>
     </section>
+
+      <!-- ghosxt:key-facts -->
+      <aside class="key-facts" aria-label="Managed IT Pricing: key facts">
+        <p class="key-facts__title">Managed IT Pricing: at a glance</p>
+        <dl class="key-facts__list">
+          <dt>Service area</dt><dd>Salinas, California and Monterey County</dd>
+          <dt>Who you talk to</dt><dd>Ulises Paiz, the owner, directly. No tier-1 queue.</dd>
+          <dt>Response</dt><dd>Critical incidents: 4-hour notification commitment. Direct line to the owner.</dd>
+          <dt>Pricing</dt><dd><a href="/pricing">Published pricing from $600 per month flat for 1 to 4 users</a></dd>
+        </dl>
+      </aside>
 
       <!-- ═══════════════════════════════════════════ WHICH TIER -->
       <section class="choose-section" id="choose" aria-label="Which tier should I choose?">
@@ -509,7 +493,7 @@
             <article class="choose-card">
               <h3 class="choose-card-title">Choose <span>Core Managed IT</span> if&hellip;</h3>
               <p class="choose-card-body">
-                You need reliable IT support, patching, monitoring, EDR, MFA, and predictable monthly pricing, with the security fundamentals built in, but without the advanced compliance and SIEM layer.
+                You need reliable IT support, patching, monitoring, MDR, MFA, and predictable monthly pricing, with the security fundamentals built in, but without the advanced compliance and 24/7 SOC layer.
               </p>
               <p class="choose-card-meta">Best for 5&ndash;15 users &middot; $125/user/mo</p>
               <a href="#calculator" class="choose-card-link" data-tier="essential">
@@ -584,6 +568,10 @@
             <p class="calc-subtitle">
               Adjust users, pick a tier, and add what you need. Your real
               monthly cost updates live.
+            </p>
+            <p class="under5-notice">
+              <i class="fi fi-rs-info" aria-hidden="true"></i>
+              Teams of 1 to 4 users: Tiny Team flat rate $600 per month; calculator applies to 5 or more users.
             </p>
           </div>
 
@@ -742,7 +730,7 @@
                         </div>
                       </div>
                       <div class="tier-option-desc">
-                        For businesses where downtime, compliance gaps, or breach response would be expensive: regulated, logistics, healthcare, after-hours, cyber-insurance-heavy clients. Full coverage + SIEM, identity threat detection, vCIO, compliance support, compliance-grade backup retention &amp; priority escalation queue.
+                        For businesses where downtime, compliance gaps, or breach response would be expensive: regulated, logistics, healthcare, after-hours, cyber-insurance-heavy clients. Full coverage + managed detection and response with a 24/7 SOC, vCIO, compliance support, compliance-grade backup retention &amp; priority escalation queue.
                       </div>
                     </div>
                   </label>
@@ -1050,23 +1038,23 @@
                     </div>
                     <span class="compare-value compare-value-hire" id="itTechCost">$8,333/mo</span>
                   </div>
-                  <div class="compare-row compare-row-role">
+                  <div class="compare-row compare-row-role compare-row-inactive">
                     <div class="compare-role-info">
-                      <span class="compare-label" id="sysEngLabel">Systems Engineer &times; 1 (avg. CA)</span>
+                      <span class="compare-label" id="sysEngLabel">Systems Engineer (not yet needed at 10 endpoints)</span>
                       <span class="compare-role-desc">Servers, Microsoft 365, Active Directory, identity, backups, integrations</span>
                     </div>
-                    <span class="compare-value compare-value-hire" id="sysEngCost">$10,833/mo</span>
+                    <span class="compare-value compare-value-hire" id="sysEngCost">Not applicable</span>
                   </div>
-                  <div class="compare-row compare-row-role">
+                  <div class="compare-row compare-row-role compare-row-inactive">
                     <div class="compare-role-info">
-                      <span class="compare-label" id="netEngLabel">Network Engineer &times; 1 (avg. CA)</span>
+                      <span class="compare-label" id="netEngLabel">Network Engineer (not yet needed at 10 endpoints)</span>
                       <span class="compare-role-desc">Switches, firewalls, VLANs, routing, wireless, VPN, security architecture</span>
                     </div>
-                    <span class="compare-value compare-value-hire" id="netEngCost">$12,083/mo</span>
+                    <span class="compare-value compare-value-hire" id="netEngCost">Not applicable</span>
                   </div>
                   <div class="compare-row compare-row-total">
                     <span class="compare-label"><strong>In-house team total</strong></span>
-                    <span class="compare-value compare-value-hire" id="hireCost">$31,250/mo</span>
+                    <span class="compare-value compare-value-hire" id="hireCost">$8,333/mo</span>
                   </div>
                   <div class="compare-row compare-row-ghosxt">
                     <span class="compare-label"
@@ -1085,20 +1073,20 @@
                     <div class="savings-numbers">
                       <div class="savings-stat">
                         <div class="savings-stat-val" id="savingsPerMonth">
-                          $4,667
+                          $6,583
                         </div>
                         <div class="savings-stat-label">saved per month</div>
                       </div>
                       <div class="savings-divider" aria-hidden="true"></div>
                       <div class="savings-stat">
                         <div class="savings-stat-val" id="savingsPerYear">
-                          $56,004
+                          $78,996
                         </div>
                         <div class="savings-stat-label">saved per year</div>
                       </div>
                       <div class="savings-divider" aria-hidden="true"></div>
                       <div class="savings-stat">
-                        <div class="savings-stat-val" id="savingsPct">73%</div>
+                        <div class="savings-stat-val" id="savingsPct">79%</div>
                         <div class="savings-stat-label">less than hiring</div>
                       </div>
                     </div>
@@ -1112,7 +1100,7 @@
                         <div
                           class="savings-bar-fill"
                           id="savingsBar"
-                          style="width: 27%"
+                          style="width: 21%"
                         ></div>
                       </div>
                     </div>
@@ -1192,17 +1180,20 @@
                 <i class="fi fi-rs-settings-sliders" aria-hidden="true"></i>
                 Per-user tier onboarding
               </h3>
-              <p class="onboarding-card-price">$1,500 – $4,000 one-time</p>
+              <p class="onboarding-card-price">$1,500 – $4,000 one-time<!-- [VERIFY] --></p>
               <ul class="onboarding-card-list">
-                <li><strong>5 to 15 users:</strong> $1,500</li>
-                <li><strong>15 to 30 users:</strong> $2,500</li>
-                <li><strong>30 to 50 users:</strong> $4,000</li>
+                <li><strong>5 to 15 users:</strong> $1,500 on the Microsoft 365 default scope</li>
+                <li><strong>15 to 30 users:</strong> $2,500<!-- [VERIFY] --></li>
+                <li><strong>30 to 50 users:</strong> $4,000<!-- [VERIFY] --></li>
                 <li><strong>50+ users:</strong> Custom quote</li>
               </ul>
               <p class="onboarding-card-desc">
                 Covers environment audit, agent deployment, identity hardening,
                 migration work where needed, security baseline setup, and team
-                training. Charged once at the start of the engagement.
+                training. Charged once at the start of the engagement. Pricing
+                above applies to the Microsoft 365 default onboarding scope.
+                Google Workspace and Apple fleet onboarding are scoped and
+                quoted separately.
               </p>
             </article>
 
@@ -1306,18 +1297,21 @@
                       class="fi fi-rs-check-circle check-yes"
                       aria-label="Included"
                     ></i>
+                    <span class="sr-only">Included</span>
                   </td>
                   <td class="check-cell plan-col-featured">
                     <i
                       class="fi fi-rs-check-circle check-yes"
                       aria-label="Included"
                     ></i>
+                    <span class="sr-only">Included</span>
                   </td>
                   <td class="check-cell">
                     <i
                       class="fi fi-rs-check-circle check-yes"
                       aria-label="Included"
                     ></i>
+                    <span class="sr-only">Included</span>
                   </td>
                 </tr>
                 <tr>
@@ -1329,41 +1323,47 @@
                       class="fi fi-rs-check-circle check-yes"
                       aria-label="Included"
                     ></i>
+                    <span class="sr-only">Included</span>
                   </td>
                   <td class="check-cell plan-col-featured">
                     <i
                       class="fi fi-rs-check-circle check-yes"
                       aria-label="Included"
                     ></i>
+                    <span class="sr-only">Included</span>
                   </td>
                   <td class="check-cell">
                     <i
                       class="fi fi-rs-check-circle check-yes"
                       aria-label="Included"
                     ></i>
+                    <span class="sr-only">Included</span>
                   </td>
                 </tr>
                 <tr>
                   <td class="feature-name">
-                    Managed Endpoint Detection &amp; Response
+                    Managed Detection &amp; Response (MDR)
                   </td>
                   <td class="check-cell">
                     <i
                       class="fi fi-rs-check-circle check-yes"
                       aria-label="Included"
                     ></i>
+                    <span class="sr-only">Included</span>
                   </td>
                   <td class="check-cell plan-col-featured">
                     <i
                       class="fi fi-rs-check-circle check-yes"
                       aria-label="Included"
                     ></i>
+                    <span class="sr-only">Included</span>
                   </td>
                   <td class="check-cell">
                     <i
                       class="fi fi-rs-check-circle check-yes"
                       aria-label="Included"
                     ></i>
+                    <span class="sr-only">Included</span>
                   </td>
                 </tr>
                 <tr>
@@ -1375,18 +1375,21 @@
                       class="fi fi-rs-check-circle check-yes"
                       aria-label="Included"
                     ></i>
+                    <span class="sr-only">Included</span>
                   </td>
                   <td class="check-cell plan-col-featured">
                     <i
                       class="fi fi-rs-check-circle check-yes"
                       aria-label="Included"
                     ></i>
+                    <span class="sr-only">Included</span>
                   </td>
                   <td class="check-cell">
                     <i
                       class="fi fi-rs-check-circle check-yes"
                       aria-label="Included"
                     ></i>
+                    <span class="sr-only">Included</span>
                   </td>
                 </tr>
                 <tr>
@@ -1396,18 +1399,21 @@
                       class="fi fi-rs-check-circle check-yes"
                       aria-label="Included"
                     ></i>
+                    <span class="sr-only">Included</span>
                   </td>
                   <td class="check-cell plan-col-featured">
                     <i
                       class="fi fi-rs-check-circle check-yes"
                       aria-label="Included"
                     ></i>
+                    <span class="sr-only">Included</span>
                   </td>
                   <td class="check-cell">
                     <i
                       class="fi fi-rs-check-circle check-yes"
                       aria-label="Included"
                     ></i>
+                    <span class="sr-only">Included</span>
                   </td>
                 </tr>
                 <tr>
@@ -1420,18 +1426,21 @@
                       class="fi fi-rs-minus-circle check-no"
                       aria-label="Not included"
                     ></i>
+                    <span class="sr-only">Not included</span>
                   </td>
                   <td class="check-cell plan-col-featured">
                     <i
                       class="fi fi-rs-check-circle check-yes"
                       aria-label="Included"
                     ></i>
+                    <span class="sr-only">Included</span>
                   </td>
                   <td class="check-cell">
                     <i
                       class="fi fi-rs-check-circle check-yes"
                       aria-label="Included"
                     ></i>
+                    <span class="sr-only">Included</span>
                   </td>
                 </tr>
                 <tr>
@@ -1444,18 +1453,21 @@
                       class="fi fi-rs-minus-circle check-no"
                       aria-label="Not included"
                     ></i>
+                    <span class="sr-only">Not included</span>
                   </td>
                   <td class="check-cell plan-col-featured">
                     <i
                       class="fi fi-rs-check-circle check-yes"
                       aria-label="Included"
                     ></i>
+                    <span class="sr-only">Included</span>
                   </td>
                   <td class="check-cell">
                     <i
                       class="fi fi-rs-check-circle check-yes"
                       aria-label="Included"
                     ></i>
+                    <span class="sr-only">Included</span>
                   </td>
                 </tr>
                 <tr>
@@ -1468,18 +1480,21 @@
                       class="fi fi-rs-minus-circle check-no"
                       aria-label="Not included"
                     ></i>
+                    <span class="sr-only">Not included</span>
                   </td>
                   <td class="check-cell plan-col-featured">
                     <i
                       class="fi fi-rs-minus-circle check-no"
                       aria-label="Not included"
                     ></i>
+                    <span class="sr-only">Not included</span>
                   </td>
                   <td class="check-cell">
                     <i
                       class="fi fi-rs-check-circle check-yes"
                       aria-label="Included"
                     ></i>
+                    <span class="sr-only">Included</span>
                   </td>
                 </tr>
                 <tr>
@@ -1489,18 +1504,21 @@
                       class="fi fi-rs-check-circle check-yes"
                       aria-label="Included"
                     ></i>
+                    <span class="sr-only">Included</span>
                   </td>
                   <td class="check-cell plan-col-featured">
                     <i
                       class="fi fi-rs-check-circle check-yes"
                       aria-label="Included"
                     ></i>
+                    <span class="sr-only">Included</span>
                   </td>
                   <td class="check-cell">
                     <i
                       class="fi fi-rs-check-circle check-yes"
                       aria-label="Included"
                     ></i>
+                    <span class="sr-only">Included</span>
                   </td>
                 </tr>
 
@@ -1514,18 +1532,21 @@
                       class="fi fi-rs-check-circle check-yes"
                       aria-label="Included"
                     ></i>
+                    <span class="sr-only">Included</span>
                   </td>
                   <td class="check-cell plan-col-featured">
                     <i
                       class="fi fi-rs-check-circle check-yes"
                       aria-label="Included"
                     ></i>
+                    <span class="sr-only">Included</span>
                   </td>
                   <td class="check-cell">
                     <i
                       class="fi fi-rs-check-circle check-yes"
                       aria-label="Included"
                     ></i>
+                    <span class="sr-only">Included</span>
                   </td>
                 </tr>
                 <tr>
@@ -1535,18 +1556,21 @@
                       class="fi fi-rs-check-circle check-yes"
                       aria-label="Included"
                     ></i>
+                    <span class="sr-only">Included</span>
                   </td>
                   <td class="check-cell plan-col-featured">
                     <i
                       class="fi fi-rs-check-circle check-yes"
                       aria-label="Included"
                     ></i>
+                    <span class="sr-only">Included</span>
                   </td>
                   <td class="check-cell">
                     <i
                       class="fi fi-rs-check-circle check-yes"
                       aria-label="Included"
                     ></i>
+                    <span class="sr-only">Included</span>
                   </td>
                 </tr>
                 <tr>
@@ -1556,18 +1580,21 @@
                       class="fi fi-rs-minus-circle check-no"
                       aria-label="Not included"
                     ></i>
+                    <span class="sr-only">Not included</span>
                   </td>
                   <td class="check-cell plan-col-featured">
                     <i
                       class="fi fi-rs-check-circle check-yes"
                       aria-label="Included"
                     ></i>
+                    <span class="sr-only">Included</span>
                   </td>
                   <td class="check-cell">
                     <i
                       class="fi fi-rs-check-circle check-yes"
                       aria-label="Included"
                     ></i>
+                    <span class="sr-only">Included</span>
                   </td>
                 </tr>
                 <tr>
@@ -1577,18 +1604,21 @@
                       class="fi fi-rs-minus-circle check-no"
                       aria-label="Not included"
                     ></i>
+                    <span class="sr-only">Not included</span>
                   </td>
                   <td class="check-cell plan-col-featured">
                     <i
                       class="fi fi-rs-check-circle check-yes"
                       aria-label="Included"
                     ></i>
+                    <span class="sr-only">Included</span>
                   </td>
                   <td class="check-cell">
                     <i
                       class="fi fi-rs-check-circle check-yes"
                       aria-label="Included"
                     ></i>
+                    <span class="sr-only">Included</span>
                   </td>
                 </tr>
                 <tr>
@@ -1598,18 +1628,21 @@
                       class="fi fi-rs-check-circle check-yes"
                       aria-label="Included"
                     ></i>
+                    <span class="sr-only">Included</span>
                   </td>
                   <td class="check-cell plan-col-featured">
                     <i
                       class="fi fi-rs-check-circle check-yes"
                       aria-label="Included"
                     ></i>
+                    <span class="sr-only">Included</span>
                   </td>
                   <td class="check-cell">
                     <i
                       class="fi fi-rs-check-circle check-yes"
                       aria-label="Included"
                     ></i>
+                    <span class="sr-only">Included</span>
                   </td>
                 </tr>
                 <tr>
@@ -1619,18 +1652,21 @@
                       class="fi fi-rs-minus-circle check-no"
                       aria-label="Not included"
                     ></i>
+                    <span class="sr-only">Not included</span>
                   </td>
                   <td class="check-cell plan-col-featured">
                     <i
                       class="fi fi-rs-check-circle check-yes"
                       aria-label="Included"
                     ></i>
+                    <span class="sr-only">Included</span>
                   </td>
                   <td class="check-cell">
                     <i
                       class="fi fi-rs-check-circle check-yes"
                       aria-label="Included"
                     ></i>
+                    <span class="sr-only">Included</span>
                   </td>
                 </tr>
                 <tr>
@@ -1642,64 +1678,47 @@
                       class="fi fi-rs-minus-circle check-no"
                       aria-label="Not included"
                     ></i>
+                    <span class="sr-only">Not included</span>
                   </td>
                   <td class="check-cell plan-col-featured">
                     <i
                       class="fi fi-rs-check-circle check-yes"
                       aria-label="Included"
                     ></i>
+                    <span class="sr-only">Included</span>
                   </td>
                   <td class="check-cell">
                     <i
                       class="fi fi-rs-check-circle check-yes"
                       aria-label="Included"
                     ></i>
+                    <span class="sr-only">Included</span>
                   </td>
                 </tr>
                 <tr>
                   <td class="feature-name">
-                    Identity Threat Detection &amp; Response
+                    24/7 SOC Threat Monitoring &amp; Response
                   </td>
                   <td class="check-cell">
                     <i
                       class="fi fi-rs-minus-circle check-no"
                       aria-label="Not included"
                     ></i>
+                    <span class="sr-only">Not included</span>
                   </td>
                   <td class="check-cell plan-col-featured">
                     <i
                       class="fi fi-rs-minus-circle check-no"
                       aria-label="Not included"
                     ></i>
+                    <span class="sr-only">Not included</span>
                   </td>
                   <td class="check-cell">
                     <i
                       class="fi fi-rs-check-circle check-yes"
                       aria-label="Included"
                     ></i>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="feature-name">
-                    Managed SIEM (24/7 Threat Monitoring)
-                  </td>
-                  <td class="check-cell">
-                    <i
-                      class="fi fi-rs-minus-circle check-no"
-                      aria-label="Not included"
-                    ></i>
-                  </td>
-                  <td class="check-cell plan-col-featured">
-                    <i
-                      class="fi fi-rs-minus-circle check-no"
-                      aria-label="Not included"
-                    ></i>
-                  </td>
-                  <td class="check-cell">
-                    <i
-                      class="fi fi-rs-check-circle check-yes"
-                      aria-label="Included"
-                    ></i>
+                    <span class="sr-only">Included</span>
                   </td>
                 </tr>
                 <tr>
@@ -1711,18 +1730,21 @@
                       class="fi fi-rs-minus-circle check-no"
                       aria-label="Not included"
                     ></i>
+                    <span class="sr-only">Not included</span>
                   </td>
                   <td class="check-cell plan-col-featured">
                     <i
                       class="fi fi-rs-minus-circle check-no"
                       aria-label="Not included"
                     ></i>
+                    <span class="sr-only">Not included</span>
                   </td>
                   <td class="check-cell">
                     <i
                       class="fi fi-rs-check-circle check-yes"
                       aria-label="Included"
                     ></i>
+                    <span class="sr-only">Included</span>
                   </td>
                 </tr>
 
@@ -1738,18 +1760,21 @@
                       class="fi fi-rs-minus-circle check-no"
                       aria-label="Not included"
                     ></i>
+                    <span class="sr-only">Not included</span>
                   </td>
                   <td class="check-cell plan-col-featured">
                     <i
                       class="fi fi-rs-check-circle check-yes"
                       aria-label="Included"
                     ></i>
+                    <span class="sr-only">Included</span>
                   </td>
                   <td class="check-cell">
                     <i
                       class="fi fi-rs-check-circle check-yes"
                       aria-label="Included"
                     ></i>
+                    <span class="sr-only">Included</span>
                   </td>
                 </tr>
                 <tr>
@@ -1761,18 +1786,21 @@
                       class="fi fi-rs-minus-circle check-no"
                       aria-label="Not included"
                     ></i>
+                    <span class="sr-only">Not included</span>
                   </td>
                   <td class="check-cell plan-col-featured">
                     <i
                       class="fi fi-rs-minus-circle check-no"
                       aria-label="Not included"
                     ></i>
+                    <span class="sr-only">Not included</span>
                   </td>
                   <td class="check-cell">
                     <i
                       class="fi fi-rs-check-circle check-yes"
                       aria-label="Included"
                     ></i>
+                    <span class="sr-only">Included</span>
                   </td>
                 </tr>
 
@@ -1786,18 +1814,21 @@
                       class="fi fi-rs-minus-circle check-no"
                       aria-label="Not included"
                     ></i>
+                    <span class="sr-only">Not included</span>
                   </td>
                   <td class="check-cell plan-col-featured">
                     <i
                       class="fi fi-rs-check-circle check-yes"
                       aria-label="Included"
                     ></i>
+                    <span class="sr-only">Included</span>
                   </td>
                   <td class="check-cell">
                     <i
                       class="fi fi-rs-check-circle check-yes"
                       aria-label="Included"
                     ></i>
+                    <span class="sr-only">Included</span>
                   </td>
                 </tr>
                 <tr>
@@ -1807,18 +1838,21 @@
                       class="fi fi-rs-minus-circle check-no"
                       aria-label="Not included"
                     ></i>
+                    <span class="sr-only">Not included</span>
                   </td>
                   <td class="check-cell plan-col-featured">
                     <i
                       class="fi fi-rs-check-circle check-yes"
                       aria-label="Included"
                     ></i>
+                    <span class="sr-only">Included</span>
                   </td>
                   <td class="check-cell">
                     <i
                       class="fi fi-rs-check-circle check-yes"
                       aria-label="Included"
                     ></i>
+                    <span class="sr-only">Included</span>
                   </td>
                 </tr>
                 <tr>
@@ -1828,18 +1862,21 @@
                       class="fi fi-rs-minus-circle check-no"
                       aria-label="Not included"
                     ></i>
+                    <span class="sr-only">Not included</span>
                   </td>
                   <td class="check-cell plan-col-featured">
                     <i
                       class="fi fi-rs-minus-circle check-no"
                       aria-label="Not included"
                     ></i>
+                    <span class="sr-only">Not included</span>
                   </td>
                   <td class="check-cell">
                     <i
                       class="fi fi-rs-check-circle check-yes"
                       aria-label="Included"
                     ></i>
+                    <span class="sr-only">Included</span>
                   </td>
                 </tr>
                 <tr>
@@ -1849,18 +1886,21 @@
                       class="fi fi-rs-minus-circle check-no"
                       aria-label="Not included"
                     ></i>
+                    <span class="sr-only">Not included</span>
                   </td>
                   <td class="check-cell plan-col-featured">
                     <i
                       class="fi fi-rs-minus-circle check-no"
                       aria-label="Not included"
                     ></i>
+                    <span class="sr-only">Not included</span>
                   </td>
                   <td class="check-cell">
                     <i
                       class="fi fi-rs-check-circle check-yes"
                       aria-label="Included"
                     ></i>
+                    <span class="sr-only">Included</span>
                   </td>
                 </tr>
                 <tr>
@@ -1872,18 +1912,21 @@
                       class="fi fi-rs-minus-circle check-no"
                       aria-label="Not included"
                     ></i>
+                    <span class="sr-only">Not included</span>
                   </td>
                   <td class="check-cell plan-col-featured">
                     <i
                       class="fi fi-rs-minus-circle check-no"
                       aria-label="Not included"
                     ></i>
+                    <span class="sr-only">Not included</span>
                   </td>
                   <td class="check-cell">
                     <i
                       class="fi fi-rs-check-circle check-yes"
                       aria-label="Included"
                     ></i>
+                    <span class="sr-only">Included</span>
                   </td>
                 </tr>
                 <tr>
@@ -1893,18 +1936,21 @@
                       class="fi fi-rs-minus-circle check-no"
                       aria-label="Not included"
                     ></i>
+                    <span class="sr-only">Not included</span>
                   </td>
                   <td class="check-cell plan-col-featured">
                     <i
                       class="fi fi-rs-minus-circle check-no"
                       aria-label="Not included"
                     ></i>
+                    <span class="sr-only">Not included</span>
                   </td>
                   <td class="check-cell">
                     <i
                       class="fi fi-rs-check-circle check-yes"
                       aria-label="Included"
                     ></i>
+                    <span class="sr-only">Included</span>
                   </td>
                 </tr>
 
@@ -2002,14 +2048,14 @@
               <h4 class="foundation-list-title">Included every month</h4>
               <ul class="foundation-includes">
                 <li><i class="fi fi-rs-check" aria-hidden="true"></i> 24/7 monitoring, helpdesk, and patching</li>
-                <li><i class="fi fi-rs-check" aria-hidden="true"></i> EDR (endpoint detection and response)</li>
+                <li><i class="fi fi-rs-check" aria-hidden="true"></i> Managed detection and response (MDR)</li>
                 <li><i class="fi fi-rs-check" aria-hidden="true"></i> Multi-factor authentication and identity management</li>
                 <li><i class="fi fi-rs-check" aria-hidden="true"></i> Microsoft 365 baseline security configuration</li>
                 <li><i class="fi fi-rs-check" aria-hidden="true"></i> Email security and anti-phishing</li>
                 <li><i class="fi fi-rs-check" aria-hidden="true"></i> Cloud backup for Microsoft 365 &amp; OneDrive: your most important files protected</li>
                 <li><i class="fi fi-rs-check" aria-hidden="true"></i> Vulnerability management</li>
                 <li><i class="fi fi-rs-check" aria-hidden="true"></i> Security awareness training</li>
-                <li><i class="fi fi-rs-check" aria-hidden="true"></i> Same-business-day first response during business hours</li>
+                <li><i class="fi fi-rs-check" aria-hidden="true"></i> 4-hour notification commitment on critical incidents, direct line to the owner</li>
               </ul>
 
               <div class="foundation-excludes">
@@ -2206,13 +2252,13 @@
             <details class="faq-item">
               <summary>What does onboarding cost?</summary>
               <div class="faq-answer">
-                Onboarding is a one-time fee. It's $1,000 for the Tiny Team plan. For the per-user tiers it's based on size: $1,500 for 5–15 users, $2,500 for 15–30 users, $4,000 for 30–50 users, and a custom quote above 50. It covers environment audit, agent deployment, identity and MFA hardening, Microsoft 365 hardening, any needed migration, and team training.
+                Onboarding is a one-time fee. It's $1,000 for the Tiny Team plan. For the per-user tiers it's based on size: $1,500 for 5–15 users, $2,500<!-- [VERIFY] --> for 15–30 users, $4,000<!-- [VERIFY] --> for 30–50 users, and a custom quote above 50. Those per-user prices are for the Microsoft 365 default onboarding scope; Google Workspace and Apple fleet onboarding are scoped and quoted separately. It covers environment audit, agent deployment, identity and MFA hardening, Microsoft 365 hardening, any needed migration, and team training.
               </div>
             </details>
             <details class="faq-item">
               <summary>What's the difference between the three tiers?</summary>
               <div class="faq-answer">
-                <strong>Core Managed IT</strong> ($125/user/mo) keeps devices patched, monitored, supported, and stable with MFA and security fundamentals built in. <strong>Secure Growth</strong> ($175/user/mo) is the recommended default and adds advanced email filtering, dark web and DNS filtering, password management, and Microsoft 365 &amp; OneDrive cloud backup. <strong>Compliance &amp; Continuity</strong> ($250/user/mo) adds Managed SIEM, identity threat detection, vCIO and QBRs, compliance support, compliance-grade backup retention, and a priority escalation queue.
+                <strong>Core Managed IT</strong> ($125/user/mo) keeps devices patched, monitored, supported, and stable with MFA and security fundamentals built in. <strong>Secure Growth</strong> ($175/user/mo) is the recommended default and adds advanced email filtering, dark web and DNS filtering, password management, and Microsoft 365 &amp; OneDrive cloud backup. <strong>Compliance &amp; Continuity</strong> ($250/user/mo) adds managed detection and response with a 24/7 SOC, vCIO and QBRs, compliance support, compliance-grade backup retention, and a priority escalation queue.
               </div>
             </details>
             <details class="faq-item">
@@ -2268,6 +2314,22 @@
         </div>
       </div>
     </main>
+
+    <div class="cookie-banner" id="cookieBanner">
+      <div class="cookie-banner-container">
+        <div class="cookie-content">
+          <div class="cookie-icon"><i class="fi fi-rs-cookie"></i></div>
+          <div class="cookie-text">
+            <p class="cookie-message">We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.</p>
+            <a href="/privacy-policy" class="cookie-link">Learn more about our Privacy Policy</a>
+          </div>
+        </div>
+        <div class="cookie-actions">
+          <button class="cookie-btn cookie-btn-secondary" id="cookieDecline">Decline</button>
+          <button class="cookie-btn cookie-btn-primary" id="cookieAccept">Accept All</button>
+        </div>
+      </div>
+    </div>
 
     <footer class="footer" id="footerSection">
       <div class="footer-container">

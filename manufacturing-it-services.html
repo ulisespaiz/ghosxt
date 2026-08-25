@@ -243,6 +243,14 @@
                   "@type": "Answer",
                   "text": "Part 11 is the FDA rule for electronic records and electronic signatures in regulated activities. The IT side is access control, audit trail integrity, system validation documentation, time-synced logs, and a retention policy that survives an FDA inspector asking for a record from four years ago. For small medical device manufacturers we layer those requirements into the ERP, QMS, document control, and email systems, and we keep the validation paper trail current as systems change."
                 }
+              },
+              {
+                "@type": "Question",
+                "name": "Who will I actually talk to?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Ulises Paiz, the owner, directly. There is no tier-1 queue and no offshore call center: the engineer who knows your environment answers the phone, and critical incidents carry our 4-hour notification commitment."
+                }
               }
             ]
           }
@@ -251,87 +259,12 @@
     </script>
     <!-- ghosxt:cf-web-analytics -->
     <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"f3ce7e0e17f54050845d52d7f355cd98"}'></script>
-    <!-- ghosxt:extra-schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "Home",
-              "item": "https://ghosxt.com/"
-            },
-            {
-              "@type": "ListItem",
-              "position": 2,
-              "name": "Manufacturing IT Services",
-              "item": "https://ghosxt.com/manufacturing-it-services"
-            }
-          ]
-        },
-        {
-          "@type": "Service",
-          "@id": "https://ghosxt.com/manufacturing-it-services#service",
-          "name": "Manufacturing IT Services",
-          "url": "https://ghosxt.com/manufacturing-it-services",
-          "provider": {
-            "@id": "https://ghosxt.com/#business"
-          },
-          "areaServed": [
-            {
-              "@type": "State",
-              "name": "California"
-            },
-            {
-              "@type": "City",
-              "name": "Salinas"
-            },
-            {
-              "@type": "City",
-              "name": "Monterey"
-            },
-            {
-              "@type": "City",
-              "name": "Santa Cruz"
-            },
-            {
-              "@type": "City",
-              "name": "San Jose"
-            }
-          ]
-        }
-      ]
-    }
-    </script>
   </head>
   <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
     <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
       <i class="fi fi-rs-angle-up" aria-hidden="true"></i>
     </button>
-
-    <div class="cookie-banner" id="cookieBanner">
-      <div class="cookie-banner-container">
-        <div class="cookie-content">
-          <div class="cookie-icon"><i class="fi fi-rs-cookie"></i></div>
-          <div class="cookie-text">
-            <p class="cookie-message">
-              We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.
-            </p>
-            <a href="/privacy-policy" class="cookie-link">Learn more about our Privacy Policy</a>
-          </div>
-        </div>
-        <div class="cookie-actions">
-          <button class="cookie-btn cookie-btn-secondary" id="cookieDecline">Decline</button>
-          <button class="cookie-btn cookie-btn-primary" id="cookieAccept">Accept All</button>
-        </div>
-      </div>
-    </div>
-
 
     <nav class="navbar" aria-label="Main navigation">
       <div class="navbar-container">
@@ -433,7 +366,7 @@
             <a href="/">Home</a><span class="sep">›</span><span aria-current="page">Manufacturing &amp; Industrial IT</span>
           </nav>
           <h1>Managed IT Services for Manufacturing and Industrial Operations in California</h1>
-          <p class="lead">A shop-floor minute of downtime is rarely just a minute. A CNC controller that loses the network at 10am is a half-day of running by hand and a customer phone call by Thursday. An ERP that drops at month-end is two days of accounting overtime. An OT segment that gets hit by ransomware is a problem that does not stay on the shop floor. Ghosxt runs the IT, cybersecurity, and OT/IT plumbing for machine shops, fabricators, contract manufacturers, medical device makers, and small aerospace and defense suppliers across the Central Coast and the South Bay. federal-grade engineering, transparent pricing, no outsourced helpdesk.</p>
+          <p class="lead">A shop-floor minute of downtime is rarely just a minute. A CNC controller that loses the network at 10am is a half-day of running by hand and a customer phone call by Thursday. An ERP that drops at month-end is two days of accounting overtime. An OT segment that gets hit by ransomware is a problem that does not stay on the shop floor. Ghosxt runs the IT, cybersecurity, and OT/IT plumbing for machine shops, fabricators, contract manufacturers, medical device makers, and small aerospace and defense suppliers across the Central Coast and the South Bay: federal-grade engineering, transparent pricing, no outsourced helpdesk.</p>
           <div class="location-hero-ctas">
             <a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer" class="location-btn location-btn-primary">
               <i class="fi fi-rs-calendar-day" aria-hidden="true"></i>
@@ -454,7 +387,8 @@
         <dl class="key-facts__list">
           <dt>Service area</dt><dd>California</dd>
           <dt>Led by</dt><dd>An engineer with DoD infrastructure experience</dd>
-          <dt>Response</dt><dd>Same-day remote support; on-site within 24–48 hours</dd>
+          <dt>Who you talk to</dt><dd>Ulises Paiz, the owner, directly. No tier-1 queue.</dd>
+          <dt>Response</dt><dd>Critical incidents: 4-hour notification commitment. Direct line to the owner.</dd>
           <dt>Pricing</dt><dd><a href="/pricing">Published upfront</a>, free assessment for a written quote</dd>
           <dt>Free</dt><dd>No-obligation 30-minute IT assessment</dd>
           <dt>Rated</dt><dd><span class="key-facts__stars" aria-hidden="true">★★★★★</span> 5.0 on <a href="https://share.google/88vsSuams5s62RdPJ" target="_blank" rel="noopener noreferrer">26 Google reviews</a></dd>
@@ -615,7 +549,7 @@
                 </div>
                 <h3>CAD server failed before a customer release</h3>
               </div>
-              <p>An engineering team's CAD/PDM server died three days before a major release deliverable. The most recent backup was two weeks old because the backup target had been silently full for a month. Recovery would have meant losing every check-in since. We extracted what we could from the failed disks, restored partial work, and put together an emergency PDM rebuild that hit the deadline by 30 minutes. We then redesigned the backup chain with monitored health checks, immutable off-account snapshots, and an alert that fires before the silent failure can ever happen again.</p>
+              <p>An engineering team's CAD/PDM server died three days before a major release deliverable. The most recent backup was two weeks old because the backup target had been silently full for a month. Recovery would have meant losing every check-in since. We extracted what we could from the failed disks, restored partial work, and put together an emergency PDM rebuild that hit the deadline by 30 minutes. We then redesigned the backup chain with monitored health checks, immutable off-account snapshots, and an alert that fires before the silent failure can ever happen again. <!-- [VERIFY] --></p>
             </article>
 
             <article class="scenario-card">
@@ -762,9 +696,29 @@
             <summary>We make medical devices. What does FDA 21 CFR Part 11 mean for our IT?</summary>
             <div class="answer">Part 11 is the FDA rule for electronic records and electronic signatures in regulated activities. The IT side is access control, audit trail integrity, system validation documentation, time-synced logs, and a retention policy that survives an FDA inspector asking for a record from four years ago. For small medical device manufacturers we layer those requirements into the ERP, QMS, document control, and email systems, and we keep the validation paper trail current as systems change.</div>
           </details>
+          <details>
+            <summary>Who will I actually talk to?</summary>
+            <div class="answer">Ulises Paiz, the owner, directly. There is no tier-1 queue and no offshore call center: the engineer who knows your environment answers the phone, and critical incidents carry our 4-hour notification commitment.</div>
+          </details>
         </div>
       </section>
     </main>
+
+    <div class="cookie-banner" id="cookieBanner">
+      <div class="cookie-banner-container">
+        <div class="cookie-content">
+          <div class="cookie-icon"><i class="fi fi-rs-cookie"></i></div>
+          <div class="cookie-text">
+            <p class="cookie-message">We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.</p>
+            <a href="/privacy-policy" class="cookie-link">Learn more about our Privacy Policy</a>
+          </div>
+        </div>
+        <div class="cookie-actions">
+          <button class="cookie-btn cookie-btn-secondary" id="cookieDecline">Decline</button>
+          <button class="cookie-btn cookie-btn-primary" id="cookieAccept">Accept All</button>
+        </div>
+      </div>
+    </div>
 
     <footer class="footer" id="footerSection">
       <div class="footer-container">

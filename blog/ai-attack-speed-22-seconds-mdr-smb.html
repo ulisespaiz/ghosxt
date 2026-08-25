@@ -113,7 +113,7 @@
   <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
     <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top"><i class="fi fi-rs-angle-up" aria-hidden="true"></i></button>
-    <div class="cookie-banner" id="cookieBanner"><div class="cookie-banner-container"><div class="cookie-content"><div class="cookie-icon"><i class="fi fi-rs-cookie"></i></div><div class="cookie-text"><p class="cookie-message">We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.</p><a href="/privacy-policy" class="cookie-link">Learn more about our Privacy Policy</a></div></div><div class="cookie-actions"><button class="cookie-btn cookie-btn-secondary" id="cookieDecline">Decline</button><button class="cookie-btn cookie-btn-primary" id="cookieAccept">Accept All</button></div></div></div>
+
     <nav class="navbar" aria-label="Main navigation">
       <div class="navbar-container">
         <div class="navbar-left"><a href="/" class="navbar-logo"><img fetchpriority="high" loading="eager" src="../assets/img/ghosxt-logo-160.webp" alt="Ghosxt logo" width="48" height="48" /><span>GHOSXT</span></a></div>
@@ -178,12 +178,12 @@
           </div>
           <h1>AI Has Cut Attacker Handoff to 22 Seconds: What an SMB Should Do</h1>
           <div class="blog-post-author">
-            <strong>Ulises Paiz</strong>, Founder, Ghosxt
+            <strong>Ulises Paiz</strong>, Owner, Ghosxt
           </div>
           <div class="author-bio-box">
             <!-- ghosxt:author-bio -->
             <img src="../assets/img/ulises.avif" alt="Ulises Paiz" width="56" height="56" loading="lazy" />
-            <p>Ulises Paiz, Founder of Ghosxt, has 10+ years in IT infrastructure and cybersecurity, deep DoD infrastructure experience, and 9 certifications including CySA+, Security+, and AZ-104. Before founding Ghosxt, he served as a Senior Solutions Consultant for the DoD and built security programs for 40+ Central Coast businesses. <a href="/about">More about Ulises &rarr;</a></p>
+            <p>Ulises Paiz is the owner and sole engineer at Ghosxt, a Salinas, CA managed IT and cybersecurity provider. He holds an M.S. in Cybersecurity and Information Assurance (WGU, 2026) and nine industry certifications including CompTIA SecurityX, CySA+, and Microsoft AZ-104, with prior DoD and federal contractor infrastructure experience. <a href="/about">More about Ulises &rarr;</a></p>
           </div>
         </div>
       </header>
@@ -238,9 +238,9 @@
 
           <p>The instinct is to assume that 22 seconds is a problem for the Fortune 500, not for a 25-person property management firm in Salinas or a 60-person ag operation outside Watsonville. The opposite is closer to true.</p>
 
-          <p>The brokers do not pre-filter for company size. They harvest credentials at scale and qualify everything that lands. A small business's Microsoft 365 tenant is a fine target: easy to map, often missing Conditional Access, often shares an admin account with a vendor, and frequently has a backup story that is more vulnerable than its production. The 22-second handoff applies whether the captured credential belongs to a 30,000-employee bank or a 30-employee dental group.</p>
+          <p>The brokers do not pre-filter for company size. They harvest credentials at scale and qualify everything that lands. A small business's Microsoft 365 tenant is a fine target: easy to map, often missing Conditional Access, often shares an admin account with a vendor, and frequently has a backup story that is more vulnerable than its production. The 22-second handoff applies whether the captured credential belongs to a 30,000-employee bank or a 30-employee medical practice.</p>
 
-          <p>What differs is the response side. The bank has a 24/7 security operations center watching its tenant. The dental group has an MSP that checks email in the morning. The attacker doesn't care which one they hit; the math just works out better against the smaller one. Most of the small-business compromises I have walked into over the past 18 months had detection signal somewhere in the environment (an Entra ID risky sign-in, a Defender alert, an unusual OAuth grant) that nobody read until the ransomware note showed up.</p>
+          <p>What differs is the response side. The bank has a 24/7 security operations center watching its tenant. The medical practice has an MSP that checks email in the morning. The attacker doesn't care which one they hit; the math just works out better against the smaller one. Most of the small-business compromises I have walked into over the past 18 months had detection signal somewhere in the environment (an Entra ID risky sign-in, a Defender alert, an unusual OAuth grant) that nobody read until the ransomware note showed up.</p>
 
           <h2>What the realistic 2026 minimum looks like</h2>
 
@@ -348,6 +348,23 @@
         </div>
       </div>
     </main>
+
+    <div class="cookie-banner" id="cookieBanner">
+      <div class="cookie-banner-container">
+        <div class="cookie-content">
+          <div class="cookie-icon"><i class="fi fi-rs-cookie"></i></div>
+          <div class="cookie-text">
+            <p class="cookie-message">We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.</p>
+            <a href="/privacy-policy" class="cookie-link">Learn more about our Privacy Policy</a>
+          </div>
+        </div>
+        <div class="cookie-actions">
+          <button class="cookie-btn cookie-btn-secondary" id="cookieDecline">Decline</button>
+          <button class="cookie-btn cookie-btn-primary" id="cookieAccept">Accept All</button>
+        </div>
+      </div>
+    </div>
+
     <footer class="footer" id="footerSection">
       <div class="footer-container">
         <div class="footer-brand-row">

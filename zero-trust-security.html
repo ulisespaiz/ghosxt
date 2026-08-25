@@ -93,6 +93,14 @@
                   "@type": "Answer",
                   "text": "No. The term originated in large-enterprise security, but the core practices (enforce MFA everywhere, give people only the access they need, segment the network so one compromised device can't reach everything) are exactly as valuable, and just as achievable, for a 10-person business as a 10,000-person one."
                 }
+              },
+              {
+                "@type": "Question",
+                "name": "Who will I actually talk to?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Ulises Paiz, the owner, directly. There is no tier-1 queue and no offshore call center: the engineer who knows your environment answers the phone, and critical incidents carry our 4-hour notification commitment."
+                }
               }
             ]
           }
@@ -109,21 +117,6 @@
       <i class="fi fi-rs-angle-up" aria-hidden="true"></i>
     </button>
 
-    <div class="cookie-banner" id="cookieBanner">
-      <div class="cookie-banner-container">
-        <div class="cookie-content">
-          <div class="cookie-icon"><i class="fi fi-rs-cookie"></i></div>
-          <div class="cookie-text">
-            <p class="cookie-message">We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.</p>
-            <a href="/privacy-policy" class="cookie-link">Learn more about our Privacy Policy</a>
-          </div>
-        </div>
-        <div class="cookie-actions">
-          <button class="cookie-btn cookie-btn-secondary" id="cookieDecline">Decline</button>
-          <button class="cookie-btn cookie-btn-primary" id="cookieAccept">Accept All</button>
-        </div>
-      </div>
-    </div>
     <nav class="navbar" aria-label="Main navigation">
       <div class="navbar-container">
         <div class="navbar-left">
@@ -228,6 +221,17 @@
           <p class="pricing-trust-callout"><a href="/contact">Built by an engineer with DoD infrastructure experience: an architecture, not a product pitch.</a></p>
         </div>
       </section>
+      <!-- ghosxt:key-facts -->
+      <aside class="key-facts" aria-label="Zero Trust Security: key facts">
+        <p class="key-facts__title">Zero Trust Security: at a glance</p>
+        <dl class="key-facts__list">
+          <dt>Service area</dt><dd>California's Central Coast</dd>
+          <dt>Who you talk to</dt><dd>Ulises Paiz, the owner, directly. No tier-1 queue.</dd>
+          <dt>Response</dt><dd>Critical incidents: 4-hour notification commitment. Direct line to the owner.</dd>
+          <dt>Pricing</dt><dd><a href="/pricing">Published pricing from $600 per month flat for 1 to 4 users</a></dd>
+        </dl>
+      </aside>
+
       <section class="location-section">
         <div class="container">
           <h2>Zero Trust is an architecture, not a product</h2>
@@ -252,11 +256,11 @@
             </article>
             <article class="service-card">
               <h3>Least-Privilege Access Control</h3>
-              <p>Every user and service account gets only the access it needs to do its job, reviewed on a schedule, so a single compromised account can't reach everything.</p>
+              <p>Every user and service account gets only the access it needs to do its job, reviewed on a schedule, so a single compromised account can't reach everything. <!-- [VERIFY] --></p>
             </article>
             <article class="service-card">
               <h3>Network Micro-Segmentation</h3>
-              <p>Your network split into isolated zones so a compromised device or a breached vendor connection can't move laterally to reach the rest of your systems.</p>
+              <p>Your network split into isolated zones so a compromised device or a breached vendor connection can't move laterally to reach the rest of your systems. <!-- [VERIFY] --></p>
             </article>
             <article class="service-card">
               <h3>Device Compliance &amp; Health Checks</h3>
@@ -264,11 +268,11 @@
             </article>
             <article class="service-card">
               <h3>Continuous Monitoring &amp; Logging</h3>
-              <p>Access and identity events logged and watched on an ongoing basis, so unusual behavior gets caught instead of assumed safe because it came from "inside."</p>
+              <p>Access and identity events logged and watched on an ongoing basis, so unusual behavior gets caught instead of assumed safe because it came from "inside." <!-- [VERIFY] --></p>
             </article>
             <article class="service-card">
               <h3>Application &amp; Workload Isolation</h3>
-              <p>Sensitive applications and data isolated from the general network, so access to one system doesn't imply access to everything else.</p>
+              <p>Sensitive applications and data isolated from the general network, so access to one system doesn't imply access to everything else. <!-- [VERIFY] --></p>
             </article>
           </div>
         </div>
@@ -305,6 +309,10 @@
             <summary>Is Zero Trust only for large enterprises?</summary>
             <div class="answer">No. The term originated in large-enterprise security, but the core practices (enforce MFA everywhere, give people only the access they need, segment the network so one compromised device can't reach everything) are exactly as valuable, and just as achievable, for a 10-person business as a 10,000-person one.</div>
           </details>
+          <details>
+            <summary>Who will I actually talk to?</summary>
+            <div class="answer">Ulises Paiz, the owner, directly. There is no tier-1 queue and no offshore call center: the engineer who knows your environment answers the phone, and critical incidents carry our 4-hour notification commitment.</div>
+          </details>
         </div>
       </section>
       <section class="location-cta">
@@ -316,6 +324,22 @@
         </div>
       </section>
     </main>
+
+    <div class="cookie-banner" id="cookieBanner">
+      <div class="cookie-banner-container">
+        <div class="cookie-content">
+          <div class="cookie-icon"><i class="fi fi-rs-cookie"></i></div>
+          <div class="cookie-text">
+            <p class="cookie-message">We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.</p>
+            <a href="/privacy-policy" class="cookie-link">Learn more about our Privacy Policy</a>
+          </div>
+        </div>
+        <div class="cookie-actions">
+          <button class="cookie-btn cookie-btn-secondary" id="cookieDecline">Decline</button>
+          <button class="cookie-btn cookie-btn-primary" id="cookieAccept">Accept All</button>
+        </div>
+      </div>
+    </div>
 
     <footer class="footer" id="footerSection">
       <div class="footer-container">

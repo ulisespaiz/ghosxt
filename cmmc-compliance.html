@@ -49,8 +49,7 @@
               { "@type": "AdministrativeArea", "name": "San Benito County, California" },
               { "@type": "AdministrativeArea", "name": "Santa Clara County, California" },
               { "@type": "State", "name": "California" }
-            ],
-            "hasCredential": { "@type": "EducationalOccupationalCredential", "credentialCategory": "CMMC / NIST SP 800-171" }
+            ]
           },
           {
             "@type": "BreadcrumbList",
@@ -110,6 +109,14 @@
                   "@type": "Answer",
                   "text": "It depends on your starting point and scope, but a focused small-business effort is typically a few months. The fastest path is to reduce scope: isolating CUI to a small, well-controlled enclave rather than securing your entire environment to the same level. We design for that from day one."
                 }
+              },
+              {
+                "@type": "Question",
+                "name": "Who will I actually talk to?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Ulises Paiz, the owner, directly. There is no tier-1 queue and no offshore call center: the engineer who knows your environment answers the phone, and critical incidents carry our 4-hour notification commitment."
+                }
               }
             ]
           }
@@ -126,21 +133,6 @@
       <i class="fi fi-rs-angle-up" aria-hidden="true"></i>
     </button>
 
-    <div class="cookie-banner" id="cookieBanner">
-      <div class="cookie-banner-container">
-        <div class="cookie-content">
-          <div class="cookie-icon"><i class="fi fi-rs-cookie"></i></div>
-          <div class="cookie-text">
-            <p class="cookie-message">We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.</p>
-            <a href="/privacy-policy" class="cookie-link">Learn more about our Privacy Policy</a>
-          </div>
-        </div>
-        <div class="cookie-actions">
-          <button class="cookie-btn cookie-btn-secondary" id="cookieDecline">Decline</button>
-          <button class="cookie-btn cookie-btn-primary" id="cookieAccept">Accept All</button>
-        </div>
-      </div>
-    </div>
     <nav class="navbar" aria-label="Main navigation">
       <div class="navbar-container">
         <div class="navbar-left">
@@ -245,6 +237,17 @@
           <p class="pricing-trust-callout"><a href="/contact">Built by an engineer with DoD infrastructure experience: not a checklist from someone who has never touched CUI.</a></p>
         </div>
       </section>
+      <!-- ghosxt:key-facts -->
+      <aside class="key-facts" aria-label="CMMC Compliance &amp; NIST 800-171: key facts">
+        <p class="key-facts__title">CMMC Compliance &amp; NIST 800-171: at a glance</p>
+        <dl class="key-facts__list">
+          <dt>Service area</dt><dd>California's Central Coast</dd>
+          <dt>Who you talk to</dt><dd>Ulises Paiz, the owner, directly. No tier-1 queue.</dd>
+          <dt>Response</dt><dd>Critical incidents: 4-hour notification commitment. Direct line to the owner.</dd>
+          <dt>Pricing</dt><dd><a href="/pricing">Published pricing from $600 per month flat for 1 to 4 users</a></dd>
+        </dl>
+      </aside>
+
       <section class="location-section">
         <div class="container">
           <h2>What CMMC is, and who it's for</h2>
@@ -255,7 +258,7 @@
       <section class="location-section">
         <div class="container">
           <h2>Why an engineer with DoD infrastructure experience is different here</h2>
-          <p>Most IT shops approaching CMMC are learning it from a binder. Ghosxt is run by an engineer with DoD infrastructure experience and former Senior Solutions Consultant for the U.S. Department of Defense, someone who has implemented and operated these controls inside the environments they were written for. Ghosxt's background includes DoD-cleared work, which is why the documentation survives real scrutiny: the difference between a paper SSP that falls apart under questioning and documentation that reflects a system genuinely built to standard.</p>
+          <p>Most IT shops approaching CMMC are learning it from a binder. Ghosxt is run by an engineer with prior DoD and federal contractor infrastructure experience, someone who has implemented and operated these controls inside the environments they were written for. Ghosxt's background includes DoD-cleared work, which is why the documentation survives real scrutiny: the difference between a paper SSP that falls apart under questioning and documentation that reflects a system genuinely built to standard.</p>
           <p>It also means realism. We design the smallest defensible scope, implement what the controls actually require, and tell you plainly what is and is not done: the same discipline expected inside a real accreditation boundary.</p>
         </div>
       </section>
@@ -266,15 +269,15 @@
           <div class="services-grid">
             <article class="service-card">
               <h3>Gap Assessment</h3>
-              <p>A full NIST 800-171 gap assessment against all 110 controls, mapped to your actual environment, so you know exactly where you stand and what stands between you and your required SPRS score.</p>
+              <p>A full NIST 800-171 gap assessment against all 110 controls, mapped to your actual environment, so you know exactly where you stand and what stands between you and your required SPRS score. <!-- [VERIFY] --></p>
             </article>
             <article class="service-card">
               <h3>CUI Enclave Design</h3>
-              <p>We scope CUI into a small, hardened enclave instead of securing your whole company to Level 2. Less scope means lower cost, faster readiness, and an assessment that is genuinely passable.</p>
+              <p>We scope CUI into a small, hardened enclave instead of securing your whole company to Level 2. Less scope means lower cost, faster readiness, and an assessment that is genuinely passable. <!-- [VERIFY] --></p>
             </article>
             <article class="service-card">
               <h3>SSP &amp; POA&amp;M</h3>
-              <p>The System Security Plan and Plan of Action and Milestones that contracts and assessors demand: written to match how your systems are really configured, and maintainable as things change.</p>
+              <p>The System Security Plan and Plan of Action and Milestones that contracts and assessors demand: written to match how your systems are really configured, and maintainable as things change. <!-- [VERIFY] --></p>
             </article>
             <article class="service-card">
               <h3>Control Implementation</h3>
@@ -282,7 +285,7 @@
             </article>
             <article class="service-card">
               <h3>SPRS Score &amp; Submission</h3>
-              <p>We calculate your NIST 800-171 self-assessment score and help you submit it to SPRS correctly, so your eligibility is on record where contracting officers and primes check.</p>
+              <p>We calculate your NIST 800-171 self-assessment score and help you submit it to SPRS correctly, so your eligibility is on record where contracting officers and primes check. <!-- [VERIFY] --></p>
             </article>
             <article class="service-card">
               <h3>Ongoing Compliance</h3>
@@ -322,7 +325,7 @@
           </details>
           <details>
             <summary>Can you get us a SPRS score and write our SSP and POA&M?</summary>
-            <div class="answer">Yes. We perform the NIST 800-171 self-assessment, calculate and help you submit your SPRS score, and produce the System Security Plan (SSP) and Plan of Action and Milestones (POA&M) that contracts and assessors require: real documentation that matches how your systems are actually configured, not a generic template.</div>
+            <div class="answer"><!-- [VERIFY] -->Yes. We perform the NIST 800-171 self-assessment, calculate and help you submit your SPRS score, and produce the System Security Plan (SSP) and Plan of Action and Milestones (POA&M) that contracts and assessors require: real documentation that matches how your systems are actually configured, not a generic template.</div>
           </details>
           <details>
             <summary>Do you perform the official CMMC assessment?</summary>
@@ -331,6 +334,10 @@
           <details>
             <summary>How long does CMMC readiness take?</summary>
             <div class="answer">It depends on your starting point and scope, but a focused small-business effort is typically a few months. The fastest path is to reduce scope: isolating CUI to a small, well-controlled enclave rather than securing your entire environment to the same level. We design for that from day one.</div>
+          </details>
+          <details>
+            <summary>Who will I actually talk to?</summary>
+            <div class="answer">Ulises Paiz, the owner, directly. There is no tier-1 queue and no offshore call center: the engineer who knows your environment answers the phone, and critical incidents carry our 4-hour notification commitment.</div>
           </details>
         </div>
       </section>
@@ -343,6 +350,22 @@
         </div>
       </section>
     </main>
+
+    <div class="cookie-banner" id="cookieBanner">
+      <div class="cookie-banner-container">
+        <div class="cookie-content">
+          <div class="cookie-icon"><i class="fi fi-rs-cookie"></i></div>
+          <div class="cookie-text">
+            <p class="cookie-message">We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.</p>
+            <a href="/privacy-policy" class="cookie-link">Learn more about our Privacy Policy</a>
+          </div>
+        </div>
+        <div class="cookie-actions">
+          <button class="cookie-btn cookie-btn-secondary" id="cookieDecline">Decline</button>
+          <button class="cookie-btn cookie-btn-primary" id="cookieAccept">Accept All</button>
+        </div>
+      </div>
+    </div>
 
     <footer class="footer" id="footerSection">
       <div class="footer-container">

@@ -219,7 +219,7 @@
                 "name": "What firewall vendors do you deploy?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "pfSense Plus, Sophos XGS, WatchGuard Firebox, and Cisco Meraki MX, depending on the environment. We are vendor-neutral and pick the right tool for the size of business, the throughput needed, and your budget. We do not deploy ISP-provided routers as firewalls."
+                  "text": "We evaluate on real firewall capability, licensing model, centralized management, and integrated threat feeds rather than brand loyalty. Cisco Meraki MX is one of the firewalls we deploy, depending on the environment. We are vendor-neutral and pick the right tool for the size of business, the throughput needed, and your budget. We do not deploy ISP-provided routers as firewalls."
                 }
               },
               {
@@ -245,6 +245,14 @@
                   "@type": "Answer",
                   "text": "Yes. Every deployment ends with a written runbook, a current network diagram, IP scheme documentation, switch and firewall configuration backups, and credentials handed over to you in your password manager. You own all of it. You are not locked to us."
                 }
+              },
+              {
+                "@type": "Question",
+                "name": "Who will I actually talk to?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Ulises Paiz, the owner, directly. There is no tier-1 queue and no offshore call center: the engineer who knows your environment answers the phone, and critical incidents carry our 4-hour notification commitment."
+                }
               }
             ]
           }
@@ -253,62 +261,6 @@
     </script>
     <!-- ghosxt:cf-web-analytics -->
     <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"f3ce7e0e17f54050845d52d7f355cd98"}'></script>
-    <!-- ghosxt:extra-schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "Home",
-              "item": "https://ghosxt.com/"
-            },
-            {
-              "@type": "ListItem",
-              "position": 2,
-              "name": "Network Design",
-              "item": "https://ghosxt.com/network-design"
-            }
-          ]
-        },
-        {
-          "@type": "Service",
-          "@id": "https://ghosxt.com/network-design#service",
-          "name": "Network Design",
-          "url": "https://ghosxt.com/network-design",
-          "provider": {
-            "@id": "https://ghosxt.com/#business"
-          },
-          "areaServed": [
-            {
-              "@type": "State",
-              "name": "California"
-            },
-            {
-              "@type": "City",
-              "name": "Salinas"
-            },
-            {
-              "@type": "City",
-              "name": "Monterey"
-            },
-            {
-              "@type": "City",
-              "name": "Santa Cruz"
-            },
-            {
-              "@type": "City",
-              "name": "San Jose"
-            }
-          ]
-        }
-      ]
-    }
-    </script>
   </head>
   <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -316,23 +268,6 @@
     <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
       <i class="fi fi-rs-angle-up" aria-hidden="true"></i>
     </button>
-
-    <div class="cookie-banner" id="cookieBanner">
-      <div class="cookie-banner-container">
-        <div class="cookie-content">
-          <div class="cookie-icon"><i class="fi fi-rs-cookie"></i></div>
-          <div class="cookie-text">
-            <p class="cookie-message">We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.</p>
-            <a href="/privacy-policy" class="cookie-link">Learn more about our Privacy Policy</a>
-          </div>
-        </div>
-        <div class="cookie-actions">
-          <button class="cookie-btn cookie-btn-secondary" id="cookieDecline">Decline</button>
-          <button class="cookie-btn cookie-btn-primary" id="cookieAccept">Accept All</button>
-        </div>
-      </div>
-    </div>
-
 
     <nav class="navbar" aria-label="Main navigation">
       <div class="navbar-container">
@@ -451,7 +386,8 @@
         <dl class="key-facts__list">
           <dt>Service area</dt><dd>California's Central Coast &amp; Bay Area</dd>
           <dt>Led by</dt><dd>An engineer with DoD infrastructure experience</dd>
-          <dt>Response</dt><dd>Same-day remote support; on-site within 24–48 hours</dd>
+          <dt>Who you talk to</dt><dd>Ulises Paiz, the owner, directly. No tier-1 queue.</dd>
+          <dt>Response</dt><dd>Critical incidents: 4-hour notification commitment. Direct line to the owner.</dd>
           <dt>Pricing</dt><dd><a href="/pricing">Published upfront</a>, free assessment for a written quote</dd>
           <dt>Free</dt><dd>No-obligation 30-minute IT assessment</dd>
           <dt>Rated</dt><dd><span class="key-facts__stars" aria-hidden="true">★★★★★</span> 5.0 on <a href="https://share.google/88vsSuams5s62RdPJ" target="_blank" rel="noopener noreferrer">26 Google reviews</a></dd>
@@ -517,17 +453,15 @@
 
       <section class="location-section">
         <div class="container">
-          <h2>Vendors we deploy and why</h2>
-          <p>We are vendor-neutral. The right gear depends on the size of the business, the throughput needed, the existing investment, and the maturity level the team can support after we hand it over. The shortlist:</p>
+          <h2>How we choose network equipment</h2>
+          <p>We are vendor-neutral. The right gear depends on the size of the business, the throughput needed, the existing investment, and the maturity level the team can support after we hand it over. What that evaluation looks like in practice:</p>
           <ul class="industries-list">
-            <li><strong>pfSense Plus / OPNsense.</strong> Where the client wants real firewall capability without the recurring per-feature licensing model. Tunable, transparent, no surprise renewal bills.</li>
-            <li><strong>Sophos XGS / WatchGuard Firebox.</strong> Where centralized cloud management and integrated threat feeds are worth the licensing premium. Common pick for mid-size offices.</li>
-            <li><strong>Cisco Meraki MX.</strong> Where the client values a clean dashboard, easy multi-site rollouts, and is comfortable with the licensing model. Strong fit for distributed teams.</li>
-            <li><strong>UniFi Enterprise.</strong> Switching and Wi-Fi 6/6E for most small business deployments. Strong price-to-capability ratio, good documentation, controllable on-prem or in the cloud.</li>
-            <li><strong>Aruba CX / Cisco Catalyst.</strong> Where switching scale, advanced routing, or specific compliance demands push past UniFi.</li>
+            <li><strong>Firewalls.</strong> We weigh real firewall capability, licensing model, centralized cloud management, and integrated threat feeds against the client's budget and in-house maturity. Cisco Meraki MX<!-- [VERIFY] --> is one of the options we deploy, chosen where a clean dashboard, easy multi-site rollouts, and a subscription licensing model fit the client.</li>
+            <li><strong>Switching and Wi-Fi.</strong> Enterprise-grade switching and Wi-Fi 6/6E sized for most small business deployments, with a strong price-to-capability ratio, clear documentation, and management on-prem or in the cloud.</li>
+            <li><strong>Advanced switching and routing.</strong> Where switching scale, advanced routing, or specific compliance demands push past a standard deployment, including Cisco Catalyst<!-- [VERIFY] --> for teams already standardized on Cisco.</li>
             <li><strong>10GbE / SFP+ uplinks and fiber.</strong> Where coolers, warehouses, and multi-floor offices need actual backbone, not consumer-grade trunks.</li>
           </ul>
-          <p>For the deeper cybersecurity layer that sits on top of the firewall (EDR, identity, MFA, monitoring), see our <a href="/cybersecurity">cybersecurity services</a>. For C-TPAT-aligned network controls for importers and 3PLs, see <a href="/ctpat">C-TPAT compliance</a>.</p>
+          <p>For the deeper cybersecurity layer that sits on top of the firewall (managed detection and response, identity, MFA, monitoring), see our <a href="/cybersecurity">cybersecurity services</a>. For C-TPAT-aligned network controls for importers and 3PLs, see <a href="/ctpat">C-TPAT compliance</a>.</p>
         </div>
       </section>
 
@@ -574,7 +508,7 @@
           </details>
           <details>
             <summary>What firewall vendors do you deploy?</summary>
-            <div class="answer">pfSense Plus, Sophos XGS, WatchGuard Firebox, and Cisco Meraki MX, depending on the environment. We are vendor-neutral and pick the right tool for the size of business, the throughput needed, and your budget. We do not deploy ISP-provided routers as firewalls.</div>
+            <div class="answer">We evaluate on real firewall capability, licensing model, centralized management, and integrated threat feeds rather than brand loyalty. Cisco Meraki MX<!-- [VERIFY] --> is one of the firewalls we deploy, depending on the environment. We are vendor-neutral and pick the right tool for the size of business, the throughput needed, and your budget. We do not deploy ISP-provided routers as firewalls.</div>
           </details>
           <details>
             <summary>Why do small businesses need VLANs?</summary>
@@ -587,6 +521,10 @@
           <details>
             <summary>Do we get a network diagram and documentation?</summary>
             <div class="answer">Yes. Every deployment ends with a written runbook, a current network diagram, IP scheme documentation, switch and firewall configuration backups, and credentials handed over to you in your password manager. You own all of it. You are not locked to us.</div>
+          </details>
+          <details>
+            <summary>Who will I actually talk to?</summary>
+            <div class="answer">Ulises Paiz, the owner, directly. There is no tier-1 queue and no offshore call center: the engineer who knows your environment answers the phone, and critical incidents carry our 4-hour notification commitment.</div>
           </details>
         </div>
       </section>
@@ -606,6 +544,22 @@
         </div>
       </section>
     </main>
+
+    <div class="cookie-banner" id="cookieBanner">
+      <div class="cookie-banner-container">
+        <div class="cookie-content">
+          <div class="cookie-icon"><i class="fi fi-rs-cookie"></i></div>
+          <div class="cookie-text">
+            <p class="cookie-message">We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.</p>
+            <a href="/privacy-policy" class="cookie-link">Learn more about our Privacy Policy</a>
+          </div>
+        </div>
+        <div class="cookie-actions">
+          <button class="cookie-btn cookie-btn-secondary" id="cookieDecline">Decline</button>
+          <button class="cookie-btn cookie-btn-primary" id="cookieAccept">Accept All</button>
+        </div>
+      </div>
+    </div>
 
     <footer class="footer" id="footerSection">
       <div class="footer-container">

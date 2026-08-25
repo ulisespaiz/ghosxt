@@ -68,7 +68,7 @@
                 "name": "We're small. Do we really need managed IT?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Small businesses are targeted precisely because they tend to run break-fix with no monitoring and no one watching. You do not need an enterprise contract, but you do need the basics maintained: backups, patching, MFA, EDR. For very small teams we offer a flat-rate Tiny Team plan that delivers exactly that without enterprise overhead."
+                  "text": "Small businesses are targeted precisely because they tend to run break-fix with no monitoring and no one watching. You do not need an enterprise contract, but you do need the basics maintained: backups, patching, MFA, managed detection and response. For very small teams we offer a flat-rate Tiny Team plan that delivers exactly that without enterprise overhead."
                 }
               },
               {
@@ -84,7 +84,7 @@
                 "name": "What's included in managed IT that break-fix isn't?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "The proactive half: 24/7 monitoring, patching, immutable backups, EDR and security, a help desk you can call anytime, and someone who actually knows your environment. Break-fix only shows up after something is already broken. It is reactive by design, with no incentive to prevent the next problem."
+                  "text": "The proactive half: 24/7 monitoring, patching, cloud backup, managed detection and response, a help desk you can call anytime, and someone who actually knows your environment. Break-fix only shows up after something is already broken. It is reactive by design, with no incentive to prevent the next problem."
                 }
               },
               {
@@ -93,6 +93,14 @@
                 "acceptedAnswer": {
                   "@type": "Answer",
                   "text": "Transparently and upfront. We publish our plans (per-user managed tiers plus a flat-rate Tiny Team option) so you can see the cost before you ever talk to us. See pricing for the current plans."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Who will I actually talk to?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Ulises Paiz, the owner, directly. There is no tier-1 queue and no offshore call center: the engineer who knows your environment answers the phone, and critical incidents carry our 4-hour notification commitment."
                 }
               }
             ]
@@ -110,21 +118,6 @@
       <i class="fi fi-rs-angle-up" aria-hidden="true"></i>
     </button>
 
-    <div class="cookie-banner" id="cookieBanner">
-      <div class="cookie-banner-container">
-        <div class="cookie-content">
-          <div class="cookie-icon"><i class="fi fi-rs-cookie"></i></div>
-          <div class="cookie-text">
-            <p class="cookie-message">We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.</p>
-            <a href="/privacy-policy" class="cookie-link">Learn more about our Privacy Policy</a>
-          </div>
-        </div>
-        <div class="cookie-actions">
-          <button class="cookie-btn cookie-btn-secondary" id="cookieDecline">Decline</button>
-          <button class="cookie-btn cookie-btn-primary" id="cookieAccept">Accept All</button>
-        </div>
-      </div>
-    </div>
     <nav class="navbar" aria-label="Main navigation">
       <div class="navbar-container">
         <div class="navbar-left">
@@ -235,6 +228,17 @@
           <p class="pricing-trust-callout"><a href="/pricing">Managed IT pricing is published upfront: no mystery, no sales call required.</a></p>
         </div>
       </section>
+      <!-- ghosxt:key-facts -->
+      <aside class="key-facts" aria-label="Break-Fix vs. Managed IT: key facts">
+        <p class="key-facts__title">Break-Fix vs. Managed IT: at a glance</p>
+        <dl class="key-facts__list">
+          <dt>Service area</dt><dd>California's Central Coast &amp; Bay Area</dd>
+          <dt>Who you talk to</dt><dd>Ulises Paiz, the owner, directly. No tier-1 queue.</dd>
+          <dt>Response</dt><dd>Critical incidents: 4-hour notification commitment. Direct line to the owner.</dd>
+          <dt>Pricing</dt><dd><a href="/pricing">Published pricing from $600 per month flat for 1 to 4 users</a></dd>
+        </dl>
+      </aside>
+
       <section class="location-section">
         <div class="container">
           <h2>What is break-fix IT?</h2>
@@ -269,12 +273,12 @@
                   <tr>
                     <th scope="row">Downtime</th>
                     <td>Reactive. The clock starts when you notice, then you wait for an available tech. Outages run long.</td>
-                    <td class="col-managed">Proactive. Monitoring catches most issues before you notice; when something does break, response is immediate.</td>
+                    <td class="col-managed">Proactive. Monitoring catches most issues before you notice, and critical incidents carry a 4-hour notification commitment.</td>
                   </tr>
                   <tr>
                     <th scope="row">Security</th>
                     <td>None by default. Break-fix fixes what broke; it does not patch, monitor, or defend against ransomware.</td>
-                    <td class="col-managed">Built in. EDR, MFA, patching, and immutable backups are maintained continuously, not bolted on after a breach.</td>
+                    <td class="col-managed">Built in. Managed detection and response, MFA, patching, and cloud backup are maintained continuously, not bolted on after a breach.</td>
                   </tr>
                   <tr>
                     <th scope="row">Incentives</th>
@@ -334,7 +338,7 @@
           </details>
           <details>
             <summary>We're small. Do we really need managed IT?</summary>
-            <div class="answer">Small businesses are targeted precisely because they tend to run break-fix with no monitoring and no one watching. You do not need an enterprise contract, but you do need the basics maintained: backups, patching, MFA, EDR. For very small teams we offer a flat-rate Tiny Team plan that delivers exactly that without enterprise overhead.</div>
+            <div class="answer">Small businesses are targeted precisely because they tend to run break-fix with no monitoring and no one watching. You do not need an enterprise contract, but you do need the basics maintained: backups, patching, MFA, managed detection and response. For very small teams we offer a flat-rate Tiny Team plan that delivers exactly that without enterprise overhead.</div>
           </details>
           <details>
             <summary>Can we start with break-fix and switch to managed later?</summary>
@@ -342,11 +346,15 @@
           </details>
           <details>
             <summary>What's included in managed IT that break-fix isn't?</summary>
-            <div class="answer">The proactive half: 24/7 monitoring, patching, immutable backups, EDR and security, a help desk you can call anytime, and someone who actually knows your environment. Break-fix only shows up after something is already broken. It is reactive by design, with no incentive to prevent the next problem.</div>
+            <div class="answer">The proactive half: 24/7 monitoring, patching, cloud backup, managed detection and response, a help desk you can call anytime, and someone who actually knows your environment. Break-fix only shows up after something is already broken. It is reactive by design, with no incentive to prevent the next problem.</div>
           </details>
           <details>
             <summary>How is managed IT priced at Ghosxt?</summary>
             <div class="answer">Transparently and upfront. We publish our plans (per-user managed tiers plus a flat-rate Tiny Team option) so you can see the cost before you ever talk to us. See <a href="/pricing">pricing</a> for the current plans.</div>
+          </details>
+          <details>
+            <summary>Who will I actually talk to?</summary>
+            <div class="answer">Ulises Paiz, the owner, directly. There is no tier-1 queue and no offshore call center: the engineer who knows your environment answers the phone, and critical incidents carry our 4-hour notification commitment.</div>
           </details>
         </div>
       </section>
@@ -365,6 +373,22 @@
         </div>
       </section>
     </main>
+
+    <div class="cookie-banner" id="cookieBanner">
+      <div class="cookie-banner-container">
+        <div class="cookie-content">
+          <div class="cookie-icon"><i class="fi fi-rs-cookie"></i></div>
+          <div class="cookie-text">
+            <p class="cookie-message">We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.</p>
+            <a href="/privacy-policy" class="cookie-link">Learn more about our Privacy Policy</a>
+          </div>
+        </div>
+        <div class="cookie-actions">
+          <button class="cookie-btn cookie-btn-secondary" id="cookieDecline">Decline</button>
+          <button class="cookie-btn cookie-btn-primary" id="cookieAccept">Accept All</button>
+        </div>
+      </div>
+    </div>
 
     <footer class="footer" id="footerSection">
       <div class="footer-container">

@@ -156,7 +156,7 @@
           "name": "How do you handle after-hours emergencies?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Critical system failures get immediate attention. Our monitoring systems alert us 24/7 to critical issues. For planned after-hours work (infrastructure upgrades, migrations), we schedule in advance to minimize business disruption."
+            "text": "Critical incidents get a 4-hour notification commitment, with a direct line to the owner. Our monitoring systems watch 24/7 for critical issues. For planned after-hours work (infrastructure upgrades, migrations), we schedule in advance to minimize business disruption."
           }
         }
       ]
@@ -175,29 +175,6 @@
     <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
         <i class="fi fi-rs-angle-up" aria-hidden="true"></i>
     </button>
-
-    <div class="cookie-banner" id="cookieBanner">
-        <div class="cookie-banner-container">
-            <div class="cookie-content">
-                <div class="cookie-icon">
-                    <i class="fi fi-rs-cookie"></i>
-                </div>
-                <div class="cookie-text">
-                    <p class="cookie-message">We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.</p>
-                    <a href="/privacy-policy" class="cookie-link">Learn more about our Privacy Policy</a>
-                </div>
-            </div>
-            <div class="cookie-actions">
-                <button class="cookie-btn cookie-btn-secondary" id="cookieDecline">
-                    Decline
-                </button>
-                <button class="cookie-btn cookie-btn-primary" id="cookieAccept">
-                    Accept All
-                </button>
-            </div>
-        </div>
-    </div>
-
 
     <nav class="navbar" aria-label="Main navigation">
         <div class="navbar-container">
@@ -335,7 +312,7 @@
                         </div>
                         <div class="info-content">
                             <div class="info-value"><a href="mailto:sales@ghosxt.com"><span>sales@ghosxt.com</span></a></div>
-                            <div class="info-label">We respond within 24 hours</div>
+                            <div class="info-label">Reply as soon as possible<!-- [VERIFY] -->, straight from the owner</div>
                             
                         </div>
                     </div>
@@ -377,7 +354,7 @@
             <div class="contact-right">
                 <div class="form-header">
                     <h2 class="form-title">Talk to the engineer, or try for free</h2>
-                    <p class="form-subtitle">Fill out the form and we'll get back to you within 24 hours.</p>
+                    <p class="form-subtitle">Fill out the form and we'll get back to you as soon as possible<!-- [VERIFY] -->. You'll hear directly from the owner.</p>
                 </div>
 
                 <form class="contact-form" id="contactForm" action="/api/contact" method="POST" novalidate>
@@ -408,6 +385,23 @@
                     </div>
 
                     <div class="form-group">
+                        <label class="form-label" for="input-found_us">How did you find us? <span class="form-label-optional">(optional)</span></label>
+                        <select id="input-found_us" name="found_us" class="form-select">
+                            <option value="">Choose one</option>
+                            <option value="ChatGPT or another AI assistant">ChatGPT or another AI assistant</option>
+                            <option value="Google search">Google search</option>
+                            <option value="Referral">Referral</option>
+                            <option value="Social media">Social media</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="input-search_query">What did you search for? <span class="form-label-optional">(optional)</span></label>
+                        <input type="text" id="input-search_query" name="search_query" class="form-input" maxlength="500">
+                    </div>
+
+                    <div class="form-group">
                         <label class="form-label" for="input-message">How can we help you?<span class="form-label-required" aria-hidden="true">*</span></label>
                         <textarea id="input-message" name="message" class="form-textarea" placeholder="Tell us more about your needs..." maxlength="5000" required aria-describedby="form-privacy-note"></textarea>
                     </div>
@@ -428,7 +422,7 @@
 
                     <p class="form-response-promise">
                         <i class="fi fi-rs-clock" aria-hidden="true"></i>
-                        We reply within 1 business day. No sales scripts, just straight answers from an engineer.
+                        We reply as soon as possible<!-- [VERIFY] -->. No sales scripts, just straight answers from an engineer.
                     </p>
 
                     <button type="submit" class="form-submit" id="form-submit">Send Message</button>
@@ -438,6 +432,17 @@
             </div>
         </div>
     </div>
+
+      <!-- ghosxt:key-facts -->
+      <aside class="key-facts" aria-label="Contact Ghosxt: key facts">
+        <p class="key-facts__title">Contact Ghosxt: at a glance</p>
+        <dl class="key-facts__list">
+          <dt>Service area</dt><dd>Salinas, California; remote support available nationwide</dd>
+          <dt>Who you talk to</dt><dd>Ulises Paiz, the owner, directly. No tier-1 queue.</dd>
+          <dt>Response</dt><dd>Critical incidents: 4-hour notification commitment. Direct line to the owner.</dd>
+          <dt>Pricing</dt><dd><a href="/pricing">Published pricing from $600 per month flat for 1 to 4 users</a></dd>
+        </dl>
+      </aside>
 
     <section class="calendly-embed-section" id="bookSection" aria-labelledby="bookHeading">
         <div class="calendly-embed-container">
@@ -621,13 +626,29 @@
                         <i class="fi fi-rs-angle-small-down faq-icon"></i>
                     </button>
                     <div class="faq-answer">
-                        <p>Critical system failures get immediate attention. Our monitoring systems alert us 24/7 to critical issues. For planned after-hours work (infrastructure upgrades, migrations), we schedule in advance to minimize business disruption.</p>
+                        <p>Critical incidents get a 4-hour notification commitment, with a direct line to the owner. Our monitoring systems watch 24/7 for critical issues. For planned after-hours work (infrastructure upgrades, migrations), we schedule in advance to minimize business disruption.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     </main>
+
+    <div class="cookie-banner" id="cookieBanner">
+      <div class="cookie-banner-container">
+        <div class="cookie-content">
+          <div class="cookie-icon"><i class="fi fi-rs-cookie"></i></div>
+          <div class="cookie-text">
+            <p class="cookie-message">We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.</p>
+            <a href="/privacy-policy" class="cookie-link">Learn more about our Privacy Policy</a>
+          </div>
+        </div>
+        <div class="cookie-actions">
+          <button class="cookie-btn cookie-btn-secondary" id="cookieDecline">Decline</button>
+          <button class="cookie-btn cookie-btn-primary" id="cookieAccept">Accept All</button>
+        </div>
+      </div>
+    </div>
 
     <footer class="footer" id="footerSection">
         <div class="footer-container">
@@ -805,7 +826,7 @@
                     if (res.ok) {
                         form.reset();
                         if (window.turnstile) window.turnstile.reset();
-                        setStatus('Thanks, we received your message and will reply within 1 business day.', 'success');
+                        setStatus('Thanks, we received your message. We reply as soon as possible, straight from the owner.', 'success'); // [VERIFY] response-time wording
                         document.dispatchEvent(new CustomEvent('contact:success'));
                     } else {
                         let msg = 'Something went wrong. Please try again or email sales@ghosxt.com.';

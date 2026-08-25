@@ -83,7 +83,7 @@
                 "name": "Is the office firewall enough cybersecurity for a small trucking operation?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "No, and it has not been for several years. The firewall protects the yard office. It does not see your drivers' tablets at a truck stop, your dispatcher's laptop at home, your QuickBooks Online account, your TMS in the cloud, or your Microsoft 365 mailboxes. Modern trucking IT is identity-first: MFA on every account, endpoint detection on every device, and monitored email security on every mailbox. The firewall is one of about ten controls, not the control."
+                  "text": "No, and it has not been for several years. The firewall protects the yard office. It does not see your drivers' tablets at a truck stop, your dispatcher's laptop at home, your QuickBooks Online account, your TMS in the cloud, or your Microsoft 365 mailboxes. Modern trucking IT is identity-first: MFA on every account, managed detection and response on every device, and monitored email security on every mailbox. The firewall is one of about ten controls, not the control."
                 }
               },
               {
@@ -121,7 +121,7 @@
   <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
     <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top"><i class="fi fi-rs-angle-up" aria-hidden="true"></i></button>
-    <div class="cookie-banner" id="cookieBanner"><div class="cookie-banner-container"><div class="cookie-content"><div class="cookie-icon"><i class="fi fi-rs-cookie"></i></div><div class="cookie-text"><p class="cookie-message">We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.</p><a href="/privacy-policy" class="cookie-link">Learn more about our Privacy Policy</a></div></div><div class="cookie-actions"><button class="cookie-btn cookie-btn-secondary" id="cookieDecline">Decline</button><button class="cookie-btn cookie-btn-primary" id="cookieAccept">Accept All</button></div></div></div>
+
     <nav class="navbar" aria-label="Main navigation">
       <div class="navbar-container">
         <div class="navbar-left"><a href="/" class="navbar-logo"><img fetchpriority="high" loading="eager" src="../assets/img/ghosxt-logo-160.webp" alt="Ghosxt logo" width="48" height="48" /><span>GHOSXT</span></a></div>
@@ -186,12 +186,12 @@
           </div>
           <h1>Trucking and Logistics IT in Salinas: What Owner-Operators and Small Fleets Should Have in Place</h1>
           <div class="blog-post-author">
-            <strong>Ulises Paiz</strong>, Founder, Ghosxt
+            <strong>Ulises Paiz</strong>, Owner, Ghosxt
           </div>
           <div class="author-bio-box">
             <!-- ghosxt:author-bio -->
             <img src="../assets/img/ulises.avif" alt="Ulises Paiz" width="56" height="56" loading="lazy" />
-            <p>Ulises Paiz, Founder of Ghosxt, has 10+ years in IT infrastructure and cybersecurity, deep DoD infrastructure experience, and 9 certifications including CySA+, Security+, and AZ-104. Before founding Ghosxt, he served as a Senior Solutions Consultant for the DoD and built security programs for 40+ Central Coast businesses. <a href="/about">More about Ulises &rarr;</a></p>
+            <p>Ulises Paiz is the owner and sole engineer at Ghosxt, a Salinas, CA managed IT and cybersecurity provider. He holds an M.S. in Cybersecurity and Information Assurance (WGU, 2026) and nine industry certifications including CompTIA SecurityX, CySA+, and Microsoft AZ-104, with prior DoD and federal contractor infrastructure experience. <a href="/about">More about Ulises &rarr;</a></p>
           </div>
         </div>
       </header>
@@ -298,7 +298,7 @@
 
           <ul>
             <li><strong>MFA on every cloud account.</strong> Microsoft 365, QuickBooks Online, the TMS, the ELD vendor portal, the fuel-card portal, the broker load boards, the bank. Without exception.</li>
-            <li><strong>EDR on every office endpoint.</strong> Microsoft Defender for Business at the M365 Business Premium tier, or SentinelOne / Huntress / CrowdStrike at the next tier up.</li>
+            <li><strong>MDR on every office endpoint.</strong> Managed detection and response with a 24/7 SOC, layered with Microsoft Defender for Business at the M365 Business Premium tier.</li>
             <li><strong>Monitored email security.</strong> Defender for Office 365 or a third-party email security gateway. BOL spoofing arrives by email.</li>
             <li><strong>Mobile device management.</strong> Intune on the office endpoints, the ELD vendor's MDM (or Intune work profile) on driver tablets and phones.</li>
             <li><strong>Identity hardening.</strong> Conditional Access policies that block legacy auth, geo-restrict admin sign-in, and require compliant devices. See the <a href="/blog/identity-hardening-small-business-5-employees-microsoft-365">identity hardening post</a>.</li>
@@ -312,7 +312,7 @@
 
           <p>Continuity also means PG&amp;E. The Central Coast sits under the Public Safety Power Shutoff program, and the 101 corridor has lost power for 12 to 72 hours in several recent fire seasons. A trucking operation that goes dark when the yard office loses power loses dispatch, loses the office printer, loses the door buzzer, and loses the security cameras. The fix is some combination of a small UPS for the network gear, a documented runbook for failing over to a hotspot or a home office, and a generator if the yard is in a high-PSPS-risk area. The <a href="/blog/pge-psps-it-continuity-plan-central-coast">PSPS continuity plan post</a> covers the playbook in detail.</p>
 
-          <p>The backup and continuity layer also covers <a href="/backup-disaster-recovery">backup and disaster recovery</a> as a managed service: tested restores, immutable copies, and a written RTO and RPO that the cyber insurance underwriter will accept.</p>
+          <p>The backup and continuity layer also covers <a href="/backup-disaster-recovery">backup and disaster recovery</a> as a managed service: tested restores, off-network copies, and a written RTO and RPO that the cyber insurance underwriter will accept.</p>
 
           <h2>The fraud patterns hitting Central Coast carriers right now</h2>
 
@@ -334,14 +334,14 @@
 
           <p>Two patterns. One: an attacker compromises a dispatcher's Microsoft 365 account through a phishing campaign, sits in the mailbox watching the dispatch workflow for a few days, then uses the stolen credentials to attempt lateral movement into the TMS or onto the yard-office network. Two: a vulnerability in an on-premise TMS server or an unpatched VPN appliance lets an attacker straight into the dispatch environment, where they encrypt the database and demand payment. The <a href="/blog/ransomware-2026-how-it-gets-in">2026 ransomware-how-it-gets-in post</a> walks the attack chain for SMBs.</p>
 
-          <p>The defense for both is the same: MFA on every account, EDR everywhere, monitored email security, patched systems, and 24/7 MDR coverage that catches the lateral movement before it becomes encryption.</p>
+          <p>The defense for both is the same: MFA on every account, monitored email security, patched systems, and 24/7 MDR coverage that catches the lateral movement before it becomes encryption.</p>
 
           <h2>Office IT for a Salinas trucking yard</h2>
 
           <p>The yard office is where most of the dollars end up. The baseline we recommend for a 5-15 person Salinas trucking back office:</p>
 
           <ul>
-            <li><strong>Microsoft 365 Business Premium per user.</strong> Includes Outlook, the Office apps, OneDrive, SharePoint, Teams, Defender for Business (EDR), Intune (MDM), and Entra ID P1 (identity hardening). At roughly $22 per user per month it is the most leveraged dollar in the stack.</li>
+            <li><strong>Microsoft 365 Business Premium per user.</strong> Includes Outlook, the Office apps, OneDrive, SharePoint, Teams, Defender for Business (endpoint detection, paired with our MDR), Intune (MDM), and Entra ID P1 (identity hardening). At roughly $22 per user per month it is the most leveraged dollar in the stack.</li>
             <li><strong>Business-class internet with documented SLA</strong> and an LTE or 5G failover on a different carrier.</li>
             <li><strong>Real firewall</strong> (Fortinet, Sophos, Palo Alto, or a managed Meraki). Not a Linksys.</li>
             <li><strong>VoIP for dispatch.</strong> A cloud-hosted phone system that can ring through to mobile when the office is empty. The dispatcher's number cannot be a personal cell.</li>
@@ -427,7 +427,7 @@
           <p>It is a risk, and it is one of the most common gaps we find at small Central Coast carriers. A driver's personal phone signed into the dispatcher's email, the TMS app, and the ELD vendor app has the same attack surface as a company-owned device, but none of the controls. If you do not want to issue company phones, the realistic middle ground is to require the company apps live in a managed work profile (Microsoft Intune or the ELD vendor's MDM), require MFA on every sign-in, and have a documented offboarding step that revokes access the day a driver leaves.</p>
 
           <h3>Is the office firewall enough cybersecurity for a small trucking operation?</h3>
-          <p>No, and it has not been for several years. The firewall protects the yard office. It does not see your drivers' tablets at a truck stop, your dispatcher's laptop at home, your QuickBooks Online account, your TMS in the cloud, or your Microsoft 365 mailboxes. Modern trucking IT is identity-first: MFA on every account, endpoint detection on every device, and monitored email security on every mailbox. The firewall is one of about ten controls, not the control.</p>
+          <p>No, and it has not been for several years. The firewall protects the yard office. It does not see your drivers' tablets at a truck stop, your dispatcher's laptop at home, your QuickBooks Online account, your TMS in the cloud, or your Microsoft 365 mailboxes. Modern trucking IT is identity-first: MFA on every account, managed detection and response on every device, and monitored email security on every mailbox. The firewall is one of about ten controls, not the control.</p>
 
           <h3>What does C-TPAT actually require from IT?</h3>
           <p>CBP's Minimum Security Criteria include a dedicated cybersecurity section. In practical terms, that means a written cybersecurity policy, documented access controls with named user accounts (no shared logins), MFA, regular password rotation, monitored networks, an incident response plan that has been written down and not just discussed, security awareness training records for staff, and protection of IT systems used in the supply chain. CBP validators ask to see the documentation. We cover the full list on the <a href="/ctpat">C-TPAT compliance page</a>.</p>
@@ -453,6 +453,23 @@
         </div>
       </div>
     </main>
+
+    <div class="cookie-banner" id="cookieBanner">
+      <div class="cookie-banner-container">
+        <div class="cookie-content">
+          <div class="cookie-icon"><i class="fi fi-rs-cookie"></i></div>
+          <div class="cookie-text">
+            <p class="cookie-message">We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.</p>
+            <a href="/privacy-policy" class="cookie-link">Learn more about our Privacy Policy</a>
+          </div>
+        </div>
+        <div class="cookie-actions">
+          <button class="cookie-btn cookie-btn-secondary" id="cookieDecline">Decline</button>
+          <button class="cookie-btn cookie-btn-primary" id="cookieAccept">Accept All</button>
+        </div>
+      </div>
+    </div>
+
     <footer class="footer" id="footerSection">
       <div class="footer-container">
         <div class="footer-brand-row">

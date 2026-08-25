@@ -23,7 +23,7 @@
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="IT Services for Engineering &amp; Architecture Firms | Ghosxt" />
-    <meta name="twitter:description" content="CAD/PDM performance, engineering data security, multi-site replicated vaults. federal-grade engineering." />
+    <meta name="twitter:description" content="CAD/PDM performance, engineering data security, multi-site replicated vaults: federal-grade engineering." />
     <meta name="twitter:image" content="https://ghosxt.com/assets/img/og/engineering-it-services.png" />
 
     <link rel="icon" href="assets/img/favicon.ico" sizes="any" />
@@ -225,7 +225,7 @@
                 "name": "Our project deadline is Friday and the file server is making weird noises. What is your response time?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Same hour, often same fifteen minutes. \"Weird noises\" before a deadline is the moment to call us, not after the server has actually failed. We pull SMART data, check vault health, validate the last backup, and stage a known-good restore target in parallel so that if the box does fail, the cutover is measured in minutes rather than hours. If the noises are actually a fan or a coil whine and the box is fine, we still document the assessment so the next round of disk-failure indicators is not ambiguous."
+                  "text": "Critical incidents like this carry our 4-hour notification commitment, and you reach the engineer directly. \"Weird noises\" before a deadline is the moment to call us, not after the server has actually failed. We pull SMART data, check vault health, validate the last backup, and stage a known-good restore target in parallel so that if the box does fail, the cutover is prepared in advance rather than started from scratch. If the noises are actually a fan or a coil whine and the box is fine, we still document the assessment so the next round of disk-failure indicators is not ambiguous."
                 }
               },
               {
@@ -243,6 +243,14 @@
                   "@type": "Answer",
                   "text": "We do not full-copy. The first seed can be staged off-network (a portable drive or a local appliance), then forward only changed blocks to an off-account immutable cloud target. For ongoing protection, block-level deduplication and bandwidth-shaped windows mean the daily incremental fits in an off-hours slice without ever crowding out a project upload. Tested restore-from-backup is part of the program, because a backup that has never been restored is a hope, not a backup."
                 }
+              },
+              {
+                "@type": "Question",
+                "name": "Who will I actually talk to?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Ulises Paiz, the owner, directly. There is no tier-1 queue and no offshore call center: the engineer who knows your environment answers the phone, and critical incidents carry our 4-hour notification commitment."
+                }
               }
             ]
           }
@@ -251,87 +259,12 @@
     </script>
     <!-- ghosxt:cf-web-analytics -->
     <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"f3ce7e0e17f54050845d52d7f355cd98"}'></script>
-    <!-- ghosxt:extra-schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "Home",
-              "item": "https://ghosxt.com/"
-            },
-            {
-              "@type": "ListItem",
-              "position": 2,
-              "name": "Engineering IT Services",
-              "item": "https://ghosxt.com/engineering-it-services"
-            }
-          ]
-        },
-        {
-          "@type": "Service",
-          "@id": "https://ghosxt.com/engineering-it-services#service",
-          "name": "Engineering IT Services",
-          "url": "https://ghosxt.com/engineering-it-services",
-          "provider": {
-            "@id": "https://ghosxt.com/#business"
-          },
-          "areaServed": [
-            {
-              "@type": "State",
-              "name": "California"
-            },
-            {
-              "@type": "City",
-              "name": "Salinas"
-            },
-            {
-              "@type": "City",
-              "name": "Monterey"
-            },
-            {
-              "@type": "City",
-              "name": "Santa Cruz"
-            },
-            {
-              "@type": "City",
-              "name": "San Jose"
-            }
-          ]
-        }
-      ]
-    }
-    </script>
   </head>
   <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
     <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
       <i class="fi fi-rs-angle-up" aria-hidden="true"></i>
     </button>
-
-    <div class="cookie-banner" id="cookieBanner">
-      <div class="cookie-banner-container">
-        <div class="cookie-content">
-          <div class="cookie-icon"><i class="fi fi-rs-cookie"></i></div>
-          <div class="cookie-text">
-            <p class="cookie-message">
-              We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.
-            </p>
-            <a href="/privacy-policy" class="cookie-link">Learn more about our Privacy Policy</a>
-          </div>
-        </div>
-        <div class="cookie-actions">
-          <button class="cookie-btn cookie-btn-secondary" id="cookieDecline">Decline</button>
-          <button class="cookie-btn cookie-btn-primary" id="cookieAccept">Accept All</button>
-        </div>
-      </div>
-    </div>
-
 
     <nav class="navbar" aria-label="Main navigation">
       <div class="navbar-container">
@@ -437,7 +370,7 @@
             <a href="/">Home</a><span class="sep">›</span><span aria-current="page">Engineering &amp; Architecture IT</span>
           </nav>
           <h1>IT Services for Engineering and Architecture Firms in California</h1>
-          <p class="lead">Engineering firms run on files that are large, valuable, and hard to replace. A 3 GB BIM model that takes five minutes to open over the VPN is not a hassle, it is a margin problem. A PDM vault that fails without a tested restore is the worst conversation you can have with a project lead on a Friday. A drawing set that ends up on a personal laptop is an ITAR or client-confidentiality issue waiting to surface. Ghosxt runs the IT, CAD performance, and engineering data security for civil, structural, MEP, and A/E firms across the Central Coast and the Bay Area. federal-grade engineering, transparent pricing, no outsourced helpdesk.</p>
+          <p class="lead">Engineering firms run on files that are large, valuable, and hard to replace. A 3 GB BIM model that takes five minutes to open over the VPN is not a hassle, it is a margin problem. A PDM vault that fails without a tested restore is the worst conversation you can have with a project lead on a Friday. A drawing set that ends up on a personal laptop is an ITAR or client-confidentiality issue waiting to surface. Ghosxt runs the IT, CAD performance, and engineering data security for civil, structural, MEP, and A/E firms across the Central Coast and the Bay Area: federal-grade engineering, transparent pricing, no outsourced helpdesk.</p>
           <div class="location-hero-ctas">
             <a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer" class="location-btn location-btn-primary">
               <i class="fi fi-rs-calendar-day" aria-hidden="true"></i>
@@ -514,7 +447,8 @@
         <dl class="key-facts__list">
           <dt>Service area</dt><dd>California</dd>
           <dt>Led by</dt><dd>An engineer with DoD infrastructure experience</dd>
-          <dt>Response</dt><dd>Same-day remote support; on-site within 24–48 hours</dd>
+          <dt>Who you talk to</dt><dd>Ulises Paiz, the owner, directly. No tier-1 queue.</dd>
+          <dt>Response</dt><dd>Critical incidents: 4-hour notification commitment. Direct line to the owner.</dd>
           <dt>Pricing</dt><dd><a href="/pricing">Published upfront</a>, free assessment for a written quote</dd>
           <dt>Free</dt><dd>No-obligation 30-minute IT assessment</dd>
           <dt>Rated</dt><dd><span class="key-facts__stars" aria-hidden="true">★★★★★</span> 5.0 on <a href="https://share.google/88vsSuams5s62RdPJ" target="_blank" rel="noopener noreferrer">26 Google reviews</a></dd>
@@ -651,7 +585,7 @@
             </li>
             <li class="workflow-step">
               <h3>Four-terabyte BIM vault, backup never tested</h3>
-              <p>An A/E firm had a four-terabyte BIM and PDM vault that had been "backed up" to a single attached disk for years. Nobody had ever restored from it. When we ran a tabletop exercise, we discovered the most recent full backup had failed silently nine months earlier and only changed-block deltas were being captured against a snapshot that no longer existed. We rebuilt the chain: seeded an off-account immutable copy through a portable appliance, added block-level deduplication and bandwidth-shaped daily incrementals, and instrumented restore-from-backup as a quarterly tested procedure. A real restore now finishes within the project's recovery time objective.</p>
+              <p>An A/E firm had a four-terabyte BIM and PDM vault that had been "backed up" to a single attached disk for years. Nobody had ever restored from it. When we ran a tabletop exercise, we discovered the most recent full backup had failed silently nine months earlier and only changed-block deltas were being captured against a snapshot that no longer existed. We rebuilt the chain: seeded an off-account immutable copy through a portable appliance, added block-level deduplication and bandwidth-shaped daily incrementals, and instrumented restore-from-backup as a quarterly tested procedure. A real restore now finishes within the project's recovery time objective. <!-- [VERIFY] --></p>
             </li>
             <li class="workflow-step">
               <h3>Engineer left, downloaded the project archive</h3>
@@ -734,7 +668,7 @@
       <section class="location-section">
         <div class="container">
           <h2>Service area across the Central Coast and South Bay</h2>
-          <p>Our home base is Salinas. We work with engineering and architecture firms across the Central Coast, Santa Cruz County, and the South Bay. On-site response is fast across the corridor, and most engineering IT issues are resolved remotely the same hour.</p>
+          <p>Our home base is Salinas. We work with engineering and architecture firms across the Central Coast, Santa Cruz County, and the South Bay. On-site response is fast across the corridor, and most engineering IT issues are resolved remotely.</p>
           <div class="nearby-locations">
             <h3>We support engineering firms based in:</h3>
             <ul>
@@ -786,7 +720,7 @@
           </details>
           <details>
             <summary>Our project deadline is Friday and the file server is making weird noises. What is your response time?</summary>
-            <div class="answer">Same hour, often same fifteen minutes. "Weird noises" before a deadline is the moment to call us, not after the server has actually failed. We pull SMART data, check vault health, validate the last backup, and stage a known-good restore target in parallel so that if the box does fail, the cutover is measured in minutes rather than hours. If the noises are actually a fan or a coil whine and the box is fine, we still document the assessment so the next round of disk-failure indicators is not ambiguous.</div>
+            <div class="answer">Critical incidents like this carry our 4-hour notification commitment, and you reach the engineer directly. "Weird noises" before a deadline is the moment to call us, not after the server has actually failed. We pull SMART data, check vault health, validate the last backup, and stage a known-good restore target in parallel so that if the box does fail, the cutover is prepared in advance rather than started from scratch. If the noises are actually a fan or a coil whine and the box is fine, we still document the assessment so the next round of disk-failure indicators is not ambiguous.</div>
           </details>
           <details>
             <summary>We are submitting on a federal infrastructure project that mentions NIST 800-171 or CMMC. Does that apply to us?</summary>
@@ -794,11 +728,31 @@
           </details>
           <details>
             <summary>How do you back up a 4 TB BIM or PDM vault without saturating our internet for two days?</summary>
-            <div class="answer">We do not full-copy. The first seed can be staged off-network (a portable drive or a local appliance), then forward only changed blocks to an off-account immutable cloud target. For ongoing protection, block-level deduplication and bandwidth-shaped windows mean the daily incremental fits in an off-hours slice without ever crowding out a project upload. Tested restore-from-backup is part of the program, because a backup that has never been restored is a hope, not a backup.</div>
+            <div class="answer"><!-- [VERIFY] -->We do not full-copy. The first seed can be staged off-network (a portable drive or a local appliance), then forward only changed blocks to an off-account immutable cloud target. For ongoing protection, block-level deduplication and bandwidth-shaped windows mean the daily incremental fits in an off-hours slice without ever crowding out a project upload. Tested restore-from-backup is part of the program, because a backup that has never been restored is a hope, not a backup.</div>
+          </details>
+          <details>
+            <summary>Who will I actually talk to?</summary>
+            <div class="answer">Ulises Paiz, the owner, directly. There is no tier-1 queue and no offshore call center: the engineer who knows your environment answers the phone, and critical incidents carry our 4-hour notification commitment.</div>
           </details>
         </div>
       </section>
     </main>
+
+    <div class="cookie-banner" id="cookieBanner">
+      <div class="cookie-banner-container">
+        <div class="cookie-content">
+          <div class="cookie-icon"><i class="fi fi-rs-cookie"></i></div>
+          <div class="cookie-text">
+            <p class="cookie-message">We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.</p>
+            <a href="/privacy-policy" class="cookie-link">Learn more about our Privacy Policy</a>
+          </div>
+        </div>
+        <div class="cookie-actions">
+          <button class="cookie-btn cookie-btn-secondary" id="cookieDecline">Decline</button>
+          <button class="cookie-btn cookie-btn-primary" id="cookieAccept">Accept All</button>
+        </div>
+      </div>
+    </div>
 
     <footer class="footer" id="footerSection">
       <div class="footer-container">

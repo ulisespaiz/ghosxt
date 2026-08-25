@@ -166,7 +166,7 @@ CONTENT = {
         ],
     },
     "san-jose": {
-        "lead": "San Jose small businesses compete in the hardest local search market in Northern California: every plumber, dentist, restaurant, and firm is fighting page one against hundreds of others, plus agencies charging Silicon Valley rates to help. Ghosxt gives San Jose small businesses a different deal: hand-coded, performance-first websites at published Central Coast prices, from an engineer with DoD infrastructure experience, without the agency overhead.",
+        "lead": "San Jose small businesses compete in the hardest local search market in Northern California: every plumber, restaurant, and firm is fighting page one against hundreds of others, plus agencies charging Silicon Valley rates to help. Ghosxt gives San Jose small businesses a different deal: hand-coded, performance-first websites at published Central Coast prices, from an engineer with DoD infrastructure experience, without the agency overhead.",
         "economy": "In a market this dense, the technical margins decide who gets found: page speed, clean structure, real service-area pages, and schema markup are the difference between page one and invisible. Trades and home services need lead-generation sites that make calling effortless. Restaurants and retail need to stand out in map results. Small professional firms need credibility against downtown competitors with ten times the budget.",
         "card_a": ("Compete on Page One", "Deep local SEO (service pages, schema, speed, Search Console) built to compete in San Jose's crowded results, where the technical margins decide who gets the call."),
         "card_b": ("Small-Business Pricing", "Published prices, not Silicon Valley agency quotes: the same $1,800–$5,900 packages we build on the Central Coast, hand-coded, with no account-manager layer to fund."),
@@ -368,6 +368,17 @@ def build_page(chrome, slug, city):
         </div>
       </section>
 
+      <!-- ghosxt:key-facts -->
+      <aside class="key-facts" aria-label="Web Design &amp; Development in {name}, California: key facts">
+        <p class="key-facts__title">Web Design &amp; Development in {name}: at a glance</p>
+        <dl class="key-facts__list">
+          <dt>Service area</dt><dd>{name}, California</dd>
+          <dt>Who you talk to</dt><dd>Ulises Paiz, the owner, directly. No tier-1 queue.</dd>
+          <dt>Response</dt><dd>Critical incidents: 4-hour notification commitment. Direct line to the owner.</dd>
+          <dt>Pricing</dt><dd><a href="/pricing">Published pricing from $600 per month flat for 1 to 4 users</a></dd>
+        </dl>
+      </aside>
+
       <section class="location-section">
         <div class="container">
           <h2>What we build</h2>
@@ -498,6 +509,8 @@ def build_page(chrome, slug, city):
     <main id="main-content">
 {body}
     </main>
+
+{chrome['cookie_banner']}
 
 {chrome['footer']}
 """

@@ -127,7 +127,7 @@
             "@id": "https://ghosxt.com/managed-it-services#service",
             "name": "Managed IT Services",
             "serviceType": "Managed IT Services",
-            "description": "Fully managed IT services for California small businesses: 24/7 monitoring, EDR, patch management, Microsoft 365, helpdesk, backup, and strategic IT planning. Delivered by an engineer with DoD infrastructure experience.",
+            "description": "Fully managed IT services for California small businesses: 24/7 monitoring, managed detection and response, patch management, Microsoft 365, helpdesk, backup, and strategic IT planning. Delivered by an engineer with DoD infrastructure experience.",
             "url": "https://ghosxt.com/managed-it-services",
             "provider": {
               "@id": "https://ghosxt.com/#business"
@@ -224,7 +224,7 @@
                 "name": "How fast do you respond when something breaks?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Most issues are picked up by our monitoring before a user notices, and resolved remotely the same hour. For tickets you raise directly, critical issues jump straight to the front of the queue during business hours and after-hours emergencies are answered live by the engineer who built your environment, not a call center."
+                  "text": "Most issues are picked up by our monitoring before a user notices, and resolved remotely. For tickets you raise directly, you reach the engineer who built your environment directly, not a call center, and critical incidents carry our 4-hour notification commitment."
                 }
               },
               {
@@ -264,7 +264,15 @@
                 "name": "Are you actually available after hours?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Yes for emergencies. The Huntress SOC monitors endpoints around the clock and engages us automatically on a critical event. Direct after-hours contact for client escalations is included; routine helpdesk runs business hours Pacific."
+                  "text": "Yes for emergencies. Our managed detection and response SOC monitors endpoints around the clock and engages us automatically on a critical event. Direct after-hours contact for client escalations is included; routine helpdesk runs business hours Pacific."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Who will I actually talk to?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Ulises Paiz, the owner, directly. There is no tier-1 queue and no offshore call center: the engineer who knows your environment answers the phone, and critical incidents carry our 4-hour notification commitment."
                 }
               }
             ]
@@ -274,62 +282,6 @@
     </script>
     <!-- ghosxt:cf-web-analytics -->
     <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"f3ce7e0e17f54050845d52d7f355cd98"}'></script>
-    <!-- ghosxt:extra-schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "Home",
-              "item": "https://ghosxt.com/"
-            },
-            {
-              "@type": "ListItem",
-              "position": 2,
-              "name": "Managed IT Services",
-              "item": "https://ghosxt.com/managed-it-services"
-            }
-          ]
-        },
-        {
-          "@type": "Service",
-          "@id": "https://ghosxt.com/managed-it-services#service",
-          "name": "Managed IT Services",
-          "url": "https://ghosxt.com/managed-it-services",
-          "provider": {
-            "@id": "https://ghosxt.com/#business"
-          },
-          "areaServed": [
-            {
-              "@type": "State",
-              "name": "California"
-            },
-            {
-              "@type": "City",
-              "name": "Salinas"
-            },
-            {
-              "@type": "City",
-              "name": "Monterey"
-            },
-            {
-              "@type": "City",
-              "name": "Santa Cruz"
-            },
-            {
-              "@type": "City",
-              "name": "San Jose"
-            }
-          ]
-        }
-      ]
-    }
-    </script>
   </head>
   <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -337,23 +289,6 @@
     <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
       <i class="fi fi-rs-angle-up" aria-hidden="true"></i>
     </button>
-
-    <div class="cookie-banner" id="cookieBanner">
-      <div class="cookie-banner-container">
-        <div class="cookie-content">
-          <div class="cookie-icon"><i class="fi fi-rs-cookie"></i></div>
-          <div class="cookie-text">
-            <p class="cookie-message">We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.</p>
-            <a href="/privacy-policy" class="cookie-link">Learn more about our Privacy Policy</a>
-          </div>
-        </div>
-        <div class="cookie-actions">
-          <button class="cookie-btn cookie-btn-secondary" id="cookieDecline">Decline</button>
-          <button class="cookie-btn cookie-btn-primary" id="cookieAccept">Accept All</button>
-        </div>
-      </div>
-    </div>
-
 
     <nav class="navbar" aria-label="Main navigation">
       <div class="navbar-container">
@@ -473,7 +408,8 @@
         <dl class="key-facts__list">
           <dt>Service area</dt><dd>California's Central Coast &amp; Bay Area</dd>
           <dt>Led by</dt><dd>An engineer with DoD infrastructure experience</dd>
-          <dt>Response</dt><dd>Same-day remote support; on-site within 24–48 hours</dd>
+          <dt>Who you talk to</dt><dd>Ulises Paiz, the owner, directly. No tier-1 queue.</dd>
+          <dt>Response</dt><dd>Critical incidents: 4-hour notification commitment. Direct line to the owner.</dd>
           <dt>Pricing</dt><dd><a href="/pricing">Published upfront</a>, free assessment for a written quote</dd>
           <dt>Free</dt><dd>No-obligation 30-minute IT assessment</dd>
           <dt>Rated</dt><dd><span class="key-facts__stars" aria-hidden="true">★★★★★</span> 5.0 on <a href="https://share.google/88vsSuams5s62RdPJ" target="_blank" rel="noopener noreferrer">26 Google reviews</a></dd>
@@ -504,8 +440,8 @@
           <p>We deploy the same class of tooling that Fortune 500 IT teams run, sized down without being dumbed down. The capability gap between this stack and the bargain-bin MSP loadout is enormous; the cost difference at our scale is small.</p>
           <div class="services-grid">
             <article class="service-card">
-              <h3>Endpoint Detection &amp; Response</h3>
-              <p>Huntress EDR on every endpoint, with 24/7 SOC monitoring and human analyst review. Layered with Microsoft Defender for Endpoint where the licensing supports it. Ransomware behavior detected and isolated before it spreads.</p>
+              <h3>Managed Detection &amp; Response</h3>
+              <p>Managed detection and response on every endpoint, with 24/7 SOC monitoring and human analyst review. Layered with Microsoft Defender for Endpoint where the licensing supports it. Ransomware behavior detected and isolated before it spreads.</p>
             </article>
             <article class="service-card">
               <h3>Identity &amp; Conditional Access</h3>
@@ -521,15 +457,15 @@
             </article>
             <article class="service-card">
               <h3>Backup &amp; Recovery</h3>
-              <p>Veeam Data Platform or Datto SIRIS depending on your environment, paired with an immutable cloud target the production network cannot reach. Tested restores monthly. Detailed in our <a href="/backup-disaster-recovery">backup and disaster recovery</a> service.</p>
+              <p>Cloud backup for Microsoft 365 and Google Workspace, plus server and workstation image backup<!-- [VERIFY] -->, paired with an off-network cloud target the production network cannot reach. Tested restores monthly.<!-- [VERIFY] --> Detailed in our <a href="/backup-disaster-recovery">backup and disaster recovery</a> service.</p>
             </article>
             <article class="service-card">
               <h3>Network &amp; Edge</h3>
-              <p>UniFi Enterprise for switching and wireless, pfSense Plus, Sophos XGS, or Cisco Meraki on the edge depending on what your environment needs. Designed and documented under our <a href="/network-design">network design</a> service.</p>
+              <p>Managed network switching and wireless, plus enterprise-grade firewalls on the edge<!-- [VERIFY] -->, including Cisco Meraki<!-- [VERIFY] --> where it fits, depending on what your environment needs. Designed and documented under our <a href="/network-design">network design</a> service.</p>
             </article>
             <article class="service-card">
               <h3>Virtualization &amp; Cloud</h3>
-              <p>Hyper-V or VMware vSphere on the server side. Microsoft 365, SharePoint, Teams, and Exchange Online managed in-house. Azure infrastructure when it earns its place. Full coverage in our <a href="/cloud-services">cloud services</a>.</p>
+              <p>Virtualization support on the server side<!-- [VERIFY] -->. Microsoft 365, SharePoint, Teams, and Exchange Online managed in-house. Azure infrastructure when it earns its place. Full coverage in our <a href="/cloud-services">cloud services</a>.</p>
             </article>
             <article class="service-card">
               <h3>RMM &amp; Telemetry</h3>
@@ -568,7 +504,7 @@
             <li>Agriculture, food processing, and distribution</li>
             <li>Logistics, trucking, 3PL, and freight forwarding</li>
             <li>Manufacturing and machine shops</li>
-            <li>Healthcare and dental practices (HIPAA)</li>
+            <li>Healthcare practices (HIPAA)</li>
             <li>Legal firms and professional services</li>
             <li>Construction and trades</li>
             <li>SaaS and technology startups (SOC 2 readiness)</li>
@@ -581,7 +517,7 @@
       <section class="location-section">
         <div class="container">
           <h2>What is included in every managed plan</h2>
-          <p>Every Ghosxt managed plan includes 24/7 endpoint monitoring and EDR, automated patch management for OS and third-party apps, full Microsoft 365 management, immutable backup with monthly tested restores, network monitoring with alerting, helpdesk for end users, quarterly strategic planning, and a written annual IT roadmap.</p>
+          <p>Every Ghosxt managed plan includes 24/7 endpoint monitoring and managed detection and response, automated patch management for OS and third-party apps, full Microsoft 365 management, cloud backup with monthly tested restores<!-- [VERIFY] -->, network monitoring with alerting, helpdesk for end users, quarterly strategic planning, and a written annual IT roadmap.</p>
           <p>Beyond that baseline, every plan pulls from our specialist services as needed: deeper <a href="/cybersecurity">cybersecurity work</a>, <a href="/backup-disaster-recovery">backup and disaster recovery</a> tuned to your RTO and RPO, <a href="/cloud-services">cloud and Microsoft 365 migrations</a>, <a href="/network-design">network design and segmentation</a>, and <a href="/ctpat">C-TPAT compliance</a> for importers, carriers, and 3PLs.</p>
           <p>See <a href="/pricing">the pricing page</a> for what is included at each tier and where one tier ends and the next begins.</p>
         </div>
@@ -592,7 +528,7 @@
           <h2>FAQs about managed IT</h2>
           <details>
             <summary>How fast do you respond when something breaks?</summary>
-            <div class="answer">Most issues are picked up by our monitoring before a user notices, and resolved remotely the same hour. For tickets you raise directly, critical issues jump straight to the front of the queue during business hours and after-hours emergencies are answered live by the engineer who built your environment, not a call center.</div>
+            <div class="answer">Most issues are picked up by our monitoring before a user notices, and resolved remotely. For tickets you raise directly, you reach the engineer who built your environment directly, not a call center, and critical incidents carry our 4-hour notification commitment.</div>
           </details>
           <details>
             <summary>Do I have to sign a long contract?</summary>
@@ -612,7 +548,11 @@
           </details>
           <details>
             <summary>Are you actually available after hours?</summary>
-            <div class="answer">Yes for emergencies. The Huntress SOC monitors endpoints around the clock and engages us automatically on a critical event. Direct after-hours contact for client escalations is included; routine helpdesk runs business hours Pacific.</div>
+            <div class="answer">Yes for emergencies. Our managed detection and response SOC monitors endpoints around the clock and engages us automatically on a critical event. Direct after-hours contact for client escalations is included; routine helpdesk runs business hours Pacific.</div>
+          </details>
+          <details>
+            <summary>Who will I actually talk to?</summary>
+            <div class="answer">Ulises Paiz, the owner, directly. There is no tier-1 queue and no offshore call center: the engineer who knows your environment answers the phone, and critical incidents carry our 4-hour notification commitment.</div>
           </details>
         </div>
       </section>
@@ -632,6 +572,22 @@
         </div>
       </section>
     </main>
+
+    <div class="cookie-banner" id="cookieBanner">
+      <div class="cookie-banner-container">
+        <div class="cookie-content">
+          <div class="cookie-icon"><i class="fi fi-rs-cookie"></i></div>
+          <div class="cookie-text">
+            <p class="cookie-message">We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.</p>
+            <a href="/privacy-policy" class="cookie-link">Learn more about our Privacy Policy</a>
+          </div>
+        </div>
+        <div class="cookie-actions">
+          <button class="cookie-btn cookie-btn-secondary" id="cookieDecline">Decline</button>
+          <button class="cookie-btn cookie-btn-primary" id="cookieAccept">Accept All</button>
+        </div>
+      </div>
+    </div>
 
     <footer class="footer" id="footerSection">
       <div class="footer-container">

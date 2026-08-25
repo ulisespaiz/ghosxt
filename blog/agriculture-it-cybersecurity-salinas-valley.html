@@ -121,7 +121,7 @@
   <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
     <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top"><i class="fi fi-rs-angle-up" aria-hidden="true"></i></button>
-    <div class="cookie-banner" id="cookieBanner"><div class="cookie-banner-container"><div class="cookie-content"><div class="cookie-icon"><i class="fi fi-rs-cookie"></i></div><div class="cookie-text"><p class="cookie-message">We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.</p><a href="/privacy-policy" class="cookie-link">Learn more about our Privacy Policy</a></div></div><div class="cookie-actions"><button class="cookie-btn cookie-btn-secondary" id="cookieDecline">Decline</button><button class="cookie-btn cookie-btn-primary" id="cookieAccept">Accept All</button></div></div></div>
+
     <nav class="navbar" aria-label="Main navigation">
       <div class="navbar-container">
         <div class="navbar-left"><a href="/" class="navbar-logo"><img fetchpriority="high" loading="eager" src="../assets/img/ghosxt-logo-160.webp" alt="Ghosxt logo" width="48" height="48" /><span>GHOSXT</span></a></div>
@@ -186,12 +186,12 @@
           </div>
           <h1>IT and Cybersecurity for Salinas Valley Agriculture: A 2026 Guide for Growers, Packers, and Coolers</h1>
           <div class="blog-post-author">
-            <strong>Ulises Paiz</strong>, Founder, Ghosxt
+            <strong>Ulises Paiz</strong>, Owner, Ghosxt
           </div>
           <div class="author-bio-box">
             <!-- ghosxt:author-bio -->
             <img src="../assets/img/ulises.avif" alt="Ulises Paiz" width="56" height="56" loading="lazy" />
-            <p>Ulises Paiz, Founder of Ghosxt, has 10+ years in IT infrastructure and cybersecurity, deep DoD infrastructure experience, and 9 certifications including CySA+, Security+, and AZ-104. Before founding Ghosxt, he served as a Senior Solutions Consultant for the DoD and built security programs for 40+ Central Coast businesses. <a href="/about">More about Ulises &rarr;</a></p>
+            <p>Ulises Paiz is the owner and sole engineer at Ghosxt, a Salinas, CA managed IT and cybersecurity provider. He holds an M.S. in Cybersecurity and Information Assurance (WGU, 2026) and nine industry certifications including CompTIA SecurityX, CySA+, and Microsoft AZ-104, with prior DoD and federal contractor infrastructure experience. <a href="/about">More about Ulises &rarr;</a></p>
           </div>
         </div>
       </header>
@@ -280,7 +280,7 @@
 
           <p>The records that have to survive a bad day: the produce ERP data, the food-safety documentation, the cooler monitoring history, accounting, grower and labor records, and email. Independent backup of Microsoft 365 and a documented export and backup path for the produce ERP are both needed, because the vendor backs up their platform for their own resilience, not for your deleted lot or your compromised admin account. Tested restores, not just backups, are what keep you shipping through a bad week.</p>
 
-          <p>Continuity also means PG&amp;E. The Central Coast sits under the Public Safety Power Shutoff program, and a produce operation that goes dark loses cooler monitoring, shipping, scale systems, and phones at the worst possible time of year. The plan is UPS on the monitoring and network gear, a documented runbook for failing the office over to cellular or a backup site, and generator capacity sized for the cold-chain assets that genuinely cannot go dark. The <a href="/blog/pge-psps-it-continuity-plan-central-coast">PSPS continuity plan post</a> covers the playbook, and the <a href="/backup-disaster-recovery">backup and disaster recovery service page</a> covers tested restores and immutable copies.</p>
+          <p>Continuity also means PG&amp;E. The Central Coast sits under the Public Safety Power Shutoff program, and a produce operation that goes dark loses cooler monitoring, shipping, scale systems, and phones at the worst possible time of year. The plan is UPS on the monitoring and network gear, a documented runbook for failing the office over to cellular or a backup site, and generator capacity sized for the cold-chain assets that genuinely cannot go dark. The <a href="/blog/pge-psps-it-continuity-plan-central-coast">PSPS continuity plan post</a> covers the playbook, and the <a href="/backup-disaster-recovery">backup and disaster recovery service page</a> covers tested restores and off-network copies.</p>
 
           <h2>The threat patterns hitting Central Coast ag right now</h2>
 
@@ -341,15 +341,14 @@
 
           <ul>
             <li><strong>Microsoft 365 Business Premium:</strong> 25 users &times; $22 = $550</li>
-            <li><strong>MDR / managed security:</strong> 25 users &times; $25 = $625</li>
-            <li><strong>Managed IT (help desk, patching, backup, identity, seasonal account lifecycle):</strong> 25 users &times; $150&ndash;$200 = $3,750&ndash;$5,000</li>
+            <li><strong>Managed IT &amp; security (Compliance &amp; Continuity: help desk, patching, backup, identity, seasonal account lifecycle, and managed detection &amp; response with a 24/7 SOC):</strong> 25 users &times; $250 = $6,250</li>
             <li><strong>Cold-chain monitoring integration and alerting management:</strong> $500&ndash;$1,500</li>
             <li><strong>Multi-site connectivity (office, pack house, two coolers; fiber + point-to-point + failover):</strong> $1,200&ndash;$2,500</li>
             <li><strong>Managed firewalls and segmentation across sites:</strong> $500&ndash;$1,000</li>
             <li><strong>Independent backup (Microsoft 365 + ERP export + food-safety docs):</strong> $250&ndash;$500</li>
           </ul>
 
-          <p>Total monthly IT spend lands roughly between <strong>$7,500 and $12,000 per month</strong> for a 25-person multi-site operation, before hardware and the sensors. The biggest mover is the per-user managed IT line, which scales with year-round headcount, not with how many seasonal hands pass through. For comparison: a single cooler excursion that totals a load of leafy greens or berries runs well into five figures, and a harvest-timed ransomware event that halts shipping costs that much per day in unshipped, perishing product. The IT budget pays for itself in one avoided bad week.</p>
+          <p>Total monthly IT spend lands roughly between <strong>$9,250 and $12,300 per month</strong> for a 25-person multi-site operation, before hardware and the sensors. The biggest mover is the per-user managed IT and security line, which scales with year-round headcount, not with how many seasonal hands pass through. For comparison: a single cooler excursion that totals a load of leafy greens or berries runs well into five figures, and a harvest-timed ransomware event that halts shipping costs that much per day in unshipped, perishing product. The IT budget pays for itself in one avoided bad week.</p>
 
           <h2>Where this fits</h2>
 
@@ -403,6 +402,23 @@
         </div>
       </div>
     </main>
+
+    <div class="cookie-banner" id="cookieBanner">
+      <div class="cookie-banner-container">
+        <div class="cookie-content">
+          <div class="cookie-icon"><i class="fi fi-rs-cookie"></i></div>
+          <div class="cookie-text">
+            <p class="cookie-message">We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.</p>
+            <a href="/privacy-policy" class="cookie-link">Learn more about our Privacy Policy</a>
+          </div>
+        </div>
+        <div class="cookie-actions">
+          <button class="cookie-btn cookie-btn-secondary" id="cookieDecline">Decline</button>
+          <button class="cookie-btn cookie-btn-primary" id="cookieAccept">Accept All</button>
+        </div>
+      </div>
+    </div>
+
     <footer class="footer" id="footerSection">
       <div class="footer-container">
         <div class="footer-brand-row">

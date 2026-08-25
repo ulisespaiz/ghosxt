@@ -1,6 +1,6 @@
 """Shared chrome-extraction logic for the location/service page generators.
 
-Chrome (head assets, cookie banner, nav, footer) is sliced verbatim out of
+Chrome (head assets, nav, cookie banner, footer) is sliced verbatim out of
 `_chrome_source.html`, a frozen, non-live copy of the site chrome, not one
 of the actual served pages. Earlier, both generator scripts sliced chrome
 directly from `cybersecurity-monterey.html`, a real page that gets hand-
@@ -47,6 +47,21 @@ def extract_chrome(path=CHROME_SOURCE):
     )
     body_top = slice_between(t, "  <body>", '    <nav class="navbar"')
     nav = slice_between(t, '    <nav class="navbar"', '    <main id="main-content">')
+    # Fix 14 (DOM-order audit): the cookie banner used to live in body_top,
+    # before the nav and before <main>, so crawlers hit it before real
+    # content. It now lives here instead: right after </main> and before the
+    # footer, so it renders after the page's main content in source order.
+    # CSS positions it fixed/off-screen either way, so this is DOM-order only.
+    # This slice is just the <div class="cookie-banner">...</div> element
+    # itself (nothing else sits between it and the footer in this frozen
+    # template), used by apply-chrome.py to surgically insert/verify the
+    # banner right after a live page's own </main> without touching
+    # whatever page-specific content already lives in that gap.
+    cookie_banner = slice_between(
+        t,
+        '    <div class="cookie-banner" id="cookieBanner">',
+        '    <footer class="footer" id="footerSection">',
+    )
     # "footer" runs to end-of-file (not just </footer>) because the page
     # generators use it as a literal suffix: it also carries the trailing
     # main.js include, mobile-cta-bar markup, and closing tags that every
@@ -68,6 +83,7 @@ def extract_chrome(path=CHROME_SOURCE):
         "cf_analytics": cf_analytics.rstrip(),
         "body_top": body_top.rstrip(),
         "nav": nav.rstrip(),
+        "cookie_banner": cookie_banner.rstrip(),
         "footer": footer.rstrip(),
         "footer_only": footer_only.rstrip(),
     }

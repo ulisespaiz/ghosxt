@@ -36,14 +36,14 @@
       {
         "@context": "https://schema.org",
         "@graph": [
-          { "@type": "LocalBusiness", "@id": "https://ghosxt.com/santa-cruz#business", "name": "Ghosxt – Managed IT Services Santa Cruz", "description": "Managed IT services and cybersecurity for businesses in Santa Cruz, California.", "url": "https://ghosxt.com/santa-cruz", "image": "https://ghosxt.com/assets/img/ghosxt-logo-160.webp", "telephone": "+18312040501", "email": "sales@ghosxt.com", "priceRange": "$$", "address": { "@type": "PostalAddress", "addressLocality": "Santa Cruz", "addressRegion": "CA", "postalCode": "95060", "addressCountry": "US" }, "geo": { "@type": "GeoCoordinates", "latitude": 36.9741, "longitude": -122.0308 }, "areaServed": [ { "@type": "City", "name": "Santa Cruz" }, { "@type": "City", "name": "Watsonville" }, { "@type": "City", "name": "Capitola" }, { "@type": "City", "name": "Aptos" }, { "@type": "City", "name": "Scotts Valley" } ] },
+          { "@type": "LocalBusiness", "@id": "https://ghosxt.com/santa-cruz#business", "name": "Ghosxt – Managed IT Services Santa Cruz", "description": "Managed IT services and cybersecurity for businesses in Santa Cruz, California.", "url": "https://ghosxt.com/santa-cruz", "image": "https://ghosxt.com/assets/img/ghosxt-logo-160.webp", "telephone": "+18312040501", "email": "sales@ghosxt.com", "priceRange": "$$", "address": { "@type": "PostalAddress", "addressLocality": "Salinas", "addressRegion": "CA", "postalCode": "93901", "addressCountry": "US" }, "geo": { "@type": "GeoCoordinates", "latitude": 36.6777, "longitude": -121.6555 }, "areaServed": [ { "@type": "City", "name": "Santa Cruz" }, { "@type": "City", "name": "Watsonville" }, { "@type": "City", "name": "Capitola" }, { "@type": "City", "name": "Aptos" }, { "@type": "City", "name": "Scotts Valley" } ] },
           { "@type": "BreadcrumbList", "itemListElement": [ { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ghosxt.com/" }, { "@type": "ListItem", "position": 2, "name": "Santa Cruz", "item": "https://ghosxt.com/santa-cruz" } ] },
           { "@type": "FAQPage", "mainEntity": [
             { "@type": "Question", "name": "Do you support tech startups in Santa Cruz?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. SaaS founders, agencies, and tech-adjacent businesses are a core client type. We handle the IT, security, and Microsoft 365 setup so the team can focus on product." } },
             { "@type": "Question", "name": "Can you support multiple locations across Santa Cruz County?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Many of our clients have offices in Santa Cruz, Aptos, and Scotts Valley with hybrid teams. We design networks and identity that work across all of them." } },
             { "@type": "Question", "name": "What does managed IT cost in Santa Cruz?", "acceptedAnswer": { "@type": "Answer", "text": "Pricing is published. Core Managed IT is $125 per user per month, Secure Growth is $175, and Compliance & Continuity is $250. Teams of 1 to 4 users use the $600/mo flat Tiny Team Managed Security plan. See our pricing page for what's included." } },
             { "@type": "Question", "name": "Can you manage IT across multiple Santa Cruz County locations?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We support multi-site businesses from the Westside to Aptos and Scotts Valley with one consistent network and security setup, central management, and a single point of contact." } },
-            { "@type": "Question", "name": "Do you work with healthcare and dental practices on HIPAA?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We build the encryption, access controls, backup, and documentation that HIPAA expects, so a practice can pass an audit and protect patient data." } },
+            { "@type": "Question", "name": "Do you work with healthcare practices on HIPAA?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We build the encryption, access controls, backup, and documentation that HIPAA expects, so a practice can pass an audit and protect patient data." } },
             { "@type": "Question", "name": "Can you help a startup answer customer or investor security questions?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We implement MFA, endpoint protection, and access controls and document them, so when a customer or investor asks about your security posture, you have real answers." } }
           ] }
         ]
@@ -63,7 +63,7 @@
           "serviceType": "Managed IT Services",
           "url": "https://ghosxt.com/santa-cruz",
           "provider": {
-            "@id": "https://ghosxt.com/#business"
+            "@id": "https://ghosxt.com/santa-cruz#business"
           },
           "areaServed": {
             "@type": "City",
@@ -77,7 +77,7 @@
   <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
     <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top"><i class="fi fi-rs-angle-up" aria-hidden="true"></i></button>
-    <div class="cookie-banner" id="cookieBanner"><div class="cookie-banner-container"><div class="cookie-content"><div class="cookie-icon"><i class="fi fi-rs-cookie"></i></div><div class="cookie-text"><p class="cookie-message">We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.</p><a href="/privacy-policy" class="cookie-link">Learn more about our Privacy Policy</a></div></div><div class="cookie-actions"><button class="cookie-btn cookie-btn-secondary" id="cookieDecline">Decline</button><button class="cookie-btn cookie-btn-primary" id="cookieAccept">Accept All</button></div></div></div>
+
     <nav class="navbar" aria-label="Main navigation">
       <div class="navbar-container">
         <div class="navbar-left"><a href="/" class="navbar-logo"><img fetchpriority="high" loading="eager" src="assets/img/ghosxt-logo-160.webp" alt="Ghosxt logo" width="48" height="48" /><span>GHOSXT</span></a></div>
@@ -137,7 +137,7 @@
             <a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer" class="location-btn location-btn-primary"><i class="fi fi-rs-calendar-day" aria-hidden="true"></i>Book a Free Assessment</a>
             <a href="tel:+18312040501" class="location-btn location-btn-secondary"><i class="fi fi-rs-phone-call" aria-hidden="true"></i>(831) 204-0501</a>
           </div>
-          <p class="pricing-trust-callout"><!-- ghosxt:trust-reviews --><span aria-hidden="true" style="color:var(--ghosxt-red-0);letter-spacing:1px;">★★★★★</span> Rated <strong>5.0</strong> across <a href="https://share.google/88vsSuams5s62RdPJ" target="_blank" rel="noopener noreferrer">26&nbsp;Google reviews</a>, trusted by businesses across Monterey County since 2021 and beyond.</p>
+          <p class="pricing-trust-callout"><!-- ghosxt:trust-reviews --><span aria-hidden="true" style="color:var(--ghosxt-red-0);letter-spacing:1px;">★★★★★</span> Rated <strong>5.0</strong> across <a href="https://share.google/88vsSuams5s62RdPJ" target="_blank" rel="noopener noreferrer">26&nbsp;Google reviews</a>, trusted by businesses across Santa Cruz County since 2021 and beyond.</p>
         </div>
       </section>
       <!-- ghosxt:key-facts -->
@@ -146,7 +146,8 @@
         <dl class="key-facts__list">
           <dt>Service area</dt><dd>Santa Cruz, California</dd>
           <dt>Led by</dt><dd>An engineer with DoD infrastructure experience</dd>
-          <dt>Response</dt><dd>Same-day remote support; on-site within 24–48 hours</dd>
+          <dt>Who you talk to</dt><dd>Ulises Paiz, the owner, directly. No tier-1 queue.</dd>
+          <dt>Response</dt><dd>Critical incidents: 4-hour notification commitment. Direct line to the owner.</dd>
           <dt>Pricing</dt><dd><a href="/pricing">Published upfront</a> (free assessment for a written quote)</dd>
           <dt>Free</dt><dd>No-obligation 30-minute IT assessment</dd>
           <dt>Rated</dt><dd><span class="key-facts__stars" aria-hidden="true">★★★★★</span> 5.0 on <a href="https://share.google/88vsSuams5s62RdPJ" target="_blank" rel="noopener noreferrer">26 Google reviews</a></dd>
@@ -162,7 +163,7 @@
             <article class="service-card"><h3>Managed IT</h3><p>24/7 monitoring, helpdesk, patching, and a real engineer who answers the phone.</p><a href="/managed-it-services">Learn more</a></article>
             <article class="service-card"><h3>IT Help Desk &amp; Support</h3><p>Live, US-based help desk for your Santa Cruz team: fast remote and on-site fixes, no tier-1 scripts.</p><a href="/help-desk-it-support">Learn more</a></article>
             <article class="service-card"><h3>IT Consulting &amp; vCIO</h3><p>Strategic IT roadmap, budget, and vendor-neutral guidance without a full-time CIO.</p><a href="/it-consulting-vcio">Learn more</a></article>
-            <article class="service-card"><h3>Cybersecurity</h3><p>Endpoint protection, MFA, immutable backups, audits. Government-grade rigor.</p><a href="/cybersecurity-santa-cruz">Learn more</a></article>
+            <article class="service-card"><h3>Cybersecurity</h3><p>Endpoint protection, MFA, cloud backup, audits. Government-grade rigor.</p><a href="/cybersecurity-santa-cruz">Learn more</a></article>
             <article class="service-card"><h3>Microsoft 365 &amp; Google Workspace</h3><p>Email, collaboration, and identity set up properly with the security baselines most setups skip.</p><a href="/cloud-services-santa-cruz">Learn more</a></article>
             <article class="service-card"><h3>Web Development</h3><p>Custom sites, SaaS marketing pages, and e-commerce that load fast and convert.</p><a href="/website-development">Learn more</a></article>
             <article class="service-card"><h3>Startup IT Foundations</h3><p>Identity, device management, security, and tooling so a 5-person company can scale to 50 without re-buying everything.</p><a href="/managed-it-services">Learn more</a></article>
@@ -180,7 +181,7 @@
       <section class="location-section">
         <div class="container">
           <h2>IT Support &amp; Help Desk in Santa Cruz</h2>
-          <p>Santa Cruz teams tend to know their way around technology, so our <a href="/help-desk-it-support">IT help desk</a> doesn't waste your time with a script: live phone, email, or client-portal support, most issues resolved remotely the same hour, and on-site help across Santa Cruz, Westside, Aptos, and Scotts Valley when hardware needs hands on it.</p>
+          <p>Santa Cruz teams tend to know their way around technology, so our <a href="/help-desk-it-support">IT help desk</a> doesn't waste your time with a script: live phone, email, or client-portal support, most issues resolved remotely, and on-site help across Santa Cruz, Westside, Aptos, and Scotts Valley when hardware needs hands on it.</p>
           <p>Most days that's Microsoft 365 and Outlook issues, locked accounts, printers, Wi-Fi and VPN drops, and slow computers: ordinary problems, worse in the bandwidth dead zones up in the hills. It's included in every <a href="/managed-it-services">managed IT</a> plan, documented and explained in plain language, not jargon.</p>
         </div>
       </section>
@@ -190,7 +191,7 @@
           <ul class="industries-list">
             <li>Tech startups and SaaS</li>
             <li>Marketing agencies</li>
-            <li>Healthcare and dental</li>
+            <li>Healthcare</li>
             <li>Professional services</li>
             <li>Education and research</li>
             <li>Tourism and hospitality</li>
@@ -217,7 +218,7 @@
             <li><strong>Bandwidth dead zones in the hills.</strong> Connectivity up toward the mountains and in older buildings is unreliable. We design with failover and traffic prioritization so a thin link does not stop work.</li>
             <li><strong>Startup security expectations.</strong> SaaS and tech teams here get security questions from customers and investors early. We put <a href="/cybersecurity">MFA, endpoint protection, and access controls</a> in place (and document them) so you can answer with confidence.</li>
             <li><strong>Seasonal tourism load.</strong> Summer and Boardwalk-season traffic pushes guest Wi-Fi and POS to the limit. We size and segment networks so peak weekends stay smooth.</li>
-            <li><strong>Healthcare and HIPAA exposure.</strong> Medical, dental, and wellness practices need encrypted, compliant systems. We build the controls a HIPAA audit looks for.</li>
+            <li><strong>Healthcare and HIPAA exposure.</strong> Medical and wellness practices need encrypted, compliant systems. We build the controls a HIPAA audit looks for.</li>
           </ul>
         </div>
       </section>
@@ -239,7 +240,7 @@
           <p>Guides that come up most often with Santa Cruz startups, practices, and shops:</p>
           <ul class="industries-list">
             <li><a href="/blog/identity-hardening-small-business-5-employees-microsoft-365">Identity hardening for a Microsoft 365 team</a>: the first security move every startup should make.</li>
-            <li><a href="/blog/hipaa-compliant-it-medical-dental-monterey-county">HIPAA-compliant IT for medical and dental practices</a>: what compliance actually requires.</li>
+            <li><a href="/blog/hipaa-compliant-it-medical-monterey-county">HIPAA-compliant IT for medical practices</a>: what compliance actually requires.</li>
             <li><a href="/blog/backup-disaster-recovery-small-business-2026">Backup &amp; disaster recovery for small businesses</a>: what protects you when something fails.</li>
             <li><a href="/blog/it-support-vs-managed-it-services-difference">IT support vs. managed IT services</a>: which model fits your team.</li>
             <li><a href="/blog/top-website-design-companies-salinas-monterey-bay">Top website design companies on the Monterey Bay</a>: for a faster, better-converting site.</li>
@@ -260,12 +261,12 @@
           <h2>Santa Cruz IT services by specialty</h2>
           <p>Need a specific service in Santa Cruz? Go straight to the detail page for the work you have in mind. Each is delivered locally (on-site across the area and remotely nationwide) and runs on the same managed foundation with one senior engineer behind it.</p>
           <div class="services-grid">
-            <article class="service-card"><h3>Cybersecurity in Santa Cruz</h3><p>Endpoint detection and response, phishing-resistant MFA, immutable backup, and 24/7 monitoring: government-grade, sized for a Santa Cruz small business.</p><a href="/cybersecurity-santa-cruz">Santa Cruz cybersecurity</a></article>
+            <article class="service-card"><h3>Cybersecurity in Santa Cruz</h3><p>Managed detection and response (MDR), phishing-resistant MFA, cloud backup for Microsoft 365 and Google Workspace, and 24/7 monitoring: government-grade, sized for a Santa Cruz small business.</p><a href="/cybersecurity-santa-cruz">Santa Cruz cybersecurity</a></article>
             <article class="service-card"><h3>Cloud &amp; Microsoft 365 in Santa Cruz</h3><p>Microsoft 365 setup and hardening, no-downtime email and file migrations, SharePoint, Teams, and Azure for Santa Cruz businesses.</p><a href="/cloud-services-santa-cruz">Santa Cruz cloud &amp; Microsoft 365</a></article>
             <article class="service-card"><h3>Web Design in Santa Cruz</h3><p>Hand-coded, mobile-first websites built to rank in Santa Cruz searches: local SEO, e-commerce and booking options, and published pricing from $1,800.</p><a href="/web-design-santa-cruz">Santa Cruz web design</a></article>
             <article class="service-card"><h3>Managed IT</h3><p>Monitoring, patching, and a real senior engineer who answers the phone: the foundation every other service sits on.</p><a href="/managed-it-services">Managed IT services</a></article>
-            <article class="service-card"><h3>IT Help Desk &amp; Support</h3><p>Live, US-based help desk for your Santa Cruz team, with most issues fixed remotely the same hour and on-site help when hardware needs hands.</p><a href="/help-desk-it-support">IT help desk &amp; support</a></article>
-            <article class="service-card"><h3>Backup &amp; Disaster Recovery</h3><p>Immutable, tested backups and a real recovery plan, so an outage or ransomware hit is a bad day, not a closed business.</p><a href="/backup-disaster-recovery">Backup &amp; disaster recovery</a></article>
+            <article class="service-card"><h3>IT Help Desk &amp; Support</h3><p>Live, US-based help desk for your Santa Cruz team, with critical incidents carrying our 4-hour notification commitment and on-site help when hardware needs hands.</p><a href="/help-desk-it-support">IT help desk &amp; support</a></article>
+            <article class="service-card"><h3>Backup &amp; Disaster Recovery</h3><p>Cloud backup, tested restores, and a real recovery plan, so an outage or ransomware hit is a bad day, not a closed business.</p><a href="/backup-disaster-recovery">Backup &amp; disaster recovery</a></article>
             <article class="service-card"><h3>Network Design</h3><p>Wired and wireless networks, firewalls, and segmentation built to be secure and reliable from day one.</p><a href="/network-design">Network design</a></article>
           </div>
         </div>
@@ -275,14 +276,31 @@
           <h2>FAQs about IT services in Santa Cruz</h2>
           <details><summary>Do you support tech startups?</summary><div class="answer">Yes. SaaS founders, agencies, and tech-adjacent businesses are a core client type. We handle the IT, security, and Microsoft 365 or Google Workspace setup so the team can focus on product.</div></details>
           <details><summary>Can you support multiple locations across Santa Cruz County?</summary><div class="answer">Yes. Many of our clients have offices in Santa Cruz, Aptos, and Scotts Valley with hybrid teams. We design networks and identity that work across all of them.</div></details>
-          <details><summary>How fast can you respond?</summary><div class="answer">Most issues are resolved remotely the same business day. On-site work in Santa Cruz County is typically same-day or next-day for non-emergencies.</div></details>
+          <details><summary>How fast can you respond?</summary><div class="answer">Most issues are resolved remotely, and critical incidents carry our 4-hour notification commitment. On-site work in Santa Cruz County is scheduled to fit your business.</div></details>
           <details><summary>What does managed IT cost?</summary><div class="answer">Pricing is published. Core Managed IT is $125 per user per month, Secure Growth is $175, and Compliance &amp; Continuity is $250. Teams of 1 to 4 users use the $600/mo flat Tiny Team Managed Security plan. See <a href="/pricing">the full pricing page</a> for what's included.</div></details>
           <details><summary>Can you manage IT across multiple Santa Cruz County locations?</summary><div class="answer">Yes. We support multi-site businesses from the Westside to Aptos and Scotts Valley with one consistent network and security setup, central management, and a single point of contact.</div></details>
-          <details><summary>Do you work with healthcare and dental practices on HIPAA?</summary><div class="answer">Yes. We build the encryption, access controls, backup, and documentation that HIPAA expects, so a practice can pass an audit and protect patient data.</div></details>
+          <details><summary>Do you work with healthcare practices on HIPAA?</summary><div class="answer">Yes. We build the encryption, access controls, backup, and documentation that HIPAA expects, so a practice can pass an audit and protect patient data.</div></details>
           <details><summary>Can you help a startup answer customer or investor security questions?</summary><div class="answer">Yes. We implement MFA, endpoint protection, and access controls and document them, so when a customer or investor asks about your security posture, you have real answers.</div></details>
         </div>
       </section>
     </main>
+
+    <div class="cookie-banner" id="cookieBanner">
+      <div class="cookie-banner-container">
+        <div class="cookie-content">
+          <div class="cookie-icon"><i class="fi fi-rs-cookie"></i></div>
+          <div class="cookie-text">
+            <p class="cookie-message">We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.</p>
+            <a href="/privacy-policy" class="cookie-link">Learn more about our Privacy Policy</a>
+          </div>
+        </div>
+        <div class="cookie-actions">
+          <button class="cookie-btn cookie-btn-secondary" id="cookieDecline">Decline</button>
+          <button class="cookie-btn cookie-btn-primary" id="cookieAccept">Accept All</button>
+        </div>
+      </div>
+    </div>
+
     <footer class="footer" id="footerSection">
       <div class="footer-container">
         <div class="footer-brand-row">

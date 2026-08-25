@@ -325,6 +325,14 @@
                   "@type": "Answer",
                   "text": "Yes, every site we build is mobile-first and hand-coded without heavy page builders, then tested against Google's Core Web Vitals so your main content loads in under 2.5 seconds on a phone. Speed and mobile experience are ranking factors, so this is treated as a requirement on every build, not an add-on."
                 }
+              },
+              {
+                "@type": "Question",
+                "name": "Who will I actually talk to?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Ulises Paiz, the owner, directly. There is no tier-1 queue and no offshore call center: the engineer who knows your environment answers the phone, and critical incidents carry our 4-hour notification commitment."
+                }
               }
             ]
           }
@@ -352,20 +360,32 @@
               "name": "California"
             },
             {
-              "@type": "City",
-              "name": "Salinas"
+              "@type": "State",
+              "name": "Texas"
             },
             {
-              "@type": "City",
-              "name": "Monterey"
+              "@type": "State",
+              "name": "Florida"
             },
             {
-              "@type": "City",
-              "name": "Santa Cruz"
+              "@type": "State",
+              "name": "Nevada"
             },
             {
-              "@type": "City",
-              "name": "San Jose"
+              "@type": "State",
+              "name": "Arizona"
+            },
+            {
+              "@type": "State",
+              "name": "Oregon"
+            },
+            {
+              "@type": "State",
+              "name": "Washington"
+            },
+            {
+              "@type": "Country",
+              "name": "United States"
             }
           ]
         }
@@ -382,33 +402,6 @@
     <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
       <i class="fi fi-rs-angle-up" aria-hidden="true"></i>
     </button>
-
-    <div class="cookie-banner" id="cookieBanner">
-      <div class="cookie-banner-container">
-        <div class="cookie-content">
-          <div class="cookie-icon"><i class="fi fi-rs-cookie"></i></div>
-          <div class="cookie-text">
-            <p class="cookie-message">
-              We use cookies to enhance your browsing experience, serve
-              personalized content, and analyze our traffic. By clicking "Accept
-              All", you consent to our use of cookies.
-            </p>
-            <a href="/privacy-policy" class="cookie-link"
-              >Learn more about our Privacy Policy</a
-            >
-          </div>
-        </div>
-        <div class="cookie-actions">
-          <button class="cookie-btn cookie-btn-secondary" id="cookieDecline">
-            Decline
-          </button>
-          <button class="cookie-btn cookie-btn-primary" id="cookieAccept">
-            Accept All
-          </button>
-        </div>
-      </div>
-    </div>
-
 
     <nav class="navbar" aria-label="Main navigation">
       <div class="navbar-container">
@@ -611,6 +604,17 @@
         </div>
       </section>
 
+      <!-- ghosxt:key-facts -->
+      <aside class="key-facts" aria-label="Website Development: key facts">
+        <p class="key-facts__title">Website Development: at a glance</p>
+        <dl class="key-facts__list">
+          <dt>Service area</dt><dd>California, Texas, Florida, and nationwide</dd>
+          <dt>Who you talk to</dt><dd>Ulises Paiz, the owner, directly. No tier-1 queue.</dd>
+          <dt>Response</dt><dd>Critical incidents: 4-hour notification commitment. Direct line to the owner.</dd>
+          <dt>Pricing</dt><dd><a href="/pricing">Published pricing from $600 per month flat for 1 to 4 users</a></dd>
+        </dl>
+      </aside>
+
       <div class="slider-section">
         <div class="slider-track">
           <div class="slider-item">
@@ -713,6 +717,18 @@
               companies start at <strong>$1,800</strong> for a clean, fast,
               professional site, with transparent add-on pricing for SEO,
               booking systems, multilingual support, and more. No hidden fees.
+            </p>
+            <p
+              class="calc-web-subtitle"
+              style="max-width: 680px; margin: 0.5rem auto 0"
+            >
+              All three packages, one-time: <strong>Essential $1,800</strong>,
+              <strong>Business Pro $3,200</strong>, and
+              <strong>E-commerce / Portal $5,900+</strong>. Add-ons: Custom CMS /
+              Admin Panel $800, SEO Optimization Package $550, Booking /
+              Appointment System $1,200, Multilingual (2+ languages) $950,
+              Premium Custom Design $1,500, and optional Monthly Maintenance &amp;
+              Backups at $300/month.
             </p>
           </div>
 
@@ -1151,16 +1167,19 @@
                                   <i
                                     class="fi fi-rs-check-circle check-yes"
                                   ></i>
+                                  <span class="sr-only">Included</span>
                                 </td>
                                 <td>
                                   <i
                                     class="fi fi-rs-check-circle check-yes"
                                   ></i>
+                                  <span class="sr-only">Included</span>
                                 </td>
                                 <td>
                                   <i
                                     class="fi fi-rs-check-circle check-yes"
                                   ></i>
+                                  <span class="sr-only">Included</span>
                                 </td>
                               </tr>
                               <tr>
@@ -1169,16 +1188,19 @@
                                   <i
                                     class="fi fi-rs-check-circle check-yes"
                                   ></i>
+                                  <span class="sr-only">Included</span>
                                 </td>
                                 <td>
                                   <i
                                     class="fi fi-rs-check-circle check-yes"
                                   ></i>
+                                  <span class="sr-only">Included</span>
                                 </td>
                                 <td>
                                   <i
                                     class="fi fi-rs-check-circle check-yes"
                                   ></i>
+                                  <span class="sr-only">Included</span>
                                 </td>
                               </tr>
                               <tr>
@@ -1187,32 +1209,38 @@
                                 </td>
                                 <td>
                                   <i class="fi fi-rs-minus-circle check-no"></i>
+                                  <span class="sr-only">Not included</span>
                                 </td>
                                 <td>
                                   <i
                                     class="fi fi-rs-check-circle check-yes"
                                   ></i>
+                                  <span class="sr-only">Included</span>
                                 </td>
                                 <td>
                                   <i
                                     class="fi fi-rs-check-circle check-yes"
                                   ></i>
+                                  <span class="sr-only">Included</span>
                                 </td>
                               </tr>
                               <tr>
                                 <td class="feature-web-name">Advanced SEO</td>
                                 <td>
                                   <i class="fi fi-rs-minus-circle check-no"></i>
+                                  <span class="sr-only">Not included</span>
                                 </td>
                                 <td>
                                   <i
                                     class="fi fi-rs-check-circle check-yes"
                                   ></i>
+                                  <span class="sr-only">Included</span>
                                 </td>
                                 <td>
                                   <i
                                     class="fi fi-rs-check-circle check-yes"
                                   ></i>
+                                  <span class="sr-only">Included</span>
                                 </td>
                               </tr>
                               <tr>
@@ -1221,14 +1249,17 @@
                                 </td>
                                 <td>
                                   <i class="fi fi-rs-minus-circle check-no"></i>
+                                  <span class="sr-only">Not included</span>
                                 </td>
                                 <td>
                                   <i class="fi fi-rs-minus-circle check-no"></i>
+                                  <span class="sr-only">Not included</span>
                                 </td>
                                 <td>
                                   <i
                                     class="fi fi-rs-check-circle check-yes"
                                   ></i>
+                                  <span class="sr-only">Included</span>
                                 </td>
                               </tr>
                               <tr>
@@ -1237,14 +1268,17 @@
                                 </td>
                                 <td>
                                   <i class="fi fi-rs-minus-circle check-no"></i>
+                                  <span class="sr-only">Not included</span>
                                 </td>
                                 <td>
                                   <i class="fi fi-rs-minus-circle check-no"></i>
+                                  <span class="sr-only">Not included</span>
                                 </td>
                                 <td>
                                   <i
                                     class="fi fi-rs-check-circle check-yes"
                                   ></i>
+                                  <span class="sr-only">Included</span>
                                 </td>
                               </tr>
                             </tbody>
@@ -1994,10 +2028,39 @@
                 </p>
               </div>
             </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span>Who will I actually talk to?</span>
+                <i
+                  class="fi fi-rs-angle-small-down faq-icon"
+                  aria-hidden="true"
+                ></i>
+              </button>
+              <div class="faq-answer">
+                <p>Ulises Paiz, the owner, directly. There is no tier-1 queue and no offshore call center: the engineer who knows your environment answers the phone, and critical incidents carry our 4-hour notification commitment.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </main>
+
+    <div class="cookie-banner" id="cookieBanner">
+      <div class="cookie-banner-container">
+        <div class="cookie-content">
+          <div class="cookie-icon"><i class="fi fi-rs-cookie"></i></div>
+          <div class="cookie-text">
+            <p class="cookie-message">We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.</p>
+            <a href="/privacy-policy" class="cookie-link">Learn more about our Privacy Policy</a>
+          </div>
+        </div>
+        <div class="cookie-actions">
+          <button class="cookie-btn cookie-btn-secondary" id="cookieDecline">Decline</button>
+          <button class="cookie-btn cookie-btn-primary" id="cookieAccept">Accept All</button>
+        </div>
+      </div>
+    </div>
 
     <footer class="footer" id="footerSection">
       <div class="footer-container">

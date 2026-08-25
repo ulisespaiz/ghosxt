@@ -113,7 +113,7 @@
   <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
     <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top"><i class="fi fi-rs-angle-up" aria-hidden="true"></i></button>
-    <div class="cookie-banner" id="cookieBanner"><div class="cookie-banner-container"><div class="cookie-content"><div class="cookie-icon"><i class="fi fi-rs-cookie"></i></div><div class="cookie-text"><p class="cookie-message">We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.</p><a href="/privacy-policy" class="cookie-link">Learn more about our Privacy Policy</a></div></div><div class="cookie-actions"><button class="cookie-btn cookie-btn-secondary" id="cookieDecline">Decline</button><button class="cookie-btn cookie-btn-primary" id="cookieAccept">Accept All</button></div></div></div>
+
     <nav class="navbar" aria-label="Main navigation">
       <div class="navbar-container">
         <div class="navbar-left"><a href="/" class="navbar-logo"><img fetchpriority="high" loading="eager" src="../assets/img/ghosxt-logo-160.webp" alt="Ghosxt logo" width="48" height="48" /><span>GHOSXT</span></a></div>
@@ -178,12 +178,12 @@
           </div>
           <h1>Shadow IT: The Unauthorized Apps Creating Security Gaps in Your Small Business</h1>
           <div class="blog-post-author">
-            <strong>Ulises Paiz</strong>, Founder, Ghosxt
+            <strong>Ulises Paiz</strong>, Owner, Ghosxt
           </div>
           <div class="author-bio-box">
             <!-- ghosxt:author-bio -->
             <img src="../assets/img/ulises.avif" alt="Ulises Paiz" width="56" height="56" loading="lazy" />
-            <p>Ulises Paiz, Founder of Ghosxt, has 10+ years in IT infrastructure and cybersecurity, deep DoD infrastructure experience, and 9 certifications including CySA+, Security+, and AZ-104. Before founding Ghosxt, he served as a Senior Solutions Consultant for the DoD and built security programs for 40+ Central Coast businesses. <a href="/about">More about Ulises &rarr;</a></p>
+            <p>Ulises Paiz is the owner and sole engineer at Ghosxt, a Salinas, CA managed IT and cybersecurity provider. He holds an M.S. in Cybersecurity and Information Assurance (WGU, 2026) and nine industry certifications including CompTIA SecurityX, CySA+, and Microsoft AZ-104, with prior DoD and federal contractor infrastructure experience. <a href="/about">More about Ulises &rarr;</a></p>
           </div>
         </div>
       </header>
@@ -256,6 +256,23 @@
 
           <p>If you want to know exactly what shadow apps are running in your environment right now, a proper IT assessment is the starting point. We run application and network visibility reviews as part of our <a href="/cybersecurity">cybersecurity assessments</a>: 30 minutes, written findings, no sales script. You can also just <a href="/contact">get in touch</a> and we will figure out the right place to start.</p>
 
+          <h2>FAQs about shadow IT</h2>
+
+          <h3>What is shadow IT?</h3>
+          <p>Shadow IT is any software, service, device, or cloud account that employees use for work without IT's knowledge or approval. It includes consumer AI tools, personal cloud storage, browser extensions, mobile apps, and any SaaS subscription an employee signed up for independently. It is common in businesses of all sizes, and it is not always malicious: employees use these tools to get work done faster. The security risk is that IT has no visibility into what data those tools are receiving or where it goes.</p>
+
+          <h3>Why is shadow IT a security risk?</h3>
+          <p>Shadow IT creates three main risks: data leaving to unmanaged third-party servers (often without business data processing agreements), unpatched applications that create exploitable entry points, and credential reuse across unauthorized apps that feeds credential-stuffing attacks. Browser extensions are particularly dangerous because they run inside the browser with elevated permissions and can silently read anything on any page the employee loads.</p>
+
+          <h3>How do I find out what shadow IT exists in my business?</h3>
+          <p>Start with three sources: endpoint application inventory from your managed IT provider's tooling, DNS and firewall logs for outbound SaaS traffic, and a simple employee survey asking what apps they use regularly for work. You will find apps you did not know existed. A managed IT service with proper endpoint management can automate this discovery on an ongoing basis.</p>
+
+          <h3>Can I just block all unauthorized apps?</h3>
+          <p>Blanket blocking without replacement creates workarounds: employees will use mobile data instead of corporate Wi-Fi, use personal devices, or find another tool you have not blocked yet. The more effective approach is rapid IT approval (same-day acknowledgment, one-week decision) combined with providing sanctioned alternatives that meet the same need. Remove the reason for the workaround and most of the behavior stops.</p>
+
+          <h3>Are AI tools a shadow IT problem?</h3>
+          <p>Yes, and it is the fastest-growing category. Consumer AI tools (ChatGPT free tier, Grammarly, browser-based AI assistants) often lack business data processing agreements, which means client data, internal strategy, and confidential records pasted into those tools may be used to train future models and are outside your control. Businesses that need AI productivity tools should evaluate business-tier options like Microsoft Copilot, which include data processing agreements and keep your data out of model training.</p>
+
           <div class="blog-post-cta">
             <h3>Want to know what shadow apps are running in your business?</h3>
             <p>30 minutes, engineer with DoD infrastructure experience on the call, written list of what we found and what to do first. No sales script.</p>
@@ -267,6 +284,23 @@
         </div>
       </div>
     </main>
+
+    <div class="cookie-banner" id="cookieBanner">
+      <div class="cookie-banner-container">
+        <div class="cookie-content">
+          <div class="cookie-icon"><i class="fi fi-rs-cookie"></i></div>
+          <div class="cookie-text">
+            <p class="cookie-message">We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.</p>
+            <a href="/privacy-policy" class="cookie-link">Learn more about our Privacy Policy</a>
+          </div>
+        </div>
+        <div class="cookie-actions">
+          <button class="cookie-btn cookie-btn-secondary" id="cookieDecline">Decline</button>
+          <button class="cookie-btn cookie-btn-primary" id="cookieAccept">Accept All</button>
+        </div>
+      </div>
+    </div>
+
     <footer class="footer" id="footerSection">
       <div class="footer-container">
         <div class="footer-brand-row">

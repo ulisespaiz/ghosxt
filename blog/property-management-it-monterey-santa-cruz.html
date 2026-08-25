@@ -121,7 +121,7 @@
   <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
     <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top"><i class="fi fi-rs-angle-up" aria-hidden="true"></i></button>
-    <div class="cookie-banner" id="cookieBanner"><div class="cookie-banner-container"><div class="cookie-content"><div class="cookie-icon"><i class="fi fi-rs-cookie"></i></div><div class="cookie-text"><p class="cookie-message">We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.</p><a href="/privacy-policy" class="cookie-link">Learn more about our Privacy Policy</a></div></div><div class="cookie-actions"><button class="cookie-btn cookie-btn-secondary" id="cookieDecline">Decline</button><button class="cookie-btn cookie-btn-primary" id="cookieAccept">Accept All</button></div></div></div>
+
     <nav class="navbar" aria-label="Main navigation">
       <div class="navbar-container">
         <div class="navbar-left"><a href="/" class="navbar-logo"><img fetchpriority="high" loading="eager" src="../assets/img/ghosxt-logo-160.webp" alt="Ghosxt logo" width="48" height="48" /><span>GHOSXT</span></a></div>
@@ -186,12 +186,12 @@
           </div>
           <h1>Property Management IT in Monterey and Santa Cruz Counties: A 2026 Owner's Guide</h1>
           <div class="blog-post-author">
-            <strong>Ulises Paiz</strong>, Founder, Ghosxt
+            <strong>Ulises Paiz</strong>, Owner, Ghosxt
           </div>
           <div class="author-bio-box">
             <!-- ghosxt:author-bio -->
             <img src="../assets/img/ulises.avif" alt="Ulises Paiz" width="56" height="56" loading="lazy" />
-            <p>Ulises Paiz, Founder of Ghosxt, has 10+ years in IT infrastructure and cybersecurity, deep DoD infrastructure experience, and 9 certifications including CySA+, Security+, and AZ-104. Before founding Ghosxt, he served as a Senior Solutions Consultant for the DoD and built security programs for 40+ Central Coast businesses. <a href="/about">More about Ulises &rarr;</a></p>
+            <p>Ulises Paiz is the owner and sole engineer at Ghosxt, a Salinas, CA managed IT and cybersecurity provider. He holds an M.S. in Cybersecurity and Information Assurance (WGU, 2026) and nine industry certifications including CompTIA SecurityX, CySA+, and Microsoft AZ-104, with prior DoD and federal contractor infrastructure experience. <a href="/about">More about Ulises &rarr;</a></p>
           </div>
         </div>
       </header>
@@ -301,7 +301,7 @@
 
           <p>The records that have to survive a bad day: your accounting, the property-management database, signed leases and renewals, owner agreements, tenant ledgers and screening records, HOA governing documents and meeting minutes, and your email. Independent backup of Microsoft 365 (Outlook, OneDrive, SharePoint) and a documented export or backup path for the property-management platform are both needed. SaaS vendors back up their platform for their own resilience, not for your accidental deletion or your compromised admin account. If a manager deletes a property in AppFolio on Tuesday and you notice on Friday, you want your own backup, not a support ticket.</p>
 
-          <p>Continuity also means PG&amp;E. The Central Coast sits under the Public Safety Power Shutoff program, and the 101 corridor has lost power for 12 to 72 hours in recent fire seasons. A leasing office that goes dark loses its phones, its payment processing, its cameras, and its access control. The fix is some combination of a UPS for the network gear, a documented runbook for failing over to a hotspot or a manager's home office, and a generator for offices in high-risk areas. The <a href="/blog/pge-psps-it-continuity-plan-central-coast">PSPS continuity plan post</a> covers the playbook, and the <a href="/backup-disaster-recovery">backup and disaster recovery service page</a> covers tested restores, immutable copies, and a written RTO and RPO your underwriter will accept.</p>
+          <p>Continuity also means PG&amp;E. The Central Coast sits under the Public Safety Power Shutoff program, and the 101 corridor has lost power for 12 to 72 hours in recent fire seasons. A leasing office that goes dark loses its phones, its payment processing, its cameras, and its access control. The fix is some combination of a UPS for the network gear, a documented runbook for failing over to a hotspot or a manager's home office, and a generator for offices in high-risk areas. The <a href="/blog/pge-psps-it-continuity-plan-central-coast">PSPS continuity plan post</a> covers the playbook, and the <a href="/backup-disaster-recovery">backup and disaster recovery service page</a> covers tested restores, off-network copies, and a written RTO and RPO your underwriter will accept.</p>
 
           <h2>The fraud patterns hitting property managers right now</h2>
 
@@ -370,15 +370,14 @@
 
           <ul>
             <li><strong>Microsoft 365 Business Premium:</strong> 10 users &times; $22 = $220</li>
-            <li><strong>MDR / managed security:</strong> 10 users &times; $25 = $250</li>
-            <li><strong>Managed IT (help desk, patching, backup, identity hardening):</strong> 10 users &times; $150&ndash;$200 = $1,500&ndash;$2,000</li>
+            <li><strong>Managed IT &amp; security (Compliance &amp; Continuity: help desk, patching, backup, identity hardening, and managed detection &amp; response with a 24/7 SOC):</strong> 10 users &times; $250 = $2,500</li>
             <li><strong>VoIP for the leasing lines:</strong> 10 users &times; $25 = $250</li>
             <li><strong>Office internet + failover, two sites:</strong> $400&ndash;$700</li>
             <li><strong>Managed firewalls and segmentation, two sites:</strong> $300&ndash;$500</li>
             <li><strong>Independent backup (Microsoft 365 + platform export):</strong> $100&ndash;$200</li>
           </ul>
 
-          <p>Total monthly IT spend lands roughly between <strong>$3,000 and $4,500 per month</strong> at ten office users across two offices, before hardware. The biggest mover is the per-user managed IT line, which scales with headcount, not unit count, so a firm that doubles its doors without adding much office staff sees the per-unit IT cost fall.</p>
+          <p>Total monthly IT spend lands roughly between <strong>$3,770 and $4,370 per month</strong> at ten office users across two offices, before hardware. The biggest mover is the per-user managed IT and security line, which scales with headcount, not unit count, so a firm that doubles its doors without adding much office staff sees the per-unit IT cost fall.</p>
 
           <p>For comparison: a single successful vendor-banking-change or owner-distribution fraud we have seen attempted on Central Coast firms runs from $25,000 into six figures, and the money is usually unrecoverable and may not be covered if the basic controls were not in place. A ransomware event that takes down the office and the platform connection lands higher once you count downtime, recovery, and client notification. The IT budget pays for itself in a single avoided incident.</p>
 
@@ -436,6 +435,23 @@
         </div>
       </div>
     </main>
+
+    <div class="cookie-banner" id="cookieBanner">
+      <div class="cookie-banner-container">
+        <div class="cookie-content">
+          <div class="cookie-icon"><i class="fi fi-rs-cookie"></i></div>
+          <div class="cookie-text">
+            <p class="cookie-message">We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.</p>
+            <a href="/privacy-policy" class="cookie-link">Learn more about our Privacy Policy</a>
+          </div>
+        </div>
+        <div class="cookie-actions">
+          <button class="cookie-btn cookie-btn-secondary" id="cookieDecline">Decline</button>
+          <button class="cookie-btn cookie-btn-primary" id="cookieAccept">Accept All</button>
+        </div>
+      </div>
+    </div>
+
     <footer class="footer" id="footerSection">
       <div class="footer-container">
         <div class="footer-brand-row">

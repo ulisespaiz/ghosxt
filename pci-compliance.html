@@ -109,6 +109,14 @@
                   "@type": "Answer",
                   "text": "A card breach can trigger forensic investigation, fines, and mandatory notification, expensive and reputation-damaging. We help you respond and, far more importantly, prevent it: segmentation, secure POS, MFA, and monitoring that stop the intrusions that lead to card theft. See cybersecurity and emergency IT."
                 }
+              },
+              {
+                "@type": "Question",
+                "name": "Who will I actually talk to?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Ulises Paiz, the owner, directly. There is no tier-1 queue and no offshore call center: the engineer who knows your environment answers the phone, and critical incidents carry our 4-hour notification commitment."
+                }
               }
             ]
           }
@@ -125,21 +133,6 @@
       <i class="fi fi-rs-angle-up" aria-hidden="true"></i>
     </button>
 
-    <div class="cookie-banner" id="cookieBanner">
-      <div class="cookie-banner-container">
-        <div class="cookie-content">
-          <div class="cookie-icon"><i class="fi fi-rs-cookie"></i></div>
-          <div class="cookie-text">
-            <p class="cookie-message">We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.</p>
-            <a href="/privacy-policy" class="cookie-link">Learn more about our Privacy Policy</a>
-          </div>
-        </div>
-        <div class="cookie-actions">
-          <button class="cookie-btn cookie-btn-secondary" id="cookieDecline">Decline</button>
-          <button class="cookie-btn cookie-btn-primary" id="cookieAccept">Accept All</button>
-        </div>
-      </div>
-    </div>
     <nav class="navbar" aria-label="Main navigation">
       <div class="navbar-container">
         <div class="navbar-left">
@@ -244,6 +237,17 @@
           <p class="pricing-trust-callout"><a href="/contact">Real segmentation and secure POS, not just a checkbox your processor handed you.</a></p>
         </div>
       </section>
+      <!-- ghosxt:key-facts -->
+      <aside class="key-facts" aria-label="PCI DSS Compliance: key facts">
+        <p class="key-facts__title">PCI DSS Compliance: at a glance</p>
+        <dl class="key-facts__list">
+          <dt>Service area</dt><dd>California's Central Coast</dd>
+          <dt>Who you talk to</dt><dd>Ulises Paiz, the owner, directly. No tier-1 queue.</dd>
+          <dt>Response</dt><dd>Critical incidents: 4-hour notification commitment. Direct line to the owner.</dd>
+          <dt>Pricing</dt><dd><a href="/pricing">Published pricing from $600 per month flat for 1 to 4 users</a></dd>
+        </dl>
+      </aside>
+
       <section class="location-section">
         <div class="container">
           <h2>What PCI DSS requires, and what it really protects</h2>
@@ -270,7 +274,7 @@
             </article>
             <article class="service-card">
               <h3>Vulnerability Scanning</h3>
-              <p>Approved Scanning Vendor quarterly scans where required, plus internal scanning and remediation, set up and interpreted for you so a scan is a routine pass, not a scramble. PCI DSS also requires <a href="/penetration-testing">annual penetration testing</a>, which we can scope alongside your ASV scans.</p>
+              <p>Approved Scanning Vendor quarterly scans where required, plus internal scanning and remediation, set up and interpreted for you so a scan is a routine pass, not a scramble. <!-- [VERIFY] -->PCI DSS also requires <a href="/penetration-testing">annual penetration testing</a>, which we can scope alongside your ASV scans. <!-- [VERIFY] --></p>
             </article>
             <article class="service-card">
               <h3>SAQ Guidance</h3>
@@ -314,7 +318,7 @@
           </details>
           <details>
             <summary>Do I need quarterly vulnerability scans?</summary>
-            <div class="answer">If your environment is in scope for external scanning (most integrated and e-commerce setups), yes: quarterly scans by an Approved Scanning Vendor are required, plus internal scanning and prompt remediation. We set up the scanning, interpret the results, and fix what they find, so a scan is a routine pass rather than a fire drill.</div>
+            <div class="answer"><!-- [VERIFY] -->If your environment is in scope for external scanning (most integrated and e-commerce setups), yes: quarterly scans by an Approved Scanning Vendor are required, plus internal scanning and prompt remediation. We set up the scanning, interpret the results, and fix what they find, so a scan is a routine pass rather than a fire drill.</div>
           </details>
           <details>
             <summary>Isn't my POS vendor handling PCI for me?</summary>
@@ -323,6 +327,10 @@
           <details>
             <summary>What if we have a card-data breach?</summary>
             <div class="answer">A card breach can trigger forensic investigation, fines, and mandatory notification, expensive and reputation-damaging. We help you respond and, far more importantly, prevent it: segmentation, secure POS, MFA, and monitoring that stop the intrusions that lead to card theft. See <a href="/cybersecurity">cybersecurity</a> and <a href="/ransomware-recovery">emergency IT</a>.</div>
+          </details>
+          <details>
+            <summary>Who will I actually talk to?</summary>
+            <div class="answer">Ulises Paiz, the owner, directly. There is no tier-1 queue and no offshore call center: the engineer who knows your environment answers the phone, and critical incidents carry our 4-hour notification commitment.</div>
           </details>
         </div>
       </section>
@@ -335,6 +343,22 @@
         </div>
       </section>
     </main>
+
+    <div class="cookie-banner" id="cookieBanner">
+      <div class="cookie-banner-container">
+        <div class="cookie-content">
+          <div class="cookie-icon"><i class="fi fi-rs-cookie"></i></div>
+          <div class="cookie-text">
+            <p class="cookie-message">We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.</p>
+            <a href="/privacy-policy" class="cookie-link">Learn more about our Privacy Policy</a>
+          </div>
+        </div>
+        <div class="cookie-actions">
+          <button class="cookie-btn cookie-btn-secondary" id="cookieDecline">Decline</button>
+          <button class="cookie-btn cookie-btn-primary" id="cookieAccept">Accept All</button>
+        </div>
+      </div>
+    </div>
 
     <footer class="footer" id="footerSection">
       <div class="footer-container">
