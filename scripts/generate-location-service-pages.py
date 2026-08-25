@@ -639,6 +639,8 @@ def build_page(chrome, service, slug, city):
 {body}
     </main>
 
+{chrome['cookie_banner']}
+
 {chrome['footer']}
 """
     return page_slug, head_top
