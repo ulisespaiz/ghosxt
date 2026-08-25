@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from an engineer with DoD infrastructure experience.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Mon, 24 Aug 2026 11:07:44 +0000</lastBuildDate>
-    <pubDate>Mon, 24 Aug 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Tue, 25 Aug 2026 11:05:40 +0000</lastBuildDate>
+    <pubDate>Tue, 25 Aug 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>Exposed RDP: The Open Door Ransomware Gangs Scan For First (2026)</title>
+      <link>https://ghosxt.com/blog/exposed-rdp-remote-desktop-protocol-small-business-2026</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/exposed-rdp-remote-desktop-protocol-small-business-2026</guid>
+      <pubDate>Tue, 25 Aug 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>Port 3389 open to the internet is still one of the most common ways ransomware gets into a small business. Why exposed RDP is so dangerous, and what to use instead.</description>
+    </item>
     <item>
       <title>Google Workspace for Small Business: The Security Settings to Turn On First (2026)</title>
       <link>https://ghosxt.com/blog/google-workspace-small-business-security-settings-2026</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>ClickFix pages pose as a CAPTCHA or Zoom error, tricking employees into pasting a command into Windows Run. How it bypasses antivirus.</description>
-    </item>
-    <item>
-      <title>Evil Twin Wi-Fi: How Fake Hotspots Steal Data From Remote Workers (2026)</title>
-      <link>https://ghosxt.com/blog/evil-twin-wifi-attacks-small-business-2026</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/evil-twin-wifi-attacks-small-business-2026</guid>
-      <pubDate>Tue, 21 Jul 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>Evil twin Wi-Fi hotspots copy a real network's name to intercept logins and files from remote and traveling employees. How the attack works and how to stop it.</description>
     </item>
   </channel>
 </rss>

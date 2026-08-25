@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exposed RDP: The Open Door Ransomware Gangs Scan For First (2026) | Ghosxt</title>
+    <meta name="description" content="Port 3389 open to the internet is still one of the most common ways ransomware gets into a small business. Why exposed RDP is so dangerous, and what to use instead." />
+    <link rel="canonical" href="https://ghosxt.com/blog/exposed-rdp-remote-desktop-protocol-small-business-2026" />
+    <link rel="alternate" type="application/rss+xml" title="Ghosxt Blog" href="https://ghosxt.com/feed.xml" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://ghosxt.com/blog/exposed-rdp-remote-desktop-protocol-small-business-2026" />
+    <meta property="og:title" content="Exposed RDP: The Open Door Ransomware Gangs Scan For First (2026) | Ghosxt" />
+    <meta property="og:description" content="Port 3389 open to the internet is still one of the fastest ways ransomware gets into a small business network. Why it's so dangerous, and what to use instead." />
+    <meta property="og:image" content="https://ghosxt.com/assets/img/og/blog-exposed-rdp-remote-desktop-protocol-small-business-2026.png" />
+    <meta property="og:site_name" content="Ghosxt" />
+    <meta property="article:published_time" content="2026-08-25" />
+    <meta property="article:author" content="Ulises Paiz" />
+    <meta name="robots" content="index, follow" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Exposed RDP: The Open Door Ransomware Gangs Scan For First (2026) | Ghosxt" />
+    <meta name="twitter:description" content="Port 3389 open to the internet is still one of the fastest ways ransomware gets into a small business network. Why it's so dangerous, and what to use instead." />
+    <meta name="twitter:image" content="https://ghosxt.com/assets/img/og/blog-exposed-rdp-remote-desktop-protocol-small-business-2026.png" />
+    <link rel="icon" href="../assets/img/favicon.ico" sizes="any" />
+    <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- ghosxt:roboto-preload -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" />
+    <link rel="preconnect" href="https://cdn-uicons.flaticon.com" />
+    <link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" /></noscript>
+    <link rel="stylesheet" href="../assets/css/main.min.css?v=2026-07-02a" />
+    <link rel="stylesheet" href="../assets/css/blog.min.css?v=2026-07-03a" />
+    <link rel="stylesheet" media="print" onload="this.media='all'" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" />
+    <noscript><link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" /></noscript>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "BlogPosting",
+            "mainEntityOfPage": { "@type": "WebPage", "@id": "https://ghosxt.com/blog/exposed-rdp-remote-desktop-protocol-small-business-2026" },
+            "headline": "Exposed RDP: The Open Door Ransomware Gangs Scan For First",
+            "description": "Port 3389 open to the internet, so an owner or a remote employee can reach their desktop from home, is still one of the most common ways ransomware crews get into a small business network. Why exposed RDP is so dangerous, how attackers find it, and what to use instead, from an engineer with DoD infrastructure experience serving California's Central Coast.",
+            "image": "https://ghosxt.com/assets/img/og/blog-exposed-rdp-remote-desktop-protocol-small-business-2026.png",
+            "author": { "@type": "Person", "name": "Ulises Paiz", "url": "https://ghosxt.com/about" },
+            "publisher": { "@type": "Organization", "name": "Ghosxt", "logo": { "@type": "ImageObject", "url": "https://ghosxt.com/assets/img/ghosxt-logo-160.webp" } },
+            "datePublished": "2026-08-25",
+            "dateModified": "2026-08-25",
+            "articleSection": "Cybersecurity",
+            "keywords": "exposed RDP, RDP small business, remote desktop protocol security, RDP ransomware, port 3389, RDP brute force, RD Gateway, VPN vs RDP, Salinas IT, Monterey County IT"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ghosxt.com/" },
+              { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://ghosxt.com/blog/" },
+              { "@type": "ListItem", "position": 3, "name": "Exposed RDP: The Open Door Ransomware Gangs Scan For First", "item": "https://ghosxt.com/blog/exposed-rdp-remote-desktop-protocol-small-business-2026" }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Why is exposed RDP so dangerous for a small business?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Because it gives an attacker a direct login prompt to a machine on your network from anywhere on the internet, no phishing email or malicious attachment required. If they guess or buy working credentials, they are logged in as a real user with real access. It has been one of the most common initial access points for ransomware for years precisely because it removes the need for a more sophisticated exploit."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How do attackers find open RDP ports?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "They don't target you specifically at first. Services like Shodan and Censys continuously scan the entire internet and index every device answering on port 3389, and criminal groups buy access to those lists or run their own scans. Once a business's RDP port is found, it gets added to an automated credential-stuffing and brute-force queue running around the clock."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is a VPN enough to make RDP safe?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "It's a major improvement over exposing RDP directly, but only if the VPN itself is patched, requires MFA, and isn't left just as exposed as RDP was. Business VPN and firewall appliances have themselves been targeted by actively exploited vulnerabilities. A VPN with MFA in front of RDP, or a modern zero-trust remote access tool that never opens an inbound port at all, is the safer pattern."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How do I know if my business has exposed RDP right now?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "An external scan of your public IP addresses will show it, and this is one of the checks included in a basic attack surface review or penetration test. If you don't know your business's public IP addresses or haven't had an external scan run in the last year, that's the first gap to close, since you can't secure what you haven't confirmed is exposed."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+    <!-- ghosxt:cf-web-analytics -->
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"f3ce7e0e17f54050845d52d7f355cd98"}'></script>
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top"><i class="fi fi-rs-angle-up" aria-hidden="true"></i></button>
+    <div class="cookie-banner" id="cookieBanner"><div class="cookie-banner-container"><div class="cookie-content"><div class="cookie-icon"><i class="fi fi-rs-cookie"></i></div><div class="cookie-text"><p class="cookie-message">We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.</p><a href="/privacy-policy" class="cookie-link">Learn more about our Privacy Policy</a></div></div><div class="cookie-actions"><button class="cookie-btn cookie-btn-secondary" id="cookieDecline">Decline</button><button class="cookie-btn cookie-btn-primary" id="cookieAccept">Accept All</button></div></div></div>
+    <div class="top-banner" id="topBanner"><div class="banner-container"><div class="banner-content"><span class="banner-text">Need Remote Support? &#9658;</span><a target="_blank" rel="noopener noreferrer" href="https://ticket.ghosxt.com/" class="banner-btn"><i class="fi fi-rs-ticket-alt"></i><span>Visit Client Portal</span></a></div></div></div>
+    <nav class="navbar" aria-label="Main navigation">
+      <div class="navbar-container">
+        <div class="navbar-left"><a href="/" class="navbar-logo"><img fetchpriority="high" loading="eager" src="../assets/img/ghosxt-logo-160.webp" alt="Ghosxt logo" width="48" height="48" /><span>GHOSXT</span></a></div>
+        <div class="navbar-right">
+          <div class="navbar-menu">
+            <a href="/" class="navbar-link">Home</a>
+            <div class="navbar-dropdown"><a href="/about" class="navbar-link dropdown-trigger">About <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></a><div class="dropdown-menu"><a href="/about" class="dropdown-item">About Ghosxt</a><a href="/ghosxt-cares" class="dropdown-item">Ghosxt Cares</a></div></div>
+            <div class="navbar-dropdown"><a href="/services" class="navbar-link dropdown-trigger">Services <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></a><div class="dropdown-menu"><a href="/services" class="dropdown-item">All Services</a>
+                <a href="/managed-it-services" class="dropdown-item">Managed IT Services</a>
+                <a href="/help-desk-it-support" class="dropdown-item">IT Help Desk &amp; Support</a>
+                <a href="/it-consulting-vcio" class="dropdown-item">IT Consulting &amp; vCIO</a>
+                <a href="/cybersecurity" class="dropdown-item">Cybersecurity</a>
+                <a href="/cloud-services" class="dropdown-item">Cloud Services</a>
+                <a href="/backup-disaster-recovery" class="dropdown-item">Backup &amp; Disaster Recovery</a>
+                <a href="/network-design" class="dropdown-item">Network Design</a>
+                <a href="/website-development" class="dropdown-item">Web Development</a>
+                <a href="/website-development#calculator" class="dropdown-item">Website Pricing</a>
+                <a href="/ctpat" class="dropdown-item">C-TPAT Compliance</a></div></div>
+            <a href="/pricing" class="navbar-link">Pricing</a>
+            <a href="/support" class="navbar-link">Support</a>
+            <a href="/blog/" class="navbar-link">Blog</a>
+            <a href="/contact" class="navbar-link">Contact</a>
+          </div>
+          <button class="navbar-mobile-toggle" id="mobileToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu"><i class="fi fi-rs-burger-menu" aria-hidden="true"></i></button>
+          <div class="navbar-buttons"><a class="navbar-btn navbar-phone" href="tel:+18312040501" aria-label="Call Ghosxt at (831) 204-0501"><i class="fi fi-rs-phone-call" aria-hidden="true"></i><span>(831)&nbsp;204-0501</span></a><a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer" class="navbar-btn btn-demo"><i class="fi fi-rs-calendar-day"></i><span>Book a Call</span></a></div>
+        </div>
+      </div>
+      <div class="navbar-overlay" id="navbarOverlay"></div>
+      <div class="navbar-mobile-menu" id="mobileMenu">
+        <a href="/" class="mobile-link">Home</a>
+        <div class="mobile-accordion"><button class="mobile-accordion-trigger" aria-expanded="false">About <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></button><div class="mobile-accordion-content"><a href="/about" class="mobile-dropdown-item">About Ghosxt</a><a href="/ghosxt-cares" class="mobile-dropdown-item">Ghosxt Cares</a></div></div>
+        <div class="mobile-accordion"><button class="mobile-accordion-trigger" aria-expanded="false">Services <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></button><div class="mobile-accordion-content"><a href="/services" class="mobile-dropdown-item">All Services</a>
+            <a href="/managed-it-services" class="mobile-dropdown-item">Managed IT Services</a>
+            <a href="/help-desk-it-support" class="mobile-dropdown-item">IT Help Desk &amp; Support</a>
+            <a href="/it-consulting-vcio" class="mobile-dropdown-item">IT Consulting &amp; vCIO</a>
+            <a href="/cybersecurity" class="mobile-dropdown-item">Cybersecurity</a>
+            <a href="/cloud-services" class="mobile-dropdown-item">Cloud Services</a>
+            <a href="/backup-disaster-recovery" class="mobile-dropdown-item">Backup &amp; Disaster Recovery</a>
+            <a href="/network-design" class="mobile-dropdown-item">Network Design</a>
+            <a href="/website-development" class="mobile-dropdown-item">Web Development</a>
+            <a href="/website-development#calculator" class="mobile-dropdown-item">Website Pricing</a>
+            <a href="/ctpat" class="mobile-dropdown-item">C-TPAT Compliance</a></div></div>
+        <a href="/pricing" class="mobile-link">Pricing</a>
+        <a href="/support" class="mobile-link">Support</a>
+        <a href="/blog/" class="mobile-link">Blog</a>
+        <a href="/contact" class="mobile-link">Contact</a>
+        <div class="mobile-actions"><a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer" class="mobile-btn btn-demo"><i class="fi fi-rs-calendar-day"></i><span>Book a Call</span></a></div>
+      </div>
+    </nav>
+    <main id="main-content" class="blog-post">
+      <header class="blog-post-header">
+        <div class="container">
+          <nav class="blog-post-breadcrumbs" aria-label="Breadcrumb">
+            <a href="/">Home</a><span class="sep">&rsaquo;</span><a href="/blog/">Blog</a><span class="sep">&rsaquo;</span><span aria-current="page">Exposed RDP: The Open Door Ransomware Gangs Scan For First</span>
+          </nav>
+          <div class="blog-post-meta">
+            <time datetime="2026-08-25">August 25, 2026</time>
+            <span>&middot;</span>
+            <span>6 min read</span>
+            <span>&middot;</span>
+            <span class="blog-card-tag">Cybersecurity</span>
+          </div>
+          <h1>Exposed RDP: The Open Door Ransomware Gangs Scan For First (2026)</h1>
+          <div class="blog-post-author">
+            <strong>Ulises Paiz</strong>, Founder, Ghosxt
+          </div>
+          <div class="author-bio-box">
+            <!-- ghosxt:author-bio -->
+            <img src="../assets/img/ulises.avif" alt="Ulises Paiz" width="56" height="56" loading="lazy" />
+            <p>Ulises Paiz, Founder of Ghosxt, has 10+ years in IT infrastructure and cybersecurity, deep DoD infrastructure experience, and 9 certifications including CySA+, Security+, and AZ-104. Before founding Ghosxt, he served as a Senior Solutions Consultant for the DoD and built security programs for 40+ Central Coast businesses. <a href="/about">More about Ulises &rarr;</a></p>
+          </div>
+        </div>
+      </header>
+      <div class="blog-post-body">
+        <div class="container">
+          <aside class="blog-post-quickfix" aria-label="Summary and what to do">
+            <span class="quickfix-label">TL;DR: Port 3389 open to the internet is one of the fastest and most common ways ransomware gets into a small business. Here's why, and what to use instead.</span>
+            <h2>An open RDP port doesn't wait to be targeted. It gets found, and attacked, automatically.</h2>
+            <ol>
+              <li><strong>Get RDP off the public internet</strong>: no inbound port 3389, full stop.</li>
+              <li><strong>Put remote access behind MFA</strong>, whether that's a VPN, an RD Gateway, or a zero-trust remote tool.</li>
+              <li><strong>Confirm nothing else is exposed</strong> the same way, since RDP is rarely the only forgotten open port.</li>
+            </ol>
+            <p>If you inherited a network you didn't build, or an old "just RDP into the office PC" habit from a remote employee, this is worth checking today, not on the next slow afternoon.</p>
+          </aside>
+
+          <p>We still find it during almost every new-client network review: a firewall rule, sometimes years old, forwarding port 3389 straight to a desktop or server so someone can "just remote in from home." It was set up in an afternoon to solve a real problem, and it has been quietly sitting open ever since. It is also, year after year, one of the most common ways ransomware crews get their first foothold in a small business network.</p>
+
+          <p>RDP itself isn't the villain here. Microsoft's Remote Desktop Protocol is a legitimate, useful tool. The problem is what happens when it answers directly on the open internet instead of sitting behind something that controls who can even attempt to log in.</p>
+
+          <h2>1. Why attackers love a login prompt more than a vulnerability</h2>
+          <p>Most cyberattacks people picture involve some clever exploit: a zero-day, a crafted payload, a bypass of some defense. Exposed RDP doesn't need any of that. It hands an attacker exactly what a legitimate remote employee would use, a login screen, reachable from anywhere. From there it's a matter of guessing or buying the right username and password, not defeating a technical control.</p>
+          <p>That password doesn't even need to be weak. Credentials leaked in an unrelated data breach, reused across a personal and a work account, or picked up through a completely separate phishing email are enough. Once one working set of credentials lands on that login prompt, the attacker is in as a real, authenticated user, with whatever access that account has, and no antivirus alert fires because nothing "malicious" happened yet. The ransomware deployment, data theft, and lateral movement all come after, once they're already inside.</p>
+
+          <h2>2. How attackers find it without ever targeting you by name</h2>
+          <p>Nobody has to research your business to find an exposed RDP port. Internet-wide scanning services like Shodan and Censys continuously probe every public IP address and catalog what answers on which port, port 3389 included, and criminal groups either run the same kind of scans themselves or simply buy access to lists that are already built. The moment your firewall starts forwarding that port, it's a matter of time, often not much time, before it shows up in an automated brute-force or credential-stuffing queue running around the clock.</p>
+          <p>This is the same "smash and grab at internet scale" pattern behind <a href="/blog/password-spray-attacks-small-business-2026">password spray attacks</a> and the internet-facing appliance flaws we've covered in <a href="/blog/vpn-edge-device-flaws-actively-exploited-smb-june-2026">VPN and edge device advisories</a>: attackers aren't picking your business, they're scanning everyone and taking whatever answers. Small businesses aren't skipped for being small; they're an easier, faster win precisely because that RDP port so often has no MFA and a password that hasn't changed in years.</p>
+
+          <h2>3. What to use instead of a bare RDP port</h2>
+          <p>The fix isn't "never use remote desktop again," it's putting something in front of it that an attacker can't simply log into blind. In order of preference: a modern zero-trust remote access or RMM tool that never opens an inbound port at all is the cleanest option, since there's nothing on the internet to scan for. If your team genuinely needs traditional RDP, put it behind a business VPN with MFA enforced, so a stolen password alone isn't enough, and keep that VPN appliance itself patched and current; VPN and firewall edge devices have their own history of actively exploited vulnerabilities. A properly configured RD Gateway with Network Level Authentication and account lockout policies is the minimum bar if neither of those is available yet.</p>
+          <p>Whichever route you take, don't stop at RDP. The same review that finds an open 3389 port often turns up other forgotten exposures: an old file server admin panel, a printer's web interface, a test VPN that was never decommissioned. Our <a href="/blog/attack-surface-management-small-business-2026">attack surface management guide</a> covers how to find everything your network exposes to the internet, not just the one port everyone's heard about.</p>
+
+          <h2>Where to start this week</h2>
+          <p>Check your firewall's port-forwarding rules for anything pointing to 3389, or to any remote desktop or admin port, today; this one is free and takes minutes, not an afternoon. This week, move whoever's still using bare RDP onto MFA-backed access, and if that account doesn't already have <a href="/blog/multi-factor-authentication-small-business-2026">multi-factor authentication</a> turned on, add it as part of the same change. Longer term, this is exactly what a <a href="/blog/zero-trust-security-small-business-2026">zero-trust</a> approach to remote access is built to prevent: nothing gets in on identity alone, and nothing sits open just because it's convenient.</p>
+          <p>Ransomware groups still lean on exposed RDP for one simple reason: it keeps working. It's one of the few things on this list that's genuinely free to fix and doesn't require new budget, just an hour with your firewall rules, or a call to whoever manages them.</p>
+
+          <h2>Frequently asked questions</h2>
+
+          <h3>Why is exposed RDP so dangerous for a small business?</h3>
+          <p>Because it gives an attacker a direct login prompt to a machine on your network from anywhere on the internet, no phishing email required. A guessed or purchased set of working credentials logs them in as a real user. It's remained one of the most common ransomware entry points for years because it skips the need for a more sophisticated exploit entirely.</p>
+
+          <h3>How do attackers find open RDP ports?</h3>
+          <p>Internet-wide scanning services like Shodan and Censys index every device answering on port 3389, and criminal groups buy access to those results or run their own scans. Once your RDP port is found, it's added to an automated brute-force and credential-stuffing queue running continuously.</p>
+
+          <h3>Is a VPN enough to make RDP safe?</h3>
+          <p>It's a major improvement, but only if the VPN requires MFA, stays patched, and isn't itself left exposed the way RDP was. Business VPN appliances have their own history of actively exploited vulnerabilities. A VPN with MFA, or a zero-trust remote access tool that never opens an inbound port, is the safer pattern.</p>
+
+          <h3>How do I know if my business has exposed RDP right now?</h3>
+          <p>An external scan of your public IP addresses will show it, and it's one of the standard checks in an attack surface review or penetration test. If you don't know your business's public IPs or haven't had an external scan run in the past year, that's the gap to close first.</p>
+
+          <div class="blog-post-cta">
+            <h3>Not sure what's actually exposed on your network?</h3>
+            <p>30 minutes with an engineer with DoD infrastructure experience. We'll scan what your business exposes to the internet, show you plainly what needs to close, and hand you a prioritized fix list. No jargon, no obligation.</p>
+            <a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer">
+              <i class="fi fi-rs-calendar-day" aria-hidden="true"></i>
+              Book your free assessment
+            </a>
+          </div>
+
+          <p style="margin-top: 1.5rem; font-size: 0.95rem; color: rgba(0,0,0,0.7);">
+            Prefer to talk first? Email <a href="mailto:sales@ghosxt.com">sales@ghosxt.com</a> or call <a href="tel:+18312040501">(831) 204-0501</a>.
+          </p>
+        </div>
+      </div>
+    </main>
+    <footer class="footer" id="footerSection">
+      <div class="footer-container">
+        <div class="footer-brand-row">
+          <div class="footer-brand">
+            <img
+              src="../assets/img/ghosxt-logo-160.webp"
+              alt="Ghosxt logo"
+              width="80"
+              height="80"
+              loading="lazy"
+            />
+            <div class="footer-brand-text">
+              <span class="footer-brand-name">GHOSXT</span>
+              <span class="footer-brand-tagline"
+                >Government-grade IT for small business.</span
+              >
+            </div>
+          </div>
+          <div class="footer-cta-block">
+            <a
+              href="https://calendly.com/ulises-ghosxt"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="footer-cta-btn"
+            >
+              <i class="fi fi-rs-calendar-day" aria-hidden="true"></i>
+              Schedule Free Assessment
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-grid">
+          <div class="footer-column">
+            <h3 class="footer-column-title">Company</h3>
+            <ul class="footer-links">
+              <li><a href="/">Home</a></li>
+              <li><a href="/about">About</a></li>
+              <li><a href="/services">Services</a></li>
+              <li><a href="/pricing">Pricing</a></li>
+              <li><a href="/website-development">Website Development</a></li>
+              <li><a href="/contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-column-title">Services</h3>
+            <ul class="footer-links">
+              <li><a href="/managed-it-services">Managed IT Services</a></li>
+              <li><a href="/help-desk-it-support">IT Help Desk &amp; Support</a></li>
+              <li><a href="/it-consulting-vcio">IT Consulting &amp; vCIO</a></li>
+              <li><a href="/cybersecurity">Cybersecurity</a></li>
+              <li><a href="/cloud-services">Cloud Services</a></li>
+              <li><a href="/backup-disaster-recovery">Backup &amp; Disaster Recovery</a></li>
+              <li><a href="/network-design">Network Design</a></li>
+              <li><a href="/website-development">Web Development</a></li>
+              <li><a href="/ctpat">C-TPAT Compliance</a></li>
+              <li><a href="/trucking-it-services">Trucking &amp; Logistics IT</a></li>
+              <li><a href="/agriculture-it-services">Agriculture &amp; Agribusiness IT</a></li>
+              <li><a href="/manufacturing-it-services">Manufacturing &amp; Industrial IT</a></li>
+              <li><a href="/professional-services-it">SMB Office &amp; Professional Services IT</a></li>
+              <li><a href="/healthcare-it-services">Healthcare &amp; Medical IT</a></li>
+              <li><a href="/property-management-it-services">Property Management IT</a></li>
+              <li><a href="/engineering-it-services">Engineering &amp; Architecture IT</a></li>
+              <li><a href="/hospitality-it-services">Hospitality &amp; Restaurants IT</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-column-title">Resources</h3>
+            <ul class="footer-links">
+              <li><a href="/support">Get Support</a></li>
+              <li><a href="/privacy-policy">Privacy Policy</a></li>
+              <li><a href="https://ticket.ghosxt.com/" target="_blank" rel="noopener noreferrer">Client Portal</a></li>
+              <li><a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer">Free IT Assessment</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-column-title">Connect</h3>
+            <ul class="footer-links footer-social-links">
+              <li><a href="https://www.linkedin.com/company/ghosxt/" target="_blank" rel="noopener noreferrer"><svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.063 2.063 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>LinkedIn</a></li>
+              <li><a href="https://www.facebook.com/GhosxtTech" target="_blank" rel="noopener noreferrer"><svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg>Facebook</a></li>
+              <li><a href="https://www.instagram.com/ghosxttech/" target="_blank" rel="noopener noreferrer"><svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>Instagram</a></li>
+              <li><a href="mailto:sales@ghosxt.com"><i class="fi fi-rs-envelope" aria-hidden="true"></i> sales@ghosxt.com</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <div class="footer-bottom">
+          <p class="footer-copyright">&copy; 2026 Ghosxt. All rights reserved. Built by an engineer from the federal contracting world.</p>
+          <div class="footer-bottom-links">
+            <a href="/privacy-policy">Privacy Policy</a>
+            <span aria-hidden="true">&middot;</span>
+            <a href="/support">Support</a>
+            <span aria-hidden="true">&middot;</span>
+            <a href="https://ticket.ghosxt.com/" target="_blank" rel="noopener noreferrer">Client Portal</a>
+          </div>
+        </div>
+
+        <div class="service-areas-footer">
+          <h3>Service Areas</h3>
+          <ul>
+            <li><a href="/salinas">Salinas</a></li>
+            <li><a href="/monterey">Monterey</a></li>
+            <li><a href="/watsonville">Watsonville</a></li>
+            <li><a href="/hollister">Hollister</a></li>
+            <li><a href="/santa-cruz">Santa Cruz</a></li>
+            <li><a href="/gilroy">Gilroy</a></li>
+            <li><a href="/san-jose">San Jose</a></li>
+            <li><a href="/pacific-grove">Pacific Grove</a></li>
+            <li><a href="/carmel">Carmel</a></li>
+            <li><a href="/seaside">Seaside</a></li>
+            <li><a href="/marina">Marina</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="../assets/js/main.min.js?v=2026-07-02a" defer></script>
+    <!-- ghosxt:mobile-cta-bar -->
+    <div class="mobile-cta-bar" aria-label="Quick contact">
+      <a class="mcta-primary" href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer">Book free assessment</a>
+      <a class="mcta-secondary" href="tel:+18312040501">Call (831) 204-0501</a>
+    </div>
+  </body>
+</html>
