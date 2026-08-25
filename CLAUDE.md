@@ -33,6 +33,10 @@ No CSS, font, color, or layout changes. No em dashes in anything written. No new
 - D8 AggregateRating: skip; keep the visible "26 Google reviews" text only.
 - D9 At-a-glance: extend the key-facts block to all root pages missing it, using the existing key-facts markup and styles.
 
+## PHASE 5 AUTHORIZATION (from Uli's kickoff instructions, confirmed by "Continue")
+
+The no-new-pages house rule is lifted ONLY for the specific P2 drafts named in the approved plan: (1) a Google Workspace and Mac managed IT vertical page, (2) an "IT for firms whose customers audit them" vertical page, (3) a who-you-talk-to FAQ on every service and vertical page, (4) the pricing-page onboarding scope note (done in Phase 4), (5) a case-study skeleton at /case-studies with a do-not-publish banner, (6) the "How did you find us?" intake field. All drafts: everything uncertain tagged [VERIFY], nothing linked into nav, new pages noindexed until Uli approves launch. Launch prerequisites per draft page: remove noindex, run generate-og-images.py, add to llms.txt and nav, regenerate sitemap.
+
 ## PAGE REPORT TEMPLATE
 
 Each page audit report is written to `/audit/pages/<route-slug>.md` and follows this structure:
