@@ -89,6 +89,8 @@ Q: What size business is this designed for?
 A: There's no hard size limit. We support businesses ranging from tiny teams on the Tiny Team Managed Security plan up through 50+ employee operations on the per-user tiers. The right fit is less about headcount and more about whether you've outgrown the part-time-IT-cousin arrangement, lost your one IT person, or need your stack to operate at government-grade security standards. We serve clients on-site across Monterey County and the Central Coast, and remotely across the United States.
 Q: Are you actually available after hours?
 A: Yes for emergencies. Our managed detection and response SOC monitors endpoints around the clock and engages us automatically on a critical event. Direct after-hours contact for client escalations is included; routine helpdesk runs business hours Pacific.
+Q: Who will I actually talk to?
+A: Ulises Paiz, the owner, directly. There is no tier-1 queue and no offshore call center: the engineer who knows your environment answers the phone, and critical incidents carry our 4-hour notification commitment.
 ## Ready to stop running IT on hope?
 Book a 30-minute free assessment, or send us a note. Either way, you walk away with a clearer picture of where your IT stands and what to fix first.
 
@@ -151,6 +153,8 @@ Q: Do I have to buy full managed IT to get the help desk?
 A: The help desk is included in every Ghosxt managed IT plan, because support works best when the same team also maintains the systems behind it. If you only need responsive support today, start with a free assessment and we will recommend the lightest plan that covers your team. There is even a Tiny Team option for very small businesses.
 Q: What kinds of problems does the help desk handle?
 A: Day-to-day end-user support: password and account lockouts, Microsoft 365 and Outlook issues, printers and scanners, new-hire and offboarding, software installs, VPN and Wi-Fi trouble, shared-drive and permission questions, slow or failing computers, and phone or mobile device setup. Anything bigger becomes a tracked project rather than a help desk ticket.
+Q: Who will I actually talk to?
+A: Ulises Paiz, the owner, directly. There is no tier-1 queue and no offshore call center: the engineer who knows your environment answers the phone, and critical incidents carry our 4-hour notification commitment.
 ## Give your team IT support they'll actually use
 Book a 30-minute free assessment, or send us a note. Either way, you walk away knowing where your support gaps are and what to fix first.
 
@@ -209,6 +213,8 @@ Q: Do you help with compliance like HIPAA, CMMC, or SOC 2?
 A: Yes. As an engineer with DoD infrastructure experience, compliance strategy is core to the consulting work: HIPAA for medical practices, NIST 800-171 and CMMC for defense contractors, SOC 2 readiness for SaaS and technology companies, and PCI for businesses that take cards. We translate the framework into a prioritized plan and the documentation an assessor expects.
 Q: What size business needs a vCIO?
 A: Typically businesses from about 10 to 100 employees that depend on technology but are too small to justify a full-time IT director or CIO. If technology decisions are being made by whoever is least busy, if your IT spend feels random, or if a compliance or growth milestone is forcing the issue, a vCIO is the right-sized answer.
+Q: Who will I actually talk to?
+A: Ulises Paiz, the owner, directly. There is no tier-1 queue and no offshore call center: the engineer who knows your environment answers the phone, and critical incidents carry our 4-hour notification commitment.
 ## Put a plan behind your technology
 Book a 30-minute free assessment, or send us a note. Either way, you walk away with a clearer picture of where your IT stands and what to prioritize next.
 
@@ -320,6 +326,8 @@ Q: How fast can you respond to a security incident?
 A: You reach the engineer directly, and critical incidents carry our 4-hour notification commitment. On-site response in our local service area is scheduled to fit your business. The faster you reach us, the more options we have, so do not wait to "see if it gets worse" before calling.
 Q: Will you work with our existing IT team or vendor?
 A: Yes. We frequently come in as a cybersecurity-focused partner alongside an existing IT generalist or in-house team. We can also lead the cybersecurity work and coordinate with whoever owns the rest of the stack.
+Q: Who will I actually talk to?
+A: Ulises Paiz, the owner, directly. There is no tier-1 queue and no offshore call center: the engineer who knows your environment answers the phone, and critical incidents carry our 4-hour notification commitment.
 
 ## https://ghosxt.com/cloud-services
 
@@ -382,6 +390,8 @@ Q: Do you handle SharePoint and Teams structure, or just email?
 A: All of it. SharePoint information architecture, Teams governance, sharing policies, retention, and external sharing controls. Most M365 deployments collapse into chaos because nobody designed the SharePoint structure. We design it.
 Q: Can you support remote teams and multi-state employees?
 A: Yes. We deliver cloud services to clients across the United States, fully remotely. Identity, device management, and security policies follow the user, not the office. California-based clients add on-site work where needed.
+Q: Who will I actually talk to?
+A: Ulises Paiz, the owner, directly. There is no tier-1 queue and no offshore call center: the engineer who knows your environment answers the phone, and critical incidents carry our 4-hour notification commitment.
 ## Get your Microsoft 365 tenant audited
 30 minutes. We will walk through your tenant with you, score it against the Microsoft baselines we use for our own clients, and leave you with a written list of fixes in priority order.
 
@@ -451,6 +461,8 @@ Q: Can you recover us from a ransomware attack without paying?
 A: If our immutable backups are in place, yes. The point of immutable cloud-isolated backups is that the attacker cannot reach them with stolen domain admin credentials. We rebuild your endpoints and servers from clean media, restore data from the last known-good immutable snapshot, and bring you back online without funding the attack.
 Q: Do you back up Microsoft 365?
 A: Yes. Microsoft does not. Their retention is not a backup. We deploy a third-party M365 backup that protects Exchange Online mailboxes, SharePoint, OneDrive, and Teams to an immutable cloud target with point-in-time recovery.
+Q: Who will I actually talk to?
+A: Ulises Paiz, the owner, directly. There is no tier-1 queue and no offshore call center: the engineer who knows your environment answers the phone, and critical incidents carry our 4-hour notification commitment.
 ## Get a real backup, not just a hope
 Book a 30-minute free assessment, or send us a note. We will tell you straight whether what you have today actually works.
 
@@ -516,6 +528,8 @@ Q: Can you handle multi-site networks?
 A: Yes. Site-to-site IPsec VPN, SD-WAN, and full hub-and-spoke designs depending on the use case. Common patterns include a Salinas headquarters connected to a Watsonville cooler and a Hollister yard, with remote workers tunneling in from across the state or the country.
 Q: Do we get a network diagram and documentation?
 A: Yes. Every deployment ends with a written runbook, a current network diagram, IP scheme documentation, switch and firewall configuration backups, and credentials handed over to you in your password manager. You own all of it. You are not locked to us.
+Q: Who will I actually talk to?
+A: Ulises Paiz, the owner, directly. There is no tier-1 queue and no offshore call center: the engineer who knows your environment answers the phone, and critical incidents carry our 4-hour notification commitment.
 ## Get your network mapped and graded
 Book a 30-minute free assessment, or send us a note. You walk away with a written network report and a priority-ordered fix list, on the house.
 
@@ -581,6 +595,8 @@ Q: Do you handle domain, hosting, and business email setup?
 A: Yes. We register or transfer your domain, set up fast managed hosting with SSL, and configure professional business email on your domain (Microsoft 365 or Google Workspace), including the SPF, DKIM, and DMARC records that keep your email out of spam folders. Everything stays in accounts you own.
 Q: Will my website be mobile-friendly and fast?
 A: Yes, every site we build is mobile-first and hand-coded without heavy page builders, then tested against Google's Core Web Vitals so your main content loads in under 2.5 seconds on a phone. Speed and mobile experience are ranking factors, so this is treated as a requirement on every build, not an add-on. Curious what a professional build costs? See our 2026 website pricing guide with real numbers.
+Q: Who will I actually talk to?
+A: Ulises Paiz, the owner, directly. There is no tier-1 queue and no offshore call center: the engineer who knows your environment answers the phone, and critical incidents carry our 4-hour notification commitment.
 
 ## https://ghosxt.com/web-design-salinas
 
@@ -1152,6 +1168,8 @@ Absolutely. If CBP identified cybersecurity deficiencies during a validation, we
 Often, yes. C-TPAT's cybersecurity requirements (risk assessments, access controls, security awareness training, incident response planning) draw on the same fundamentals as other common security frameworks, so the work we do for C-TPAT frequently supports broader compliance goals as well.
 ### What makes Ghosxt different from a general IT consultant for C-TPAT work?
 Most IT consultants approach C-TPAT like a checklist. Ghosxt is led by an engineer with prior DoD and federal contractor infrastructure experience. We know the difference between documentation that looks good on paper and controls that actually work, and CBP validators do too.
+### Who will I actually talk to?
+Ulises Paiz, the owner, directly. There is no tier-1 queue and no offshore call center: the engineer who knows your environment answers the phone, and critical incidents carry our 4-hour notification commitment.
 ## Don't Wait for a Failed Validation.
 Whether you're applying for C-TPAT membership, preparing for a validation visit, or recovering from a deficiency finding, Ghosxt gets your cybersecurity program where it needs to be.
 
@@ -1202,6 +1220,8 @@ Q: Do you perform the official CMMC assessment?
 A: No. The formal Level 2 certification is performed by an accredited C3PAO, and a credible provider should not both prepare you and certify you. What we do is everything that gets you ready to pass: gap assessment, remediation, control implementation, and documentation, so the assessment is a confirmation, not a gamble.
 Q: How long does CMMC readiness take?
 A: It depends on your starting point and scope, but a focused small-business effort is typically a few months. The fastest path is to reduce scope: isolating CUI to a small, well-controlled enclave rather than securing your entire environment to the same level. We design for that from day one.
+Q: Who will I actually talk to?
+A: Ulises Paiz, the owner, directly. There is no tier-1 queue and no offshore call center: the engineer who knows your environment answers the phone, and critical incidents carry our 4-hour notification commitment.
 ## Protect your defense contracts before the deadline does
 Book a free CMMC assessment, or call (831) 204-0501. The earlier you start, the cheaper and calmer readiness is, and the less likely a compliance gap costs you a contract.
 
@@ -1249,6 +1269,8 @@ Q: What is a Security Risk Analysis and do we need one?
 A: A Security Risk Analysis (SRA) is the documented, periodic assessment of risks to your ePHI that the HIPAA Security Rule explicitly requires, and it is the single most commonly missing document when a practice is investigated. We perform it, document it, and turn the findings into a prioritized remediation plan, then keep it current.
 Q: What happens if we have a breach?
 A: We help you respond: contain it, determine what ePHI was affected, support the breach-notification obligations to patients and OCR, and document everything. Better, we work to prevent it: the same managed detection and response with a 24/7 SOC, MFA, encryption, and email security that stop most breaches before they become reportable. See emergency IT & ransomware recovery.
+Q: Who will I actually talk to?
+A: Ulises Paiz, the owner, directly. There is no tier-1 queue and no offshore call center: the engineer who knows your environment answers the phone, and critical incidents carry our 4-hour notification commitment.
 ## Make HIPAA a solved problem, not a looming risk
 Book a free HIPAA assessment, or call (831) 204-0501. You will leave knowing exactly where your practice stands and what to fix first.
 
@@ -1296,6 +1318,8 @@ Q: Isn't my POS vendor handling PCI for me?
 A: Partly, and that is a dangerous assumption to leave unchecked. A modern POS or payment terminal handles part of the burden, but your network, Wi-Fi, access controls, and staff practices are still in scope and still your responsibility. We map exactly where your provider's responsibility ends and yours begins, then close your side.
 Q: What if we have a card-data breach?
 A: A card breach can trigger forensic investigation, fines, and mandatory notification, expensive and reputation-damaging. We help you respond and, far more importantly, prevent it: segmentation, secure POS, MFA, and monitoring that stop the intrusions that lead to card theft. See cybersecurity and emergency IT.
+Q: Who will I actually talk to?
+A: Ulises Paiz, the owner, directly. There is no tier-1 queue and no offshore call center: the engineer who knows your environment answers the phone, and critical incidents carry our 4-hour notification commitment.
 ## Take cards with confidence, not crossed fingers
 Book a free PCI assessment, or call (831) 204-0501. You will leave knowing your real scope, the right SAQ, and exactly what to fix first.
 
@@ -1343,6 +1367,8 @@ Q: Can a claim really be denied over a questionnaire answer?
 A: Yes. The application is a representation of fact, and many policies carry a failure-to-maintain exclusion: if post-incident forensics contradict a control you attested to, the claim is at risk. That is why we keep controls enforced and evidence current between renewals, not just in the week the questionnaire is due.
 Q: What does getting ready actually cost?
 A: Less than most owners expect, because the usual gaps are configuration on tools you already own rather than new licenses. Ongoing readiness is built into our managed plans, and our pricing is published, no call required. The free assessment sizes your actual gap before you spend anything.
+Q: Who will I actually talk to?
+A: Ulises Paiz, the owner, directly. There is no tier-1 queue and no offshore call center: the engineer who knows your environment answers the phone, and critical incidents carry our 4-hour notification commitment.
 ## Walk into your renewal with clean answers
 Book a free cyber insurance assessment, or call (831) 204-0501. You will leave knowing which questionnaire answers are safe, which are not, and exactly what to fix first.
 
@@ -1391,6 +1417,8 @@ Q: Can you bring cybersecurity and compliance expertise our team doesn't have?
 A: Yes. This is where co-managed IT pays for itself. As an engineer with DoD infrastructure experience, we add the managed detection and response, identity hardening, cloud backup, and compliance documentation (HIPAA, CMMC, PCI, cyber-insurance) that a generalist internal team rarely has time or specialization to build.
 Q: How does co-managed IT pricing work?
 A: It is scoped to exactly the role we play (help-desk overflow, after-hours coverage, security, tooling, or project surge) rather than a blanket per-user fee for everything. Pricing is transparent and agreed upfront. Start with a free assessment and we will propose a clear split of responsibilities and cost.
+Q: Who will I actually talk to?
+A: Ulises Paiz, the owner, directly. There is no tier-1 queue and no offshore call center: the engineer who knows your environment answers the phone, and critical incidents carry our 4-hour notification commitment.
 ## Make your IT team stronger, not redundant
 Book a free assessment, or send a note. We will show you exactly where we would help and what it would cost, no pressure, no replacing your people.
 
@@ -1442,6 +1470,8 @@ Q: Do you work with our cyber-insurance carrier?
 A: Yes. We document the incident, scope, and remediation the way carriers and breach counsel require, coordinate with their incident-response process, and produce the report you need for the claim. If you are unsure whether to notify your carrier first, call us and we will walk you through it.
 Q: How do we keep this from happening again?
 A: Recovery is step one; hardening is step two. After you are back online we close the door the attacker came through (managed detection and response with 24/7 monitoring, phishing-resistant MFA, cloud backup, and segmentation) so the same incident cannot repeat. See cybersecurity and backup and disaster recovery.
+Q: Who will I actually talk to?
+A: Ulises Paiz, the owner, directly. There is no tier-1 queue and no offshore call center: the engineer who knows your environment answers the phone, and critical incidents carry our 4-hour notification commitment.
 ## Don't face it alone: call now
 An active ransomware or IT emergency is not the time to read more pages. Call (831) 204-0501 and get a senior engineer working the problem directly.
 
@@ -1479,6 +1509,8 @@ Q: What's included in managed IT that break-fix isn't?
 A: The proactive half: 24/7 monitoring, patching, cloud backup, managed detection and response, a help desk you can call anytime, and someone who actually knows your environment. Break-fix only shows up after something is already broken. It is reactive by design, with no incentive to prevent the next problem.
 Q: How is managed IT priced at Ghosxt?
 A: Transparently and upfront. We publish our plans (per-user managed tiers plus a flat-rate Tiny Team option) so you can see the cost before you ever talk to us. See pricing for the current plans.
+Q: Who will I actually talk to?
+A: Ulises Paiz, the owner, directly. There is no tier-1 queue and no offshore call center: the engineer who knows your environment answers the phone, and critical incidents carry our 4-hour notification commitment.
 ## Get a straight answer about what your business needs
 Book a free assessment, or see exactly what managed IT costs. Either way, you will leave knowing which model fits, with no jargon and no pressure.
 
@@ -1669,6 +1701,8 @@ Q: Do you work with produce ERPs like Famous, Silver Creek, or Produce Pro?
 A: Yes. We do not resell the ERP, but we run the infrastructure around it: server uptime, backup and restore, user access management, single sign-on, integration with scale systems and shipping label printers, and the network plumbing that keeps the pack-house and the office in sync when one connection drops.
 Q: We export to Mexico and Canada. Can you help with cross-border traceability?
 A: Yes. Export traceability is mostly a documentation problem: GTIN-encoded PTI labels, lot codes that survive a recall test, supplier records, and a paper trail that holds up if a foreign buyer or auditor asks. We make sure the systems that produce those records are reliable, the records are backed up where the regulator expects them, and that an exporter audit does not turn into a fire drill.
+Q: Who will I actually talk to?
+A: Ulises Paiz, the owner, directly. There is no tier-1 queue and no offshore call center: the engineer who knows your environment answers the phone, and critical incidents carry our 4-hour notification commitment.
 
 ## https://ghosxt.com/trucking-it-services
 
@@ -1751,6 +1785,8 @@ Q: We have drivers across multiple states. Can you support remote endpoints?
 A: Yes. Driver laptops and tablets are some of the trickiest endpoints in any environment because they live offline often, connect to shared cellular networks, and get used by different people. We deploy MDM, managed detection and response, forced disk encryption, and conditional access so a lost or stolen device is contained, not catastrophic.
 Q: We had a wire-fraud attempt against accounts payable. Can you prevent this?
 A: Yes. Wire fraud against trucking AP is one of the most common attacks we see. The pattern is consistent: an attacker compromises an inbox, installs a hidden forwarding rule, watches for an invoice, then sends a lookalike email asking for the wire to go to a new account. We block the pattern at multiple layers: MFA on every mailbox, conditional access rules, automated detection of forwarding rules, banking process changes (out-of-band verification), and ongoing security awareness training for AP staff.
+Q: Who will I actually talk to?
+A: Ulises Paiz, the owner, directly. There is no tier-1 queue and no offshore call center: the engineer who knows your environment answers the phone, and critical incidents carry our 4-hour notification commitment.
 
 ## https://ghosxt.com/manufacturing-it-services
 
@@ -1838,6 +1874,8 @@ Q: We had a ransomware scare on the shop floor. How do we segment OT from IT?
 A: Start with a real inventory: every device on the shop floor, what it connects to, what it actually needs to talk to. From there it is a network architecture project: a dedicated OT VLAN, a firewall with explicit allow rules between OT and IT, no broad RDP or SMB across the boundary, and isolated management for the OT side. Most shops we work with did not have an OT VLAN at all when we started. That is the first fix. The second is monitoring, because you cannot defend what you cannot see.
 Q: We make medical devices. What does FDA 21 CFR Part 11 mean for our IT?
 A: Part 11 is the FDA rule for electronic records and electronic signatures in regulated activities. The IT side is access control, audit trail integrity, system validation documentation, time-synced logs, and a retention policy that survives an FDA inspector asking for a record from four years ago. For small medical device manufacturers we layer those requirements into the ERP, QMS, document control, and email systems, and we keep the validation paper trail current as systems change.
+Q: Who will I actually talk to?
+A: Ulises Paiz, the owner, directly. There is no tier-1 queue and no offshore call center: the engineer who knows your environment answers the phone, and critical incidents carry our 4-hour notification commitment.
 
 ## https://ghosxt.com/healthcare-it-services
 
@@ -1925,6 +1963,8 @@ Q: We are a small practice (3 providers). Is full HIPAA compliance really requir
 A: Yes. HIPAA does not have a small-practice exemption. The Security Rule applies the same way to a three-provider practice as to a hospital, and the OCR fines on small practices have not been theoretical. What does scale with practice size is the level of effort: a three-provider practice does not need a CISO, but it does need a Security Risk Analysis, a written set of policies and procedures, encryption everywhere, MFA everywhere, training, and a documented incident response posture.
 Q: We do telehealth. What changes for the IT side?
 A: Telehealth widens your environment by every endpoint that connects to it: home laptops, personal phones, vendor platforms, and the network paths between them. The IT side is endpoint hygiene on whatever devices providers use, MFA on the telehealth platform, a BAA with the platform vendor, encrypted recordings (or no recordings if your policy says so), and a documented patient-consent workflow that captures the right disclosures. The HIPAA enforcement discretion that covered casual telehealth tools during the public health emergency is gone; the standard rules apply now.
+Q: Who will I actually talk to?
+A: Ulises Paiz, the owner, directly. There is no tier-1 queue and no offshore call center: the engineer who knows your environment answers the phone, and critical incidents carry our 4-hour notification commitment.
 
 ## https://ghosxt.com/hospitality-it-services
 
@@ -2014,6 +2054,8 @@ Q: We're seasonal with high turnover. Can you handle fast onboarding and offboar
 A: That is exactly what identity-first IT is for. Every person gets a named account and a named POS login, never a shared server PIN that the whole shift knows. Roles are scoped so a seasonal host or tasting-room pourer can do their job and nothing more, and company tablets and phones are under mobile device management so a lost device can be wiped. When a seasonal hire leaves, we disable one named account and the access is gone the same day, instead of changing a password twenty people memorized. This protects your audit trail, your PCI posture, and your guest data through every summer and harvest surge.
 Q: Is a small restaurant or winery really a target for ransomware?
 A: Yes. Hospitality is one of the most-attacked industries because downtime turns into lost revenue instantly and a lot of card data flows through it. You do not have to be a big resort. The attacks that took down major hotel and casino operators in recent years started with a convincing phone call to a help desk and a reset password, and that same social-engineering playbook scales down to a busy independent restaurant or a Carmel Valley tasting room. The defenses are the same proven controls everywhere: MFA on every account, managed detection and response on every device, monitored email, a verify-by-phone rule for money and passwords, and a tested backup so a bad night is a restore instead of a ransom.
+Q: Who will I actually talk to?
+A: Ulises Paiz, the owner, directly. There is no tier-1 queue and no offshore call center: the engineer who knows your environment answers the phone, and critical incidents carry our 4-hour notification commitment.
 
 ## https://ghosxt.com/professional-services-it
 
@@ -2102,6 +2144,8 @@ Q: Our cyber-insurance renewal added 30 questions. Can you help us answer them?
 A: Yes. Cyber-insurance underwriting has gotten sharper across every carrier and the questionnaire is now the cheapest way for them to set your rate. We answer the technical sections (MFA coverage, managed detection and response deployment, backup resilience, mean time to patch, incident response plan, vendor risk management, privileged access) with a real number rather than a checkbox, and we close the gaps in advance so the renewal lands at the rate you want.
 Q: A partner is leaving and we need to lock them out fast. What does that look like?
 A: Same-day offboarding done right is a fifteen-minute procedure if the systems are set up for it. We script the revocations: email and SSO disabled at a specific time, MFA tokens revoked, VPN and conditional-access exceptions removed, mailbox forwarded to a designated partner for client continuity, mailbox put on legal hold for the retention window, and any matter-system access logged for the audit. If you do not have those scripts ready when a partner walks out, the right time to build them is before the next one does.
+Q: Who will I actually talk to?
+A: Ulises Paiz, the owner, directly. There is no tier-1 queue and no offshore call center: the engineer who knows your environment answers the phone, and critical incidents carry our 4-hour notification commitment.
 
 ## https://ghosxt.com/property-management-it-services
 
@@ -2191,6 +2235,8 @@ Q: We had a maintenance vendor get phished and forward an invoice with new bank 
 A: This is the most common attack we respond to in property management. The pattern is reliable: a vendor mailbox gets compromised, the attacker quietly watches an invoice cycle, then sends a lookalike message with new wire instructions. We harden the AP layer with MFA on every mailbox, deploy real-time detection for inbox forwarding rules, configure DMARC and SPF properly so spoofed vendor domains are easier to block, and rewrite the AP confirmation process so a vendor routing change cannot land without an out-of-band phone call to a known number at the vendor.
 Q: A property manager just gave notice. They had access to twelve buildings. What does cleanup look like?
 A: Same-day if the system is set up for it. We script the revocations against the property management platform, Microsoft 365, every vendor portal the manager had access to, the resident-facing tools, and the door-access system if you run smart locks at the properties. Mailbox goes on legal hold for the retention window. The manager is locked out as part of the payroll exit process. Without that scripting, a multi-building cleanup is the kind of two-week project nobody does well, and that is where the data leaks happen.
+Q: Who will I actually talk to?
+A: Ulises Paiz, the owner, directly. There is no tier-1 queue and no offshore call center: the engineer who knows your environment answers the phone, and critical incidents carry our 4-hour notification commitment.
 
 ## https://ghosxt.com/engineering-it-services
 
@@ -2292,6 +2338,8 @@ Q: We are submitting on a federal infrastructure project that mentions NIST 800-
 A: It depends on whether the contract gives you access to Controlled Unclassified Information (CUI). Federal civil engineering work for Army Corps, NAVFAC, FAA, or BLM increasingly includes flow-down clauses that require NIST SP 800-171 controls (and CMMC Level 1 or 2 by phased timeline). If you only ever see Federal Contract Information (FCI) without CUI, Level 1 self-assessment is usually enough. If CUI is involved, you are looking at Level 2. We help engineering firms read the actual clauses in the bid package, scope the boundary, and stand up the controls before the contract starts, not after.
 Q: How do you back up a 4 TB BIM or PDM vault without saturating our internet for two days?
 A: We do not full-copy. The first seed can be staged off-network (a portable drive or a local appliance), then forward only changed blocks to an off-account immutable cloud target. For ongoing protection, block-level deduplication and bandwidth-shaped windows mean the daily incremental fits in an off-hours slice without ever crowding out a project upload. Tested restore-from-backup is part of the program, because a backup that has never been restored is a hope, not a backup.
+Q: Who will I actually talk to?
+A: Ulises Paiz, the owner, directly. There is no tier-1 queue and no offshore call center: the engineer who knows your environment answers the phone, and critical incidents carry our 4-hour notification commitment.
 
 ## https://ghosxt.com/salinas
 
@@ -5514,10 +5562,10 @@ Meta description: Notes from an engineer with DoD infrastructure experience on c
 Plain-talk writing on cybersecurity, managed IT, and the things that actually break in small business networks. No corporate speak, no fearmongering, no fluff.
 ## Latest
 The three newest posts across every topic. Looking for something specific? Browse all posts in the file view.
+- [Exposed RDP: The Open Door Ransomware Gangs Scan For First (2026)](https://ghosxt.com/blog/exposed-rdp-remote-desktop-protocol-small-business-2026)
 - [Google Workspace for Small Business: The Security Settings to Turn On First (2026)](https://ghosxt.com/blog/google-workspace-small-business-security-settings-2026)
 - [Multi-Factor Authentication for Small Business: Which Type to Use, and Why SMS Isn't Enough](https://ghosxt.com/blog/multi-factor-authentication-small-business-2026)
-- [IT Budget Planning for Small Business: How to Build a Realistic 2027 Tech Budget](https://ghosxt.com/blog/it-budget-planning-small-business-2027)
-See all 116 posts in file view
+See all 117 posts in file view
 ## Managed IT in Salinas
 Decision-making material for Salinas and Monterey County business owners evaluating managed IT, IT support, and providers. Start with the Salinas IT services hub for the broader picture.
 - [IT Budget Planning for Small Business: How to Build a Realistic 2027 Tech Budget](https://ghosxt.com/blog/it-budget-planning-small-business-2027)
@@ -5532,6 +5580,7 @@ Decision-making material for Salinas and Monterey County business owners evaluat
 - [IT Help, Help Desk, and Tech Support for Small Business in Salinas](https://ghosxt.com/blog/it-help-help-desk-tech-support-small-business-salinas)
 ## Cybersecurity for Small Business
 How attacks actually work, what stops them, and the controls a real small business should have in place. See our cybersecurity services for the engineering approach.
+- [Exposed RDP: The Open Door Ransomware Gangs Scan For First (2026)](https://ghosxt.com/blog/exposed-rdp-remote-desktop-protocol-small-business-2026)
 - [Multi-Factor Authentication for Small Business: Which Type to Use, and Why SMS Isn't Enough](https://ghosxt.com/blog/multi-factor-authentication-small-business-2026)
 - [Holiday Season Cybersecurity: The Small Business Prep Checklist (2026)](https://ghosxt.com/blog/holiday-season-cybersecurity-checklist-small-business-2026)
 - [Fake Remote Employees: Deepfake Hiring Fraud and How to Spot It](https://ghosxt.com/blog/fake-remote-employee-deepfake-hiring-fraud-small-business-2026)
