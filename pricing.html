@@ -217,7 +217,7 @@
                 "name": "What does onboarding cost?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Onboarding is a one-time fee. It's $1,000 for the Tiny Team plan. For the per-user tiers it's based on size: $1,500 for 5–15 users, $2,500 for 15–30 users, $4,000 for 30–50 users, and a custom quote above 50. It covers environment audit, agent deployment, identity and MFA hardening, Microsoft 365 hardening, any needed migration, and team training."
+                  "text": "Onboarding is a one-time fee. It's $1,000 for the Tiny Team plan. For the per-user tiers it's based on size: $1,500 for 5–15 users, $2,500 for 15–30 users, $4,000 for 30–50 users, and a custom quote above 50. Those per-user prices are for the Microsoft 365 default onboarding scope; Google Workspace and Apple fleet onboarding are scoped and quoted separately. It covers environment audit, agent deployment, identity and MFA hardening, Microsoft 365 hardening, any needed migration, and team training."
                 }
               },
               {
@@ -584,6 +584,10 @@
             <p class="calc-subtitle">
               Adjust users, pick a tier, and add what you need. Your real
               monthly cost updates live.
+            </p>
+            <p class="under5-notice">
+              <i class="fi fi-rs-info" aria-hidden="true"></i>
+              Teams of 1 to 4 users: Tiny Team flat rate $600 per month; calculator applies to 5 or more users.
             </p>
           </div>
 
@@ -1050,23 +1054,23 @@
                     </div>
                     <span class="compare-value compare-value-hire" id="itTechCost">$8,333/mo</span>
                   </div>
-                  <div class="compare-row compare-row-role">
+                  <div class="compare-row compare-row-role compare-row-inactive">
                     <div class="compare-role-info">
-                      <span class="compare-label" id="sysEngLabel">Systems Engineer &times; 1 (avg. CA)</span>
+                      <span class="compare-label" id="sysEngLabel">Systems Engineer (not yet needed at 10 endpoints)</span>
                       <span class="compare-role-desc">Servers, Microsoft 365, Active Directory, identity, backups, integrations</span>
                     </div>
-                    <span class="compare-value compare-value-hire" id="sysEngCost">$10,833/mo</span>
+                    <span class="compare-value compare-value-hire" id="sysEngCost">Not applicable</span>
                   </div>
-                  <div class="compare-row compare-row-role">
+                  <div class="compare-row compare-row-role compare-row-inactive">
                     <div class="compare-role-info">
-                      <span class="compare-label" id="netEngLabel">Network Engineer &times; 1 (avg. CA)</span>
+                      <span class="compare-label" id="netEngLabel">Network Engineer (not yet needed at 10 endpoints)</span>
                       <span class="compare-role-desc">Switches, firewalls, VLANs, routing, wireless, VPN, security architecture</span>
                     </div>
-                    <span class="compare-value compare-value-hire" id="netEngCost">$12,083/mo</span>
+                    <span class="compare-value compare-value-hire" id="netEngCost">Not applicable</span>
                   </div>
                   <div class="compare-row compare-row-total">
                     <span class="compare-label"><strong>In-house team total</strong></span>
-                    <span class="compare-value compare-value-hire" id="hireCost">$31,250/mo</span>
+                    <span class="compare-value compare-value-hire" id="hireCost">$8,333/mo</span>
                   </div>
                   <div class="compare-row compare-row-ghosxt">
                     <span class="compare-label"
@@ -1085,20 +1089,20 @@
                     <div class="savings-numbers">
                       <div class="savings-stat">
                         <div class="savings-stat-val" id="savingsPerMonth">
-                          $4,667
+                          $6,583
                         </div>
                         <div class="savings-stat-label">saved per month</div>
                       </div>
                       <div class="savings-divider" aria-hidden="true"></div>
                       <div class="savings-stat">
                         <div class="savings-stat-val" id="savingsPerYear">
-                          $56,004
+                          $78,996
                         </div>
                         <div class="savings-stat-label">saved per year</div>
                       </div>
                       <div class="savings-divider" aria-hidden="true"></div>
                       <div class="savings-stat">
-                        <div class="savings-stat-val" id="savingsPct">73%</div>
+                        <div class="savings-stat-val" id="savingsPct">79%</div>
                         <div class="savings-stat-label">less than hiring</div>
                       </div>
                     </div>
@@ -1112,7 +1116,7 @@
                         <div
                           class="savings-bar-fill"
                           id="savingsBar"
-                          style="width: 27%"
+                          style="width: 21%"
                         ></div>
                       </div>
                     </div>
@@ -1194,7 +1198,7 @@
               </h3>
               <p class="onboarding-card-price">$1,500 – $4,000 one-time</p>
               <ul class="onboarding-card-list">
-                <li><strong>5 to 15 users:</strong> $1,500</li>
+                <li><strong>5 to 15 users:</strong> $1,500 on the Microsoft 365 default scope</li>
                 <li><strong>15 to 30 users:</strong> $2,500</li>
                 <li><strong>30 to 50 users:</strong> $4,000</li>
                 <li><strong>50+ users:</strong> Custom quote</li>
@@ -1202,7 +1206,10 @@
               <p class="onboarding-card-desc">
                 Covers environment audit, agent deployment, identity hardening,
                 migration work where needed, security baseline setup, and team
-                training. Charged once at the start of the engagement.
+                training. Charged once at the start of the engagement. Pricing
+                above applies to the Microsoft 365 default onboarding scope.
+                Google Workspace and Apple fleet onboarding are scoped and
+                quoted separately.
               </p>
             </article>
 
@@ -2261,7 +2268,7 @@
             <details class="faq-item">
               <summary>What does onboarding cost?</summary>
               <div class="faq-answer">
-                Onboarding is a one-time fee. It's $1,000 for the Tiny Team plan. For the per-user tiers it's based on size: $1,500 for 5–15 users, $2,500 for 15–30 users, $4,000 for 30–50 users, and a custom quote above 50. It covers environment audit, agent deployment, identity and MFA hardening, Microsoft 365 hardening, any needed migration, and team training.
+                Onboarding is a one-time fee. It's $1,000 for the Tiny Team plan. For the per-user tiers it's based on size: $1,500 for 5–15 users, $2,500 for 15–30 users, $4,000 for 30–50 users, and a custom quote above 50. Those per-user prices are for the Microsoft 365 default onboarding scope; Google Workspace and Apple fleet onboarding are scoped and quoted separately. It covers environment audit, agent deployment, identity and MFA hardening, Microsoft 365 hardening, any needed migration, and team training.
               </div>
             </details>
             <details class="faq-item">
