@@ -263,8 +263,8 @@ CONTENT = {
 
 # Shared service cards reused across pages (service-generic, appropriate everywhere).
 CYBER_SHARED_CARDS = [
-    ("Endpoint Detection &amp; Response", "Huntress EDR with a 24/7 SOC on every endpoint, layered with Microsoft Defender. Ransomware behavior is detected and isolated before it spreads."),
-    ("Immutable Backup", "Backups the production network cannot reach or delete, with monthly tested restores, so a ransomware hit is a bad day, not a closed business. See <a href=\"backup-disaster-recovery.html\">backup &amp; DR</a>."),
+    ("Managed Detection &amp; Response", "Managed detection and response with a 24/7 SOC on every endpoint, layered with Microsoft Defender. Ransomware behavior is detected and isolated before it spreads."),
+    ("Cloud Backup", "Off-network backup copies for Microsoft 365 and Google Workspace, with monthly tested restores, so a ransomware hit is a bad day, not a closed business. <!-- [VERIFY] -->See <a href=\"backup-disaster-recovery.html\">backup &amp; DR</a>."),
     ("24/7 Monitoring &amp; Response", "Tooling plus a human who responds. When something fires at 2 a.m., it is contained, not waiting in a queue. The <a href=\"blog/ai-attack-speed-22-seconds-mdr-smb.html\">speed of modern attacks</a> demands it."),
 ]
 

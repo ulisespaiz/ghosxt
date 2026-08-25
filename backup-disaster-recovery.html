@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Backup &amp; Disaster Recovery | Ghosxt – California</title>
-    <meta name="description" content="Immutable backups, tested restores, and ransomware-ready disaster recovery for California small business, from an engineer with DoD infrastructure experience." />
+    <meta name="description" content="Resilient cloud backup, tested restores, and ransomware-ready disaster recovery for California small business, from an engineer with DoD infrastructure experience." />
     <link rel="canonical" href="https://ghosxt.com/backup-disaster-recovery" />
     <link rel="alternate" type="application/rss+xml" title="Ghosxt Blog" href="https://ghosxt.com/feed.xml" />
 
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://ghosxt.com/backup-disaster-recovery" />
     <meta property="og:title" content="Backup &amp; Disaster Recovery | Ghosxt – California" />
-    <meta property="og:description" content="Immutable backups and tested disaster recovery for California small business. Survive a ransomware attack without paying. Free assessment." />
+    <meta property="og:description" content="Resilient cloud backup and tested disaster recovery for California small business. Survive a ransomware attack without paying. Free assessment." />
     <meta property="og:image" content="https://ghosxt.com/assets/img/og/backup-disaster-recovery.png" />
     <meta property="og:site_name" content="Ghosxt" />
 
@@ -20,7 +20,7 @@
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Backup &amp; Disaster Recovery | Ghosxt – California" />
-    <meta name="twitter:description" content="Immutable backups, tested restores, ransomware-ready DR. Free assessment." />
+    <meta name="twitter:description" content="Resilient cloud backup, tested restores, ransomware-ready DR. Free assessment." />
     <meta name="twitter:image" content="https://ghosxt.com/assets/img/og/backup-disaster-recovery.png" />
 
     <link rel="icon" href="assets/img/favicon.ico" sizes="any" />
@@ -118,7 +118,7 @@
             "@id": "https://ghosxt.com/backup-disaster-recovery#service",
             "name": "Backup and Disaster Recovery",
             "serviceType": "Backup and Disaster Recovery Services",
-            "description": "Immutable backup, business continuity, and disaster recovery services for California small business. Tested monthly restores, ransomware recovery, RTO and RPO planning. Delivered by an engineer with DoD infrastructure experience.",
+            "description": "Resilient cloud backup, business continuity, and disaster recovery services for California small business. Tested monthly restores, ransomware recovery, RTO and RPO planning. Delivered by an engineer with DoD infrastructure experience.",
             "url": "https://ghosxt.com/backup-disaster-recovery",
             "provider": {
               "@id": "https://ghosxt.com/#business"
@@ -472,7 +472,7 @@
         <div class="container">
           <h2>The 3-2-1 rule, plus immutability</h2>
           <p>The classic 3-2-1 rule says you should keep three copies of your data, on two different media, with one copy off-site. That rule was written before ransomware. In 2026, you also need immutability: at least one copy that cannot be deleted, modified, or encrypted, even by someone with valid administrator credentials, until the retention window expires.</p>
-          <p>That is the only kind of backup that survives a real ransomware attack. The first thing a competent attacker does after gaining domain admin is hunt down the backup server and the cloud backup admin account and wipe everything they can reach. Immutable storage breaks that step. The retention lock is enforced by the storage platform itself, not by your AD.</p>
+          <p>That is the only kind of backup that survives a real ransomware attack. The first thing a competent attacker does after gaining domain admin is hunt down the backup server and the cloud backup admin account and wipe everything they can reach. Immutable storage breaks that step. The retention lock is enforced by the storage platform itself, not by your AD. <!-- [VERIFY] --></p>
           <p>What we deploy:</p>
           <div class="services-grid">
             <article class="service-card">
@@ -485,14 +485,14 @@
             </article>
             <article class="service-card">
               <h3>Microsoft 365 &amp; Google Workspace Backup</h3>
-              <p>Microsoft does not back up Microsoft 365. Their retention is a recycle bin, not a backup. We protect Exchange Online, SharePoint, OneDrive, and Teams to an immutable cloud target with point-in-time recovery. Same for Google Workspace clients.</p>
+              <p>Microsoft does not back up Microsoft 365. Their retention is a recycle bin, not a backup. We protect Exchange Online, SharePoint, OneDrive, and Teams to an immutable cloud target with point-in-time recovery. Same for Google Workspace clients. <!-- [VERIFY] --></p>
             </article>
             <article class="service-card">
               <h3>Endpoint Backup</h3>
               <p>For workstations holding data that lives nowhere else (designers, engineers, attorneys, accountants), we add endpoint-level backup so a stolen laptop does not become a data-loss event.</p>
             </article>
             <article class="service-card">
-              <h3>Immutable Cloud Object Storage</h3>
+              <h3>Off-Network Object Storage</h3>
               <p>S3-compatible object lock on cloud object storage as the air-gapped target. Production network credentials cannot reach it. Retention windows enforced at the storage layer.<!-- [VERIFY] --></p>
             </article>
             <article class="service-card">
@@ -529,11 +529,11 @@
           <ul class="industries-list">
             <li><strong>Hour 1.</strong> Disconnect, do not power off. Pull network cables, disable Wi-Fi, preserve memory state.</li>
             <li><strong>Hour 1–6.</strong> Engage your cyber insurance carrier and incident response. Engage us if you have not already. Preserve evidence.</li>
-            <li><strong>Day 1–3.</strong> Identify the entry point and the persistence the attacker established. Confirm the immutable backup is intact and the last known-good restore point.</li>
+            <li><strong>Day 1–3.</strong> Identify the entry point and the persistence the attacker established. Confirm the immutable backup is intact and the last known-good restore point. <!-- [VERIFY] --></li>
             <li><strong>Day 3–10.</strong> Rebuild domain controllers, file servers, and endpoints from clean media. Restore application servers from the last clean snapshot. Re-establish identity from scratch with new credentials and re-enrolled MFA.</li>
             <li><strong>Day 10–30.</strong> Bring users back online in waves. Monitor heavily. Replace the controls that failed. Rotate every credential and key the attacker may have touched.</li>
           </ul>
-          <p>The clients with immutable backups recover. The ones without them often pay. We build your environment so you are in the first group.</p>
+          <p>The clients with immutable backups recover. The ones without them often pay. We build your environment so you are in the first group. <!-- [VERIFY] --></p>
         </div>
       </section>
 
@@ -550,7 +550,7 @@
           <h2>What our BCDR service includes</h2>
           <ul class="industries-list">
             <li>Server backup deployment, configured for image-level and application-aware protection<!-- [VERIFY] --></li>
-            <li>Immutable cloud target with object lock, isolated from production credentials</li>
+            <li>Immutable cloud target with object lock, isolated from production credentials <!-- [VERIFY] --></li>
             <li>Microsoft 365 backup covering Exchange Online, SharePoint, OneDrive, and Teams</li>
             <li>Monthly tested restores of at least one workload, with written reports</li>
             <li>Documented recovery runbooks tailored to your environment</li>
@@ -567,7 +567,7 @@
           <h2>FAQs about backup and disaster recovery</h2>
           <details>
             <summary>What does immutable backup actually mean?</summary>
-            <div class="answer">Immutable backup data cannot be deleted, modified, or encrypted by anyone (including your domain administrator and including someone with stolen credentials) until the retention window expires. The lock is enforced at the storage layer, so even a compromised backup admin account cannot wipe the recovery point.</div>
+            <div class="answer"><!-- [VERIFY] -->Immutable backup data cannot be deleted, modified, or encrypted by anyone (including your domain administrator and including someone with stolen credentials) until the retention window expires. The lock is enforced at the storage layer, so even a compromised backup admin account cannot wipe the recovery point.</div>
           </details>
           <details>
             <summary>What are RTO and RPO and what should mine be?</summary>
@@ -579,11 +579,11 @@
           </details>
           <details>
             <summary>Can you recover us from a ransomware attack without paying?</summary>
-            <div class="answer">If our immutable backups are in place, yes. The point of immutable cloud-isolated backups is that the attacker cannot reach them with stolen domain admin credentials. We rebuild your endpoints and servers from clean media, restore data from the last known-good immutable snapshot, and bring you back online without funding the attack.</div>
+            <div class="answer"><!-- [VERIFY] -->If our immutable backups are in place, yes. The point of immutable cloud-isolated backups is that the attacker cannot reach them with stolen domain admin credentials. We rebuild your endpoints and servers from clean media, restore data from the last known-good immutable snapshot, and bring you back online without funding the attack.</div>
           </details>
           <details>
             <summary>Do you back up Microsoft 365?</summary>
-            <div class="answer">Yes. Microsoft does not. Their retention is not a backup. We deploy a third-party M365 backup that protects Exchange Online mailboxes, SharePoint, OneDrive, and Teams to an immutable cloud target with point-in-time recovery.</div>
+            <div class="answer"><!-- [VERIFY] -->Yes. Microsoft does not. Their retention is not a backup. We deploy a third-party M365 backup that protects Exchange Online mailboxes, SharePoint, OneDrive, and Teams to an immutable cloud target with point-in-time recovery.</div>
           </details>
         </div>
       </section>
