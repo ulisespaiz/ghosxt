@@ -18,11 +18,27 @@ Allow: /
 User-agent: ClaudeBot
 Allow: /
 
+User-agent: Claude-SearchBot
+Allow: /
+Disallow: /admin/
+Disallow: /staging/
+
+User-agent: Claude-User
+Allow: /
+Disallow: /admin/
+Disallow: /staging/
+
 User-agent: Claude-Web
 Allow: /
 
 User-agent: anthropic-ai
 Allow: /
+
+# Bingbot also powers Microsoft Copilot and the index behind ChatGPT search.
+User-agent: bingbot
+Allow: /
+Disallow: /admin/
+Disallow: /staging/
 
 User-agent: PerplexityBot
 Allow: /
