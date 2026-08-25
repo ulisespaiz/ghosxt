@@ -20,6 +20,8 @@ const MAX_FIELD_LENGTH = {
   email: 254,
   phone: 40,
   message: 5000,
+  found_us: 100,
+  search_query: 500,
 };
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -148,9 +150,11 @@ async function handleContact(request, env) {
     email: String(data.email || "").trim(),
     phone: String(data.phone || "").trim(),
     message: String(data.message || "").trim(),
+    found_us: String(data.found_us || "").trim(),
+    search_query: String(data.search_query || "").trim(),
   };
 
-  const OPTIONAL_FIELDS = new Set(["phone"]);
+  const OPTIONAL_FIELDS = new Set(["phone", "found_us", "search_query"]);
   const errors = {};
   for (const [k, v] of Object.entries(fields)) {
     if (!v) {
@@ -177,6 +181,8 @@ async function handleContact(request, env) {
   }
 
   const phoneDisplay = fields.phone || "(not provided)";
+  const foundUsDisplay = fields.found_us || "(not provided)";
+  const searchQueryDisplay = fields.search_query || "(not provided)";
   // Strip CR/LF from the subject to prevent header injection; the text/html
   // body paths below are already escaped or plain-text-safe.
   const subject = `New contact form submission — ${fields.company.replace(/[\r\n]+/g, " ")}`;
@@ -185,6 +191,8 @@ async function handleContact(request, env) {
     `Company: ${fields.company}`,
     `Email:   ${fields.email}`,
     `Phone:   ${phoneDisplay}`,
+    `Found us: ${foundUsDisplay}`,
+    `Searched for: ${searchQueryDisplay}`,
     "",
     "Message:",
     fields.message,
@@ -201,6 +209,8 @@ async function handleContact(request, env) {
 <tr><td><b>Company</b></td><td>${escapeHtml(fields.company)}</td></tr>
 <tr><td><b>Email</b></td><td>${escapeHtml(fields.email)}</td></tr>
 <tr><td><b>Phone</b></td><td>${escapeHtml(phoneDisplay)}</td></tr>
+<tr><td><b>Found us</b></td><td>${escapeHtml(foundUsDisplay)}</td></tr>
+<tr><td><b>Searched for</b></td><td>${escapeHtml(searchQueryDisplay)}</td></tr>
 </table>
 <h3 style="margin:16px 0 4px">Message</h3>
 <pre style="white-space:pre-wrap;font-family:inherit;background:#f6f6f6;padding:12px;border-radius:6px">${escapeHtml(fields.message)}</pre>
