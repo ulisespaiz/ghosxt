@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from an engineer with DoD infrastructure experience.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Tue, 25 Aug 2026 11:59:26 +0000</lastBuildDate>
-    <pubDate>Tue, 25 Aug 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Wed, 26 Aug 2026 11:09:30 +0000</lastBuildDate>
+    <pubDate>Wed, 26 Aug 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>Secure Data Destruction: What Happens to Your Old Computers and Drives? (2026)</title>
+      <link>https://ghosxt.com/blog/data-destruction-device-disposal-small-business-2026</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/data-destruction-device-disposal-small-business-2026</guid>
+      <pubDate>Wed, 26 Aug 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>Deleting a file or running a factory reset doesn't erase what's on a drive. What secure data destruction actually requires, and the paper trail a small business should keep.</description>
+    </item>
     <item>
       <title>Exposed RDP: The Open Door Ransomware Gangs Scan For First (2026)</title>
       <link>https://ghosxt.com/blog/exposed-rdp-remote-desktop-protocol-small-business-2026</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>Malicious search ads impersonate PuTTY, Zoom, and other downloads, infecting employees before the real site loads. How malvertising works.</description>
-    </item>
-    <item>
-      <title>ClickFix: The Fake CAPTCHA Attack Tricking Employees Into Infecting Their Own PC (2026)</title>
-      <link>https://ghosxt.com/blog/clickfix-fake-captcha-verification-attack-small-business-2026</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/clickfix-fake-captcha-verification-attack-small-business-2026</guid>
-      <pubDate>Wed, 22 Jul 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>ClickFix pages pose as a CAPTCHA or Zoom error, tricking employees into pasting a command into Windows Run. How it bypasses antivirus.</description>
     </item>
   </channel>
 </rss>
