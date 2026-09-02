@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from an engineer with DoD infrastructure experience.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Fri, 28 Aug 2026 11:07:37 +0000</lastBuildDate>
-    <pubDate>Fri, 28 Aug 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Wed, 02 Sep 2026 11:05:04 +0000</lastBuildDate>
+    <pubDate>Wed, 02 Sep 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>Written Information Security Program (WISP): What a Small Business Actually Needs (2026)</title>
+      <link>https://ghosxt.com/blog/written-information-security-program-wisp-small-business-2026</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/written-information-security-program-wisp-small-business-2026</guid>
+      <pubDate>Wed, 02 Sep 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>More insurers, vendors, and clients are asking small businesses to produce a WISP. What one actually is, what belongs in it, and where to start if you don't have one.</description>
+    </item>
     <item>
       <title>AI Acceptable Use Policy for Small Business: What Belongs In It (2026)</title>
       <link>https://ghosxt.com/blog/ai-acceptable-use-policy-small-business-2026</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>A hacked business phone system can rack up thousands in international calls in a single weekend. How VoIP toll fraud works and how to stop it.</description>
-    </item>
-    <item>
-      <title>USB Drop Attacks: How a "Lost" Flash Drive Becomes a Ransomware Foothold (2026)</title>
-      <link>https://ghosxt.com/blog/usb-drop-attacks-small-business-2026</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/usb-drop-attacks-small-business-2026</guid>
-      <pubDate>Fri, 24 Jul 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>A USB drive left in a parking lot can hand an attacker a foothold before anyone clicks a link. How USB drop attacks work and how to stop them.</description>
     </item>
   </channel>
 </rss>
