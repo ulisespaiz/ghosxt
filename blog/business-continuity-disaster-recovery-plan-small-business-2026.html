@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Business Continuity and Disaster Recovery Plan for Small Business: What Belongs In It (2026) | Ghosxt</title>
+    <meta name="description" content="A backup is not a BC/DR plan and neither is an incident response plan. What a written business continuity and disaster recovery plan actually needs to say, and how to build one that gets used." />
+    <link rel="canonical" href="https://ghosxt.com/blog/business-continuity-disaster-recovery-plan-small-business-2026" />
+    <link rel="alternate" type="application/rss+xml" title="Ghosxt Blog" href="https://ghosxt.com/feed.xml" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://ghosxt.com/blog/business-continuity-disaster-recovery-plan-small-business-2026" />
+    <meta property="og:title" content="Business Continuity and Disaster Recovery Plan for Small Business: What Belongs In It (2026) | Ghosxt" />
+    <meta property="og:description" content="A backup is not a BC/DR plan and neither is an incident response plan. What a written business continuity and disaster recovery plan actually needs to say, and how to build one that gets used." />
+    <meta property="og:image" content="https://ghosxt.com/assets/img/og/blog-business-continuity-disaster-recovery-plan-small-business-2026.png" />
+    <meta property="og:site_name" content="Ghosxt" />
+    <meta property="article:published_time" content="2026-09-03" />
+    <meta property="article:author" content="Ulises Paiz" />
+    <meta name="robots" content="index, follow" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Business Continuity and Disaster Recovery Plan for Small Business: What Belongs In It (2026) | Ghosxt" />
+    <meta name="twitter:description" content="A backup is not a BC/DR plan and neither is an incident response plan. What a written business continuity and disaster recovery plan actually needs to say, and how to build one that gets used." />
+    <meta name="twitter:image" content="https://ghosxt.com/assets/img/og/blog-business-continuity-disaster-recovery-plan-small-business-2026.png" />
+    <link rel="icon" href="../assets/img/favicon.ico" sizes="any" />
+    <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- ghosxt:roboto-preload -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" />
+    <link rel="preconnect" href="https://cdn-uicons.flaticon.com" />
+    <link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" /></noscript>
+    <link rel="stylesheet" href="../assets/css/main.min.css?v=2026-07-02a" />
+    <link rel="stylesheet" href="../assets/css/blog.min.css?v=2026-07-03a" />
+    <link rel="stylesheet" media="print" onload="this.media='all'" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" />
+    <noscript><link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" /></noscript>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "BlogPosting",
+            "mainEntityOfPage": { "@type": "WebPage", "@id": "https://ghosxt.com/blog/business-continuity-disaster-recovery-plan-small-business-2026" },
+            "headline": "Business Continuity and Disaster Recovery Plan for Small Business: What Belongs In It",
+            "description": "A backup is not a business continuity and disaster recovery plan, and neither is an incident response plan. What a written BC/DR plan actually needs to say, how it differs from the other two documents, and how to build one that gets tested instead of filed away, from an engineer with DoD infrastructure experience serving California's Central Coast.",
+            "image": "https://ghosxt.com/assets/img/og/blog-business-continuity-disaster-recovery-plan-small-business-2026.png",
+            "author": { "@type": "Person", "name": "Ulises Paiz", "url": "https://ghosxt.com/about" },
+            "publisher": { "@type": "Organization", "name": "Ghosxt", "logo": { "@type": "ImageObject", "url": "https://ghosxt.com/assets/img/ghosxt-logo-160.webp" } },
+            "datePublished": "2026-09-03",
+            "dateModified": "2026-09-03",
+            "articleSection": "Cybersecurity",
+            "keywords": "business continuity plan small business, disaster recovery plan small business, BC/DR plan, business continuity and disaster recovery, BCDR small business, written policy suite, Salinas IT, Monterey County IT"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ghosxt.com/" },
+              { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://ghosxt.com/blog/" },
+              { "@type": "ListItem", "position": 3, "name": "Business Continuity and Disaster Recovery Plan for Small Business: What Belongs In It", "item": "https://ghosxt.com/blog/business-continuity-disaster-recovery-plan-small-business-2026" }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is a business continuity and disaster recovery (BC/DR) plan?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A written document that says which systems and functions a business cannot operate without, how long it can survive without each one, and the specific steps and named roles for keeping the business running or getting it back up during an outage. It covers more than IT failures; power loss, a building becoming unusable, or a key vendor going down all fall under it."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is a BC/DR plan the same thing as a backup?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. A backup is one tool a BC/DR plan relies on. The plan itself is the decision-making document: which systems get restored first, how long the business can tolerate each one being down, who declares an emergency, and who talks to staff and clients while recovery is underway. A business can have solid backups and still have no plan for what to do the moment something actually breaks."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How is a BC/DR plan different from an incident response plan?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "An incident response plan is about a security event: detecting it, containing it, and figuring out what happened. A BC/DR plan is about keeping the business operating, or getting it operating again, no matter what caused the disruption. The two overlap and should share a contact list and a decision-maker, but a ransomware attack, a burst pipe, and a key vendor going out of business all need the BC/DR plan; only the first needs the incident response plan."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How often should a small business test its BC/DR plan?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "At least once a year, as a tabletop exercise: walk through a specific scenario out loud with the people named in the plan and see where the plan breaks down before a real outage forces the question. A plan that has never been talked through out loud usually has gaps that only show up when someone tries to follow it under pressure."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+    <!-- ghosxt:cf-web-analytics -->
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"f3ce7e0e17f54050845d52d7f355cd98"}'></script>
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top"><i class="fi fi-rs-angle-up" aria-hidden="true"></i></button>
+    <div class="cookie-banner" id="cookieBanner"><div class="cookie-banner-container"><div class="cookie-content"><div class="cookie-icon"><i class="fi fi-rs-cookie"></i></div><div class="cookie-text"><p class="cookie-message">We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.</p><a href="/privacy-policy" class="cookie-link">Learn more about our Privacy Policy</a></div></div><div class="cookie-actions"><button class="cookie-btn cookie-btn-secondary" id="cookieDecline">Decline</button><button class="cookie-btn cookie-btn-primary" id="cookieAccept">Accept All</button></div></div></div>
+    <div class="top-banner" id="topBanner"><div class="banner-container"><div class="banner-content"><span class="banner-text">Need Remote Support? &#9658;</span><a target="_blank" rel="noopener noreferrer" href="https://ticket.ghosxt.com/" class="banner-btn"><i class="fi fi-rs-ticket-alt"></i><span>Visit Client Portal</span></a></div></div></div>
+    <nav class="navbar" aria-label="Main navigation">
+      <div class="navbar-container">
+        <div class="navbar-left"><a href="/" class="navbar-logo"><img fetchpriority="high" loading="eager" src="../assets/img/ghosxt-logo-160.webp" alt="Ghosxt logo" width="48" height="48" /><span>GHOSXT</span></a></div>
+        <div class="navbar-right">
+          <div class="navbar-menu">
+            <a href="/" class="navbar-link">Home</a>
+            <div class="navbar-dropdown"><a href="/about" class="navbar-link dropdown-trigger">About <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></a><div class="dropdown-menu"><a href="/about" class="dropdown-item">About Ghosxt</a><a href="/ghosxt-cares" class="dropdown-item">Ghosxt Cares</a></div></div>
+            <div class="navbar-dropdown"><a href="/services" class="navbar-link dropdown-trigger">Services <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></a><div class="dropdown-menu"><a href="/services" class="dropdown-item">All Services</a>
+                <a href="/managed-it-services" class="dropdown-item">Managed IT Services</a>
+                <a href="/help-desk-it-support" class="dropdown-item">IT Help Desk &amp; Support</a>
+                <a href="/it-consulting-vcio" class="dropdown-item">IT Consulting &amp; vCIO</a>
+                <a href="/cybersecurity" class="dropdown-item">Cybersecurity</a>
+                <a href="/cloud-services" class="dropdown-item">Cloud Services</a>
+                <a href="/backup-disaster-recovery" class="dropdown-item">Backup &amp; Disaster Recovery</a>
+                <a href="/network-design" class="dropdown-item">Network Design</a>
+                <a href="/website-development" class="dropdown-item">Web Development</a>
+                <a href="/website-development#calculator" class="dropdown-item">Website Pricing</a>
+                <a href="/ctpat" class="dropdown-item">C-TPAT Compliance</a></div></div>
+            <a href="/pricing" class="navbar-link">Pricing</a>
+            <a href="/support" class="navbar-link">Support</a>
+            <a href="/blog/" class="navbar-link">Blog</a>
+            <a href="/contact" class="navbar-link">Contact</a>
+          </div>
+          <button class="navbar-mobile-toggle" id="mobileToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu"><i class="fi fi-rs-burger-menu" aria-hidden="true"></i></button>
+          <div class="navbar-buttons"><a class="navbar-btn navbar-phone" href="tel:+18312040501" aria-label="Call Ghosxt at (831) 204-0501"><i class="fi fi-rs-phone-call" aria-hidden="true"></i><span>(831)&nbsp;204-0501</span></a><a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer" class="navbar-btn btn-demo"><i class="fi fi-rs-calendar-day"></i><span>Book a Call</span></a></div>
+        </div>
+      </div>
+      <div class="navbar-overlay" id="navbarOverlay"></div>
+      <div class="navbar-mobile-menu" id="mobileMenu">
+        <a href="/" class="mobile-link">Home</a>
+        <div class="mobile-accordion"><button class="mobile-accordion-trigger" aria-expanded="false">About <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></button><div class="mobile-accordion-content"><a href="/about" class="mobile-dropdown-item">About Ghosxt</a><a href="/ghosxt-cares" class="mobile-dropdown-item">Ghosxt Cares</a></div></div>
+        <div class="mobile-accordion"><button class="mobile-accordion-trigger" aria-expanded="false">Services <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></button><div class="mobile-accordion-content"><a href="/services" class="mobile-dropdown-item">All Services</a>
+            <a href="/managed-it-services" class="mobile-dropdown-item">Managed IT Services</a>
+            <a href="/help-desk-it-support" class="mobile-dropdown-item">IT Help Desk &amp; Support</a>
+            <a href="/it-consulting-vcio" class="mobile-dropdown-item">IT Consulting &amp; vCIO</a>
+            <a href="/cybersecurity" class="mobile-dropdown-item">Cybersecurity</a>
+            <a href="/cloud-services" class="mobile-dropdown-item">Cloud Services</a>
+            <a href="/backup-disaster-recovery" class="mobile-dropdown-item">Backup &amp; Disaster Recovery</a>
+            <a href="/network-design" class="mobile-dropdown-item">Network Design</a>
+            <a href="/website-development" class="mobile-dropdown-item">Web Development</a>
+            <a href="/website-development#calculator" class="mobile-dropdown-item">Website Pricing</a>
+            <a href="/ctpat" class="mobile-dropdown-item">C-TPAT Compliance</a></div></div>
+        <a href="/pricing" class="mobile-link">Pricing</a>
+        <a href="/support" class="mobile-link">Support</a>
+        <a href="/blog/" class="mobile-link">Blog</a>
+        <a href="/contact" class="mobile-link">Contact</a>
+        <div class="mobile-actions"><a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer" class="mobile-btn btn-demo"><i class="fi fi-rs-calendar-day"></i><span>Book a Call</span></a></div>
+      </div>
+    </nav>
+    <main id="main-content" class="blog-post">
+      <header class="blog-post-header">
+        <div class="container">
+          <nav class="blog-post-breadcrumbs" aria-label="Breadcrumb">
+            <a href="/">Home</a><span class="sep">&rsaquo;</span><a href="/blog/">Blog</a><span class="sep">&rsaquo;</span><span aria-current="page">Business Continuity and Disaster Recovery Plan for Small Business: What Belongs In It</span>
+          </nav>
+          <div class="blog-post-meta">
+            <time datetime="2026-09-03">September 3, 2026</time>
+            <span>&middot;</span>
+            <span>5 min read</span>
+            <span>&middot;</span>
+            <span class="blog-card-tag">Cybersecurity</span>
+          </div>
+          <h1>Business Continuity and Disaster Recovery Plan for Small Business: What Belongs In It (2026)</h1>
+          <div class="blog-post-author">
+            <strong>Ulises Paiz</strong>, Owner, Ghosxt
+          </div>
+          <div class="author-bio-box">
+            <!-- ghosxt:author-bio -->
+            <img src="../assets/img/ulises.avif" alt="Ulises Paiz" width="56" height="56" loading="lazy" />
+            <p>Ulises Paiz is the owner and sole engineer at Ghosxt, a Salinas, CA managed IT and cybersecurity provider. He holds an M.S. in Cybersecurity and Information Assurance (WGU, 2026) and nine industry certifications including CompTIA SecurityX, CySA+, and Microsoft AZ-104, with prior DoD and federal contractor infrastructure experience. <a href="/about">More about Ulises &rarr;</a></p>
+          </div>
+        </div>
+      </header>
+      <div class="blog-post-body">
+        <div class="container">
+          <aside class="blog-post-quickfix" aria-label="Summary and what to do">
+            <span class="quickfix-label">TL;DR: A backup and an incident response plan are not a business continuity and disaster recovery plan. A usable BC/DR plan names the systems the business can't run without, how long it can survive without each one, and who does what when something breaks.</span>
+            <h2>A BC/DR plan needs four things to actually work under pressure.</h2>
+            <ol>
+              <li><strong>A short list of the systems the business truly can't operate without</strong>, ranked in the order they need to come back.</li>
+              <li><strong>An honest downtime tolerance for each one</strong>, in hours or days, not a number picked because it sounds reassuring.</li>
+              <li><strong>Named roles</strong>: who declares an emergency, who executes recovery steps, and who communicates with staff and clients while it's happening.</li>
+              <li><strong>An annual tabletop test</strong>, so the plan gets exercised before a real outage is the first time anyone reads it.</li>
+            </ol>
+            <p>If your current plan is "we have backups," this is the layer of decision-making that sits on top of them.</p>
+          </aside>
+
+          <p>A server fails, a water line breaks over the office on a Saturday, or a key vendor shuts down with no warning. In the first hour, the question is not whether backups exist somewhere. It's who is in charge, what gets restored first, and how long the business can actually go without each system before real damage sets in. Most small businesses that have never written this down assume the answer would be obvious in the moment. It usually isn't, and the businesses that have thought it through on paper recover faster than the ones improvising for the first time during an actual outage.</p>
+
+          <h2>1. A backup, an incident response plan, and a BC/DR plan are three different things</h2>
+          <p>These get used interchangeably, and the mix-up leaves gaps. A backup is a copy of data; it's a tool, not a plan. An <a href="/blog/incident-response-plan-small-business-2026">incident response plan</a> is specifically about a security event: detecting it, containing it, and working out what happened. A business continuity and disaster recovery plan is broader than either. It covers any disruption, a cyberattack, a fire, a prolonged power outage, or a critical vendor going out of business, and answers a different question than the other two: how does the business keep operating, or get operating again, no matter what caused the stoppage. A company can have excellent backups and a solid incident response plan and still have no answer for what happens the moment the building itself is unusable.</p>
+
+          <h2>2. What actually belongs in the plan</h2>
+          <p>The plan should start with a short, honest list: the handful of systems and functions the business genuinely cannot operate without, whether that's email, a point-of-sale system, a shared file server, or a specific piece of line-of-business software. Rank them in the order they need to come back online, because trying to restore everything at once usually means nothing comes back quickly. Next to each one, write down how long the business can actually tolerate it being down, a real number based on how the business works, not an aspirational one. Then name roles, not just tasks: who has the authority to declare an emergency and start the plan, who carries out the technical recovery steps, and who is responsible for telling staff, clients, and vendors what's happening while it's underway. A plan with tasks but no names attached tends to stall while everyone assumes someone else is handling it.</p>
+
+          <h2>3. A plan that has never been read out loud has gaps nobody has found yet</h2>
+          <p>A written plan sitting in a folder is not the same as a plan that works. The gap between the two usually only shows up when someone tries to follow it during a real event, which is the worst possible time to discover it's missing a step. A tabletop exercise closes that gap cheaply: once a year, sit down with the people named in the plan and walk through a specific scenario out loud, a ransomware attack, a flooded office, a key vendor disappearing, and follow the plan step by step as written. It's common to find that a named contact left the company, a restoration step assumes access nobody currently has, or the communication step was never actually assigned to anyone. Finding that during a one-hour meeting is a very different experience than finding it during an actual outage.</p>
+
+          <h2>Where to start this week</h2>
+          <p>Write down the three to five systems the business truly cannot run without, and next to each one, a realistic number for how long it can be down before it's a serious problem. That short list, plus a named person for who declares an emergency and who handles communication, covers most of what a BC/DR plan needs to start being useful. A written BC/DR plan is also one piece of the broader written policy suite, alongside a WISP, an incident response plan, and an access control and acceptable use policy, that a managed IT relationship should already be maintaining for you rather than leaving you to draft alone.</p>
+
+          <h2>Frequently asked questions</h2>
+
+          <h3>What is a business continuity and disaster recovery (BC/DR) plan?</h3>
+          <p>A written document naming the systems and functions a business can't operate without, how long it can survive without each one, and the specific steps and named roles for keeping the business running or getting it back up during an outage. It covers more than IT failures, including power loss, an unusable building, or a key vendor going down.</p>
+
+          <h3>Is a BC/DR plan the same thing as a backup?</h3>
+          <p>No. A backup is one tool the plan relies on. The plan is the decision-making document: which systems get restored first, how long each can be down, who declares an emergency, and who communicates with staff and clients during recovery. Solid backups don't replace having a plan for the moment something actually breaks.</p>
+
+          <h3>How is a BC/DR plan different from an incident response plan?</h3>
+          <p>An incident response plan covers a security event specifically: detecting it, containing it, and working out what happened. A BC/DR plan covers keeping the business operating no matter what caused the disruption. They should share a contact list and a decision-maker, but only a security incident needs the incident response plan, while a burst pipe or a vendor shutting down needs the BC/DR plan instead.</p>
+
+          <h3>How often should a small business test its BC/DR plan?</h3>
+          <p>At least once a year, as a tabletop exercise: walk through a specific scenario out loud with the people named in the plan and find where it breaks down before a real outage forces the question. An untested plan usually has gaps that only surface when someone tries to follow it under pressure.</p>
+
+          <div class="blog-post-cta">
+            <h3>Don't have a written BC/DR plan yet?</h3>
+            <p>30 minutes with an engineer with DoD infrastructure experience. We'll walk through what your business can't operate without and help you put the plan in writing.</p>
+            <a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer">
+              <i class="fi fi-rs-calendar-day" aria-hidden="true"></i>
+              Book your free assessment
+            </a>
+          </div>
+
+          <p style="margin-top: 1.5rem; font-size: 0.95rem; color: rgba(0,0,0,0.7);">
+            Prefer to talk first? Email <a href="mailto:sales@ghosxt.com">sales@ghosxt.com</a> or call <a href="tel:+18312040501">(831) 204-0501</a>.
+          </p>
+        </div>
+      </div>
+    </main>
+    <footer class="footer" id="footerSection">
+      <div class="footer-container">
+        <div class="footer-brand-row">
+          <div class="footer-brand">
+            <img
+              src="../assets/img/ghosxt-logo-160.webp"
+              alt="Ghosxt logo"
+              width="80"
+              height="80"
+              loading="lazy"
+            />
+            <div class="footer-brand-text">
+              <span class="footer-brand-name">GHOSXT</span>
+              <span class="footer-brand-tagline"
+                >Government-grade IT for small business.</span
+              >
+            </div>
+          </div>
+          <div class="footer-cta-block">
+            <a
+              href="https://calendly.com/ulises-ghosxt"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="footer-cta-btn"
+            >
+              <i class="fi fi-rs-calendar-day" aria-hidden="true"></i>
+              Schedule Free Assessment
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-grid">
+          <div class="footer-column">
+            <h3 class="footer-column-title">Company</h3>
+            <ul class="footer-links">
+              <li><a href="/">Home</a></li>
+              <li><a href="/about">About</a></li>
+              <li><a href="/services">Services</a></li>
+              <li><a href="/pricing">Pricing</a></li>
+              <li><a href="/website-development">Website Development</a></li>
+              <li><a href="/contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-column-title">Services</h3>
+            <ul class="footer-links">
+              <li><a href="/managed-it-services">Managed IT Services</a></li>
+              <li><a href="/help-desk-it-support">IT Help Desk &amp; Support</a></li>
+              <li><a href="/it-consulting-vcio">IT Consulting &amp; vCIO</a></li>
+              <li><a href="/cybersecurity">Cybersecurity</a></li>
+              <li><a href="/cloud-services">Cloud Services</a></li>
+              <li><a href="/backup-disaster-recovery">Backup &amp; Disaster Recovery</a></li>
+              <li><a href="/network-design">Network Design</a></li>
+              <li><a href="/website-development">Web Development</a></li>
+              <li><a href="/ctpat">C-TPAT Compliance</a></li>
+              <li><a href="/trucking-it-services">Trucking &amp; Logistics IT</a></li>
+              <li><a href="/agriculture-it-services">Agriculture &amp; Agribusiness IT</a></li>
+              <li><a href="/manufacturing-it-services">Manufacturing &amp; Industrial IT</a></li>
+              <li><a href="/professional-services-it">SMB Office &amp; Professional Services IT</a></li>
+              <li><a href="/healthcare-it-services">Healthcare &amp; Medical IT</a></li>
+              <li><a href="/property-management-it-services">Property Management IT</a></li>
+              <li><a href="/engineering-it-services">Engineering &amp; Architecture IT</a></li>
+              <li><a href="/hospitality-it-services">Hospitality &amp; Restaurants IT</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-column-title">Resources</h3>
+            <ul class="footer-links">
+              <li><a href="/support">Get Support</a></li>
+              <li><a href="/privacy-policy">Privacy Policy</a></li>
+              <li><a href="https://ticket.ghosxt.com/" target="_blank" rel="noopener noreferrer">Client Portal</a></li>
+              <li><a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer">Free IT Assessment</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-column-title">Connect</h3>
+            <ul class="footer-links footer-social-links">
+              <li><a href="https://www.linkedin.com/company/ghosxt/" target="_blank" rel="noopener noreferrer"><svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.063 2.063 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>LinkedIn</a></li>
+              <li><a href="https://www.facebook.com/GhosxtTech" target="_blank" rel="noopener noreferrer"><svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg>Facebook</a></li>
+              <li><a href="https://www.instagram.com/ghosxttech/" target="_blank" rel="noopener noreferrer"><svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>Instagram</a></li>
+              <li><a href="mailto:sales@ghosxt.com"><i class="fi fi-rs-envelope" aria-hidden="true"></i> sales@ghosxt.com</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <div class="footer-bottom">
+          <p class="footer-copyright">&copy; 2026 Ghosxt. All rights reserved. Built by an engineer from the federal contracting world.</p>
+          <div class="footer-bottom-links">
+            <a href="/privacy-policy">Privacy Policy</a>
+            <span aria-hidden="true">&middot;</span>
+            <a href="/support">Support</a>
+            <span aria-hidden="true">&middot;</span>
+            <a href="https://ticket.ghosxt.com/" target="_blank" rel="noopener noreferrer">Client Portal</a>
+          </div>
+        </div>
+
+        <div class="service-areas-footer">
+          <h3>Service Areas</h3>
+          <ul>
+            <li><a href="/salinas">Salinas</a></li>
+            <li><a href="/monterey">Monterey</a></li>
+            <li><a href="/watsonville">Watsonville</a></li>
+            <li><a href="/hollister">Hollister</a></li>
+            <li><a href="/santa-cruz">Santa Cruz</a></li>
+            <li><a href="/gilroy">Gilroy</a></li>
+            <li><a href="/san-jose">San Jose</a></li>
+            <li><a href="/pacific-grove">Pacific Grove</a></li>
+            <li><a href="/carmel">Carmel</a></li>
+            <li><a href="/seaside">Seaside</a></li>
+            <li><a href="/marina">Marina</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="../assets/js/main.min.js?v=2026-07-02a" defer></script>
+    <!-- ghosxt:mobile-cta-bar -->
+    <div class="mobile-cta-bar" aria-label="Quick contact">
+      <a class="mcta-primary" href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer">Book free assessment</a>
+      <a class="mcta-secondary" href="tel:+18312040501">Call (831) 204-0501</a>
+    </div>
+  </body>
+</html>
