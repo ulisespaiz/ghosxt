@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from an engineer with DoD infrastructure experience.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Fri, 04 Sep 2026 11:07:00 +0000</lastBuildDate>
-    <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Sun, 06 Sep 2026 11:05:56 +0000</lastBuildDate>
+    <pubDate>Sun, 06 Sep 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>AI Browser Agents at Work: The New Access Risk Small Businesses Aren't Watching (2026)</title>
+      <link>https://ghosxt.com/blog/ai-browser-agents-small-business-security-risk-2026</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/ai-browser-agents-small-business-security-risk-2026</guid>
+      <pubDate>Sun, 06 Sep 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>Agentic AI browsers can log in, click, and fill forms using an employee's own session. What that changes about small-business risk, and how to put guardrails on it.</description>
+    </item>
     <item>
       <title>Data Retention and Destruction Policy for Small Business: What to Keep, What to Delete (2026)</title>
       <link>https://ghosxt.com/blog/data-retention-destruction-policy-small-business-2026</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>Fileless malware and living-off-the-land attacks run entirely in memory using tools already on your PC, so antivirus never sees a file to scan.</description>
-    </item>
-    <item>
-      <title>VoIP Toll Fraud: How a Hacked Phone System Runs Up a Five-Figure Bill Overnight (2026)</title>
-      <link>https://ghosxt.com/blog/voip-toll-fraud-hacked-phone-system-small-business-2026</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/voip-toll-fraud-hacked-phone-system-small-business-2026</guid>
-      <pubDate>Sat, 25 Jul 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>A hacked business phone system can rack up thousands in international calls in a single weekend. How VoIP toll fraud works and how to stop it.</description>
     </item>
   </channel>
 </rss>
