@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from an engineer with DoD infrastructure experience.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Sun, 06 Sep 2026 11:05:56 +0000</lastBuildDate>
-    <pubDate>Sun, 06 Sep 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Mon, 07 Sep 2026 11:04:43 +0000</lastBuildDate>
+    <pubDate>Mon, 07 Sep 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>AI Meeting Notetakers Are Recording More Than the Meeting (2026)</title>
+      <link>https://ghosxt.com/blog/ai-meeting-notetakers-data-privacy-small-business-2026</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/ai-meeting-notetakers-data-privacy-small-business-2026</guid>
+      <pubDate>Mon, 07 Sep 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>Zoom AI Companion, Teams recap bots, and other AI notetakers capture and store everything said on a call. What a small business needs to control before turning them on.</description>
+    </item>
     <item>
       <title>AI Browser Agents at Work: The New Access Risk Small Businesses Aren't Watching (2026)</title>
       <link>https://ghosxt.com/blog/ai-browser-agents-small-business-security-risk-2026</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>Smart cameras, thermostats, and printers often run default passwords and years-old firmware. How IoT devices become an entry point and how to lock them down.</description>
-    </item>
-    <item>
-      <title>Fileless Malware: The Attack That Leaves Nothing for Antivirus to Find (2026)</title>
-      <link>https://ghosxt.com/blog/fileless-malware-living-off-the-land-small-business-2026</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/fileless-malware-living-off-the-land-small-business-2026</guid>
-      <pubDate>Sun, 26 Jul 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>Fileless malware and living-off-the-land attacks run entirely in memory using tools already on your PC, so antivirus never sees a file to scan.</description>
     </item>
   </channel>
 </rss>
