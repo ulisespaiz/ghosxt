@@ -1,0 +1,614 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>September 2026 Patch Tuesday: 966 Fixes, 2 Zero-Days, and What a Small Business Needs to Do | Ghosxt</title>
+    <meta name="description" content="September 2026 Patch Tuesday: 966 fixes and 2 actively exploited zero-days, both local privilege escalation, plus a PowerPoint preview-pane RCE. What to patch first." />
+    <link rel="canonical" href="https://ghosxt.com/blog/september-2026-patch-tuesday-966-fixes-2-zero-days-smb" />
+    <link rel="alternate" type="application/rss+xml" title="Ghosxt Blog" href="https://ghosxt.com/feed.xml" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://ghosxt.com/blog/september-2026-patch-tuesday-966-fixes-2-zero-days-smb" />
+    <meta property="og:title" content="September 2026 Patch Tuesday: 966 Fixes, 2 Zero-Days, and What a Small Business Needs to Do | Ghosxt" />
+    <meta property="og:description" content="Microsoft's September 2026 Patch Tuesday fixes 966 vulnerabilities, the largest release on record, with two actively exploited zero-days that are both local elevation of privilege rather than remote code execution. A breakdown of what that framing changes, the PowerPoint preview-pane RCE that end users can actually trigger, the KB numbers for every current build, and the patch order that makes sense for a small business, from an engineer with DoD infrastructure experience on the Central Coast." />
+    <meta property="og:image" content="https://ghosxt.com/assets/img/og/blog-september-2026-patch-tuesday-966-fixes-2-zero-days-smb.png" />
+    <meta property="og:site_name" content="Ghosxt" />
+    <meta property="article:published_time" content="2026-09-08" />
+    <meta property="article:author" content="Ulises Paiz" />
+    <meta name="robots" content="index, follow" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="September 2026 Patch Tuesday: 966 Fixes, 2 Zero-Days, and What a Small Business Needs to Do | Ghosxt" />
+    <meta name="twitter:description" content="966 vulnerabilities fixed, the largest Patch Tuesday ever, with two exploited zero-days that are both local privilege escalation. The notable CVEs, the KB numbers, and what to patch first." />
+    <meta name="twitter:image" content="https://ghosxt.com/assets/img/og/blog-september-2026-patch-tuesday-966-fixes-2-zero-days-smb.png" />
+    <link rel="icon" href="../assets/img/favicon.ico" sizes="any" />
+    <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- ghosxt:roboto-preload -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" />
+    <link rel="preconnect" href="https://cdn-uicons.flaticon.com" />
+    <link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" /></noscript>
+    <link rel="stylesheet" href="../assets/css/main.min.css?v=2026-07-02a" />
+    <link rel="stylesheet" href="../assets/css/blog.min.css?v=2026-07-03a" />
+    <link rel="stylesheet" media="print" onload="this.media='all'" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" />
+    <noscript><link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" /></noscript>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "BlogPosting",
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://ghosxt.com/blog/september-2026-patch-tuesday-966-fixes-2-zero-days-smb"
+            },
+            "headline": "September 2026 Patch Tuesday: 966 Fixes, 2 Zero-Days, and What a Small Business Needs to Do",
+            "description": "Microsoft's September 2026 Patch Tuesday fixes 966 vulnerabilities, the largest release on record, with two actively exploited zero-days that are both local elevation of privilege rather than remote code execution. A breakdown of what that framing changes, the PowerPoint preview-pane RCE that end users can actually trigger, the KB numbers for every current build, and the patch order that makes sense for a small business, from an engineer with DoD infrastructure experience on the Central Coast.",
+            "image": "https://ghosxt.com/assets/img/og/blog-september-2026-patch-tuesday-966-fixes-2-zero-days-smb.png",
+            "author": {
+              "@type": "Person",
+              "name": "Ulises Paiz",
+              "url": "https://ghosxt.com/about"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Ghosxt",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://ghosxt.com/assets/img/ghosxt-logo-160.webp"
+              }
+            },
+            "datePublished": "2026-09-08",
+            "dateModified": "2026-09-08",
+            "articleSection": "Cybersecurity",
+            "keywords": "September 2026 Patch Tuesday, Microsoft security updates, 966 CVEs, largest Patch Tuesday, zero-day, CVE-2026-85880 Windows ALPC, CVE-2026-81963 Windows Update Stack, CVE-2026-69678 PowerPoint preview pane, CVE-2026-69730 Windows DNS, CVE-2026-69525 Remote Desktop Services, CVE-2026-80083 Hyper-V, KB5124008, KB5122878, KB5122871, KB5122882, Windows 10 ESU, privilege escalation, patch management small business, Salinas, Monterey, Central Coast managed IT"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://ghosxt.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Blog",
+                "item": "https://ghosxt.com/blog/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "September 2026 Patch Tuesday",
+                "item": "https://ghosxt.com/blog/september-2026-patch-tuesday-966-fixes-2-zero-days-smb"
+              }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "How many vulnerabilities did the September 2026 Patch Tuesday fix?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Microsoft's September 8, 2026 release fixes 966 vulnerabilities by BleepingComputer's count, which tallies only the CVEs Microsoft published on release day. That makes it the largest Patch Tuesday on record, roughly 2.4 times August's 400 and well past July's previous record of 570. By class the release breaks down as 438 elevation-of-privilege, 258 remote-code-execution, 173 information-disclosure, 56 denial-of-service, 19 security-feature-bypass, and 16 spoofing flaws, with 105 rated Critical: 81 remote code execution, 20 elevation of privilege, 2 information disclosure, and 1 security feature bypass. Other outlets report totals anywhere from 972 to 995 because Microsoft's Security Update Guide changed format in July 2026 and each outlet counts differently. The Zero Day Initiative tallies 972 new CVEs with 114 Critical by its own severity math, SecurityWeek reports 974, several outlets land on 973 with 113 Critical, and Action1 counts 995 with 121 Critical by folding in fixes Microsoft published outside the release-day list. The total also excludes 204 cloud-service flaws Microsoft fixed earlier in the month."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What are the two zero-days in the September 2026 Patch Tuesday, and how worried should a small business be?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Both are local elevation-of-privilege flaws, both are CVSS 7.8, both are rated Important rather than Critical, and Microsoft confirms both are being exploited in the wild while listing neither as publicly disclosed. CVE-2026-85880 is a heap-based buffer overflow in Windows Advanced Local Procedure Call that lets code running in a low-privilege AppContainer sandbox escape to SYSTEM with no user interaction, reported by researchers at Volexity and Proofpoint. CVE-2026-81963 is an improper link resolution (link following) flaw in the Windows Update Stack that also elevates a local user to SYSTEM, credited to Romain Deperne and the Microsoft Threat Intelligence Center, with Microsoft's exploitability assessment listed as functional. Neither gives an attacker a way into your network. Both are what an attacker uses after they are already on a machine, which is why installing the cumulative update and rebooting is the fix, and why identity hygiene and endpoint detection are what stop the step before it."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Why does a privilege escalation flaw matter if the attacker already needs access?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Because getting a foothold is the easy part of a modern attack, and it usually comes from a phished password, a malicious document, or a stolen session token rather than from a remote exploit. What separates a contained incident from a business-ending one is whether the attacker can promote that foothold to SYSTEM or domain administrator, because that is the privilege level needed to disable security tooling, reach every file share, and deploy ransomware across the network. A privilege escalation zero-day removes the hardest step in that chain, which is why two of them under active exploitation in one month is worth more attention than the headline vulnerability count. The defenses that matter alongside the patch are the ones that make the first step and the escalation step harder: phishing-resistant multi-factor authentication, no day-to-day local administrator rights on user accounts, and managed detection and response with a 24/7 SOC watching for the escalation attempt itself."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the PowerPoint vulnerability, and can the Outlook preview pane trigger it?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "CVE-2026-69678 is a use-after-free flaw in Microsoft PowerPoint rated Critical at CVSS 8.8. Microsoft's own advisory FAQ confirms that the Preview Pane is an attack vector, which means a specially crafted presentation can trigger code execution when it is rendered in the preview pane, without anyone opening the attachment. It was not exploited or publicly disclosed at release, but it is the one item in this month's release where what a person does or does not click changes the outcome, so it is worth raising with your team rather than patching silently. Office updates ship on their own Click-to-Run release channel rather than through the Windows cumulative update, so verify that Office is current on every machine separately from Windows Update, and consider disabling the reading pane for external mail as a short-term control while patches roll out."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "We still have Windows 10 machines. Did we get any of these fixes?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Only if those machines are enrolled in Extended Security Updates. This month's Windows 10 fix, KB5122878 (builds 19045.7725 for 22H2 and 19044.7725 for 21H2), is the ninth ESU release and shipped only to enrolled devices. It also fixes an issue that could force a BitLocker recovery key prompt on devices with an unrecommended BitLocker Group Policy configuration, and an issue where Remote Desktop audio redirection failed to play a remote session's audio on the local computer. Microsoft lists no known issues against the package at release. A Windows 10 machine without ESU received nothing from this release, both exploited zero-days included, and keeps falling further behind every month. Microsoft has extended ESU enrollment through October 12, 2027, so enrollment is still available as a bridge, but it is a bridge, not a destination."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What order should a small business patch in this month?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Install this month's cumulative update and reboot everywhere first, because that single step covers both exploited zero-days. If some machines have to queue: Windows servers running the DNS role or Remote Desktop Services next (CVE-2026-69730 and CVE-2026-69525 are both unauthenticated CVSS 9.8 remote code execution with no user interaction), then Hyper-V hosts (CVE-2026-80083 is a guest-to-host escape), then on-premises Exchange and SharePoint, then Office clients for the PowerPoint preview-pane flaw, then audit which Windows 10 machines are enrolled in Extended Security Updates. Verify build numbers afterward rather than trusting the green checkmark: Windows 11 24H2 and 25H2 should land on 26100.9445 or 26200.9445, and ESU-enrolled Windows 10 on 19045.7725, because an installed-but-not-rebooted patch protects nothing."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+    <!-- ghosxt:cf-web-analytics -->
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"f3ce7e0e17f54050845d52d7f355cd98"}'></script>
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top"><i class="fi fi-rs-angle-up" aria-hidden="true"></i></button>
+
+    <nav class="navbar" aria-label="Main navigation">
+      <div class="navbar-container">
+        <div class="navbar-left"><a href="/" class="navbar-logo"><img fetchpriority="high" loading="eager" src="../assets/img/ghosxt-logo-160.webp" alt="Ghosxt logo" width="48" height="48" /><span>GHOSXT</span></a></div>
+        <div class="navbar-right">
+          <div class="navbar-menu">
+            <a href="/" class="navbar-link">Home</a>
+            <div class="navbar-dropdown"><a href="/about" class="navbar-link dropdown-trigger">About <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></a><div class="dropdown-menu"><a href="/about" class="dropdown-item">About Ghosxt</a><a href="/ghosxt-cares" class="dropdown-item">Ghosxt Cares</a></div></div>
+            <div class="navbar-dropdown"><a href="/services" class="navbar-link dropdown-trigger">Services <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></a><div class="dropdown-menu"><a href="/services" class="dropdown-item">All Services</a>
+                <a href="/managed-it-services" class="dropdown-item">Managed IT Services</a>
+                <a href="/help-desk-it-support" class="dropdown-item">IT Help Desk &amp; Support</a>
+                <a href="/it-consulting-vcio" class="dropdown-item">IT Consulting &amp; vCIO</a>
+                <a href="/cybersecurity" class="dropdown-item">Cybersecurity</a>
+                <a href="/cloud-services" class="dropdown-item">Cloud Services</a>
+                <a href="/backup-disaster-recovery" class="dropdown-item">Backup &amp; Disaster Recovery</a>
+                <a href="/network-design" class="dropdown-item">Network Design</a>
+                <a href="/website-development" class="dropdown-item">Web Development</a>
+                <a href="/website-development#calculator" class="dropdown-item">Website Pricing</a>
+                <a href="/ctpat" class="dropdown-item">C-TPAT Compliance</a></div></div>
+            <a href="/pricing" class="navbar-link">Pricing</a>
+            <a href="/support" class="navbar-link">Support</a>
+            <a href="/blog/" class="navbar-link">Blog</a>
+            <a href="/contact" class="navbar-link">Contact</a>
+          </div>
+          <button class="navbar-mobile-toggle" id="mobileToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu"><i class="fi fi-rs-burger-menu" aria-hidden="true"></i></button>
+          <div class="navbar-buttons"><a class="navbar-btn navbar-phone" href="tel:+18312040501" aria-label="Call Ghosxt at (831) 204-0501"><i class="fi fi-rs-phone-call" aria-hidden="true"></i><span>(831)&nbsp;204-0501</span></a><a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer" class="navbar-btn btn-demo"><i class="fi fi-rs-calendar-day"></i><span>Book a Call</span></a></div>
+        </div>
+      </div>
+      <div class="navbar-overlay" id="navbarOverlay"></div>
+      <div class="navbar-mobile-menu" id="mobileMenu">
+        <a href="/" class="mobile-link">Home</a>
+        <div class="mobile-accordion"><button class="mobile-accordion-trigger" aria-expanded="false">About <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></button><div class="mobile-accordion-content"><a href="/about" class="mobile-dropdown-item">About Ghosxt</a><a href="/ghosxt-cares" class="mobile-dropdown-item">Ghosxt Cares</a></div></div>
+        <div class="mobile-accordion"><button class="mobile-accordion-trigger" aria-expanded="false">Services <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></button><div class="mobile-accordion-content"><a href="/services" class="mobile-dropdown-item">All Services</a>
+            <a href="/managed-it-services" class="mobile-dropdown-item">Managed IT Services</a>
+            <a href="/help-desk-it-support" class="mobile-dropdown-item">IT Help Desk &amp; Support</a>
+            <a href="/it-consulting-vcio" class="mobile-dropdown-item">IT Consulting &amp; vCIO</a>
+            <a href="/cybersecurity" class="mobile-dropdown-item">Cybersecurity</a>
+            <a href="/cloud-services" class="mobile-dropdown-item">Cloud Services</a>
+            <a href="/backup-disaster-recovery" class="mobile-dropdown-item">Backup &amp; Disaster Recovery</a>
+            <a href="/network-design" class="mobile-dropdown-item">Network Design</a>
+            <a href="/website-development" class="mobile-dropdown-item">Web Development</a>
+            <a href="/website-development#calculator" class="mobile-dropdown-item">Website Pricing</a>
+            <a href="/ctpat" class="mobile-dropdown-item">C-TPAT Compliance</a></div></div>
+        <a href="/pricing" class="mobile-link">Pricing</a>
+        <a href="/support" class="mobile-link">Support</a>
+        <a href="/blog/" class="mobile-link">Blog</a>
+        <a href="/contact" class="mobile-link">Contact</a>
+        <div class="mobile-actions"><a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer" class="mobile-btn btn-demo"><i class="fi fi-rs-calendar-day"></i><span>Book a Call</span></a></div>
+      </div>
+    </nav>
+    <main id="main-content" class="blog-post">
+      <header class="blog-post-header">
+        <div class="container">
+          <nav class="blog-post-breadcrumbs" aria-label="Breadcrumb">
+            <a href="/">Home</a><span class="sep">&rsaquo;</span><a href="/blog/">Blog</a><span class="sep">&rsaquo;</span><span aria-current="page">September 2026 Patch Tuesday</span>
+          </nav>
+          <div class="blog-post-meta">
+            <time datetime="2026-09-08">September 8, 2026</time>
+            <span>&middot;</span>
+            <span>19 min read</span>
+            <span>&middot;</span>
+            <span class="blog-card-tag">Cybersecurity</span>
+          </div>
+          <h1>September 2026 Patch Tuesday: 966 Fixes, 2 Zero-Days, and What a Small Business Needs to Do</h1>
+          <div class="blog-post-author">
+            <strong>Ulises Paiz</strong>, Owner, Ghosxt
+          </div>
+          <div class="author-bio-box">
+            <!-- ghosxt:author-bio -->
+            <img src="../assets/img/ulises.avif" alt="Ulises Paiz" width="56" height="56" loading="lazy" />
+            <p>Ulises Paiz is the owner and sole engineer at Ghosxt, a Salinas, CA managed IT and cybersecurity provider. He holds an M.S. in Cybersecurity and Information Assurance (WGU, 2026) and nine industry certifications including CompTIA SecurityX, CySA+, and Microsoft AZ-104, with prior DoD and federal contractor infrastructure experience. <a href="/about">More about Ulises &rarr;</a></p>
+          </div>
+        </div>
+      </header>
+      <div class="blog-post-body">
+        <div class="container">
+          <aside class="blog-post-quickfix" aria-label="Summary and what to do today">
+            <span class="quickfix-label">TL;DR: the largest release ever, two exploited zero-days, and neither is the scary kind</span>
+            <h2>Microsoft's September 2026 Patch Tuesday fixes 966 vulnerabilities, the largest release in the history of Patch Tuesday, including two zero-days that are both already being used in real attacks.</h2>
+            <ul>
+              <li><strong>What dropped:</strong> 966 fixes by BleepingComputer's count, 105 rated Critical (81 of those remote code execution), released today at 10 AM Pacific. That is roughly 2.4 times August's 400 and comfortably past July's previous record of 570.</li>
+              <li><strong>What matters most, and why it is not what the headline suggests:</strong> both zero-days, CVE-2026-85880 in Windows Advanced Local Procedure Call and CVE-2026-81963 in the Windows Update Stack, are local elevation of privilege at CVSS 7.8, rated Important rather than Critical. Neither gets an attacker into your network. Both are what an attacker reaches for once phishing has already worked.</li>
+              <li><strong>The one your people can actually trigger:</strong> CVE-2026-69678, a Critical use-after-free in PowerPoint at CVSS 8.8, where Microsoft's own advisory confirms the preview pane is an attack vector. Nobody has to open the file.</li>
+            </ul>
+            <p>This week:</p>
+            <ol>
+              <li>Install this month's cumulative updates on every PC and server, and reboot. That single step covers both exploited zero-days.</li>
+              <li>Patch Windows servers running the DNS role or Remote Desktop Services next. Both take unauthenticated CVSS 9.8 remote code execution fixes this month.</li>
+              <li>Confirm any remaining Windows 10 machines are enrolled in Extended Security Updates, and confirm nobody is running as a local administrator during their normal workday.</li>
+            </ol>
+            <p>This continues the <a href="/blog/august-2026-patch-tuesday-400-fixes-3-zero-days-smb">August 2026 Patch Tuesday post</a>; the <a href="/managed-it-services">managed IT page</a> covers how we run patching so it is verified, not just hoped.</p>
+          </aside>
+
+          <p>Microsoft shipped its monthly security updates today at 10 AM Pacific, and this is the largest Patch Tuesday that has ever shipped, by a wide margin, per <a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-september-2026-patch-tuesday-fixes-966-flaws-2-zero-days/" target="_blank" rel="noopener noreferrer">BleepingComputer's September 2026 roundup</a>. Two of the flaws are <strong>already being used by attackers</strong>. Here is what is in the release, why the honest story this month is not the number, and how a small business should sequence the work.</p>
+
+          <h2>What Patch Tuesday is and how it works</h2>
+
+          <p>On the second Tuesday of every month, Microsoft releases fixes for security flaws found in Windows, Office, and its server products. A security flaw, also called a vulnerability, is a mistake in software that an attacker can use to do something the software never intended, like reading your files or taking control of the machine. The fix for a flaw is called a patch, and the industry has called this monthly event Patch Tuesday for over twenty years.</p>
+
+          <p>Why batch them into one day a month instead of releasing each fix immediately? Predictability. IT teams can plan testing and deployment around a known date, and businesses are not rebooting machines at random all month. Microsoft holds everything except emergency out-of-band fixes for the monthly release, then publishes the details of what was fixed the same day.</p>
+
+          <p>How a patch reaches your PC depends on who manages it. A home computer gets updates directly from Microsoft through Windows Update, whenever Windows decides to install them. A managed business computer gets them through an RMM, short for remote monitoring and management, which is the software an IT provider uses to watch, update, and support every machine in your fleet from one place. That central control is what lets updates deploy on a schedule, with per-machine verification that the patch installed and the reboot completed, instead of hoping each PC got around to it.</p>
+
+          <h2>Why 2026 broke the model</h2>
+
+          <p>Until this year, Microsoft had never fixed more than about 200 flaws in a single month. Then AI-assisted tools for finding software bugs came of age, and researchers on every side started using them, a dynamic we covered when <a href="/blog/claude-mythos-firefox-271-vulnerabilities-patch-cadence-smb">an AI model found 271 vulnerabilities in Firefox</a>. June 2026 set a record near 200, <a href="/blog/july-2026-patch-tuesday-record-570-fixes-smb">July shattered it with 570</a>, <a href="/blog/august-2026-patch-tuesday-400-fixes-3-zero-days-smb">August landed at 400</a>, and September has now nearly doubled the old record in a single step.</p>
+
+          <p>The mechanism has not changed since July, it has just compounded. Automated discovery finds bugs faster than humans ever did, Microsoft triages and fixes them in bulk, and the same tooling helps attackers turn a published patch into a working exploit faster than ever. Microsoft has responded by rewriting its own deployment guidance: quality update deferral periods under three days, deadlines of zero or one day, and a grace period of no more than two. Some outlets have started calling this the patch apocalypse. The practical translation for a small business is duller and more useful. Monthly patching is now a process with an owner and a verification step, not a checkbox someone gets to when there is time.</p>
+
+          <h2>September 2026 by the numbers</h2>
+
+          <p>This month's release fixes <strong>966 vulnerabilities</strong> by BleepingComputer's count, which we use because they count only the CVEs Microsoft published on release day. Other outlets report anywhere from 972 to 995, because Microsoft's Security Update Guide changed format in July 2026 and no longer publishes one simple list, so each outlet counts differently. The Zero Day Initiative tallies 972 new CVEs with 114 Critical by its own severity math, SecurityWeek reports 974, several outlets land on 973 with 113 Critical, and Action1 counts 995 with 121 Critical by folding in fixes Microsoft published outside the release-day list. A CVE, for reference, is the industry's tracking number for a single vulnerability. Whichever number you use, it is the biggest release on record, and every source agrees on that.</p>
+
+          <p>That 966 also excludes 204 more flaws Microsoft fixed earlier this month in cloud services, including Azure AI Language, Azure Cosmos DB, Copilot Studio, and Entra ID. Those are handled server-side and require nothing from you.</p>
+
+          <p>By Microsoft's ratings, <strong>105 are Critical</strong>: 81 remote code execution, 20 elevation of privilege, 2 information disclosure, and 1 security feature bypass. By class, the whole release breaks down as:</p>
+
+          <ul>
+            <li><strong>438 elevation-of-privilege flaws.</strong> These let an attacker who already has a foothold on a machine promote themselves to administrator or SYSTEM. Rarely the way in, almost always the next step, and this month both exploited zero-days are in this category.</li>
+            <li><strong>258 remote-code-execution flaws.</strong> The dangerous class: an attacker runs their own code on your systems, sometimes with no user interaction at all. 81 of the 105 Critical fixes are RCEs, and the Zero Day Initiative flags 20 of them as potentially wormable, meaning unauthenticated remote code execution with no user interaction, the kind malware can use to spread from machine to machine with no human involvement.</li>
+            <li><strong>The rest:</strong> 173 information-disclosure flaws, 56 denial-of-service, 19 security-feature bypasses, and 16 spoofing flaws.</li>
+          </ul>
+
+          <p>By product, per Microsoft's release notes as tallied by <a href="https://www.securityweek.com/microsoft-patches-record-974-vulnerabilities-including-two-exploited-zero-days/" target="_blank" rel="noopener noreferrer">SecurityWeek</a>: 723 in Windows, 222 across the Office family with 111 in Office 2016 alone, 62 in SQL Server, 22 in developer tools, 16 in SharePoint Server, 12 in Azure, 10 in Skype for Business, and 9 in Exchange Server.</p>
+
+          <h2>Both zero-days are the quiet kind, and that is the story</h2>
+
+          <p>A record-breaking release with two actively exploited zero-days reads like a five-alarm month. Read the two flaws themselves and the picture changes. Neither is remote code execution. Both are local elevation of privilege, both are CVSS 7.8, and Microsoft rates both Important rather than Critical. Microsoft's Security Update Guide marks both as exploited and neither as publicly disclosed, so the exploit details are not sitting in a public write-up yet.</p>
+
+          <ul>
+            <li><strong><a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-85880" target="_blank" rel="noopener noreferrer">CVE-2026-85880</a>: a heap buffer overflow in Windows Advanced Local Procedure Call.</strong> ALPC is the internal messaging plumbing that Windows components use to talk to each other. Microsoft's write-up is specific about the payoff: an attacker who can already execute code inside a low-privilege AppContainer sandbox can use this to escape the sandbox and elevate to SYSTEM, the highest privilege level in Windows, with no user interaction. It was reported by researchers at Volexity and Proofpoint. Tenable's Satnam Narang notes that Microsoft has not patched an ALPC flaw at all since April 2023, and that this is only the second ALPC zero-day in nearly four years, after CVE-2023-21674 in January 2023. A component that quiet suddenly turning up under active exploitation is worth noticing.</li>
+            <li><strong><a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-81963" target="_blank" rel="noopener noreferrer">CVE-2026-81963</a>: improper link resolution in the Windows Update Stack.</strong> This is a link-following flaw, the same class as the LegacyHive bug patched in August: by abusing how a privileged service resolves a link before it touches a file, a local user tricks that service into acting on a file it should never touch, and ends up at SYSTEM. The affected component is the machinery that installs Windows updates, which runs with the highest privileges on the box by design. Credited to Romain Deperne and the Microsoft Threat Intelligence Center, with Microsoft's exploitability assessment listed as functional, meaning a working exploit exists.</li>
+          </ul>
+
+          <p>So what should a small business take from that? Not that these are harmless. Take the opposite lesson: <strong>this is what the second half of an attack looks like, and it is the half that decides how bad the incident gets.</strong> Nobody exploits a local privilege escalation bug from the internet. They exploit it after a user typed credentials into a convincing fake login page, after a malicious document ran a macro, after a stolen session token got replayed. Once an attacker has any code running as a normal user, an escalation zero-day is the step that turns a contained problem into a full one: SYSTEM privileges are what let them disable security tooling, read every share, and push ransomware everywhere at once.</p>
+
+          <p>That framing changes what you do beyond installing the patch. It puts the weight on identity and on privilege. Phishing-resistant multi-factor authentication is what stops the foothold, and we covered how to set that up in the <a href="/blog/identity-hardening-small-business-5-employees-microsoft-365">identity hardening post</a>. Not running as a local administrator all day is what limits what a foothold can reach, and the <a href="/blog/privileged-access-management-small-business-2026">privileged access post</a> lays out how to separate daily accounts from admin accounts without making anyone's job harder. <a href="/managed-detection-response">Managed detection and response with a 24/7 SOC</a> is what catches the escalation attempt itself, which is exactly the behavior antivirus alone tends to miss, a distinction covered in the <a href="/blog/edr-vs-antivirus-small-business-2026">EDR versus antivirus post</a>. The same escalation argument ran through the <a href="/blog/nightmare-eclipse-legacyhive-windows-zero-day-smb-2026">LegacyHive post</a> in July, and it has not aged.</p>
+
+          <h2>The PowerPoint bug is the one where a person's behavior changes the outcome</h2>
+
+          <p><a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69678" target="_blank" rel="noopener noreferrer">CVE-2026-69678</a> is a use-after-free flaw in PowerPoint, rated Critical at CVSS 8.8. A use-after-free is what it sounds like: the program frees a chunk of memory and then keeps using it, and an attacker who controls what lands in that memory gets to control what the program does next. In this case that means running their code with the privileges of whoever opened the file.</p>
+
+          <p>The detail worth your attention is in Microsoft's own advisory FAQ, which answers plainly that yes, the preview pane is an attack vector. That means a crafted presentation attached to an email can trigger the flaw when the preview pane renders it. Nobody has to double-click the attachment. The safety advice most people have internalized, do not open attachments from strangers, does not fully cover this case, which is precisely why it is worth telling your team about rather than quietly patching in the background.</p>
+
+          <p>Two practical notes. First, Office updates do not ride the Windows cumulative update. They ship on their own Click-to-Run release channel, so a machine can be fully current on Windows and still be running vulnerable Office. Verify Office build versions separately. Second, until Office is current everywhere, turning off the reading pane for external mail is a reasonable short-term control, and it is a setting you can push centrally rather than asking each person to change. This one belongs in your next security awareness session too, alongside the rest of the <a href="/blog/protect-small-business-cyberattack-10-essentials-2026">basics</a>. It was neither exploited nor publicly disclosed at release, which is a good reason to patch before that changes.</p>
+
+          <h2>The server side: DNS, Remote Desktop, Hyper-V, Exchange, SharePoint</h2>
+
+          <p>If you run anything on-premises, this is the part of the release that should set your maintenance window.</p>
+
+          <ul>
+            <li><strong><a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69730" target="_blank" rel="noopener noreferrer">CVE-2026-69730</a>: Windows DNS Server RCE, CVSS 9.8, Critical.</strong> A use-after-free reachable by an unauthenticated attacker sending a crafted packet, with no user interaction, and Microsoft rates exploitation more likely. The Zero Day Initiative calls it the spiritual successor to SigRed, the 2020 wormable DNS flaw. On most small networks the DNS role runs on the domain controller, so this is a patch-the-DC-now item.</li>
+            <li><strong><a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69525" target="_blank" rel="noopener noreferrer">CVE-2026-69525</a>: Remote Desktop Services RCE, CVSS 9.8.</strong> Another use-after-free, also unauthenticated with no user interaction, also rated exploitation more likely. Microsoft labels it Important despite the score, which is a good reminder that the severity label and the CVSS number are two different judgments and you should read both. If you have Remote Desktop reachable from the internet, this is your emergency, and the reason we keep arguing against that setup in the <a href="/blog/exposed-rdp-remote-desktop-protocol-small-business-2026">exposed RDP post</a>.</li>
+            <li><strong><a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-80083" target="_blank" rel="noopener noreferrer">CVE-2026-80083</a>: Hyper-V guest-to-host RCE, CVSS 8.8, Critical.</strong> An untrusted pointer dereference that lets code running inside a Hyper-V guest virtual machine execute on the host operating system. If you run several servers as virtual machines on one physical host, a compromise of the least important guest becomes a compromise of the box everything else lives on. Microsoft rates exploitation unlikely, which is a reason to schedule it rather than to skip it.</li>
+            <li><strong><a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-66302" target="_blank" rel="noopener noreferrer">CVE-2026-66302</a>: Skype for Business Server RCE, CVSS 9.8, Critical.</strong> An unauthenticated attacker can send a specially crafted request that writes an attacker-controlled file to an arbitrary location on the server, with no authentication and no user interaction required. Most small businesses retired this years ago. If you still have a Skype for Business Server sitting in a rack because nobody ever turned it off, this month is the reason to finish that project.</li>
+            <li><strong>Exchange and SharePoint.</strong> On-premises Exchange gets <a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-55007" target="_blank" rel="noopener noreferrer">CVE-2026-55007</a> (CVSS 8.1), a double-free an unauthenticated attacker can reach by mailing a crafted Visio attachment that the server processes during content indexing, though Microsoft rates exploitation less likely because it needs the server to be under sustained memory pressure. SharePoint Server gets <a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69465" target="_blank" rel="noopener noreferrer">CVE-2026-69465</a> (CVSS 8.8), which needs an authenticated user with page-edit permissions, so it is an insider or stolen-credential path rather than a front-door one. Sixteen SharePoint Server CVEs and nine Exchange CVEs land this month in total. SharePoint Online and Exchange Online through Microsoft 365 are patched server-side by Microsoft; the case against self-hosting either is in the <a href="/blog/sharepoint-server-rce-cve-2026-33112-may-2026-smb">May SharePoint post</a>.</li>
+            <li><strong>The two perfect tens.</strong> <a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-70352" target="_blank" rel="noopener noreferrer">CVE-2026-70352</a> in Azure AI Language and <a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-83711" target="_blank" rel="noopener noreferrer">CVE-2026-83711</a> in Azure AD B2C are both CVSS 10.0 and both Critical, and they will show up in any headline that sorts by score. Both were mitigated by Microsoft service-side and require no customer action. They are worth knowing about because someone will forward you an article about them, not because there is anything to install.</li>
+          </ul>
+
+          <h2>KB numbers, builds, and the Windows 10 question</h2>
+
+          <p>The numbers to verify after deployment, per Microsoft's update history pages. Windows 11 24H2 and 25H2 take <a href="https://support.microsoft.com/en-us/servicing/os/windows-11/2026/09/kb5124008-windows-11-24h2-25h2-security-update" target="_blank" rel="noopener noreferrer">KB5124008</a> (builds 26100.9445 and 26200.9445, with servicing stack update KB5124007). Windows 11 23H2 takes KB5122880 (Microsoft lists OS build 22621.7582, with servicing stack update KB5122879), and Windows 11 26H1 takes KB5124012 (build 28000.2954). On the server side, Windows Server 2025 takes <a href="https://support.microsoft.com/en-us/servicing/os/windows-server/2026/09/kb5122871-windows-server-2025-security-update" target="_blank" rel="noopener noreferrer">KB5122871</a> (build 26100.33438, with servicing stack update KB5122870), Windows Server 2022 takes KB5122882 (build 20348.5622), and Windows Server 2019 takes KB5122876 (build 17763.9245).</p>
+
+          <p>Microsoft lists no known issues against the Windows 11 and Windows 10 packages at release, which is not something every month can say. Windows Server 2025 still carries the pre-existing issue where Windows Server Update Services does not display synchronization error details, a side effect of a mitigation Microsoft shipped last year, so that one is not new this month.</p>
+
+          <p>Windows 10 21H2 and 22H2 take <a href="https://support.microsoft.com/en-us/servicing/os/windows-10/2026/09/kb5122878-windows-10-21h2-22h2-security-update" target="_blank" rel="noopener noreferrer">KB5122878</a> (builds 19045.7725 and 19044.7725), and only on devices enrolled in Extended Security Updates, the paid program that is now the only way a Windows 10 machine gets patched at all. This is the ninth ESU release. Besides the security content, it fixes an issue that could force devices with an unrecommended BitLocker Group Policy configuration to enter their BitLocker recovery key, which is the kind of bug that turns a Tuesday into a very long Tuesday if it hits a laptop fleet, and an issue where Remote Desktop audio redirection would not play a remote session's audio on the local computer.</p>
+
+          <p>The enrollment window moved in your favor: Microsoft has extended Windows 10 ESU enrollment through October 12, 2027. That is a real reprieve, and it is also a trap if you treat it as a plan. A Windows 10 machine outside ESU got nothing from this release, both exploited zero-days included, and falls further behind every month. Know which of your machines are enrolled and which are not, this week. The <a href="/blog/windows-10-end-of-life-small-business-what-to-do-2026">Windows 10 end-of-life post</a> lays out the exit paths.</p>
+
+          <h2>Secure Boot: the certificate clock is still running</h2>
+
+          <p>This month's update widens automatic Secure Boot certificate targeting to more eligible devices, continuing a rollout that has been running all year. The deadline behind it has not moved: the Microsoft Windows Production PCA 2011 certificate, which signs the Windows bootloader itself, expires October 19, 2026. The Microsoft Corporation UEFI CA 2011 already expired June 27, 2026, and the KEK CA 2011 expired June 24, 2026.</p>
+
+          <p>Nothing dramatic happens on expiry day. Machines still boot and people still work. What you lose is the ability to receive new boot-path security mitigations, which means a device frozen on 2011 certificates is stuck with whatever boot protections it had and cannot get new ones. The fix is to let the certificate updates deploy, which for managed machines means letting this month's update install and then verifying the certificate status afterward rather than assuming it took. We walked through the mechanics in the <a href="/blog/june-2026-patch-tuesday-secure-boot-exchange-smb">June post</a>.</p>
+
+          <p>Two other clocks are worth putting on a calendar while you are here. October's Patch Tuesday brings the final Extended Security Updates for Windows Server 2012 and 2012 R2, and the final ESU for Exchange Server 2016 and 2019. Windows Server 2022 also leaves mainstream support on October 13, 2026, moving to extended support with monthly security updates through October 2031. If any of those are still running in your environment, the runway is now measured in weeks.</p>
+
+          <h2>How a managed deployment actually works</h2>
+
+          <p>We do not push a release like this to production machines on Tuesday afternoon, and that is deliberate. Patches occasionally break things, and when they do, the industry finds out within the first day or two as millions of machines install them and telemetry rolls in. That instinct matters more at 966 CVEs than at 400, because a release this large touches more of the operating system and gives a regression more places to hide. A roughly 48-hour soak costs attackers little of the window that matters and has saved our clients from more than one bad patch that Microsoft had to pull and reissue.</p>
+
+          <p>So the updates go out in rings, which just means groups in a planned order. Our own machines and a small test group take the release first. Client workstations follow in an after-hours window once telemetry is clean, so nobody's workday is interrupted by an installing-updates screen. Servers deploy separately in a maintenance window, when a reboot cannot take down file shares or a line-of-business app in the middle of an invoice run. Two actively exploited zero-days can compress that timeline: the soak is a default, not a dogma, and a month like this one is exactly when the judgment call gets made rather than deferred.</p>
+
+          <p>Reboots are the unglamorous half of patching, and they matter more than people think. A patch that has been downloaded but not rebooted into place is not protecting anything. Reboots are scheduled for early morning hours, and afterward the RMM verifies per machine that the update applied, the build number moved, and the machine came back healthy. That verification step is the difference between patching as a policy and patching as a hope, the same discipline covered in the <a href="/blog/patch-management-small-business-2026">patch management post</a>. Ghosxt clients get the specifics of each month's deployment windows by email, so none of the above requires anything from them.</p>
+
+          <h2>How to prioritize this week</h2>
+
+          <p>If you run your own patching, in order:</p>
+
+          <ul>
+            <li><strong>Install and reboot, everywhere.</strong> The cumulative update covers both exploited zero-days at once. Confirm automatic updates are actually on, and confirm the reboot happened, not just the download.</li>
+            <li><strong>DNS servers and Remote Desktop Services hosts next.</strong> CVE-2026-69730 and CVE-2026-69525 are both unauthenticated CVSS 9.8 remote code execution with no user interaction, and Microsoft rates both exploitation more likely. On a small network the DNS role usually lives on the domain controller, so that box goes first.</li>
+            <li><strong>Hyper-V hosts after that.</strong> CVE-2026-80083 lets a compromised guest reach the host, which collapses whatever separation you thought you had between virtual machines.</li>
+            <li><strong>Then on-premises Exchange and SharePoint.</strong> Nine Exchange CVEs and sixteen SharePoint Server CVEs land this month. If either server is reachable from the internet, move it up the list.</li>
+            <li><strong>Then Office clients, specifically for the PowerPoint flaw.</strong> Office updates ride their own release channel, so a fully patched Windows machine can still be running vulnerable Office. Check build versions, do not assume.</li>
+            <li><strong>Audit Windows 10 ESU enrollment.</strong> Either a machine is enrolled and took KB5122878, or it is unprotected against everything in this release. Make the list this week.</li>
+            <li><strong>Then do the non-patch item.</strong> Check who has local administrator rights on their everyday account, and take those rights off the accounts that do not need them daily. Both zero-days this month exist to escalate privilege. Starting from fewer privileges is the control that keeps working after the next one drops.</li>
+            <li><strong>Verify, do not assume.</strong> Spot-check build numbers (26100.9445 or 26200.9445 on Windows 11, 19045.7725 on ESU Windows 10) rather than trusting the green checkmark in Windows Update.</li>
+          </ul>
+
+          <h2>Where this fits</h2>
+
+          <ul>
+            <li>The <a href="/blog/august-2026-patch-tuesday-400-fixes-3-zero-days-smb">August 2026 Patch Tuesday post</a>, the <a href="/blog/july-2026-patch-tuesday-record-570-fixes-smb">July post</a>, and the <a href="/blog/june-2026-patch-tuesday-secure-boot-exchange-smb">June post</a>, for the three previous releases and the patch-cadence habit.</li>
+            <li>The <a href="/blog/claude-mythos-firefox-271-vulnerabilities-patch-cadence-smb">AI-found Firefox flaws post</a>, for the AI-driven discovery wave behind 2026's record volumes.</li>
+            <li>The <a href="/blog/nightmare-eclipse-legacyhive-windows-zero-day-smb-2026">LegacyHive post</a>, for the same privilege-escalation argument applied to July's disclosure.</li>
+            <li>The <a href="/blog/privileged-access-management-small-business-2026">privileged access post</a> and the <a href="/blog/identity-hardening-small-business-5-employees-microsoft-365">identity hardening post</a>, for the two controls that matter most against an escalation zero-day.</li>
+            <li>The <a href="/blog/edr-vs-antivirus-small-business-2026">EDR versus antivirus post</a> and the <a href="/managed-detection-response">managed detection and response page</a>, for catching the escalation attempt itself.</li>
+            <li>The <a href="/blog/exposed-rdp-remote-desktop-protocol-small-business-2026">exposed RDP post</a>, for why this month's Remote Desktop Services flaw is worse for some networks than others.</li>
+            <li>The <a href="/blog/sharepoint-server-rce-cve-2026-33112-may-2026-smb">May SharePoint post</a>, for why self-hosted SharePoint keeps showing up in these roundups.</li>
+            <li>The <a href="/blog/windows-10-end-of-life-small-business-what-to-do-2026">Windows 10 end-of-life post</a>, for the machines this release skipped entirely.</li>
+            <li>The <a href="/blog/patch-management-small-business-2026">patch management post</a>, for the cadence and ownership structure that makes months like this one routine instead of a scramble.</li>
+            <li>The <a href="/blog/protect-small-business-cyberattack-10-essentials-2026">10 essentials</a> and the <a href="/cybersecurity">cybersecurity page</a>, for where patching sits in the full defense.</li>
+            <li>The <a href="/managed-it-services">managed IT page</a> and the <a href="/pricing">pricing page</a>, for patch management that is verified across every device and what it costs.</li>
+          </ul>
+
+          <p>We run monthly patch management for small businesses across <a href="/salinas">Salinas</a>, <a href="/monterey">Monterey</a>, <a href="/santa-cruz">Santa Cruz</a>, <a href="/watsonville">Watsonville</a>, and <a href="/san-jose">San Jose</a>, and the rest of the Central Coast. This is the kind of thing we watch so you do not have to.</p>
+
+          <h2>FAQs about the September 2026 Patch Tuesday</h2>
+
+          <h3>How many vulnerabilities did the September 2026 Patch Tuesday fix?</h3>
+          <p>Microsoft's September 8, 2026 release fixes 966 vulnerabilities by BleepingComputer's count, which tallies only the CVEs Microsoft published on release day. That makes it the largest Patch Tuesday on record, roughly 2.4 times August's 400 and well past July's previous record of 570. By class the release breaks down as 438 elevation-of-privilege, 258 remote-code-execution, 173 information-disclosure, 56 denial-of-service, 19 security-feature-bypass, and 16 spoofing flaws, with 105 rated Critical: 81 remote code execution, 20 elevation of privilege, 2 information disclosure, and 1 security feature bypass. Other outlets report totals anywhere from 972 to 995 because Microsoft's Security Update Guide changed format in July 2026 and each outlet counts differently. The Zero Day Initiative tallies 972 new CVEs with 114 Critical by its own severity math, SecurityWeek reports 974, several outlets land on 973 with 113 Critical, and Action1 counts 995 with 121 Critical by folding in fixes Microsoft published outside the release-day list. The total also excludes 204 cloud-service flaws Microsoft fixed earlier in the month.</p>
+
+          <h3>What are the two zero-days in the September 2026 Patch Tuesday, and how worried should a small business be?</h3>
+          <p>Both are local elevation-of-privilege flaws, both are CVSS 7.8, both are rated Important rather than Critical, and Microsoft confirms both are being exploited in the wild while listing neither as publicly disclosed. CVE-2026-85880 is a heap-based buffer overflow in Windows Advanced Local Procedure Call that lets code running in a low-privilege AppContainer sandbox escape to SYSTEM with no user interaction, reported by researchers at Volexity and Proofpoint. CVE-2026-81963 is an improper link resolution (link following) flaw in the Windows Update Stack that also elevates a local user to SYSTEM, credited to Romain Deperne and the Microsoft Threat Intelligence Center, with Microsoft's exploitability assessment listed as functional. Neither gives an attacker a way into your network. Both are what an attacker uses after they are already on a machine, which is why installing the cumulative update and rebooting is the fix, and why identity hygiene and endpoint detection are what stop the step before it.</p>
+
+          <h3>Why does a privilege escalation flaw matter if the attacker already needs access?</h3>
+          <p>Because getting a foothold is the easy part of a modern attack, and it usually comes from a phished password, a malicious document, or a stolen session token rather than from a remote exploit. What separates a contained incident from a business-ending one is whether the attacker can promote that foothold to SYSTEM or domain administrator, because that is the privilege level needed to disable security tooling, reach every file share, and deploy ransomware across the network. A privilege escalation zero-day removes the hardest step in that chain, which is why two of them under active exploitation in one month is worth more attention than the headline vulnerability count. The defenses that matter alongside the patch are the ones that make the first step and the escalation step harder: phishing-resistant multi-factor authentication, no day-to-day local administrator rights on user accounts, and managed detection and response with a 24/7 SOC watching for the escalation attempt itself.</p>
+
+          <h3>What is the PowerPoint vulnerability, and can the Outlook preview pane trigger it?</h3>
+          <p>CVE-2026-69678 is a use-after-free flaw in Microsoft PowerPoint rated Critical at CVSS 8.8. Microsoft's own advisory FAQ confirms that the Preview Pane is an attack vector, which means a specially crafted presentation can trigger code execution when it is rendered in the preview pane, without anyone opening the attachment. It was not exploited or publicly disclosed at release, but it is the one item in this month's release where what a person does or does not click changes the outcome, so it is worth raising with your team rather than patching silently. Office updates ship on their own Click-to-Run release channel rather than through the Windows cumulative update, so verify that Office is current on every machine separately from Windows Update, and consider disabling the reading pane for external mail as a short-term control while patches roll out.</p>
+
+          <h3>We still have Windows 10 machines. Did we get any of these fixes?</h3>
+          <p>Only if those machines are enrolled in Extended Security Updates. This month's Windows 10 fix, KB5122878 (builds 19045.7725 for 22H2 and 19044.7725 for 21H2), is the ninth ESU release and shipped only to enrolled devices. It also fixes an issue that could force a BitLocker recovery key prompt on devices with an unrecommended BitLocker Group Policy configuration, and an issue where Remote Desktop audio redirection failed to play a remote session's audio on the local computer. Microsoft lists no known issues against the package at release. A Windows 10 machine without ESU received nothing from this release, both exploited zero-days included, and keeps falling further behind every month. Microsoft has extended ESU enrollment through October 12, 2027, so enrollment is still available as a bridge, but it is a bridge, not a destination.</p>
+
+          <h3>What order should a small business patch in this month?</h3>
+          <p>Install this month's cumulative update and reboot everywhere first, because that single step covers both exploited zero-days. If some machines have to queue: Windows servers running the DNS role or Remote Desktop Services next (CVE-2026-69730 and CVE-2026-69525 are both unauthenticated CVSS 9.8 remote code execution with no user interaction), then Hyper-V hosts (CVE-2026-80083 is a guest-to-host escape), then on-premises Exchange and SharePoint, then Office clients for the PowerPoint preview-pane flaw, then audit which Windows 10 machines are enrolled in Extended Security Updates. Verify build numbers afterward rather than trusting the green checkmark: Windows 11 24H2 and 25H2 should land on 26100.9445 or 26200.9445, and ESU-enrolled Windows 10 on 19045.7725, because an installed-but-not-rebooted patch protects nothing.</p>
+
+          <p style="margin-top: 2rem; font-size: 0.9rem; color: rgba(0,0,0,0.7); overflow-wrap: anywhere;">
+            <strong>Sources:</strong>
+            <a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-september-2026-patch-tuesday-fixes-966-flaws-2-zero-days/" target="_blank" rel="noopener noreferrer">BleepingComputer</a> &middot;
+            <a href="https://www.thezdi.com/blog/2026/9/8/the-september-2026-security-update-review" target="_blank" rel="noopener noreferrer">Zero Day Initiative</a> &middot;
+            <a href="https://www.securityweek.com/microsoft-patches-record-974-vulnerabilities-including-two-exploited-zero-days/" target="_blank" rel="noopener noreferrer">SecurityWeek</a> &middot;
+            <a href="https://www.action1.com/patch-tuesday/september-2026-patch-tuesday-brief-start-with-exposure-not-the-patch-count/" target="_blank" rel="noopener noreferrer">Action1</a> &middot;
+            <a href="https://support.microsoft.com/en-us/servicing/os/windows-11/2026/09/kb5124008-windows-11-24h2-25h2-security-update" target="_blank" rel="noopener noreferrer">KB5124008</a> &middot;
+            <a href="https://support.microsoft.com/en-us/servicing/os/windows-10/2026/09/kb5122878-windows-10-21h2-22h2-security-update" target="_blank" rel="noopener noreferrer">KB5122878</a> &middot;
+            <a href="https://support.microsoft.com/en-us/servicing/os/windows-server/2026/09/kb5122871-windows-server-2025-security-update" target="_blank" rel="noopener noreferrer">KB5122871</a> &middot;
+            <a href="https://support.microsoft.com/en-us/topic/windows-secure-boot-certificate-expiration-and-ca-updates-7ff40d33-95dc-4c3c-8725-a9b95457578e" target="_blank" rel="noopener noreferrer">Microsoft Secure Boot certificate expiration</a>
+          </p>
+
+          <div class="blog-post-cta">
+            <h3>966 patches this month. Are yours actually installed? Let's verify.</h3>
+            <p>30 minutes with an engineer with DoD infrastructure experience. We'll check whether this release (both exploited zero-days, the server fixes, your Office builds, and your Windows 10 stragglers) has truly applied across your machines, and set up patch management you can prove. No jargon, no obligation.</p>
+            <a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer">
+              <i class="fi fi-rs-calendar-day" aria-hidden="true"></i>
+              Book your free assessment
+            </a>
+          </div>
+
+          <p style="margin-top: 1.5rem; font-size: 0.95rem; color: rgba(0,0,0,0.7);">
+            Prefer to talk first? Email <a href="mailto:sales@ghosxt.com">sales@ghosxt.com</a> or call <a href="tel:+18312040501">(831) 204-0501</a>.
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <div class="cookie-banner" id="cookieBanner">
+      <div class="cookie-banner-container">
+        <div class="cookie-content">
+          <div class="cookie-icon"><i class="fi fi-rs-cookie"></i></div>
+          <div class="cookie-text">
+            <p class="cookie-message">We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.</p>
+            <a href="/privacy-policy" class="cookie-link">Learn more about our Privacy Policy</a>
+          </div>
+        </div>
+        <div class="cookie-actions">
+          <button class="cookie-btn cookie-btn-secondary" id="cookieDecline">Decline</button>
+          <button class="cookie-btn cookie-btn-primary" id="cookieAccept">Accept All</button>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer" id="footerSection">
+      <div class="footer-container">
+        <div class="footer-brand-row">
+          <div class="footer-brand">
+            <img
+              src="../assets/img/ghosxt-logo-160.webp"
+              alt="Ghosxt logo"
+              width="80"
+              height="80"
+              loading="lazy"
+            />
+            <div class="footer-brand-text">
+              <span class="footer-brand-name">GHOSXT</span>
+              <span class="footer-brand-tagline"
+                >Government-grade IT for small business.</span
+              >
+            </div>
+          </div>
+          <div class="footer-cta-block">
+            <a
+              href="https://calendly.com/ulises-ghosxt"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="footer-cta-btn"
+            >
+              <i class="fi fi-rs-calendar-day" aria-hidden="true"></i>
+              Schedule Free Assessment
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-grid">
+          <div class="footer-column">
+            <h3 class="footer-column-title">Company</h3>
+            <ul class="footer-links">
+              <li><a href="/">Home</a></li>
+              <li><a href="/about">About</a></li>
+              <li><a href="/services">Services</a></li>
+              <li><a href="/pricing">Pricing</a></li>
+              <li>
+                <a href="/website-development">Website Development</a>
+              </li>
+              <li><a href="/msp-partners">MSP Partners</a></li>
+              <li><a href="/contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-column-title">Services</h3>
+            <ul class="footer-links">
+              <li><a href="/managed-it-services">Managed IT Services</a></li>
+              <li><a href="/help-desk-it-support">IT Help Desk &amp; Support</a></li>
+              <li><a href="/it-consulting-vcio">IT Consulting &amp; vCIO</a></li>
+              <li><a href="/cybersecurity">Cybersecurity</a></li>
+              <li><a href="/cloud-services">Cloud Services</a></li>
+              <li><a href="/backup-disaster-recovery">Backup &amp; Disaster Recovery</a></li>
+              <li><a href="/network-design">Network Design</a></li>
+              <li><a href="/website-development">Web Development</a></li>
+              <li><a href="/ctpat">C-TPAT Compliance</a></li>
+              <li><a href="/trucking-it-services">Trucking &amp; Logistics IT</a></li>
+              <li><a href="/agriculture-it-services">Agriculture &amp; Agribusiness IT</a></li>
+              <li><a href="/manufacturing-it-services">Manufacturing &amp; Industrial IT</a></li>
+              <li><a href="/professional-services-it">SMB Office &amp; Professional Services IT</a></li>
+              <li><a href="/healthcare-it-services">Healthcare &amp; Medical IT</a></li>
+              <li><a href="/property-management-it-services">Property Management IT</a></li>
+              <li><a href="/engineering-it-services">Engineering &amp; Architecture IT</a></li>
+              <li><a href="/hospitality-it-services">Hospitality &amp; Restaurants IT</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-column-title">Resources</h3>
+            <ul class="footer-links">
+              <li><a href="/support">Get Support</a></li>
+              <li><a href="/privacy-policy">Privacy Policy</a></li>
+              <li>
+                <a
+                  href="https://ticket.ghosxt.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Client Portal</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://calendly.com/ulises-ghosxt"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Free IT Assessment</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-column-title">Connect</h3>
+            <ul class="footer-links footer-social-links">
+              <li>
+                <a
+                  href="https://www.linkedin.com/company/ghosxt/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.063 2.063 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                  LinkedIn</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.facebook.com/GhosxtTech"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg>
+                  Facebook</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/ghosxttech/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+                  Instagram</a
+                >
+              </li>
+              <li>
+                <a href="mailto:sales@ghosxt.com"
+                  ><i class="fi fi-rs-envelope" aria-hidden="true"></i>
+                  sales@ghosxt.com</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <div class="footer-bottom">
+          <p class="footer-copyright">
+            &copy; 2026 Ghosxt. All rights reserved. Built by an engineer from the federal contracting world.
+          </p>
+          <div class="footer-bottom-links">
+            <a href="/privacy-policy">Privacy Policy</a>
+            <span aria-hidden="true">&middot;</span>
+            <a href="/support">Support</a>
+            <span aria-hidden="true">&middot;</span>
+            <a
+              href="https://ticket.ghosxt.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Client Portal</a
+            >
+          </div>
+        </div>
+
+        <div class="service-areas-footer">
+          <h3>Service Areas</h3>
+          <ul>
+            <li><a href="/salinas">Salinas</a></li>
+            <li><a href="/monterey">Monterey</a></li>
+            <li><a href="/watsonville">Watsonville</a></li>
+            <li><a href="/hollister">Hollister</a></li>
+            <li><a href="/santa-cruz">Santa Cruz</a></li>
+            <li><a href="/gilroy">Gilroy</a></li>
+            <li><a href="/san-jose">San Jose</a></li>
+            <li><a href="/pacific-grove">Pacific Grove</a></li>
+            <li><a href="/carmel">Carmel</a></li>
+            <li><a href="/seaside">Seaside</a></li>
+            <li><a href="/marina">Marina</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="../assets/js/main.min.js?v=2026-07-02a" defer></script>
+    <!-- ghosxt:mobile-cta-bar -->
+    <div class="mobile-cta-bar" aria-label="Quick contact">
+      <a class="mcta-primary" href="tel:+18312040501">Call (831) 204-0501</a>
+      <a class="mcta-secondary" href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer">Book free assessment</a>
+    </div>
+  </body>
+</html>

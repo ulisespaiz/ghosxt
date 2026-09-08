@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from an engineer with DoD infrastructure experience.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Tue, 08 Sep 2026 11:07:15 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 08 Sep 2026 20:30:51 +0000</lastBuildDate>
     <pubDate>Tue, 08 Sep 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>September 2026 Patch Tuesday: 966 Fixes, 2 Zero-Days, and What a Small Business Needs to Do</title>
+      <link>https://ghosxt.com/blog/september-2026-patch-tuesday-966-fixes-2-zero-days-smb</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/september-2026-patch-tuesday-966-fixes-2-zero-days-smb</guid>
+      <pubDate>Tue, 08 Sep 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>September 2026 Patch Tuesday: 966 fixes and 2 actively exploited zero-days, both local privilege escalation, plus a PowerPoint preview-pane RCE. What to patch first.</description>
+    </item>
     <item>
       <title>Business Continuity Plan for Small Business: What Actually Belongs In One (2026)</title>
       <link>https://ghosxt.com/blog/business-continuity-plan-small-business-2026</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>What actually happens during a ransomware negotiation, why paying doesn't guarantee your data back, and what a small business must settle before wiring a cent.</description>
-    </item>
-    <item>
-      <title>Social Media Account Takeover: How Hackers Hijack Your Business Facebook or Instagram Page (2026)</title>
-      <link>https://ghosxt.com/blog/social-media-account-takeover-small-business-2026</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/social-media-account-takeover-small-business-2026</guid>
-      <pubDate>Tue, 28 Jul 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>A hacked Facebook or Instagram business page gets used to scam your customers or drain your ad budget. How the takeover happens and how to get it back.</description>
     </item>
   </channel>
 </rss>
