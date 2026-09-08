@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from an engineer with DoD infrastructure experience.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Mon, 07 Sep 2026 11:04:43 +0000</lastBuildDate>
-    <pubDate>Mon, 07 Sep 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Tue, 08 Sep 2026 11:07:15 +0000</lastBuildDate>
+    <pubDate>Tue, 08 Sep 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>Business Continuity Plan for Small Business: What Actually Belongs In One (2026)</title>
+      <link>https://ghosxt.com/blog/business-continuity-plan-small-business-2026</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/business-continuity-plan-small-business-2026</guid>
+      <pubDate>Tue, 08 Sep 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>A backup restores your data. A continuity plan covers everything else: who decides, how the team communicates, and what runs while systems are down.</description>
+    </item>
     <item>
       <title>AI Meeting Notetakers Are Recording More Than the Meeting (2026)</title>
       <link>https://ghosxt.com/blog/ai-meeting-notetakers-data-privacy-small-business-2026</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>A hacked Facebook or Instagram business page gets used to scam your customers or drain your ad budget. How the takeover happens and how to get it back.</description>
-    </item>
-    <item>
-      <title>IoT Device Security for Small Business: The Hidden Attack Surface (2026)</title>
-      <link>https://ghosxt.com/blog/iot-device-security-small-business-2026</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/iot-device-security-small-business-2026</guid>
-      <pubDate>Mon, 27 Jul 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>Smart cameras, thermostats, and printers often run default passwords and years-old firmware. How IoT devices become an entry point and how to lock them down.</description>
     </item>
   </channel>
 </rss>
