@@ -77,7 +77,7 @@ function isAllowedOrigin(request, env, { failClosed = false } = {}) {
   return false;
 }
 
-async function verifyTurnstile(token, ip, secret, expectedHostname) {
+async function verifyTurnstile(token, ip, secret, allowedHostnames) {
   const body = new FormData();
   body.append("secret", secret);
   body.append("response", token);
@@ -93,17 +93,36 @@ async function verifyTurnstile(token, ip, secret, expectedHostname) {
     console.warn("Turnstile siteverify returned error-codes", errorCodes);
   }
   // siteverify echoes back the hostname the widget was solved on. Checking
-  // it against the hostname the request actually arrived on catches a token
+  // it against the hostnames we serve the form on (derived from
+  // ALLOWED_ORIGINS, so apex and www are both accepted) catches a token
   // solved on a different site (e.g. a copied widget embed) from being
   // replayed here, even though it independently passed Cloudflare's check.
-  const hostnameOk = !expectedHostname || data.hostname === expectedHostname;
+  // A response with no hostname field (testing sitekeys) is not rejected.
+  const hostnameOk =
+    !data.hostname || allowedHostnames.length === 0 || allowedHostnames.includes(data.hostname);
   if (data.success === true && !hostnameOk) {
     console.warn("Turnstile token solved on unexpected hostname", {
-      expected: expectedHostname,
+      expected: allowedHostnames,
       got: data.hostname,
     });
   }
   return { ok: data.success === true && hostnameOk, data };
+}
+
+// Hostnames of every entry in ALLOWED_ORIGINS (invalid entries skipped).
+function allowedHostnamesFromEnv(env) {
+  return (env.ALLOWED_ORIGINS || "")
+    .split(",")
+    .map((s) => s.trim())
+    .filter(Boolean)
+    .map((origin) => {
+      try {
+        return new URL(origin).hostname;
+      } catch {
+        return null;
+      }
+    })
+    .filter(Boolean);
 }
 
 async function sendViaResend(env, payload) {
@@ -154,7 +173,12 @@ async function handleContact(request, env) {
   // binding is absent (e.g. local `wrangler dev` without it configured) so
   // local testing isn't blocked by a missing binding.
   if (env.CONTACT_RATE_LIMIT) {
-    const ip = request.headers.get("CF-Connecting-IP") || "unknown";
+    // Behind Cloudflare the header is always present; if it is not, refuse
+    // rather than pool every header-less caller into one shared bucket.
+    const ip = request.headers.get("CF-Connecting-IP");
+    if (!ip) {
+      return jsonResponse(403, { error: "Forbidden" });
+    }
     const { success } = await env.CONTACT_RATE_LIMIT.limit({ key: ip });
     if (!success) {
       return jsonResponse(429, { error: "Too many requests" });
@@ -215,8 +239,7 @@ async function handleContact(request, env) {
     return jsonResponse(400, { error: "Missing challenge token" });
   }
   const ip = request.headers.get("CF-Connecting-IP") || "";
-  const expectedHostname = new URL(request.url).hostname;
-  const verify = await verifyTurnstile(token, ip, env.TURNSTILE_SECRET_KEY, expectedHostname);
+  const verify = await verifyTurnstile(token, ip, env.TURNSTILE_SECRET_KEY, allowedHostnamesFromEnv(env));
   if (!verify.ok) {
     return jsonResponse(403, { error: "Challenge failed" });
   }

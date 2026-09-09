@@ -24,10 +24,15 @@ event-handler hashing; browsers gate the newer behavior behind this flag).
 The alternative was replacing every onload attribute with an external
 bootstrap script; the chosen fix is one flag plus one hash, confirmed
 byte-identical everywhere it appears, so it is strictly tighter than the
-'unsafe-inline' it replaces and involves zero markup churn. Run this
-script's --check in CI so any new distinct onload value (or any other new
-inline handler) fails the build instead of silently falling back to
-'unsafe-inline'.
+'unsafe-inline' it replaces and involves zero markup churn. Note the
+scope honestly: 'unsafe-hashes' lets the browser accept ANY listed hash as
+an event-handler value, so all of the hashes in script-src (the inline
+<script> bodies too) become valid handler values. That is harmless here
+because every hashed body is first-party code, but it is why this script
+also scans every on*= attribute across the site and makes --check fail on
+any handler value that is not in UNSAFE_HASHES_VALUES: a new onclick=
+would otherwise be silently blocked in production while --check stayed
+green.
 
 Usage:
 
@@ -55,11 +60,25 @@ SRC_ATTR_RE = re.compile(r"\bsrc\s*=", re.IGNORECASE)
 TYPE_ATTR_RE = re.compile(r"""type\s*=\s*["']([^"']+)["']""", re.IGNORECASE)
 
 # The one inline event-handler attribute value that appears verbatim across
-# the site (async stylesheet loading). If this ever changes, or a second
-# distinct onload/onclick/etc value shows up, --check will fail so the new
-# value gets its own hash added deliberately rather than silently trusting
-# 'unsafe-inline'.
+# the site (async stylesheet loading). scan_handler_attributes() finds every
+# on*= attribute value in the scanned files; any value not listed here makes
+# --check (and the rewrite) fail, so a new handler gets a deliberate entry
+# instead of being silently blocked by the hash-only policy.
 UNSAFE_HASHES_VALUES = ["this.media='all'"]
+HANDLER_ATTR_RE = re.compile(r"""\son[a-z]+\s*=\s*(?:"([^"]*)"|'([^']*)')""", re.IGNORECASE)
+
+
+def scan_handler_attributes() -> dict[str, list[str]]:
+    """Map every distinct inline event-handler attribute value to where it appears."""
+    found: dict[str, list[str]] = {}
+    for path in find_html_files():
+        src = path.read_text(encoding="utf-8")
+        rel = path.relative_to(ROOT).as_posix()
+        for match in HANDLER_ATTR_RE.finditer(src):
+            value = match.group(1) if match.group(1) is not None else match.group(2)
+            line = src.count("\n", 0, match.start()) + 1
+            found.setdefault(value, []).append(f"{rel}:{line}")
+    return found
 
 THIRD_PARTY_SCRIPT_SRC = (
     "https://challenges.cloudflare.com",
@@ -122,6 +141,14 @@ def main() -> int:
     check_only = "--check" in sys.argv[1:]
 
     hashes = extract_inline_scripts()
+    handlers = scan_handler_attributes()
+    unknown = {v: locs for v, locs in handlers.items() if v not in UNSAFE_HASHES_VALUES}
+    if unknown:
+        print("compute-csp-hashes: inline event-handler value(s) not in UNSAFE_HASHES_VALUES:", file=sys.stderr)
+        for value, locs in unknown.items():
+            print(f"  {value!r} at {', '.join(locs[:5])}{' ...' if len(locs) > 5 else ''}", file=sys.stderr)
+        print("Move the handler into a script file, or add the exact value to UNSAFE_HASHES_VALUES deliberately.", file=sys.stderr)
+        return 1
     new_script_src = build_script_src(hashes)
 
     headers_text = HEADERS_PATH.read_text(encoding="utf-8")
