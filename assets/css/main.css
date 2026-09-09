@@ -1486,7 +1486,7 @@ footer {
   }
 
   .cookie-message {
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     line-height: 1.2;
   }
 
@@ -2358,6 +2358,10 @@ summary:focus-visible,
      hidden (translateY(100%)) banner no longer overlaps the bar. */
   .cookie-banner.visible {
     translate: 0 calc(-1 * (var(--mobile-cta-bar-height) + env(safe-area-inset-bottom)));
+  }
+  /* No bar on the contact page, so the banner sits flush at the bottom. */
+  body.no-mobile-cta-bar .cookie-banner.visible {
+    translate: 0 0;
   }
 }
 
