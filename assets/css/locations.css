@@ -21,7 +21,9 @@
 .location-breadcrumbs a {
   color: var(--text-secondary);
   text-decoration: none;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
   padding: 4px 0;
 }
 
@@ -228,8 +230,18 @@
   font-family: var(--font-family-2);
   font-weight: 500;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 0.5rem;
+  /* Some pages reuse this list for full sentences (with inline links)
+     instead of short tags. A flex container blockifies each in-flow child
+     (the ::before arrow, <strong>, each <a>, the text runs between them)
+     into its own flex item; without flex-wrap those items lay out on one
+     unbreakable row instead of wrapping like normal text, pushing the
+     item past its grid track. min-width: 0 additionally stops the grid
+     item's own default min-width: auto from doing the same at the track
+     level. */
+  min-width: 0;
 }
 
 .industries-list li::before {

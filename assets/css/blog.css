@@ -148,7 +148,9 @@
 .blog-post-breadcrumbs a {
   color: var(--text-secondary);
   text-decoration: none;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
   padding: 4px 0;
 }
 
