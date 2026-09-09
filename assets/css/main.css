@@ -431,7 +431,11 @@ canvas {
   justify-content: center;
   cursor: pointer;
   z-index: 100000;
-  transition: all 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    translate 0.4s ease,
+    opacity 0.3s ease,
+    box-shadow 0.3s ease;
   opacity: 0;
   visibility: hidden;
   transform: translateY(20px);
@@ -576,11 +580,11 @@ canvas {
   box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.3);
 }
 
+/* Lift above the cookie banner via `translate`, which composes
+   independently of the `transform` used for the show/hide and hover/active
+   states below, and never touches `bottom` (no layout-shift trigger). */
 .cookie-banner.visible ~ .scroll-to-top {
-  bottom: 140px;
-  transition:
-    bottom 0.4s ease,
-    all 0.3s ease;
+  translate: 0 -108px;
 }
 
 /* ------ TOP BANNER ------ */
@@ -1440,10 +1444,6 @@ footer {
   .cookie-btn-primary:hover {
     box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.3);
   }
-
-  .cookie-banner.visible ~ .scroll-to-top {
-    bottom: 120px;
-  }
 }
 
 @media (max-width: 480px) {
@@ -1462,10 +1462,6 @@ footer {
   .cookie-btn {
     padding: 0.45rem 0.875rem;
     font-size: 0.8rem;
-  }
-
-  .cookie-banner.visible ~ .scroll-to-top {
-    bottom: 110px;
   }
 }
 
@@ -2023,18 +2019,6 @@ footer {
   outline: none;
 }
 
-/* ------ PERFORMANCE: Reduced Motion (WCAG 2.3.3) ------ */
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
-
 /* ------ PERFORMANCE: Images ------ */
 /* Prevent CLS: images without explicit dimensions fill space immediately */
 img {
@@ -2151,7 +2135,8 @@ summary:focus-visible,
   border-radius: 2px;
 }
 
-/* ------ ACCESSIBILITY: respect reduced-motion preference ------ */
+/* ------ PERFORMANCE / ACCESSIBILITY: respect reduced-motion preference
+   (WCAG 2.3.3). Single merged block, previously duplicated. ------ */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -2259,6 +2244,13 @@ summary:focus-visible,
 }
 
 @media (max-width: 968px) {
+  :root {
+    /* Rendered height of .mobile-cta-bar: 44px min-height content row +
+       8px top padding + 8px bottom padding + 1px top border. The bar's own
+       bottom-inset padding (env(safe-area-inset-bottom)) is added
+       separately below so it isn't double-counted. */
+    --mobile-cta-bar-height: 61px;
+  }
   .mobile-cta-bar {
     display: flex;
     position: fixed;
@@ -2310,10 +2302,12 @@ summary:focus-visible,
     scroll-padding-bottom: 88px;
   }
   /* Keep the primary Call/Book CTAs above the cookie banner instead of
-     letting it cover them. Height is measured in JS (assets/js/main.js)
-     since the banner's rendered height varies with its wrapped text. */
-  .cookie-banner.visible ~ .mobile-cta-bar {
-    bottom: var(--cookie-banner-height, 140px);
+     letting it cover them. The banner sits at this offset from first
+     paint (not only once `.visible` is added), so showing it never moves
+     the already-visible bar and never shifts the banner itself: zero
+     layout shift either way. */
+  .cookie-banner {
+    bottom: calc(var(--mobile-cta-bar-height, 61px) + env(safe-area-inset-bottom));
   }
 }
 
@@ -2324,6 +2318,11 @@ body.no-mobile-cta-bar .mobile-cta-bar {
 @media (max-width: 968px) {
   body.no-mobile-cta-bar {
     padding-bottom: 0;
+  }
+  /* No bar on this page, so the banner reverts to sitting flush at the
+     bottom of the viewport. */
+  body.no-mobile-cta-bar .cookie-banner {
+    bottom: 0;
   }
   body.no-mobile-cta-bar .scroll-to-top {
     bottom: 24px !important;

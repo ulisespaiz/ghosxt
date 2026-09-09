@@ -284,7 +284,9 @@
   width: 100px;
   flex-shrink: 0;
   cursor: pointer;
-  transition: all 500ms ease;
+  transition:
+    transform 500ms ease,
+    opacity 500ms ease;
 }
 
 .server-rack.build {
@@ -298,12 +300,24 @@
   background: var(--ghosxt-white);
   border: 1px solid var(--ghosxt-black);
   padding: 2px;
-  transition: all 500ms ease;
+  transition:
+    transform 500ms ease,
+    opacity 500ms ease;
 }
 
 .build .rack-housing {
   transform: translateY(300px);
   opacity: 0;
+}
+
+/* Racks ship with the 'build' class already in the markup so JS can just
+   remove it to reveal them (no flash of a visible rack before the inline
+   script in index.html runs; see the .js class added by a one-line
+   inline script at the very top of <head>). With JS disabled that class
+   is never removed, so force the housing visible for no-JS visitors. */
+html:not(.js) .server-rack.build .rack-housing {
+  transform: translateY(0) !important;
+  opacity: 1 !important;
 }
 
 /* Server Unit */

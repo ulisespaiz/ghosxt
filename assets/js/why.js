@@ -4,7 +4,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const door = document.querySelector('.traditional-door');
     const threats = document.querySelectorAll('.threat-icon');
     const vaultDoor = document.getElementById('vaultDoor');
-    
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
     let hasExploded = false;
     let vaultHasDropped = false;
     let animationTriggered = false;
@@ -23,6 +24,25 @@ document.addEventListener('DOMContentLoaded', function() {
         return stageRect.bottom;
     }
 
+    // Reduced motion: skip the vault-door/particle sequence entirely and
+    // show the end state (vault visible, sections unlocked) immediately.
+    function showEndStateImmediately() {
+        if (animationComplete) return;
+        animationTriggered = true;
+        animationComplete = true;
+        vaultHasDropped = true;
+        threats.forEach(threat => { threat.style.display = 'none'; });
+        if (door) door.style.display = 'none';
+        if (vaultDoor) vaultDoor.classList.add('vault-visible');
+
+        const comparisonSection = document.getElementById('comparisonSection');
+        const reasonsSection = document.getElementById('reasonsSection');
+        const footer = document.querySelector('.footer');
+        if (comparisonSection) comparisonSection.classList.add('unlocked');
+        if (reasonsSection) reasonsSection.classList.add('unlocked');
+        if (footer) footer.classList.add('unlocked');
+    }
+
     function checkTriggerPoint() {
         if (animationTriggered || animationComplete) return;
 
@@ -33,6 +53,10 @@ document.addEventListener('DOMContentLoaded', function() {
         const isInViewport = sectionRect.top < windowHeight && sectionRect.bottom > 0;
 
         if (isInViewport) {
+            if (prefersReducedMotion) {
+                showEndStateImmediately();
+                return;
+            }
             animationTriggered = true;
             // Start animation 2 seconds after section becomes visible
             setTimeout(() => {
@@ -147,28 +171,41 @@ document.addEventListener('DOMContentLoaded', function() {
         const doorRect = door.getBoundingClientRect();
         const centerX = doorRect.left + doorRect.width / 2;
         const centerY = doorRect.top + doorRect.height / 2;
-        
-        door.style.transition = 'all 0.35s cubic-bezier(0.4, 0, 0.6, 1)';
+
+        door.style.transition =
+            'transform 0.35s cubic-bezier(0.4, 0, 0.6, 1), opacity 0.35s cubic-bezier(0.4, 0, 0.6, 1)';
         door.style.transform = 'scale(0)';
         door.style.opacity = '0';
-        
-        // Move all active particles to the CURRENT center
+
+        // Move all active particles to the CURRENT center via transform
+        // instead of left/top. Each particle's anchor is the left/top set
+        // when it was created, read back from its own style (not
+        // getBoundingClientRect, so this never forces a layout read), and
+        // the vibrate jitter class is dropped first so this move can own
+        // `transform` outright instead of fighting the per-frame jitter
+        // keyframes, which also animate `transform`.
         activeParticles.forEach(particle => {
-            particle.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.6, 1)';
-            particle.style.left = `${centerX}px`;
-            particle.style.top = `${centerY}px`;
+            particle.classList.remove('vibrating-particle');
+            const baseX = parseFloat(particle.style.left) || centerX;
+            const baseY = parseFloat(particle.style.top) || centerY;
+            particle.style.transition = 'transform 0.8s cubic-bezier(0.4, 0, 0.6, 1)';
+            particle.style.transform = `translate(${centerX - baseX}px, ${centerY - baseY}px)`;
         });
 
-        // Move all threats to the CURRENT center
-        threats.forEach(threat => {
-            const threatRect = threat.getBoundingClientRect();
-            const deltaX = centerX - (threatRect.left + threatRect.width / 2);
-            const deltaY = centerY - (threatRect.top + threatRect.height / 2);
-            
-            threat.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.6, 1)';
+        // Move all threats to the CURRENT center. Every threat's rect is
+        // read up front in one pass, then all the writes happen in a
+        // second pass, so reads never interleave with writes (no forced
+        // synchronous layout on each iteration).
+        const threatRects = Array.from(threats, threat => threat.getBoundingClientRect());
+        threats.forEach((threat, i) => {
+            const rect = threatRects[i];
+            const deltaX = centerX - (rect.left + rect.width / 2);
+            const deltaY = centerY - (rect.top + rect.height / 2);
+
+            threat.style.transition = 'transform 0.8s cubic-bezier(0.4, 0, 0.6, 1)';
             threat.style.transform = `translate(${deltaX}px, ${deltaY}px)`;
         });
-        
+
         // Store for explosion
         window.currentDoorCenter = { x: centerX, y: centerY };
     }
@@ -194,39 +231,38 @@ document.addEventListener('DOMContentLoaded', function() {
             const size = 4 + Math.random() * 10;
             particle.style.width = `${size}px`;
             particle.style.height = `${size}px`;
-            particle.style.left = `${centerX}px`;
-            particle.style.top = `${centerY}px`;
+            // Fixed left/top:0 anchor; all movement below is done with
+            // `transform: translate()` so the browser can run the whole
+            // burst on the compositor instead of laying out 100 elements
+            // every frame.
+            particle.style.left = '0px';
+            particle.style.top = '0px';
+            particle.style.transform = `translate(${centerX}px, ${centerY}px) scale(1)`;
             particle.style.borderRadius = '50%';
             particle.style.pointerEvents = 'none';
             particle.style.zIndex = '10001';
-            
+
             document.body.appendChild(particle);
             explosionParticles.push(particle);
-            
+
             const angle = (Math.PI * 2 * i) / particleCount + (Math.random() - 0.5) * 0.4;
             const velocity = 200 + Math.random() * 300;
             const explodeX = centerX + Math.cos(angle) * velocity;
             const explodeY = centerY + Math.sin(angle) * velocity;
-            
+
             particle.animate([
-                { 
-                    left: `${centerX}px`,
-                    top: `${centerY}px`,
-                    opacity: 1,
-                    transform: 'scale(1)'
+                {
+                    transform: `translate(${centerX}px, ${centerY}px) scale(1)`,
+                    opacity: 1
                 },
-                { 
-                    left: `${explodeX}px`,
-                    top: `${explodeY}px`,
+                {
+                    transform: `translate(${explodeX}px, ${explodeY}px) scale(1)`,
                     opacity: 0.8,
-                    transform: 'scale(1)',
                     offset: 0.3
                 },
-                { 
-                    left: `${explodeX + (Math.random() - 0.5) * 50}px`,
-                    top: `${groundY}px`,
-                    opacity: 0,
-                    transform: 'scale(0.5)'
+                {
+                    transform: `translate(${explodeX + (Math.random() - 0.5) * 50}px, ${groundY}px) scale(0.5)`,
+                    opacity: 0
                 }
             ], {
                 duration: 1500 + Math.random() * 500,

@@ -208,7 +208,13 @@
     if (savPctEl) { savPctEl.textContent = pct > 0     ? pct + '%'          : '—';  flash(savPctEl); }
 
     const barEl = document.getElementById('savingsBar');
-    if (barEl) barEl.style.width = (internal > 0 ? Math.min(100, Math.round((ghosxt / internal) * 100)) : 100) + '%';
+    if (barEl) {
+      // transform: scaleX() instead of animating width: same visual
+      // result, runs on the compositor. transform-origin: left is set in
+      // CSS so it grows from the left edge like the old width fill did.
+      const ratio = internal > 0 ? Math.max(0.01, Math.min(1, ghosxt / internal)) : 1;
+      barEl.style.transform = `scaleX(${ratio})`;
+    }
 
     const noteEl = document.getElementById('savingsNoteText');
     if (noteEl) {

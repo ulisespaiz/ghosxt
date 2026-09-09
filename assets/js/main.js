@@ -100,21 +100,15 @@ document.addEventListener('DOMContentLoaded', function() {
     // Check if user has already responded to cookies
     const cookieConsent = localStorage.getItem('cookieConsent');
 
-    // Keep the mobile sticky CTA bar above the banner instead of letting it
-    // get covered — measured because the banner's height varies with how
-    // its text wraps across screen widths.
-    const syncCookieBannerHeight = () => {
-        document.documentElement.style.setProperty('--cookie-banner-height', `${cookieBanner.offsetHeight}px`);
-    };
-    window.addEventListener('resize', () => {
-        if (cookieBanner.classList.contains('visible')) syncCookieBannerHeight();
-    });
+    // The banner's resting position (above the mobile sticky CTA bar, or
+    // flush with the bottom when there is none) is fixed in CSS from first
+    // paint (see .cookie-banner in assets/css/main.css), so no JS height
+    // measurement is needed here; only the show/hide transform changes.
 
     // Show banner if no consent has been given
     if (!cookieConsent) {
         setTimeout(() => {
             cookieBanner.classList.add('visible');
-            syncCookieBannerHeight();
         }, 1000); // Delay 1 second before showing
     }
 

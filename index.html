@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <script>document.documentElement.classList.add('js');</script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -452,7 +453,7 @@
         </div>
         <div class="stackedserver-wrapper" id="stackedserverWrapper">
           <!-- Server Rack 1 -->
-          <div class="server-rack">
+          <div class="server-rack build">
             <div class="rack-housing">
               <div class="server-unit">
                 <div class="server-panel-left">
@@ -555,7 +556,7 @@
             </div>
           </div>
           <!-- Server Rack 2 -->
-          <div class="server-rack">
+          <div class="server-rack build">
             <div class="rack-housing">
               <div class="server-unit">
                 <div class="server-panel-left">
@@ -644,7 +645,7 @@
             </div>
           </div>
           <!-- Server Rack 3 -->
-          <div class="server-rack">
+          <div class="server-rack build">
             <div class="rack-housing">
               <div class="server-unit">
                 <div class="server-panel-left">
@@ -719,7 +720,7 @@
             </div>
           </div>
           <!-- Server Rack 4 -->
-          <div class="server-rack">
+          <div class="server-rack build">
             <div class="rack-housing">
               <div class="server-unit">
                 <div class="server-panel-left">
@@ -780,7 +781,7 @@
             </div>
           </div>
           <!-- Server Rack 5 -->
-          <div class="server-rack">
+          <div class="server-rack build">
             <div class="rack-housing">
               <div class="server-unit">
                 <div class="server-panel-left">
@@ -841,7 +842,7 @@
             </div>
           </div>
           <!-- Server Rack 6 -->
-          <div class="server-rack">
+          <div class="server-rack build">
             <div class="rack-housing">
               <div class="server-unit">
                 <div class="server-panel-left">
@@ -916,7 +917,7 @@
             </div>
           </div>
           <!-- Server Rack 7 -->
-          <div class="server-rack">
+          <div class="server-rack build">
             <div class="rack-housing">
               <div class="server-unit">
                 <div class="server-panel-left">
@@ -1005,7 +1006,7 @@
             </div>
           </div>
           <!-- Server Rack 8 -->
-          <div class="server-rack">
+          <div class="server-rack build">
             <div class="rack-housing">
               <div class="server-unit">
                 <div class="server-panel-left">
@@ -1455,7 +1456,7 @@
                     </div>
                     <div class="infra-element">
                       <div class="infra-icon server-icon">
-                        <div class="server-rack server-visible">
+                        <div class="server-rack server-visible build">
                           <div class="rack-housing">
                             <div class="server-unit">
                               <div class="server-panel-left">
@@ -2780,7 +2781,7 @@
         </div>
         <div class="stackedserver-wrapper" id="stackedserverWrapperCTA">
           <!-- Server Rack 1 -->
-          <div class="server-rack">
+          <div class="server-rack build">
             <div class="rack-housing">
               <div class="server-unit">
                 <div class="server-panel-left">
@@ -2883,7 +2884,7 @@
             </div>
           </div>
           <!-- Server Rack 2 -->
-          <div class="server-rack">
+          <div class="server-rack build">
             <div class="rack-housing">
               <div class="server-unit">
                 <div class="server-panel-left">
@@ -2972,7 +2973,7 @@
             </div>
           </div>
           <!-- Server Rack 3 -->
-          <div class="server-rack">
+          <div class="server-rack build">
             <div class="rack-housing">
               <div class="server-unit">
                 <div class="server-panel-left">
@@ -3047,7 +3048,7 @@
             </div>
           </div>
           <!-- Server Rack 4 -->
-          <div class="server-rack">
+          <div class="server-rack build">
             <div class="rack-housing">
               <div class="server-unit">
                 <div class="server-panel-left">
@@ -3108,7 +3109,7 @@
             </div>
           </div>
           <!-- Server Rack 5 -->
-          <div class="server-rack">
+          <div class="server-rack build">
             <div class="rack-housing">
               <div class="server-unit">
                 <div class="server-panel-left">
@@ -3169,7 +3170,7 @@
             </div>
           </div>
           <!-- Server Rack 6 -->
-          <div class="server-rack">
+          <div class="server-rack build">
             <div class="rack-housing">
               <div class="server-unit">
                 <div class="server-panel-left">
@@ -3244,7 +3245,7 @@
             </div>
           </div>
           <!-- Server Rack 7 -->
-          <div class="server-rack">
+          <div class="server-rack build">
             <div class="rack-housing">
               <div class="server-unit">
                 <div class="server-panel-left">
@@ -3333,7 +3334,7 @@
             </div>
           </div>
           <!-- Server Rack 8 -->
-          <div class="server-rack">
+          <div class="server-rack build">
             <div class="rack-housing">
               <div class="server-unit">
                 <div class="server-panel-left">
@@ -3641,15 +3642,22 @@
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const serverRacks = document.querySelectorAll(".server-rack");
+        const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-        // Make each rack clickable
+        // Racks start with the 'build' class already in the markup (so
+        // there's no flash of a visible rack before this script runs; see
+        // .server-rack.build in assets/css/index.css). Clicking still
+        // toggles it; the staggered timers below just remove it once to
+        // reveal each rack.
         serverRacks.forEach(function (rack, index) {
-          // Add 'build' class initially to hide them
-          rack.classList.add("build");
-
           rack.addEventListener("click", function () {
             rack.classList.toggle("build");
           });
+
+          if (prefersReducedMotion) {
+            rack.classList.remove("build");
+            return;
+          }
 
           // Staggered animation - REMOVE 'build' class to make them appear
           const delay = index * 100;
@@ -3658,31 +3666,64 @@
           }, 250 + delay);
         });
 
-        // LED Animation (intervals tracked to avoid memory leaks)
-        const ledIntervals = [];
-        function animateLEDs() {
-          const allLedGroups = document.querySelectorAll(".led-group");
-          allLedGroups.forEach(function (ledGroup) {
-            const leds = ledGroup.querySelectorAll(".led");
-            let currentIndex = 0;
-            const id = setInterval(function () {
-              leds.forEach(function (led) {
-                led.classList.add("off");
-              });
-              leds[currentIndex].classList.remove("off");
-              currentIndex = (currentIndex + 1) % leds.length;
-            }, 200);
-            ledIntervals.push(id);
-          });
+        // LED Animation (intervals tracked per led-group, keyed by element,
+        // to avoid memory leaks and so an IntersectionObserver can pause
+        // the ones that scroll offscreen).
+        const ledIntervals = new Map();
+        function startLed(ledGroup) {
+          if (ledIntervals.has(ledGroup)) return;
+          const leds = ledGroup.querySelectorAll(".led");
+          if (!leds.length) return;
+          let currentIndex = 0;
+          const id = setInterval(function () {
+            leds.forEach(function (led) {
+              led.classList.add("off");
+            });
+            leds[currentIndex].classList.remove("off");
+            currentIndex = (currentIndex + 1) % leds.length;
+          }, 200);
+          ledIntervals.set(ledGroup, id);
         }
-        window.addEventListener("beforeunload", function () {
+        function stopLed(ledGroup) {
+          const id = ledIntervals.get(ledGroup);
+          if (id) {
+            clearInterval(id);
+            ledIntervals.delete(ledGroup);
+          }
+        }
+        function stopAllLeds() {
           ledIntervals.forEach(function (id) {
             clearInterval(id);
           });
-        });
+          ledIntervals.clear();
+        }
+        window.addEventListener("beforeunload", stopAllLeds);
 
-        // Start LED animation after racks appear
-        setTimeout(animateLEDs, 500);
+        // Reduced motion: don't start the LED loops at all.
+        if (prefersReducedMotion) return;
+
+        // Start LED animation after racks appear, gated by visibility so
+        // racks scrolled offscreen stop ticking and resume when back in
+        // view.
+        setTimeout(function () {
+          const allLedGroups = document.querySelectorAll(".led-group");
+          if (!("IntersectionObserver" in window)) {
+            allLedGroups.forEach(startLed);
+            return;
+          }
+          const ledObserver = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                startLed(entry.target);
+              } else {
+                stopLed(entry.target);
+              }
+            });
+          });
+          allLedGroups.forEach(function (ledGroup) {
+            ledObserver.observe(ledGroup);
+          });
+        }, 500);
       });
     </script>
     <!-- ghosxt:mobile-cta-bar -->
