@@ -810,13 +810,13 @@ function resetChat() {
 
     // Show initial options again
     chatOptions.innerHTML = `
-        <button class="option-btn" onclick="startConversation(0)">
+        <button class="option-btn" data-scenario="0">
             <i class="fi fi-rs-error-bug"></i> Our website homepage is broken, we need to fix it ASAP
         </button>
-        <button class="option-btn" onclick="startConversation(1)">
+        <button class="option-btn" data-scenario="1">
             <i class="fi fi-rs-error-bug"></i> We got a suspicious email, might be a security breach
         </button>
-        <button class="option-btn" onclick="startConversation(2)">
+        <button class="option-btn" data-scenario="2">
             <i class="fi fi-rs-error-bug"></i> Our database server is down, losing money by the minute
         </button>
     `;
@@ -829,11 +829,30 @@ function resetChat() {
 function showResetButton() {
     const chatOptions = document.getElementById('chatOptions');
     chatOptions.innerHTML = `
-        <button class="reset-btn" type="button" onclick="resetChat()">
+        <button class="reset-btn" type="button">
             <i class="fi fi-rs-rotate-right"></i>
             Try Another Option
         </button>
     `;
     chatOptions.appendChild(buildPayoffCta());
     chatOptions.style.display = 'flex';
+}
+
+// Event delegation for the chat widget: the option buttons and the reset
+// button are re-rendered via innerHTML above, so listeners are bound once
+// on the stable #chatOptions container instead of inline event-handler
+// attributes on each button.
+const chatOptionsEl = document.getElementById('chatOptions');
+if (chatOptionsEl) {
+    chatOptionsEl.addEventListener('click', (e) => {
+        const optionBtn = e.target.closest('.option-btn[data-scenario]');
+        if (optionBtn) {
+            startConversation(Number(optionBtn.dataset.scenario));
+            return;
+        }
+        const resetBtn = e.target.closest('.reset-btn');
+        if (resetBtn) {
+            resetChat();
+        }
+    });
 }

@@ -127,6 +127,32 @@ city, or important page is added, removed, or renamed, and keep the phone,
 email, and pricing lines in sync with the rest of the site. It is not an
 indexable HTML page, so it is intentionally absent from `sitemap.xml`.
 
+## Content-Security-Policy script hashes
+
+`_headers` allows every first-party inline `<script>` and the one shared
+inline event-handler attribute by CSP hash instead of `'unsafe-inline'`.
+Regenerate the allowlist whenever any inline script's content changes, a
+page adds a new inline script, or an inline event-handler attribute
+(`onload=`, `onclick=`, etc) is added or edited anywhere in `*.html` or
+`blog/*.html`:
+
+```bash
+python3 scripts/compute-csp-hashes.py
+```
+
+The script scans every `*.html` and `blog/*.html` file, extracts the exact
+text of each inline `<script>` that has no `src` attribute and is not
+`type="application/ld+json"` (JSON-LD is data, not executed script, so it
+needs no hash), computes the base64 sha256 digest of each distinct body,
+and rewrites the `script-src` directive in `_headers` with `'self'`, the
+sorted hash list, `'unsafe-hashes'` plus the hash of the shared
+`onload="this.media='all'"` async-stylesheet attribute used on roughly 450
+`<link>` tags site-wide, and the existing third-party script hosts. Run
+`python3 scripts/compute-csp-hashes.py --check` in CI to fail the build if
+`_headers` drifts from what the current inline scripts hash to, instead of
+silently letting a new unlisted inline script get blocked (or, worse,
+prompting someone to re-add `'unsafe-inline'`).
+
 ## Asset minification
 
 `assets/css/*.css` and `assets/js/*.js` are the editable source of truth; the
