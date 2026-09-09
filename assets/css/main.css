@@ -1238,10 +1238,6 @@ footer {
   flex-direction: column;
 }
 
-footer.unlocked {
-  display: flex;
-}
-
 .footer-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

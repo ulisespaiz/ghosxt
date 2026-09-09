@@ -391,6 +391,64 @@ const solvedCount = document.getElementById('solvedCount');
 const successMessage = document.getElementById('successMessage');
 let problemsSolved = 0;
 
+// Payoff CTA shown after a completed chat or a full 5/5 solve.
+// Copy is limited to CLAUDE.md VERIFIED FACTS.
+function buildPayoffCta() {
+    const wrap = document.createElement('div');
+    wrap.className = 'chat-cta';
+    wrap.innerHTML =
+        '<p class="chat-real-help">Ghosxt is Ulises Paiz, based in Salinas. You talk directly to the owner, and every contract carries a 4-hour notification on actual or reasonably suspected critical incidents.</p>' +
+        '<a class="reset-btn" href="/contact">Book a call with the owner</a>';
+    return wrap;
+}
+
+function solveProblemBox(box, moveFocus) {
+    if (box.dataset.solved === 'true') return;
+    box.dataset.solved = 'true';
+    box.setAttribute('aria-disabled', 'true');
+
+    createParticles(box);
+    box.classList.add('solving');
+    problemsSolved++;
+    solvedCount.textContent = problemsSolved;
+
+    const remaining = Array.prototype.filter.call(
+        floatingBoxes,
+        (b) => b.dataset.solved !== 'true'
+    );
+
+    setTimeout(() => {
+        box.style.display = 'none';
+        if (moveFocus) {
+            if (remaining.length) {
+                remaining[0].focus();
+            } else {
+                const link = document.querySelector('#successState .reset-btn');
+                if (link) link.focus();
+            }
+        }
+    }, 100);
+
+    if (problemsSolved === 5) {
+        setTimeout(() => {
+            solutionBox.style.display = 'none';
+            const successState = document.getElementById('successState');
+            if (successState) {
+                successState.classList.add('show');
+            }
+            const solutionsSection = document.getElementById('solutionsSection');
+            if (solutionsSection) {
+                setTimeout(() => {
+                    solutionsSection.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }, 500);
+            }
+        }, 600);
+    }
+}
+
 floatingBoxes.forEach((box, index) => {
     let isDragging = false;
     let currentX;
@@ -405,6 +463,14 @@ floatingBoxes.forEach((box, index) => {
 
     box.addEventListener('mousedown', dragStart, false);
     box.addEventListener('touchstart', dragStart, { passive: false });
+
+    // Keyboard path: Enter or Space solves the box without dragging.
+    box.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+            e.preventDefault();
+            solveProblemBox(box, true);
+        }
+    });
 
     function dragStart(e) {
         const rect = box.getBoundingClientRect();
@@ -469,43 +535,11 @@ floatingBoxes.forEach((box, index) => {
         if (isDragging) {
             const boxRect = box.getBoundingClientRect();
             const solutionRect = solutionBox.getBoundingClientRect();
-            
+
             if (isColliding(boxRect, solutionRect)) {
-                createParticles(box);
-                box.classList.add('solving');
-                problemsSolved++;
-                solvedCount.textContent = problemsSolved;
-                
-                setTimeout(() => {
-                    box.style.display = 'none';
-                }, 100);
-                
-                if (problemsSolved === 5) {
-                    canScrollPastProblems = true;
-                    setTimeout(() => {
-                        solutionBox.style.display = 'none';
-                        const successState = document.getElementById('successState');
-                        successState.classList.add('show');
-                        
-                        // Unlock the rest of sections
-                        const testimonialSection = document.getElementById('testimonialSection');
-                        const solutionsSection = document.getElementById('solutionsSection');
-                        const efficiencySection = document.getElementById('efficiencySection');
-
-                        testimonialSection.classList.add('unlocked');
-                        solutionsSection.classList.add('unlocked');
-                        efficiencySection.classList.add('unlocked');
-
-                        setTimeout(() => {
-                            solutionsSection.scrollIntoView({ 
-                                behavior: 'smooth',
-                                block: 'start'
-                            });
-                        }, 500);
-                    }, 600);
-                }
+                solveProblemBox(box);
             }
-            
+
             solutionBox.classList.remove('drag-over');
         }
         
@@ -767,17 +801,6 @@ function startConversation(scenario) {
     });
 }
 
-function showResetButton() {
-    const chatOptions = document.getElementById('chatOptions');
-    chatOptions.innerHTML = `
-        <button class="reset-btn" onclick="resetChat()">
-            <i class="fi fi-rs-rotate-right"></i>
-            Try Another Option
-        </button>
-    `;
-    chatOptions.style.display = 'flex';
-}
-
 function resetChat() {
     const chatMessages = document.getElementById('chatMessages');
     const chatOptions = document.getElementById('chatOptions');
@@ -801,36 +824,16 @@ function resetChat() {
 }
 
 
-// Add this to your script.js file
-
-// Track if user has completed their first conversation
-let hasCompletedFirstConversation = false;
-
-function unlockRemainingSections() {
-    if (hasCompletedFirstConversation) return; // Already unlocked
-    
-    hasCompletedFirstConversation = true;
-    
-    const featuresStackSection = document.getElementById('featuresStackSection');
-    const footerSection = document.getElementById('footerSection');
-    
-    // Unlock all remaining sections
-    featuresStackSection.classList.add('unlocked');
-    footerSection.classList.add('unlocked');
-
-}
-
-// Modify the existing showResetButton function
+// Shown after the last support message in any chat scenario: the reset
+// control plus the payoff CTA that invites the visitor to book a call.
 function showResetButton() {
     const chatOptions = document.getElementById('chatOptions');
     chatOptions.innerHTML = `
-        <button class="reset-btn" onclick="resetChat()">
+        <button class="reset-btn" type="button" onclick="resetChat()">
             <i class="fi fi-rs-rotate-right"></i>
             Try Another Option
         </button>
     `;
+    chatOptions.appendChild(buildPayoffCta());
     chatOptions.style.display = 'flex';
-    
-    // Unlock remaining sections on first conversation completion
-    unlockRemainingSections();
 }
