@@ -7,20 +7,29 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from an engineer with DoD infrastructure experience.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Tue, 08 Sep 2026 20:30:51 +0000</lastBuildDate>
-    <pubDate>Tue, 08 Sep 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Thu, 10 Sep 2026 11:05:31 +0000</lastBuildDate>
+    <pubDate>Thu, 10 Sep 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
     <item>
-      <title>September 2026 Patch Tuesday: 966 Fixes, 2 Zero-Days, and What a Small Business Needs to Do</title>
+      <title>Employee Onboarding IT Security Checklist</title>
+      <link>https://ghosxt.com/blog/employee-onboarding-it-security-checklist-small-business</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/employee-onboarding-it-security-checklist-small-business</guid>
+      <pubDate>Thu, 10 Sep 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>A new hire's first week sets the security tone for their time at the company. What belongs in an IT onboarding checklist: access, device setup, training.</description>
+    </item>
+    <item>
+      <title>September 2026 Patch Tuesday: 966 Fixes, 2 Zero-Days</title>
       <link>https://ghosxt.com/blog/september-2026-patch-tuesday-966-fixes-2-zero-days-smb</link>
       <guid isPermaLink="true">https://ghosxt.com/blog/september-2026-patch-tuesday-966-fixes-2-zero-days-smb</guid>
       <pubDate>Tue, 08 Sep 2026 00:00:00 +0000</pubDate>
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
-      <description>September 2026 Patch Tuesday: 966 fixes and 2 actively exploited zero-days, both local privilege escalation, plus a PowerPoint preview-pane RCE. What to patch first.</description>
+      <description>September 2026 Patch Tuesday: 966 fixes and 2 actively exploited zero-days, both local privilege escalation, plus a PowerPoint preview-pane RCE.</description>
     </item>
     <item>
-      <title>Business Continuity Plan for Small Business: What Actually Belongs In One (2026)</title>
+      <title>Business Continuity Plan for Small Business</title>
       <link>https://ghosxt.com/blog/business-continuity-plan-small-business-2026</link>
       <guid isPermaLink="true">https://ghosxt.com/blog/business-continuity-plan-small-business-2026</guid>
       <pubDate>Tue, 08 Sep 2026 00:00:00 +0000</pubDate>
@@ -29,169 +38,169 @@
       <description>A backup restores your data. A continuity plan covers everything else: who decides, how the team communicates, and what runs while systems are down.</description>
     </item>
     <item>
-      <title>AI Meeting Notetakers Are Recording More Than the Meeting (2026)</title>
+      <title>AI Meeting Notetakers and Data Privacy</title>
       <link>https://ghosxt.com/blog/ai-meeting-notetakers-data-privacy-small-business-2026</link>
       <guid isPermaLink="true">https://ghosxt.com/blog/ai-meeting-notetakers-data-privacy-small-business-2026</guid>
       <pubDate>Mon, 07 Sep 2026 00:00:00 +0000</pubDate>
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
-      <description>Zoom AI Companion, Teams recap bots, and other AI notetakers capture and store everything said on a call. What a small business needs to control before turning them on.</description>
+      <description>Zoom AI Companion, Teams recap bots, and other AI notetakers capture and store everything said on a call.</description>
     </item>
     <item>
-      <title>AI Browser Agents at Work: The New Access Risk Small Businesses Aren't Watching (2026)</title>
+      <title>AI Browser Agents and Access Risk at Work</title>
       <link>https://ghosxt.com/blog/ai-browser-agents-small-business-security-risk-2026</link>
       <guid isPermaLink="true">https://ghosxt.com/blog/ai-browser-agents-small-business-security-risk-2026</guid>
       <pubDate>Sun, 06 Sep 2026 00:00:00 +0000</pubDate>
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
-      <description>Agentic AI browsers can log in, click, and fill forms using an employee's own session. What that changes about small-business risk, and how to put guardrails on it.</description>
+      <description>Agentic AI browsers can log in, click, and fill forms using an employee's own session. What that changes about small-business risk, and how to put.</description>
     </item>
     <item>
-      <title>Data Retention and Destruction Policy for Small Business: What to Keep, What to Delete (2026)</title>
+      <title>Data Retention and Destruction Policy for Small Business</title>
       <link>https://ghosxt.com/blog/data-retention-destruction-policy-small-business-2026</link>
       <guid isPermaLink="true">https://ghosxt.com/blog/data-retention-destruction-policy-small-business-2026</guid>
       <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
-      <description>Keeping every file forever is not a safety net, it's a bigger breach if something goes wrong. What a data retention and destruction policy should cover and how to write one.</description>
+      <description>Keeping every file forever is not a safety net, it's a bigger breach if something goes wrong.</description>
     </item>
     <item>
-      <title>AI Acceptable Use Policy for Small Business: What Belongs In It (2026)</title>
+      <title>AI Acceptable Use Policy for Small Business</title>
       <link>https://ghosxt.com/blog/ai-acceptable-use-policy-small-business-2026</link>
       <guid isPermaLink="true">https://ghosxt.com/blog/ai-acceptable-use-policy-small-business-2026</guid>
       <pubDate>Fri, 28 Aug 2026 00:00:00 +0000</pubDate>
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
-      <description>Employees are already pasting company data into AI tools with or without a policy. What an AI acceptable use policy should actually say, and how to get it followed.</description>
+      <description>Employees are already pasting company data into AI tools with or without a policy. What an AI acceptable use policy should actually say, and how to get.</description>
     </item>
     <item>
-      <title>Zero-Touch Mac Deployment for Small Business: What Apple Business Manager Does (2026)</title>
+      <title>Zero-Touch Mac Deployment for Small Business</title>
       <link>https://ghosxt.com/blog/apple-business-manager-mac-fleet-small-business-2026</link>
       <guid isPermaLink="true">https://ghosxt.com/blog/apple-business-manager-mac-fleet-small-business-2026</guid>
       <pubDate>Thu, 27 Aug 2026 00:00:00 +0000</pubDate>
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Managed IT</category>
-      <description>A new Mac can arrive already enrolled, encrypted, and configured before anyone opens the box. How Apple Business Manager and zero-touch enrollment work, and what it takes to set up.</description>
+      <description>A new Mac can arrive already enrolled, encrypted, and configured before anyone opens the box.</description>
     </item>
     <item>
-      <title>Exposed RDP: The Open Door Ransomware Gangs Scan For First (2026)</title>
+      <title>Exposed RDP: The Door Ransomware Gangs Scan For</title>
       <link>https://ghosxt.com/blog/exposed-rdp-remote-desktop-protocol-small-business-2026</link>
       <guid isPermaLink="true">https://ghosxt.com/blog/exposed-rdp-remote-desktop-protocol-small-business-2026</guid>
       <pubDate>Tue, 25 Aug 2026 00:00:00 +0000</pubDate>
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
-      <description>Port 3389 open to the internet is still one of the most common ways ransomware gets into a small business. Why exposed RDP is so dangerous, and what to use instead.</description>
+      <description>Port 3389 open to the internet is still one of the most common ways ransomware gets into a small business.</description>
     </item>
     <item>
-      <title>Google Workspace for Small Business: The Security Settings to Turn On First (2026)</title>
+      <title>Google Workspace for Small Business</title>
       <link>https://ghosxt.com/blog/google-workspace-small-business-security-settings-2026</link>
       <guid isPermaLink="true">https://ghosxt.com/blog/google-workspace-small-business-security-settings-2026</guid>
       <pubDate>Mon, 24 Aug 2026 00:00:00 +0000</pubDate>
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Google Workspace</category>
-      <description>Gmail and Drive work out of the box, but Google Workspace ships many of its best protections off. The security settings a small business should turn on first, in plain language.</description>
+      <description>Gmail and Drive work out of the box, but Google Workspace ships many of its best protections off.</description>
     </item>
     <item>
-      <title>Multi-Factor Authentication for Small Business: Which Type to Use in 2026</title>
+      <title>Multi-Factor Authentication for Small Business</title>
       <link>https://ghosxt.com/blog/multi-factor-authentication-small-business-2026</link>
       <guid isPermaLink="true">https://ghosxt.com/blog/multi-factor-authentication-small-business-2026</guid>
       <pubDate>Fri, 21 Aug 2026 00:00:00 +0000</pubDate>
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
-      <description>SMS codes can be intercepted and push prompts can be worn down by fatigue attacks. Which type of MFA actually protects a small business, and how to roll it out.</description>
+      <description>SMS codes can be intercepted and push prompts can be worn down by fatigue attacks. Which type of MFA actually protects a small business, and how to roll.</description>
     </item>
     <item>
-      <title>IT Budget Planning for Small Business: A Realistic 2027 Tech Budget</title>
+      <title>IT Budget Planning for Small Business</title>
       <link>https://ghosxt.com/blog/it-budget-planning-small-business-2027</link>
       <guid isPermaLink="true">https://ghosxt.com/blog/it-budget-planning-small-business-2027</guid>
       <pubDate>Thu, 20 Aug 2026 00:00:00 +0000</pubDate>
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Managed IT</category>
-      <description>Most small business IT budgets are a guess carried over from last year. How to build a realistic 2027 tech budget: the line items owners forget, and where a vCIO fits.</description>
+      <description>Most small business IT budgets are a guess carried over from last year. How to build a realistic 2027 tech budget: the line items owners forget, and where.</description>
     </item>
     <item>
-      <title>Holiday Season Cybersecurity: The Small Business Prep Checklist (2026)</title>
+      <title>Holiday Season Cybersecurity Checklist</title>
       <link>https://ghosxt.com/blog/holiday-season-cybersecurity-checklist-small-business-2026</link>
       <guid isPermaLink="true">https://ghosxt.com/blog/holiday-season-cybersecurity-checklist-small-business-2026</guid>
       <pubDate>Wed, 19 Aug 2026 00:00:00 +0000</pubDate>
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
-      <description>Cyberattacks on small businesses spike every November and December while support teams run thin. The security checklist to run before Black Friday hits, not during it.</description>
+      <description>Cyberattacks on small businesses spike every November and December while support teams run thin.</description>
     </item>
     <item>
-      <title>Fake Remote Employees: Deepfake Hiring Fraud and How to Spot It (2026)</title>
+      <title>Fake Remote Employees and Hiring Fraud</title>
       <link>https://ghosxt.com/blog/fake-remote-employee-deepfake-hiring-fraud-small-business-2026</link>
       <guid isPermaLink="true">https://ghosxt.com/blog/fake-remote-employee-deepfake-hiring-fraud-small-business-2026</guid>
       <pubDate>Tue, 18 Aug 2026 00:00:00 +0000</pubDate>
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
-      <description>Fraud rings are using deepfake video and stolen identities to get hired as remote IT and admin staff. How fake remote employee scams work, the red flags in a hiring process, and the access controls that limit the damage.</description>
+      <description>Fraud rings are using deepfake video and stolen identities to get hired as remote IT and admin staff.</description>
     </item>
     <item>
-      <title>IT Asset Management for Small Business: Tracking the Devices You Don't Know You Have (2026)</title>
+      <title>IT Asset Management for Small Business</title>
       <link>https://ghosxt.com/blog/it-asset-management-small-business-2026</link>
       <guid isPermaLink="true">https://ghosxt.com/blog/it-asset-management-small-business-2026</guid>
       <pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate>
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
-      <description>Most small businesses can't say how many laptops, licenses, or old accounts they actually have. What IT asset management tracks, why it's a security control, and how to start without new software.</description>
+      <description>Most small businesses can't say how many laptops, licenses, or old accounts they actually have.</description>
     </item>
     <item>
-      <title>Penetration Testing for Small Business: What It Tests, How Often, and What It Costs (2026)</title>
+      <title>Penetration Testing for Small Business</title>
       <link>https://ghosxt.com/blog/penetration-testing-small-business-2026</link>
       <guid isPermaLink="true">https://ghosxt.com/blog/penetration-testing-small-business-2026</guid>
       <pubDate>Fri, 14 Aug 2026 00:00:00 +0000</pubDate>
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
-      <description>A vulnerability scan finds what's known; a penetration test finds what's exploitable. What a pentest actually covers, realistic pricing, and how often PCI, CMMC, and cyber insurance require one.</description>
+      <description>A vulnerability scan finds what's known; a penetration test finds what's exploitable. What a pentest actually covers, realistic pricing, and how often.</description>
     </item>
     <item>
-      <title>What Is a vCIO? Virtual CIO Services for Small Business, Explained (2026)</title>
+      <title>What Is a vCIO? Virtual CIO for Small Business</title>
       <link>https://ghosxt.com/blog/vcio-virtual-cio-small-business-2026</link>
       <guid isPermaLink="true">https://ghosxt.com/blog/vcio-virtual-cio-small-business-2026</guid>
       <pubDate>Thu, 13 Aug 2026 00:00:00 +0000</pubDate>
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Managed IT</category>
-      <description>A vCIO sets your IT budget, roadmap, and risk priorities without a full-time salary. What a virtual CIO actually does, how it differs from IT support and managed IT, and when a small business is ready for one.</description>
+      <description>A vCIO sets your IT budget, roadmap, and risk priorities without a full-time salary. What a virtual CIO actually does, how it differs from IT support.</description>
     </item>
     <item>
-      <title>DNS Filtering for Small Business: The Cheapest Security Control You're Probably Not Using (2026)</title>
+      <title>DNS Filtering for Small Business</title>
       <link>https://ghosxt.com/blog/dns-filtering-small-business-2026</link>
       <guid isPermaLink="true">https://ghosxt.com/blog/dns-filtering-small-business-2026</guid>
       <pubDate>Wed, 12 Aug 2026 00:00:00 +0000</pubDate>
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
-      <description>DNS filtering blocks malicious and phishing sites before a browser ever loads them, for a few dollars per device a month. What it actually catches, what it doesn't, and how to turn it on without breaking anything.</description>
+      <description>DNS filtering blocks malicious and phishing sites before a browser ever loads them, for a few dollars per device a month.</description>
     </item>
     <item>
-      <title>Privileged Access Management for Small Business: Getting Admin Rights Under Control (2026)</title>
+      <title>Privileged Access Management for Small Business</title>
       <link>https://ghosxt.com/blog/privileged-access-management-small-business-2026</link>
       <guid isPermaLink="true">https://ghosxt.com/blog/privileged-access-management-small-business-2026</guid>
       <pubDate>Tue, 11 Aug 2026 00:00:00 +0000</pubDate>
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
-      <description>Almost everyone at a small business has more access than their job requires, and most owners have no idea how many admin accounts actually exist. What privileged access management fixes, and how to start without a big budget.</description>
+      <description>Almost everyone at a small business has more access than their job requires, and most owners have no idea how many admin accounts actually exist.</description>
     </item>
     <item>
-      <title>August 2026 Patch Tuesday: 400 Fixes, 3 Zero-Days, and What a Small Business Needs to Do</title>
+      <title>August 2026 Patch Tuesday: 400 Fixes, 3 Zero-Days</title>
       <link>https://ghosxt.com/blog/august-2026-patch-tuesday-400-fixes-3-zero-days-smb</link>
       <guid isPermaLink="true">https://ghosxt.com/blog/august-2026-patch-tuesday-400-fixes-3-zero-days-smb</guid>
       <pubDate>Tue, 11 Aug 2026 00:00:00 +0000</pubDate>
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
-      <description>August 2026 Patch Tuesday: 400 fixes and 3 zero-days, including an actively exploited Windows flaw and the SharePoint RCE chain. What a small business should do.</description>
+      <description>August 2026 Patch Tuesday: 400 fixes and 3 zero-days, including an actively exploited Windows flaw and the SharePoint RCE chain.</description>
     </item>
     <item>
-      <title>Attack Surface Management for Small Business: What's Exposed to the Internet Right Now (2026)</title>
+      <title>Attack Surface Management for Small Business</title>
       <link>https://ghosxt.com/blog/attack-surface-management-small-business-2026</link>
       <guid isPermaLink="true">https://ghosxt.com/blog/attack-surface-management-small-business-2026</guid>
       <pubDate>Mon, 10 Aug 2026 00:00:00 +0000</pubDate>
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
-      <description>Old subdomains, forgotten VPN portals, an ex-employee's cloud login, a test server nobody decommissioned. What attack surface management finds, and why most small businesses have never actually looked.</description>
+      <description>Old subdomains, forgotten VPN portals, an ex-employee's cloud login, a test server nobody decommissioned.</description>
     </item>
     <item>
-      <title>Data Loss Prevention for Small Business: Stopping Data From Walking Out the Door (2026)</title>
+      <title>Data Loss Prevention for Small Business</title>
       <link>https://ghosxt.com/blog/data-loss-prevention-small-business-2026</link>
       <guid isPermaLink="true">https://ghosxt.com/blog/data-loss-prevention-small-business-2026</guid>
       <pubDate>Sat, 08 Aug 2026 00:00:00 +0000</pubDate>
@@ -200,34 +209,34 @@
       <description>Where small business data actually leaks: email, personal cloud accounts, USB drives, AI chatbots, and how to stop it with tools you already pay for.</description>
     </item>
     <item>
-      <title>Patch Management for Small Business: The Control Everyone Skips Until It's Too Late (2026)</title>
+      <title>Patch Management for Small Business</title>
       <link>https://ghosxt.com/blog/patch-management-small-business-2026</link>
       <guid isPermaLink="true">https://ghosxt.com/blog/patch-management-small-business-2026</guid>
       <pubDate>Thu, 06 Aug 2026 00:00:00 +0000</pubDate>
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
-      <description>Most breaches don't exploit a mystery flaw, they exploit a vulnerability that already had a patch available. Why patch management gets skipped at small businesses, and how to build one that actually works.</description>
+      <description>Most breaches don't exploit a mystery flaw, they exploit a vulnerability that already had a patch available.</description>
     </item>
     <item>
-      <title>Tailgating and Physical Access: The Low-Tech Breach Small Businesses Don't Plan For (2026)</title>
+      <title>Tailgating and Physical Access Security</title>
       <link>https://ghosxt.com/blog/tailgating-physical-security-small-business-2026</link>
       <guid isPermaLink="true">https://ghosxt.com/blog/tailgating-physical-security-small-business-2026</guid>
       <pubDate>Wed, 05 Aug 2026 00:00:00 +0000</pubDate>
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
-      <description>A stranger holding a box and a smile gets past your locked door more often than any firewall gets bypassed. How tailgating works and how a small business stops it.</description>
+      <description>A stranger holding a box and a smile gets past your locked door more often than any firewall gets bypassed.</description>
     </item>
     <item>
-      <title>Software Supply Chain Attacks: When a Trusted Vendor's Update Becomes Your Breach (2026)</title>
+      <title>Software Supply Chain Attacks for SMBs</title>
       <link>https://ghosxt.com/blog/software-supply-chain-attacks-small-business-2026</link>
       <guid isPermaLink="true">https://ghosxt.com/blog/software-supply-chain-attacks-small-business-2026</guid>
       <pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
-      <description>A single compromised update from a vendor you trust can install malware across your business with zero clicks and no phishing email. How supply chain attacks work and how to catch one.</description>
+      <description>A single compromised update from a vendor you trust can install malware across your business with zero clicks and no phishing email.</description>
     </item>
     <item>
-      <title>Network Printer and Copier Security: The Unpatched Server in Your Copy Room (2026)</title>
+      <title>Network Printer and Copier Security for SMBs</title>
       <link>https://ghosxt.com/blog/network-printer-copier-security-small-business-2026</link>
       <guid isPermaLink="true">https://ghosxt.com/blog/network-printer-copier-security-small-business-2026</guid>
       <pubDate>Mon, 03 Aug 2026 00:00:00 +0000</pubDate>
@@ -236,16 +245,16 @@
       <description>A network printer or copier is a full computer with a hard drive and years of unpatched firmware, and almost nobody treats it as one. What that exposes.</description>
     </item>
     <item>
-      <title>POS Malware and Card Skimming: The Hidden Threat to Restaurants and Retailers (2026)</title>
+      <title>POS Malware and Card Skimming for Small Business</title>
       <link>https://ghosxt.com/blog/pos-malware-card-skimming-small-business-2026</link>
       <guid isPermaLink="true">https://ghosxt.com/blog/pos-malware-card-skimming-small-business-2026</guid>
       <pubDate>Sun, 02 Aug 2026 00:00:00 +0000</pubDate>
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
-      <description>A compromised POS system or a skimmer clipped onto a card reader can steal customer card data for months before anyone notices. How it happens and how to stop it.</description>
+      <description>A compromised POS system or a skimmer clipped onto a card reader can steal customer card data for months before anyone notices.</description>
     </item>
     <item>
-      <title>Cloud Misconfiguration: The Silent Data Leak in Your Sharing Settings (2026)</title>
+      <title>Cloud Misconfiguration and Sharing Settings</title>
       <link>https://ghosxt.com/blog/cloud-misconfiguration-small-business-2026</link>
       <guid isPermaLink="true">https://ghosxt.com/blog/cloud-misconfiguration-small-business-2026</guid>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate>
@@ -254,31 +263,22 @@
       <description>An 'anyone with the link' share or a forgotten guest account can expose company data for months, no hacker required. How it happens and how to fix it.</description>
     </item>
     <item>
-      <title>Password Spray Attacks: How One Slow-Motion Guess Slips Past Lockout Policies (2026)</title>
+      <title>Password Spray Attacks on Small Business</title>
       <link>https://ghosxt.com/blog/password-spray-attacks-small-business-2026</link>
       <guid isPermaLink="true">https://ghosxt.com/blog/password-spray-attacks-small-business-2026</guid>
       <pubDate>Fri, 31 Jul 2026 00:00:00 +0000</pubDate>
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
-      <description>Password spraying tries one common password against hundreds of accounts, so it never trips a lockout policy. How the attack works and what actually stops it.</description>
+      <description>Password spraying tries one common password against hundreds of accounts, so it never trips a lockout policy.</description>
     </item>
     <item>
-      <title>Insider Threats: The Cybersecurity Risk Already Inside Your Business (2026)</title>
+      <title>Insider Threats for Small Business</title>
       <link>https://ghosxt.com/blog/insider-threat-small-business-2026</link>
       <guid isPermaLink="true">https://ghosxt.com/blog/insider-threat-small-business-2026</guid>
       <pubDate>Thu, 30 Jul 2026 00:00:00 +0000</pubDate>
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>Most small business security spending targets outsiders, but a careless click or a departing hire's laptop does as much damage. How insider threats work.</description>
-    </item>
-    <item>
-      <title>Ransomware Negotiation: Should Your Small Business Ever Pay? (2026)</title>
-      <link>https://ghosxt.com/blog/ransomware-negotiation-should-you-pay-small-business-2026</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/ransomware-negotiation-should-you-pay-small-business-2026</guid>
-      <pubDate>Wed, 29 Jul 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>What actually happens during a ransomware negotiation, why paying doesn't guarantee your data back, and what a small business must settle before wiring a cent.</description>
     </item>
   </channel>
 </rss>
