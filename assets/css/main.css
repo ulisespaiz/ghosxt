@@ -431,7 +431,12 @@ canvas {
   justify-content: center;
   cursor: pointer;
   z-index: 100000;
-  transition: all 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    translate 0.4s ease,
+    opacity 0.3s ease,
+    box-shadow 0.3s ease,
+    visibility 0.3s ease;
   opacity: 0;
   visibility: hidden;
   transform: translateY(20px);
@@ -529,7 +534,9 @@ canvas {
   font-size: 0.875rem;
   color: var(--ghosxt-black);
   text-decoration: underline;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
   padding: 5px 0;
   transition: opacity 0.2s ease;
 }
@@ -576,11 +583,11 @@ canvas {
   box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.3);
 }
 
+/* Lift above the cookie banner via `translate`, which composes
+   independently of the `transform` used for the show/hide and hover/active
+   states below, and never touches `bottom` (no layout-shift trigger). */
 .cookie-banner.visible ~ .scroll-to-top {
-  bottom: 140px;
-  transition:
-    bottom 0.4s ease,
-    all 0.3s ease;
+  translate: 0 -108px;
 }
 
 /* ------ TOP BANNER ------ */
@@ -1238,10 +1245,6 @@ footer {
   flex-direction: column;
 }
 
-footer.unlocked {
-  display: flex;
-}
-
 .footer-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -1411,8 +1414,19 @@ footer.unlocked {
     padding: 1.25rem 16px;
   }
 
+  /* Tighten the stacked content/actions layout (see the 968px rule above)
+     so the banner doesn't run to a third of a small mobile viewport;
+     text, colors and fonts are unchanged, only the surrounding spacing. */
+  .cookie-banner-container {
+    gap: 0.75rem;
+  }
+
   .cookie-content {
     gap: 0.75rem;
+  }
+
+  .cookie-text {
+    gap: 0.3rem;
   }
 
   .cookie-icon {
@@ -1426,6 +1440,7 @@ footer.unlocked {
 
   .cookie-message {
     font-size: 0.875rem;
+    line-height: 1.4;
   }
 
   .cookie-link {
@@ -1444,19 +1459,35 @@ footer.unlocked {
   .cookie-btn-primary:hover {
     box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.3);
   }
-
-  .cookie-banner.visible ~ .scroll-to-top {
-    bottom: 120px;
-  }
 }
 
 @media (max-width: 480px) {
   .cookie-banner {
-    padding: 1rem 16px;
+    padding: 0.4rem 16px;
+  }
+
+  .cookie-banner-container {
+    gap: 0.2rem;
+  }
+
+  .cookie-content {
+    gap: 0.5rem;
+  }
+
+  .cookie-text {
+    gap: 0.1rem;
+  }
+
+  /* Decorative only (not the brand mark): dropped at this width so the
+     message gets the full row's width instead of sharing it with a
+     40px-wide circle, which keeps the wrap to fewer lines. */
+  .cookie-icon {
+    display: none;
   }
 
   .cookie-message {
     font-size: 0.8rem;
+    line-height: 1.2;
   }
 
   .cookie-actions {
@@ -1466,10 +1497,6 @@ footer.unlocked {
   .cookie-btn {
     padding: 0.45rem 0.875rem;
     font-size: 0.8rem;
-  }
-
-  .cookie-banner.visible ~ .scroll-to-top {
-    bottom: 110px;
   }
 }
 
@@ -1910,7 +1937,9 @@ footer.unlocked {
   font-size: 0.78rem;
   color: var(--text-inverse-secondary);
   text-decoration: none;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
   padding: 6px 0;
   transition: color 0.2s ease;
   z-index: 100;
@@ -2025,18 +2054,6 @@ footer.unlocked {
 /* Remove outline for mouse users, keep for keyboard */
 :focus:not(:focus-visible) {
   outline: none;
-}
-
-/* ------ PERFORMANCE: Reduced Motion (WCAG 2.3.3) ------ */
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
 }
 
 /* ------ PERFORMANCE: Images ------ */
@@ -2155,7 +2172,8 @@ summary:focus-visible,
   border-radius: 2px;
 }
 
-/* ------ ACCESSIBILITY: respect reduced-motion preference ------ */
+/* ------ PERFORMANCE / ACCESSIBILITY: respect reduced-motion preference
+   (WCAG 2.3.3). Single merged block, previously duplicated. ------ */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -2263,6 +2281,18 @@ summary:focus-visible,
 }
 
 @media (max-width: 968px) {
+  :root {
+    /* Rendered height of .mobile-cta-bar: 44px min-height content row +
+       8px top padding + 8px bottom padding + 1px top border. The bar's own
+       bottom-inset padding (env(safe-area-inset-bottom)) is added
+       separately below so it isn't double-counted. */
+    --mobile-cta-bar-height: 61px;
+    /* Worst-case rendered height of the compacted mobile cookie banner
+       (task target: <=130px at 390px with real fonts) plus a small
+       clearance gap, used below to keep the scroll-to-top button clear of
+       the banner without a font-dependent JS measurement. */
+    --mobile-cookie-banner-clearance: 146px;
+  }
   .mobile-cta-bar {
     display: flex;
     position: fixed;
@@ -2306,6 +2336,13 @@ summary:focus-visible,
   .scroll-to-top {
     bottom: 76px !important;
   }
+  /* Override the desktop-tuned -108px magic number (see the rule above):
+     at this width .scroll-to-top's own baseline bottom is 76px (not the
+     desktop 32px) and the banner sits above the mobile CTA bar, so derive
+     the lift from the two mobile variables instead of a fixed constant. */
+  .cookie-banner.visible ~ .scroll-to-top {
+    translate: 0 calc(-1 * (var(--mobile-cta-bar-height) + var(--mobile-cookie-banner-clearance)));
+  }
   /* Avoid the bar covering the page footer / form action area */
   body {
     padding-bottom: calc(88px + env(safe-area-inset-bottom));
@@ -2314,10 +2351,17 @@ summary:focus-visible,
     scroll-padding-bottom: 88px;
   }
   /* Keep the primary Call/Book CTAs above the cookie banner instead of
-     letting it cover them. Height is measured in JS (assets/js/main.js)
-     since the banner's rendered height varies with its wrapped text. */
-  .cookie-banner.visible ~ .mobile-cta-bar {
-    bottom: var(--cookie-banner-height, 140px);
+     letting it cover them. The banner keeps its default bottom: 0 (never
+     display:none, per main.js) and is lifted only while shown, via
+     `translate`, which composes independently of the `transform` used for
+     the show/hide state, so this causes no layout shift either way and the
+     hidden (translateY(100%)) banner no longer overlaps the bar. */
+  .cookie-banner.visible {
+    translate: 0 calc(-1 * (var(--mobile-cta-bar-height) + env(safe-area-inset-bottom)));
+  }
+  /* No bar on the contact page, so the banner sits flush at the bottom. */
+  body.no-mobile-cta-bar .cookie-banner.visible {
+    translate: 0 0;
   }
 }
 

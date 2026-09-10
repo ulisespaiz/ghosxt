@@ -2,7 +2,7 @@
 
 Every agent working in this repo must read this file first. The VERIFIED FACTS below are the only source of truth. Anything on the site that contradicts them is a bug.
 
-Branch note: in this remote session the working branch is `claude/ghosxt-ai-search-audit-97wpuc`, which serves as the `geo-audit` branch named in HOUSE RULES. All commits go there, and only the PM commits.
+Branch note: in this remote session the working branch is `claude/website-audit-multi-agent-fshxoo`, which serves as the `geo-audit` branch named in HOUSE RULES. All commits go there, and only the PM commits.
 
 ## VERIFIED FACTS (only source of truth; anything on the site that contradicts these is a bug)
 
@@ -19,7 +19,7 @@ Branch note: in this remote session the working branch is `claude/ghosxt-ai-sear
 
 ## HOUSE RULES
 
-No CSS, font, color, or layout changes. No em dashes in anything written. No new city or vertical pages in this pass. Hidden crawlable text uses an sr-only utility, never display:none. Anything uncertain is tagged [VERIFY]. Never invent a client, a number, a story, a quote, or a capability. No vendor names, no clearance level, no dental, no Cisco certification. Work on branch geo-audit. Only the PM commits.
+CSS changes are allowed in this pass only for structural work: layout stability, animation performance, reduced motion, tap targets, and mobile chrome. No font, color, or visual identity changes. No em dashes in anything written. No new city or vertical pages in this pass. Hidden crawlable text uses an sr-only utility, never display:none. Anything uncertain is tagged [VERIFY]. Never invent a client, a number, a story, a quote, or a capability. No vendor names, no clearance level, no dental, no Cisco certification. Work on branch geo-audit. Only the PM commits.
 
 ## PHASE 4 DECISIONS (approved by Uli; these govern all fixes)
 

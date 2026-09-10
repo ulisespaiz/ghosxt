@@ -46,12 +46,22 @@ function escapeHtml(s) {
     .replace(/'/g, "&#39;");
 }
 
-function isAllowedOrigin(request, env) {
+// failClosed controls what happens when ALLOWED_ORIGINS is unset or resolves
+// to an empty list. handleTrack passes no options (fail-open: a best-effort
+// analytics beacon should not 403 just because the var was never set).
+// handleContact passes { failClosed: true } so the same unset/empty state
+// blocks the request instead of admitting it, because a forged or missing
+// Origin must never reach Turnstile or Resend on the form-submission route.
+function isAllowedOrigin(request, env, { failClosed = false } = {}) {
   const allowed = (env.ALLOWED_ORIGINS || "")
     .split(",")
     .map((s) => s.trim())
     .filter(Boolean);
   if (allowed.length === 0) {
+    if (failClosed) {
+      console.warn("ALLOWED_ORIGINS is unset or empty; failing closed for this route");
+      return false;
+    }
     console.warn("ALLOWED_ORIGINS is unset \u2014 origin check disabled (fail-open); set it in production");
     return true;
   }
@@ -67,7 +77,7 @@ function isAllowedOrigin(request, env) {
   return false;
 }
 
-async function verifyTurnstile(token, ip, secret) {
+async function verifyTurnstile(token, ip, secret, allowedHostnames) {
   const body = new FormData();
   body.append("secret", secret);
   body.append("response", token);
@@ -78,7 +88,41 @@ async function verifyTurnstile(token, ip, secret) {
   );
   if (!res.ok) return { ok: false };
   const data = await res.json();
-  return { ok: data.success === true, data };
+  const errorCodes = Array.isArray(data["error-codes"]) ? data["error-codes"] : [];
+  if (errorCodes.length > 0) {
+    console.warn("Turnstile siteverify returned error-codes", errorCodes);
+  }
+  // siteverify echoes back the hostname the widget was solved on. Checking
+  // it against the hostnames we serve the form on (derived from
+  // ALLOWED_ORIGINS, so apex and www are both accepted) catches a token
+  // solved on a different site (e.g. a copied widget embed) from being
+  // replayed here, even though it independently passed Cloudflare's check.
+  // A response with no hostname field (testing sitekeys) is not rejected.
+  const hostnameOk =
+    !data.hostname || allowedHostnames.length === 0 || allowedHostnames.includes(data.hostname);
+  if (data.success === true && !hostnameOk) {
+    console.warn("Turnstile token solved on unexpected hostname", {
+      expected: allowedHostnames,
+      got: data.hostname,
+    });
+  }
+  return { ok: data.success === true && hostnameOk, data };
+}
+
+// Hostnames of every entry in ALLOWED_ORIGINS (invalid entries skipped).
+function allowedHostnamesFromEnv(env) {
+  return (env.ALLOWED_ORIGINS || "")
+    .split(",")
+    .map((s) => s.trim())
+    .filter(Boolean)
+    .map((origin) => {
+      try {
+        return new URL(origin).hostname;
+      } catch {
+        return null;
+      }
+    })
+    .filter(Boolean);
 }
 
 async function sendViaResend(env, payload) {
@@ -107,18 +151,38 @@ async function handleContact(request, env) {
   if (request.method !== "POST") {
     return jsonResponse(405, { error: "Method Not Allowed", allow: "POST" });
   }
-  // ALLOWED_ORIGINS is included here (rather than left to isAllowedOrigin's
-  // shared default) so a missing/empty value fails closed for this route:
-  // isAllowedOrigin() fails open when unset, which is intentional for
-  // handleTrack but not safe for a form submission endpoint.
+  // ALLOWED_ORIGINS is required here (rather than left to isAllowedOrigin's
+  // shared fail-open default) so a missing value can't silently admit every
+  // origin on this route: fail-open is intentional for handleTrack but not
+  // safe for a form submission endpoint. The failClosed option below is a
+  // second layer on top of this: it also blocks the request if
+  // ALLOWED_ORIGINS is set but resolves to no usable entries (e.g. only
+  // commas/whitespace), and it is what actually rejects a forged or missing
+  // Origin/Referer once ALLOWED_ORIGINS is validly set.
   const missing = ["RESEND_API_KEY", "TURNSTILE_SECRET_KEY", "CONTACT_TO_EMAIL", "CONTACT_FROM_EMAIL", "ALLOWED_ORIGINS"]
     .filter((k) => !env[k]);
   if (missing.length > 0) {
     console.error("Missing required env vars", missing);
     return jsonResponse(500, { error: "Server misconfigured" });
   }
-  if (!isAllowedOrigin(request, env)) {
+  if (!isAllowedOrigin(request, env, { failClosed: true })) {
     return jsonResponse(403, { error: "Forbidden" });
+  }
+
+  // Rate limiting via the Workers Rate Limiting binding. Skipped when the
+  // binding is absent (e.g. local `wrangler dev` without it configured) so
+  // local testing isn't blocked by a missing binding.
+  if (env.CONTACT_RATE_LIMIT) {
+    // Behind Cloudflare the header is always present; if it is not, refuse
+    // rather than pool every header-less caller into one shared bucket.
+    const ip = request.headers.get("CF-Connecting-IP");
+    if (!ip) {
+      return jsonResponse(403, { error: "Forbidden" });
+    }
+    const { success } = await env.CONTACT_RATE_LIMIT.limit({ key: ip });
+    if (!success) {
+      return jsonResponse(429, { error: "Too many requests" });
+    }
   }
 
   const contentType = request.headers.get("Content-Type") || "";
@@ -175,7 +239,7 @@ async function handleContact(request, env) {
     return jsonResponse(400, { error: "Missing challenge token" });
   }
   const ip = request.headers.get("CF-Connecting-IP") || "";
-  const verify = await verifyTurnstile(token, ip, env.TURNSTILE_SECRET_KEY);
+  const verify = await verifyTurnstile(token, ip, env.TURNSTILE_SECRET_KEY, allowedHostnamesFromEnv(env));
   if (!verify.ok) {
     return jsonResponse(403, { error: "Challenge failed" });
   }

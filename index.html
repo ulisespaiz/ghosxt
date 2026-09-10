@@ -2,13 +2,15 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <script>document.documentElement.classList.add('js');</script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#ffffff" />
 
     <!-- PRIMARY SEO -->
     <title>Managed IT Services & Cybersecurity | Ghosxt – California</title>
     <meta
       name="description"
-      content="Engineer with DoD infrastructure experience delivering government-grade infrastructure and cybersecurity to California small businesses. Free network assessment."
+      content="Managed IT and cybersecurity for California small businesses, from an engineer with DoD infrastructure experience. Free network assessment."
     />
     <link rel="canonical" href="https://ghosxt.com/" />
     <link rel="alternate" type="application/rss+xml" title="Ghosxt Blog" href="https://ghosxt.com/feed.xml" />
@@ -452,7 +454,7 @@
         </div>
         <div class="stackedserver-wrapper" id="stackedserverWrapper">
           <!-- Server Rack 1 -->
-          <div class="server-rack">
+          <div class="server-rack build">
             <div class="rack-housing">
               <div class="server-unit">
                 <div class="server-panel-left">
@@ -555,7 +557,7 @@
             </div>
           </div>
           <!-- Server Rack 2 -->
-          <div class="server-rack">
+          <div class="server-rack build">
             <div class="rack-housing">
               <div class="server-unit">
                 <div class="server-panel-left">
@@ -644,7 +646,7 @@
             </div>
           </div>
           <!-- Server Rack 3 -->
-          <div class="server-rack">
+          <div class="server-rack build">
             <div class="rack-housing">
               <div class="server-unit">
                 <div class="server-panel-left">
@@ -719,7 +721,7 @@
             </div>
           </div>
           <!-- Server Rack 4 -->
-          <div class="server-rack">
+          <div class="server-rack build">
             <div class="rack-housing">
               <div class="server-unit">
                 <div class="server-panel-left">
@@ -780,7 +782,7 @@
             </div>
           </div>
           <!-- Server Rack 5 -->
-          <div class="server-rack">
+          <div class="server-rack build">
             <div class="rack-housing">
               <div class="server-unit">
                 <div class="server-panel-left">
@@ -841,7 +843,7 @@
             </div>
           </div>
           <!-- Server Rack 6 -->
-          <div class="server-rack">
+          <div class="server-rack build">
             <div class="rack-housing">
               <div class="server-unit">
                 <div class="server-panel-left">
@@ -916,7 +918,7 @@
             </div>
           </div>
           <!-- Server Rack 7 -->
-          <div class="server-rack">
+          <div class="server-rack build">
             <div class="rack-housing">
               <div class="server-unit">
                 <div class="server-panel-left">
@@ -1005,7 +1007,7 @@
             </div>
           </div>
           <!-- Server Rack 8 -->
-          <div class="server-rack">
+          <div class="server-rack build">
             <div class="rack-housing">
               <div class="server-unit">
                 <div class="server-panel-left">
@@ -1242,23 +1244,24 @@
           </div>
 
           <div class="problem-right">
-            <div class="floating-box">
+            <p class="sr-only">Five common IT problems follow. Drag each one onto the drop zone, or focus a problem and press Enter or Space to solve it.</p>
+            <div class="floating-box" tabindex="0" role="button" aria-label="Solve the problem: no idea if backups are working. Drag it onto the drop zone, or press Enter or Space to solve it.">
               <i class="fi fi-rs-circle-cross"></i>
               <span>No idea if backups are working</span>
             </div>
-            <div class="floating-box">
+            <div class="floating-box" tabindex="0" role="button" aria-label="Solve the problem: staff clicking suspicious emails. Drag it onto the drop zone, or press Enter or Space to solve it.">
               <i class="fi fi-rs-circle-cross"></i>
               <span>Staff clicking suspicious emails</span>
             </div>
-            <div class="floating-box">
+            <div class="floating-box" tabindex="0" role="button" aria-label="Solve the problem: internet going down constantly. Drag it onto the drop zone, or press Enter or Space to solve it.">
               <i class="fi fi-rs-circle-cross"></i>
               <span>Internet going down constantly</span>
             </div>
-            <div class="floating-box">
+            <div class="floating-box" tabindex="0" role="button" aria-label="Solve the problem: slow computers killing productivity. Drag it onto the drop zone, or press Enter or Space to solve it.">
               <i class="fi fi-rs-circle-cross"></i>
               <span>Slow computers killing productivity</span>
             </div>
-            <div class="floating-box">
+            <div class="floating-box" tabindex="0" role="button" aria-label="Solve the problem: no one to call when things break. Drag it onto the drop zone, or press Enter or Space to solve it.">
               <i class="fi fi-rs-circle-cross"></i>
               <span>No one to call when things break</span>
             </div>
@@ -1279,6 +1282,16 @@
               </div>
               <div class="success-state-text">
                 All Your IT Problems Can Be Solved by Ghosxt
+              </div>
+              <div class="chat-cta">
+                <p class="chat-real-help">
+                  Ghosxt is Ulises Paiz, based in Salinas. You talk directly to
+                  the owner, and every contract carries a 4-hour notification on
+                  actual or reasonably suspected critical incidents.
+                </p>
+                <a class="reset-btn" href="/contact"
+                  >Book a call with the owner</a
+                >
               </div>
             </div>
           </div>
@@ -1444,7 +1457,7 @@
                     </div>
                     <div class="infra-element">
                       <div class="infra-icon server-icon">
-                        <div class="server-rack server-visible">
+                        <div class="server-rack server-visible build">
                           <div class="rack-housing">
                             <div class="server-unit">
                               <div class="server-panel-left">
@@ -1754,7 +1767,7 @@
               </div>
 
               <div class="chat-body">
-                <div class="chat-messages" id="chatMessages">
+                <div class="chat-messages" id="chatMessages" role="log" aria-live="polite" aria-atomic="false" aria-label="Support conversation">
                   <div class="message support">
                     <div class="message-sender">Ulises - Ghosxt Support</div>
                     <div class="message-bubble">
@@ -1764,15 +1777,15 @@
                 </div>
 
                 <div class="chat-options" id="chatOptions">
-                  <button class="option-btn" onclick="startConversation(0)">
+                  <button class="option-btn" data-scenario="0">
                     <i class="fi fi-rs-error-bug"></i> Our website homepage is
                     broken, we need to fix it ASAP
                   </button>
-                  <button class="option-btn" onclick="startConversation(1)">
+                  <button class="option-btn" data-scenario="1">
                     <i class="fi fi-rs-error-bug"></i> We got a suspicious
                     email, might be a security breach
                   </button>
-                  <button class="option-btn" onclick="startConversation(2)">
+                  <button class="option-btn" data-scenario="2">
                     <i class="fi fi-rs-error-bug"></i> Our database server is
                     down, losing money by the minute
                   </button>
@@ -2769,7 +2782,7 @@
         </div>
         <div class="stackedserver-wrapper" id="stackedserverWrapperCTA">
           <!-- Server Rack 1 -->
-          <div class="server-rack">
+          <div class="server-rack build">
             <div class="rack-housing">
               <div class="server-unit">
                 <div class="server-panel-left">
@@ -2872,7 +2885,7 @@
             </div>
           </div>
           <!-- Server Rack 2 -->
-          <div class="server-rack">
+          <div class="server-rack build">
             <div class="rack-housing">
               <div class="server-unit">
                 <div class="server-panel-left">
@@ -2961,7 +2974,7 @@
             </div>
           </div>
           <!-- Server Rack 3 -->
-          <div class="server-rack">
+          <div class="server-rack build">
             <div class="rack-housing">
               <div class="server-unit">
                 <div class="server-panel-left">
@@ -3036,7 +3049,7 @@
             </div>
           </div>
           <!-- Server Rack 4 -->
-          <div class="server-rack">
+          <div class="server-rack build">
             <div class="rack-housing">
               <div class="server-unit">
                 <div class="server-panel-left">
@@ -3097,7 +3110,7 @@
             </div>
           </div>
           <!-- Server Rack 5 -->
-          <div class="server-rack">
+          <div class="server-rack build">
             <div class="rack-housing">
               <div class="server-unit">
                 <div class="server-panel-left">
@@ -3158,7 +3171,7 @@
             </div>
           </div>
           <!-- Server Rack 6 -->
-          <div class="server-rack">
+          <div class="server-rack build">
             <div class="rack-housing">
               <div class="server-unit">
                 <div class="server-panel-left">
@@ -3233,7 +3246,7 @@
             </div>
           </div>
           <!-- Server Rack 7 -->
-          <div class="server-rack">
+          <div class="server-rack build">
             <div class="rack-housing">
               <div class="server-unit">
                 <div class="server-panel-left">
@@ -3322,7 +3335,7 @@
             </div>
           </div>
           <!-- Server Rack 8 -->
-          <div class="server-rack">
+          <div class="server-rack build">
             <div class="rack-housing">
               <div class="server-unit">
                 <div class="server-panel-left">
@@ -3630,15 +3643,22 @@
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const serverRacks = document.querySelectorAll(".server-rack");
+        const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-        // Make each rack clickable
+        // Racks start with the 'build' class already in the markup (so
+        // there's no flash of a visible rack before this script runs; see
+        // .server-rack.build in assets/css/index.css). Clicking still
+        // toggles it; the staggered timers below just remove it once to
+        // reveal each rack.
         serverRacks.forEach(function (rack, index) {
-          // Add 'build' class initially to hide them
-          rack.classList.add("build");
-
           rack.addEventListener("click", function () {
             rack.classList.toggle("build");
           });
+
+          if (prefersReducedMotion) {
+            rack.classList.remove("build");
+            return;
+          }
 
           // Staggered animation - REMOVE 'build' class to make them appear
           const delay = index * 100;
@@ -3647,31 +3667,64 @@
           }, 250 + delay);
         });
 
-        // LED Animation (intervals tracked to avoid memory leaks)
-        const ledIntervals = [];
-        function animateLEDs() {
-          const allLedGroups = document.querySelectorAll(".led-group");
-          allLedGroups.forEach(function (ledGroup) {
-            const leds = ledGroup.querySelectorAll(".led");
-            let currentIndex = 0;
-            const id = setInterval(function () {
-              leds.forEach(function (led) {
-                led.classList.add("off");
-              });
-              leds[currentIndex].classList.remove("off");
-              currentIndex = (currentIndex + 1) % leds.length;
-            }, 200);
-            ledIntervals.push(id);
-          });
+        // LED Animation (intervals tracked per led-group, keyed by element,
+        // to avoid memory leaks and so an IntersectionObserver can pause
+        // the ones that scroll offscreen).
+        const ledIntervals = new Map();
+        function startLed(ledGroup) {
+          if (ledIntervals.has(ledGroup)) return;
+          const leds = ledGroup.querySelectorAll(".led");
+          if (!leds.length) return;
+          let currentIndex = 0;
+          const id = setInterval(function () {
+            leds.forEach(function (led) {
+              led.classList.add("off");
+            });
+            leds[currentIndex].classList.remove("off");
+            currentIndex = (currentIndex + 1) % leds.length;
+          }, 200);
+          ledIntervals.set(ledGroup, id);
         }
-        window.addEventListener("beforeunload", function () {
+        function stopLed(ledGroup) {
+          const id = ledIntervals.get(ledGroup);
+          if (id) {
+            clearInterval(id);
+            ledIntervals.delete(ledGroup);
+          }
+        }
+        function stopAllLeds() {
           ledIntervals.forEach(function (id) {
             clearInterval(id);
           });
-        });
+          ledIntervals.clear();
+        }
+        window.addEventListener("beforeunload", stopAllLeds);
 
-        // Start LED animation after racks appear
-        setTimeout(animateLEDs, 500);
+        // Reduced motion: don't start the LED loops at all.
+        if (prefersReducedMotion) return;
+
+        // Start LED animation after racks appear, gated by visibility so
+        // racks scrolled offscreen stop ticking and resume when back in
+        // view.
+        setTimeout(function () {
+          const allLedGroups = document.querySelectorAll(".led-group");
+          if (!("IntersectionObserver" in window)) {
+            allLedGroups.forEach(startLed);
+            return;
+          }
+          const ledObserver = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                startLed(entry.target);
+              } else {
+                stopLed(entry.target);
+              }
+            });
+          });
+          allLedGroups.forEach(function (ledGroup) {
+            ledObserver.observe(ledGroup);
+          });
+        }, 500);
       });
     </script>
     <!-- ghosxt:mobile-cta-bar -->
