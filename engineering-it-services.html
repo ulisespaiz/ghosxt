@@ -242,7 +242,7 @@
                 "name": "How do you back up a 4 TB BIM or PDM vault without saturating our internet for two days?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "We do not full-copy. The first seed can be staged off-network (a portable drive or a local appliance), then forward only changed blocks to an off-account immutable cloud target. For ongoing protection, block-level deduplication and bandwidth-shaped windows mean the daily incremental fits in an off-hours slice without ever crowding out a project upload. Tested restore-from-backup is part of the program, because a backup that has never been restored is a hope, not a backup."
+                  "text": "When a firm runs on Microsoft 365 or Google Workspace, most project data already lives in SharePoint, OneDrive, or Google Drive, and that is what our cloud backup covers: held outside the tenant, restorable to a point in time, with no full-copy upload competing with your project traffic. A project vault that lives on a server needs its own backup design, and we scope that with you rather than promise a generic answer."
                 }
               },
               {
@@ -567,7 +567,7 @@
                 </svg>
               </div>
               <h3>Federal project flow-down (NIST 800-171 / CMMC)</h3>
-              <p>Civil engineering firms bidding on Army Corps, NAVFAC, FAA, BLM, or other federal infrastructure are increasingly seeing flow-down clauses that require NIST SP 800-171 controls and, on a phased timeline, CMMC Levels 1 or 2. The IT side is the System Security Plan, the POA&amp;M, the SPRS score, and the boundary that keeps Controlled Unclassified Information in a defined enclave. We help you read the actual clauses, scope the work, and stand up the controls before the kickoff meeting.</p>
+              <p>Civil engineering firms bidding on Army Corps, NAVFAC, FAA, BLM, or other federal infrastructure are increasingly seeing flow-down clauses that require NIST SP 800-171 controls and, on a phased timeline, CMMC Levels 1 or 2. The IT side is the hardened Microsoft 365 GCC High environment that keeps Controlled Unclassified Information inside a defined boundary. We help you read the actual clauses, scope the work, and stand up the technical controls before the kickoff meeting; the assessment itself is arranged through an independent third party.</p>
             </article>
           </div>
 
@@ -586,7 +586,7 @@
             </li>
             <li class="workflow-step">
               <h3>Four-terabyte BIM vault, backup never tested</h3>
-              <p>An A/E firm had a four-terabyte BIM and PDM vault that had been "backed up" to a single attached disk for years. Nobody had ever restored from it. When we ran a tabletop exercise, we discovered the most recent full backup had failed silently nine months earlier and only changed-block deltas were being captured against a snapshot that no longer existed. We rebuilt the chain: seeded an off-account immutable copy through a portable appliance, added block-level deduplication and bandwidth-shaped daily incrementals, and instrumented restore-from-backup as a quarterly tested procedure. A real restore now finishes within the project's recovery time objective. <!-- [VERIFY] --></p>
+              <p>An A/E firm had a four-terabyte BIM and PDM vault that had been "backed up" to a single attached disk for years. Nobody had ever restored from it. When we ran a tabletop exercise, we discovered the most recent full backup had failed silently nine months earlier and only changed-block deltas were being captured against a snapshot that no longer existed. We rebuilt the chain around a backup held outside the firm's own account, with monitored health checks and an alert that fires when a job fails instead of nine months later, and we restored from it to prove it worked. <!-- [VERIFY] --></p>
             </li>
             <li class="workflow-step">
               <h3>Engineer left, downloaded the project archive</h3>
@@ -729,7 +729,7 @@
           </details>
           <details>
             <summary>How do you back up a 4 TB BIM or PDM vault without saturating our internet for two days?</summary>
-            <div class="answer"><!-- [VERIFY] -->We do not full-copy. The first seed can be staged off-network (a portable drive or a local appliance), then forward only changed blocks to an off-account immutable cloud target. For ongoing protection, block-level deduplication and bandwidth-shaped windows mean the daily incremental fits in an off-hours slice without ever crowding out a project upload. Tested restore-from-backup is part of the program, because a backup that has never been restored is a hope, not a backup.</div>
+            <div class="answer">When a firm runs on Microsoft 365 or Google Workspace, most project data already lives in SharePoint, OneDrive, or Google Drive, and that is what our cloud backup covers: held outside the tenant, restorable to a point in time, with no full-copy upload competing with your project traffic. A project vault that lives on a server needs its own backup design, and we scope that with you rather than promise a generic answer.</div>
           </details>
           <details>
             <summary>Who will I actually talk to?</summary>
