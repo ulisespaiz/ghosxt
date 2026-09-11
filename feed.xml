@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from an engineer with DoD infrastructure experience.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Thu, 10 Sep 2026 11:05:31 +0000</lastBuildDate>
-    <pubDate>Thu, 10 Sep 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Fri, 11 Sep 2026 11:06:56 +0000</lastBuildDate>
+    <pubDate>Fri, 11 Sep 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>The Real Cost of IT Downtime for a Small Business</title>
+      <link>https://ghosxt.com/blog/downtime-cost-small-business-2026</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/downtime-cost-small-business-2026</guid>
+      <pubDate>Fri, 11 Sep 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Backup and Disaster Recovery</category>
+      <description>An outage costs more than the sales you miss. A simple formula for what downtime costs your business, and why it should guide your IT budget.</description>
+    </item>
     <item>
       <title>Employee Onboarding IT Security Checklist</title>
       <link>https://ghosxt.com/blog/employee-onboarding-it-security-checklist-small-business</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>Password spraying tries one common password against hundreds of accounts, so it never trips a lockout policy.</description>
-    </item>
-    <item>
-      <title>Insider Threats for Small Business</title>
-      <link>https://ghosxt.com/blog/insider-threat-small-business-2026</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/insider-threat-small-business-2026</guid>
-      <pubDate>Thu, 30 Jul 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>Most small business security spending targets outsiders, but a careless click or a departing hire's laptop does as much damage. How insider threats work.</description>
     </item>
   </channel>
 </rss>
