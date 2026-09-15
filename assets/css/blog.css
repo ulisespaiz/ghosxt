@@ -475,3 +475,11 @@
 .compare-table tbody tr:last-child td {
   border-bottom: none;
 }
+
+/* Code blocks scroll inside their own box instead of widening the page on phones. */
+.blog-post pre,
+article pre,
+pre {
+  max-width: 100%;
+  overflow-x: auto;
+}

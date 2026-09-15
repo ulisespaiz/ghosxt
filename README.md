@@ -169,3 +169,11 @@ python3 scripts/minify.py    # rebuild every assets/**/*.min.{css,js}
 `*.html` + `blog/*.html` to point at the `.min` copies (already applied), and
 `--check` reports what `--refs` would change without writing. The safe
 whitespace/comment-only minifiers (rcssmin/rjsmin) apply no risky JS transforms.
+
+Run `python3 scripts/minify.py --stamp` (or `--stamp=2026-09-10b` for an
+explicit tag) after any CSS or JS change that ships. It bumps the `?v=`
+cache-busting tag on every site-own stylesheet and script reference across
+`*.html`, `blog/*.html`, and `scripts/_chrome_source.html`. Without a fresh
+tag, the edge and browsers keep serving the hour-old cached file against the
+new HTML, which is how a returning visitor ends up with a page whose script
+does not match its markup while a private window (empty cache) works.

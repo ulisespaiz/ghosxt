@@ -67,9 +67,34 @@ def rewrite_refs(check_only=False):
     print(f"{verb} {changed} HTML files")
 
 
+# Bump the `?v=` cache-busting tag on every site-own CSS/JS reference so
+# browsers and the edge stop serving a stale copy against new HTML.
+STAMP_RE = re.compile(r'((?:href|src)="(?:\.\./)?assets/(?:css|js)/[a-zA-Z0-9_-]+\.(?:min\.)?(?:css|js))\?v=[^"]*"')
+
+
+def stamp_refs(version):
+    import datetime
+    if not version:
+        version = datetime.date.today().strftime("%Y-%m-%d") + "a"
+    targets = (glob.glob(os.path.join(ROOT, "*.html"))
+               + glob.glob(os.path.join(ROOT, "blog/*.html"))
+               + [os.path.join(ROOT, "scripts/_chrome_source.html")])
+    changed = 0
+    for path in targets:
+        s = open(path, encoding="utf-8").read()
+        new = STAMP_RE.sub(lambda m: f'{m.group(1)}?v={version}"', s)
+        if new != s:
+            changed += 1
+            open(path, "w", encoding="utf-8").write(new)
+    print(f"stamped ?v={version} on site asset refs in {changed} files")
+
+
 if __name__ == "__main__":
     minify_assets()
     if "--refs" in sys.argv:
         rewrite_refs(check_only=False)
     elif "--check" in sys.argv:
         rewrite_refs(check_only=True)
+    for arg in sys.argv[1:]:
+        if arg == "--stamp" or arg.startswith("--stamp="):
+            stamp_refs(arg.partition("=")[2])
