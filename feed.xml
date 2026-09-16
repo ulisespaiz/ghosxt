@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from an engineer with DoD infrastructure experience.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Tue, 15 Sep 2026 11:07:26 +0000</lastBuildDate>
-    <pubDate>Tue, 15 Sep 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Wed, 16 Sep 2026 11:06:20 +0000</lastBuildDate>
+    <pubDate>Wed, 16 Sep 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>The Device Code Sign-In Attackers Abuse</title>
+      <link>https://ghosxt.com/blog/device-code-phishing-microsoft-365-small-business-2026</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/device-code-phishing-microsoft-365-small-business-2026</guid>
+      <pubDate>Wed, 16 Sep 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>A device code prompt can hand over a live Microsoft 365 session without a password or MFA code ever changing hands. How the attack works and what stops it.</description>
+    </item>
     <item>
       <title>The Hidden Email Rule Attackers Leave Behind</title>
       <link>https://ghosxt.com/blog/hidden-email-forwarding-rule-small-business-2026</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>A network printer or copier is a full computer with a hard drive and years of unpatched firmware, and almost nobody treats it as one. What that exposes.</description>
-    </item>
-    <item>
-      <title>POS Malware and Card Skimming for Small Business</title>
-      <link>https://ghosxt.com/blog/pos-malware-card-skimming-small-business-2026</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/pos-malware-card-skimming-small-business-2026</guid>
-      <pubDate>Sun, 02 Aug 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>A compromised POS system or a skimmer clipped onto a card reader can steal customer card data for months before anyone notices.</description>
     </item>
   </channel>
 </rss>
