@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from an engineer with DoD infrastructure experience.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Wed, 16 Sep 2026 11:06:20 +0000</lastBuildDate>
-    <pubDate>Wed, 16 Sep 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Thu, 17 Sep 2026 11:05:58 +0000</lastBuildDate>
+    <pubDate>Thu, 17 Sep 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>Windows 10's Free ESU Year Ends This October</title>
+      <link>https://ghosxt.com/blog/windows-10-esu-deadline-october-2026-small-business</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/windows-10-esu-deadline-october-2026-small-business</guid>
+      <pubDate>Thu, 17 Sep 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>Windows 10's one free year of security updates runs out October 13, 2026. What actually stops, what paid ESU costs a small business after that, and how to plan the next move.</description>
+    </item>
     <item>
       <title>The Device Code Sign-In Attackers Abuse</title>
       <link>https://ghosxt.com/blog/device-code-phishing-microsoft-365-small-business-2026</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>A single compromised update from a vendor you trust can install malware across your business with zero clicks and no phishing email.</description>
-    </item>
-    <item>
-      <title>Network Printer and Copier Security for SMBs</title>
-      <link>https://ghosxt.com/blog/network-printer-copier-security-small-business-2026</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/network-printer-copier-security-small-business-2026</guid>
-      <pubDate>Mon, 03 Aug 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>A network printer or copier is a full computer with a hard drive and years of unpatched firmware, and almost nobody treats it as one. What that exposes.</description>
     </item>
   </channel>
 </rss>
