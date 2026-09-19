@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from an engineer with DoD infrastructure experience.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Fri, 18 Sep 2026 11:05:58 +0000</lastBuildDate>
-    <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Sat, 19 Sep 2026 11:05:58 +0000</lastBuildDate>
+    <pubDate>Sat, 19 Sep 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>Browser-in-the-Browser Phishing: The Login Popup That Isn't a Window</title>
+      <link>https://ghosxt.com/blog/browser-in-the-browser-phishing-fake-login-popup-small-business-2026</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/browser-in-the-browser-phishing-fake-login-popup-small-business-2026</guid>
+      <pubDate>Sat, 19 Sep 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>A browser-in-the-browser attack fakes an entire login popup, address bar included. How it beats URL-checking habits, and what actually gives it away.</description>
+    </item>
     <item>
       <title>Callback Phishing: The Invoice Email With No Link</title>
       <link>https://ghosxt.com/blog/callback-phishing-fake-invoice-remote-access-small-business-2026</link>
