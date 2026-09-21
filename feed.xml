@@ -7,11 +7,20 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from an engineer with DoD infrastructure experience.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Sun, 20 Sep 2026 12:00:00 +0000</lastBuildDate>
-    <pubDate>Sun, 20 Sep 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Mon, 21 Sep 2026 11:05:52 +0000</lastBuildDate>
+    <pubDate>Mon, 21 Sep 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
     <item>
-      <title>Cybersecurity Awareness Month 2026: A 4-Week Action Plan for Small Business</title>
+      <title>Encryption for Small Business: What Actually Needs to Be Encrypted in 2026</title>
+      <link>https://ghosxt.com/blog/data-encryption-what-actually-needs-it-small-business-2026</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/data-encryption-what-actually-needs-it-small-business-2026</guid>
+      <pubDate>Mon, 21 Sep 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>Full-disk, email, and backup encryption are not the same protection, and most small businesses only have one of the three actually turned on. A plain-talk guide to what needs to be encrypted and what doesn't.</description>
+    </item>
+    <item>
+      <title>Cybersecurity Awareness Month 2026: A 4-Week Plan for Small Business</title>
       <link>https://ghosxt.com/blog/cybersecurity-awareness-month-2026-small-business-action-plan</link>
       <guid isPermaLink="true">https://ghosxt.com/blog/cybersecurity-awareness-month-2026-small-business-action-plan</guid>
       <pubDate>Sun, 20 Sep 2026 00:00:00 +0000</pubDate>
@@ -20,7 +29,7 @@
       <description>October is Cybersecurity Awareness Month. A practical 4-week action plan for small business covering MFA, patching, training, and backup testing, not just a poster on the break room wall.</description>
     </item>
     <item>
-      <title>Browser-in-the-Browser Phishing: The Login Popup That Isn't a Window</title>
+      <title>Browser-in-the-Browser Phishing: The Login Popup That Isn't a Window (2026)</title>
       <link>https://ghosxt.com/blog/browser-in-the-browser-phishing-fake-login-popup-small-business-2026</link>
       <guid isPermaLink="true">https://ghosxt.com/blog/browser-in-the-browser-phishing-fake-login-popup-small-business-2026</guid>
       <pubDate>Sat, 19 Sep 2026 00:00:00 +0000</pubDate>
@@ -29,7 +38,7 @@
       <description>A browser-in-the-browser attack fakes an entire login popup, address bar included. How it beats URL-checking habits, and what actually gives it away.</description>
     </item>
     <item>
-      <title>Callback Phishing: The Invoice Email With No Link</title>
+      <title>Callback Phishing: The Invoice Email With No Link (2026)</title>
       <link>https://ghosxt.com/blog/callback-phishing-fake-invoice-remote-access-small-business-2026</link>
       <guid isPermaLink="true">https://ghosxt.com/blog/callback-phishing-fake-invoice-remote-access-small-business-2026</guid>
       <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
@@ -44,7 +53,7 @@
       <pubDate>Thu, 17 Sep 2026 00:00:00 +0000</pubDate>
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
-      <description>Windows 10's one free year of security updates runs out October 13, 2026. What actually stops, what paid ESU costs a small business after that, and how to plan the next move.</description>
+      <description>Windows 10's free ESU year ends October 13, 2026. What actually stops, what paid ESU costs next, and how small business should plan ahead.</description>
     </item>
     <item>
       <title>The Device Code Sign-In Attackers Abuse</title>
@@ -270,42 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>Old subdomains, forgotten VPN portals, an ex-employee's cloud login, a test server nobody decommissioned.</description>
-    </item>
-    <item>
-      <title>Data Loss Prevention for Small Business</title>
-      <link>https://ghosxt.com/blog/data-loss-prevention-small-business-2026</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/data-loss-prevention-small-business-2026</guid>
-      <pubDate>Sat, 08 Aug 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>Where small business data actually leaks: email, personal cloud accounts, USB drives, AI chatbots, and how to stop it with tools you already pay for.</description>
-    </item>
-    <item>
-      <title>Patch Management for Small Business</title>
-      <link>https://ghosxt.com/blog/patch-management-small-business-2026</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/patch-management-small-business-2026</guid>
-      <pubDate>Thu, 06 Aug 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>Most breaches don't exploit a mystery flaw, they exploit a vulnerability that already had a patch available.</description>
-    </item>
-    <item>
-      <title>Tailgating and Physical Access Security</title>
-      <link>https://ghosxt.com/blog/tailgating-physical-security-small-business-2026</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/tailgating-physical-security-small-business-2026</guid>
-      <pubDate>Wed, 05 Aug 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>A stranger holding a box and a smile gets past your locked door more often than any firewall gets bypassed.</description>
-    </item>
-    <item>
-      <title>Software Supply Chain Attacks for SMBs</title>
-      <link>https://ghosxt.com/blog/software-supply-chain-attacks-small-business-2026</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/software-supply-chain-attacks-small-business-2026</guid>
-      <pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>A single compromised update from a vendor you trust can install malware across your business with zero clicks and no phishing email.</description>
     </item>
   </channel>
 </rss>
