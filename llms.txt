@@ -35,6 +35,7 @@ Key facts:
 - [Ransomware Recovery & Emergency IT](https://ghosxt.com/ransomware-recovery): rapid containment, recovery from cloud backup, and hardening for businesses that are down or under active attack. Emergency line (831) 204-0501.
 - [Break-Fix vs. Managed IT](https://ghosxt.com/break-fix-vs-managed-it): an honest comparison of the two IT support models on cost, downtime, and security.
 - [Pricing](https://ghosxt.com/pricing): transparent, published managed IT service plans.
+- [What managed IT costs in Monterey County](https://ghosxt.com/managed-it-cost-monterey-county): published prices ($125 to $250 per user per month, or $600 flat for 1 to 4 users), how MSPs price, and three worked examples with the arithmetic shown.
 
 ## Industries served
 - [Agriculture & Agribusiness IT](https://ghosxt.com/agriculture-it-services): Salinas Valley growers, food processing, and ag-tech.
@@ -45,6 +46,8 @@ Key facts:
 - [Professional Services IT](https://ghosxt.com/professional-services-it): law firms, CPAs, and small offices.
 - [Property Management IT](https://ghosxt.com/property-management-it-services): Yardi and AppFolio environments.
 - [Engineering & A/E IT](https://ghosxt.com/engineering-it-services): CAD, BIM, and ITAR.
+- [IT support for nonprofits on Google Workspace](https://ghosxt.com/it-support-nonprofits-google-workspace): Google Workspace admin and backup, contractors covered per identity, and Mac onboarding through Apple Business Manager.
+- [Managed IT for remote, Mac-first teams](https://ghosxt.com/it-support-remote-mac-teams): zero-touch Apple Business Manager enrollment, remote lock and erase, and sign-in monitoring across countries.
 
 ## Service areas (city pages)
 - [Salinas](https://ghosxt.com/salinas)
@@ -75,6 +78,7 @@ IT support & help desk, by city: [Morgan Hill](https://ghosxt.com/it-help-morgan
 ## About & contact
 - [About Ghosxt](https://ghosxt.com/about): the engineer with DoD infrastructure experience and approach behind the company.
 - [Client Stories](https://ghosxt.com/case-studies): real Ghosxt clients in their own words, from transportation/logistics, manufacturing, and local projects.
+- [Case study: onboarding a remote Google Workspace firm](https://ghosxt.com/case-studies/remote-google-workspace-onboarding): a 5-person remote team in the US and India, onboarded on Secure Growth in about two weeks.
 - [Contact / Free IT Assessment](https://ghosxt.com/contact): schedule a no-obligation 30-minute assessment.
 - [Get Support](https://ghosxt.com/support): how existing clients reach the engineer. Call, remote session, or ticket portal. Support hours 8am to 6pm Pacific.
 - [Ghosxt Cares](https://ghosxt.com/ghosxt-cares): community work and discounted IT for nonprofits.

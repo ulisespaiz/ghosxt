@@ -61,5 +61,7 @@
 #   /blog/:page.html      matches only two-segment /blog/<name>.html paths --
 #                         NOT /blog/sub/foo.html (three segments) and NOT
 #                         /foo.html (wrong first segment).
+#   /case-studies/:page.html  matches only two-segment /case-studies/<name>.html paths.
 /:page.html          /:page         301
 /blog/:page.html      /blog/:page    301
+/case-studies/:page.html   /case-studies/:page   301
