@@ -1615,6 +1615,87 @@ A: For most small teams, Ghosxt runs roughly 73–79% less per month than buildi
 ## Still have questions?
 Pricing is transparent, but every business is different. Book a free call and Uli will walk you through exactly what makes sense for your size, industry, and goals, no sales pitch, no obligation.
 
+## https://ghosxt.com/managed-it-cost-monterey-county
+
+Title: What Managed IT Costs in Monterey County (Real Numbers)
+Meta description: Managed IT in Monterey County costs $125 to $250 per user per month, or $600 flat for 1 to 4 users. Real published prices and three worked examples.
+
+# What Managed IT Costs in Monterey County (Real Numbers)
+Managed IT in Monterey County costs $125 to $250 per user per month with Ghosxt, plus a one-time onboarding fee. A 5-person business pays $625 to $1,250 a month, a 10-person business $1,250 to $2,500, and a 25-person business $3,125 to $6,250. Teams of 1 to 4 pay a flat $600. Secure Growth ($175 per user), the tier we recommend for most businesses, comes to $875, $1,750, or $4,375 a month at those sizes. These are the published prices from our pricing page, not a starting-at teaser, and the math for three typical setups is below.
+★★★★★ Rated 5.0 across 26 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
+Managed IT cost in Monterey County: at a glance
+## The short answer, by team size
+Managed IT is priced per person because people are what get phished, locked out, and onboarded. Here is what our three per-user tiers work out to at common team sizes, before any servers or network gear:
+### Monthly cost by team size
+The same prices apply in Salinas, Monterey, Carmel, Watsonville, Santa Cruz, and anywhere else we work. We don't price by zip code.
+## How MSPs price managed IT
+Before you compare quotes, find out which pricing model each one uses. Each model puts the risk on a different side of the table, and a low headline number can hide which side you're on.
+Per user. You pay one monthly price for each person, and it covers that person's support, monitoring, patching, and security. It tracks headcount, the number you already budget around, and it prices what actually gets attacked, which is people's accounts and inboxes. It's the most common model for small-business managed IT, and it's the one we use for teams of 5 or more.
+Per device. You pay for each computer, server, or phone under management. The headline number often looks lower until you count the second laptop, the desktop at home, and the phone. It also prices hardware instead of identity, which is backwards now that so many breaches start with a stolen login rather than a broken machine. We use per-device pricing for infrastructure that isn't tied to one person: servers ($200 a month), firewalls ($50), managed switches ($25), wireless access points ($20), and NAS storage ($100). Enrolling a laptop or phone in device management is a $15 per device monthly add-on.
+Flat rate. One monthly number for the whole company, whatever its size. It's simple to budget, but the provider has to pad it to cover what it can't see, and it gets renegotiated every time you hire. We use a flat rate in one place, where the simplicity helps everyone: Tiny Team, $600 a month for 1 to 4 users.
+Hourly, or break-fix. You pay only when something breaks. It's the cheapest option in a quiet year and the most expensive in a bad one, and in between nobody is patching, monitoring, or checking your backups. The provider also earns more when things go wrong, which is the wrong incentive. We bill hourly only for work outside a managed agreement: project work at $175 an hour, on-site visits for managed clients at $150, and remote or on-site help for non-managed clients at $180 or $220. For the full comparison, see break-fix vs. managed IT.
+What we use, and why. A mix, on purpose: per user for people, per device for infrastructure and enrolled laptops and phones, flat for very small teams, and hourly for projects. Every rate is published, so you can check our math against the pricing page.
+## Our published plans
+These are the same numbers as our pricing page. Per-user plans start at 5 users on a 12-month agreement, and month-to-month is available at 15% more.
+### Tiny Team Managed Security
+$600 per month, flat. For 1 to 4 users.
+24/7 monitoring, help desk, patching, managed detection and response, MFA, email security, cloud backup for Microsoft 365 and OneDrive, vulnerability management, and security awareness training.
+### Core Managed IT
+$125 per user per month. Best for 5 to 15 users.
+24/7 monitoring, OS and third-party patching, managed detection and response, business-hours help desk, backup monitoring, MFA enforcement, Microsoft 365 baseline hardening, security awareness training, and monthly reporting.
+### Secure Growth
+$175 per user per month. Best for 10 to 40 users. Our recommended default.
+Everything in Core, plus advanced email filtering, dark web monitoring, DNS filtering, an enterprise password vault, vendor management, and cloud backup for Microsoft 365 and OneDrive.
+### Compliance & Continuity
+$250 per user per month. For regulated work, cyber insurance requirements, or businesses where downtime is expensive.
+Everything in Secure Growth, plus managed detection and response with a 24/7 SOC, compliance support, compliance-grade backup retention, vCIO planning and quarterly business reviews, included after-hours support, and a priority escalation queue.
+### One-time onboarding and monthly add-ons
+## Three worked examples, with the math shown
+These are hypothetical businesses priced with real, published rates. Every line shows its arithmetic, so you can swap in your own headcount.
+### Example A: 9-person nonprofit on Google Workspace
+The contractor line is the one to ask about. Contractors on their own laptops don't need device management or a help desk seat. They need their account protected, watched, and switched off when the contract ends, so we price that per identity instead of as a full seat. More on this setup: IT support for nonprofits on Google Workspace.
+### Example B: 12-person professional office with a server
+One thing that isn't in the $2,350: image-based backup of the server itself. It's quoted per server, because its cost scales with the hardware and the amount of data on it.
+### Example C: 3-person shop on Tiny Team
+The jump from 4 people to 5 is smaller than it looks. Tiny Team is $600 flat, and five people on Core cost $625 a month. Core doesn't include the cloud backup Tiny Team has, though. Secure Growth ($175 per user), which does, is $875 for five.
+## What's usually not included
+A managed IT fee covers keeping what you have secure, patched, backed up, and supported. It doesn't cover buying new things or building new things. Budget for these separately, whoever you hire:
+- Project work. New server builds, office moves, network redesigns, and configuration work inside your business apps. We bill project work at $175 an hour.
+- Hardware. Laptops, desktops, firewalls, switches, and access points. You own the equipment. We spec it and help you buy it, and managing network gear afterward is the per-device add-on.
+- Software licenses. Microsoft 365 or Google Workspace licenses and your line-of-business apps are paid to the vendor, not bundled into our fee.
+- After-hours and emergency work. Support runs 8am to 6pm Pacific, Monday through Friday. Compliance & Continuity includes after-hours support. On other plans, after-hours work is $250 an hour, and emergency work outside an agreement is $350 an hour.
+- On-site time. Remote help desk is part of every plan. On-site visits for managed clients are $150 an hour.
+- Server image backup. Quoted per server, because it scales with your hardware and data.
+## Get your number from a Salinas engineer
+We're based in Salinas and work on-site across Monterey County, from Salinas and the Monterey Peninsula to South County, and in Santa Cruz, San Benito, and Santa Clara counties. You talk to the owner, Ulises Paiz, not a sales team. In a free 30-minute call we'll run your headcount and equipment through these same numbers and send you a written quote.
+## Priced for your setup
+The same prices, applied to specific kinds of teams:
+### Nonprofits on Google Workspace
+Workspace administration and backup, contractors covered per identity, and Macs that set themselves up for new hires.
+### Fully remote, Mac-first teams
+Zero-touch Mac setup through Apple Business Manager, remote lock and erase, and sign-ins watched across countries.
+### Case study: a 5-person remote firm
+Google Workspace, Macs, and a team in the US and India, onboarded on Secure Growth in about two weeks.
+### Break-fix vs. managed IT
+Paying by the hour versus paying monthly: cost, downtime, security, and which model fits your business.
+## Managed IT cost: common questions
+Q: Is $150 per user a month normal for IT support?
+A: Yes, for fully managed IT. Our own published tiers are $125, $175, and $250 per user per month, so $150 sits between the first two. The better question is what the $150 includes. If managed detection and response, backup, or security awareness training show up as separate line items, compare total monthly cost, not the headline rate.
+Q: How much does IT support cost for a 10-person office?
+A: On our published pricing, a 10-person office pays $1,250 a month on Core Managed IT ($125 per user), $1,750 on Secure Growth ($175 per user), or $2,500 on Compliance & Continuity ($250 per user), plus $1,500 one-time onboarding on the Microsoft 365 default scope. Add $200 a month for a server and $50 for a firewall if you have them.
+Q: What does managed IT cost for a business with 2 or 3 employees?
+A: $600 a month, flat, for 1 to 4 users on our Tiny Team plan. That includes monitoring, help desk, patching, managed detection and response, MFA, email security, cloud backup for Microsoft 365 and OneDrive, and security awareness training. One-time onboarding is $1,000.
+Q: Is managed IT cheaper than hiring an IT person?
+A: For most small teams, yes. One in-house hire costs a full California salary plus benefits and still leaves you uncovered when that person is sick or on vacation. The calculator on our pricing page compares the two for your headcount, and for most small teams it comes out roughly 73 to 79 percent less than building the same skills in-house.
+Q: Is there a setup fee for managed IT?
+A: Yes, a one-time onboarding fee. It's $1,000 for Tiny Team. For the per-user plans it depends on headcount: 5 to 15 users is $1,500, 15 to 30 users is $2,500, 30 to 50 users is $4,000, and above 50 is a custom quote. Those fees cover the Microsoft 365 default scope. Google Workspace and Apple fleet onboarding is scoped and quoted separately.
+Q: Do I have to sign a long-term IT contract?
+A: Our standard agreement is 12 months, with no price increase during the term. Leaving early during that first term costs 50% of the remaining months. After 12 months you can cancel with 30 days' written notice and no fee. If you want no commitment at all, month-to-month is available from day one at 15% more.
+Q: Do you charge more for Google Workspace or Macs?
+A: The monthly per-user price is the same. Any laptop or phone enrolled in device management adds $15 per device per month, and Google Workspace and Apple fleet onboarding is scoped and quoted separately instead of using the Microsoft 365 onboarding fee.
+Q: Do you serve Salinas, Monterey, and Santa Cruz?
+A: Yes. We're based in Salinas and work on-site across Monterey County and in Santa Cruz, San Benito, and Santa Clara counties, and remotely anywhere in the US. The prices on this page are the same in every city.
+
 ## https://ghosxt.com/agriculture-it-services
 
 Title: Agriculture IT Services in the Salinas Valley | Ghosxt
@@ -2340,6 +2421,170 @@ Q: How do you back up a 4 TB BIM or PDM vault without saturating our internet fo
 A: We do not full-copy. The first seed can be staged off-network (a portable drive or a local appliance), then forward only changed blocks to an off-account immutable cloud target. For ongoing protection, block-level deduplication and bandwidth-shaped windows mean the daily incremental fits in an off-hours slice without ever crowding out a project upload. Tested restore-from-backup is part of the program, because a backup that has never been restored is a hope, not a backup.
 Q: Who will I actually talk to?
 A: Ulises Paiz, the owner, directly. There is no tier-1 queue and no offshore call center: the engineer who knows your environment answers the phone, and critical incidents carry our 4-hour notification commitment.
+
+## https://ghosxt.com/it-support-nonprofits-google-workspace
+
+Title: IT Support for Nonprofits on Google Workspace
+Meta description: Managed IT for small nonprofits on Google Workspace: admin takeover, Gmail and Drive backup, contractor accounts, Mac onboarding. Published pricing.
+
+# IT Support for Nonprofits on Google Workspace
+Ghosxt provides managed IT for small nonprofits on Google Workspace at published prices: $125 to $250 per staff member per month, or $600 flat for teams of 1 to 4. A 9-person team on our recommended tier pays $1,575 a month for staff, plus $15 per Mac for device management. For that, we take over Google Workspace administration (or back up the ops director who has been running it on the side), watch every staff account for suspicious sign-ins, back up Gmail and Drive, and set up Macs through Apple Business Manager so a new hire's laptop configures itself on first boot (you buy the hardware; we coordinate delivery). Contractor accounts are covered too, quoted per identity.
+★★★★★ Rated 5.0 across 26 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
+Nonprofit IT on Google Workspace: at a glance
+## The blind spot: one person holds every key
+In a lot of small nonprofits, Google Workspace is run by whoever set it up. Often that's the operations director, on top of a full-time job. That person is usually the only super admin. If they leave, lose their phone, or get phished, the organization can lose control of every inbox, shared drive, and donor spreadsheet at once.
+We fix that first. There's a second super admin account that nobody uses for daily email, 2-step verification is enforced on every account, and there's a written record of who holds admin rights and why.
+## Google Workspace administration, taken over or backed up
+You choose how much we take on. Some organizations hand us the admin console entirely. Others keep their ops director in charge and want a backstop: someone who knows the setup, can step in when they're out, and handles the parts that are easy to get wrong.
+### Accounts, arrivals, and departures
+New accounts, groups, and shared drive access set up the same way every time. When someone leaves, their Drive files are transferred before the account is closed, so their work doesn't disappear with them.
+### 2-step verification, enforced
+Required on every account, with text-message codes turned off. Admin accounts use passkeys or security keys, which resist phishing, and we move the rest of the team to them wherever we can.
+### Gmail and Drive backup
+Google keeps deleted items for a limited time, and a deleted account can only be restored for about 20 days. Cloud backup for Google Workspace keeps a separate copy of your mail and files, so an accidentally deleted file or a departed staffer's mail and files can be restored after those windows close.
+### Sharing and connected apps
+External sharing defaults set on purpose, not left as they were on day one, and a review of which third-party apps have been granted access to your Gmail and Drive.
+## Phishing and identity monitoring for a distributed team
+Nonprofits get the same phishing as everyone else, plus a few versions aimed at them: fake invoices, look-alike login pages, and urgent requests that appear to come from the executive director. When the team works from home offices, nobody can lean over and ask whether an email looks right.
+So we watch the accounts, not just the inboxes. Identity monitoring flags sign-ins that don't fit, like a login from a country nobody on your team is in, or two sign-ins too far apart to travel between. Security awareness training teaches the team what a phish looks like and where to report it. DNS filtering on staff laptops blocks known-malicious sites wherever people are working.
+## Contractors: covered per identity, no device management
+Nonprofits run on part-timers, contractors, and volunteers who use their own laptops. We don't manage those machines, and you don't pay a full seat for them.
+We cover the account instead. 2-step verification is enforced, identity monitoring watches the sign-ins, access is limited to the shared drives and groups the person actually needs, and the account is suspended when the engagement ends. Contractor coverage is priced per identity and quoted with your proposal. It isn't on our published price list.
+## Mac-first onboarding and offboarding through Apple Business Manager
+A new hire's laptop should arrive ready to use. Apple Business Manager is free from Apple. Once it's linked to our device management, a Mac bought through your organization's Apple or reseller account can ship straight to the new hire's home. When they turn it on and connect to Wi-Fi, it enrolls itself, applies your security settings, and installs the apps they need. Nobody has to touch it first.
+Departures work the same way in reverse. When a staffer leaves, we can lock or erase their Mac remotely, wherever it is, once it's online. Because the Mac is enrolled through Apple Business Manager, we can prevent or clear Activation Lock, so a former employee's personal Apple Account can't strand it, and after it's erased it re-enrolls itself for the next hire. For the step-by-step version, see managed IT for remote, Mac-first teams or our zero-touch Mac deployment guide.
+## Hardware for staff you rarely see
+Remote staff still need a laptop that works, and someone has to get it to them. We spec the machine for the role, you buy it through a channel that registers it to your Apple Business Manager account, and we coordinate delivery to the person's door. You pay for the hardware. We handle the coordination.
+When someone leaves, we coordinate getting the laptop back, erase it, and hand it to the next hire already configured. If it doesn't come back, it stays assigned to your organization in Apple Business Manager, so after a reset it re-enrolls when it's set up online, and it can be locked the next time it connects to the internet.
+## Salesforce, Asana, Slack, and your donation platform
+Your work runs on apps we don't own. We handle the IT side of them: who has access, single sign-on through Google where your plan supports it, and the support ticket with the vendor when something breaks. You get one person to call instead of four support queues. Vendor management is included from Secure Growth up.
+Single sign-on is often a paid upgrade inside the app itself, so we check your plan before promising it. Configuration inside those apps or the integrations between them, like building a Salesforce report, a new automation, or a donation form, is project work billed at $175 an hour.
+## Cost levers: Google for Nonprofits and TechSoup
+Before you spend money on software or hardware, check what you can get free or discounted. We walk you through it.
+- Google for Nonprofits. Eligible nonprofits can use Google Workspace for Nonprofits at no cost, with discounted pricing on the higher editions. We check whether the free edition covers what you need or whether a discounted higher edition is worth it.
+- TechSoup. Donated and discounted software, plus refurbished hardware, for verified nonprofits. It's worth checking before you buy licenses or laptops at full price.
+- Ghosxt Cares. Our donated-setup program covers Microsoft 365, domain, email, website, and DNS setup for one Monterey County 501(c)(3) per quarter. Ongoing managed IT is billed at the published prices on this page.
+## Worked example: a 9-person nonprofit
+Nine staff on Google Workspace, mostly on Macs, plus 12 contractors who only need their accounts protected. Here's the math on published prices.
+### 9-person nonprofit on Google Workspace
+The same example sits next to a professional office and a 3-person shop on our page about what managed IT costs in Monterey County, and every rate comes from our pricing page.
+## Talk to the owner, not a queue
+Book a free 30-minute call. We'll look at who holds admin rights in your Google Workspace, what's actually backed up, and how contractors get in and out, then send you a written quote using the prices on this page. We're based in Salinas, California, and support nonprofit teams remotely anywhere in the US.
+## Related
+### What managed IT costs
+Published tiers, how MSPs price, and three worked examples with the arithmetic shown.
+### Fully remote, Mac-first teams
+Zero-touch enrollment, what device management can and can't see, and laptops for staff you never meet.
+### Case study: a 5-person remote firm
+Google Workspace and Macs, a team in the US and India, onboarded in about two weeks.
+### Google Workspace security settings
+The settings to check first, starting with the free, high-impact ones.
+## Nonprofit IT on Google Workspace: common questions
+Q: How much does IT support cost for a small nonprofit?
+A: $600 a month flat for 1 to 4 people, or $125 to $250 per staff member per month for 5 or more. A 9-person team on Secure Growth ($175 per staff member) is $1,575 a month, plus $15 per Mac for device management. Contractors who only need their accounts protected are priced per identity and quoted with your proposal.
+Q: Our ops director runs Google Workspace. Do they have to give it up?
+A: No. We can take over administration completely or work alongside your ops director as a backstop. Either way, we set up a separate super admin account, enforce 2-step verification, and document who holds admin rights.
+Q: Is Google Workspace backed up automatically?
+A: Not in the way most people assume. Google keeps deleted items for a limited time and lets an admin restore a deleted account for about 20 days, but that's retention, not backup. Cloud backup for Google Workspace keeps a separate copy of Gmail and Drive that you can restore from after those windows close.
+Q: Do contractors and volunteers need a company laptop?
+A: No. People on their own laptops are covered per identity: 2-step verification, identity monitoring, access limited to what they need, and the account suspended when their work with you ends. We don't manage their personal devices.
+Q: Do you offer a nonprofit discount?
+A: Ongoing managed IT is billed at the published rates on our pricing page. What we donate is setup: Ghosxt Cares covers Microsoft 365, domain, email, website, and DNS setup for one Monterey County 501(c)(3) per quarter. The bigger savings usually come from Google for Nonprofits and TechSoup, and we help you use both.
+Q: Can you support staff who work from home in different states?
+A: Yes. Everything on this page works remotely: Google Workspace administration, identity monitoring, device management, and help desk. Macs ship to staff homes and enroll themselves, and a departing staffer's laptop can be locked or erased from anywhere.
+
+## https://ghosxt.com/it-support-remote-mac-teams
+
+Title: Managed IT for Fully Remote, Mac-First Teams
+Meta description: Managed IT for remote Mac teams: zero-touch Apple Business Manager setup, remote wipe, sign-in monitoring across countries. From $125 per user.
+
+# Managed IT for Fully Remote, Mac-First Teams
+Managed IT for a fully remote team on Macs costs $125 to $250 per person per month with Ghosxt, plus $15 per Mac for device management. A 10-person team on our recommended tier pays $1,900 a month: 10 × $175 for the team and 10 × $15 for the Macs. Laptops ship from the store to each person's door and set themselves up on first boot, a departing employee's Mac can be locked or erased from anywhere, and every sign-in is watched, whichever country your team works from. You talk to the owner directly.
+★★★★★ Rated 5.0 across 26 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
+Remote Mac team IT: at a glance
+## The day you find out you don't control your laptops
+Most remote teams discover the gap when someone quits. The Mac is three states away, and it was set up on the employee's personal Apple Account. If Find My was on, Activation Lock means that even once the Mac is back and erased, nobody can set it up again without that person's password. Getting Apple to remove the lock takes the original proof of purchase and a support request.
+Device management, with zero-touch enrollment through Apple Business Manager, closes that gap before it opens. So does watching sign-ins, because on a remote team the laptop and the login are the whole office.
+## Zero-touch enrollment through Apple Business Manager
+Zero-touch means nobody in IT handles the laptop before the employee does. Here's how it works.
+### 1. Set up Apple Business Manager
+It's free from Apple. It needs a D-U-N-S number for your business, which is also free. We link it to our device management.
+### 2. Buy through the right channel
+Order Macs from Apple or a participating authorized reseller on your business account. Once your Apple customer number or reseller ID is linked, each serial number lands in your Apple Business Manager account automatically.
+### 3. Ship to the person
+The box goes straight to the employee's home, still sealed. Nobody opens it first.
+### 4. First boot
+The Mac connects to Wi-Fi, recognizes that it belongs to your organization, enrolls in management, and applies your settings: FileVault encryption, screen lock, firewall, security software, and the apps the role needs.
+### 5. Signed in and working
+The employee signs in to Google Workspace or Microsoft 365 and enrolls in 2-step verification. From then on, patches and settings follow the laptop wherever it goes.
+Macs you already own can join too. They're added to Apple Business Manager with Apple Configurator, which means erasing and setting them up again, and after that they enroll like new ones. For the first 30 days after a Mac is added this way, the user can remove it from management. For more on the setup, see our zero-touch Mac deployment guide.
+## What device management can and can't see
+Good employees ask this first, and they deserve a straight answer. On a company-owned Mac, device management is a configuration tool, not a surveillance tool. It's also only one of the tools on a managed laptop, so the full picture is below.
+### What it can see
+The Mac's model, serial number, and macOS version. Storage capacity and whether encryption is on. The list of installed apps. Whether required security settings are in place.
+### What it can do
+Push settings and Wi-Fi profiles, install and update apps, require FileVault encryption and a screen lock, and lock or erase the Mac if it's lost or its owner leaves.
+### What it doesn't see
+Device management doesn't read files, email, messages, browser history, or photos, and it doesn't track location.
+Other tools on a managed laptop see more, and we'd rather you hear it from us:
+- Monitoring agent. Reports the laptop's health and patch status and lets us run maintenance and fixes remotely.
+- Remote support. Lets us see the screen to fix a problem during a support session.
+- Managed detection and response. Watches for attacker behavior, like an unknown program making changes it shouldn't or a burst of files being encrypted, and flags it for a security analyst.
+- DNS filtering. Sees which websites the laptop looks up, so it can block malicious ones.
+- Your work account. Your employer, as the Google Workspace or Microsoft 365 admin, can access work email and files. That's true with or without us.
+We use these tools to keep laptops working and to catch attackers, not to review anyone's work.
+Personal devices are a separate conversation. People on their own hardware can be covered through their accounts, with 2-step verification and identity monitoring, instead of device management.
+## Sign-ins from more than one country
+When part of your team works from another country, blocking foreign sign-ins isn't an option. Their normal is someone else's red flag.
+So we monitor instead of block. Identity monitoring flags sign-ins that don't fit each person's pattern, like a login from a third country, or two sign-ins too far apart to travel between. 2-step verification is enforced on every account without text-message codes, which can be hijacked through a SIM swap and are unreliable across borders anyway. Staff who travel can tell us before they go, so a real login from an airport doesn't get treated like an attack.
+## Laptop lifecycle for staff you never meet
+### Purchase
+We spec the Mac for the role, you buy it through a channel that registers it to your Apple Business Manager account, and we coordinate delivery to the person's door. For staff outside the US, we work out with you whether buying in-country or shipping from the US makes more sense.
+### Ship
+It arrives at the employee's door, sealed. It configures itself on first boot, so there's nothing to install over a video call.
+### Wipe
+When someone leaves, their account is suspended and the Mac is locked or erased remotely in the same offboarding step, wherever it is, once it's online.
+### Recover
+We coordinate getting the laptop back. Once it's erased, it re-enrolls itself for the next hire. If it never comes back, it stays assigned to your organization in Apple Business Manager, so after a reset it re-enrolls when it's set up online, and it can be locked the next time it connects to the internet.
+## Onboarding checklist for a new remote hire
+The same steps every time, whether the new hire is in Oakland or overseas.
+### Before day one
+Create the work account and add it to the right groups and shared drives. Order the Mac from Apple or a participating reseller on your business account, so it lands in Apple Business Manager, and ship it to their home. On Secure Growth and up, put any shared logins they'll need in the password vault.
+### Day one
+They unbox the Mac, connect to Wi-Fi, and it enrolls itself. They sign in and enroll in 2-step verification. We confirm the laptop reports as encrypted, patched, and protected.
+### First week
+Security awareness training assigned. Access checked against what the role actually needs. On Secure Growth and up, their mail and files confirmed in backup.
+### When they leave
+Account suspended and signed out everywhere. Files transferred to their manager. Shared passwords they knew rotated. The Mac locked or erased remotely.
+For a printable version, see our onboarding checklist and offboarding checklist.
+## What it costs
+Published prices, with the arithmetic shown. Every rate comes from our pricing page.
+### Example: 10-person remote team on Macs
+For more team sizes, including a 12-person office and a 9-person nonprofit, see what managed IT costs in Monterey County.
+## See what a zero-touch setup would take
+Book a free 30-minute call with the owner. We'll look at how your Macs are set up today, whose personal Apple Account could lock you out of your own hardware, and what it would take to fix it, then send a written quote using the prices on this page. We're based in Salinas, California, and support remote teams across the US and abroad.
+## Related
+### Case study: a 5-person remote firm
+Google Workspace, Macs, and a team in the US and India, onboarded on Secure Growth in about two weeks.
+### Nonprofits on Google Workspace
+Workspace administration and backup, contractors covered per identity, and cost levers like Google for Nonprofits.
+### What managed IT costs
+Published tiers, how MSPs price, and three worked examples with the arithmetic shown.
+### Remote work and travel security
+What changes when your team works from home, cafes, and airports.
+## Remote Mac team IT: common questions
+Q: Can my company see what I do on my work Mac?
+A: Device management on its own doesn't read your files, email, messages, or browser history, and it doesn't track location. It sees the Mac's model, macOS version, installed apps, and whether security settings are on. Other tools on a managed laptop see more: the monitoring agent reports health and patch status and lets us run maintenance remotely, our remote support tool can see your screen during a support session, the security agent watches for attacker behavior, and DNS filtering sees which sites are looked up so it can block malicious ones. And your employer, as the admin of your work account, can access work email and files.
+Q: How do you set up a Mac for a remote employee you've never met?
+A: Through Apple Business Manager. You buy the Mac on your business account, it ships sealed to the employee's home, and on first boot it enrolls itself in device management and applies your settings and apps. Nobody in IT has to touch it.
+Q: What happens to the laptop when a remote employee quits?
+A: Their account is suspended and the Mac is locked or erased remotely in the same offboarding step. Because it's enrolled through Apple Business Manager, we can prevent or clear Activation Lock, so their personal Apple Account can't strand it. Once it's back and erased, it re-enrolls itself for the next hire.
+Q: Can you support employees in other countries?
+A: Yes. Identity monitoring and 2-step verification work wherever someone signs in, and device management works anywhere the Mac has internet. To be straight about hours: our help desk runs 8am to 6pm Pacific, Monday through Friday, which is evening to early morning for staff in India. Critical incidents carry our 4-hour notification commitment.
+Q: How much does managed IT cost for a remote team on Macs?
+A: $125 to $250 per person per month, plus $15 per Mac for device management. A 10-person team on Secure Growth ($175 per person) is 10 × $175 + 10 × $15 = $1,900 a month. Teams of 1 to 4 pay $600 flat, plus $15 per Mac. Apple fleet onboarding is scoped and quoted separately.
+Q: Do we need Apple Business Manager?
+A: For zero-touch setup, yes. It's free, and it needs a free D-U-N-S number for your business. Macs outside Apple Business Manager can still be managed, with more manual steps and less control.
 
 ## https://ghosxt.com/salinas
 
@@ -5398,6 +5643,62 @@ Q: What size businesses do you typically work with?
 A: Small and midsize businesses on California's Central Coast: from one- and two-person offices on our flat-rate Tiny Team plan up through multi-location operations. The clients below range from a transportation company to a machine shop to a local public servant's project, which is fairly representative.
 Q: How do I become the next story here?
 A: Start with a free 30-minute assessment. We will look at your environment, tell you honestly where you stand, and lay out a prioritized plan. There is no obligation, and you walk away with something useful either way.
+
+## https://ghosxt.com/case-studies/remote-google-workspace-onboarding
+
+Title: Case Study: Onboarding a Remote Google Workspace Firm
+Meta description: How a 5-person remote firm on Google Workspace and Macs, with staff in the US and India, was onboarded to managed IT in about two weeks.
+
+# How a 5-person remote firm on Google Workspace got managed IT in about two weeks
+A five-person professional-services firm, fully remote, running Google Workspace on Macs, with team members in the US and India, was fully onboarded onto our Secure Growth plan in about two weeks. At published prices, Secure Growth ($175 per user) comes to $875 a month for five people. Below: the situation, what was at risk, what we did and in what order, the outcome, and what a team this size pays.
+This case: at a glance
+## The situation
+The firm is small and fully remote, built on Google Workspace and Macs, with part of the team in the US and part in India. It had compliance requirements to meet and went looking for a managed IT provider.
+They found us by describing those compliance requirements to an AI search tool and adding "MSP." Ghosxt came up. What decided it: they could talk directly to the owner.
+## What was at risk
+A remote firm on Google Workspace has no office to lock. The accounts and the laptops are the office, so that's where the exposure sits:
+- Accounts. The firm's work lives in Gmail and Drive, behind a login. One phished password, from anywhere in the world, can open all of it.
+- Sign-ins from two countries. With staff in the US and India, "unusual location" can't simply mean "foreign." Without monitoring, a stolen login from a third country looks like one more sign-in.
+- Text-message codes. 2-step verification by SMS can be hijacked through a SIM swap and is unreliable across borders.
+- Laptops. Macs in staff homes need a central way to be encrypted, patched, locked, and erased.
+- Data. Google's retention isn't a backup. A deleted account or a bad sync can take files with it.
+## What we did, in order
+Onboarding took about two weeks. We worked identity first, because that's where a remote firm's risk concentrates, then devices, then people.
+### 1. 2-step verification, enforced tenant-wide
+Required for every account in the firm's Google Workspace, with text-message codes turned off.
+### 2. Identity monitoring on Workspace
+Every account's sign-ins watched, with alerts on activity that doesn't fit the team's normal pattern across the US and India.
+### 3. Gmail and Drive backup
+A separate, restorable copy of the firm's mail and files, independent of Google's own retention.
+### 4. Apple Business Manager and device management
+The firm's Macs enrolled in device management through Apple Business Manager, so they can be encrypted, patched, locked, or erased from anywhere.
+### 5. A laptop shipped pre-configured
+One company-owned laptop was shipped to a remote contractor already configured.
+### 6. Security awareness training
+The team enrolled in security awareness training on spotting and reporting phishing email.
+## The outcome
+About two weeks after kickoff, the firm had:
+- 2-step verification required on every account, with no text-message codes
+- Identity monitoring on every Google Workspace account
+- Gmail and Drive backed up to a separate, restorable copy, independent of Google's own retention
+- Macs enrolled through Apple Business Manager and under device management
+- A remote contractor working on a company-owned laptop that arrived configured
+- Security awareness training in place for the team
+- One person to call: the owner
+We aren't going to put numbers on this that we can't show. What changed is that the firm's protections are enforced, monitored, and recoverable, with one accountable person behind them.
+## What it costs for a team this size
+These figures are our published prices applied to a five-person team. They aren't this client's invoice.
+### 5-person remote team on Google Workspace and Macs
+Every rate above is on our pricing page. For other team sizes, see what managed IT costs in Monterey County.
+## If your team looks like this
+### Fully remote, Mac-first teams
+Zero-touch enrollment, what device management can and can't see, and sign-ins watched across countries.
+### Nonprofits on Google Workspace
+Workspace administration and backup, and contractors covered per identity without device management.
+### What managed IT costs
+Published tiers, how MSPs price, and three worked examples with the arithmetic shown.
+## Want the same setup for your team?
+Book a free 30-minute call with the owner. We'll look at your Google Workspace, your Macs, and the requirements you're working against, and tell you plainly what onboarding would involve and what it would cost. We're based in Salinas, California, and work with remote teams across the US and abroad.
 
 ## https://ghosxt.com/contact
 

@@ -9,7 +9,7 @@ TITLE_MAX, DESC_MAX = 60, 155
 t_re = re.compile(r'<title>(.*?)</title>', re.S)
 d_re = re.compile(r'<meta\s+name="description"\s+content="(.*?)"', re.S)
 
-files = sorted(glob.glob('*.html') + glob.glob('blog/*.html'))
+files = sorted(glob.glob('*.html') + glob.glob('blog/*.html') + glob.glob('case-studies/*.html'))
 over_t, over_d = [], []
 for f in files:
     s = open(f).read()

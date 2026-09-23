@@ -41,8 +41,8 @@ USAGE
 Modes
 -----
   --check (default, and what a bare invocation with no flags does): scans
-    root *.html and blog/*.html for dollar figures anchored to tier names,
-    and reports:
+    root *.html, blog/*.html, and case-studies/*.html for dollar figures
+    anchored to tier names, and reports:
       - MISMATCH: a confidently-anchored dollar figure that does not equal
         the config value for that tier/fee.
       - low-confidence note: a figure found only via a long-distance
@@ -548,11 +548,12 @@ def discover_html_files(root: str) -> List[str]:
     for name in os.listdir(root):
         if name.endswith(".html"):
             found.append(name)
-    blog_dir = os.path.join(root, "blog")
-    if os.path.isdir(blog_dir):
-        for name in os.listdir(blog_dir):
-            if name.endswith(".html"):
-                found.append(os.path.join("blog", name))
+    for sub in ("blog", "case-studies"):
+        sub_dir = os.path.join(root, sub)
+        if os.path.isdir(sub_dir):
+            for name in os.listdir(sub_dir):
+                if name.endswith(".html"):
+                    found.append(os.path.join(sub, name))
     return sorted(found)
 
 
@@ -625,7 +626,7 @@ def main() -> int:
             o515=fmt_money(pricing["onboarding_5_to_15"]),
         )
     )
-    print(f"html files scanned: {len(html_files)} (root *.html + blog/*.html)")
+    print(f"html files scanned: {len(html_files)} (root *.html + blog/*.html + case-studies/*.html)")
     print("=" * 78)
 
     total_ok = 0

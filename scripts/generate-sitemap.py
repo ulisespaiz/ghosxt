@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 """Generate sitemap.xml from canonical HTML pages.
 
-The script scans the site root and blog directory for HTML files, skips pages
-that opt out with a noindex robots meta tag, and writes canonical URLs to
-sitemap.xml. Existing sitemap metadata is treated as intentional: changefreq,
-priority, and lastmod values are carried forward only for URLs already present
-in sitemap.xml. New pages receive a lastmod date, but no changefreq or priority
-unless those values are deliberately added to the generated sitemap later.
+The script scans the site root, the blog directory, and the case-studies
+directory for HTML files, skips pages that opt out with a noindex robots meta
+tag, and writes canonical URLs to sitemap.xml. Existing sitemap metadata is
+treated as intentional: changefreq, priority, and lastmod values are carried
+forward only for URLs already present in sitemap.xml. New pages receive a
+lastmod date, but no changefreq or priority unless those values are
+deliberately added to the generated sitemap later.
 """
 
 from __future__ import annotations
@@ -22,7 +23,7 @@ from xml.etree import ElementTree as ET
 BASE_URL = "https://ghosxt.com"
 ROOT = Path(__file__).resolve().parents[1]
 SITEMAP_PATH = ROOT / "sitemap.xml"
-SCAN_PATTERNS = ("*.html", "blog/*.html")
+SCAN_PATTERNS = ("*.html", "blog/*.html", "case-studies/*.html")
 SITEMAP_NS = "http://www.sitemaps.org/schemas/sitemap/0.9"
 CANONICAL_RE = re.compile(
     r'<link\b(?=[^>]*\brel=["\']canonical["\'])(?=[^>]*\bhref=["\']([^"\']+)["\'])[^>]*>',
@@ -57,6 +58,8 @@ def derived_url(path: Path) -> str:
         return f"{BASE_URL}/blog/"
     if relative.startswith("blog/"):
         return f"{BASE_URL}/blog/{Path(relative).stem}"
+    if relative.startswith("case-studies/"):
+        return f"{BASE_URL}/case-studies/{Path(relative).stem}"
     return f"{BASE_URL}/{Path(relative).stem}"
 
 
