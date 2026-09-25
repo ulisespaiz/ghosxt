@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from an engineer with DoD infrastructure experience.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Thu, 24 Sep 2026 11:11:25 +0000</lastBuildDate>
-    <pubDate>Thu, 24 Sep 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Fri, 25 Sep 2026 12:00:00 +0000</lastBuildDate>
+    <pubDate>Fri, 25 Sep 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>Microsoft 365 Copilot and the Oversharing Problem Nobody Checked First (2026)</title>
+      <link>https://ghosxt.com/blog/microsoft-365-copilot-oversharing-risk-small-business-2026</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/microsoft-365-copilot-oversharing-risk-small-business-2026</guid>
+      <pubDate>Fri, 25 Sep 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>Microsoft 365 Copilot surfaces whatever a user already has access to, oversharing included. What to check in SharePoint and OneDrive before turning it on.</description>
+    </item>
     <item>
       <title>Lost or Stolen Company Laptop: The First-Hour Checklist (2026)</title>
       <link>https://ghosxt.com/blog/lost-stolen-laptop-first-hour-checklist-small-business-2026</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>August 2026 Patch Tuesday: 400 fixes and 3 zero-days, including an actively exploited Windows flaw and the SharePoint RCE chain.</description>
-    </item>
-    <item>
-      <title>Attack Surface Management for Small Business</title>
-      <link>https://ghosxt.com/blog/attack-surface-management-small-business-2026</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/attack-surface-management-small-business-2026</guid>
-      <pubDate>Mon, 10 Aug 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>Old subdomains, forgotten VPN portals, an ex-employee's cloud login, a test server nobody decommissioned.</description>
     </item>
   </channel>
 </rss>
