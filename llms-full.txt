@@ -5613,7 +5613,7 @@ We're the ghost in your machine: invisible to threats, visible to solutions. Gho
 ## https://ghosxt.com/case-studies
 
 Title: Client Stories & Results | Ghosxt
-Meta description: Real client stories from Ghosxt: a transportation company, a machine shop, and more, served by an engineer with DoD infrastructure experience on the Central Coast.
+Meta description: Real client stories from Ghosxt: a transportation company, a machine shop, and more, served by an engineer with DoD infrastructure experience.
 
 # Client Stories
 The best measure of an IT partner is the businesses that stay. These are real Ghosxt clients, in their own words: a transportation company three years in, a machine shop that found a true partner, and a local project delivered exactly as imagined. Different industries, different needs, one constant: an engineer with DoD infrastructure experience who treats your business like it matters.
@@ -5634,6 +5634,9 @@ Not every project is a multi-year managed-IT engagement. For Salinas City Counci
 Whether the job is a single website or a complete IT and security program, the standard is the same.
 “I had an incredible experience working with Ulises! He was responsive, professional, and truly took the time to understand my vision. Not only did he bring my ideas to life, but he also added thoughtful touches that made the site even better than I imagined.”
 Andrew Sandoval, Salinas City Council Member
+## Remote professional-services firm (Google Workspace & Macs, US and India)
+A five-person professional-services firm, fully remote, running Google Workspace on Macs with team members in the US and India. They had compliance requirements to meet, found us by describing them to an AI search tool and adding "MSP," and chose us because they could talk directly to the owner.
+We onboarded them onto Secure Growth in about two weeks: 2-step verification enforced across the whole Workspace with text-message codes turned off, identity monitoring on every account, Gmail and Drive backup, Macs enrolled in device management through Apple Business Manager with one laptop shipped pre-configured to a remote contractor, and security awareness training for the team. Read the full case study, including what it costs for a team this size.
 ## Ready to write the next one?
 Book a free 30-minute assessment. We will look at your setup, tell you honestly where you stand, and lay out a prioritized plan: the same way every story above started.
 ## About working with Ghosxt
