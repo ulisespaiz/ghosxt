@@ -7,9 +7,45 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from an engineer with DoD infrastructure experience.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Sat, 26 Sep 2026 12:00:00 +0000</lastBuildDate>
-    <pubDate>Sat, 26 Sep 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Mon, 28 Sep 2026 00:43:44 +0000</lastBuildDate>
+    <pubDate>Mon, 28 Sep 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>Phishing-Resistant MFA in Google Workspace</title>
+      <link>https://ghosxt.com/blog/phishing-resistant-mfa-google-workspace-admin-guide</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/phishing-resistant-mfa-google-workspace-admin-guide</guid>
+      <pubDate>Mon, 28 Sep 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Google Workspace</category>
+      <description>A step-by-step Google Workspace Admin console plan to enforce security keys and passkeys, protect high-risk users, and extend SSO to other apps.</description>
+    </item>
+    <item>
+      <title>Microsoft 365 vs Google Workspace: 10-User Guide</title>
+      <link>https://ghosxt.com/blog/microsoft-365-vs-google-workspace-small-business-2026</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/microsoft-365-vs-google-workspace-small-business-2026</guid>
+      <pubDate>Mon, 28 Sep 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cloud Services</category>
+      <description>Which should a 10-person business choose, Microsoft 365 or Google Workspace? A plain decision guide covering identity, devices, compliance, and cost.</description>
+    </item>
+    <item>
+      <title>How to Offboard a Contractor in Google Workspace</title>
+      <link>https://ghosxt.com/blog/offboard-contractor-google-workspace-checklist</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/offboard-contractor-google-workspace-checklist</guid>
+      <pubDate>Mon, 28 Sep 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Managed IT</category>
+      <description>A step-by-step Google Workspace checklist for offboarding contractors, including remote and overseas ones: access, devices, licenses, and shared logins.</description>
+    </item>
+    <item>
+      <title>Does Google Workspace Back Up Your Data?</title>
+      <link>https://ghosxt.com/blog/google-workspace-backup-small-business-2026</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/google-workspace-backup-small-business-2026</guid>
+      <pubDate>Mon, 28 Sep 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Google Workspace</category>
+      <description>Google Workspace keeps deleted files and users for a limited time, not forever. What Google actually retains, what it doesn't, and where backup fits in.</description>
+    </item>
     <item>
       <title>IT Setup for a New Small Business: The Founder's Checklist for the First 90 Days (2026)</title>
       <link>https://ghosxt.com/blog/it-setup-checklist-new-small-business-2026</link>
@@ -17,7 +53,7 @@
       <pubDate>Sat, 26 Sep 2026 00:00:00 +0000</pubDate>
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Managed IT</category>
-      <description>Starting a business? The IT and security decisions to get right before you hire: business email and MFA, device setup, backups, and who holds the keys.</description>
+      <description>Starting a business? The IT and security decisions to get right before you hire: business email and MFA, device setup, backups, and who holds the keys. A practical first-90-days checklist.</description>
     </item>
     <item>
       <title>Microsoft 365 Copilot and the Oversharing Problem Nobody Checked First (2026)</title>
@@ -243,51 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>Most small businesses can't say how many laptops, licenses, or old accounts they actually have.</description>
-    </item>
-    <item>
-      <title>Penetration Testing for Small Business</title>
-      <link>https://ghosxt.com/blog/penetration-testing-small-business-2026</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/penetration-testing-small-business-2026</guid>
-      <pubDate>Fri, 14 Aug 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>A vulnerability scan finds what's known; a penetration test finds what's exploitable. What a pentest actually covers, realistic pricing, and how often.</description>
-    </item>
-    <item>
-      <title>What Is a vCIO? Virtual CIO for Small Business</title>
-      <link>https://ghosxt.com/blog/vcio-virtual-cio-small-business-2026</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/vcio-virtual-cio-small-business-2026</guid>
-      <pubDate>Thu, 13 Aug 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Managed IT</category>
-      <description>A vCIO sets your IT budget, roadmap, and risk priorities without a full-time salary. What a virtual CIO actually does, how it differs from IT support.</description>
-    </item>
-    <item>
-      <title>DNS Filtering for Small Business</title>
-      <link>https://ghosxt.com/blog/dns-filtering-small-business-2026</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/dns-filtering-small-business-2026</guid>
-      <pubDate>Wed, 12 Aug 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>DNS filtering blocks malicious and phishing sites before a browser ever loads them, for a few dollars per device a month.</description>
-    </item>
-    <item>
-      <title>Privileged Access Management for Small Business</title>
-      <link>https://ghosxt.com/blog/privileged-access-management-small-business-2026</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/privileged-access-management-small-business-2026</guid>
-      <pubDate>Tue, 11 Aug 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>Almost everyone at a small business has more access than their job requires, and most owners have no idea how many admin accounts actually exist.</description>
-    </item>
-    <item>
-      <title>August 2026 Patch Tuesday: 400 Fixes, 3 Zero-Days</title>
-      <link>https://ghosxt.com/blog/august-2026-patch-tuesday-400-fixes-3-zero-days-smb</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/august-2026-patch-tuesday-400-fixes-3-zero-days-smb</guid>
-      <pubDate>Tue, 11 Aug 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>August 2026 Patch Tuesday: 400 fixes and 3 zero-days, including an actively exploited Windows flaw and the SharePoint RCE chain.</description>
     </item>
   </channel>
 </rss>
