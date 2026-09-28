@@ -46,7 +46,7 @@ Key facts:
 - [PCI DSS Compliance](https://ghosxt.com/pci-compliance): practical PCI compliance for retail, restaurants, and hospitality, covering segmentation, secure POS, and SAQ guidance.
 - [Cyber Insurance Compliance](https://ghosxt.com/cyber-insurance-compliance): cyber insurance readiness and questionnaire help, covering MFA, MDR, cloud backup, and the evidence carriers require at underwriting and claim time.
 - [Co-Managed IT](https://ghosxt.com/co-managed-it): augments an existing in-house IT team with managed detection and response with a 24/7 SOC and cybersecurity depth, without replacing anyone.
-- [Ransomware Recovery & Emergency IT](https://ghosxt.com/ransomware-recovery): incident response support backed by the 4-hour notification commitment on actual or reasonably suspected critical incidents, plus cloud backup restoration, for businesses that are down or under active attack. Emergency line (831) 204-0501.
+- [Ransomware Recovery & Emergency IT](https://ghosxt.com/ransomware-recovery): for businesses that are down or under active attack: the 4-hour notification commitment on actual or reasonably suspected critical incidents, and restoration from cloud backup for Microsoft 365 and Google Workspace. Emergency line (831) 204-0501.
 - [Break-Fix vs. Managed IT](https://ghosxt.com/break-fix-vs-managed-it): an honest comparison of the two IT support models on cost, downtime, and security.
 - [Pricing](https://ghosxt.com/pricing): transparent, published managed IT service plans.
 - [What managed IT costs in Monterey County](https://ghosxt.com/managed-it-cost-monterey-county): published prices ($125 to $250 per user per month, or $600 flat for 1 to 4 users), how MSPs price, and three worked examples with the arithmetic shown.
