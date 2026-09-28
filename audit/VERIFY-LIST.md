@@ -2,31 +2,34 @@
 
 Generated 2026-09-28 from the pages on branch claude/seo-improvement-agents-plan-tj49jd. Every item below is a `[VERIFY]` marker shipped inside an HTML comment in live page source, which crawlers and AI assistants can read. Answer each one **Yes** (true: the marker is removed), **No** (reword to verified phrasing), or **Later**.
 
-Total markers: 156 across 30 files; 154 unique claims after grouping repeats.
+Total markers: 137 across 30 files; 135 unique claims after grouping repeats.
+
+## Answered 2026-09-28 (applied on this branch)
+
+- [x] Network design and deployment: delivered. Capability tags removed; equipment brand tags (Cisco, Meraki) remain.
+- [x] After-hours and on-call: no standing coverage; after-hours help available on request. Pages reworded.
+- [x] Backup: covers Microsoft 365 and Google Workspace on every backup tier. Pricing and tier copy updated.
 
 ## Open decisions (answer these first)
 
 - [ ] Case study (/case-studies/remote-google-workspace-onboarding): now noindexed. Approve it and resolve its items below, or keep it off?
-- [ ] Identity monitoring: is it a capability Ghosxt delivers? If yes, add it to VERIFIED FACTS; if no, it comes off the case study.
-- [ ] Network design and deployment (VLANs, firewalls, wireless, Cisco/Meraki equipment): delivered? Every claim on network-design.html is tagged below. The page was also removed from llms.txt until this is answered.
+- [ ] Identity monitoring: is it a capability Ghosxt delivers? If yes, add it to VERIFIED FACTS; if no, it comes off the case study and the nonprofits page.
 - [ ] Azure infrastructure work: cloud-services.html keeps one line ("scoped and quoted per project") tagged below.
-- [ ] After-hours and on-call coverage (co-managed-it.html, msp-partners.html) promise nights, weekends, holidays, and vacations coverage. As a sole owner, is that a commitment you will keep? Not tagged yet; decide and we reword or tag.
 - [ ] GCC High onboarding: is it quoted separately from the Microsoft 365 default scope (cmmc-compliance.html)?
+- [ ] Cisco / Meraki equipment: do you deploy these brands (network-design.html)?
 - [ ] "Since 2021" (sitewide trust line) is still [VERIFY year] in CLAUDE.md.
-- [ ] "Government-grade IT for small business" is the sitewide footer tagline (and appears 33 times in llms-full.txt). It was removed from llms.txt as an unverifiable superlative. Keep it as brand voice, or retire it?
-- [ ] pricing.html lists "cloud backup for Microsoft 365 and OneDrive" for Secure Growth and Tiny Team, while VERIFIED FACTS say "cloud backup for Microsoft 365 and Google Workspace". Which tiers include Google Workspace backup?
+- [ ] "Government-grade IT for small business" is the sitewide footer tagline. Keep it as brand voice, or retire it?
 - [ ] Repo visibility: github.com/ulisespaiz/ghosxt is public, so CLAUDE.md and audit/ are readable and indexable. Make private, or move them out?
 
 ## Markers by file
 
 | File | Markers |
 |---|---|
-| network-design.html | 21 |
 | it-for-audited-companies.html | 17 |
 | case-studies.html | 16 |
 | google-workspace-mac-it.html | 15 |
 | penetration-testing.html | 11 |
-| it-support-nonprofits-google-workspace.html | 10 |
+| it-support-nonprofits-google-workspace.html | 9 |
 | it-support-remote-mac-teams.html | 7 |
 | managed-it-cost-monterey-county.html | 7 |
 | cloud-services.html | 5 |
@@ -38,6 +41,7 @@ Total markers: 156 across 30 files; 154 unique claims after grouping repeats.
 | healthcare-it-services.html | 3 |
 | managed-detection-response.html | 3 |
 | managed-it-services.html | 3 |
+| network-design.html | 3 |
 | pci-compliance.html | 3 |
 | salinas.html | 3 |
 | blog/data-retention-destruction-policy-small-business-2026.html | 1 |
@@ -130,7 +134,6 @@ Total markers: 156 across 30 files; 154 unique claims after grouping repeats.
 - [ ] Do you carry your own cyber liability insurance?  (it-for-audited-companies.html:420)  Yes / No / Later
 - [ ] Contractor accounts are covered too, quoted per identity.  (it-support-nonprofits-google-workspace.html:287)  Yes / No / Later
 - [ ] Contractors Covered per identity, no device management, quoted with your proposal  (it-support-nonprofits-google-workspace.html:301)  Yes / No / Later
-- [ ] Cloud backup for Google Workspace keeps a separate copy of your mail and files, so an accidentally deleted file or a departed staffer's mail and files can be restored after those windows close.  (it-support-nonprofits-google-workspace.html:326)  Yes / No / Later
 - [ ] Sharing and connected apps External sharing defaults set on purpose, not left as they were on day one, and a review of which third-party apps have been granted access to your Gmail and Drive.  (it-support-nonprofits-google-workspace.html:327)  Yes / No / Later
 - [ ] Identity monitoring flags sign-ins that don't fit, like a login from a country nobody on your team is in, or two sign-ins too far apart to travel between.  (it-support-nonprofits-google-workspace.html:336)  Yes / No / Later
 - [ ] It isn't on our published price list.  (2 places: it-support-nonprofits-google-workspace.html:344, managed-it-cost-monterey-county.html:390)  Yes / No / Later
@@ -158,27 +161,9 @@ Total markers: 156 across 30 files; 154 unique claims after grouping repeats.
 - [ ] Managed network switching and wireless, plus enterprise-grade firewalls on the edge, including Cisco Meraki  (managed-it-services.html:465)  Yes / No / Later
 - [ ] Virtualization support on the server side  (managed-it-services.html:469)  Yes / No / Later
 - [ ] We then redesigned the backup chain with monitored health checks, a copy held outside the company's own account, and an alert that fires before the silent failure can ever happen again.  (manufacturing-it-services.html:553)  Yes / No / Later
-- [ ] Ghosxt designs networks the way an engineer with DoD infrastructure experience would build one if you owned the rack: segmented, documented, vendor-neutral, and built to last.  (network-design.html:369)  Yes / No / Later
-- [ ] You get a written current-state report whether or not we get the project.  (network-design.html:429)  Yes / No / Later
-- [ ] You sign off on the design before anything gets ordered.  (network-design.html:433)  Yes / No / Later
-- [ ] By the time we are on-site, the gear is ready.  (network-design.html:437)  Yes / No / Later
-- [ ] We have a rollback plan documented before we touch the first cable.  (network-design.html:441)  Yes / No / Later
-- [ ] There is no "we hold the keys" lock-in.  (network-design.html:445)  Yes / No / Later
-- [ ] Either you take it from here, or we keep the network under managed IT with continuous monitoring, alerting, and patching.  (network-design.html:449)  Yes / No / Later
 - [ ] We weigh real firewall capability, licensing model, centralized cloud management, and integrated threat feeds against the client's budget and in-house maturity. Cisco Meraki MX  (network-design.html:460)  Yes / No / Later
-- [ ] Cisco Meraki MX is one of the options we deploy, chosen where a clean dashboard, easy multi-site rollouts, and a subscription licensing model fit the client.  (network-design.html:460)  Yes / No / Later
-- [ ] Enterprise-grade switching and Wi-Fi 6/6E sized for most small business deployments, with a strong price-to-capability ratio, clear documentation, and management on-prem or in the cloud.  (network-design.html:461)  Yes / No / Later
 - [ ] Where switching scale, advanced routing, or specific compliance demands push past a standard deployment, including Cisco Catalyst  (network-design.html:462)  Yes / No / Later
-- [ ] Where coolers, warehouses, and multi-floor offices need actual backbone, not consumer-grade trunks.  (network-design.html:463)  Yes / No / Later
-- [ ] We use enterprise authentication where it matters and pre-shared keys where it does not.  (network-design.html:483)  Yes / No / Later
-- [ ] The discipline scales.  (network-design.html:484)  Yes / No / Later
-- [ ] Every site needs reliable connectivity, the same security policy, and a routing plan that does not turn into a maintenance nightmare.  (network-design.html:491)  Yes / No / Later
-- [ ] We deploy it when the inter-site traffic and SLA requirements actually justify the licensing.  (network-design.html:492)  Yes / No / Later
-- [ ] Ongoing network monitoring, configuration management, and firmware patching are included in every managed IT plan .  (network-design.html:499)  Yes / No / Later
-- [ ] If they are end-of-life, undersized, or insecure by design, we replace what needs replacing and reuse the rest.  (network-design.html:508)  Yes / No / Later
 - [ ] We evaluate on real firewall capability, licensing model, centralized management, and integrated threat feeds rather than brand loyalty. Cisco Meraki MX  (network-design.html:512)  Yes / No / Later
-- [ ] Common patterns include a Salinas headquarters connected to a Watsonville cooler and a Hollister yard, with remote workers tunneling in from across the state or the country.  (network-design.html:520)  Yes / No / Later
-- [ ] You are not locked to us.  (network-design.html:524)  Yes / No / Later
 - [ ] Approved Scanning Vendor quarterly scans where required, plus internal scanning and remediation, set up and interpreted for you so a scan is a routine pass, not a scramble.  (pci-compliance.html:278)  Yes / No / Later
 - [ ] PCI DSS also requires annual penetration testing , which we can scope alongside your ASV scans.  (pci-compliance.html:278)  Yes / No / Later
 - [ ] Do I need quarterly vulnerability scans?  (pci-compliance.html:322)  Yes / No / Later

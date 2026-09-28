@@ -99,11 +99,11 @@ A: Our standard agreement is 12 months at the listed per-user price. The term gi
 Q: Do you support Mac as well as Windows?
 A: Yes. The full stack runs on macOS and Windows, and we manage iOS and Android phones through Microsoft Intune. Linux servers are also supported on managed plans.
 Q: We already have an internal IT person. Can you co-manage?
-A: Yes. Co-managed IT is a common arrangement. We bring the enterprise tooling, the cybersecurity stack, and after-hours coverage; your internal IT keeps owning end-user relationships and project work. We document the boundary together.
+A: Yes. Co-managed IT is a common arrangement. We bring the enterprise tooling, the cybersecurity stack, and after-hours help on request; your internal IT keeps owning end-user relationships and project work. We document the boundary together.
 Q: What size business is this designed for?
 A: There's no hard size limit. We support businesses ranging from tiny teams on the Tiny Team Managed Security plan up through 50+ employee operations on the per-user tiers. The right fit is less about headcount and more about whether you've outgrown the part-time-IT-cousin arrangement, lost your one IT person, or need your stack to operate at government-grade security standards. We serve clients on-site across Monterey County and the Central Coast, and remotely across the United States.
 Q: Are you actually available after hours?
-A: Yes for emergencies. Our managed detection and response SOC monitors endpoints around the clock and engages us automatically on a critical event. Direct after-hours contact for client escalations is included; routine helpdesk runs business hours Pacific.
+A: Yes for critical incidents. Our managed detection and response SOC monitors endpoints around the clock and engages automatically on a critical event. Routine helpdesk runs business hours Pacific; after-hours contact for client escalations is available on request.
 Q: Who will I actually talk to?
 A: Ulises Paiz, the owner, directly. There is no tier-1 queue and no offshore call center: the engineer who knows your environment answers the phone, and critical incidents carry our 4-hour notification commitment.
 ## Ready to stop running IT on hope?
@@ -130,7 +130,7 @@ Submit and track tickets from our client portal. You see status the whole way th
 ### Email
 Email support and it becomes a tracked ticket automatically. Good for the non-urgent "when you get a chance" requests that should not get lost.
 ### Phone
-Call (831) 204-0501 and talk to a person who can fix it. After-hours emergencies reach the engineer directly, not a voicemail box.
+Call (831) 204-0501 and talk to a person who can fix it. Critical incidents carry a 4-hour notification commitment with a direct line to the owner; after-hours help beyond that is available on request.
 ### On-site
 For anything physical, we come to you across Monterey County and the Central Coast: hardware swaps, new-hire setups, network drops, office moves.
 ## What the help desk handles every day
@@ -475,6 +475,73 @@ Q: Who will I actually talk to?
 A: Ulises Paiz, the owner, directly. There is no tier-1 queue and no offshore call center: the engineer who knows your environment answers the phone, and critical incidents carry our 4-hour notification commitment.
 ## Get a real backup, not just a hope
 Book a 30-minute free assessment, or send us a note. We will tell you straight whether what you have today actually works.
+
+## https://ghosxt.com/network-design
+
+Title: Network Design & Architecture | Ghosxt – California
+Meta description: Network design, VLAN segmentation, firewall & wireless for California small business. Engineer with DoD infrastructure experience, vendor-neutral.
+
+# Network Design and Architecture for California Small Business
+Most small business networks were not designed. They grew. Someone plugged in an ISP router on day one. A switch got added when the office expanded. A second access point joined the mix when the back conference room had no Wi-Fi. Five years later, everything is on one flat segment, the firewall is the modem the cable company gave you, and the only person who knows the admin password left two jobs ago. Ghosxt designs networks the way an engineer with DoD infrastructure experience would build one if you owned the rack: segmented, documented, vendor-neutral, and built to last. On-site across Monterey County and California, remote across the United States.
+★★★★★ Rated 5.0 across 26 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
+Transparent managed IT pricing is published upfront, so you know the range before booking.
+Network Design and Architecture for California Small Business: at a glance
+## What a properly designed network actually looks like
+A real network has shape. It separates traffic that should never see each other: production endpoints from guest Wi-Fi, point-of-sale terminals from office workstations, IoT cameras and printers from domain controllers, IT management interfaces from everything. It runs through a real firewall, not a residential router with a fancy logo. It has documented IP schemes, named VLANs, mapped switchports, and a current diagram that matches reality. It uses access points sized to the building, not three consumer ones stacked on a shelf. It has wired uplinks where it matters and a battery on the gear that holds the lights on.
+None of that is exotic. It is what a network is supposed to look like before any of the cybersecurity work starts to matter. You cannot defend an undefined network.
+## Where most small business networks fail
+The same five problems show up over and over when we open up a new client's network:
+- Flat networks. Every device on one VLAN. The receptionist's PC, the security cameras, the production server, and the kid in the parking lot on the open guest network are all neighbors. A compromised printer can talk directly to a domain controller.
+- The ISP router as the firewall. A device with a default admin password, no real intrusion prevention, no logging, no VPN worth the name, and a vendor whose security update cadence is measured in years.
+- No documentation. No diagram, no IP scheme, no record of which port goes where. Troubleshooting is archaeology. Onboarding a new IT provider takes three weeks.
+- Default credentials. "admin" / the brand name on switches, access points, NAS units, and printers. We find at least one of these on almost every assessment.
+- No segmentation between sites. A second office or remote yard is connected by an unmanaged tunnel, with no firewall in between, so a compromise at the small site is a compromise at the headquarters.
+Each of these is fixable. None of them require a six-figure equipment order. They require someone who knows how networks are supposed to be built and is willing to do the unglamorous work of building yours that way.
+## Our design and deployment process
+### 1. Assess
+We walk the building, log into every device we can find, and map what is actually there. Switchports, IPs, VLANs, firewall rules, AP layouts, cabling. You get a written current-state report whether or not we get the project.
+### 2. Design
+We draft a target architecture: VLAN scheme, firewall rules, AP placement, IP plan, redundancy choices, vendor selection. Trade-offs are explained, not hidden. You sign off on the design before anything gets ordered.
+### 3. Stage
+Equipment is configured at our bench, not on your floor. Switches are flashed, firewalls are pre-built, APs are pre-adopted, configurations are version-controlled. By the time we are on-site, the gear is ready.
+### 4. Deploy
+Cutover is scheduled around your operations. For most clients that is a Saturday or an after-hours window. We have a rollback plan documented before we touch the first cable.
+### 5. Document
+Final diagram, IP scheme, port maps, firewall rule documentation, configuration backups, and credentials handed over in your password manager. You own everything. There is no "we hold the keys" lock-in.
+### 6. Hand-off & Monitor
+Either you take it from here, or we keep the network under managed IT with continuous monitoring, alerting, and patching. Either way, you are not stuck.
+## How we choose network equipment
+We are vendor-neutral. The right gear depends on the size of the business, the throughput needed, the existing investment, and the maturity level the team can support after we hand it over. What that evaluation looks like in practice:
+- Firewalls. We weigh real firewall capability, licensing model, centralized cloud management, and integrated threat feeds against the client's budget and in-house maturity. Cisco Meraki MX is one of the options we deploy, chosen where a clean dashboard, easy multi-site rollouts, and a subscription licensing model fit the client.
+- Switching and Wi-Fi. Enterprise-grade switching and Wi-Fi 6/6E sized for most small business deployments, with a strong price-to-capability ratio, clear documentation, and management on-prem or in the cloud.
+- Advanced switching and routing. Where switching scale, advanced routing, or specific compliance demands push past a standard deployment, including Cisco Catalyst for teams already standardized on Cisco.
+- 10GbE / SFP+ uplinks and fiber. Where coolers, warehouses, and multi-floor offices need actual backbone, not consumer-grade trunks.
+For the deeper cybersecurity layer that sits on top of the firewall (managed detection and response, identity, MFA, monitoring), see our cybersecurity services. For C-TPAT-aligned network controls for importers and 3PLs, see C-TPAT compliance.
+## Free network architecture assessment
+30 minutes on-site or remote. We map what you have today, identify the security and reliability gaps, and write up the priority order to fix them. No sales script. You get the report regardless.
+## Wireless that actually works in the building you have
+Office Wi-Fi is the easy case. The hard cases are coolers, warehouses, machine shops, and concrete-walled buildings where consumer access points fail and the answer is not "more APs, closer together." We do site surveys with real RF tools, plan for the construction materials in your specific building, and design coverage for the way people actually move through it. We separate guest Wi-Fi from production. We isolate IoT and POS. We use enterprise authentication where it matters and pre-shared keys where it does not.
+For Watsonville cold-storage and Salinas ag operations, that often means hardened APs that survive a refrigerated environment and antenna placement designed around metal racking, not around the conference room. For San Jose tech offices and Santa Cruz professional services, it means Wi-Fi 6E and high client density on a single floor. The discipline scales.
+## Multi-site, VPN, and SD-WAN
+Single-site networks are simple. The interesting work starts when you have a Salinas headquarters, a Watsonville cooler, a Hollister yard, and a Monterey sales office, plus a handful of remote workers spread between Gilroy, San Jose, Pacific Grove, Carmel, Seaside, Marina, and the rest of the United States. Every site needs reliable connectivity, the same security policy, and a routing plan that does not turn into a maintenance nightmare.
+We pick between site-to-site IPsec VPN, dynamic full-mesh tunnels, or SD-WAN based on the actual traffic patterns and the budget. SD-WAN is the right answer when there are more than three sites with steady inter-site traffic. IPsec is the right answer for a hub-and-spoke setup where most of the traffic goes to the cloud. We do not deploy SD-WAN because it sounds modern. We deploy it when the inter-site traffic and SLA requirements actually justify the licensing.
+## Pricing and what is included
+Network design and deployment is project-priced based on scope. Ongoing monitoring, configuration management, and firmware patching for firewalls, switches, and wireless access points are available as per-device add-ons to any managed IT plan. See full pricing for add-on rates and what each managed tier includes.
+## FAQs about network design
+Q: Do you replace our existing equipment, or work with what we have?
+A: Both, depending on what is in the rack. If your existing firewall and switches are still under support and capable of doing the job, we configure them properly and document them. If they are end-of-life, undersized, or insecure by design, we replace what needs replacing and reuse the rest.
+Q: What firewall vendors do you deploy?
+A: We evaluate on real firewall capability, licensing model, centralized management, and integrated threat feeds rather than brand loyalty. Cisco Meraki MX is one of the firewalls we deploy, depending on the environment. We are vendor-neutral and pick the right tool for the size of business, the throughput needed, and your budget. We do not deploy ISP-provided routers as firewalls.
+Q: Why do small businesses need VLANs?
+A: VLANs separate traffic that should never see each other: guest Wi-Fi from production, security cameras and POS terminals from office computers, IoT devices from servers. Without segmentation, a compromised printer can give an attacker direct access to your domain controller. With segmentation, the same compromise is contained to one segment and goes nowhere.
+Q: Can you handle multi-site networks?
+A: Yes. Site-to-site IPsec VPN, SD-WAN, and full hub-and-spoke designs depending on the use case. Common patterns include a Salinas headquarters connected to a Watsonville cooler and a Hollister yard, with remote workers tunneling in from across the state or the country.
+Q: Do we get a network diagram and documentation?
+A: Yes. Every deployment ends with a written runbook, a current network diagram, IP scheme documentation, switch and firewall configuration backups, and credentials handed over to you in your password manager. You own all of it. You are not locked to us.
+Q: Who will I actually talk to?
+A: Ulises Paiz, the owner, directly. There is no tier-1 queue and no offshore call center: the engineer who knows your environment answers the phone, and critical incidents carry our 4-hour notification commitment.
+## Get your network mapped and graded
+Book a 30-minute free assessment, or send us a note. You walk away with a written network report and a priority-ordered fix list, on the house.
 
 ## https://ghosxt.com/website-development
 
@@ -1325,11 +1392,11 @@ Book a free cyber insurance assessment, or call (831) 204-0501. You will leave k
 ## https://ghosxt.com/co-managed-it
 
 Title: Co-Managed IT Services | Ghosxt
-Meta description: Co-managed IT services: Ghosxt augments your in-house team with help desk overflow, after-hours coverage & 24/7 security monitoring. Free assessment.
+Meta description: Co-managed IT: Ghosxt augments your in-house team with help desk overflow, 24/7 security monitoring & after-hours help on request. Free assessment.
 
 Existing client and need help right now? Get support.
 # Co-Managed IT Services
-You already have IT (maybe one stretched-thin person, maybe a small team) and they are good. They are also the only one who knows how everything works, cannot take a real vacation, and do not have time to become a cybersecurity specialist on top of everything else. Co-managed IT fixes that. Ghosxt works alongside your team, covering the gaps, the after-hours load, and the security and compliance depth, so your internal IT gets stronger, not replaced.
+You already have IT (maybe one stretched-thin person, maybe a small team) and they are good. They are also the only one who knows how everything works, cannot take a real vacation, and do not have time to become a cybersecurity specialist on top of everything else. Co-managed IT fixes that. Ghosxt works alongside your team, covering the gaps, providing after-hours help on request, and the security and compliance depth, so your internal IT gets stronger, not replaced.
 Scoped to the role we play, transparent pricing, agreed upfront.
 Co-Managed IT Services: at a glance
 ## What co-managed IT actually means
@@ -1339,8 +1406,8 @@ The result is a business that no longer depends on one person never getting sick
 Pick the gaps that hurt most. Co-managed IT is modular: we take on exactly the role your team needs, and nothing they would rather keep.
 ### Help Desk Ticket Overflow
 When your IT person is buried, tickets still get answered. Ghosxt absorbs the day-to-day volume directly: password resets, new-hire setups, the everyday questions, so your internal team can focus on the work only they can do.
-### After-Hours & On-Call Coverage
-Nights, weekends, holidays, and vacations covered by a real engineer. Your single IT person stops being a single point of failure, and gets to actually unplug without the business going dark.
+### After-Hours Help, On Request
+When your IT person needs to unplug for a night, a weekend, or a real vacation, after-hours help from a real engineer is available on request. Your single IT person stops being a single point of failure without the business going dark.
 ### Security & Compliance Specialist
 An engineer with DoD infrastructure experience adds the managed detection and response, identity hardening, cloud backup, and HIPAA, CMMC, PCI, and cyber-insurance documentation that a busy generalist team rarely has the time or specialization to build. See cybersecurity.
 ### Enterprise Tooling & RMM
@@ -1358,15 +1425,15 @@ If any of that sounds familiar, co-managed IT gives you enterprise-grade depth a
 Co-managed IT draws on the same capabilities we run for fully managed clients (help desk, cybersecurity, Microsoft 365 and cloud, backup and disaster recovery, and vCIO strategy) applied to whichever pieces your team wants to share. As your needs change, the split can change with them.
 ## Co-managed IT FAQs
 Q: What's the difference between co-managed and fully managed IT?
-A: With fully managed IT, we run everything. With co-managed IT, you keep your internal IT person or team and we work alongside them: covering the gaps they cannot, taking the after-hours and overflow load, and bringing specialist depth in security and compliance. You stay in control; your team gets backup and breathing room.
+A: With fully managed IT, we run everything. With co-managed IT, you keep your internal IT person or team and we work alongside them: covering the gaps they cannot, taking the overflow load, providing after-hours help on request, and bringing specialist depth in security and compliance. You stay in control; your team gets backup and breathing room.
 Q: Will you replace our internal IT person?
 A: No. Co-managed IT exists to make your internal IT stronger, not to replace anyone. Most of our co-managed clients keep their IT person exactly where they are and use us to remove the burnout, single-point-of-failure risk, and specialist gaps. We make your in-house person look good, not redundant.
-Q: Can you just cover nights, weekends, and vacations?
-A: Yes. On-call and after-hours coverage is one of the most common reasons businesses bring us in. Your IT person finally gets to take a real vacation or sleep through the night, knowing a senior engineer and 24/7 security monitoring have the wheel.
+Q: Can you cover nights, weekends, or vacations when our IT person is out?
+A: There is no standing after-hours or on-call rotation. After-hours help is available on request when your IT person needs to take real time off or something urgent comes up, and our 24/7 security monitoring keeps watching regardless.
 Q: Can you bring cybersecurity and compliance expertise our team doesn't have?
 A: Yes. This is where co-managed IT pays for itself. As an engineer with DoD infrastructure experience, we add the managed detection and response, identity hardening, cloud backup, and compliance documentation (HIPAA, CMMC, PCI, cyber-insurance) that a generalist internal team rarely has time or specialization to build.
 Q: How does co-managed IT pricing work?
-A: It is scoped to exactly the role we play (help-desk overflow, after-hours coverage, security, tooling, or project surge) rather than a blanket per-user fee for everything. Pricing is transparent and agreed upfront. Start with a free assessment and we will propose a clear split of responsibilities and cost.
+A: It is scoped to exactly the role we play (help-desk overflow, after-hours support on request, security, tooling, or project surge) rather than a blanket per-user fee for everything. Pricing is transparent and agreed upfront. Start with a free assessment and we will propose a clear split of responsibilities and cost.
 Q: Who will I actually talk to?
 A: Ulises Paiz, the owner, directly. There is no tier-1 queue and no offshore call center: the engineer who knows your environment answers the phone, and critical incidents carry our 4-hour notification commitment.
 ## Make your IT team stronger, not redundant
@@ -1485,7 +1552,7 @@ Most prospects know within thirty seconds. Skim these to find your fit, then jum
 You need reliable IT support, patching, monitoring, MDR, MFA, and predictable monthly pricing, with the security fundamentals built in, but without the advanced compliance and 24/7 SOC layer.
 Best for 5–15 users · $125/user/mo
 ### Choose Secure Growth if…
-You use Microsoft 365 heavily, have remote users, share passwords across the team, get phished, or face cyber-insurance requirements. The right default for most businesses, and your Microsoft 365 & OneDrive data is backed up, included.
+You use Microsoft 365 heavily, have remote users, share passwords across the team, get phished, or face cyber-insurance requirements. The right default for most businesses, and your Microsoft 365 & Google Workspace data is backed up, included.
 Best for 10–40 users · $175/user/mo
 ### Choose Compliance & Continuity if…
 You have compliance exposure (HIPAA, C-TPAT, cyber insurance), import/export or logistics, healthcare, after-hours operations, or your leadership wants a documented IT roadmap and quarterly business reviews.
@@ -1515,7 +1582,7 @@ Covers environment audit, agent deployment, identity hardening, migration work w
 - You own your data, exported on request
 ## Plan Comparison
 Every plan includes the essentials. Move up the tiers for deeper security, automation, and strategic partnership.
-Your data is covered. Secure Growth and Compliance & Continuity include cloud backup for your Microsoft 365 and OneDrive data at no extra charge: the files and email your business actually runs on. Only full server / image-based backup (BCDR) is quoted separately, since it scales with your hardware and data volume.
+Your data is covered. Secure Growth and Compliance & Continuity include cloud backup for your Microsoft 365 and Google Workspace data at no extra charge: the files and email your business actually runs on. Only full server / image-based backup (BCDR) is quoted separately, since it scales with your hardware and data volume.
 ## For teams of 1 to 4 users
 Real managed IT coverage for very small teams that still need serious protection. Same engineering rigor as our larger-team plans, at a flat monthly rate. No surprise per-seat math.
 ### Tiny Team Managed Security
@@ -1524,7 +1591,7 @@ Real managed IT coverage for very small teams that still need serious protection
 - Multi-factor authentication and identity management
 - Microsoft 365 baseline security configuration
 - Email security and anti-phishing
-- Cloud backup for Microsoft 365 & OneDrive: your most important files protected
+- Cloud backup for Microsoft 365 & Google Workspace: your most important files protected
 - Vulnerability management
 - Security awareness training
 - 4-hour notification commitment on critical incidents, direct line to the owner
@@ -1557,13 +1624,13 @@ The things prospects ask before booking a call. Still unsure? Book a free call a
 Q: Is there a minimum number of users?
 A: Yes. The per-user tiers (Core Managed IT, Secure Growth, and Compliance & Continuity) start at 5 users on a 12-month agreement. If you have 1 to 4 users, the Tiny Team Managed Security plan covers you at a flat $600/month, so you still get real managed IT and security without per-seat math.
 Q: Are backups included in the price?
-A: Yes, on Secure Growth and Compliance & Continuity. Both include cloud backup for your Microsoft 365 and OneDrive data (the email and files your business actually runs on) at no extra charge, and Compliance & Continuity adds extended, compliance-grade retention. The only backup billed separately is full server / image-based backup (BCDR), because its cost scales with your hardware and data volume.
+A: Yes, on Secure Growth and Compliance & Continuity. Both include cloud backup for your Microsoft 365 and Google Workspace data (the email and files your business actually runs on) at no extra charge, and Compliance & Continuity adds extended, compliance-grade retention. The only backup billed separately is full server / image-based backup (BCDR), because its cost scales with your hardware and data volume.
 Q: Do I have to sign a long contract, and can I cancel?
 A: Our standard agreement is 12 months at the listed price, which locks your rate with no increases during the initial term. Early cancellation during the term costs 50% of the remaining months. After the first 12 months you can cancel anytime with 30 days written notice and no fee. Want zero term commitment from day one? Month-to-month is available at +15%. You own your data and we export it on request.
 Q: What does onboarding cost?
 A: Onboarding is a one-time fee. It's $1,000 for the Tiny Team plan. For the per-user tiers it's based on size: $1,500 for 5–15 users, $2,500 for 15–30 users, $4,000 for 30–50 users, and a custom quote above 50. Those per-user prices are for the Microsoft 365 default onboarding scope; Google Workspace and Apple fleet onboarding are scoped and quoted separately. It covers environment audit, agent deployment, identity and MFA hardening, Microsoft 365 hardening, any needed migration, and team training.
 Q: What's the difference between the three tiers?
-A: Core Managed IT ($125/user/mo) keeps devices patched, monitored, supported, and stable with MFA and security fundamentals built in. Secure Growth ($175/user/mo) is the recommended default and adds advanced email filtering, dark web and DNS filtering, password management, and Microsoft 365 & OneDrive cloud backup. Compliance & Continuity ($250/user/mo) adds managed detection and response with a 24/7 SOC, vCIO and QBRs, compliance support, compliance-grade backup retention, and a priority escalation queue.
+A: Core Managed IT ($125/user/mo) keeps devices patched, monitored, supported, and stable with MFA and security fundamentals built in. Secure Growth ($175/user/mo) is the recommended default and adds advanced email filtering, dark web and DNS filtering, password management, and Microsoft 365 & Google Workspace cloud backup. Compliance & Continuity ($250/user/mo) adds managed detection and response with a 24/7 SOC, vCIO and QBRs, compliance support, compliance-grade backup retention, and a priority escalation queue.
 Q: Are there any hidden fees?
 A: No. Your monthly cost is the per-user tier price plus any infrastructure add-ons you choose (servers, firewalls, switches, access points, NAS, and MDM are all listed with their prices), plus a one-time onboarding fee at the start. There are no surprise monthly charges and no price increases during your initial term.
 Q: How much can I save versus hiring IT in-house?
@@ -1595,13 +1662,13 @@ What we use, and why. A mix, on purpose: per user for people, per device for inf
 These are the same numbers as our pricing page. Per-user plans start at 5 users on a 12-month agreement, and month-to-month is available at 15% more.
 ### Tiny Team Managed Security
 $600 per month, flat. For 1 to 4 users.
-24/7 monitoring, help desk, patching, managed detection and response, MFA, email security, cloud backup for Microsoft 365 and OneDrive, vulnerability management, and security awareness training.
+24/7 monitoring, help desk, patching, managed detection and response, MFA, email security, cloud backup for Microsoft 365 and Google Workspace, vulnerability management, and security awareness training.
 ### Core Managed IT
 $125 per user per month. Best for 5 to 15 users.
 24/7 monitoring, OS and third-party patching, managed detection and response, business-hours help desk, backup monitoring, MFA enforcement, Microsoft 365 baseline hardening, security awareness training, and monthly reporting.
 ### Secure Growth
 $175 per user per month. Best for 10 to 40 users. Our recommended default.
-Everything in Core, plus advanced email filtering, dark web monitoring, DNS filtering, an enterprise password vault, vendor management, and cloud backup for Microsoft 365 and OneDrive.
+Everything in Core, plus advanced email filtering, dark web monitoring, DNS filtering, an enterprise password vault, vendor management, and cloud backup for Microsoft 365 and Google Workspace.
 ### Compliance & Continuity
 $250 per user per month. For regulated work, cyber insurance requirements, or businesses where downtime is expensive.
 Everything in Secure Growth, plus managed detection and response with a 24/7 SOC, compliance support, compliance-grade backup retention, vCIO planning and quarterly business reviews, included after-hours support, and a priority escalation queue.
@@ -1642,7 +1709,7 @@ A: Yes, for fully managed IT. Our own published tiers are $125, $175, and $250 p
 Q: How much does IT support cost for a 10-person office?
 A: On our published pricing, a 10-person office pays $1,250 a month on Core Managed IT ($125 per user), $1,750 on Secure Growth ($175 per user), or $2,500 on Compliance & Continuity ($250 per user), plus $1,500 one-time onboarding on the Microsoft 365 default scope. Add $200 a month for a server and $50 for a firewall if you have them.
 Q: What does managed IT cost for a business with 2 or 3 employees?
-A: $600 a month, flat, for 1 to 4 users on our Tiny Team plan. That includes monitoring, help desk, patching, managed detection and response, MFA, email security, cloud backup for Microsoft 365 and OneDrive, and security awareness training. One-time onboarding is $1,000.
+A: $600 a month, flat, for 1 to 4 users on our Tiny Team plan. That includes monitoring, help desk, patching, managed detection and response, MFA, email security, cloud backup for Microsoft 365 and Google Workspace, and security awareness training. One-time onboarding is $1,000.
 Q: Is managed IT cheaper than hiring an IT person?
 A: For most small teams, yes. One in-house hire costs a full California salary plus benefits and still leaves you uncovered when that person is sick or on vacation. The calculator on our pricing page compares the two for your headcount, and for most small teams it comes out roughly 73 to 79 percent less than building the same skills in-house.
 Q: Is there a setup fee for managed IT?
@@ -2740,7 +2807,7 @@ A: Yes. Firewalls, switching, VLAN segmentation, VPN, secure remote access, and 
 Q: Is Ghosxt a fit for a very small Salinas team?
 A: Yes. Tiny Team Managed Security is purpose-built for businesses of 1 to 4 users that still need real protection: phishing-resistant MFA, managed detection and response (MDR), Microsoft 365 baseline hardening, monitoring, helpdesk, and security awareness training. The per-user tiers (Core Managed IT, Secure Growth, and Compliance & Continuity) start at 5 users. Fit depends more on your operating profile, compliance exposure, and uptime requirements than headcount alone.
 Q: How fast do you respond to IT support tickets in Salinas?
-A: Standard managed IT tiers carry our 4-hour notification commitment on critical incidents, with direct access to the owner, and most remote-fixable issues are resolved without an on-site visit. The Compliance & Continuity tier includes a priority escalation queue. After-hours escalation is available by contract for industries that operate around the clock (cold storage, logistics, harvest operations).
+A: Standard managed IT tiers carry our 4-hour notification commitment on critical incidents, with direct access to the owner, and most remote-fixable issues are resolved without an on-site visit. The Compliance & Continuity tier includes a priority escalation queue. After-hours help is available on request for industries that operate around the clock (cold storage, logistics, harvest operations).
 Q: Do you help with cyber-insurance renewals in Salinas?
 A: Yes. We help Salinas businesses prepare for the cyber-insurance questionnaire by implementing the controls the underwriter actually wants to see (MFA everywhere, managed detection and response on every endpoint, cloud backup, security awareness training, written incident response, and a documented patching cadence) and by gathering evidence for the renewal application. Read the cyber-insurance renewal checklist for what the underwriter is going to ask.
 Q: Can you take over from our current Salinas IT provider without breaking anything?
@@ -4378,7 +4445,7 @@ Hardened email and application-layer controls around the booking and reservation
 ### Cloud Backup
 Cloud backup for Microsoft 365 and Google Workspace, held outside your tenant where a ransomware crew cannot reach or wipe it. Mail and shared files come back from a point in time the attacker could not touch. See backup & DR.
 ### 24/7 Monitoring & Response
-Alerts go to a human who acts, not a dashboard that waits. PG businesses run lean. There is no internal IT on call at 2 a.m. We are. The speed of modern attacks makes that response time the difference.
+Alerts go to a human who acts, not a dashboard that waits. PG businesses run lean, and our 24/7 security monitoring watches around the clock so a 2 a.m. alert gets a response, not a voicemail. The speed of modern attacks makes that response time the difference.
 ## Free cybersecurity assessment for your Pacific Grove business
 30 minutes with a senior engineer: no sales pitch, no jargon. We look at your endpoints, accounts, email, and backups and hand you a short, prioritized list of what to address first. Most PG businesses come away with three to five clear actions. Useful whether or not you become a client. Scheduled around your hours, handled without making a scene in front of guests or colleagues.
 ## Compliance and insurability for a PG small business
@@ -6000,7 +6067,7 @@ Custom websites and e-commerce that load fast, rank well, and actually convert v
 ### C-TPAT Compliance
 C-TPAT cybersecurity for importers, carriers, freight forwarders, and 3PLs. CBP-aligned controls and documentation that hold up under validation, without disrupting your operations.
 ### Co-Managed IT
-Already have an IT person or team? We augment them (help-desk overflow, after-hours coverage, and cybersecurity and compliance depth) filling the gaps without replacing anyone. Enterprise tooling and a senior engineer behind your in-house IT.
+Already have an IT person or team? We augment them (help-desk overflow, after-hours help on request, and cybersecurity and compliance depth) filling the gaps without replacing anyone. Enterprise tooling and a senior engineer behind your in-house IT.
 ### Incident Response & Emergency IT
 Systems locked or down right now? Containment, evidence preservation, restore of mail and files from cloud backup, and the cyber-insurance documentation your carrier asks for, led by an engineer with DoD infrastructure experience and backed by a 4-hour notification commitment on critical incidents. Call (831) 204-0501: the emergency line is answered, not queued.
 ### Break-Fix vs. Managed IT
