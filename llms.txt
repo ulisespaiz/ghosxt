@@ -64,6 +64,7 @@ Key facts:
 - [Managed IT for remote, Mac-first teams](https://ghosxt.com/it-support-remote-mac-teams): zero-touch Apple Business Manager enrollment, remote lock and erase, and sign-in monitoring across countries.
 
 ## Service areas (city pages)
+- [Service Area](https://ghosxt.com/service-area): hub page listing every city, county, and town Ghosxt serves across the Central Coast, with remote support nationwide.
 - [Salinas](https://ghosxt.com/salinas)
 - [Monterey](https://ghosxt.com/monterey)
 - [Watsonville](https://ghosxt.com/watsonville)
@@ -107,6 +108,10 @@ IT support & help desk, by city: [Morgan Hill](https://ghosxt.com/it-help-morgan
 - [Switching IT providers: a Salinas/Monterey checklist](https://ghosxt.com/blog/switching-it-providers-salinas-monterey-checklist)
 - [What a small business website costs (2026, real numbers)](https://ghosxt.com/blog/small-business-website-cost-2026)
 - [9 signs your website is costing you customers](https://ghosxt.com/blog/website-redesign-signs-small-business-2026)
+- [Does Google Workspace back up your data?](https://ghosxt.com/blog/google-workspace-backup-small-business-2026): explains Google Workspace's limited trash and account-recovery windows and where backup fits in.
+- [Microsoft 365 vs Google Workspace for a 10-person business](https://ghosxt.com/blog/microsoft-365-vs-google-workspace-small-business-2026): a decision guide comparing identity, devices, compliance, and cost between the two platforms.
+- [Phishing-resistant MFA in Google Workspace](https://ghosxt.com/blog/phishing-resistant-mfa-google-workspace-admin-guide): an Admin console rollout plan for enforcing security keys and passkeys.
+- [How to offboard a contractor in Google Workspace](https://ghosxt.com/blog/offboard-contractor-google-workspace-checklist): a checklist covering access, devices, licenses, and shared logins when a contractor leaves.
 - [Full blog index](https://ghosxt.com/blog/)
 
 ## More
