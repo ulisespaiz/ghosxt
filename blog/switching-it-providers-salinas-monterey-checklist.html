@@ -48,7 +48,7 @@
             "author": { "@type": "Person", "name": "Ulises Paiz", "url": "https://ghosxt.com/about" },
             "publisher": { "@type": "Organization", "name": "Ghosxt", "logo": { "@type": "ImageObject", "url": "https://ghosxt.com/assets/img/ghosxt-logo-160.webp" } },
             "datePublished": "2026-05-16",
-            "dateModified": "2026-05-16",
+            "dateModified": "2026-09-28",
             "articleSection": "Managed IT in Salinas",
             "keywords": "switching IT providers Salinas, change MSP, leaving managed services provider, MSP transition checklist, Salinas IT company switch, Microsoft 365 partner of record transfer, MSP onboarding, IT provider divorce, Monterey County MSP switch, San Benito County MSP switch, Santa Cruz County MSP switch, Santa Clara County MSP switch, San Jose MSP switch, Gilroy MSP switch"
           },
@@ -101,6 +101,22 @@
                 "acceptedAnswer": {
                   "@type": "Answer",
                   "text": "Not legally, if you have your access in order. They can be slow, uncooperative, and unhelpful, which is why the pre-notice checklist matters. The leverage they have is operational: if they hold your Global Admin and you didn't run the access recovery first, they can effectively delay the transition by being slow to hand over credentials. Once you control your own Global Admin, domain registrar, and DNS, no MSP can stop you from switching. They can only make the last two weeks awkward."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What questions should I ask an MSP before I sign a contract?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Ask who you will actually talk to day-to-day, whether pricing is published or only quoted privately, what the onboarding fee covers, the contract term and exit terms, who owns the administrative credentials and documentation, how incidents are reported and within what time frame, whether an independent risk assessment is performed, whether they can provide SOC 2 documentation for the tools they deploy, which written policies they provide, and how offboarding works at the end of the contract. A provider that cannot answer these in writing before you sign will not answer them more clearly after."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What are contract red flags to watch for with an MSP?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Auto-renewal clauses with long notice windows that quietly lock you into another year, administrative credentials and documentation kept in the MSP's name instead of yours, no pricing published anywhere so every quote is a black box, no named point of contact, only a general ticket queue, and vague or absent language on how and when security incidents are reported. None of these is automatically disqualifying on its own, but more than one together is worth a direct conversation before you sign."
                 }
               }
             ]
@@ -307,6 +323,37 @@
 
           <p>The cleanest version of this: ask the new MSP to send you their standard offboarding clause before you sign the contract. The good ones have one. The bad ones have to invent something on the spot.</p>
 
+          <h2>Questions to ask before you sign with any MSP</h2>
+
+          <p>This applies to Ghosxt, to any of the <a href="/blog/top-managed-it-providers-salinas-monterey-bay">other Salinas-area MSPs</a>, or to whoever you sign with next. Bring this list to the sales call. A provider that cannot answer most of it in writing before you sign will not answer it more clearly after.</p>
+
+          <ol>
+            <li><strong>Who will I actually talk to when something breaks?</strong> Is there a named person, or does every ticket route to whoever is on shift that day? At Ghosxt, that person is the owner; you talk directly to Ulises, not a rotating help desk.</li>
+            <li><strong>Is your pricing published anywhere, or is it a custom quote every time?</strong> Published pricing lets you compare providers on equal terms before you ever get on a call. See <a href="/pricing">Ghosxt's published pricing</a> for an example of what that looks like.</li>
+            <li><strong>What is the onboarding fee, and exactly what does it cover?</strong> Ask for the line items, not just the total.</li>
+            <li><strong>What is the contract term, and what does it actually take to exit?</strong> Get the notice period and any early-termination fee in writing, not summarized verbally.</li>
+            <li><strong>Who owns the administrative credentials and the network documentation, me or you?</strong> If the honest answer is "us," ask how and when that gets handed to you on request.</li>
+            <li><strong>How are security incidents reported to me, and within what time frame?</strong> Ghosxt's contracted commitment is 4-hour notification on actual or reasonably suspected critical incidents.</li>
+            <li><strong>Is there an independent risk assessment, or do you only assess your own work?</strong> Ghosxt arranges an annual independent risk assessment through a third-party assessor.</li>
+            <li><strong>Can you provide SOC 2 reports for the tools you deploy in my environment?</strong> Ghosxt provides SOC 2 documentation for every platform in the stack during onboarding.</li>
+            <li><strong>Which written policies do you provide, and can I see a sample?</strong> Ghosxt's policy suite includes a WISP, incident response plan, BC/DR plan, access control and acceptable use policy, retention and destruction policy, and an AI acceptable use policy.</li>
+            <li><strong>How do you handle offboarding at the end of the contract?</strong> Ask this before you sign, not after you have given notice.</li>
+            <li><strong>What happens to my backups and licenses if I stop paying you?</strong> Get the specifics on data retention and export windows after termination.</li>
+            <li><strong>Do you subcontract any of this work to someone I have not met?</strong> If yes, ask who is actually touching your environment.</li>
+          </ol>
+
+          <h3>Contract red flags</h3>
+
+          <p>None of the following is automatically disqualifying on its own. More than one together is worth a direct conversation before you sign anything.</p>
+
+          <ul>
+            <li><strong>Auto-renewal with a long notice window.</strong> A contract that silently re-locks you into another full year unless you cancel 90 or 120 days out.</li>
+            <li><strong>Credentials held hostage.</strong> Administrative accounts, domain registrar, and documentation kept exclusively in the MSP's name with no clear process to hand them to you on request.</li>
+            <li><strong>No published pricing.</strong> Every quote is a private negotiation with no baseline to compare it against.</li>
+            <li><strong>No named person.</strong> Support routes to a generic queue and you can never predict who picks up your ticket.</li>
+            <li><strong>Vague incident notification language.</strong> The contract says incidents will be reported "promptly" or "as appropriate" instead of a specific time frame.</li>
+          </ul>
+
           <h2>The 30/14/0-day transition timeline</h2>
 
           <h3>Day -30 to -14: protect access and pick the new MSP</h3>
@@ -445,6 +492,12 @@
 
           <h3>What if my current MSP is also a friend or family member?</h3>
           <p>Common in small business markets like Salinas. Honest answer: the relationship usually survives if the conversation is handled well. Tell them directly, in person, before signing the new MSP. Explain the specific reasons. Offer to refer other businesses to them. Pay any breakage fees gracefully. Most of the friend-and-family MSP relationships I have seen end have remained friendly because the business owner was upfront about why. The ones that ended badly were the ones where the owner went radio silent and then sent a termination notice via email.</p>
+
+          <h3>What questions should I ask an MSP before I sign a contract?</h3>
+          <p>Ask who you will actually talk to day-to-day, whether pricing is published or only quoted privately, what the onboarding fee covers, the contract term and exit terms, who owns the administrative credentials and documentation, how incidents are reported and within what time frame, whether an independent risk assessment is performed, whether they can provide SOC 2 documentation for the tools they deploy, which written policies they provide, and how offboarding works at the end of the contract. A provider that cannot answer these in writing before you sign will not answer them more clearly after.</p>
+
+          <h3>What are contract red flags to watch for with an MSP?</h3>
+          <p>Auto-renewal clauses with long notice windows that quietly lock you into another year, administrative credentials and documentation kept in the MSP's name instead of yours, no pricing published anywhere so every quote is a black box, no named point of contact, only a general ticket queue, and vague or absent language on how and when security incidents are reported. None of these is automatically disqualifying on its own, but more than one together is worth a direct conversation before you sign.</p>
 
           <div class="blog-post-cta">
             <h3>Need help running the transition?</h3>
