@@ -5703,31 +5703,34 @@ Title: Client Stories & Results | Ghosxt
 Meta description: Real client stories from Ghosxt: a transportation company, a machine shop, and more, served by an engineer with DoD infrastructure experience.
 
 # Client Stories
-The best measure of an IT partner is the businesses that stay. These are real Ghosxt clients, in their own words: a transportation company three years in, a machine shop that found a true partner, and a local project delivered exactly as imagined. Different industries, different needs, one constant: an engineer with DoD infrastructure experience who treats your business like it matters.
+The best measure of an IT partner is the businesses that stay. These are real Ghosxt clients, and client names are withheld on every story. Three include the client’s own words: a transportation company three years in, a machine shop that found a true partner, and a local project delivered exactly as imagined. A fourth story, a five-person remote firm, is told by us. Different industries, different needs, one constant: an engineer with DoD infrastructure experience who treats your business like it matters.
 Real clients, real words: ask us for a reference relevant to your industry.
 Client Stories: at a glance
-## Villicana Group (Transportation & Logistics Company)
-Villicana Group is a Central Coast transportation company, and one of the businesses Ghosxt has partnered with longest: a relationship spanning three years across nearly every part of their IT. The work has run from website and cybersecurity to meeting high-level compliance standards and improving the efficiency of their security systems, with the import/export side of a logistics business adding its own demands.
+## A Central Coast transportation and logistics company
+This company is one of the businesses Ghosxt has partnered with longest: a relationship spanning three years across nearly every part of its IT. The work has run from website and cybersecurity to meeting high-level compliance standards and improving the efficiency of its security systems, with the import/export side of a logistics business adding its own demands.
 It is the kind of ongoing partnership we aim for: not a vendor who appears when something breaks, but a single engineer who understands the whole business and helps it adapt to the technology side over time. For a transportation and logistics operation, that continuity is the value: the systems that move freight and clear customs cannot be handed to a stranger each time.
 “We've had the pleasure of partnering with Ghosxt for the past three years, and it's been an incredibly valuable relationship. Ulises has provided us with consistent, personalized IT support that's helped us better understand and adapt to the tech side of our business. From customizing our website to enhancing our cybersecurity, he's played a key role in helping us meet high-level compliance standards. He's also helped streamline our import/export logistics and improve the overall efficiency of our security systems.”
-Villicana Group, Transportation & Logistics Company
-## C&M Machine Shop Inc. (Machine Shop, California)
-Machine shops run on systems that have to stay up and data that is expensive to lose: job files, designs, and the day-to-day tools the floor depends on. C&M Machine Shop turned to Ghosxt for IT support that treats them as a partner rather than a ticket number, with someone who takes the time to explain what is happening and find the right solution rather than the quickest one.
+Transportation and logistics company, Central Coast
+## A California machine shop
+Machine shops run on systems that have to stay up and data that is expensive to lose: job files, designs, and the day-to-day tools the floor depends on. The shop turned to Ghosxt for IT support that treats it as a partner rather than a ticket number, with someone who takes the time to explain what is happening and find the right solution rather than the quickest one.
 This is the relationship we want every manufacturing and machine-shop client to have: on-demand support that is fast and reliable, and an engineer invested in the business for the long run.
 “Ulises is not just a service provider. He's a true partner who takes the time to explain, support, and find the right solutions for our needs. We're grateful for the continued trust and collaboration with Ghosxt and look forward to what's ahead.”
-C&M Machine Shop Inc., Machine Shop, California
-## Andrew Sandoval (Salinas City Council Member)
-Not every project is a multi-year managed-IT engagement. For Salinas City Council Member Andrew Sandoval, the work was a website, and the experience reflects how we approach any project, large or small: take the time to understand the vision, deliver it responsively and professionally, and add the thoughtful touches that make the result better than expected.
+Machine shop, California
+## A local website project
+Not every project is a multi-year managed-IT engagement. For one local client, the work was a website, and the experience reflects how we approach any project, large or small: take the time to understand the vision, deliver it responsively and professionally, and add the thoughtful touches that make the result better than expected.
 Whether the job is a single website or a complete IT and security program, the standard is the same.
 “I had an incredible experience working with Ulises! He was responsive, professional, and truly took the time to understand my vision. Not only did he bring my ideas to life, but he also added thoughtful touches that made the site even better than I imagined.”
-Andrew Sandoval, Salinas City Council Member
+Website client, Central Coast
+## Case study: a five-person remote firm on Google Workspace (Professional services)
+This professional-services firm has five people, is fully remote, and runs Google Workspace on Macs, with team members in the US and India. It had compliance requirements to meet and went looking for a managed IT provider. They found Ghosxt by describing those requirements to an AI search tool and adding “MSP.” What decided it: they could talk directly to the owner.
+The firm was onboarded onto our Secure Growth plan in about two weeks. There is no client quote for this one; it is told by us. Read the full case study.
 ## Ready to write the next one?
-Book a free 30-minute assessment. We will look at your setup, tell you honestly where you stand, and lay out a prioritized plan: the same way every story above started.
+Book a free 30-minute assessment. We will look at your setup, tell you honestly where you stand, and lay out a prioritized plan.
 ## About working with Ghosxt
 Q: Can you share references or examples relevant to my industry?
 A: Yes. The stories on this page are real clients, and during a free assessment we are happy to speak to work relevant to your industry: transportation and logistics, manufacturing and machine shops, professional offices, and small businesses that simply needed IT that works. Ask and we will point you to the most relevant example.
 Q: What size businesses do you typically work with?
-A: Small and midsize businesses on California's Central Coast: from one- and two-person offices on our flat-rate Tiny Team plan up through multi-location operations. The clients below range from a transportation company to a machine shop to a local public servant's project, which is fairly representative.
+A: Small and midsize businesses on California's Central Coast: from one- and two-person offices on our flat-rate Tiny Team plan up through multi-location operations. The clients below range from a transportation company to a machine shop to a local website project, which is fairly representative.
 Q: How do I become the next story here?
 A: Start with a free 30-minute assessment. We will look at your environment, tell you honestly where you stand, and lay out a prioritized plan. There is no obligation, and you walk away with something useful either way.
 
