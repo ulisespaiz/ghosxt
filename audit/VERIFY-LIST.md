@@ -63,26 +63,11 @@ Total markers: 137 across 30 files; 135 unique claims after grouping repeats.
 - [ ] n testing for small businesses across Salinas , Monterey , Santa Cruz , Watsonville , and San Jose , and the rest of the Central Coast, scoped to whatever's realistic for the environment rather than a one-size checklist.  (blog/penetration-testing-small-business-2026.html:225)  Yes / No / Later
 - [ ] A real firewall (Fortinet, Sophos, Palo Alto, or a managed Meraki) with separated resident, guest, and IoT networks.  (blog/property-management-it-monterey-santa-cruz.html:346)  Yes / No / Later
 - [ ] Real firewall (Fortinet, Sophos, Palo Alto, or a managed Meraki). Not a Linksys.  (blog/trucking-logistics-it-services-salinas-owner-operator.html:347)  Yes / No / Later
-- [ ] Case study: AI-forward accounting firm (Accounting Firm)  (case-studies.html:258)  Yes / No / Later
-- [ ] Client profile: an accounting firm of five users  (case-studies.html:259)  Yes / No / Later
-- [ ] Client profile: an accounting firm of five users [VERIFY], running Google Workspace on a Mac fleet  (case-studies.html:259)  Yes / No / Later
-- [ ] Client profile: an accounting firm of five users [VERIFY], running Google Workspace on a Mac fleet [VERIFY], with contractors in two countries  (case-studies.html:259)  Yes / No / Later
-- [ ] ile: an accounting firm of five users [VERIFY], running Google Workspace on a Mac fleet [VERIFY], with contractors in two countries [VERIFY], whose customers require signed data processing agreements and security reviews  (case-studies.html:259)  Yes / No / Later
-- [ ] f five users [VERIFY], running Google Workspace on a Mac fleet [VERIFY], with contractors in two countries [VERIFY], whose customers require signed data processing agreements and security reviews [VERIFY]. The challenge:  (case-studies.html:260)  Yes / No / Later
-- [ ] Google Workspace as identity provider with phishing-resistant MFA  (case-studies.html:263)  Yes / No / Later
-- [ ] Apple Business Manager with zero-touch enrollment  (case-studies.html:264)  Yes / No / Later
-- [ ] Managed detection and response with a 24/7 SOC  (case-studies.html:265)  Yes / No / Later
-- [ ] Cloud backup for Google Workspace  (case-studies.html:266)  Yes / No / Later
-- [ ] Security awareness training  (case-studies.html:267)  Yes / No / Later
-- [ ] Written policy suite (WISP, incident response, BC/DR, access control and acceptable use, retention and destruction, AI acceptable use)  (case-studies.html:268)  Yes / No / Later
-- [ ] Outcome:  (case-studies.html:270)  Yes / No / Later
-- [ ] “  (case-studies.html:272)  Yes / No / Later
-- [ ] “[VERIFY: quote text verbatim from client, with written permission]”  (case-studies.html:273)  Yes / No / Later
-- [ ] [VERIFY: client name and title],  (case-studies.html:273)  Yes / No / Later
-- [ ] Client Professional-services firm, 5 staff (name withheld)  (case-studies/remote-google-workspace-onboarding.html:192)  Yes / No / Later
-- [ ] We worked identity first, because that's where a remote firm's risk concentrates, then devices, then people.  (case-studies/remote-google-workspace-onboarding.html:230)  Yes / No / Later
-- [ ] Identity monitoring on Workspace Every account's sign-ins watched, with alerts on activity that doesn't fit the team's normal pattern across the US and India.  (case-studies/remote-google-workspace-onboarding.html:233)  Yes / No / Later
-- [ ] Identity monitoring on every Google Workspace account  (case-studies/remote-google-workspace-onboarding.html:248)  Yes / No / Later
+- [ ] Accounting-firm skeleton merged into the remote Google Workspace case study (case-studies.html now has a short anonymous summary; details live in an HTML comment in case-studies/remote-google-workspace-onboarding.html). Confirm each detail, none is confirmed for this client: industry may be accounting; customers may require signed data processing agreements and security reviews; possibly deployed: managed detection and response with a 24/7 SOC; possibly deployed: the written policy suite (WISP, incident response, BC/DR, access control and acceptable use, retention and destruction, AI acceptable use); possibly deployed: phishing-resistant MFA rather than standard 2-step verification; possibly: Macs enrolled with zero-touch enrollment.  (case-studies/remote-google-workspace-onboarding.html:177)  Yes / No / Later
+- [ ] Client Professional-services firm, 5 staff (name withheld)  (case-studies/remote-google-workspace-onboarding.html:193)  Yes / No / Later
+- [ ] We worked identity first, because that's where a remote firm's risk concentrates, then devices, then people.  (case-studies/remote-google-workspace-onboarding.html:231)  Yes / No / Later
+- [ ] Identity monitoring on Workspace Every account's sign-ins watched, with alerts on activity that doesn't fit the team's normal pattern across the US and India.  (case-studies/remote-google-workspace-onboarding.html:234)  Yes / No / Later
+- [ ] Identity monitoring on every Google Workspace account  (case-studies/remote-google-workspace-onboarding.html:249)  Yes / No / Later
 - [ ] Some belong on an on-premises virtualization host  (cloud-services.html:408)  Yes / No / Later
 - [ ] We design hybrid environments where it makes sense: line-of-business apps that live happily on an on-premises virtualization host  (cloud-services.html:465)  Yes / No / Later
 - [ ] Azure infrastructure work (virtual machines, storage, disaster recovery) is scoped and quoted per project.  (cloud-services.html:466)  Yes / No / Later

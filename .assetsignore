@@ -44,3 +44,11 @@ audit/
 .idea/
 .DS_Store
 Thumbs.db
+
+# Agent project memory and agent definitions: internal working notes, never served.
+# (Were reachable at /CLAUDE.md and /.claude/agents/*.md before this rule.)
+CLAUDE.md
+.claude/
+
+# Numbers data file read only by scripts/update-site-numbers.py at build time.
+site-config.json
