@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from an engineer with DoD infrastructure experience.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Mon, 28 Sep 2026 00:43:44 +0000</lastBuildDate>
-    <pubDate>Mon, 28 Sep 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Thu, 01 Oct 2026 11:08:01 +0000</lastBuildDate>
+    <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>How to Answer a Customer Security Questionnaire</title>
+      <link>https://ghosxt.com/blog/security-questionnaire-customer-small-business-2026</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/security-questionnaire-customer-small-business-2026</guid>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Compliance</category>
+      <description>Customers now send vendors security questionnaires before signing. How a small business can answer them honestly, quickly, and without stalling a deal.</description>
+    </item>
     <item>
       <title>Phishing-Resistant MFA in Google Workspace</title>
       <link>https://ghosxt.com/blog/phishing-resistant-mfa-google-workspace-admin-guide</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>Fraud rings are using deepfake video and stolen identities to get hired as remote IT and admin staff.</description>
-    </item>
-    <item>
-      <title>IT Asset Management for Small Business</title>
-      <link>https://ghosxt.com/blog/it-asset-management-small-business-2026</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/it-asset-management-small-business-2026</guid>
-      <pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>Most small businesses can't say how many laptops, licenses, or old accounts they actually have.</description>
     </item>
   </channel>
 </rss>
