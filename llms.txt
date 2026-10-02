@@ -113,6 +113,7 @@ IT support & help desk, by city: [Morgan Hill](https://ghosxt.com/it-help-morgan
 - [Microsoft 365 vs Google Workspace for a 10-person business](https://ghosxt.com/blog/microsoft-365-vs-google-workspace-small-business-2026): a decision guide comparing identity, devices, compliance, and cost between the two platforms.
 - [Phishing-resistant MFA in Google Workspace](https://ghosxt.com/blog/phishing-resistant-mfa-google-workspace-admin-guide): an Admin console rollout plan for enforcing security keys and passkeys.
 - [How to offboard a contractor in Google Workspace](https://ghosxt.com/blog/offboard-contractor-google-workspace-checklist): a checklist covering access, devices, licenses, and shared logins when a contractor leaves.
+- [How to run a cybersecurity tabletop exercise](https://ghosxt.com/blog/cybersecurity-tabletop-exercise-small-business-2026): a 60-minute guide to testing your incident response plan with a realistic scenario and a simple findings scorecard.
 - [How to answer a customer security questionnaire](https://ghosxt.com/blog/security-questionnaire-customer-small-business-2026): how a small business can answer vendor security reviews honestly, with evidence and a reusable answer library.
 - [Full blog index](https://ghosxt.com/blog/)
 

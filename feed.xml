@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from an engineer with DoD infrastructure experience.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Thu, 01 Oct 2026 11:08:01 +0000</lastBuildDate>
-    <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Fri, 02 Oct 2026 11:07:45 +0000</lastBuildDate>
+    <pubDate>Fri, 02 Oct 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>How to Run a Cybersecurity Tabletop Exercise for Your Small Business</title>
+      <link>https://ghosxt.com/blog/cybersecurity-tabletop-exercise-small-business-2026</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/cybersecurity-tabletop-exercise-small-business-2026</guid>
+      <pubDate>Fri, 02 Oct 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>A tabletop exercise tests your incident response plan before a real attack does. A free 60-minute guide for small businesses, with scenarios and a simple scorecard.</description>
+    </item>
     <item>
       <title>How to Answer a Customer Security Questionnaire</title>
       <link>https://ghosxt.com/blog/security-questionnaire-customer-small-business-2026</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>Cyberattacks on small businesses spike every November and December while support teams run thin.</description>
-    </item>
-    <item>
-      <title>Fake Remote Employees and Hiring Fraud</title>
-      <link>https://ghosxt.com/blog/fake-remote-employee-deepfake-hiring-fraud-small-business-2026</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/fake-remote-employee-deepfake-hiring-fraud-small-business-2026</guid>
-      <pubDate>Tue, 18 Aug 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>Fraud rings are using deepfake video and stolen identities to get hired as remote IT and admin staff.</description>
     </item>
   </channel>
 </rss>
