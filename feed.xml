@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from an engineer with DoD infrastructure experience.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Fri, 02 Oct 2026 11:07:45 +0000</lastBuildDate>
-    <pubDate>Fri, 02 Oct 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Sat, 03 Oct 2026 11:07:40 +0000</lastBuildDate>
+    <pubDate>Sat, 03 Oct 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>How to Do a Cybersecurity Risk Assessment for Your Small Business</title>
+      <link>https://ghosxt.com/blog/cybersecurity-risk-assessment-small-business-2026</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/cybersecurity-risk-assessment-small-business-2026</guid>
+      <pubDate>Sat, 03 Oct 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>A cybersecurity risk assessment shows what could hurt your business and what to fix first. A free step-by-step guide for small businesses.</description>
+    </item>
     <item>
       <title>How to Run a Cybersecurity Tabletop Exercise for Your Small Business</title>
       <link>https://ghosxt.com/blog/cybersecurity-tabletop-exercise-small-business-2026</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Managed IT</category>
       <description>Most small business IT budgets are a guess carried over from last year. How to build a realistic 2027 tech budget: the line items owners forget, and where.</description>
-    </item>
-    <item>
-      <title>Holiday Season Cybersecurity Checklist</title>
-      <link>https://ghosxt.com/blog/holiday-season-cybersecurity-checklist-small-business-2026</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/holiday-season-cybersecurity-checklist-small-business-2026</guid>
-      <pubDate>Wed, 19 Aug 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>Cyberattacks on small businesses spike every November and December while support teams run thin.</description>
     </item>
   </channel>
 </rss>

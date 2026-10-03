@@ -5897,6 +5897,7 @@ Meta description: Notes from an engineer with DoD infrastructure experience on c
 Plain-talk writing on cybersecurity, managed IT, and the things that actually break in small business networks. No corporate speak, no fearmongering, no fluff.
 ## Latest
 The newest posts across every topic. Looking for something specific? Browse all posts in the file view.
+- [How to Do a Cybersecurity Risk Assessment for Your Small Business in One Afternoon](https://ghosxt.com/blog/cybersecurity-risk-assessment-small-business-2026)
 - [How to Run a Cybersecurity Tabletop Exercise in 60 Minutes (No Tech Skills Needed)](https://ghosxt.com/blog/cybersecurity-tabletop-exercise-small-business-2026)
 - [How to Answer a Customer Security Questionnaire (Without Losing the Deal)](https://ghosxt.com/blog/security-questionnaire-customer-small-business-2026)
 - [Phishing-Resistant MFA in Google Workspace: The Admin Console Rollout Plan](https://ghosxt.com/blog/phishing-resistant-mfa-google-workspace-admin-guide)
