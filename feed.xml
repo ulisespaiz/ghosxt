@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from an engineer with DoD infrastructure experience.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Sat, 03 Oct 2026 11:07:40 +0000</lastBuildDate>
-    <pubDate>Sat, 03 Oct 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Sun, 04 Oct 2026 11:07:33 +0000</lastBuildDate>
+    <pubDate>Sun, 04 Oct 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>How to Run a Vulnerability Scan for Your Small Business</title>
+      <link>https://ghosxt.com/blog/vulnerability-scanning-small-business-2026</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/vulnerability-scanning-small-business-2026</guid>
+      <pubDate>Sun, 04 Oct 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>A vulnerability scan finds missing patches and risky settings before attackers do. How small businesses can scan, read the results, and fix what matters.</description>
+    </item>
     <item>
       <title>How to Do a Cybersecurity Risk Assessment for Your Small Business</title>
       <link>https://ghosxt.com/blog/cybersecurity-risk-assessment-small-business-2026</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>SMS codes can be intercepted and push prompts can be worn down by fatigue attacks. Which type of MFA actually protects a small business, and how to roll.</description>
-    </item>
-    <item>
-      <title>IT Budget Planning for Small Business</title>
-      <link>https://ghosxt.com/blog/it-budget-planning-small-business-2027</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/it-budget-planning-small-business-2027</guid>
-      <pubDate>Thu, 20 Aug 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Managed IT</category>
-      <description>Most small business IT budgets are a guess carried over from last year. How to build a realistic 2027 tech budget: the line items owners forget, and where.</description>
     </item>
   </channel>
 </rss>
