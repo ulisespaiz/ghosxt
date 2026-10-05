@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from an engineer with DoD infrastructure experience.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Sun, 04 Oct 2026 11:07:33 +0000</lastBuildDate>
-    <pubDate>Sun, 04 Oct 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Mon, 05 Oct 2026 11:07:59 +0000</lastBuildDate>
+    <pubDate>Mon, 05 Oct 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>BitLocker and FileVault for Small Business Laptops</title>
+      <link>https://ghosxt.com/blog/full-disk-encryption-bitlocker-filevault-small-business-2026</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/full-disk-encryption-bitlocker-filevault-small-business-2026</guid>
+      <pubDate>Mon, 05 Oct 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>A lost laptop is only a breach if its data is readable. How to turn on BitLocker and FileVault, back up recovery keys, and prove it for insurers.</description>
+    </item>
     <item>
       <title>How to Run a Vulnerability Scan for Your Small Business</title>
       <link>https://ghosxt.com/blog/vulnerability-scanning-small-business-2026</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Google Workspace</category>
       <description>Gmail and Drive work out of the box, but Google Workspace ships many of its best protections off.</description>
-    </item>
-    <item>
-      <title>Multi-Factor Authentication for Small Business</title>
-      <link>https://ghosxt.com/blog/multi-factor-authentication-small-business-2026</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/multi-factor-authentication-small-business-2026</guid>
-      <pubDate>Fri, 21 Aug 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>SMS codes can be intercepted and push prompts can be worn down by fatigue attacks. Which type of MFA actually protects a small business, and how to roll.</description>
     </item>
   </channel>
 </rss>
