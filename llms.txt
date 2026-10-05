@@ -115,6 +115,7 @@ IT support & help desk, by city: [Morgan Hill](https://ghosxt.com/it-help-morgan
 - [How to offboard a contractor in Google Workspace](https://ghosxt.com/blog/offboard-contractor-google-workspace-checklist): a checklist covering access, devices, licenses, and shared logins when a contractor leaves.
 - [How to run a cybersecurity tabletop exercise](https://ghosxt.com/blog/cybersecurity-tabletop-exercise-small-business-2026): a 60-minute guide to testing your incident response plan with a realistic scenario and a simple findings scorecard.
 - [How to do a cybersecurity risk assessment](https://ghosxt.com/blog/cybersecurity-risk-assessment-small-business-2026): a step-by-step guide to inventorying assets, scoring threats, and picking the top five fixes in one afternoon.
+- [How to turn on full-disk encryption](https://ghosxt.com/blog/full-disk-encryption-bitlocker-filevault-small-business-2026): enabling BitLocker and FileVault, escrowing recovery keys, and verifying every laptop is encrypted.
 - [How to run a vulnerability scan](https://ghosxt.com/blog/vulnerability-scanning-small-business-2026): scoping external and internal scans, triaging results, and fixing and rescanning for evidence.
 - [How to answer a customer security questionnaire](https://ghosxt.com/blog/security-questionnaire-customer-small-business-2026): how a small business can answer vendor security reviews honestly, with evidence and a reusable answer library.
 - [Full blog index](https://ghosxt.com/blog/)
