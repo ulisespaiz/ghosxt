@@ -5897,6 +5897,7 @@ Meta description: Notes from an engineer with DoD infrastructure experience on c
 Plain-talk writing on cybersecurity, managed IT, and the things that actually break in small business networks. No corporate speak, no fearmongering, no fluff.
 ## Latest
 The newest posts across every topic. Looking for something specific? Browse all posts in the file view.
+- [Audit Logs for Small Business: What to Turn On and How Long to Keep Them](https://ghosxt.com/blog/audit-logs-security-logging-small-business-2026)
 - [How to Turn On Full-Disk Encryption (BitLocker and FileVault) for Your Small Business](https://ghosxt.com/blog/full-disk-encryption-bitlocker-filevault-small-business-2026)
 - [How to Run a Vulnerability Scan for Your Small Business (and What to Do With the Results)](https://ghosxt.com/blog/vulnerability-scanning-small-business-2026)
 - [How to Do a Cybersecurity Risk Assessment for Your Small Business in One Afternoon](https://ghosxt.com/blog/cybersecurity-risk-assessment-small-business-2026)
