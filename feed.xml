@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from an engineer with DoD infrastructure experience.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Thu, 08 Oct 2026 11:08:40 +0000</lastBuildDate>
-    <pubDate>Thu, 08 Oct 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Fri, 09 Oct 2026 11:08:46 +0000</lastBuildDate>
+    <pubDate>Fri, 09 Oct 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>Security Camera Security for Small Business</title>
+      <link>https://ghosxt.com/blog/security-cameras-nvr-iot-small-business-2026</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/security-cameras-nvr-iot-small-business-2026</guid>
+      <pubDate>Fri, 09 Oct 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>Hacked IP cameras and NVRs are an easy way into your network. How small businesses secure cameras: passwords, updates, VLANs, remote access.</description>
+    </item>
     <item>
       <title>Email Encryption for Small Business: What to Encrypt and How</title>
       <link>https://ghosxt.com/blog/email-encryption-small-business-2026</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>Keeping every file forever is not a safety net, it's a bigger breach if something goes wrong.</description>
-    </item>
-    <item>
-      <title>AI Acceptable Use Policy for Small Business</title>
-      <link>https://ghosxt.com/blog/ai-acceptable-use-policy-small-business-2026</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/ai-acceptable-use-policy-small-business-2026</guid>
-      <pubDate>Fri, 28 Aug 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>Employees are already pasting company data into AI tools with or without a policy. What an AI acceptable use policy should actually say, and how to get.</description>
     </item>
   </channel>
 </rss>
