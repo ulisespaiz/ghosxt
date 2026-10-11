@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from an engineer with DoD infrastructure experience.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Sat, 10 Oct 2026 11:00:00 +0000</lastBuildDate>
-    <pubDate>Sat, 10 Oct 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Sun, 11 Oct 2026 11:07:37 +0000</lastBuildDate>
+    <pubDate>Sun, 11 Oct 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>Network Closet and Server Room Security</title>
+      <link>https://ghosxt.com/blog/network-closet-server-room-physical-security-small-business-2026</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/network-closet-server-room-physical-security-small-business-2026</guid>
+      <pubDate>Sun, 11 Oct 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>Unlocked network closets invite tampering and theft. How small businesses secure server rooms: locks, access logs, cooling, cabling, and backups.</description>
+    </item>
     <item>
       <title>Secure File Sharing for Small Business</title>
       <link>https://ghosxt.com/blog/secure-file-sharing-external-links-small-business-2026</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>Zoom AI Companion, Teams recap bots, and other AI notetakers capture and store everything said on a call.</description>
-    </item>
-    <item>
-      <title>AI Browser Agents and Access Risk at Work</title>
-      <link>https://ghosxt.com/blog/ai-browser-agents-small-business-security-risk-2026</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/ai-browser-agents-small-business-security-risk-2026</guid>
-      <pubDate>Sun, 06 Sep 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>Agentic AI browsers can log in, click, and fill forms using an employee's own session. What that changes about small-business risk, and how to put.</description>
     </item>
   </channel>
 </rss>
