@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from an engineer with DoD infrastructure experience.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Mon, 12 Oct 2026 11:08:53 +0000</lastBuildDate>
-    <pubDate>Mon, 12 Oct 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Tue, 13 Oct 2026 11:09:26 +0000</lastBuildDate>
+    <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>I Clicked a Phishing Link: What to Do Next</title>
+      <link>https://ghosxt.com/blog/clicked-phishing-link-what-to-do-small-business-2026</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/clicked-phishing-link-what-to-do-small-business-2026</guid>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>Clicked a phishing link or opened a bad attachment? The first-hour steps to contain it: disconnect, change passwords, revoke sessions, and report.</description>
+    </item>
     <item>
       <title>Conditional Access in Microsoft 365</title>
       <link>https://ghosxt.com/blog/conditional-access-microsoft-365-small-business-2026</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>September 2026 Patch Tuesday: 966 fixes and 2 actively exploited zero-days, both local privilege escalation, plus a PowerPoint preview-pane RCE.</description>
-    </item>
-    <item>
-      <title>Business Continuity Plan for Small Business</title>
-      <link>https://ghosxt.com/blog/business-continuity-plan-small-business-2026</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/business-continuity-plan-small-business-2026</guid>
-      <pubDate>Tue, 08 Sep 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>A backup restores your data. A continuity plan covers everything else: who decides, how the team communicates, and what runs while systems are down.</description>
     </item>
   </channel>
 </rss>

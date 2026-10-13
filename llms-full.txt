@@ -5904,6 +5904,7 @@ The newest posts across every topic. Looking for something specific? Browse all 
 - [Email Encryption for Small Business: When You Need It and How to Turn It On](https://ghosxt.com/blog/email-encryption-small-business-2026)
 - [Single Sign-On (SSO) for Small Business: What It Is and When It Is Worth It](https://ghosxt.com/blog/single-sign-on-sso-small-business-2026)
 - [Audit Logs for Small Business: What to Turn On and How Long to Keep Them](https://ghosxt.com/blog/audit-logs-security-logging-small-business-2026)
+- [I Clicked a Phishing Link: What a Small Business Should Do in the First Hour](https://ghosxt.com/blog/clicked-phishing-link-what-to-do-small-business-2026)
 - [How to Turn On Full-Disk Encryption (BitLocker and FileVault) for Your Small Business](https://ghosxt.com/blog/full-disk-encryption-bitlocker-filevault-small-business-2026)
 - [How to Run a Vulnerability Scan for Your Small Business (and What to Do With the Results)](https://ghosxt.com/blog/vulnerability-scanning-small-business-2026)
 - [How to Do a Cybersecurity Risk Assessment for Your Small Business in One Afternoon](https://ghosxt.com/blog/cybersecurity-risk-assessment-small-business-2026)
