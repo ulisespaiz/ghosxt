@@ -5897,6 +5897,8 @@ Meta description: Notes from an engineer with DoD infrastructure experience on c
 Plain-talk writing on cybersecurity, managed IT, and the things that actually break in small business networks. No corporate speak, no fearmongering, no fluff.
 ## Latest
 The newest posts across every topic. Looking for something specific? Browse all posts in the file view.
+- [October 2026 Patch Tuesday: A Record 1,400 Fixes, 3 Zero-Days, and What a Small Business Needs to Do](https://ghosxt.com/blog/october-2026-patch-tuesday-record-1400-fixes-smb)
+- [I Clicked a Phishing Link: What a Small Business Should Do in the First Hour](https://ghosxt.com/blog/clicked-phishing-link-what-to-do-small-business-2026)
 - [Conditional Access in Microsoft 365 for Small Business: Five Policies to Turn On First](https://ghosxt.com/blog/conditional-access-microsoft-365-small-business-2026)
 - [Network Closet and Server Room Security for Small Business: Lock the Door on Your Hardware](https://ghosxt.com/blog/network-closet-server-room-physical-security-small-business-2026)
 - [Secure File Sharing for Small Business: Stop Sending Files the Risky Way](https://ghosxt.com/blog/secure-file-sharing-external-links-small-business-2026)
@@ -5904,7 +5906,6 @@ The newest posts across every topic. Looking for something specific? Browse all 
 - [Email Encryption for Small Business: When You Need It and How to Turn It On](https://ghosxt.com/blog/email-encryption-small-business-2026)
 - [Single Sign-On (SSO) for Small Business: What It Is and When It Is Worth It](https://ghosxt.com/blog/single-sign-on-sso-small-business-2026)
 - [Audit Logs for Small Business: What to Turn On and How Long to Keep Them](https://ghosxt.com/blog/audit-logs-security-logging-small-business-2026)
-- [I Clicked a Phishing Link: What a Small Business Should Do in the First Hour](https://ghosxt.com/blog/clicked-phishing-link-what-to-do-small-business-2026)
 - [How to Turn On Full-Disk Encryption (BitLocker and FileVault) for Your Small Business](https://ghosxt.com/blog/full-disk-encryption-bitlocker-filevault-small-business-2026)
 - [How to Run a Vulnerability Scan for Your Small Business (and What to Do With the Results)](https://ghosxt.com/blog/vulnerability-scanning-small-business-2026)
 - [How to Do a Cybersecurity Risk Assessment for Your Small Business in One Afternoon](https://ghosxt.com/blog/cybersecurity-risk-assessment-small-business-2026)
@@ -5916,7 +5917,6 @@ The newest posts across every topic. Looking for something specific? Browse all 
 - [Does Google Workspace Back Up Your Data? What Google Keeps and What It Doesn't](https://ghosxt.com/blog/google-workspace-backup-small-business-2026)
 - [IT Setup for a New Small Business: The Founder's Checklist for the First 90 Days (2026)](https://ghosxt.com/blog/it-setup-checklist-new-small-business-2026)
 - [Microsoft 365 Copilot and the Oversharing Problem Nobody Checked First (2026)](https://ghosxt.com/blog/microsoft-365-copilot-oversharing-risk-small-business-2026)
-- [Lost or Stolen Company Laptop: The First-Hour Checklist for Small Business (2026)](https://ghosxt.com/blog/lost-stolen-laptop-first-hour-checklist-small-business-2026)
 See all 140 posts in file view
 ## Managed IT in Salinas
 Decision-making material for Salinas and Monterey County business owners evaluating managed IT, IT support, and providers. Start with the Salinas IT services hub for the broader picture.
@@ -5933,6 +5933,7 @@ Decision-making material for Salinas and Monterey County business owners evaluat
 - [IT Help, Help Desk, and Tech Support for Small Business in Salinas](https://ghosxt.com/blog/it-help-help-desk-tech-support-small-business-salinas)
 ## Cybersecurity for Small Business
 How attacks actually work, what stops them, and the controls a real small business should have in place. See our cybersecurity services for the engineering approach.
+- [Lost or Stolen Company Laptop: The First-Hour Checklist for Small Business (2026)](https://ghosxt.com/blog/lost-stolen-laptop-first-hour-checklist-small-business-2026)
 - [Cybersecurity Awareness Month 2026: A 4-Week Action Plan for Small Business](https://ghosxt.com/blog/cybersecurity-awareness-month-2026-small-business-action-plan)
 - [Browser-in-the-Browser Phishing: The Login Popup That Isn't a Window (2026)](https://ghosxt.com/blog/browser-in-the-browser-phishing-fake-login-popup-small-business-2026)
 - [Callback Phishing: The Invoice Email With No Link and No Attachment (2026)](https://ghosxt.com/blog/callback-phishing-fake-invoice-remote-access-small-business-2026)
