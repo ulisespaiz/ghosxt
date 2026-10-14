@@ -347,6 +347,83 @@ A: Yes. We frequently come in as a cybersecurity-focused partner alongside an ex
 Q: Who will I actually talk to?
 A: Ulises Paiz, the owner, directly. There is no tier-1 queue and no offshore call center: the engineer who knows your environment answers the phone, and critical incidents carry our 4-hour notification commitment.
 
+## https://ghosxt.com/managed-ai
+
+Title: Managed AI Governance in Monterey County | Ghosxt
+Meta description: Managed AI governance for Monterey County small businesses: find the AI tools connected to your data, lock down access, and set a policy staff can follow.
+
+Existing client and need help right now? Get support.
+# Managed AI Governance
+Your team is already using AI with your data. ChatGPT, Claude, Copilot, a meeting note-taker someone invited to a call. What you do not know is which tools, which accounts, and what each one can reach inside your email and files. Managed AI governance makes that visible, locks it down, and keeps it reviewed as the tools change. It is the same job we do for the rest of your IT: see it coming, then control it.
+Add-on for managed IT clients. One-time assessment for everyone else.
+Managed IT plans are published. The AI governance add-on and the assessment are quoted upfront, scoped to your tenant.
+Managed AI Governance: at a glance
+## What is the risk of employees using AI with company data?
+Most of these do not need a hacker. They take one employee, one prompt, and a default setting nobody changed.
+### One click grants an AI app your email and files
+An employee signs in to an AI tool with their work account and approves the permission prompt. The app now holds its own access to their mail, calendar, or files, and that access keeps working long after they forget the tool exists. A malicious app can ask for the same access, so the consent setting protects against attackers as well as mistakes.
+### Copilot finds what was overshared
+Microsoft 365 Copilot answers from whatever the user can already open. Years of SharePoint and OneDrive links set to everyone in the company mean a new hire can ask for salaries, contracts, or a patient schedule and get a tidy summary.
+### Sensitive data in personal AI accounts
+A patient chart, a client's financials, or a grower's contract pasted into a personal ChatGPT or Gemini account leaves your tenant, your retention rules, and your audit trail. Your company cannot see it, cannot enforce its deletion, and cannot verify where it went.
+### Without a written policy, each employee sets the rules
+Rules that were never written down are hard to enforce, and answering a customer's or insurer's questionnaire about AI use becomes guesswork.
+## What does managed AI governance include?
+Managed AI governance is the ongoing work of finding the AI tools connected to a company's Microsoft 365 or Google Workspace, limiting what each one can reach, and keeping a written policy current. Seven pieces, done in this order, then kept current. Each one produces a control or a record you can check.
+### AI app inventory
+We find the AI tools connected to your Microsoft 365 or Google Workspace tenant: the ones IT approved, the ones a user approved for themselves, and the note-takers nobody mentioned. Browser extensions and personal accounts show up where your browser or device policy reports them. You get a list with the permissions each one holds.
+### Consent lockdown
+We turn off user self-consent, so staff can no longer grant an app access to company data with one click. New tools go through an admin review workflow, and approved tools are limited to the groups that need them where the app supports assignment.
+### Data exposure cleanup before rollout
+Before Copilot or any tool that reads your files goes live, we find oversharing in SharePoint, OneDrive, and Drive and fix what you approve, so we narrow what each AI tool can reach to what each person should see.
+### Data protection rules
+Where your licensing supports it, we set up sensitivity labels and data loss prevention rules for patient, client, and financial information, so the sensitive categories are marked and, in the locations and devices we configure, handled by policy instead of by memory. Coverage depends on licensing and configuration.
+### A written acceptable-use policy
+A short policy staff can actually follow: which tools are approved, what data stays out of them, who approves a new tool, and how AI output gets checked. Our approach is aligned with the NIST AI Risk Management Framework, sized for a small business rather than an enterprise program.
+### Rollout of approved tools
+We connect the tools you decide to keep the right way: business accounts instead of personal ones, licenses assigned to the right people, access scoped, and the settings that matter turned on before anyone starts using them.
+### Monthly review
+AI tools add features, request new permissions, and change their defaults. Every month we review new app requests, new connections to the tenant, and changes to approved tools that show up in your tenant, such as new permissions, and we tell you what moved.
+## How does it work?
+### Assess
+We inventory the AI tools connected to your tenant, check what each one can reach, and, where licensing supports it, look for sensitive data sitting in places an AI tool would surface. You get the findings in writing.
+### Lock down
+We turn off self-consent, set up the admin review workflow, revoke access for tools nobody approved once you confirm the list, and clean up the oversharing you approve before it ends up in a chat window.
+### Roll out
+We connect the approved tools correctly, publish the acceptable-use policy, and walk your staff through what is allowed and why in plain language.
+### Manage monthly
+We review new requests and new connections, watch for tenant-visible changes in the tools you use, and keep the policy and the controls current as the models and the vendors change.
+## What do we get from the assessment?
+We show you which AI tools are connected to your company, what each one can reach, and what to fix first. In writing, whether or not you hire us for the rest, and it becomes the first step of the managed add-on if you do.
+## Is this for us?
+Managed AI governance is an extension of our managed IT and cybersecurity work. It is built for owners and office managers at 5 to 50 person businesses in healthcare, agriculture, manufacturing, transportation, and professional services, on Microsoft 365 or Google Workspace, where staff may already be using AI with company data and no one has set the rules. We are based in Salinas and serve Monterey County and surrounding areas.
+If you are a managed client, it adds to your existing plan and builds on the tenant hardening we already run for you. If you are not a client yet, start with the one-time AI assessment: you get the inventory, the exposure findings, and a written plan you can act on with us or on your own.
+## What does it cost?
+### Managed AI governance add-on
+For managed IT clients. The AI app inventory, consent lockdown, exposure cleanup, data protection rules, policy, rollout, and the monthly review, added to your existing plan.
+Quoted upfrontper month, on top of your managed IT plan
+### AI governance assessment
+For businesses that are not yet clients. One-time. The AI app inventory, the exposure findings, and a written plan.
+Quoted upfrontone-time, scoped to your tenant
+The scope depends on how many AI tools are connected, what they can reach, and how much cleanup your tenant needs, so both are quoted after a short call and agreed before any work starts. Managed IT plans are published on the pricing page.
+## What do owners ask about managed AI governance?
+Q: Is it safe to let employees use ChatGPT with company data?
+A: It depends on the account and the data. A personal ChatGPT account is outside your control: your company cannot see what was pasted, enforce its deletion, or apply its retention rules to it. A business account with the right settings, limited to approved staff and non-sensitive data, can be used with reasonable care. The safe version is a decision you make and enforce, not one each employee makes alone.
+Q: How do I control which AI apps can access our Microsoft 365?
+A: In Microsoft Entra, turn off user consent for third-party apps and route requests through the admin consent workflow, so an employee cannot grant an app access to mail or files on their own. Then review the apps already connected to the tenant and remove anything nobody approved. Google Workspace has a comparable control for third-party app access. We set this up and handle the review of new requests as part of the managed add-on.
+Q: Should we turn on Microsoft 365 Copilot?
+A: Not until you know what it can reach. Copilot answers from whatever each user already has permission to open, so files overshared in SharePoint and OneDrive become answers in a chat window. Clean up sharing first, add sensitivity labels with the protections that limit Copilot where your licensing supports them, then roll Copilot out to a pilot group and widen from there.
+Q: Can healthcare offices use AI tools with patient information?
+A: Only in tools covered by a signed business associate agreement for that product and plan and configured for it, with access limited to the staff who need it. Patient data stays out of everything else, including personal accounts and consumer AI note-takers. We help you document which tools are approved for patient information and set controls to block the rest where your tenant and devices allow.
+Q: Are AI meeting note-takers safe to use at work?
+A: Treat them like any other app with access to your calendar and your calls. Decide which note-taker is approved, who may use it, and whether it may join calls with clients or patients, then block the rest from joining where your meeting platform allows it. Many of them ask for calendar access and can be set to join every meeting automatically, so the settings matter more than the brand.
+Q: Do we need an AI policy?
+A: Yes, and it should fit on two pages. It names the approved tools, what data can and cannot go into them, who approves a new tool, and how AI-generated output gets checked before it is used. Staff follow short, specific rules; few people follow a thirty-page document. We write it with you and keep it current as the tools change.
+Q: What does managed AI governance cost?
+A: It is quoted upfront, because the work depends on how many AI tools are connected, what they can reach, and how much cleanup your tenant needs. For managed IT clients it is a monthly add-on on top of your plan. For businesses that are not yet clients, the one-time AI assessment is quoted the same way and includes the inventory, the exposure findings, and a written plan. Managed IT plans themselves are published on the pricing page.
+## What can your AI tools reach right now?
+Book the AI governance assessment. We serve Monterey County and surrounding areas, and we show you what is connected, what is exposed, and what to do about it, in writing.
+
 ## https://ghosxt.com/cloud-services
 
 Title: Cloud Services & Microsoft 365 | Ghosxt – California
@@ -1619,6 +1696,12 @@ Rate: $350/hr
 ### Technology Assessment
 Full onsite audit + written report
 Rate: $750–$2k
+### AI Governance Assessment
+One-time, scoped to your tenant. What it covers
+Rate: Quotedupfront
+### Managed AI Governance Add-On
+Managed clients, per month, scoped to your tenant. What it covers
+Rate: Quoted/mo
 ## Common questions
 The things prospects ask before booking a call. Still unsure? Book a free call and we'll build your exact proposal.
 Q: Is there a minimum number of users?
@@ -6086,6 +6169,8 @@ Custom websites and e-commerce that load fast, rank well, and actually convert v
 C-TPAT cybersecurity for importers, carriers, freight forwarders, and 3PLs. CBP-aligned controls and documentation that hold up under validation, without disrupting your operations.
 ### Co-Managed IT
 Already have an IT person or team? We augment them (help-desk overflow, after-hours help on request, and cybersecurity and compliance depth) filling the gaps without replacing anyone. Enterprise tooling and a senior engineer behind your in-house IT.
+### Managed AI Governance
+Your staff already use ChatGPT, Claude, Copilot, and AI note-takers with company data. We find every AI tool connected to your Microsoft 365 or Google Workspace, lock down who can grant access, clean up what those tools can reach, and write the policy. An add-on for managed clients; a one-time assessment for everyone else.
 ### Incident Response & Emergency IT
 Systems locked or down right now? Containment, evidence preservation, restore of mail and files from cloud backup, and the cyber-insurance documentation your carrier asks for, led by an engineer with DoD infrastructure experience and backed by a 4-hour notification commitment on critical incidents. Call (831) 204-0501: the emergency line is answered, not queued.
 ### Break-Fix vs. Managed IT
