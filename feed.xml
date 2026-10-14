@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from an engineer with DoD infrastructure experience.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Tue, 13 Oct 2026 21:14:54 +0000</lastBuildDate>
-    <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Wed, 14 Oct 2026 11:07:29 +0000</lastBuildDate>
+    <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>Shared Logins and Shared Mailboxes: Stop Sharing One Password</title>
+      <link>https://ghosxt.com/blog/shared-logins-shared-mailboxes-small-business-2026</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/shared-logins-shared-mailboxes-small-business-2026</guid>
+      <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>Sharing one password across the team is risky. Learn how shared mailboxes, delegated access, and a password manager keep accounts secure and auditable.</description>
+    </item>
     <item>
       <title>October 2026 Patch Tuesday: Record 1,400 Fixes, 3 Zero-Days</title>
       <link>https://ghosxt.com/blog/october-2026-patch-tuesday-record-1400-fixes-smb</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Backup and Disaster Recovery</category>
       <description>An outage costs more than the sales you miss. A simple formula for what downtime costs your business, and why it should guide your IT budget.</description>
-    </item>
-    <item>
-      <title>Employee Onboarding IT Security Checklist</title>
-      <link>https://ghosxt.com/blog/employee-onboarding-it-security-checklist-small-business</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/employee-onboarding-it-security-checklist-small-business</guid>
-      <pubDate>Thu, 10 Sep 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>A new hire's first week sets the security tone for their time at the company. What belongs in an IT onboarding checklist: access, device setup, training.</description>
     </item>
   </channel>
 </rss>
