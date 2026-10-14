@@ -32,8 +32,7 @@
 }
 
 .managed-ai h1,
-.managed-ai h2,
-.managed-ai .key-facts__title {
+.managed-ai h2 {
   font-family: var(--ai-head);
   text-transform: uppercase;
   color: var(--ai-text);
@@ -79,11 +78,20 @@
   color: var(--ai-red);
 }
 
+.managed-ai .location-breadcrumbs .sep {
+  opacity: 1;
+}
+
+.managed-ai :focus-visible {
+  outline-color: var(--ai-red);
+}
+
 .managed-ai .ai-status {
   display: inline-flex;
+  margin-top: 0.25rem;
   align-items: center;
   gap: 0.6rem;
-  margin: 0 0 1.25rem;
+  margin: 0 0 1.5rem;
   padding: 0.4rem 0.9rem 0.4rem 0.75rem;
   border: 1px solid var(--ai-line);
   border-radius: 999px;
@@ -135,6 +143,9 @@
   color: var(--ai-text);
   border-color: var(--ai-red);
   box-shadow: 3px 3px 0 0 var(--ai-text);
+  /* 18.67px bold counts as large text, so white on #ff1f3a (3.81:1) meets WCAG AA. */
+  font-size: 1.1875rem;
+  font-weight: 700;
 }
 
 .managed-ai .location-btn-primary:hover,
@@ -183,10 +194,18 @@
   border-bottom: 1px solid var(--ai-line);
 }
 
-.managed-ai .location-section h2 {
-  font-size: clamp(1.25rem, 0.85rem + 1.6vw, 2rem);
-  line-height: 1.25;
+.managed-ai .location-section h2,
+.managed-ai .location-cta h2 {
+  font-size: clamp(1.375rem, 1rem + 2vw, 2.625rem);
+  line-height: 1.2;
   margin-bottom: 1.25rem;
+}
+
+@media (min-width: 1024px) {
+  .managed-ai .location-section h2,
+  .managed-ai .location-cta h2 {
+    font-size: clamp(2.625rem, 1.5rem + 2vw, 3rem);
+  }
 }
 
 .managed-ai .location-section p {
@@ -251,7 +270,8 @@
 .managed-ai .ai-steps li::before {
   content: counter(ai-step);
   display: block;
-  font-family: var(--ai-head);
+  font-family: var(--ai-body);
+  font-weight: 700;
   font-size: 1.5rem;
   line-height: 1;
   color: var(--ai-red);
@@ -320,8 +340,9 @@
 }
 
 .managed-ai .ai-price-card__price {
-  font-family: var(--ai-head);
-  font-size: 1.1rem;
+  font-family: var(--ai-body);
+  font-weight: 700;
+  font-size: 1.25rem;
   line-height: 1.4;
   margin: 0;
   overflow-wrap: anywhere;
@@ -378,4 +399,15 @@
   .managed-ai .ai-status {
     font-size: 0.85rem;
   }
+}
+
+/* Shared mobile call/book bar, which sits outside the .managed-ai wrapper:
+   match the page accent and keep focused elements clear of the bar. */
+body:has(.managed-ai) .mobile-cta-bar .mcta-primary {
+  background: #ff1f3a;
+  color: #ffffff;
+}
+
+html:has(.managed-ai) {
+  scroll-padding-bottom: 96px;
 }
