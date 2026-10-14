@@ -1,0 +1,381 @@
+/* Managed AI Governance page (/managed-ai). Scoped to .managed-ai so the
+   shared nav, cookie banner and footer keep the site chrome. Brand rules for
+   this page: background #0a0a0a, text #ffffff, accent red #ff1f3a, cyan
+   #00ecff only as a status accent, Michroma uppercase headlines, Inter body. */
+
+.managed-ai {
+  --ai-bg: #0a0a0a;
+  --ai-text: #ffffff;
+  --ai-red: #ff1f3a;
+  --ai-cyan: #00ecff;
+  --ai-line: rgba(255, 255, 255, 0.22);
+  --ai-head: "Michroma", "Roboto", sans-serif;
+  --ai-body: "Inter", "Roboto", sans-serif;
+  background: var(--ai-bg);
+  color: var(--ai-text);
+  font-family: var(--ai-body);
+}
+
+.managed-ai p,
+.managed-ai li,
+.managed-ai dt,
+.managed-ai dd,
+.managed-ai summary,
+.managed-ai .answer,
+.managed-ai .lead {
+  color: var(--ai-text);
+  font-family: var(--ai-body);
+}
+
+.managed-ai a {
+  color: var(--ai-text);
+}
+
+.managed-ai h1,
+.managed-ai h2,
+.managed-ai .key-facts__title {
+  font-family: var(--ai-head);
+  text-transform: uppercase;
+  color: var(--ai-text);
+  letter-spacing: 0.01em;
+}
+
+.managed-ai h3 {
+  font-family: var(--ai-body);
+  font-weight: 600;
+  color: var(--ai-text);
+}
+
+/* Top strip for existing clients */
+.managed-ai .existing-client-callout {
+  background: var(--ai-bg);
+  border-bottom: 1px solid var(--ai-line);
+  color: var(--ai-text);
+  font-family: var(--ai-body);
+}
+
+.managed-ai .existing-client-callout a {
+  color: var(--ai-text);
+}
+
+.managed-ai .existing-client-callout a:hover {
+  color: var(--ai-red);
+}
+
+/* Hero */
+.managed-ai .location-hero {
+  background: var(--ai-bg);
+  border-bottom: 1px solid var(--ai-line);
+  padding-top: 3.5rem;
+}
+
+.managed-ai .location-breadcrumbs,
+.managed-ai .location-breadcrumbs a {
+  color: var(--ai-text);
+  font-family: var(--ai-body);
+}
+
+.managed-ai .location-breadcrumbs a:hover {
+  color: var(--ai-red);
+}
+
+.managed-ai .ai-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0 0 1.25rem;
+  padding: 0.4rem 0.9rem 0.4rem 0.75rem;
+  border: 1px solid var(--ai-line);
+  border-radius: 999px;
+  font-size: 0.9rem;
+  line-height: 1.3;
+}
+
+.managed-ai .ai-status__dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--ai-cyan);
+  flex: 0 0 auto;
+}
+
+.managed-ai .location-hero h1 {
+  font-size: clamp(1.75rem, 1rem + 3.5vw, 3.75rem);
+  line-height: 1.12;
+  margin-bottom: 1.25rem;
+  padding-bottom: 1.25rem;
+  position: relative;
+}
+
+.managed-ai .location-hero h1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 72px;
+  height: 4px;
+  background: var(--ai-red);
+}
+
+.managed-ai .location-hero .lead {
+  font-size: 1.125rem;
+  line-height: 1.65;
+  max-width: 760px;
+}
+
+/* Buttons */
+.managed-ai .location-btn {
+  font-family: var(--ai-body);
+  border-radius: 6px;
+}
+
+.managed-ai .location-btn-primary,
+.managed-ai .location-cta .location-btn-primary {
+  background: var(--ai-red);
+  color: var(--ai-text);
+  border-color: var(--ai-red);
+  box-shadow: 3px 3px 0 0 var(--ai-text);
+}
+
+.managed-ai .location-btn-primary:hover,
+.managed-ai .location-cta .location-btn-primary:hover {
+  box-shadow: 4px 4px 0 0 var(--ai-text);
+}
+
+.managed-ai .location-btn-secondary {
+  background: transparent;
+  color: var(--ai-text);
+  border-color: var(--ai-text);
+  box-shadow: 3px 3px 0 0 var(--ai-red);
+}
+
+.managed-ai .location-btn-secondary:hover {
+  box-shadow: 4px 4px 0 0 var(--ai-red);
+}
+
+.managed-ai .pricing-trust-callout a {
+  color: var(--ai-text);
+}
+
+.managed-ai .pricing-trust-callout a:hover {
+  color: var(--ai-red);
+}
+
+/* Key facts */
+.managed-ai .key-facts {
+  background: var(--ai-bg);
+  border: 1px solid var(--ai-line);
+  border-left: 4px solid var(--ai-red);
+  box-shadow: none;
+}
+
+.managed-ai .key-facts__list dt,
+.managed-ai .key-facts__list dd {
+  color: var(--ai-text);
+}
+
+.managed-ai .key-facts__list a {
+  color: var(--ai-text);
+}
+
+/* Sections */
+.managed-ai .location-section {
+  border-bottom: 1px solid var(--ai-line);
+}
+
+.managed-ai .location-section h2 {
+  font-size: clamp(1.25rem, 0.85rem + 1.6vw, 2rem);
+  line-height: 1.25;
+  margin-bottom: 1.25rem;
+}
+
+.managed-ai .location-section p {
+  color: var(--ai-text);
+}
+
+.managed-ai .location-section a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+
+.managed-ai .location-section a:hover {
+  color: var(--ai-red);
+}
+
+/* Cards: four across at the 1100px container, two on tablets, one on phones */
+.managed-ai .services-grid {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.managed-ai .service-card {
+  background: var(--ai-bg);
+  border: 1px solid var(--ai-line);
+  box-shadow: 3px 3px 0 0 var(--ai-red);
+}
+
+.managed-ai .service-card:hover {
+  box-shadow: 5px 5px 0 0 var(--ai-red);
+  border-color: var(--ai-text);
+}
+
+.managed-ai .service-card h3 {
+  font-size: 1.05rem;
+  line-height: 1.35;
+}
+
+.managed-ai .service-card p {
+  color: var(--ai-text);
+}
+
+/* Steps */
+.managed-ai .ai-steps {
+  list-style: none;
+  counter-reset: ai-step;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+}
+
+.managed-ai .ai-steps li {
+  counter-increment: ai-step;
+  border: 1px solid var(--ai-line);
+  border-top: 4px solid var(--ai-red);
+  border-radius: 8px;
+  padding: 1.25rem 1.25rem 1rem;
+  min-width: 0;
+}
+
+.managed-ai .ai-steps li::before {
+  content: counter(ai-step);
+  display: block;
+  font-family: var(--ai-head);
+  font-size: 1.5rem;
+  line-height: 1;
+  color: var(--ai-red);
+  margin-bottom: 0.75rem;
+}
+
+.managed-ai .ai-steps h3 {
+  font-size: 1.1rem;
+  margin: 0 0 0.5rem;
+}
+
+.managed-ai .ai-steps p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* CTA bands */
+.managed-ai .location-cta {
+  background: var(--ai-bg);
+  border-top: 1px solid var(--ai-red);
+  border-bottom: 1px solid var(--ai-red);
+}
+
+.managed-ai .location-cta h2 {
+  color: var(--ai-text);
+}
+
+.managed-ai .location-cta p {
+  color: var(--ai-text);
+}
+
+.managed-ai .location-cta .location-btn {
+  margin: 0.25rem 0.5rem 0.5rem 0;
+}
+
+.managed-ai .ai-closing {
+  border-bottom: 0;
+}
+
+/* Pricing cards */
+.managed-ai .ai-pricing {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+  margin: 1.5rem 0 1.5rem;
+}
+
+.managed-ai .ai-price-card {
+  border: 1px solid var(--ai-line);
+  border-left: 4px solid var(--ai-red);
+  border-radius: 8px;
+  padding: 1.5rem;
+  min-width: 0;
+}
+
+.managed-ai .ai-price-card h3 {
+  font-size: 1.1rem;
+  margin: 0 0 0.5rem;
+}
+
+.managed-ai .ai-price-card__desc {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  margin: 0 0 1rem;
+}
+
+.managed-ai .ai-price-card__price {
+  font-family: var(--ai-head);
+  font-size: 1.1rem;
+  line-height: 1.4;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.managed-ai .ai-price-card__price span {
+  display: block;
+  font-family: var(--ai-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-top: 0.35rem;
+}
+
+/* FAQ */
+.managed-ai .location-faq details {
+  background: var(--ai-bg);
+  border: 1px solid var(--ai-line);
+}
+
+.managed-ai .location-faq summary {
+  font-family: var(--ai-body);
+  color: var(--ai-text);
+  padding-right: 2.75rem;
+}
+
+.managed-ai .location-faq summary::after {
+  color: var(--ai-red);
+}
+
+.managed-ai .location-faq details[open] summary {
+  border-bottom: 1px solid var(--ai-line);
+}
+
+.managed-ai .location-faq .answer {
+  color: var(--ai-text);
+}
+
+@media (max-width: 540px) {
+  .managed-ai .location-hero {
+    padding-top: 2.5rem;
+  }
+
+  .managed-ai .location-hero-ctas .location-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .managed-ai .location-cta .location-btn {
+    width: 100%;
+    justify-content: center;
+    margin-right: 0;
+  }
+
+  .managed-ai .ai-status {
+    font-size: 0.85rem;
+  }
+}
