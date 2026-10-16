@@ -5897,6 +5897,7 @@ Meta description: Notes from an engineer with DoD infrastructure experience on c
 Plain-talk writing on cybersecurity, managed IT, and the things that actually break in small business networks. No corporate speak, no fearmongering, no fluff.
 ## Latest
 The newest posts across every topic. Looking for something specific? Browse all posts in the file view.
+- [How to Securely Dispose of Old Computers and Hard Drives: A Small Business Guide (2026)](https://ghosxt.com/blog/secure-disposal-old-computers-hard-drives-small-business-2026)
 - [Business Firewall vs ISP Router: What a Small Business Actually Needs in 2026](https://ghosxt.com/blog/business-firewall-vs-isp-router-small-business-2026)
 - [Shared Logins and Shared Mailboxes: How a Small Business Can Stop Sharing One Password](https://ghosxt.com/blog/shared-logins-shared-mailboxes-small-business-2026)
 - [October 2026 Patch Tuesday: A Record 1,400 Fixes, 3 Zero-Days, and What a Small Business Needs to Do](https://ghosxt.com/blog/october-2026-patch-tuesday-record-1400-fixes-smb)
@@ -5916,10 +5917,10 @@ The newest posts across every topic. Looking for something specific? Browse all 
 - [Phishing-Resistant MFA in Google Workspace: The Admin Console Rollout Plan](https://ghosxt.com/blog/phishing-resistant-mfa-google-workspace-admin-guide)
 - [Microsoft 365 vs Google Workspace for a 10-Person Business](https://ghosxt.com/blog/microsoft-365-vs-google-workspace-small-business-2026)
 - [How to Offboard a Contractor in Google Workspace](https://ghosxt.com/blog/offboard-contractor-google-workspace-checklist)
-- [Does Google Workspace Back Up Your Data? What Google Keeps and What It Doesn't](https://ghosxt.com/blog/google-workspace-backup-small-business-2026)
-See all 156 posts in file view
+See all 157 posts in file view
 ## Managed IT in Salinas
 Decision-making material for Salinas and Monterey County business owners evaluating managed IT, IT support, and providers. Start with the Salinas IT services hub for the broader picture.
+- [Does Google Workspace Back Up Your Data? What Google Keeps and What It Doesn't](https://ghosxt.com/blog/google-workspace-backup-small-business-2026)
 - [IT Setup for a New Small Business: The Founder's Checklist for the First 90 Days (2026)](https://ghosxt.com/blog/it-setup-checklist-new-small-business-2026)
 - [Zero-Touch Mac Deployment for Small Business: What Apple Business Manager Actually Does (2026)](https://ghosxt.com/blog/apple-business-manager-mac-fleet-small-business-2026)
 - [IT Budget Planning for Small Business: How to Build a Realistic 2027 Tech Budget](https://ghosxt.com/blog/it-budget-planning-small-business-2027)
