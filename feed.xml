@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from an engineer with DoD infrastructure experience.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Fri, 16 Oct 2026 11:10:08 +0000</lastBuildDate>
-    <pubDate>Fri, 16 Oct 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Sat, 17 Oct 2026 11:07:18 +0000</lastBuildDate>
+    <pubDate>Sat, 17 Oct 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>UPS Battery Backup for Small Business Offices</title>
+      <link>https://ghosxt.com/blog/ups-battery-backup-small-business-network-servers-2026</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/ups-battery-backup-small-business-network-servers-2026</guid>
+      <pubDate>Sat, 17 Oct 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>Power blips crash servers, corrupt files, and kill your internet. Learn what a UPS does, which gear needs one, and how to size and test it.</description>
+    </item>
     <item>
       <title>Secure Disposal of Old Computers and Hard Drives</title>
       <link>https://ghosxt.com/blog/secure-disposal-old-computers-hard-drives-small-business-2026</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>A device code prompt can hand over a live Microsoft 365 session without a password or MFA code ever changing hands. How the attack works and what stops it.</description>
-    </item>
-    <item>
-      <title>The Hidden Email Rule Attackers Leave Behind</title>
-      <link>https://ghosxt.com/blog/hidden-email-forwarding-rule-small-business-2026</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/hidden-email-forwarding-rule-small-business-2026</guid>
-      <pubDate>Tue, 15 Sep 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>Resetting a stolen password doesn't remove the forwarding rule an attacker left behind. How silent inbox rules work, and how to find and stop them.</description>
     </item>
   </channel>
 </rss>
