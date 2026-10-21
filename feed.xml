@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from an engineer with DoD infrastructure experience.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Sat, 17 Oct 2026 11:07:18 +0000</lastBuildDate>
-    <pubDate>Sat, 17 Oct 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Wed, 21 Oct 2026 11:12:04 +0000</lastBuildDate>
+    <pubDate>Wed, 21 Oct 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>SaaS Subscription Audit for Small Business</title>
+      <link>https://ghosxt.com/blog/saas-subscription-audit-unused-software-accounts-small-business-2026</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/saas-subscription-audit-unused-software-accounts-small-business-2026</guid>
+      <pubDate>Wed, 21 Oct 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>Unused software seats waste money and leave live logins behind. A 4-step SaaS audit to find, cut, and secure every subscription your business pays for.</description>
+    </item>
     <item>
       <title>UPS Battery Backup for Small Business Offices</title>
       <link>https://ghosxt.com/blog/ups-battery-backup-small-business-network-servers-2026</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>Windows 10's free ESU year ends October 13, 2026. What actually stops, what paid ESU costs next, and how small business should plan ahead.</description>
-    </item>
-    <item>
-      <title>The Device Code Sign-In Attackers Abuse</title>
-      <link>https://ghosxt.com/blog/device-code-phishing-microsoft-365-small-business-2026</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/device-code-phishing-microsoft-365-small-business-2026</guid>
-      <pubDate>Wed, 16 Sep 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>A device code prompt can hand over a live Microsoft 365 session without a password or MFA code ever changing hands. How the attack works and what stops it.</description>
     </item>
   </channel>
 </rss>
