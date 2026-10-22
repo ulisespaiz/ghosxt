@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from an engineer with DoD infrastructure experience.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Wed, 21 Oct 2026 19:21:22 +0000</lastBuildDate>
-    <pubDate>Wed, 21 Oct 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Thu, 22 Oct 2026 11:18:13 +0000</lastBuildDate>
+    <pubDate>Thu, 22 Oct 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>Microsoft 365 Backup for Small Business</title>
+      <link>https://ghosxt.com/blog/microsoft-365-backup-small-business-2026</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/microsoft-365-backup-small-business-2026</guid>
+      <pubDate>Thu, 22 Oct 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Microsoft 365</category>
+      <description>Microsoft 365 is not a backup. Learn what Microsoft does and does not protect, and how to back up email, OneDrive, SharePoint, and Teams in 3 steps.</description>
+    </item>
     <item>
       <title>SaaS Subscription Audit for Small Business</title>
       <link>https://ghosxt.com/blog/saas-subscription-audit-unused-software-accounts-small-business-2026</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>A browser-in-the-browser attack fakes an entire login popup, address bar included. How it beats URL-checking habits, and what actually gives it away.</description>
-    </item>
-    <item>
-      <title>Callback Phishing: The Invoice Email With No Link (2026)</title>
-      <link>https://ghosxt.com/blog/callback-phishing-fake-invoice-remote-access-small-business-2026</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/callback-phishing-fake-invoice-remote-access-small-business-2026</guid>
-      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>Callback phishing has no link and no attachment, just a phone number. How the fake-invoice scam talks employees into installing remote access software.</description>
     </item>
   </channel>
 </rss>
