@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from an engineer with DoD infrastructure experience.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Fri, 23 Oct 2026 11:12:29 +0000</lastBuildDate>
-    <pubDate>Fri, 23 Oct 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Sat, 24 Oct 2026 11:09:32 +0000</lastBuildDate>
+    <pubDate>Sat, 24 Oct 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>Small Business Password Policy: Stop Forced Changes</title>
+      <link>https://ghosxt.com/blog/password-expiration-policy-nist-small-business-2026</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/password-expiration-policy-nist-small-business-2026</guid>
+      <pubDate>Sat, 24 Oct 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Security</category>
+      <description>Forced 90-day password changes weaken security. Use the modern NIST-based small business password policy: length, MFA, a password manager, and breach checks.</description>
+    </item>
     <item>
       <title>Video Conference Security for Small Business</title>
       <link>https://ghosxt.com/blog/video-conference-security-zoom-teams-meet-small-business-2026</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>A lost or stolen work laptop is a routine incident, not a catastrophe, if you act in the first hour. The exact steps to revoke access, confirm encryption, and document what happened.</description>
-    </item>
-    <item>
-      <title>Cybersecurity Awareness Month 2026: A 4-Week Plan for Small Business</title>
-      <link>https://ghosxt.com/blog/cybersecurity-awareness-month-2026-small-business-action-plan</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/cybersecurity-awareness-month-2026-small-business-action-plan</guid>
-      <pubDate>Sun, 20 Sep 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>October is Cybersecurity Awareness Month. A practical 4-week action plan for small business covering MFA, patching, training, and backup testing, not just a poster on the break room wall.</description>
     </item>
   </channel>
 </rss>
