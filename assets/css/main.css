@@ -521,6 +521,12 @@ canvas {
   gap: 0.5rem;
 }
 
+/* The privacy link sits inside the one-sentence message. */
+.cookie-message .cookie-link {
+  padding: 0;
+  min-height: 0;
+}
+
 .cookie-message {
   font-family: var(--font-family-2);
   font-size: 0.95rem;
@@ -586,7 +592,8 @@ canvas {
 /* Lift above the cookie banner via `translate`, which composes
    independently of the `transform` used for the show/hide and hover/active
    states below, and never touches `bottom` (no layout-shift trigger). */
-.cookie-banner.visible ~ .scroll-to-top {
+.cookie-banner.visible ~ .scroll-to-top,
+body:has(.cookie-banner.visible) .scroll-to-top {
   translate: 0 -108px;
 }
 
@@ -1394,10 +1401,25 @@ footer {
 
 /* ------ RESPONSIVE COOKIE BANNER ------ */
 @media (max-width: 968px) {
+  /* One sentence plus two buttons: about 100 px at 390 px instead of a
+     third of the first screen (AUDIT.md M-01). */
+  .cookie-banner {
+    padding: 0.75rem 16px;
+  }
+
   .cookie-banner-container {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 1.5rem;
+    align-items: stretch;
+    gap: 0.6rem;
+  }
+
+  .cookie-icon {
+    display: none;
+  }
+
+  .cookie-message {
+    font-size: 0.875rem;
+    line-height: 1.4;
   }
 
   .cookie-actions {
@@ -1406,97 +1428,18 @@ footer {
 
   .cookie-btn {
     flex: 1;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
   }
 }
 
 @media (max-width: 640px) {
-  .cookie-banner {
-    padding: 1.25rem 16px;
-  }
-
-  /* Tighten the stacked content/actions layout (see the 968px rule above)
-     so the banner doesn't run to a third of a small mobile viewport;
-     text, colors and fonts are unchanged, only the surrounding spacing. */
-  .cookie-banner-container {
-    gap: 0.75rem;
-  }
-
-  .cookie-content {
-    gap: 0.75rem;
-  }
-
-  .cookie-text {
-    gap: 0.3rem;
-  }
-
-  .cookie-icon {
-    width: 36px;
-    height: 36px;
-  }
-
-  .cookie-icon i {
-    font-size: 1.125rem;
-  }
-
-  .cookie-message {
-    font-size: 0.875rem;
-    line-height: 1.4;
-  }
-
-  .cookie-link {
-    font-size: 0.8rem;
-  }
-
-  .cookie-btn {
-    padding: 0.5rem 1rem;
-    font-size: 0.875rem;
-  }
-
   .cookie-btn-primary {
     box-shadow: 1px 1px 0 0 rgba(0, 0, 0, 0.3);
   }
 
   .cookie-btn-primary:hover {
     box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.3);
-  }
-}
-
-@media (max-width: 480px) {
-  .cookie-banner {
-    padding: 0.4rem 16px;
-  }
-
-  .cookie-banner-container {
-    gap: 0.2rem;
-  }
-
-  .cookie-content {
-    gap: 0.5rem;
-  }
-
-  .cookie-text {
-    gap: 0.1rem;
-  }
-
-  /* Decorative only (not the brand mark): dropped at this width so the
-     message gets the full row's width instead of sharing it with a
-     40px-wide circle, which keeps the wrap to fewer lines. */
-  .cookie-icon {
-    display: none;
-  }
-
-  .cookie-message {
-    font-size: 0.8rem;
-    line-height: 1.2;
-  }
-
-  .cookie-actions {
-    gap: 0.5rem;
-  }
-
-  .cookie-btn {
-    padding: 0.45rem 0.875rem;
-    font-size: 0.8rem;
   }
 }
 
@@ -2287,11 +2230,11 @@ summary:focus-visible,
        bottom-inset padding (env(safe-area-inset-bottom)) is added
        separately below so it isn't double-counted. */
     --mobile-cta-bar-height: 61px;
-    /* Worst-case rendered height of the compacted mobile cookie banner
-       (task target: <=130px at 390px with real fonts) plus a small
-       clearance gap, used below to keep the scroll-to-top button clear of
-       the banner without a font-dependent JS measurement. */
-    --mobile-cookie-banner-clearance: 146px;
+    /* Worst-case rendered height of the one-sentence mobile cookie banner
+       (118 px at 390 px with real fonts) plus a small clearance gap,
+       used below to keep the scroll-to-top button clear of the banner
+       without a font-dependent JS measurement. */
+    --mobile-cookie-banner-clearance: 128px;
   }
   .mobile-cta-bar {
     display: flex;
@@ -2332,7 +2275,9 @@ summary:focus-visible,
     color: #111;
     border: 1px solid rgba(0, 0, 0, 0.08);
   }
-  /* Lift the existing scroll-to-top so it doesn't sit under the bar */
+  /* Lift the existing scroll-to-top so it doesn't sit under the bar. The
+     button comes before the banner in source on every page, so the sibling
+     selector below never matched; the :has() form is the one that works. */
   .scroll-to-top {
     bottom: 76px !important;
   }
@@ -2340,8 +2285,14 @@ summary:focus-visible,
      at this width .scroll-to-top's own baseline bottom is 76px (not the
      desktop 32px) and the banner sits above the mobile CTA bar, so derive
      the lift from the two mobile variables instead of a fixed constant. */
-  .cookie-banner.visible ~ .scroll-to-top {
+  .cookie-banner.visible ~ .scroll-to-top,
+  body:has(.cookie-banner.visible) .scroll-to-top {
     translate: 0 calc(-1 * (var(--mobile-cta-bar-height) + var(--mobile-cookie-banner-clearance)));
+  }
+  /* The contact page has no CTA bar, so the banner sits flush and the
+     button only needs the banner's own clearance. */
+  body.no-mobile-cta-bar:has(.cookie-banner.visible) .scroll-to-top {
+    translate: 0 calc(-1 * var(--mobile-cookie-banner-clearance));
   }
   /* Avoid the bar covering the page footer / form action area */
   body {

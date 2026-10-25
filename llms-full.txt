@@ -39,7 +39,6 @@ This file is the full-content companion to llms.txt (https://ghosxt.com/llms.txt
 Title: Managed IT Services | Ghosxt – California
 Meta description: Managed IT for California small business: MDR, 24/7 remote monitoring, patching, helpdesk, M365 & backup. Engineer with DoD infrastructure experience.
 
-Existing client and need help right now? Get support.
 # Managed IT Services for California Small Business
 Most California small businesses still run IT the way they did in 2005. Something breaks, somebody gets called, the bill arrives a week later. That break-fix model worked when the worst-case outage was a printer jam. It does not work when the worst case is a ransomware crew sitting in your file shares for a month before they encrypt anything. Managed IT flips the relationship. You pay a fixed monthly fee, we keep the systems healthy, and the call you used to make at 11pm does not happen because the issue was caught at 9am. Ghosxt is run by an engineer with DoD infrastructure experience with the same playbooks used to keep government endpoints safe. Built for California businesses that need serious IT and cybersecurity without hiring an internal IT team, whether you've outgrown a part-time IT cousin, lost your one IT person, or just want your stack to run at government-grade standards. On-site across Monterey County and the Central Coast, remote across the United States.
 ★★★★★ Rated 5.0 across 26 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
@@ -114,7 +113,6 @@ Book a 30-minute free assessment, or send us a note. Either way, you walk away w
 Title: IT Help Desk & IT Support | Ghosxt – California
 Meta description: IT help desk & support for California small business: live US-based help, direct access to the owner, remote & on-site. No offshore scripts.
 
-Existing client and need help right now? Get support.
 # IT Help Desk & IT Support for California Small Business
 When something stops working (a mailbox that will not open, a printer that has gone silent, a laptop that will not take the password), what your team actually wants is a person who picks up, understands the problem, and fixes it. Not a ticket number, a phone tree, or a tier-1 script read by a stranger two time zones away. Ghosxt's IT help desk is the opposite of that. You reach an engineer with DoD infrastructure experience who already knows your network, your apps, and your people, and handles most issues remotely. On-site help across Salinas, Monterey, and the Central Coast; remote support nationwide.
 ★★★★★ Rated 5.0 across 26 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
@@ -1394,7 +1392,6 @@ Book a free cyber insurance assessment, or call (831) 204-0501. You will leave k
 Title: Co-Managed IT Services | Ghosxt
 Meta description: Co-managed IT: Ghosxt augments your in-house team with help desk overflow, 24/7 security monitoring & after-hours help on request. Free assessment.
 
-Existing client and need help right now? Get support.
 # Co-Managed IT Services
 You already have IT (maybe one stretched-thin person, maybe a small team) and they are good. They are also the only one who knows how everything works, cannot take a real vacation, and do not have time to become a cybersecurity specialist on top of everything else. Co-managed IT fixes that. Ghosxt works alongside your team, covering the gaps, providing after-hours help on request, and the security and compliance depth, so your internal IT gets stronger, not replaced.
 Scoped to the role we play, transparent pricing, agreed upfront.
@@ -5739,9 +5736,9 @@ A: Start with a free 30-minute assessment. We will look at your environment, tel
 Title: Contact Ghosxt | Free IT Assessment – California
 Meta description: Contact Ghosxt to schedule a free IT assessment for your California small business, straight answers, no sales scripts.
 
-Existing client and need help right now? Get support.
 # Let's Talk About Your IT Needs
 Whether you're evaluating your current IT provider, planning an infrastructure upgrade, or just want a second opinion on your setup, we're available for a conversation. No sales pressure, just honest discussion about what your business actually needs.
+Book a free assessment
 ## Talk to the engineer, or try for free
 Fill out the form and we'll get back to you as soon as possible. You'll hear directly from the owner.
 We respect your privacy. Your information is only used to respond to your inquiry and is never shared with third parties.
@@ -5897,6 +5894,12 @@ Meta description: Notes from an engineer with DoD infrastructure experience on c
 Plain-talk writing on cybersecurity, managed IT, and the things that actually break in small business networks. No corporate speak, no fearmongering, no fluff.
 ## Latest
 The newest posts across every topic. Looking for something specific? Browse all posts in the file view.
+- [Password Policy for Small Business: Stop Forcing Password Changes (2026)](https://ghosxt.com/blog/password-expiration-policy-nist-small-business-2026)
+- [Zoom, Teams & Google Meet Security for Small Business (2026)](https://ghosxt.com/blog/video-conference-security-zoom-teams-meet-small-business-2026)
+- [Microsoft 365 Backup: Why Small Business Needs a Separate Copy (2026)](https://ghosxt.com/blog/microsoft-365-backup-small-business-2026)
+- [PHP2Shell: Two Critical PHP Flaws and What Every Business With a Website Should Do Today](https://ghosxt.com/blog/php2shell-php-vulnerability-cve-2026-109618-smb-website-2026)
+- [SaaS Subscription Audit: Cut Unused Software and Close Security Gaps (2026)](https://ghosxt.com/blog/saas-subscription-audit-unused-software-accounts-small-business-2026)
+- [Do You Need a UPS? Battery Backup for Small Business Servers and Networks (2026)](https://ghosxt.com/blog/ups-battery-backup-small-business-network-servers-2026)
 - [How to Securely Dispose of Old Computers and Hard Drives: A Small Business Guide (2026)](https://ghosxt.com/blog/secure-disposal-old-computers-hard-drives-small-business-2026)
 - [Business Firewall vs ISP Router: What a Small Business Actually Needs in 2026](https://ghosxt.com/blog/business-firewall-vs-isp-router-small-business-2026)
 - [Shared Logins and Shared Mailboxes: How a Small Business Can Stop Sharing One Password](https://ghosxt.com/blog/shared-logins-shared-mailboxes-small-business-2026)
@@ -5917,7 +5920,7 @@ The newest posts across every topic. Looking for something specific? Browse all 
 - [Phishing-Resistant MFA in Google Workspace: The Admin Console Rollout Plan](https://ghosxt.com/blog/phishing-resistant-mfa-google-workspace-admin-guide)
 - [Microsoft 365 vs Google Workspace for a 10-Person Business](https://ghosxt.com/blog/microsoft-365-vs-google-workspace-small-business-2026)
 - [How to Offboard a Contractor in Google Workspace](https://ghosxt.com/blog/offboard-contractor-google-workspace-checklist)
-See all 157 posts in file view
+See all 163 posts in file view
 ## Managed IT in Salinas
 Decision-making material for Salinas and Monterey County business owners evaluating managed IT, IT support, and providers. Start with the Salinas IT services hub for the broader picture.
 - [Does Google Workspace Back Up Your Data? What Google Keeps and What It Doesn't](https://ghosxt.com/blog/google-workspace-backup-small-business-2026)

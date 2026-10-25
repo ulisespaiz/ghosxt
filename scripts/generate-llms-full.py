@@ -78,6 +78,9 @@ DESC_RE = re.compile(r'<meta\s+name=["\']description["\']\s+content=(["\'])(.*?)
 CANONICAL_RE = re.compile(r'<link\s+rel=["\']canonical["\']\s+href=(["\'])(.*?)\1', re.IGNORECASE)
 MAIN_RE = re.compile(r"<main\b[^>]*>(.*?)</main>", re.IGNORECASE | re.DOTALL)
 COMMENT_RE = re.compile(r"<!--.*?-->", re.DOTALL)
+# The "Existing client and need help right now?" callout under the navbar is
+# site chrome repeated on every inner page, not page content.
+CALLOUT_RE = re.compile(r'<p class="existing-client-callout">.*?</p>', re.DOTALL)
 NON_PAGE_SUFFIXES = (".xml", ".pdf", ".json", ".txt")
 
 WARN_BYTES = 400_000  # ~400KB target ceiling
@@ -301,7 +304,7 @@ def build_page_section(url: str, path: Path) -> str | None:
         print(f"  warn: no <main> found, skipping: {path.relative_to(REPO)}", file=sys.stderr)
         return None
 
-    main_html = strip_blocks(main_m.group(1))
+    main_html = CALLOUT_RE.sub("", strip_blocks(main_m.group(1)))
     extractor = MainContentExtractor()
     extractor.feed(main_html)
     extractor.close()
@@ -421,7 +424,7 @@ def build_blog_index_section(url: str, path: Path) -> str | None:
         print(f"  warn: no <main> found, skipping: {path.relative_to(REPO)}", file=sys.stderr)
         return None
 
-    main_html = strip_blocks(main_m.group(1))
+    main_html = CALLOUT_RE.sub("", strip_blocks(main_m.group(1)))
     extractor = BlogIndexExtractor()
     extractor.feed(main_html)
     extractor.close()
