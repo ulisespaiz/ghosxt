@@ -932,24 +932,50 @@ all four pages; axe reports 0 `color-contrast` nodes site-wide (with X-01).
 
 ## Mobile UI observations (proposals only, nothing changed)
 
-Evidence lives in `audit/baseline/screenshots/<page>.mobile.png` (390x844) and the
-Lighthouse mobile table. Observations from the homepage and the service template:
+Evidence: first-viewport captures at 390x844 in `audit/baseline/screenshots/<page>.mobile.png`
+(desktop at 1366x768 alongside), full-page captures regenerable with
+`tools/screenshots.mjs`, and the mobile Lighthouse table. Every item below is a
+proposal for the owner; none ships without the approval label.
 
-1. The first viewport on a service page is nav, breadcrumb, H1, and the top of a
-   180-word lead; the primary CTA and the key-facts block are below the fold. With the
-   A-02 rewrite (70-word lead) the CTA pair and the first key facts come into the first
-   screen without any layout change.
-2. The sticky bottom bar (call plus book) and the cookie banner stack on first visit;
-   the September pass already fixed the layout-shift and clearance; mobile CLS is
-   0.000 to 0.068 on all 268 pages, with the only material shifts on desktop (T-22). Keep it. The one copy change worth making is the
-   bar's label ("Book" becomes "Free assessment"), which PR #260 already does on its page.
-3. The home page's 19 animated server-rack blocks are the mobile main-thread cost
-   (T-06). The animation can stay visually identical with a fraction of the nodes.
-4. Tap targets: Lighthouse `tap-targets` passes on all 268 pages at mobile; the July
-   fixes held.
-5. Fonts: with D1 undecided, nothing changes; if the dark system wins, the mobile
-   hero needs a contrast and size pass at 390 px before any page beyond `/managed-ai`
-   adopts it (PR #260 reports 29 px H1 at mobile, which is small for Michroma).
+1. **Thirty percent of the first screen is chrome on a first visit.** Nav (60 px), the
+   cookie banner (about 190 px with a four-line message and two buttons) and the sticky
+   call-and-book bar (about 60 px) leave roughly 530 px for content. On `/` the primary
+   CTA is still visible above the banner, which is right; on `/pricing` the published
+   prices paragraph is visible, which is right. Proposal (M-01, P1, owner decision): shrink
+   the banner to one line plus two buttons (about 90 px) or show it only on pages that
+   set a third-party cookie (`/contact` with Calendly and Turnstile) since the analytics
+   beacon is cookieless; whether a banner is needed at all on the other pages is a legal
+   call for the owner, not this audit.
+2. **Service and compliance pages open with a story, and nothing else fits.** On
+   `/managed-it-services` and `/cmmc-compliance` the first screen is breadcrumb, H1 and
+   eight lines of the 180-word lead; the CTA pair, the pricing pointer and the key-facts
+   block all sit below. The A-02 rewrite (two-sentence lead under 70 words) brings the
+   first CTA and the "Pricing: published upfront" line into the first screen with no
+   layout change. Proposal (M-02, P1): do A-02 first; then measure whether moving the
+   key-facts block above the lead on mobile (a CSS order change, visual) is still worth it.
+3. **The home subtitle says the wrong things first.** "Get government-grade IT and
+   cybersecurity for less than one in-house hire ... Local managed IT services in Salinas
+   and across Monterey County" is five lines on mobile before the first button. C-08
+   covers the wording; the mobile effect is that the CTA sits at the edge of the first
+   screen. Proposal (M-03, P1): two sentences, geography phrase per the owner's rule.
+4. **The "Existing client and need help right now? Get support." bar is inconsistent.**
+   It appears on `/managed-it-services` and `/contact` but not on `/`, `/pricing` or
+   `/cmmc-compliance`. Proposal (M-04, P2): either on every page through the shared
+   chrome or only on service pages, but decided, not accidental.
+5. **The contact page's first screen has no form and no booking button.** Heading,
+   paragraph and the email card fill it; the form, Calendly and the hours sit below the
+   banner. Proposal (M-05, P1, visual): a single "Book a free assessment" button directly
+   under the H1 on mobile, and the form's three required fields within the first two
+   screens; pairs with C-04 and T-21.
+6. **Layout stability is already good on mobile.** CLS is 0.000 to 0.068 on all 268
+   pages; the September bottom-bar and banner clearance fixes held; `tap-targets` passes
+   everywhere. The remaining shifts are desktop-only (T-22).
+7. **The home page's animated server-rack blocks are the mobile main-thread cost**
+   (T-06); the animation can look identical with a fraction of the nodes.
+8. **If the dark system wins (D1)**, the mobile hero needs a contrast and size pass at
+   390 px before any page beyond `/managed-ai` adopts it: PR #260 reports a 29 px H1 at
+   mobile, which is small for Michroma, and white-on-#ff1f3a buttons pass AA only at
+   large-text sizes.
 
 ## Phase 3: positioning read
 
