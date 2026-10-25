@@ -11,10 +11,12 @@ AI-citation, or Core Web Vitals impact. P2 is polish.
 ## Assumptions made because the owner was not available to answer
 
 1. The site stays on its current light theme (Roboto, dark red #b71c1c, white
-   backgrounds). The dark visual system the brief calls "locked" (#0a0a0a, #ff1f3a,
-   Michroma, Inter) exists today only on the unmerged `/managed-ai` page (PR #260) and on
-   the generated Open Graph cards. This audit proposes no palette or font change on either
-   theme; it treats the split as decision D1 below.
+   backgrounds). Confirmed by the owner on 2026-10-25 after a site-wide preview of the
+   dark tokens (#0a0a0a, #ff1f3a, Michroma, Inter; PR #267, closed): the owner prefers
+   the current look and declined the dark system and its fonts. Small animations and UI
+   improvements inside the light theme are welcome, each behind the approval label. The
+   dark system remains only on the unmerged `/managed-ai` page (PR #260), which must
+   adopt the light chrome, and on the generated Open Graph cards. See D1 below.
 2. The prior audit referred to as "August 2026" is the set of artifacts in `audit/`:
    the July 2026 fleet audit (`audit/report.md`, `audit/IMPROVEMENT-PLAN.md`), the
    September 2026 website pass (`audit/error-sweep-2026-09-10.md`,
@@ -37,9 +39,11 @@ AI-citation, or Core Web Vitals impact. P2 is polish.
 
 ## Questions for the owner (answers change what the Opus session builds)
 
-- D1 Brand direction: does the whole site move to the dark system on `/managed-ai`, or
-  does `/managed-ai` adopt the light site chrome? Until answered, PR #260 cannot merge
-  without shipping two design systems.
+- D1 Brand direction: DECIDED 2026-10-25, light. The owner reviewed the dark tokens
+  applied to every page (PR #267, closed without merging) and keeps the current theme:
+  Roboto, dark red #b71c1c, white backgrounds. `/managed-ai` adopts the light site chrome
+  before PR #260 merges. Motion and UI improvements are in scope inside the light theme,
+  one PR each, with the `visual-change-approved` label.
 - D2 Credentials and proof to feature: which of the ten credentials on `/about` go in the
   CTA copy, and may proof content name clients? The home page names Villicana
   Transportation with a logo while `/case-studies` is anonymized and noindexed.
@@ -206,10 +210,9 @@ location queries, and AI governance is the one of those lanes with a named natio
 category (IronEdge, Integris) and no local entrant (`audit/queries.md` row 10). Every week
 the page is unmerged is a week the category forms without Ghosxt in it.
 Fix: (1) merge `main` into `feature/managed-ai` and resolve the nav and sitemap
-conflicts; (2) apply decision D1: either restyle the page onto the shared light chrome
-(no new CSS file, locations layout, same tokens as `/cmmc-compliance`) or get written
-approval that the dark system is the new site direction and schedule the rest of the site
-to follow in a design PR series; (3) align the business name with D3; (4) keep every
+conflicts; (2) apply decision D1 (decided 2026-10-25: light): restyle the page onto the
+shared light chrome, no new CSS file, locations layout, same tokens as
+`/cmmc-compliance`; (3) align the business name with D3; (4) keep every
 sentence of the lead and the FAQ; (5) after merge, regenerate `llms-full.txt`, `feed.xml`
 is unaffected, submit the URL via IndexNow and request indexing in Search Console.
 Acceptance: `/managed-ai` returns 200 with `index, follow`, appears in `sitemap.xml`
@@ -1014,10 +1017,11 @@ proposal for the owner; none ships without the approval label.
    everywhere. The remaining shifts are desktop-only (T-22).
 7. **The home page's animated server-rack blocks are the mobile main-thread cost**
    (T-06); the animation can look identical with a fraction of the nodes.
-8. **If the dark system wins (D1)**, the mobile hero needs a contrast and size pass at
-   390 px before any page beyond `/managed-ai` adopts it: PR #260 reports a 29 px H1 at
-   mobile, which is small for Michroma, and white-on-#ff1f3a buttons pass AA only at
-   large-text sizes.
+8. **D1 went light on 2026-10-25**, so no page beyond `/managed-ai` adopts the dark
+   system and `/managed-ai` itself moves to the light chrome (C-01). For the record, the
+   site-wide preview (PR #267) showed why a dark retheme would have needed its own pass:
+   Michroma uppercase needs 26 px or less to fit a 390 px phone, and white on #ff1f3a
+   passes AA only as large text.
 
 ## Phase 3: positioning read
 

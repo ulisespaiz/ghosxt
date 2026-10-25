@@ -64,14 +64,15 @@ budgets are regenerated.
 
 1. No em dashes anywhere: code, copy, docs, commits, PR text. Use a comma, colon,
    period, or a plain hyphen.
-2. The visual system is locked. No change to layout, palette, typography, spacing, or
-   page structure without explicit written approval from the owner on the PR. Owner's
-   brand tokens: background #0a0a0a, accent red #ff1f3a, all text #ffffff, cyan #00ecff
-   only as a rare status accent, headlines Michroma uppercase, body Inter. As of
-   2026-10-25 only `/managed-ai` (PR #260) implements these tokens; every other page uses
-   the earlier light theme (Roboto, dark red #b71c1c). Which direction the rest of the
-   site takes is an owner decision; until it is made, neither theme is edited. No yellow,
-   no grey text.
+2. The visual system is locked to the current light theme: white backgrounds, dark red
+   #b71c1c accents, Roboto. No change to layout, palette, typography, spacing, or page
+   structure without explicit written approval from the owner on the PR. On 2026-10-25
+   the owner reviewed a site-wide preview of the dark tokens (#0a0a0a, #ff1f3a, Michroma,
+   Inter; PR #267) and declined them: that system is not the site direction, and
+   `/managed-ai` (PR #260) must adopt the light chrome before it merges. Small animations
+   and UI improvements inside the light theme are welcome, one PR each, with the
+   approval label. No yellow. No new grey text tokens; secondary text uses the existing
+   `--text-secondary` and must clear AA.
 3. No visual diffs without explicit approval. The screenshot-diff job fails on any pixel
    change (over 0.1 percent of a page, after one re-capture of any page that differs, to
    absorb runner timing noise) unless the PR carries the `visual-change-approved` label

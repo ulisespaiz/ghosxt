@@ -32,13 +32,13 @@ need an answer are marked "after Dn". Everything else can start now.
 | 13b | A6 Contact page third parties | seo/a6-contact-embeds-2026-10 | T-21 | placeholder box is a visible change: label required |
 | 14 | C5 Salinas hub trim | seo/c5-salinas-2026-10 | C-06 | none |
 | 15 | C6 Cannibalization merges (one PR per pair) | seo/c6-merge-<pair>-2026-10 | C-02 | none |
-| 16 | PR #260 Managed AI | feature/managed-ai (existing) | C-01 | after D1, D3 |
+| 16 | PR #260 Managed AI, restyled onto the light chrome | feature/managed-ai (existing) | C-01 | D1 decided (light); after D3 |
 | 17 | C7 Resolve [VERIFY] markers | seo/c7-verify-2026-10 | A-01, C-11 | after D4, D10 |
 | 18 | C8 Proof pages | seo/c8-proof-2026-10 | C-03 | after D2 |
 | 19 | C9 Launch the two draft verticals | seo/c9-launch-drafts-2026-10 | C-07 | after D4 |
 | 20 | C10 Voice: tagline, home subtitle, footer | seo/c10-voice-2026-10 | C-08, C-09 | after D8 and a Search Console baseline (D6) |
 | 21 | B5 sameAs and dates | seo/b5-sameas-dates-2026-10 | S-07, S-08, A-08, T-09 | after D7 |
-| 22 | A4 Fonts and OG cards | seo/a4-fonts-2026-10 | T-08, T-10 | after D1, label required |
+| 22 | A4 Fonts and OG cards (Roboto stays, per D1) | seo/a4-fonts-2026-10 | T-08, T-10 | label required |
 | 23 | L1 County pages | seo/l1-counties-2026-10 | L-03 | none |
 | 24 | A5 Dead external links | seo/a5-external-links-2026-10 | T-16 | confirm each in a browser first |
 | 25 | Owner tasks (no PR) | none | A-06, L-01, T-11, C-12 | owner |
