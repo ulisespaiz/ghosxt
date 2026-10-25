@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#ffffff" />
+    <meta name="theme-color" content="#0a0a0a" />
     <title>August 2026 Patch Tuesday: 400 Fixes, 3 Zero-Days</title>
     <meta name="description" content="August 2026 Patch Tuesday: 400 fixes and 3 zero-days, including an actively exploited Windows flaw and the SharePoint RCE chain." />
     <link rel="canonical" href="https://ghosxt.com/blog/august-2026-patch-tuesday-400-fixes-3-zero-days-smb" />
@@ -27,12 +27,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <!-- ghosxt:roboto-preload -->
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Michroma&display=swap" />
     <link rel="preconnect" href="https://cdn-uicons.flaticon.com" />
-    <link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" />
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" /></noscript>
+    <link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Michroma&display=swap" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Michroma&display=swap" /></noscript>
     <link rel="stylesheet" href="../assets/css/main.min.css?v=2026-09-10a" />
+    <link rel="stylesheet" href="../assets/css/main.dark.css?v=dark-preview" />
     <link rel="stylesheet" href="../assets/css/blog.min.css?v=2026-09-10a" />
+    <link rel="stylesheet" href="../assets/css/blog.dark.css?v=dark-preview" />
+    <link rel="stylesheet" href="../assets/css/theme-dark.css?v=dark-preview" />
     <link rel="stylesheet" media="print" onload="this.media='all'" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" />
     <noscript><link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" /></noscript>
     <script type="application/ld+json">
@@ -310,7 +313,7 @@
           <h3>What order should a small business patch in?</h3>
           <p>Install the cumulative update and reboot everywhere; that single step covers the exploited zero-day and the bulk of the release. If some machines have to go first: self-hosted SharePoint servers (the completed CVE-2026-55040 plus CVE-2026-63520 chain needs no credentials), then domain controllers and any Windows server running the DNS role (CVE-2026-62878 is a wormable CVSS 9.8), then on-premises Exchange (CVE-2026-62911), then workstations. Verify Windows 11 machines land on build 26100.9168 or 26200.9168 and ESU-enrolled Windows 10 machines on 19045.7663, because an installed-but-not-rebooted patch protects nothing.</p>
 
-          <p style="margin-top: 2rem; font-size: 0.9rem; color: rgba(0,0,0,0.7); overflow-wrap: anywhere;">
+          <p style="margin-top: 2rem; font-size: 0.9rem; color: rgba(255, 255, 255, 0.7); overflow-wrap: anywhere">
             <strong>Sources:</strong>
             <a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-august-2026-patch-tuesday-fixes-400-flaws-3-zero-days/" target="_blank" rel="noopener noreferrer">BleepingComputer</a> &middot;
             <a href="https://www.thezdi.com/blog/2026/8/11/the-august-2026-security-update-review" target="_blank" rel="noopener noreferrer">Zero Day Initiative</a> &middot;
@@ -331,7 +334,7 @@
             </a>
           </div>
 
-          <p style="margin-top: 1.5rem; font-size: 0.95rem; color: rgba(0,0,0,0.7);">
+          <p style="margin-top: 1.5rem; font-size: 0.95rem; color: rgba(255, 255, 255, 0.7)">
             Prefer to talk first? Email <a href="mailto:sales@ghosxt.com">sales@ghosxt.com</a> or call <a href="tel:+18312040501">(831) 204-0501</a>.
           </p>
         </div>

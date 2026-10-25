@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#ffffff" />
+    <meta name="theme-color" content="#0a0a0a" />
     <title>Claude Mythos: 271 Firefox Bugs in One Run | Ghosxt</title>
     <meta name="description" content="Anthropic's Claude Mythos found 271 Firefox 150 vulnerabilities in one eval and built working exploits for 181." />
     <link rel="canonical" href="https://ghosxt.com/blog/claude-mythos-firefox-271-vulnerabilities-patch-cadence-smb" />
@@ -27,12 +27,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <!-- ghosxt:roboto-preload -->
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Michroma&display=swap" />
     <link rel="preconnect" href="https://cdn-uicons.flaticon.com" />
-    <link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" />
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" /></noscript>
+    <link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Michroma&display=swap" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Michroma&display=swap" /></noscript>
     <link rel="stylesheet" href="../assets/css/main.min.css?v=2026-09-10a" />
+    <link rel="stylesheet" href="../assets/css/main.dark.css?v=dark-preview" />
     <link rel="stylesheet" href="../assets/css/blog.min.css?v=2026-09-10a" />
+    <link rel="stylesheet" href="../assets/css/blog.dark.css?v=dark-preview" />
+    <link rel="stylesheet" href="../assets/css/theme-dark.css?v=dark-preview" />
     <link rel="stylesheet" media="print" onload="this.media='all'" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" />
     <noscript><link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" /></noscript>
     <script type="application/ld+json">
@@ -241,19 +244,19 @@
 
           <h2>Why patch cadence is shifting from quarterly to continuous</h2>
 
-          <figure class="patch-cadence-figure" style="margin: 2rem 0;">
-            <svg role="img" aria-labelledby="cadenceTitle cadenceDesc" viewBox="0 0 640 320" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto; max-width: 640px; display: block;">
+          <figure class="patch-cadence-figure" style="margin: 2rem 0">
+            <svg role="img" aria-labelledby="cadenceTitle cadenceDesc" viewBox="0 0 640 320" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto; max-width: 640px; display: block">
               <title id="cadenceTitle">Patch cadence before and after AI-driven vulnerability discovery</title>
               <desc id="cadenceDesc">A timeline diagram comparing two patch cadences. The top track, labelled "Before", shows four large dots evenly spaced across a year, representing quarterly patch windows. The bottom track, labelled "After Mythos-class tools", shows roughly forty smaller dots packed densely across the same year, representing continuous, hours-to-days patching. The "After" track is highlighted in red to draw attention to the volume increase.</desc>
               <style>
-                .cadence-axis { stroke: #1a1a1a; stroke-width: 2; }
-                .cadence-track-old { stroke: #1a1a1a; stroke-width: 2; }
-                .cadence-track-new { stroke: var(--ghosxt-red-0, #b71c1c); stroke-width: 3; }
-                .cadence-dot-old { fill: #1a1a1a; }
-                .cadence-dot-new { fill: var(--ghosxt-red-0, #b71c1c); }
-                .cadence-label-track { font-family: Roboto, system-ui, sans-serif; font-size: 14px; font-weight: 700; fill: #1a1a1a; }
-                .cadence-label-pace { font-family: Roboto, system-ui, sans-serif; font-size: 12px; fill: var(--text-primary, rgba(0,0,0,0.9)); }
-                .cadence-label-quarter { font-family: Roboto, system-ui, sans-serif; font-size: 11px; fill: var(--text-secondary, rgba(0,0,0,0.65)); }
+                .cadence-axis { stroke: #e5e5e5; stroke-width: 2; }
+                .cadence-track-old { stroke: #e5e5e5; stroke-width: 2; }
+                .cadence-track-new { stroke: var(--ghosxt-red-0, #ff1f3a); stroke-width: 3; }
+                .cadence-dot-old { fill: #e5e5e5; }
+                .cadence-dot-new { fill: var(--ghosxt-red-0, #ff1f3a); }
+                .cadence-label-track { font-family: Roboto, system-ui, sans-serif; font-size: 14px; font-weight: 700; fill: #e5e5e5; }
+                .cadence-label-pace { font-family: Roboto, system-ui, sans-serif; font-size: 12px; fill: var(--text-primary, rgba(255, 255, 255, 0.9)); }
+                .cadence-label-quarter { font-family: Roboto, system-ui, sans-serif; font-size: 11px; fill: var(--text-secondary, rgba(255, 255, 255, 0.65)); }
               </style>
 
               <text x="20" y="30" class="cadence-label-track">Before</text>
@@ -281,7 +284,7 @@
               <text x="373" y="295" text-anchor="middle" class="cadence-label-quarter">Q3</text>
               <text x="510" y="295" text-anchor="middle" class="cadence-label-quarter">Q4</text>
             </svg>
-            <figcaption style="font-size: 0.92rem; color: rgba(0,0,0,0.65); margin-top: 0.5rem; text-align: center;">
+            <figcaption style="font-size: 0.92rem; color: rgba(255, 255, 255, 0.7); margin-top: 0.5rem; text-align: center">
               Patch cadence in small business IT, before and after AI-driven vulnerability discovery.
             </figcaption>
           </figure>
@@ -388,7 +391,7 @@
             </a>
           </div>
 
-          <p style="margin-top: 1.5rem; font-size: 0.95rem; color: rgba(0,0,0,0.7);">
+          <p style="margin-top: 1.5rem; font-size: 0.95rem; color: rgba(255, 255, 255, 0.7)">
             Prefer to talk first? Email <a href="mailto:sales@ghosxt.com">sales@ghosxt.com</a> or call <a href="tel:+18312040501">(831) 204-0501</a>.
           </p>
         </div>

@@ -1,0 +1,286 @@
+/* Dark brand preview layer. Preview branch only.
+   Loaded after every page stylesheet and after the generated *.dark.css
+   copies (audit/tools/dark-preview.py). Owner tokens: background #0a0a0a,
+   accent #ff1f3a, all text #ffffff, cyan #00ecff as a rare status accent,
+   Michroma uppercase headlines, Inter body. Defaults chosen for the three
+   open sub-decisions in AUDIT.md D1: muted text is white at 70 percent,
+   buttons are black text on brand red (AA at every size), the mobile H1
+   is 26 px. */
+
+/* The generated *.dark.css copies resolve every neutral token by property
+   (backgrounds to #0a0a0a or a surface step, borders to hairlines, text to
+   white), so these token values only reach declarations the generator did not
+   rewrite. They are set text-safe. */
+:root {
+  --font-family-2: "Inter", sans-serif;
+  --ghosxt-black: #ffffff;
+  --ghosxt-white: #0a0a0a;
+  --ghosxt-gray: #141414;
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.7);
+  --text-inverse: #ffffff;
+  --text-inverse-secondary: rgba(255, 255, 255, 0.75);
+  color-scheme: dark;
+}
+
+html,
+body {
+  background: #0a0a0a;
+  color: #ffffff;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  font-family: "Inter", "Roboto", system-ui, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.hero-title,
+.cta-title,
+.section-title,
+.footer-cta-title {
+  font-family: "Michroma", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+}
+
+/* Michroma is wide: "CYBERSECURITY" needs 26 px or less to fit a 390 px
+   phone with the page gutters. The page stylesheets set their own mobile H1
+   sizes with !important, so these carry !important too. */
+h1,
+.hero-title {
+  font-size: 1.625rem !important;
+  line-height: 1.2;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+@media (min-width: 768px) {
+  h1,
+  .hero-title {
+    font-size: 2.25rem !important;
+  }
+}
+
+@media (min-width: 1100px) {
+  h1,
+  .hero-title {
+    font-size: 2.75rem !important;
+  }
+}
+
+h2,
+.cta-title,
+.section-title {
+  font-size: clamp(1.25rem, 4vw, 1.875rem);
+  line-height: 1.25;
+}
+
+h3 {
+  font-size: clamp(1rem, 3vw, 1.25rem);
+  line-height: 1.3;
+}
+
+h4,
+h5,
+h6 {
+  font-size: 0.9375rem;
+  line-height: 1.35;
+}
+
+.hero-span-text,
+.title-span-text {
+  color: #ff1f3a !important;
+}
+
+a {
+  color: #ffffff;
+}
+
+a:hover {
+  color: #ff1f3a;
+}
+
+p a,
+li a,
+.key-facts a,
+.faq a {
+  color: #ff1f3a;
+  text-decoration-color: rgba(255, 31, 58, 0.6);
+}
+
+::selection {
+  background: #ff1f3a;
+  color: #0a0a0a;
+}
+
+/* Primary buttons: black text on brand red clears AA at every size.
+   White text on #ff1f3a is 3.8:1 and passes only as large text. */
+.button-primary,
+.cta-primary-btn,
+.btn-demo,
+.navbar-btn.btn-demo,
+.mobile-btn.btn-demo,
+.cookie-btn-primary,
+.banner-btn,
+.footer-cta-btn,
+.footer-subscribe-btn,
+.mobile-cta-bar .mcta-primary,
+.ctpat-promo-btn,
+.cares-promo-btn,
+.read-more-reviews-btn {
+  background: #ff1f3a !important;
+  background-image: none !important;
+  color: #0a0a0a !important;
+  border-color: #ff1f3a !important;
+  font-weight: 600;
+}
+
+.button-primary:hover,
+.cta-primary-btn:hover,
+.btn-demo:hover,
+.navbar-btn.btn-demo:hover,
+.mobile-btn.btn-demo:hover,
+.cookie-btn-primary:hover,
+.banner-btn:hover,
+.footer-cta-btn:hover,
+.footer-subscribe-btn:hover,
+.mobile-cta-bar .mcta-primary:hover,
+.ctpat-promo-btn:hover,
+.cares-promo-btn:hover,
+.read-more-reviews-btn:hover {
+  background: #ffffff !important;
+  color: #0a0a0a !important;
+  border-color: #ffffff !important;
+}
+
+.button-secondary,
+.btn-signin,
+.navbar-btn.navbar-phone,
+.cookie-btn-secondary,
+.mobile-cta-bar .mcta-secondary {
+  background: transparent !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.6) !important;
+}
+
+.button-secondary:hover,
+.btn-signin:hover,
+.navbar-btn.navbar-phone:hover,
+.cookie-btn-secondary:hover,
+.mobile-cta-bar .mcta-secondary:hover {
+  background: #ffffff !important;
+  color: #0a0a0a !important;
+  border-color: #ffffff !important;
+}
+
+/* Chrome surfaces sit one step above the page background. */
+.navbar,
+.mobile-cta-bar,
+.cookie-banner,
+.dropdown-menu {
+  background: #0a0a0a !important;
+  border-color: #2a2a2a;
+}
+
+.navbar {
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.navbar.scrolled {
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
+}
+
+.navbar-link,
+.dropdown-menu a,
+.mobile-menu a {
+  color: #ffffff;
+}
+
+.navbar-link:hover,
+.navbar-link.active,
+.dropdown-menu a:hover {
+  color: #ff1f3a;
+}
+
+footer,
+.footer {
+  background: #0a0a0a !important;
+  border-top: 1px solid #2a2a2a;
+  color: #ffffff;
+}
+
+.mobile-cta-bar {
+  border-top: 1px solid #2a2a2a;
+}
+
+.cookie-banner {
+  border-top: 1px solid #2a2a2a;
+}
+
+/* The logo is a black skull on red flame. A thin white glow keeps the
+   skull readable on #0a0a0a until a white-skull variant exists. */
+.navbar-logo img,
+img[alt="Ghosxt logo"] {
+  filter: drop-shadow(0 0 1.5px rgba(255, 255, 255, 0.95));
+}
+
+/* Cards and panels: a surface step plus a hairline instead of a shadow. */
+.key-facts,
+.faq-item,
+.card,
+.service-card,
+.pricing-card,
+.hero-comparison-box,
+.review-card,
+.testimonial,
+.blog-card,
+.post-card {
+  background: #141414;
+  border: 1px solid #2a2a2a;
+  box-shadow: none;
+}
+
+hr {
+  border-color: #2a2a2a;
+}
+
+input,
+select,
+textarea {
+  background: #141414;
+  color: #ffffff;
+  border: 1px solid #3a3a3a;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #00ecff;
+  outline-offset: 2px;
+}
+
+/* Status accent: the only place cyan appears. */
+.status-ok,
+.success,
+.badge-success,
+.hero-badge i {
+  color: #00ecff;
+}
