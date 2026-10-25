@@ -26,7 +26,9 @@ name: Site quality
 
 on:
   pull_request:
-    branches: [main]
+    # Programme branches stack on seo/audit-2026-10 until it merges, so PRs
+    # that target a seo/ branch get the same gates as PRs that target main.
+    branches: [main, "seo/**"]
   push:
     branches: [main]
   workflow_dispatch:
