@@ -37,7 +37,7 @@ LEADS = {
         + DOD + "provides managed detection and response for small businesses across Monterey County and surrounding areas: a 24/7 SOC watching endpoints, network and cloud, human-reviewed alerts and real containment when something is found, at " + PRICING + ".",
     "cloud-services":
         "A cloud tenant set up in an afternoon and never hardened is where most of the small-business breaches we see begin, and nobody can show what is locked down. "
-        + DOD + "provides cloud services for small businesses across Monterey County and surrounding areas: Microsoft 365 management and baseline hardening included in every managed IT plan at " + PRICING + ", with migrations and cloud projects quoted per scope.",
+        + DOD + "provides cloud services for small businesses across Monterey County and surrounding areas: Microsoft 365 management and baseline hardening in every managed IT plan at " + PRICING + ", migrations and projects quoted per scope.",
     "backup-disaster-recovery":
         "The question is not whether you have backups; it is when someone last restored from them and how long it took. "
         + DOD + "provides backup and disaster recovery for small businesses across Monterey County and surrounding areas, built the way that engineer would protect their own data, at " + PRICING + ".",

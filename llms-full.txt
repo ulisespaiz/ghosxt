@@ -357,7 +357,7 @@ Title: Cloud Services & Microsoft 365 | Ghosxt – California
 Meta description: Microsoft 365 hardening and hybrid cloud planning for California small business. Engineer with DoD infrastructure experience, hardened tenants, clean migrations.
 
 # Cloud Services and Microsoft 365 for California Small Business
-A cloud tenant set up in an afternoon and never hardened is where most small-business breaches start, and nobody can show what is locked down. Ghosxt, run by an engineer with DoD infrastructure experience, provides cloud services for small businesses across Monterey County and surrounding areas: Microsoft 365 hardening included in every managed IT plan at published pricing, with migrations and cloud projects quoted per scope.
+A cloud tenant set up in an afternoon and never hardened is where most of the small-business breaches we see begin, and nobody can show what is locked down. Ghosxt, run by an engineer with DoD infrastructure experience, provides cloud services for small businesses across Monterey County and surrounding areas: Microsoft 365 management and baseline hardening in every managed IT plan at published pricing, migrations and projects quoted per scope.
 ★★★★★ Rated 5.0 across 26 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
 Transparent managed IT pricing is published upfront, so you know the range before booking.
 Cloud Services and Microsoft 365 for California Small Business: at a glance
