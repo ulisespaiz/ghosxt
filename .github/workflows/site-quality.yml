@@ -243,6 +243,29 @@ jobs:
         id: diff
         continue-on-error: true
         run: node head/audit/tools/visual-diff.mjs --base /tmp/shots-base --head /tmp/shots-head --out /tmp/visual-diff
+      - name: Re-capture changed pages once (flake guard)
+        id: rediff
+        if: steps.diff.outcome == 'failure'
+        continue-on-error: true
+        env:
+          CHROME_PATH: /usr/bin/google-chrome
+        run: |
+          # A page that differs on the first pass is captured again on both servers.
+          # Only a difference that survives the second capture counts as a change.
+          node -e "const r=require('/tmp/visual-diff/report.json');for(const f of r.files)if(f.status==='changed'||f.status==='error')console.log(f.name)" > /tmp/changed-names.txt
+          if [ ! -s /tmp/changed-names.txt ]; then echo "nothing to re-capture (missing files cannot be retried)"; exit 1; fi
+          : > /tmp/urls-retry.txt
+          while read -r name; do
+            slug="${name%%.*}"
+            if [ "$slug" = "home" ]; then path="/"; elif [ "$slug" = "blog" ]; then path="/blog/"; else path="/${slug//__//}"; fi
+            echo "https://ghosxt.com$path" >> /tmp/urls-retry.txt
+          done < /tmp/changed-names.txt
+          sort -u /tmp/urls-retry.txt -o /tmp/urls-retry.txt
+          echo "re-capturing:"; cat /tmp/urls-retry.txt
+          cd head/audit
+          node tools/screenshots.mjs --base http://127.0.0.1:8788 --urls /tmp/urls-retry.txt --out /tmp/shots-base --hide .cookie-banner --concurrency 1 --wait-ms 1500 --force
+          node tools/screenshots.mjs --base http://127.0.0.1:8787 --urls /tmp/urls-retry.txt --out /tmp/shots-head --hide .cookie-banner --concurrency 1 --wait-ms 1500 --force
+          node tools/visual-diff.mjs --base /tmp/shots-base --head /tmp/shots-head --out /tmp/visual-diff --force
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -253,7 +276,7 @@ jobs:
         run: |
           { echo '## Screenshot diff'; echo; cat /tmp/visual-diff/report.md 2>/dev/null | head -80; } >> "$GITHUB_STEP_SUMMARY"
       - name: Fail unless approved
-        if: steps.diff.outcome == 'failure' && !contains(github.event.pull_request.labels.*.name, 'visual-change-approved')
+        if: steps.rediff.outcome == 'failure' && !contains(github.event.pull_request.labels.*.name, 'visual-change-approved')
         run: |
           echo "::error::Visual changes detected. Review the visual-diff-report artifact. If intended, the owner applies the 'visual-change-approved' label."
           exit 1

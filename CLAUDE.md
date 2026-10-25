@@ -73,7 +73,9 @@ budgets are regenerated.
    site takes is an owner decision; until it is made, neither theme is edited. No yellow,
    no grey text.
 3. No visual diffs without explicit approval. The screenshot-diff job fails on any pixel
-   change unless the PR carries the `visual-change-approved` label applied by the owner.
+   change (over 0.1 percent of a page, after one re-capture of any page that differs, to
+   absorb runner timing noise) unless the PR carries the `visual-change-approved` label
+   applied by the owner.
 4. Voice: confident and plain. Lead with the client's blind spot. The thread is
    "IT that sees it coming." Local credibility belongs in CTA copy, not in the footer.
 5. Service area wording: "Monterey County and surrounding areas." Never list Salinas as

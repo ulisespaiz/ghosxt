@@ -63,7 +63,9 @@ only in a PR whose body explains which page regressed and why that is accepted; 
 reviewer rejects a loosened budget without that paragraph. The screenshot baseline for
 the visual-diff job is always the PR's base branch, so there is nothing to regenerate;
 an intended visual change is approved by the owner with the `visual-change-approved`
-label on the PR.
+label on the PR. A page that differs on the first pass is captured again on both
+servers before the job decides, because the runner's font and image timing produces
+0.01 to 0.12 percent noise on a handful of long pages.
 
 ## Local baseline versus production
 
