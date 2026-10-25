@@ -36,8 +36,8 @@ LEADS = {
         "A security alert nobody reads at 2am is not protection, it is a log file. "
         + DOD + "provides managed detection and response for small businesses across Monterey County and surrounding areas: a 24/7 SOC watching endpoints, network and cloud, human-reviewed alerts and real containment when something is found, at " + PRICING + ".",
     "cloud-services":
-        "A cloud tenant set up in an afternoon and never hardened is where most small-business breaches start, and nobody can show what is locked down. "
-        + DOD + "provides cloud services for small businesses across Monterey County and surrounding areas: Microsoft 365 hardening included in every managed IT plan at " + PRICING + ", with migrations and cloud projects quoted per scope.",
+        "A cloud tenant set up in an afternoon and never hardened is where most of the small-business breaches we see begin, and nobody can show what is locked down. "
+        + DOD + "provides cloud services for small businesses across Monterey County and surrounding areas: Microsoft 365 management and baseline hardening included in every managed IT plan at " + PRICING + ", with migrations and cloud projects quoted per scope.",
     "backup-disaster-recovery":
         "The question is not whether you have backups; it is when someone last restored from them and how long it took. "
         + DOD + "provides backup and disaster recovery for small businesses across Monterey County and surrounding areas, built the way that engineer would protect their own data, at " + PRICING + ".",
@@ -54,8 +54,8 @@ LEADS = {
         "Your internal IT person or team cannot be on vacation and on call at the same time, and the security work is what slips. "
         + DOD + "provides co-managed IT for small businesses across Monterey County and surrounding areas: working alongside your team, covering the gaps and the security and compliance depth, scoped to the role we play, with transparent pricing agreed upfront.",
     "cmmc-compliance":
-        "A DoD subcontract now comes with a CMMC requirement, and \"we have antivirus\" is not an answer an assessor accepts. "
-        "Ghosxt, run by an engineer with DoD infrastructure experience who has lived inside these controls, prepares small defense contractors and subcontractors across Monterey County and surrounding areas for CMMC and NIST SP 800-171, and sets up and hardens Microsoft 365 GCC High, quoted separately from managed IT at " + PRICING + ".",
+        "A DoD contract or subcontract now comes with a CMMC requirement, and \"we have antivirus\" is not an answer an assessor accepts. "
+        "Ghosxt, run by an engineer with DoD infrastructure experience who has lived inside these controls, prepares small defense contractors and subcontractors across Monterey County and surrounding areas for CMMC and NIST SP 800-171, including Microsoft 365 GCC High setup and hardening, with managed IT at " + PRICING + ".",
     "hipaa-it-compliance":
         "HIPAA does not care that you run a two-provider clinic: if you store electronic patient data, the Security Rule applies in full. "
         + DOD + "builds and documents HIPAA-compliant IT for small medical practices across Monterey County and surrounding areas, with the documentation an investigation asks for, at " + PRICING + ".",

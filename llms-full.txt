@@ -1196,7 +1196,7 @@ Title: CMMC Compliance & NIST 800-171 for Small Business | Ghosxt
 Meta description: Microsoft 365 GCC High setup and hardening for small defense contractors: Intune, Defender for Business, Conditional Access. Salinas, CA.
 
 # CMMC Compliance & NIST 800-171 for Defense Contractors
-A DoD subcontract now comes with a CMMC requirement, and "we have antivirus" is not an answer an assessor accepts. Ghosxt, run by an engineer with DoD infrastructure experience who has lived inside these controls, prepares small defense contractors and subcontractors across Monterey County and surrounding areas for CMMC and NIST SP 800-171, and sets up and hardens Microsoft 365 GCC High, quoted separately from managed IT at published pricing.
+A DoD contract or subcontract now comes with a CMMC requirement, and "we have antivirus" is not an answer an assessor accepts. Ghosxt, run by an engineer with DoD infrastructure experience who has lived inside these controls, prepares small defense contractors and subcontractors across Monterey County and surrounding areas for CMMC and NIST SP 800-171, including Microsoft 365 GCC High setup and hardening, with managed IT at published pricing.
 Built by an engineer with DoD infrastructure experience: not a checklist from someone who has never touched CUI.
 CMMC Compliance & NIST 800-171: at a glance
 ## Microsoft 365 GCC High for small defense contractors
