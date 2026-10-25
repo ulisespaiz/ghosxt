@@ -21,13 +21,15 @@ need an answer are marked "after Dn". Everything else can start now.
 | 4 | B3 FAQ visibility | seo/b3-faq-2026-10 | S-04, A-03 (compliance pages) | none |
 | 5 | C1 Compliance front door | seo/c1-nav-2026-10 | C-05, T-15 (service-area links), T-18 | T-18 changes visible anchor text: label required |
 | 6 | C2 Answer-first leads, compliance pages | seo/c2-leads-compliance-2026-10 | A-02 (cmmc, hipaa, pci, ctpat, cyber-insurance) | none |
-| 7 | A2 Icon font to inline SVG | seo/a2-icons-2026-10 | T-05 | screenshot diff must be clean |
+| 7 | A2 Icon font to inline SVG | seo/a2-icons-2026-10 | T-05, T-20, T-22 (nav part) | screenshot diff must be clean |
 | 8 | B4 llms.txt and llms-full.txt | seo/b4-llms-2026-10 | A-07 | none (add /managed-ai line after C-01 merges) |
 | 9 | C3 Answer-first leads, service pages | seo/c3-leads-services-2026-10 | A-02 (9 service pages) | none |
 | 10 | C4 Answer-first leads, verticals | seo/c4-leads-verticals-2026-10 | A-02 (10 vertical pages) | none |
-| 11 | D1 Accessibility: chrome and tokens | seo/d1-a11y-chrome-2026-10 | X-02, X-04, X-05, X-06, T-12 | X-01 token change needs the label |
-| 12 | D2 Accessibility: pricing calculator | seo/d2-a11y-pricing-2026-10 | X-03 | screenshot diff must be clean |
-| 13 | A3 Home main thread and image variants | seo/a3-home-perf-2026-10 | T-06, T-13, T-17 | screenshot diff must be clean |
+| 11 | D1 Accessibility: chrome | seo/d1-a11y-chrome-2026-10 | X-02, X-04, X-05, X-06, T-12 | none |
+| 12 | D2 Accessibility: pricing calculator | seo/d2-a11y-pricing-2026-10 | X-03, X-07 | screenshot diff must be clean except the calculator text tone (label) |
+| 12b | D3 Accessibility: contrast on four pages | seo/d3-a11y-contrast-2026-10 | X-01, X-08 | visible: label required |
+| 13 | A3 Home main thread, inline scripts, image variants | seo/a3-home-perf-2026-10 | T-06, T-13, T-17, T-22 (/support part) | screenshot diff must be clean |
+| 13b | A6 Contact page third parties | seo/a6-contact-embeds-2026-10 | T-21 | placeholder box is a visible change: label required |
 | 14 | C5 Salinas hub trim | seo/c5-salinas-2026-10 | C-06 | none |
 | 15 | C6 Cannibalization merges (one PR per pair) | seo/c6-merge-<pair>-2026-10 | C-02 | none |
 | 16 | PR #260 Managed AI | feature/managed-ai (existing) | C-01 | after D1, D3 |
@@ -122,6 +124,11 @@ pages and three cloud-services spokes are; trim per T-02).
 | T-12 | html-validate with `no-implicit-button-type` and `heading-level` as `error` passes |
 | T-13 | Lighthouse image-delivery no longer lists the logo |
 | T-19 | `node audit/tools/check-seo-meta.mjs --only og-twitter` reports PASS |
+| T-20 | mobile FCP under 2.0 s and LCP under 2.5 s on /contact, /ctpat, /website-development, /privacy-policy, /ghosxt-cares; perf 90 or better |
+| T-21 | no calendly.com or stripe.com request before interaction on /contact; third-party-cookies passes; weight under 1 MiB; BP 100 |
+| T-22 | desktop CLS under 0.05 on /support and /blog/all; no nav entry in layout-shifts on / |
+| X-07 | Lighthouse accessibility 100 on /pricing at both widths; axe clean |
+| X-08 | color-contrast passes on /break-fix-vs-managed-it, /case-studies, /support, /blog/all |
 | S-01 | `node audit/tools/check-seo-meta.mjs --only localbusiness-consistent` reports PASS (one variant) |
 | S-02 | `node audit/tools/check-seo-meta.mjs --only business-node,service-provider` reports PASS |
 | S-03 | `node audit/tools/check-seo-meta.mjs --only breadcrumbs` reports PASS |

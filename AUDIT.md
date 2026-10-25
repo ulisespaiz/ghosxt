@@ -91,6 +91,38 @@ AI-citation, or Core Web Vitals impact. P2 is polish.
   (C-02), the long titles (T-02), the two noindex draft pages (C-07), Business Profile and
   listings work (L-01), and the repo being public with internal docs in it (C-12).
 
+## Baseline summary (production, 2026-10-25, one Lighthouse run per page and form factor)
+
+Full tables: `audit/baseline/lighthouse-summary.md` (mobile first), per-audit counts in
+`audit/baseline/lighthouse-failing-audits.md`, raw lean JSON per page in
+`audit/baseline/lighthouse/`. Lab numbers move between runs on a shared host (home page
+mobile performance ranged 70 to 88 across five runs with no content change), so read the
+table for patterns and outliers; the CI budgets come from the 3-run local baseline.
+
+| Form factor | Perf median (min) | A11y median (min) | BP median (min) | SEO median (min) | LCP median (max) | CLS median (max) | TBT median (max) |
+|---|---|---|---|---|---|---|---|
+| Mobile (268 pages) | 99 (68) | 100 (91) | 100 (79) | 100 (61) | 1.62 s (5.50 s) | 0.000 (0.068) | 0 ms (812 ms) |
+| Desktop (268 pages) | 100 (85) | 100 (91) | 100 (78) | 100 (61) | 0.57 s (1.34 s) | 0.002 (0.154) | 0 ms (325 ms) |
+
+Mobile outliers that are page defects (not run-to-run noise): `/website-development`
+(perf 68, LCP 5.5 s), `/contact` (70, LCP 4.9 s, best practices 79), `/ctpat` (71, LCP
+4.7 s), `/privacy-policy` (72, LCP 4.6 s), `/` (87, TBT 405 ms), `/about` (87, TBT 422
+ms), `/ghosxt-cares` (93, LCP 2.7 s), `/pricing` (accessibility 93). The SEO score of 92
+on 25 pages is one audit (`link-text`, T-18); 61 and 69 are the five noindex pages
+(`is-crawlable`, expected). Spoke pages with 400 to 700 ms TBT on identical templates
+(cloud-services-gilroy, web-design-seaside, managed-it-cost-monterey-county, zero-trust)
+are host noise: the same templates measure 0 ms elsewhere and nothing in their markup
+differs. Desktop outliers: `/support` CLS 0.154, `/blog/all` CLS 0.080, `/about` TBT
+324 ms, `/ctpat` TBT 266 ms, `/` TBT 177 ms, `/contact` best practices 78.
+
+Site-wide audits that fail on every page (mobile): `uses-long-cache-ttl` and
+`cache-insight` (the analytics beacon and 1-hour CSS and JS, T-07), `unused-css-rules`,
+`unminified-css` and `render-blocking-insight` (the icon-font stylesheet, T-05),
+`legacy-javascript` (the Cloudflare beacon, third party, not fixable here),
+`image-delivery-insight` (the 160 px logo in a 48 px slot, T-13), `uses-responsive-images`
+on 164 pages (T-17). Core Web Vitals verdict: LCP and CLS are good on every templated
+page at both widths; the work is on five one-off templates and the home page.
+
 ## P0 findings (do these first)
 
 ### A-01 P0: 129 `[VERIFY]` markers ship in the HTML of 30 live pages
@@ -250,7 +282,10 @@ Evidence: Lighthouse home mobile: performance 87, main-thread work 6.6 s ("Other
 "Style and Layout" 1.3 s), DOM 2,051 elements with depth 17 inside
 `div.server-unit > div.led-group`, forced reflow attributed to `why.min.js` and
 `index.min.js`, render-blocking `index.min.css` (77 KB minified, 408 ms). LCP element is
-the H1 at 2.1 to 2.2 s, FCP 2.0 s. Desktop is comfortable. Fix (visually neutral):
+the H1 at 2.1 to 2.2 s, FCP 2.0 s. Desktop is not clean either: `index.min.js` costs 2.3 s of script bootup on desktop (TBT
+177 ms), and `/about` and `/ctpat` each run an inline script in the page itself for 1.2
+to 1.3 s (TBT 324 ms and 266 ms on desktop), which is the counter or reveal animation on
+those templates. Fix (visually neutral):
 (1) reduce the 19 repeated server-rack blocks to one template instantiated by CSS
 `counter` or by cloning with JS after first paint, which removes about 1,000 nodes;
 (2) batch the layout reads in `why.min.js` and `index.min.js` (read sizes once, then
@@ -393,6 +428,50 @@ pages carry `og:image` and `twitter:card` but not `twitter:image`, so X and the 
 that read the Twitter tags first fall back to no image. Fix: add
 `<meta name="twitter:image" content="<same as og:image>">` to each page. Acceptance:
 the check reports PASS.
+
+### T-20 P1: five one-off templates do not paint until the web fonts arrive
+
+Pages: `/contact`, `/ctpat`, `/website-development`, `/privacy-policy`, `/ghosxt-cares`
+(the pages with their own hero CSS instead of the locations layout). Evidence: observed
+first paint 516 to 583 ms, right after the Roboto files (427 ms) and the 429 KB icon font
+(496 to 508 ms) finish, against 290 ms on `/managed-it-services` where text paints before
+any font arrives; Lighthouse therefore simulates FCP and LCP at 4.6 to 5.5 s on mobile and
+scores these pages 68 to 72 while the rest of the site scores 98 to 100. The LCP element
+on each is the hero subtitle paragraph. Hypothesis to confirm with a filmstrip: the first
+paint on these templates is an icon glyph or font-dependent element, so nothing paints
+until the icon font resolves. Fix: T-05 (inline SVG icons, no icon font) and T-08
+(self-hosted text font with `font-display: swap` and a preload) remove the dependency;
+until then, add `font-display: swap` for the icon font through a local `@font-face`
+override and make sure the hero text has a system fallback that paints. Acceptance:
+simulated mobile FCP under 2.0 s and LCP under 2.5 s on all five pages; performance 90
+or better; screenshot diff 0 changed.
+
+### T-21 P1: the contact page loads Calendly, Stripe and third-party cookies before any click
+
+Page: `/contact`. Evidence: total page weight 4,646 KiB (the rest of the site is about
+600 KiB) of which Calendly 2,983 KiB, cloudflare.com (Turnstile) 844 KiB, Stripe 294 KiB;
+Lighthouse `third-party-cookies` lists `__cf_bm` and `_cfuvid` from calendly.com and `m`
+from m.stripe.com; `bf-cache` fails; best practices score 79 mobile, 78 desktop. The
+inline Calendly widget (`div.calendly-inline-widget` plus `assets/external/widget.js`)
+loads the full scheduler and its payment provider on page load, and sets cookies before
+the site's own cookie banner is answered. Fix: load Calendly on intent, not on load:
+render a static placeholder in the same box (owner-approved, since the box changes
+visually before the click) with a "Pick a time" button that injects `widget.js` and the
+inline widget on click or when the box scrolls into view after consent; keep Turnstile
+as is. Acceptance: no request to calendly.com or stripe.com in the Lighthouse network
+records for `/contact` before interaction; `third-party-cookies` passes; total byte
+weight under 1 MiB; best practices 100.
+
+### T-22 P1: layout shift on `/support` (desktop CLS 0.154) and nav shift from the icon font
+
+Evidence: on `/support` desktop the `aside.key-facts` block moves (shift score 0.152)
+after first paint; on `/blog/all` desktop the `nav .navbar-right` moves (0.067) and the
+same 0.001 to 0.002 nav shift appears on every page at both widths, which matches the
+phone and calendar icons swapping in when the icon font arrives. Fix: reserve the icon
+box size (fixed `width` and `height` on `.fi` in the nav, or inline SVG per T-05); on
+`/support` find what inserts above the key-facts block after load (the remote-session
+widget or an injected notice) and reserve its height. Acceptance: desktop CLS under 0.05
+on `/support` and `/blog/all`; nav shift absent from `layout-shifts` on `/`.
 
 ## Structured data findings
 
@@ -822,6 +901,32 @@ Fix: underline the path links or raise their contrast against surrounding text (
 CSS change in `blog.css`; needs the approval label because it is visible). Acceptance: the
 audit passes on `/blog/all`.
 
+### X-07 P1: the pricing page scores 93 on accessibility for three concrete reasons
+
+Page: `/pricing`. Evidence (Lighthouse mobile and desktop): `aria-prohibited-attr` on 78
+nodes, the `<i class="fi">` check-mark icons in the plan comparison table carry
+`aria-label`, which is not allowed on an element with no role; `color-contrast` on 16
+nodes inside the calculator card (`#calcCard` header span, the user stepper display);
+`label-content-name-mismatch` on 6 nodes in the hero badge. Fix: replace the icon
+`aria-label` with visually hidden text (`<span class="sr-only">Included</span>`, the
+utility already exists) and `aria-hidden="true"` on the icon; darken the calculator's
+secondary text to the site's `--text-secondary` token (a token already in use, so no new
+colour); make the badge's accessible name start with its visible text. Acceptance:
+Lighthouse accessibility 100 on `/pricing` at both widths; axe clean; screenshot diff 0
+changed except the calculator text tone, which needs the label.
+
+### X-08 P1: low-contrast text in the comparison table, the client-stories quotes and one link
+
+Pages and evidence (Lighthouse `color-contrast`): `/break-fix-vs-managed-it` comparison
+table caption at 2.54:1 (#9aa3b2), header cells at 1.46:1 (#cfd6e2) and managed-column
+cells at 1.14:1 (#eaf0f7) against their backgrounds; `/case-studies` blockquote text at
+2.54:1 (#9aa3b2); `/support` CTA link at 2.23:1 (the default link blue #0000ee on the
+dark band); `/blog/all` toolbar count at 4.43:1 (#6b7280). These are grey text tokens
+the brand rules exclude ("no grey text"). Fix: use `--text-inverse` or `--text-primary`
+for the table and quote text and a white link on the dark band; `/blog/all` count to
+`--text-primary`. Visible change, label required. Acceptance: `color-contrast` passes on
+all four pages; axe reports 0 `color-contrast` nodes site-wide (with X-01).
+
 ## Mobile UI observations (proposals only, nothing changed)
 
 Evidence lives in `audit/baseline/screenshots/<page>.mobile.png` (390x844) and the
@@ -832,13 +937,13 @@ Lighthouse mobile table. Observations from the homepage and the service template
    A-02 rewrite (70-word lead) the CTA pair and the first key facts come into the first
    screen without any layout change.
 2. The sticky bottom bar (call plus book) and the cookie banner stack on first visit;
-   the September pass already fixed the layout-shift and clearance, CLS is 0.000 to
-   0.003 on every page measured so far. Keep it. The one copy change worth making is the
+   the September pass already fixed the layout-shift and clearance; mobile CLS is
+   0.000 to 0.068 on all 268 pages, with the only material shifts on desktop (T-22). Keep it. The one copy change worth making is the
    bar's label ("Book" becomes "Free assessment"), which PR #260 already does on its page.
 3. The home page's 19 animated server-rack blocks are the mobile main-thread cost
    (T-06). The animation can stay visually identical with a fraction of the nodes.
-4. Tap targets: Lighthouse `tap-targets` passes on the pages measured so far; the July
-   fixes held. Re-check `/pricing` in the full table.
+4. Tap targets: Lighthouse `tap-targets` passes on all 268 pages at mobile; the July
+   fixes held.
 5. Fonts: with D1 undecided, nothing changes; if the dark system wins, the mobile
    hero needs a contrast and size pass at 390 px before any page beyond `/managed-ai`
    adopts it (PR #260 reports 29 px H1 at mobile, which is small for Michroma).
