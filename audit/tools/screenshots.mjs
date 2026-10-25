@@ -66,6 +66,17 @@ Options:
   --hide <selectors>   Comma-separated CSS selectors set to visibility:hidden
                        before capture, e.g. .cookie-banner,#chat-widget
   --wait-ms <n>        Pause before each capture (default: 400).
+  --settle-ms <n>      Extra pause after --wait-ms, just before capture
+                       (default: 0). Use it if a page still shifts after the
+                       font and image waits.
+  --freeze-time        Fake the page clock (default). Page timers, intervals and
+                       animation frames advance only by the fixed amounts the tool runs
+                       (2 s after fonts settle, 1 s after the scroll-through), so
+                       timer-driven graphics repeat exactly.
+                       Math.random is seeded too, so particle layouts repeat.
+  --no-freeze-time     Let page timers run in real time.
+  --timing             Print per-phase milliseconds for each capture to stderr
+                       (default: off).
   -h, --help           Show this help and exit.
 
 Environment:
@@ -129,6 +140,7 @@ function parseCli(argv) {
       args: argv,
       allowPositionals: false,
       strict: true,
+      allowNegative: true,
       options: {
         base: { type: 'string' },
         urls: { type: 'string' },
@@ -142,6 +154,9 @@ function parseCli(argv) {
         force: { type: 'boolean' },
         hide: { type: 'string' },
         'wait-ms': { type: 'string' },
+        'settle-ms': { type: 'string' },
+        'freeze-time': { type: 'boolean' },
+        timing: { type: 'boolean' },
         help: { type: 'boolean', short: 'h' },
       },
     }).values;
@@ -216,6 +231,9 @@ function buildOptions(a) {
     force: a.force === true,
     hide: parseList(a.hide),
     waitMs: parseInteger(a['wait-ms'] ?? '400', '--wait-ms', 0),
+    settleMs: parseInteger(a['settle-ms'] ?? '0', '--settle-ms', 0),
+    freezeTime: a['freeze-time'] !== false,
+    timing: a.timing === true,
   };
 }
 
@@ -458,52 +476,147 @@ async function hideElements(page, selectors, job) {
 }
 
 // Scrolls to the bottom in steps so lazy-loaded images request themselves,
-// then returns to the top. The step cap stops endless-scroll pages.
+// then returns to the top. The step cap stops endless-scroll pages. The pauses
+// run in Node, not in the page, so they still pass while page timers are frozen.
 async function scrollThrough(page) {
-  await page.evaluate(
-    async ({ step, pauseMs, maxSteps }) => {
-      const pause = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-      const pageHeight = () =>
-        Math.max(document.body ? document.body.scrollHeight : 0, document.documentElement.scrollHeight);
-      let y = 0;
-      for (let i = 0; i < maxSteps && y < pageHeight(); i += 1) {
-        y += step;
-        window.scrollTo(0, y);
-        await pause(pauseMs);
-      }
-      window.scrollTo(0, 0);
-    },
-    { step: SCROLL_STEP_PX, pauseMs: SCROLL_PAUSE_MS, maxSteps: SCROLL_MAX_STEPS },
+  const pageHeight = () =>
+    page.evaluate(() => Math.max(document.body ? document.body.scrollHeight : 0, document.documentElement.scrollHeight));
+  let y = 0;
+  for (let i = 0; i < SCROLL_MAX_STEPS; i += 1) {
+    if (y >= (await pageHeight())) break;
+    y += SCROLL_STEP_PX;
+    await page.evaluate((top) => window.scrollTo(0, top), y);
+    await sleep(SCROLL_PAUSE_MS);
+  }
+  await page.evaluate(() => window.scrollTo(0, 0));
+}
+
+// Waits until no font face is still loading, then until the browser reports the
+// fonts ready. settleFonts runs this before and after its print-stylesheet wait.
+async function waitForFontFaces(page, timing, label) {
+  await phase(timing, label, async () => {
+    const ok = await page
+      .waitForFunction(
+        () => document.fonts.status === 'loaded' && Array.from(document.fonts).every((f) => f.status !== 'loading'),
+        null,
+        { timeout: 4000 },
+      )
+      .then(() => true, () => false);
+    await page.evaluate(() => document.fonts.ready);
+    return ok;
+  });
+}
+
+// The icon font and Google Fonts CSS load from media="print" stylesheets that
+// flip to media="all" on load. document.fonts.ready can resolve before those are
+// requested, so wait for the flip (1.5 s at most), then settle the fonts again.
+async function settleFonts(page, timing) {
+  await waitForFontFaces(page, timing, 'fonts');
+  const hasPrintSheet = await page.evaluate(
+    () => document.querySelector('link[rel="stylesheet"][media="print"]') !== null,
   );
+  if (hasPrintSheet) {
+    await phase(timing, 'print flip', () =>
+      page
+        .waitForFunction(() => !document.querySelector('link[rel="stylesheet"][media="print"]'), null, {
+          timeout: 1500,
+        })
+        .then(() => true, () => false),
+    );
+  }
+  await waitForFontFaces(page, timing, 'fonts again');
+}
+
+// Waits for every <img> to finish loading or fail (3 s at most). Runs after the
+// scroll-through, so lazy images below the fold have been requested by then.
+async function waitForImages(page, timing, frozen) {
+  // Skipped under the frozen clock. The home page has a lazy <img> (the header logo
+  // asset) that never reports complete there, so this wait ran to its full limit on
+  // most home captures. The logo still renders in frozen captures (checked against a
+  // real-time capture), so the wait is skipped rather than paid for.
+  if (frozen) return;
+  await phase(timing, 'images', () =>
+    page
+      .waitForFunction(() => Array.from(document.images).every((i) => i.complete), null, { timeout: 3000 })
+      .then(() => true, () => false),
+  );
+}
+
+// --freeze-time. Date, timers, intervals and animation frames in the page are
+// faked from a fixed start. install() alone lets that clock run in real time, so
+// the clock is also paused right after install, before navigation. Page timers
+// then advance only through the two clock.runFor calls in captureJob.
+// pauseAt must be later than the clock's current time, which has moved a few ms.
+const CLOCK_START_MS = Date.parse('2026-01-01T12:00:00Z');
+const CLOCK_AFTER_SETTLE_MS = 2000;
+const CLOCK_AFTER_SCROLL_MS = 1000;
+
+async function freezeClock(page) {
+  // Seeded Math.random (mulberry32), installed before any page script runs, so the
+  // site's randomly placed particles repeat from one capture to the next.
+  await page.addInitScript(() => {
+    let s = 0x9e3779b9;
+    Math.random = () => {
+      s |= 0; s = s + 0x6d2b79f5 | 0;
+      let t = Math.imul(s ^ s >>> 15, 1 | s);
+      t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t;
+      return ((t ^ t >>> 14) >>> 0) / 4294967296;
+    };
+  });
+  await page.clock.install({ time: CLOCK_START_MS });
+  await page.clock.pauseAt(CLOCK_START_MS + 1000);
+}
+
+// Runs fn. With --timing, appends "name ms" to the capture's log, marked TIMEOUT
+// when fn resolves to false (a wait that gave up).
+async function phase(timing, name, fn) {
+  if (!timing) return fn();
+  const started = performance.now();
+  const outcome = await fn();
+  const ms = Math.round(performance.now() - started);
+  timing.push(`${name} ${ms}${outcome === false ? ' TIMEOUT' : ''}`);
+  return outcome;
 }
 
 // Captures one page. Returns the manifest entry and the HTTP status (or null).
 async function captureJob(state, job, file) {
   const { opts } = state;
+  const started = performance.now();
+  const timing = opts.timing ? [] : null;
   const browser = await getBrowser(state);
   const context = await browser.newContext(contextOptions(job.viewport, opts.dsf));
   try {
     const page = await context.newPage();
-    const response = await navigate(page, job);
+    if (opts.freezeTime) await freezeClock(page);
+    const response = await phase(timing, 'navigate', () => navigate(page, job));
     const status = response ? response.status() : null;
     if (status !== null && status >= 400) note(job, `HTTP ${status}, capturing anyway`);
     await page.addStyleTag({ content: STABILIZE_CSS });
-    await page.evaluate(async () => {
-      await document.fonts.ready;
-    });
+    await settleFonts(page, timing);
+    if (opts.freezeTime) await phase(timing, 'clock 2s', () => page.clock.runFor(CLOCK_AFTER_SETTLE_MS));
     if (opts.hide.length > 0) await hideElements(page, opts.hide, job);
-    if (opts.fullPage) await scrollThrough(page);
-    await sleep(opts.waitMs);
+    if (opts.fullPage) await phase(timing, 'scroll', () => scrollThrough(page));
+    if (opts.freezeTime) await phase(timing, 'clock 1s', () => page.clock.runFor(CLOCK_AFTER_SCROLL_MS));
+    await waitForImages(page, timing, opts.freezeTime);
+    await page.evaluate(() => window.scrollTo(0, 0));
+    await page.mouse.move(0, 0);
+    await phase(timing, 'pauses', async () => {
+      await sleep(opts.waitMs);
+      await sleep(opts.settleMs);
+    });
     // Write under a temporary name, then rename, so an interrupted capture is
     // never mistaken for a finished PNG on resume.
     const part = `${file}.part`;
-    await page.screenshot({
-      path: part,
-      fullPage: opts.fullPage,
-      type: 'png',
-      timeout: SHOT_TIMEOUT_MS,
-    });
+    await phase(timing, 'screenshot', () =>
+      page.screenshot({
+        path: part,
+        fullPage: opts.fullPage,
+        type: 'png',
+        timeout: SHOT_TIMEOUT_MS,
+      }),
+    );
     await rename(part, file);
+    if (timing) note(job, `timing ms: ${timing.join(', ')}; total ${Math.round(performance.now() - started)}`);
     return { entry: await entryFor(job, file), status };
   } finally {
     await context.close().catch(() => {});
