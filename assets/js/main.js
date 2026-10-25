@@ -251,3 +251,134 @@ document.addEventListener('DOMContentLoaded', function () {
         if (acc) acc.querySelector('.mobile-accordion-trigger')?.classList.add('active');
     });
 });
+
+// ------ Motion: scroll reveal, FAQ open animation, reading progress, lazy
+// image fade. Styles live in the MOTION section of main.css. Everything here
+// respects prefers-reduced-motion and degrades to the plain page without JS.
+(function () {
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const ready = (fn) => {
+        if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', fn);
+        else fn();
+    };
+
+    // Scroll reveal, inner pages only: the home page has its own animations.
+    ready(function () {
+        if (reducedMotion || !('IntersectionObserver' in window)) return;
+        if (document.getElementById('gridCanvas')) return;
+        const selector = [
+            '.key-facts', '.service-card', '.icon-card', '.scenario-card', '.location-cta',
+            '.location-faq details', '.faq-item', '.blog-card', '.blog-post-cta',
+            '.certification-card', '.portfolio-card', '.stripe-card',
+        ].join(', ');
+        const fold = window.innerHeight * 0.9;
+        const items = [];
+        document.querySelectorAll(selector).forEach((el) => {
+            // Leave anything in the first screen alone so nothing flashes.
+            if (el.getBoundingClientRect().top < fold) return;
+            el.classList.add('reveal');
+            items.push(el);
+        });
+        if (!items.length) return;
+        // Short stagger between siblings in the same grid or list.
+        items.forEach((el) => {
+            const siblings = Array.from(el.parentElement.children).filter((c) => c.classList.contains('reveal'));
+            const i = siblings.indexOf(el);
+            if (i > 0) el.style.transitionDelay = Math.min(i, 4) * 60 + 'ms';
+        });
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add('is-visible');
+                io.unobserve(entry.target);
+            });
+        }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
+        items.forEach((el) => io.observe(el));
+        // Safety net: nothing stays hidden if the observer never fires.
+        setTimeout(() => items.forEach((el) => el.classList.add('is-visible')), 4000);
+    });
+
+    // FAQ open and close animation for the <details> accordions. The answer is
+    // the single element after the summary; anything else keeps native behaviour.
+    ready(function () {
+        if (reducedMotion) return;
+        document.querySelectorAll('.location-faq details, details.faq-item').forEach((details) => {
+            const summary = details.querySelector(':scope > summary');
+            const panel = summary && summary.nextElementSibling;
+            if (!summary || !panel || panel.nextElementSibling || typeof panel.animate !== 'function') return;
+            let running = null;
+            summary.addEventListener('click', (event) => {
+                event.preventDefault();
+                if (running) return;
+                panel.style.overflow = 'hidden';
+                if (details.open) {
+                    const from = panel.offsetHeight;
+                    running = panel.animate(
+                        [{ height: from + 'px', opacity: 1 }, { height: '0px', opacity: 0 }],
+                        { duration: 200, easing: 'ease' }
+                    );
+                    running.onfinish = () => {
+                        details.open = false;
+                        panel.style.overflow = '';
+                        running = null;
+                    };
+                } else {
+                    details.open = true;
+                    const to = panel.offsetHeight;
+                    running = panel.animate(
+                        [{ height: '0px', opacity: 0 }, { height: to + 'px', opacity: 1 }],
+                        { duration: 240, easing: 'ease' }
+                    );
+                    running.onfinish = () => {
+                        panel.style.overflow = '';
+                        running = null;
+                    };
+                }
+            });
+        });
+    });
+
+    // Reading progress on blog posts: a thin line along the navbar's bottom
+    // edge that fills as the article scrolls past.
+    ready(function () {
+        const post = document.querySelector('main.blog-post');
+        const navbar = document.querySelector('.navbar');
+        if (!post || !navbar) return;
+        const bar = document.createElement('div');
+        bar.className = 'read-progress';
+        bar.setAttribute('aria-hidden', 'true');
+        navbar.appendChild(bar);
+        let queued = false;
+        const update = () => {
+            queued = false;
+            const total = post.offsetHeight - window.innerHeight;
+            if (total <= 0) {
+                bar.style.transform = 'scaleX(1)';
+                return;
+            }
+            const passed = Math.min(Math.max(-post.getBoundingClientRect().top, 0), total);
+            bar.style.transform = 'scaleX(' + (passed / total).toFixed(4) + ')';
+        };
+        window.addEventListener('scroll', () => {
+            if (queued) return;
+            queued = true;
+            requestAnimationFrame(update);
+        }, { passive: true });
+        window.addEventListener('resize', update);
+        update();
+    });
+
+    // Lazy images fade in. Only images still loading get the class, so cached
+    // images never flash.
+    ready(function () {
+        if (reducedMotion) return;
+        document.querySelectorAll('img[loading="lazy"]').forEach((img) => {
+            if (img.complete) return;
+            img.classList.add('img-fade');
+            const done = () => img.classList.add('is-loaded');
+            img.addEventListener('load', done, { once: true });
+            img.addEventListener('error', done, { once: true });
+            if (img.complete) done();
+        });
+    });
+})();
