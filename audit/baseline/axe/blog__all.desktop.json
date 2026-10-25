@@ -1,0 +1,101 @@
+{
+  "url": "https://ghosxt.com/blog/all",
+  "viewport": "desktop",
+  "scannedAt": "2026-10-25T02:19:47.446Z",
+  "httpStatus": 200,
+  "violations": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "nodeCount": 2,
+      "sampleTargets": [
+        ".explorer-count",
+        "strong"
+      ],
+      "sampleHtml": "<span class=\"explorer-count\"><!-- BEGIN:COUNT -->\n<strong>163</strong>\n<!-- END:COUNT --> items</span>"
+    },
+    {
+      "id": "heading-order",
+      "impact": "moderate",
+      "help": "Heading levels should only increase by one",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/heading-order?application=playwright",
+      "tags": [
+        "cat.semantics",
+        "best-practice"
+      ],
+      "nodeCount": 1,
+      "sampleTargets": [
+        ".footer-column:nth-child(1) > .footer-column-title"
+      ],
+      "sampleHtml": "<h3 class=\"footer-column-title\">Company</h3>"
+    },
+    {
+      "id": "link-in-text-block",
+      "impact": "serious",
+      "help": "Links must be distinguishable without relying on color",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/link-in-text-block?application=playwright",
+      "tags": [
+        "cat.color",
+        "wcag2a",
+        "wcag141",
+        "TTv5",
+        "TT13.a",
+        "EN-301-549",
+        "EN-9.1.4.1",
+        "RGAAv4",
+        "RGAA-10.6.1"
+      ],
+      "nodeCount": 2,
+      "sampleTargets": [
+        ".explorer-path > a[href=\"/\"]",
+        ".explorer-path > a[href$=\"blog/\"]"
+      ],
+      "sampleHtml": "<a href=\"/\">Home</a>"
+    },
+    {
+      "id": "region",
+      "impact": "moderate",
+      "help": "All page content should be contained by landmarks",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/region?application=playwright",
+      "tags": [
+        "cat.keyboard",
+        "best-practice",
+        "RGAAv4",
+        "RGAA-9.2.1"
+      ],
+      "nodeCount": 1,
+      "sampleTargets": [
+        ".cookie-content"
+      ],
+      "sampleHtml": "<div class=\"cookie-content\">"
+    }
+  ],
+  "passesCount": 45,
+  "incomplete": [
+    {
+      "id": "aria-prohibited-attr",
+      "impact": "serious",
+      "nodeCount": 1
+    },
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "nodeCount": 2
+    }
+  ],
+  "inapplicableCount": 46
+}

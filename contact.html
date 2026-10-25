@@ -47,8 +47,8 @@
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" /></noscript>
 
     <!-- STYLESHEETS -->
-    <link rel="stylesheet" href="assets/css/main.min.css?v=2026-09-10a">
-    <link rel="stylesheet" href="assets/css/contact.min.css?v=2026-09-10a">
+    <link rel="stylesheet" href="assets/css/main.min.css?v=2026-10-25c">
+    <link rel="stylesheet" href="assets/css/contact.min.css?v=2026-10-25c">
     <link rel="stylesheet" media="print" onload="this.media='all'" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css">
     <noscript><link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css"></noscript>
 
@@ -306,49 +306,8 @@
 
                 <p class="contact-subtitle">Whether you're evaluating your current IT provider, planning an infrastructure upgrade, or just want a second opinion on your setup, we're available for a conversation. No sales pressure, just honest discussion about what your business actually needs.</p>
 
-                <div class="contact-info-box">
-                    <div class="info-item">
-                        <div class="info-icon">
-                            <i class="fi fi-rs-envelope"></i>
-                        </div>
-                        <div class="info-content">
-                            <div class="info-value"><a href="mailto:sales@ghosxt.com"><span>sales@ghosxt.com</span></a></div>
-                            <div class="info-label">Reply as soon as possible<!-- [VERIFY] -->, straight from the owner</div>
-                            
-                        </div>
-                    </div>
+                <p class="contact-hero-cta"><a class="contact-hero-btn" href="#bookSection"><i class="fi fi-rs-calendar-day" aria-hidden="true"></i> Book a free assessment</a></p>
 
-                    <div class="info-item">
-                        <div class="info-icon">
-                            <i class="fi fi-rs-phone-call"></i>
-                        </div>
-                        <div class="info-content">
-                            <div class="info-value"><a href="tel:+18312040501">Call or Text: (831) 204-0501</a></div>
-                            <div class="info-label">Available business hours (8am-6pm Pacific)</div>
-                        </div>
-                    </div>
-
-                    <div class="info-item">
-                        <div class="info-icon">
-                            <i class="fi fi-rs-calendar"></i>
-                        </div>
-                        <div class="info-content">
-                            <div class="info-value"><a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer">Schedule a Call: Click Here <i class="fi fi-rs-hand-back-point-left"></i></a></div>
-                            <div class="info-label">Book a 30-minute consultation directly</div>
-                        </div>
-                    </div>
-
-                    <div class="info-item">
-                        <div class="info-icon">
-                            <i class="fi fi-rs-marker"></i>
-                        </div>
-                        <div class="info-content">
-                            <div class="info-value">Based in Salinas, California</div>
-                            <div class="info-label">Local <a href="/salinas">Salinas IT support</a> across Monterey County</div>
-                            <div class="info-label">Remote support available nationwide</div>
-                        </div>
-                    </div>
-                </div>
             </div>
 
             <!-- Right Side - Form -->
@@ -430,6 +389,52 @@
 
                     <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
                 </form>
+            </div>
+
+            <!-- Contact details: after the form in source so keyboard and
+                 screen-reader order matches the phone layout (AUDIT.md M-05). -->
+            <div class="contact-info-box">
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="fi fi-rs-envelope"></i>
+                    </div>
+                    <div class="info-content">
+                        <div class="info-value"><a href="mailto:sales@ghosxt.com"><span>sales@ghosxt.com</span></a></div>
+                        <div class="info-label">Reply as soon as possible<!-- [VERIFY] -->, straight from the owner</div>
+                        
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="fi fi-rs-phone-call"></i>
+                    </div>
+                    <div class="info-content">
+                        <div class="info-value"><a href="tel:+18312040501">Call or Text: (831) 204-0501</a></div>
+                        <div class="info-label">Available business hours (8am-6pm Pacific)</div>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="fi fi-rs-calendar"></i>
+                    </div>
+                    <div class="info-content">
+                        <div class="info-value"><a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer">Schedule a Call: Click Here <i class="fi fi-rs-hand-back-point-left"></i></a></div>
+                        <div class="info-label">Book a 30-minute consultation directly</div>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="fi fi-rs-marker"></i>
+                    </div>
+                    <div class="info-content">
+                        <div class="info-value">Based in Salinas, California</div>
+                        <div class="info-label">Local <a href="/salinas">Salinas IT support</a> across Monterey County</div>
+                        <div class="info-label">Remote support available nationwide</div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -640,8 +645,7 @@
         <div class="cookie-content">
           <div class="cookie-icon"><i class="fi fi-rs-cookie"></i></div>
           <div class="cookie-text">
-            <p class="cookie-message">We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.</p>
-            <a href="/privacy-policy" class="cookie-link">Learn more about our Privacy Policy</a>
+            <p class="cookie-message">We use cookies to measure traffic and improve the site. Choose Accept All to consent. <a href="/privacy-policy" class="cookie-link">Privacy Policy</a></p>
           </div>
         </div>
         <div class="cookie-actions">
@@ -760,7 +764,7 @@
         </div>
     </footer>
 
-    <script src="assets/js/main.min.js?v=2026-09-10a" defer></script>
+    <script src="assets/js/main.min.js?v=2026-10-25c" defer></script>
     <script>
         // FAQ Accordion Functionality
         document.addEventListener('DOMContentLoaded', function() {

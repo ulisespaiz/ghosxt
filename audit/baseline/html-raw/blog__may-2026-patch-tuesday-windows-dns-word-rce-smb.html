@@ -1,0 +1,526 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#ffffff" />
+    <title>May 2026 Patch Tuesday: What to Patch This Week | Ghosxt</title>
+    <meta name="description" content="Microsoft's May 2026 Patch Tuesday fixed about 120 flaws, 17 critical. The Word flaw (CVE-2026-40361) and DNS flaw (CVE-2026-41096) top the list." />
+    <link rel="canonical" href="https://ghosxt.com/blog/may-2026-patch-tuesday-windows-dns-word-rce-smb" />
+    <link rel="alternate" type="application/rss+xml" title="Ghosxt Blog" href="https://ghosxt.com/feed.xml" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://ghosxt.com/blog/may-2026-patch-tuesday-windows-dns-word-rce-smb" />
+    <meta property="og:title" content="May 2026 Patch Tuesday: What to Patch This Week | Ghosxt" />
+    <meta property="og:description" content="120 fixes, 17 critical, no zero-days. The Word RCE that fires via Preview Pane and the unauthenticated Windows DNS Client RCE are the two SMBs should patch first." />
+    <meta property="og:image" content="https://ghosxt.com/assets/img/og/blog-may-2026-patch-tuesday-windows-dns-word-rce-smb.png" />
+    <meta property="og:site_name" content="Ghosxt" />
+    <meta property="article:published_time" content="2026-05-14" />
+    <meta property="article:author" content="Ulises Paiz" />
+    <meta name="robots" content="index, follow" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="May 2026 Patch Tuesday: What to Patch This Week | Ghosxt" />
+    <meta name="twitter:description" content="Microsoft fixed about 120 flaws this month, 17 critical, no zero-days. Here's what an SMB should patch first." />
+    <meta name="twitter:image" content="https://ghosxt.com/assets/img/og/blog-may-2026-patch-tuesday-windows-dns-word-rce-smb.png" />
+    <link rel="icon" href="../assets/img/favicon.ico" sizes="any" />
+    <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- ghosxt:roboto-preload -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" />
+    <link rel="preconnect" href="https://cdn-uicons.flaticon.com" />
+    <link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" /></noscript>
+    <link rel="stylesheet" href="../assets/css/main.min.css?v=2026-09-10a" />
+    <link rel="stylesheet" href="../assets/css/blog.min.css?v=2026-09-10a" />
+    <link rel="stylesheet" media="print" onload="this.media='all'" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" />
+    <noscript><link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" /></noscript>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "BlogPosting",
+            "mainEntityOfPage": { "@type": "WebPage", "@id": "https://ghosxt.com/blog/may-2026-patch-tuesday-windows-dns-word-rce-smb" },
+            "headline": "May 2026 Patch Tuesday: What an SMB Should Patch This Week",
+            "description": "Microsoft's May 2026 Patch Tuesday fixed about 120 flaws, 17 critical, with no zero-days. The Microsoft Word use-after-free (CVE-2026-40361, CVSS 8.4) and the Windows DNS Client heap overflow (CVE-2026-41096) are the two small businesses should patch first. Plain-talk explainer on what to do this week from an engineer with DoD infrastructure experience.",
+            "image": "https://ghosxt.com/assets/img/og/blog-may-2026-patch-tuesday-windows-dns-word-rce-smb.png",
+            "author": { "@type": "Person", "name": "Ulises Paiz", "url": "https://ghosxt.com/about" },
+            "publisher": { "@type": "Organization", "name": "Ghosxt", "logo": { "@type": "ImageObject", "url": "https://ghosxt.com/assets/img/ghosxt-logo-160.webp" } },
+            "datePublished": "2026-05-14",
+            "dateModified": "2026-09-28",
+            "articleSection": "Cybersecurity",
+            "keywords": "Microsoft Patch Tuesday May 2026, CVE-2026-40361, CVE-2026-41096, CVE-2026-35421, Word remote code execution, Windows DNS Client, NetLogon, Windows GDI, Outlook Preview Pane, MDASH, Anthropic Mythos, small business patching, patch management, mean time to patch, SMB cybersecurity"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ghosxt.com/" },
+              { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://ghosxt.com/blog/" },
+              { "@type": "ListItem", "position": 3, "name": "May 2026 Patch Tuesday for SMB", "item": "https://ghosxt.com/blog/may-2026-patch-tuesday-windows-dns-word-rce-smb" }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is the most important CVE to patch from May 2026 Patch Tuesday?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Two are tied for first place for a typical small business. CVE-2026-40361 is a critical use-after-free in Microsoft Word with a CVSS of 8.4 that can be triggered through the Outlook Preview Pane, meaning a user does not have to open the attachment for the exploit to fire. CVE-2026-41096 is a heap-based buffer overflow in the Windows DNS Client that allows an unauthenticated attacker to take over a target by sending a crafted DNS response. Office is everywhere; DNS resolution happens on every machine continuously. Both should be patched in the next 72 hours."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Are there any zero-days in May 2026 Patch Tuesday?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. Microsoft reported no actively exploited zero-day vulnerabilities in this month's release. That is the first zero-day-free Patch Tuesday in a while and is good news, with caveats: working exploits for several of the critical bugs will likely surface in the days and weeks after the patches drop, since the patches themselves often hint at the bug class. Patch on the new cadence regardless."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How many vulnerabilities did Microsoft fix in May 2026?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Approximately 120 CVEs. Of those, 17 are rated Critical (14 remote code execution, 2 elevation of privilege, 1 information disclosure), and the rest are rated Important, Moderate, or Low. Microsoft's MDASH multi-model agentic scanning harness was credited with discovering 16 of the fixed vulnerabilities."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is MDASH and why does it matter?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "MDASH is Microsoft's multi-model agentic scanning harness: more than 100 specialized AI agents that discover, debate, and prove exploitable bugs across Microsoft's own code. It is Microsoft's analog to Anthropic's Claude Mythos. The reason it matters for a small business is the rate: between MDASH on the Microsoft side and Mythos on the third-party side, vulnerability disclosure volume is climbing fast enough that any patching cadence slower than 'days' is going to fall behind."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How fast does a small business need to patch this month's fixes?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Targets: 24 to 72 hours for endpoints to apply the cumulative update with a reboot. 7 days for servers, scheduled around a maintenance window. Same week for any critical RCE on internet-reachable infrastructure. If your fleet is on auto-patch through an endpoint management tool, this is happening already and your job is verification. If it is not, this is the project to start on Monday."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+    <!-- ghosxt:cf-web-analytics -->
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"f3ce7e0e17f54050845d52d7f355cd98"}'></script>
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top"><i class="fi fi-rs-angle-up" aria-hidden="true"></i></button>
+
+    <nav class="navbar" aria-label="Main navigation">
+      <div class="navbar-container">
+        <div class="navbar-left"><a href="/" class="navbar-logo"><img fetchpriority="high" loading="eager" src="../assets/img/ghosxt-logo-160.webp" alt="Ghosxt logo" width="48" height="48" /><span>GHOSXT</span></a></div>
+        <div class="navbar-right">
+          <div class="navbar-menu">
+            <a href="/" class="navbar-link">Home</a>
+            <div class="navbar-dropdown"><a href="/about" class="navbar-link dropdown-trigger">About <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></a><div class="dropdown-menu"><a href="/about" class="dropdown-item">About Ghosxt</a><a href="/ghosxt-cares" class="dropdown-item">Ghosxt Cares</a></div></div>
+            <div class="navbar-dropdown"><a href="/services" class="navbar-link dropdown-trigger">Services <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></a><div class="dropdown-menu"><a href="/services" class="dropdown-item">All Services</a>
+                <a href="/managed-it-services" class="dropdown-item">Managed IT Services</a>
+                <a href="/help-desk-it-support" class="dropdown-item">IT Help Desk &amp; Support</a>
+                <a href="/it-consulting-vcio" class="dropdown-item">IT Consulting &amp; vCIO</a>
+                <a href="/cybersecurity" class="dropdown-item">Cybersecurity</a>
+                <a href="/cloud-services" class="dropdown-item">Cloud Services</a>
+                <a href="/backup-disaster-recovery" class="dropdown-item">Backup &amp; Disaster Recovery</a>
+                <a href="/network-design" class="dropdown-item">Network Design</a>
+                <a href="/website-development" class="dropdown-item">Web Development</a>
+                <a href="/website-development#calculator" class="dropdown-item">Website Pricing</a>
+                <a href="/ctpat" class="dropdown-item">C-TPAT Compliance</a></div></div>
+            <a href="/pricing" class="navbar-link">Pricing</a>
+            <a href="/support" class="navbar-link">Support</a>
+            <a href="/blog/" class="navbar-link">Blog</a>
+            <a href="/contact" class="navbar-link">Contact</a>
+          </div>
+          <button class="navbar-mobile-toggle" id="mobileToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu"><i class="fi fi-rs-burger-menu" aria-hidden="true"></i></button>
+          <div class="navbar-buttons"><a class="navbar-btn navbar-phone" href="tel:+18312040501" aria-label="Call Ghosxt at (831) 204-0501"><i class="fi fi-rs-phone-call" aria-hidden="true"></i><span>(831)&nbsp;204-0501</span></a><a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer" class="navbar-btn btn-demo"><i class="fi fi-rs-calendar-day"></i><span>Book a Call</span></a></div>
+        </div>
+      </div>
+      <div class="navbar-overlay" id="navbarOverlay"></div>
+      <div class="navbar-mobile-menu" id="mobileMenu">
+        <a href="/" class="mobile-link">Home</a>
+        <div class="mobile-accordion"><button class="mobile-accordion-trigger" aria-expanded="false">About <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></button><div class="mobile-accordion-content"><a href="/about" class="mobile-dropdown-item">About Ghosxt</a><a href="/ghosxt-cares" class="mobile-dropdown-item">Ghosxt Cares</a></div></div>
+        <div class="mobile-accordion"><button class="mobile-accordion-trigger" aria-expanded="false">Services <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></button><div class="mobile-accordion-content"><a href="/services" class="mobile-dropdown-item">All Services</a>
+            <a href="/managed-it-services" class="mobile-dropdown-item">Managed IT Services</a>
+            <a href="/help-desk-it-support" class="mobile-dropdown-item">IT Help Desk &amp; Support</a>
+            <a href="/it-consulting-vcio" class="mobile-dropdown-item">IT Consulting &amp; vCIO</a>
+            <a href="/cybersecurity" class="mobile-dropdown-item">Cybersecurity</a>
+            <a href="/cloud-services" class="mobile-dropdown-item">Cloud Services</a>
+            <a href="/backup-disaster-recovery" class="mobile-dropdown-item">Backup &amp; Disaster Recovery</a>
+            <a href="/network-design" class="mobile-dropdown-item">Network Design</a>
+            <a href="/website-development" class="mobile-dropdown-item">Web Development</a>
+            <a href="/website-development#calculator" class="mobile-dropdown-item">Website Pricing</a>
+            <a href="/ctpat" class="mobile-dropdown-item">C-TPAT Compliance</a></div></div>
+        <a href="/pricing" class="mobile-link">Pricing</a>
+        <a href="/support" class="mobile-link">Support</a>
+        <a href="/blog/" class="mobile-link">Blog</a>
+        <a href="/contact" class="mobile-link">Contact</a>
+        <div class="mobile-actions"><a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer" class="mobile-btn btn-demo"><i class="fi fi-rs-calendar-day"></i><span>Book a Call</span></a></div>
+      </div>
+    </nav>
+    <main id="main-content" class="blog-post">
+      <header class="blog-post-header">
+        <div class="container">
+          <nav class="blog-post-breadcrumbs" aria-label="Breadcrumb">
+            <a href="/">Home</a><span class="sep">&rsaquo;</span><a href="/blog/">Blog</a><span class="sep">&rsaquo;</span><span aria-current="page">May 2026 Patch Tuesday for SMB</span>
+          </nav>
+          <div class="blog-post-meta">
+            <time datetime="2026-05-14">May 14, 2026</time>
+            <span>&middot;</span>
+            <span>9 min read</span>
+            <span>&middot;</span>
+            <span class="blog-card-tag">Cybersecurity</span>
+          </div>
+          <h1>May 2026 Patch Tuesday: What an SMB Should Patch This Week</h1>
+          <div class="blog-post-author">
+            <strong>Ulises Paiz</strong>, Owner, Ghosxt
+          </div>
+          <div class="author-bio-box">
+            <!-- ghosxt:author-bio -->
+            <img src="../assets/img/ulises.avif" alt="Ulises Paiz" width="56" height="56" loading="lazy" />
+            <p>Ulises Paiz is the owner and sole engineer at Ghosxt, a Salinas, CA managed IT and cybersecurity provider. He holds an M.S. in Cybersecurity and Information Assurance (WGU, 2026) and nine industry certifications including CompTIA SecurityX, CySA+, and Microsoft AZ-104, with prior DoD and federal contractor infrastructure experience. <a href="/about">More about Ulises &rarr;</a></p>
+          </div>
+        </div>
+      </header>
+      <div class="blog-post-body">
+        <div class="container">
+          <aside class="blog-post-quickfix" aria-label="Summary and priorities for this week">
+            <span class="quickfix-label">TL;DR: The two CVEs to patch first</span>
+            <h2>120 fixes, 17 critical, no zero-days. Two of them deserve your full attention this week.</h2>
+            <ul>
+              <li><strong>CVE-2026-40361</strong>: Microsoft Word use-after-free, CVSS 8.4. Critical RCE. Fires through the Outlook Preview Pane, so the user does not have to open the attachment. Anyone with a mailbox is exposed.</li>
+              <li><strong>CVE-2026-41096</strong>: Windows DNS Client heap-based buffer overflow. Critical RCE. <em>Unauthenticated</em> attacker can take over a target by responding to a DNS query. Every Windows machine resolves DNS.</li>
+              <li><strong>CVE-2026-35421</strong>: Windows GDI heap overflow, CVSS 7.8. Critical RCE in the graphics subsystem. Sits behind every Office, PDF reader, and browser document preview.</li>
+              <li><strong>Zero-days this month: zero.</strong> First clean-deck Patch Tuesday in a while. The patches still get reverse-engineered; the window between patch release and proof-of-concept is short.</li>
+            </ul>
+            <p>What to do this week:</p>
+            <ol>
+              <li>Today: push the May cumulative update from your endpoint management tool to every Windows endpoint. Force restart inside 48 hours.</li>
+              <li>Today: confirm Microsoft Office is on the May 2026 build on every workstation, especially anyone on Click-to-Run who has paused updates.</li>
+              <li>This week: schedule the May cumulative update on every Windows server. Hotpatch where supported; reboot the rest in a maintenance window.</li>
+              <li>This week: scan your endpoint patch-compliance dashboard. The machines that are out of date are the ones an attacker will find first.</li>
+            </ol>
+          </aside>
+
+          <p>Yesterday was Microsoft's May 2026 Patch Tuesday. About 120 CVEs got fixed, 17 of them rated Critical, no zero-days this month. The release itself is the kind of thing that used to be a Monday-morning newsletter item. The reason it deserves its own post in 2026 is that the cadence I wrote about in the <a href="/blog/claude-mythos-firefox-271-vulnerabilities-patch-cadence-smb">Claude Mythos post</a> last week is now visibly playing out: a large share of this month's fixes were found by Microsoft's own MDASH agentic scanner, the rest are showing up faster than they used to, and the realistic window between patch release and working exploit is days, not months.</p>
+
+          <p>I will keep this short and operational. Here is what an SMB owner needs to know, what to push out this week, and why these specific CVEs deserve the front of the line.</p>
+
+          <h2>The shape of this month</h2>
+
+          <ul>
+            <li><strong>Roughly 120 CVEs</strong> addressed across Windows, Office, Azure, and supporting components.</li>
+            <li><strong>17 Critical</strong>: 14 remote code execution, 2 elevation of privilege, 1 information disclosure.</li>
+            <li><strong>Zero zero-days</strong>: nothing in this batch was being actively exploited at the time of disclosure.</li>
+            <li><strong>16 CVEs credited to MDASH</strong>, Microsoft's multi-model agentic scanner. More on that below.</li>
+            <li><strong>Several more credited indirectly to Anthropic's Claude Mythos</strong> via Palo Alto Networks' research, which has been using Mythos to triage Microsoft attack surface.</li>
+          </ul>
+
+          <p>Microsoft's MSRC blog described the release as sitting "on the larger side of a hotpatch month," with "a greater share of the issues addressed [...] discovered by Microsoft." Translation: the AI-assisted scanning programs at Microsoft are now contributing meaningful chunks of every monthly release, and the public Patch Tuesday list is going to get longer on average from here.</p>
+
+          <h2>The CVEs that actually matter for a small business</h2>
+
+          <h3>CVE-2026-40361: Microsoft Word use-after-free RCE (CVSS 8.4)</h3>
+
+          <p>A critical use-after-free vulnerability in Microsoft Word that an attacker can exploit to run code on the user's machine, in the context of that user. CVSS 8.4 puts it solidly in the Critical bucket. The piece that should focus an owner's attention is that this bug is reachable through the <strong>Outlook Preview Pane</strong>. The user does not have to double-click the attachment; they only have to receive an email where Outlook auto-previews the document.</p>
+
+          <p>This is the same attack pattern that has gotten plenty of small businesses ransomed over the years: an employee receives what looks like an invoice or a delivery notification, Outlook helpfully shows them the preview, and the exploit fires on the way in. The fix is straightforward, the update for Office is small, and the deployment is the kind of thing that should already be automatic in any modern endpoint setup.</p>
+
+          <p>Two things to verify on every workstation:</p>
+
+          <ul>
+            <li>Office Click-to-Run is on the May 2026 release channel build. Open any Office app, click File &rsaquo; Account, and check the build date.</li>
+            <li>Anyone on the Monthly Enterprise Channel or Semi-Annual Channel is not stuck waiting for a delayed rollout. SMBs on Business Premium are usually on Current Channel, which gets the fix first; verify it.</li>
+          </ul>
+
+          <h3>CVE-2026-41096: Windows DNS Client heap-based buffer overflow</h3>
+
+          <p>A heap-based buffer overflow in the Windows DNS Client that allows an <strong>unauthenticated</strong> attacker to take over a target system by sending a malicious DNS response. The piece that makes this dangerous is "unauthenticated": the attacker does not need a foothold, a phishing click, or any prior access. They need to be in a position to answer a DNS query.</p>
+
+          <p>That sounds narrower than it is. Any user who connects a laptop to an untrusted Wi-Fi network (a coffee shop, a hotel, an event venue) is asking that network for DNS resolution. Any office network that allows clients to use upstream DNS servers other than the firewall or a vetted resolver is exposed. Internal networks where DNS is provided by a domain controller are not immune either: any process on the same network that can intercept a DNS request can answer it with a crafted payload.</p>
+
+          <p>This is the kind of CVE that does not show up in "I clicked a bad link" headlines but does show up in <a href="/blog/ransomware-2026-how-it-gets-in">post-incident reviews of how the attackers actually got in</a>. Patch the Windows cumulative update, and on managed fleets, force DNS through a known resolver (your domain controller, Cloudflare 1.1.1.1, Quad9, or a managed DNS filtering product) instead of whatever DHCP hands out.</p>
+
+          <h3>CVE-2026-35421: Windows GDI heap overflow (CVSS 7.8)</h3>
+
+          <p>The Windows Graphics Device Interface is the rendering pipeline that sits behind almost every document, image, and font that displays on a Windows screen. A heap overflow here is reachable from a long list of common file types (images, fonts, embedded objects in Office, PDFs that render through GDI). Less immediately scary than the Word and DNS bugs, but the breadth of the surface (every browser, every Office app, every image viewer) makes it worth not skipping.</p>
+
+          <p>The fix arrives with the May cumulative update on Windows. There is no separate patch step.</p>
+
+          <h2>MDASH: the new defender in the loop</h2>
+
+          <p>The other story this month is who found the bugs. Microsoft introduced <strong>MDASH</strong>, a multi-model agentic scanning harness that orchestrates more than 100 specialized AI agents across an ensemble of frontier and distilled models to discover, debate, and prove exploitable bugs end-to-end. Microsoft credited MDASH with 16 of this month's Patch Tuesday CVEs.</p>
+
+          <p>The shorthand: <strong>MDASH is Microsoft's version of Anthropic's Claude Mythos.</strong> Mythos showed up in the <a href="/blog/claude-mythos-firefox-271-vulnerabilities-patch-cadence-smb">Firefox audit</a> last month and surfaced 271 sec-rated bugs in a single run. MDASH is the same idea applied to Microsoft's own codebase by Microsoft's own team. The implication is the same as it was for Mozilla: vendors are now hooked up to AI scanners that find more bugs per release than human reviewers do, and the public Patch Tuesday volume is going to climb on average for the foreseeable future.</p>
+
+          <p>This is good news for defenders, with one caveat. The patches still ship publicly. As soon as they ship, a second set of researchers reverse-engineers them and writes proof-of-concept exploits for the half-dozen bugs that look most dangerous. The window between "Patch Tuesday released" and "working exploit on a public repo" used to be weeks. It has been shrinking. In several recent cases it has been measured in hours. The defender that pushes the patch in 24 to 72 hours is well ahead. The defender that pushes it in 30 to 60 days is exposed for almost all of that window.</p>
+
+          <h2>What "no zero-days" means and what it does not</h2>
+
+          <p>It is genuinely a quieter month. No actively exploited zero-day means no attacker had a head start. That is unusual lately and worth noting. What it does not mean is that the bugs in this batch are safe to wait on. Several of them are the kind of thing that turns into a working public exploit within days of patch release, particularly the Office RCEs that fire through Preview Pane. The lesson from the last few years is that "no zero-days" tells you about the past two weeks, not the next two.</p>
+
+          <h2>What to do this week, in order</h2>
+
+          <ol>
+            <li><strong>Today:</strong> push the May 2026 cumulative Windows update to every workstation through your RMM, Intune, or whatever endpoint tool you use. Set a forced reboot deadline within 48 hours.</li>
+            <li><strong>Today:</strong> verify Microsoft Office is on the May 2026 build on every workstation that runs it. Click-to-Run is fastest; MSI installs are slowest and the ones most likely to be behind.</li>
+            <li><strong>Today:</strong> if your Outlook policy allows Preview Pane on attachments from external senders, consider disabling it for the next two weeks while the Word RCE patch propagates. Belt-and-suspenders.</li>
+            <li><strong>This week:</strong> apply the May cumulative update to every Windows server. Use hotpatch where supported (Windows Server 2022/2025 with Azure Update Manager) to avoid the reboot. For everything else, schedule a maintenance window and reboot.</li>
+            <li><strong>This week:</strong> review your endpoint patch-compliance dashboard. The machines that report "pending reboot" three days from now are the ones an opportunistic attacker will find. Track them down individually.</li>
+            <li><strong>This week:</strong> on managed fleets, lock DNS resolution to a known-good resolver (your domain controller, a DNS filtering product, or a public resolver like 1.1.1.1 / 9.9.9.9). The DNS Client RCE is most dangerous on networks where any device can be the DNS server.</li>
+            <li><strong>This month:</strong> if you cannot answer "what is our mean time to patch on critical Windows CVEs," that is the project. The May Patch Tuesday is one of about 12 you will see this year, and the volume is climbing.</li>
+          </ol>
+
+          <h2>The connective tissue with the rest of this blog</h2>
+
+          <p>If you have been reading along, this is the third post in a row on the same theme from different angles:</p>
+
+          <ul>
+            <li>The <a href="/blog/claude-mythos-firefox-271-vulnerabilities-patch-cadence-smb">Mythos post</a> set up the bigger story: AI-assisted vulnerability discovery is accelerating, and quarterly patch cycles are no longer fast enough.</li>
+            <li>The <a href="/blog/yellowkey-greenplasma-windows-bitlocker-bypass-privesc">YellowKey and GreenPlasma post</a> showed what specific Windows bugs in that pipeline look like and what they put at risk.</li>
+            <li>The <a href="/blog/identity-hardening-small-business-5-employees-microsoft-365">identity hardening post</a> covered the controls that reduce the cost of any individual bug landing in your environment.</li>
+            <li>The <a href="/blog/patch-management-small-business-2026">patch management post</a> covers the cadence and ownership structure that makes a month like this one routine instead of a scramble.</li>
+            <li>The <a href="/blog/june-2026-patch-tuesday-secure-boot-exchange-smb">June 2026 Patch Tuesday post</a> continues this series with next month's release.</li>
+            <li>This post is the operational piece. The May 2026 patches are out. This is how a small business runs the play.</li>
+          </ul>
+
+          <p>The honest take is unchanged: vulnerability management in 2026 is not a tooling problem. The tools are cheap. The problem is whether somebody whose job is patching is actually running them on a cadence that keeps up with disclosure volume. If you are reading this and the answer is "nobody, really," that is the seat to fill. We work with small businesses across Salinas, Monterey, Santa Cruz, and the rest of the Central Coast on exactly this; the <a href="/managed-it-services">managed IT services</a> page covers the broader scope and the <a href="/cybersecurity">cybersecurity services</a> page covers the program around it.</p>
+
+          <h2>FAQs about the May 2026 Patch Tuesday</h2>
+
+          <h3>What is the most important CVE to patch from May 2026 Patch Tuesday?</h3>
+          <p>Two are tied for first place for a typical small business. CVE-2026-40361 is a critical use-after-free in Microsoft Word with a CVSS of 8.4 that can be triggered through the Outlook Preview Pane, meaning a user does not have to open the attachment for the exploit to fire. CVE-2026-41096 is a heap-based buffer overflow in the Windows DNS Client that allows an unauthenticated attacker to take over a target by sending a crafted DNS response. Office is everywhere; DNS resolution happens on every machine continuously. Both should be patched in the next 72 hours.</p>
+
+          <h3>Are there any zero-days in May 2026 Patch Tuesday?</h3>
+          <p>No. Microsoft reported no actively exploited zero-day vulnerabilities in this month's release. That is the first zero-day-free Patch Tuesday in a while and is good news, with caveats: working exploits for several of the critical bugs will likely surface in the days and weeks after the patches drop, since the patches themselves often hint at the bug class. Patch on the new cadence regardless.</p>
+
+          <h3>How many vulnerabilities did Microsoft fix in May 2026?</h3>
+          <p>Approximately 120 CVEs. Of those, 17 are rated Critical (14 remote code execution, 2 elevation of privilege, 1 information disclosure), and the rest are rated Important, Moderate, or Low. Microsoft's MDASH multi-model agentic scanning harness was credited with discovering 16 of the fixed vulnerabilities.</p>
+
+          <h3>What is MDASH and why does it matter?</h3>
+          <p>MDASH is Microsoft's multi-model agentic scanning harness: more than 100 specialized AI agents that discover, debate, and prove exploitable bugs across Microsoft's own code. It is Microsoft's analog to <a href="/blog/claude-mythos-firefox-271-vulnerabilities-patch-cadence-smb">Anthropic's Claude Mythos</a>. The reason it matters for a small business is the rate: between MDASH on the Microsoft side and Mythos on the third-party side, vulnerability disclosure volume is climbing fast enough that any patching cadence slower than "days" is going to fall behind.</p>
+
+          <h3>How fast does a small business need to patch this month's fixes?</h3>
+          <p>Targets: 24 to 72 hours for endpoints to apply the cumulative update with a reboot. 7 days for servers, scheduled around a maintenance window. Same week for any critical RCE on internet-reachable infrastructure. If your fleet is on auto-patch through an endpoint management tool, this is happening already and your job is verification. If it is not, this is the project to start on Monday.</p>
+
+          <h3>What if I can't reboot servers right away?</h3>
+          <p>Hotpatch is the right answer if your servers are running Windows Server 2022 or 2025 and are eligible (Azure Update Manager or specific licensing tiers). Hotpatch applies the kernel and security fixes without a reboot for most of the year, with full quarterly reboots for the rollup. If hotpatch is not available, schedule a real maintenance window. "We'll reboot when convenient" is the patching posture that broke the last few small businesses I cleaned up after.</p>
+
+          <div class="blog-post-cta">
+            <h3>Want a real patch-cadence review for your fleet?</h3>
+            <p>30 minutes with an engineer with DoD infrastructure experience. Honest look at your endpoint and server patching, your mean time to patch on critical CVEs, and where the gaps are. Written follow-up with priorities and rough cost. No sales script.</p>
+            <a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer">
+              <i class="fi fi-rs-calendar-day" aria-hidden="true"></i>
+              Book your free assessment
+            </a>
+          </div>
+
+          <p style="margin-top: 1.5rem; font-size: 0.95rem; color: rgba(0,0,0,0.7);">
+            Prefer to talk first? Email <a href="mailto:sales@ghosxt.com">sales@ghosxt.com</a> or call <a href="tel:+18312040501">(831) 204-0501</a>.
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <div class="cookie-banner" id="cookieBanner">
+      <div class="cookie-banner-container">
+        <div class="cookie-content">
+          <div class="cookie-icon"><i class="fi fi-rs-cookie"></i></div>
+          <div class="cookie-text">
+            <p class="cookie-message">We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.</p>
+            <a href="/privacy-policy" class="cookie-link">Learn more about our Privacy Policy</a>
+          </div>
+        </div>
+        <div class="cookie-actions">
+          <button class="cookie-btn cookie-btn-secondary" id="cookieDecline">Decline</button>
+          <button class="cookie-btn cookie-btn-primary" id="cookieAccept">Accept All</button>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer" id="footerSection">
+      <div class="footer-container">
+        <div class="footer-brand-row">
+          <div class="footer-brand">
+            <img
+              src="../assets/img/ghosxt-logo-160.webp"
+              alt="Ghosxt logo"
+              width="80"
+              height="80"
+              loading="lazy"
+            />
+            <div class="footer-brand-text">
+              <span class="footer-brand-name">GHOSXT</span>
+              <span class="footer-brand-tagline"
+                >Government-grade IT for small business.</span
+              >
+            </div>
+          </div>
+          <div class="footer-cta-block">
+            <a
+              href="https://calendly.com/ulises-ghosxt"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="footer-cta-btn"
+            >
+              <i class="fi fi-rs-calendar-day" aria-hidden="true"></i>
+              Schedule Free Assessment
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-grid">
+          <div class="footer-column">
+            <h3 class="footer-column-title">Company</h3>
+            <ul class="footer-links">
+              <li><a href="/">Home</a></li>
+              <li><a href="/about">About</a></li>
+              <li><a href="/services">Services</a></li>
+              <li><a href="/pricing">Pricing</a></li>
+              <li>
+                <a href="/website-development">Website Development</a>
+              </li>
+              <li><a href="/msp-partners">MSP Partners</a></li>
+              <li><a href="/contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-column-title">Services</h3>
+            <ul class="footer-links">
+              <li><a href="/managed-it-services">Managed IT Services</a></li>
+              <li><a href="/help-desk-it-support">IT Help Desk &amp; Support</a></li>
+              <li><a href="/it-consulting-vcio">IT Consulting &amp; vCIO</a></li>
+              <li><a href="/cybersecurity">Cybersecurity</a></li>
+              <li><a href="/cloud-services">Cloud Services</a></li>
+              <li><a href="/backup-disaster-recovery">Backup &amp; Disaster Recovery</a></li>
+              <li><a href="/network-design">Network Design</a></li>
+              <li><a href="/website-development">Web Development</a></li>
+              <li><a href="/ctpat">C-TPAT Compliance</a></li>
+              <li><a href="/trucking-it-services">Trucking &amp; Logistics IT</a></li>
+              <li><a href="/agriculture-it-services">Agriculture &amp; Agribusiness IT</a></li>
+              <li><a href="/manufacturing-it-services">Manufacturing &amp; Industrial IT</a></li>
+              <li><a href="/professional-services-it">SMB Office &amp; Professional Services IT</a></li>
+              <li><a href="/healthcare-it-services">Healthcare &amp; Medical IT</a></li>
+              <li><a href="/property-management-it-services">Property Management IT</a></li>
+              <li><a href="/engineering-it-services">Engineering &amp; Architecture IT</a></li>
+              <li><a href="/hospitality-it-services">Hospitality &amp; Restaurants IT</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-column-title">Resources</h3>
+            <ul class="footer-links">
+              <li><a href="/support">Get Support</a></li>
+              <li><a href="/privacy-policy">Privacy Policy</a></li>
+              <li>
+                <a
+                  href="https://ticket.ghosxt.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Client Portal</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://calendly.com/ulises-ghosxt"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Free IT Assessment</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-column-title">Connect</h3>
+            <ul class="footer-links footer-social-links">
+              <li>
+                <a
+                  href="https://www.linkedin.com/company/ghosxt/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.063 2.063 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                  LinkedIn</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.facebook.com/GhosxtTech"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg>
+                  Facebook</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/ghosxttech/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+                  Instagram</a
+                >
+              </li>
+              <li>
+                <a href="mailto:sales@ghosxt.com"
+                  ><i class="fi fi-rs-envelope" aria-hidden="true"></i>
+                  sales@ghosxt.com</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <div class="footer-bottom">
+          <p class="footer-copyright">
+            &copy; 2026 Ghosxt. All rights reserved. Built by an engineer from the federal contracting world.
+          </p>
+          <div class="footer-bottom-links">
+            <a href="/privacy-policy">Privacy Policy</a>
+            <span aria-hidden="true">&middot;</span>
+            <a href="/support">Support</a>
+            <span aria-hidden="true">&middot;</span>
+            <a
+              href="https://ticket.ghosxt.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Client Portal</a
+            >
+          </div>
+        </div>
+
+        <div class="service-areas-footer">
+          <h3>Service Areas</h3>
+          <ul>
+            <li><a href="/salinas">Salinas</a></li>
+            <li><a href="/monterey">Monterey</a></li>
+            <li><a href="/watsonville">Watsonville</a></li>
+            <li><a href="/hollister">Hollister</a></li>
+            <li><a href="/santa-cruz">Santa Cruz</a></li>
+            <li><a href="/gilroy">Gilroy</a></li>
+            <li><a href="/san-jose">San Jose</a></li>
+            <li><a href="/pacific-grove">Pacific Grove</a></li>
+            <li><a href="/carmel">Carmel</a></li>
+            <li><a href="/seaside">Seaside</a></li>
+            <li><a href="/marina">Marina</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="../assets/js/main.min.js?v=2026-09-10a" defer></script>
+    <!-- ghosxt:mobile-cta-bar -->
+    <div class="mobile-cta-bar" aria-label="Quick contact">
+      <a class="mcta-primary" href="tel:+18312040501">Call (831) 204-0501</a>
+      <a class="mcta-secondary" href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer">Book free assessment</a>
+    </div>
+  </body>
+</html>

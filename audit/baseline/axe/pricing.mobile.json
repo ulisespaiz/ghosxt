@@ -1,0 +1,109 @@
+{
+  "url": "https://ghosxt.com/pricing",
+  "viewport": "mobile",
+  "scannedAt": "2026-10-25T02:18:09.904Z",
+  "httpStatus": 200,
+  "violations": [
+    {
+      "id": "aria-prohibited-attr",
+      "impact": "serious",
+      "help": "Elements must only use permitted ARIA attributes",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/aria-prohibited-attr?application=playwright",
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-7.1.1"
+      ],
+      "nodeCount": 78,
+      "sampleTargets": [
+        "tr:nth-child(2) > .check-cell:nth-child(2) > .fi-rs-check-circle.check-yes[aria-label=\"Included\"]",
+        "tr:nth-child(2) > .plan-col-featured.check-cell > .fi-rs-check-circle.check-yes[aria-label=\"Included\"]",
+        "tr:nth-child(2) > .check-cell:nth-child(4) > .fi-rs-check-circle.check-yes[aria-label=\"Included\"]"
+      ],
+      "sampleHtml": "<i class=\"fi fi-rs-check-circle check-yes\" aria-label=\"Included\"></i>"
+    },
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "nodeCount": 16,
+      "sampleTargets": [
+        "#calcCard > .calc-card-header > .calc-card-note",
+        ".stepper-label",
+        ".tier-option[data-tier=\"essential\"] > .tier-option-inner > .tier-option-top > .tier-option-info > .tier-option-price > em"
+      ],
+      "sampleHtml": "<span class=\"calc-card-note\">min. 5</span>"
+    },
+    {
+      "id": "label-content-name-mismatch",
+      "impact": "serious",
+      "help": "Elements must have their visible text as part of their accessible name",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/label-content-name-mismatch?application=playwright",
+      "tags": [
+        "cat.semantics",
+        "wcag21a",
+        "wcag253",
+        "EN-301-549",
+        "EN-9.2.5.3",
+        "RGAAv4",
+        "RGAA-6.1.5"
+      ],
+      "nodeCount": 6,
+      "sampleTargets": [
+        ".pricing-hero-btn-primary",
+        ".pricing-hero-btn-secondary",
+        ".plan-cta-cell:nth-child(2) > .plan-cta-btn-outline.plan-cta-btn[target=\"_blank\"]"
+      ],
+      "sampleHtml": "<a class=\"pricing-hero-btn-primary\" href=\"https://calendly.com/ulises-ghosxt\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"Book a free call with Ghosxt\">"
+    },
+    {
+      "id": "region",
+      "impact": "moderate",
+      "help": "All page content should be contained by landmarks",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/region?application=playwright",
+      "tags": [
+        "cat.keyboard",
+        "best-practice",
+        "RGAAv4",
+        "RGAA-9.2.1"
+      ],
+      "nodeCount": 2,
+      "sampleTargets": [
+        ".cookie-text",
+        ".mobile-cta-bar"
+      ],
+      "sampleHtml": "<div class=\"cookie-text\">"
+    }
+  ],
+  "passesCount": 54,
+  "incomplete": [
+    {
+      "id": "aria-prohibited-attr",
+      "impact": "serious",
+      "nodeCount": 2
+    },
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "nodeCount": 5
+    }
+  ],
+  "inapplicableCount": 37
+}

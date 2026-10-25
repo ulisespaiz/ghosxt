@@ -128,6 +128,22 @@ html {
   animation: animateGrain 8s steps(10) infinite;
 }
 
+/* The grain overlays above are decoration. They are position: fixed and 300
+   percent wide, so without this they sit over every tap and click on content
+   that is not stacked above them (the contact page's booking button and
+   details box, the support callout on the about and contact pages). */
+.hero-section:after,
+.about-hero-section:after,
+.contact-section:after,
+.services-hero-section:after,
+.privacy-hero-section:after,
+.calc-section:after,
+.webdev-hero-section:after,
+.ctpat-hero-section:after,
+.cares-hero-section:after {
+  pointer-events: none;
+}
+
 @keyframes animateGrain {
   0%,
   100% {
@@ -521,6 +537,12 @@ canvas {
   gap: 0.5rem;
 }
 
+/* The privacy link sits inside the one-sentence message. */
+.cookie-message .cookie-link {
+  padding: 0;
+  min-height: 0;
+}
+
 .cookie-message {
   font-family: var(--font-family-2);
   font-size: 0.95rem;
@@ -586,7 +608,8 @@ canvas {
 /* Lift above the cookie banner via `translate`, which composes
    independently of the `transform` used for the show/hide and hover/active
    states below, and never touches `bottom` (no layout-shift trigger). */
-.cookie-banner.visible ~ .scroll-to-top {
+.cookie-banner.visible ~ .scroll-to-top,
+body:has(.cookie-banner.visible) .scroll-to-top {
   translate: 0 -108px;
 }
 
@@ -972,7 +995,7 @@ body:has(.top-banner.hidden) .hero-section {
   box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.3);
 }
 
-/* Hide the redundant "Book a Call" button in the header — the phone number
+/* Hide the redundant "Book a Call" button in the header: the phone number
    takes its place. */
 .navbar-buttons .btn-demo {
   display: none;
@@ -1394,10 +1417,25 @@ footer {
 
 /* ------ RESPONSIVE COOKIE BANNER ------ */
 @media (max-width: 968px) {
+  /* One sentence plus two buttons: about 100 px at 390 px instead of a
+     third of the first screen (AUDIT.md M-01). */
+  .cookie-banner {
+    padding: 0.75rem 16px;
+  }
+
   .cookie-banner-container {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 1.5rem;
+    align-items: stretch;
+    gap: 0.6rem;
+  }
+
+  .cookie-icon {
+    display: none;
+  }
+
+  .cookie-message {
+    font-size: 0.875rem;
+    line-height: 1.4;
   }
 
   .cookie-actions {
@@ -1406,97 +1444,18 @@ footer {
 
   .cookie-btn {
     flex: 1;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
   }
 }
 
 @media (max-width: 640px) {
-  .cookie-banner {
-    padding: 1.25rem 16px;
-  }
-
-  /* Tighten the stacked content/actions layout (see the 968px rule above)
-     so the banner doesn't run to a third of a small mobile viewport;
-     text, colors and fonts are unchanged, only the surrounding spacing. */
-  .cookie-banner-container {
-    gap: 0.75rem;
-  }
-
-  .cookie-content {
-    gap: 0.75rem;
-  }
-
-  .cookie-text {
-    gap: 0.3rem;
-  }
-
-  .cookie-icon {
-    width: 36px;
-    height: 36px;
-  }
-
-  .cookie-icon i {
-    font-size: 1.125rem;
-  }
-
-  .cookie-message {
-    font-size: 0.875rem;
-    line-height: 1.4;
-  }
-
-  .cookie-link {
-    font-size: 0.8rem;
-  }
-
-  .cookie-btn {
-    padding: 0.5rem 1rem;
-    font-size: 0.875rem;
-  }
-
   .cookie-btn-primary {
     box-shadow: 1px 1px 0 0 rgba(0, 0, 0, 0.3);
   }
 
   .cookie-btn-primary:hover {
     box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.3);
-  }
-}
-
-@media (max-width: 480px) {
-  .cookie-banner {
-    padding: 0.4rem 16px;
-  }
-
-  .cookie-banner-container {
-    gap: 0.2rem;
-  }
-
-  .cookie-content {
-    gap: 0.5rem;
-  }
-
-  .cookie-text {
-    gap: 0.1rem;
-  }
-
-  /* Decorative only (not the brand mark): dropped at this width so the
-     message gets the full row's width instead of sharing it with a
-     40px-wide circle, which keeps the wrap to fewer lines. */
-  .cookie-icon {
-    display: none;
-  }
-
-  .cookie-message {
-    font-size: 0.8rem;
-    line-height: 1.2;
-  }
-
-  .cookie-actions {
-    gap: 0.5rem;
-  }
-
-  .cookie-btn {
-    padding: 0.45rem 0.875rem;
-    font-size: 0.8rem;
   }
 }
 
@@ -1779,7 +1738,7 @@ footer {
 }
 
 /* =============================================
-   GHOSXT — FOOTER UPGRADE STYLES
+   GHOSXT: FOOTER UPGRADE STYLES
    Add to assets/css/main.css (or import separately)
    ============================================= */
 
@@ -2287,11 +2246,11 @@ summary:focus-visible,
        bottom-inset padding (env(safe-area-inset-bottom)) is added
        separately below so it isn't double-counted. */
     --mobile-cta-bar-height: 61px;
-    /* Worst-case rendered height of the compacted mobile cookie banner
-       (task target: <=130px at 390px with real fonts) plus a small
-       clearance gap, used below to keep the scroll-to-top button clear of
-       the banner without a font-dependent JS measurement. */
-    --mobile-cookie-banner-clearance: 146px;
+    /* Worst-case rendered height of the one-sentence mobile cookie banner
+       (118 px at 390 px with real fonts) plus a small clearance gap,
+       used below to keep the scroll-to-top button clear of the banner
+       without a font-dependent JS measurement. */
+    --mobile-cookie-banner-clearance: 128px;
   }
   .mobile-cta-bar {
     display: flex;
@@ -2332,7 +2291,9 @@ summary:focus-visible,
     color: #111;
     border: 1px solid rgba(0, 0, 0, 0.08);
   }
-  /* Lift the existing scroll-to-top so it doesn't sit under the bar */
+  /* Lift the existing scroll-to-top so it doesn't sit under the bar. The
+     button comes before the banner in source on every page, so the sibling
+     selector below never matched; the :has() form is the one that works. */
   .scroll-to-top {
     bottom: 76px !important;
   }
@@ -2340,8 +2301,14 @@ summary:focus-visible,
      at this width .scroll-to-top's own baseline bottom is 76px (not the
      desktop 32px) and the banner sits above the mobile CTA bar, so derive
      the lift from the two mobile variables instead of a fixed constant. */
-  .cookie-banner.visible ~ .scroll-to-top {
+  .cookie-banner.visible ~ .scroll-to-top,
+  body:has(.cookie-banner.visible) .scroll-to-top {
     translate: 0 calc(-1 * (var(--mobile-cta-bar-height) + var(--mobile-cookie-banner-clearance)));
+  }
+  /* The contact page has no CTA bar, so the banner sits flush and the
+     button only needs the banner's own clearance. */
+  body.no-mobile-cta-bar:has(.cookie-banner.visible) .scroll-to-top {
+    translate: 0 calc(-1 * var(--mobile-cookie-banner-clearance));
   }
   /* Avoid the bar covering the page footer / form action area */
   body {
@@ -2380,7 +2347,7 @@ body.no-mobile-cta-bar .mobile-cta-bar {
 
 /* The header phone button is desktop-only (>968px). On mobile and tablet the
    sticky bottom bar carries Call + Book, so the header number inherits the
-   default .navbar-buttons .navbar-btn hide at ≤968px — no duplicate CTA. */
+   default .navbar-buttons .navbar-btn hide at ≤968px, no duplicate CTA. */
 
 /* Shared by every page that carries the at-a-glance block (root pages and
    city pages alike); moved here from locations.css so the seven root pages
@@ -2435,5 +2402,173 @@ body.no-mobile-cta-bar .mobile-cta-bar {
   }
   .key-facts__list dd {
     margin: 0 0 0.7rem;
+  }
+}
+
+/* ------ MOTION: shared micro-interactions for the inner pages ------
+   Opacity and transform only, so nothing shifts layout (CLS stays 0). Every
+   rule here is neutralised by the reduced-motion block above (durations go to
+   0.01 ms) and main.js skips the scroll reveal entirely under reduced motion.
+   The home page keeps its own animations and is excluded from the reveal. */
+
+/* 1. Scroll reveal. main.js adds .reveal only to blocks that start below the
+   first screen, then .is-visible as each enters the viewport, and removes both
+   classes once the transition ends so the block returns to its own styles.
+   Without JS nothing is ever hidden. Siblings get a short stagger from
+   main.js. Uses the translate property, not transform, so a block's own
+   transform is untouched. The html prefix outranks the card rules in the
+   page stylesheets (which set their own transition) for the reveal's duration. */
+html .reveal {
+  opacity: 0;
+  translate: 0 14px;
+  transition:
+    opacity 0.5s ease,
+    translate 0.5s ease;
+}
+
+html .reveal.is-visible {
+  opacity: 1;
+  translate: none;
+}
+
+/* 2. FAQ markers rotate while main.js animates the answer height. */
+.location-faq summary::after,
+.faq-item summary::after {
+  transition: transform 0.2s ease;
+}
+
+/* 3. One hover and press language for every button family. Buttons that
+   already lift on hover (header, mobile menu, location, cookie primary) keep
+   their own lift; the press state is shared by all of them so taps on a phone
+   give feedback. */
+.navbar-btn,
+.mobile-btn,
+.footer-cta-btn,
+.footer-subscribe-btn,
+.cookie-btn,
+.banner-btn,
+.button-primary,
+.button-secondary,
+.cta-primary-btn,
+.location-btn-primary,
+.location-btn-secondary,
+.blog-card-cta,
+.portfolio-card-btn,
+.mobile-cta-bar a {
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    background-color 0.15s ease,
+    color 0.15s ease,
+    border-color 0.15s ease,
+    opacity 0.15s ease;
+}
+
+.footer-cta-btn:hover,
+.footer-subscribe-btn:hover,
+.button-primary:hover,
+.button-secondary:hover,
+.cta-primary-btn:hover,
+.blog-card-cta:hover,
+.portfolio-card-btn:hover {
+  transform: translateY(-1px);
+}
+
+html .navbar-btn:active,
+html .mobile-btn:active,
+html .footer-cta-btn:active,
+html .footer-subscribe-btn:active,
+html .cookie-btn:active,
+html .banner-btn:active,
+html .button-primary:active,
+html .button-secondary:active,
+html .cta-primary-btn:active,
+html .location-btn-primary:active,
+html .location-btn-secondary:active,
+html .blog-card-cta:active,
+html .portfolio-card-btn:active,
+html .mobile-cta-bar a:active {
+  transform: translateY(1px);
+  transition-duration: 0.05s;
+}
+
+/* Cards already lift on hover; this is the matching press state for taps.
+   Scoped to the inner pages (main.js sets body.motion-inner there): the home
+   page has its own service cards with no shadow. */
+.motion-inner .service-card:active,
+.motion-inner .icon-card:active,
+.motion-inner .scenario-card:active,
+.motion-inner .blog-card:active {
+  transform: translate(1px, 1px);
+  box-shadow: 2px 2px 0 0 var(--ghosxt-black);
+}
+
+/* 4. Nav underline slides in on hover and focus; the active page keeps its
+   underline from the rule above, now drawn by the same element. */
+.navbar-link {
+  position: relative;
+}
+
+.navbar-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  height: 2px;
+  background: var(--ghosxt-red-0);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.2s ease;
+}
+
+.navbar-link:hover::after,
+.navbar-link:focus-visible::after,
+.navbar-link.active::after {
+  transform: scaleX(1);
+}
+
+/* 5. Reading progress on blog posts: a 3 px line along the bottom edge of
+   the sticky navbar, scaled by main.js as the article scrolls. */
+.read-progress {
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 3px;
+  background: var(--ghosxt-red-0);
+  transform: scaleX(0);
+  transform-origin: left;
+  pointer-events: none;
+}
+
+/* 6. Lazy images fade in instead of popping. main.js adds .img-fade only to
+   images that are still loading, so cached images never flash. */
+img.img-fade {
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+img.img-fade.is-loaded {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html .reveal,
+  img.img-fade {
+    opacity: 1;
+    translate: none;
+  }
+}
+
+@media print {
+  html .reveal,
+  img.img-fade {
+    opacity: 1;
+    translate: none;
+  }
+
+  .read-progress {
+    display: none;
   }
 }

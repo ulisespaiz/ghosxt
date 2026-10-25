@@ -1,0 +1,65 @@
+{
+  "url": "https://ghosxt.com/ctpat",
+  "viewport": "mobile",
+  "scannedAt": "2026-10-25T02:16:08.424Z",
+  "httpStatus": 200,
+  "violations": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "nodeCount": 3,
+      "sampleTargets": [
+        ".ctpat-check-pass.ctpat-check-row:nth-child(1) > .ctpat-check-info > .ctpat-status-pass.ctpat-check-status",
+        ".ctpat-check-pass.ctpat-check-row:nth-child(2) > .ctpat-check-info > .ctpat-status-pass.ctpat-check-status",
+        ".ctpat-check-pass.ctpat-check-row:nth-child(3) > .ctpat-check-info > .ctpat-status-pass.ctpat-check-status"
+      ],
+      "sampleHtml": "<span class=\"ctpat-check-status ctpat-status-pass\">Compliant</span>"
+    },
+    {
+      "id": "region",
+      "impact": "moderate",
+      "help": "All page content should be contained by landmarks",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/region?application=playwright",
+      "tags": [
+        "cat.keyboard",
+        "best-practice",
+        "RGAAv4",
+        "RGAA-9.2.1"
+      ],
+      "nodeCount": 2,
+      "sampleTargets": [
+        ".cookie-text",
+        ".mobile-cta-bar"
+      ],
+      "sampleHtml": "<div class=\"cookie-text\">"
+    }
+  ],
+  "passesCount": 38,
+  "incomplete": [
+    {
+      "id": "aria-prohibited-attr",
+      "impact": "serious",
+      "nodeCount": 1
+    },
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "nodeCount": 1
+    }
+  ],
+  "inapplicableCount": 53
+}

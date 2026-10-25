@@ -1,0 +1,290 @@
+[
+  {
+    "url": "https://ghosxt.com/",
+    "slug": "home",
+    "viewport": "mobile",
+    "file": "home.mobile.png",
+    "width": 390,
+    "height": 844,
+    "bytes": 206600
+  },
+  {
+    "url": "https://ghosxt.com/pricing",
+    "slug": "pricing",
+    "viewport": "mobile",
+    "file": "pricing.mobile.png",
+    "width": 390,
+    "height": 844,
+    "bytes": 75369
+  },
+  {
+    "url": "https://ghosxt.com/contact",
+    "slug": "contact",
+    "viewport": "mobile",
+    "file": "contact.mobile.png",
+    "width": 390,
+    "height": 844,
+    "bytes": 194656
+  },
+  {
+    "url": "https://ghosxt.com/services",
+    "slug": "services",
+    "viewport": "mobile",
+    "file": "services.mobile.png",
+    "width": 390,
+    "height": 844,
+    "bytes": 72958
+  },
+  {
+    "url": "https://ghosxt.com/managed-it-services",
+    "slug": "managed-it-services",
+    "viewport": "mobile",
+    "file": "managed-it-services.mobile.png",
+    "width": 390,
+    "height": 844,
+    "bytes": 83475
+  },
+  {
+    "url": "https://ghosxt.com/cybersecurity",
+    "slug": "cybersecurity",
+    "viewport": "mobile",
+    "file": "cybersecurity.mobile.png",
+    "width": 390,
+    "height": 844,
+    "bytes": 79165
+  },
+  {
+    "url": "https://ghosxt.com/cmmc-compliance",
+    "slug": "cmmc-compliance",
+    "viewport": "mobile",
+    "file": "cmmc-compliance.mobile.png",
+    "width": 390,
+    "height": 844,
+    "bytes": 78449
+  },
+  {
+    "url": "https://ghosxt.com/hipaa-it-compliance",
+    "slug": "hipaa-it-compliance",
+    "viewport": "mobile",
+    "file": "hipaa-it-compliance.mobile.png",
+    "width": 390,
+    "height": 844,
+    "bytes": 79782
+  },
+  {
+    "url": "https://ghosxt.com/ctpat",
+    "slug": "ctpat",
+    "viewport": "mobile",
+    "file": "ctpat.mobile.png",
+    "width": 390,
+    "height": 844,
+    "bytes": 240934
+  },
+  {
+    "url": "https://ghosxt.com/salinas",
+    "slug": "salinas",
+    "viewport": "mobile",
+    "file": "salinas.mobile.png",
+    "width": 390,
+    "height": 844,
+    "bytes": 76177
+  },
+  {
+    "url": "https://ghosxt.com/monterey-county",
+    "slug": "monterey-county",
+    "viewport": "mobile",
+    "file": "monterey-county.mobile.png",
+    "width": 390,
+    "height": 844,
+    "bytes": 76488
+  },
+  {
+    "url": "https://ghosxt.com/cybersecurity-monterey",
+    "slug": "cybersecurity-monterey",
+    "viewport": "mobile",
+    "file": "cybersecurity-monterey.mobile.png",
+    "width": 390,
+    "height": 844,
+    "bytes": 83151
+  },
+  {
+    "url": "https://ghosxt.com/it-help-aptos",
+    "slug": "it-help-aptos",
+    "viewport": "mobile",
+    "file": "it-help-aptos.mobile.png",
+    "width": 390,
+    "height": 844,
+    "bytes": 76538
+  },
+  {
+    "url": "https://ghosxt.com/about",
+    "slug": "about",
+    "viewport": "mobile",
+    "file": "about.mobile.png",
+    "width": 390,
+    "height": 844,
+    "bytes": 241258
+  },
+  {
+    "url": "https://ghosxt.com/blog/",
+    "slug": "blog",
+    "viewport": "mobile",
+    "file": "blog.mobile.png",
+    "width": 390,
+    "height": 844,
+    "bytes": 58695
+  },
+  {
+    "url": "https://ghosxt.com/blog/password-expiration-policy-nist-small-business-2026",
+    "slug": "blog__password-expiration-policy-nist-small-business-2026",
+    "viewport": "mobile",
+    "file": "blog__password-expiration-policy-nist-small-business-2026.mobile.png",
+    "width": 390,
+    "height": 844,
+    "bytes": 75857
+  },
+  {
+    "url": "https://ghosxt.com/",
+    "slug": "home",
+    "viewport": "desktop",
+    "file": "home.desktop.png",
+    "width": 1366,
+    "height": 768,
+    "bytes": 555967
+  },
+  {
+    "url": "https://ghosxt.com/pricing",
+    "slug": "pricing",
+    "viewport": "desktop",
+    "file": "pricing.desktop.png",
+    "width": 1366,
+    "height": 768,
+    "bytes": 116192
+  },
+  {
+    "url": "https://ghosxt.com/contact",
+    "slug": "contact",
+    "viewport": "desktop",
+    "file": "contact.desktop.png",
+    "width": 1366,
+    "height": 768,
+    "bytes": 428693
+  },
+  {
+    "url": "https://ghosxt.com/services",
+    "slug": "services",
+    "viewport": "desktop",
+    "file": "services.desktop.png",
+    "width": 1366,
+    "height": 768,
+    "bytes": 103189
+  },
+  {
+    "url": "https://ghosxt.com/managed-it-services",
+    "slug": "managed-it-services",
+    "viewport": "desktop",
+    "file": "managed-it-services.desktop.png",
+    "width": 1366,
+    "height": 768,
+    "bytes": 136307
+  },
+  {
+    "url": "https://ghosxt.com/cybersecurity",
+    "slug": "cybersecurity",
+    "viewport": "desktop",
+    "file": "cybersecurity.desktop.png",
+    "width": 1366,
+    "height": 768,
+    "bytes": 124160
+  },
+  {
+    "url": "https://ghosxt.com/cmmc-compliance",
+    "slug": "cmmc-compliance",
+    "viewport": "desktop",
+    "file": "cmmc-compliance.desktop.png",
+    "width": 1366,
+    "height": 768,
+    "bytes": 113728
+  },
+  {
+    "url": "https://ghosxt.com/hipaa-it-compliance",
+    "slug": "hipaa-it-compliance",
+    "viewport": "desktop",
+    "file": "hipaa-it-compliance.desktop.png",
+    "width": 1366,
+    "height": 768,
+    "bytes": 108693
+  },
+  {
+    "url": "https://ghosxt.com/ctpat",
+    "slug": "ctpat",
+    "viewport": "desktop",
+    "file": "ctpat.desktop.png",
+    "width": 1366,
+    "height": 768,
+    "bytes": 609534
+  },
+  {
+    "url": "https://ghosxt.com/salinas",
+    "slug": "salinas",
+    "viewport": "desktop",
+    "file": "salinas.desktop.png",
+    "width": 1366,
+    "height": 768,
+    "bytes": 113352
+  },
+  {
+    "url": "https://ghosxt.com/monterey-county",
+    "slug": "monterey-county",
+    "viewport": "desktop",
+    "file": "monterey-county.desktop.png",
+    "width": 1366,
+    "height": 768,
+    "bytes": 112534
+  },
+  {
+    "url": "https://ghosxt.com/cybersecurity-monterey",
+    "slug": "cybersecurity-monterey",
+    "viewport": "desktop",
+    "file": "cybersecurity-monterey.desktop.png",
+    "width": 1366,
+    "height": 768,
+    "bytes": 114576
+  },
+  {
+    "url": "https://ghosxt.com/it-help-aptos",
+    "slug": "it-help-aptos",
+    "viewport": "desktop",
+    "file": "it-help-aptos.desktop.png",
+    "width": 1366,
+    "height": 768,
+    "bytes": 101575
+  },
+  {
+    "url": "https://ghosxt.com/about",
+    "slug": "about",
+    "viewport": "desktop",
+    "file": "about.desktop.png",
+    "width": 1366,
+    "height": 768,
+    "bytes": 605096
+  },
+  {
+    "url": "https://ghosxt.com/blog/",
+    "slug": "blog",
+    "viewport": "desktop",
+    "file": "blog.desktop.png",
+    "width": 1366,
+    "height": 768,
+    "bytes": 93575
+  },
+  {
+    "url": "https://ghosxt.com/blog/password-expiration-policy-nist-small-business-2026",
+    "slug": "blog__password-expiration-policy-nist-small-business-2026",
+    "viewport": "desktop",
+    "file": "blog__password-expiration-policy-nist-small-business-2026.desktop.png",
+    "width": 1366,
+    "height": 768,
+    "bytes": 109790
+  }
+]

@@ -1,0 +1,309 @@
+# Site quality gates for ghosxt.com.
+#
+# Jobs (all run on pull requests to main; the first three also run on push to main):
+#   static-checks   title and meta length, CSP hash drift, em dashes, [VERIFY] markers,
+#                   dental targeting, all gated as "no worse than the base branch" where
+#                   main is not yet clean.
+#   html-validate   html-validate over every served page with .htmlvalidate.json.
+#   links           local crawl of the built site: broken internal links, sitemap entries
+#                   that do not return 200, orphans, redirect chains.
+#   lighthouse      Lighthouse CI (mobile, then desktop) against the local static server
+#                   with per-page budgets from audit/ci/lighthouserc.<ff>.json. Accessibility,
+#                   best practices, SEO and CLS fail the job; performance score, LCP and TBT
+#                   are warnings (they vary with the runner's CPU) and show in the job log.
+#   seo-checks      repo-level title, meta, JSON-LD, FAQ, entity and marker checks
+#                   (audit/tools/check-seo-meta.mjs); informational (continue-on-error)
+#                   until the AUDIT.md B and C pull requests land, then promoted to a gate.
+#   visual-diff     Playwright screenshots of every page at mobile and desktop widths for
+#                   the base branch and the PR head, compared with pixelmatch. Any change
+#                   fails unless the PR carries the label "visual-change-approved".
+#
+# Updating baselines and budgets: see audit/baseline/README.md. Budgets are only loosened
+# in a PR that explains why; the screenshot baseline is always the base branch, so there is
+# nothing to update by hand, only the approval label to apply.
+
+name: Site quality
+
+on:
+  pull_request:
+    # Programme branches stack on seo/audit-2026-10 until it merges, so PRs
+    # that target a seo/ branch get the same gates as PRs that target main.
+    # labeled and unlabeled are included because the screenshot gate reads
+    # the visual-change-approved label from the triggering event: applying
+    # the label after a run started must start a new run.
+    types: [opened, synchronize, reopened, labeled, unlabeled]
+    branches: [main, "seo/**"]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  pull-requests: read
+
+env:
+  NODE_VERSION: "22"
+  SITE_PORT: "8787"
+
+jobs:
+  static-checks:
+    name: Static checks
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Resolve base ref
+        id: base
+        run: |
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            echo "sha=${{ github.event.pull_request.base.sha }}" >> "$GITHUB_OUTPUT"
+          else
+            echo "sha=$(git rev-parse HEAD~1 2>/dev/null || git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+          fi
+      - name: CSP hash allowlist matches inline scripts
+        run: python3 scripts/compute-csp-hashes.py --check
+      - name: Title and meta length (no new violations versus base)
+        run: |
+          set -e
+          head_count=$(python3 scripts/check-title-meta-length.py | grep -cE '^\s+\S+\.html \[' || true)
+          git worktree add -q /tmp/base-tree "${{ steps.base.outputs.sha }}"
+          base_count=$(cd /tmp/base-tree && python3 /tmp/base-tree/scripts/check-title-meta-length.py 2>/dev/null | grep -cE '^\s+\S+\.html \[' || true)
+          echo "title/meta violations: base=$base_count head=$head_count"
+          python3 scripts/check-title-meta-length.py || true
+          if [ "$head_count" -gt "$base_count" ]; then
+            echo "::error::New title or meta description length violations introduced"; exit 1
+          fi
+      - name: No em dashes in added lines
+        run: |
+          # Only lines this branch adds, in source and copy files; generated baseline
+          # output (Lighthouse and axe JSON, rendered snapshots) is excluded.
+          added=$(git diff --unified=0 "${{ steps.base.outputs.sha }}" HEAD -- \
+            '*.html' '*.md' '*.txt' '*.xml' '*.css' '*.js' '*.py' '*.mjs' '*.json' '*.yml' \
+            ':(exclude)audit/baseline/**' ':(exclude)audit/claims.md' ':(exclude)audit/package-lock.json' \
+            | grep -E '^\+' | grep -vE '^\+\+\+' | grep -n $'\xe2\x80\x94' || true)
+          if [ -n "$added" ]; then
+            echo "::error::em dash found in added lines"; echo "$added" | head -20; exit 1
+          fi
+          echo "no em dash in added lines"
+      - name: No new [VERIFY] markers in served HTML (count versus base)
+        run: |
+          count() { grep -o '\[VERIFY' "$1"/*.html "$1"/blog/*.html "$1"/case-studies/*.html 2>/dev/null | wc -l; }
+          head_n=$(count .); base_n=$(count /tmp/base-tree)
+          echo "[VERIFY] markers: base=$base_n head=$head_n"
+          if [ "$head_n" -gt "$base_n" ]; then echo "::error::New [VERIFY] markers would ship in served HTML"; exit 1; fi
+      - name: No dental targeting in changed pages
+        run: |
+          changed=$(git diff --name-only "${{ steps.base.outputs.sha }}" HEAD -- '*.html' '*.txt' || true)
+          bad=0
+          for f in $changed; do
+            [ -f "$f" ] || continue
+            if grep -niwE 'dental|dentist|dentists' "$f" >/dev/null; then echo "::error file=$f::dental targeting"; bad=1; fi
+          done
+          exit $bad
+
+  html-validate:
+    name: HTML validation
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+          cache-dependency-path: audit/package-lock.json
+      - run: npm ci --no-audit --no-fund
+        working-directory: audit
+      - name: Validate every served page
+        run: |
+          cd audit
+          npx html-validate --config ../.htmlvalidate.json --formatter stylish ../*.html ../blog/*.html ../case-studies/*.html | tee /tmp/html-validate.txt || status=$?
+          { echo '## html-validate'; echo; tail -n 5 /tmp/html-validate.txt; } >> "$GITHUB_STEP_SUMMARY"
+          exit ${status:-0}
+
+  links:
+    name: Internal links and crawl
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+          cache-dependency-path: audit/package-lock.json
+      - run: npm ci --no-audit --no-fund
+        working-directory: audit
+      - name: Start static server
+        run: |
+          node audit/tools/static-server.mjs --port ${{ env.SITE_PORT }} --quiet > /tmp/server.log 2>&1 &
+          for i in $(seq 1 30); do curl -sf "http://127.0.0.1:${{ env.SITE_PORT }}/" >/dev/null && break; sleep 1; done
+      - name: Crawl the built site
+        run: |
+          cd audit
+          node tools/crawl-live.mjs --origin "http://127.0.0.1:${{ env.SITE_PORT }}" --no-external --out /tmp/crawl
+      - name: Gate on crawl results
+        run: |
+          set -o pipefail
+          node audit/tools/ci-crawl-gate.mjs /tmp/crawl --sitemap sitemap.xml | tee -a "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: crawl-report
+          path: /tmp/crawl/report.md
+
+  seo-checks:
+    name: SEO and structured-data checks (informational until AUDIT.md B and C land)
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+          cache-dependency-path: audit/package-lock.json
+      - run: npm ci --no-audit --no-fund
+        working-directory: audit
+      - name: Run repo-level checks
+        run: |
+          node audit/tools/check-seo-meta.mjs --json /tmp/seo-check.json | tee /tmp/seo-check.md || status=$?
+          { echo '## SEO and structured-data checks'; echo; sed -n '/^## Summary/,/^## [a-z]/p' /tmp/seo-check.md | grep -E '^- ' | head -40; } >> "$GITHUB_STEP_SUMMARY"
+          exit ${status:-0}
+
+  lighthouse:
+    name: Lighthouse CI (${{ matrix.form_factor }})
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        form_factor: [mobile, desktop]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+      - name: Start static server
+        run: |
+          node audit/tools/static-server.mjs --port ${{ env.SITE_PORT }} --quiet > /tmp/server.log 2>&1 &
+          for i in $(seq 1 30); do curl -sf "http://127.0.0.1:${{ env.SITE_PORT }}/" >/dev/null && break; sleep 1; done
+      - name: Lighthouse CI with budgets
+        env:
+          CHROME_PATH: /usr/bin/google-chrome
+        run: npx --yes @lhci/cli@0.15.1 autorun --config=audit/ci/lighthouserc.${{ matrix.form_factor }}.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: lhci-${{ matrix.form_factor }}
+          path: lhci-${{ matrix.form_factor }}
+
+  visual-diff:
+    name: Screenshot diff versus base
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: head
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.base.sha }}
+          path: base
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+          cache-dependency-path: head/audit/package-lock.json
+      - run: npm ci --no-audit --no-fund
+        working-directory: head/audit
+      - name: Start both servers
+        run: |
+          node head/audit/tools/static-server.mjs --root "$PWD/head" --port 8787 --quiet > /tmp/head.log 2>&1 &
+          node head/audit/tools/static-server.mjs --root "$PWD/base" --port 8788 --quiet > /tmp/base.log 2>&1 &
+          for p in 8787 8788; do for i in $(seq 1 30); do curl -sf "http://127.0.0.1:$p/" >/dev/null && break; sleep 1; done; done
+      - name: Build URL lists from each sitemap
+        run: |
+          grep -o '<loc>[^<]*</loc>' head/sitemap.xml | sed 's/<\/\?loc>//g' > /tmp/urls-head.txt
+          grep -o '<loc>[^<]*</loc>' base/sitemap.xml | sed 's/<\/\?loc>//g' > /tmp/urls-base.txt
+          wc -l /tmp/urls-head.txt /tmp/urls-base.txt
+      - name: Screenshot base and head (mobile first, then desktop)
+        env:
+          CHROME_PATH: /usr/bin/google-chrome
+        run: |
+          cd head/audit
+          node tools/screenshots.mjs --base http://127.0.0.1:8788 --urls /tmp/urls-base.txt --out /tmp/shots-base --hide .cookie-banner --concurrency 4
+          node tools/screenshots.mjs --base http://127.0.0.1:8787 --urls /tmp/urls-head.txt --out /tmp/shots-head --hide .cookie-banner --concurrency 4
+      - name: Compare
+        id: diff
+        continue-on-error: true
+        run: node head/audit/tools/visual-diff.mjs --base /tmp/shots-base --head /tmp/shots-head --out /tmp/visual-diff
+      - name: Re-capture changed pages once (flake guard)
+        id: rediff
+        if: steps.diff.outcome == 'failure'
+        continue-on-error: true
+        env:
+          CHROME_PATH: /usr/bin/google-chrome
+        run: |
+          # A page that differs on the first pass is captured again on both servers.
+          # Only a difference that survives the second capture counts as a change.
+          node -e "const r=require('/tmp/visual-diff/report.json');for(const f of r.files)if(f.status==='changed'||f.status==='error')console.log(f.name)" > /tmp/changed-names.txt
+          if [ ! -s /tmp/changed-names.txt ]; then echo "nothing to re-capture (missing files cannot be retried)"; exit 1; fi
+          : > /tmp/urls-retry.txt
+          while read -r name; do
+            slug="${name%%.*}"
+            if [ "$slug" = "home" ]; then path="/"; elif [ "$slug" = "blog" ]; then path="/blog/"; else path="/${slug//__//}"; fi
+            echo "https://ghosxt.com$path" >> /tmp/urls-retry.txt
+          done < /tmp/changed-names.txt
+          sort -u /tmp/urls-retry.txt -o /tmp/urls-retry.txt
+          echo "re-capturing:"; cat /tmp/urls-retry.txt
+          cd head/audit
+          node tools/screenshots.mjs --base http://127.0.0.1:8788 --urls /tmp/urls-retry.txt --out /tmp/shots-base --hide .cookie-banner --concurrency 1 --wait-ms 1500 --force
+          node tools/screenshots.mjs --base http://127.0.0.1:8787 --urls /tmp/urls-retry.txt --out /tmp/shots-head --hide .cookie-banner --concurrency 1 --wait-ms 1500 --force
+          node tools/visual-diff.mjs --base /tmp/shots-base --head /tmp/shots-head --out /tmp/visual-diff --force
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: visual-diff-report
+          path: /tmp/visual-diff
+      - name: Summary
+        if: always()
+        run: |
+          { echo '## Screenshot diff'; echo; cat /tmp/visual-diff/report.md 2>/dev/null | head -80; } >> "$GITHUB_STEP_SUMMARY"
+      - name: Fail unless approved
+        if: steps.rediff.outcome == 'failure' && !contains(github.event.pull_request.labels.*.name, 'visual-change-approved')
+        run: |
+          echo "::error::Visual changes detected. Review the visual-diff-report artifact. If intended, the owner applies the 'visual-change-approved' label."
+          exit 1
+
+  external-links:
+    name: External links (weekly, informational)
+    if: github.event_name == 'workflow_dispatch' || github.event_name == 'schedule'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+      - run: npm ci --no-audit --no-fund
+        working-directory: audit
+      - name: Crawl production including external links
+        run: |
+          cd audit
+          node tools/crawl-live.mjs --origin https://ghosxt.com --out /tmp/crawl-live
+      - uses: actions/upload-artifact@v4
+        with:
+          name: crawl-live-report
+          path: /tmp/crawl-live/report.md
