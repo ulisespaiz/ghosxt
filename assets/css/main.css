@@ -2474,20 +2474,20 @@ html .reveal.is-visible {
   transform: translateY(-1px);
 }
 
-.navbar-btn:active,
-.mobile-btn:active,
-.footer-cta-btn:active,
-.footer-subscribe-btn:active,
-.cookie-btn:active,
-.banner-btn:active,
-.button-primary:active,
-.button-secondary:active,
-.cta-primary-btn:active,
-.location-btn-primary:active,
-.location-btn-secondary:active,
-.blog-card-cta:active,
-.portfolio-card-btn:active,
-.mobile-cta-bar a:active {
+html .navbar-btn:active,
+html .mobile-btn:active,
+html .footer-cta-btn:active,
+html .footer-subscribe-btn:active,
+html .cookie-btn:active,
+html .banner-btn:active,
+html .button-primary:active,
+html .button-secondary:active,
+html .cta-primary-btn:active,
+html .location-btn-primary:active,
+html .location-btn-secondary:active,
+html .blog-card-cta:active,
+html .portfolio-card-btn:active,
+html .mobile-cta-bar a:active {
   transform: translateY(1px);
   transition-duration: 0.05s;
 }

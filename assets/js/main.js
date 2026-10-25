@@ -336,9 +336,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 event.preventDefault();
                 if (running) return;
                 // Padding tweens with the height so the answer never jumps by
-                // its own padding at either end.
+                // its own padding at either end. The open state uses the
+                // answer's own resting opacity (the pricing FAQ rests at 0.82),
+                // so it never brightens past where it settles.
                 const cs = getComputedStyle(panel);
-                const open = { height: panel.offsetHeight + 'px', paddingTop: cs.paddingTop, paddingBottom: cs.paddingBottom, opacity: 1 };
+                const open = { height: panel.offsetHeight + 'px', paddingTop: cs.paddingTop, paddingBottom: cs.paddingBottom, opacity: cs.opacity };
                 const shut = { height: '0px', paddingTop: '0px', paddingBottom: '0px', opacity: 0 };
                 panel.style.overflow = 'hidden';
                 if (details.open) {
