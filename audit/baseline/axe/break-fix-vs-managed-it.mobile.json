@@ -1,0 +1,90 @@
+{
+  "url": "https://ghosxt.com/break-fix-vs-managed-it",
+  "viewport": "mobile",
+  "scannedAt": "2026-10-25T02:15:22.381Z",
+  "httpStatus": 200,
+  "violations": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "nodeCount": 25,
+      "sampleTargets": [
+        ".location-section:nth-child(5) > .container > .compare-table-wrap > table > caption",
+        ".location-section:nth-child(5) > .container > .compare-table-wrap > table > tbody > tr:nth-child(1) > th[scope=\"row\"]",
+        "tbody > tr:nth-child(1) > .col-managed"
+      ],
+      "sampleHtml": "<caption>How the two models compare on the factors that actually affect your business.</caption>"
+    },
+    {
+      "id": "region",
+      "impact": "moderate",
+      "help": "All page content should be contained by landmarks",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/region?application=playwright",
+      "tags": [
+        "cat.keyboard",
+        "best-practice",
+        "RGAAv4",
+        "RGAA-9.2.1"
+      ],
+      "nodeCount": 2,
+      "sampleTargets": [
+        ".cookie-text",
+        ".mobile-cta-bar"
+      ],
+      "sampleHtml": "<div class=\"cookie-text\">"
+    },
+    {
+      "id": "scrollable-region-focusable",
+      "impact": "serious",
+      "help": "Scrollable region must have keyboard access",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/scrollable-region-focusable?application=playwright",
+      "tags": [
+        "cat.keyboard",
+        "wcag2a",
+        "wcag211",
+        "wcag213",
+        "TTv5",
+        "TT4.a",
+        "EN-301-549",
+        "EN-9.2.1.1",
+        "EN-9.2.1.3",
+        "RGAAv4",
+        "RGAA-7.3.2"
+      ],
+      "nodeCount": 2,
+      "sampleTargets": [
+        ".location-section:nth-child(5) > .container > .compare-table-wrap",
+        "#in-house-cost > .container > .compare-table-wrap"
+      ],
+      "sampleHtml": "<div class=\"compare-table-wrap\">"
+    }
+  ],
+  "passesCount": 43,
+  "incomplete": [
+    {
+      "id": "aria-prohibited-attr",
+      "impact": "serious",
+      "nodeCount": 1
+    },
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "nodeCount": 6
+    }
+  ],
+  "inapplicableCount": 47
+}

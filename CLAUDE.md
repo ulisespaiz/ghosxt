@@ -54,8 +54,10 @@ node audit/tools/ci-crawl-gate.mjs <crawl dir> # pass or fail a crawl (broken li
 ```
 
 CI: `.github/workflows/site-quality.yml` runs HTML validation, link and crawl checks,
-Lighthouse CI with budgets from `audit/ci/`, and a Playwright screenshot diff against the
-base branch on every pull request. See `audit/baseline/README.md` for how baselines and
+Lighthouse CI with per-page budgets from `audit/ci/` (accessibility, best practices, SEO
+and CLS are hard gates; performance score, LCP and TBT are warnings because they move
+with the runner's CPU), and a Playwright screenshot diff against the base branch on
+every pull request. See `audit/baseline/README.md` for how baselines and
 budgets are regenerated.
 
 ## Hard rules

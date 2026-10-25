@@ -1,0 +1,795 @@
+{
+  "ci": {
+    "collect": {
+      "url": [
+        "http://127.0.0.1:8787/",
+        "http://127.0.0.1:8787/pricing",
+        "http://127.0.0.1:8787/contact",
+        "http://127.0.0.1:8787/services",
+        "http://127.0.0.1:8787/managed-it-services",
+        "http://127.0.0.1:8787/cybersecurity",
+        "http://127.0.0.1:8787/cmmc-compliance",
+        "http://127.0.0.1:8787/hipaa-it-compliance",
+        "http://127.0.0.1:8787/ctpat",
+        "http://127.0.0.1:8787/salinas",
+        "http://127.0.0.1:8787/monterey-county",
+        "http://127.0.0.1:8787/cybersecurity-monterey",
+        "http://127.0.0.1:8787/it-help-aptos",
+        "http://127.0.0.1:8787/about",
+        "http://127.0.0.1:8787/blog/",
+        "http://127.0.0.1:8787/blog/password-expiration-policy-nist-small-business-2026"
+      ],
+      "numberOfRuns": 3,
+      "settings": {
+        "preset": "desktop",
+        "onlyCategories": [
+          "performance",
+          "accessibility",
+          "best-practices",
+          "seo"
+        ],
+        "chromeFlags": "--no-sandbox --headless=new"
+      }
+    },
+    "assert": {
+      "assertMatrix": [
+        {
+          "matchingUrlPattern": "http://127\\.0\\.0\\.1:8787/$",
+          "assertions": {
+            "categories:performance": [
+              "warn",
+              {
+                "minScore": 0.86
+              }
+            ],
+            "categories:accessibility": [
+              "error",
+              {
+                "minScore": 0.94
+              }
+            ],
+            "categories:best-practices": [
+              "error",
+              {
+                "minScore": 0.93
+              }
+            ],
+            "categories:seo": [
+              "error",
+              {
+                "minScore": 0.97
+              }
+            ],
+            "largest-contentful-paint": [
+              "warn",
+              {
+                "maxNumericValue": 1290
+              }
+            ],
+            "cumulative-layout-shift": [
+              "error",
+              {
+                "maxNumericValue": 0.035
+              }
+            ],
+            "total-blocking-time": [
+              "warn",
+              {
+                "maxNumericValue": 326
+              }
+            ]
+          }
+        },
+        {
+          "matchingUrlPattern": "http://127\\.0\\.0\\.1:8787/pricing$",
+          "assertions": {
+            "categories:performance": [
+              "warn",
+              {
+                "minScore": 0.97
+              }
+            ],
+            "categories:accessibility": [
+              "error",
+              {
+                "minScore": 0.9
+              }
+            ],
+            "categories:best-practices": [
+              "error",
+              {
+                "minScore": 0.93
+              }
+            ],
+            "categories:seo": [
+              "error",
+              {
+                "minScore": 0.97
+              }
+            ],
+            "largest-contentful-paint": [
+              "warn",
+              {
+                "maxNumericValue": 880
+              }
+            ],
+            "cumulative-layout-shift": [
+              "error",
+              {
+                "maxNumericValue": 0.06
+              }
+            ],
+            "total-blocking-time": [
+              "warn",
+              {
+                "maxNumericValue": 150
+              }
+            ]
+          }
+        },
+        {
+          "matchingUrlPattern": "http://127\\.0\\.0\\.1:8787/contact$",
+          "assertions": {
+            "categories:performance": [
+              "warn",
+              {
+                "minScore": 0.78
+              }
+            ],
+            "categories:accessibility": [
+              "error",
+              {
+                "minScore": 0.97
+              }
+            ],
+            "categories:best-practices": [
+              "error",
+              {
+                "minScore": 0.71
+              }
+            ],
+            "categories:seo": [
+              "error",
+              {
+                "minScore": 0.97
+              }
+            ],
+            "largest-contentful-paint": [
+              "warn",
+              {
+                "maxNumericValue": 1080
+              }
+            ],
+            "cumulative-layout-shift": [
+              "error",
+              {
+                "maxNumericValue": 0.044
+              }
+            ],
+            "total-blocking-time": [
+              "warn",
+              {
+                "maxNumericValue": 500
+              }
+            ]
+          }
+        },
+        {
+          "matchingUrlPattern": "http://127\\.0\\.0\\.1:8787/services$",
+          "assertions": {
+            "categories:performance": [
+              "warn",
+              {
+                "minScore": 0.97
+              }
+            ],
+            "categories:accessibility": [
+              "error",
+              {
+                "minScore": 0.97
+              }
+            ],
+            "categories:best-practices": [
+              "error",
+              {
+                "minScore": 0.93
+              }
+            ],
+            "categories:seo": [
+              "error",
+              {
+                "minScore": 0.89
+              }
+            ],
+            "largest-contentful-paint": [
+              "warn",
+              {
+                "maxNumericValue": 690
+              }
+            ],
+            "cumulative-layout-shift": [
+              "error",
+              {
+                "maxNumericValue": 0.03
+              }
+            ],
+            "total-blocking-time": [
+              "warn",
+              {
+                "maxNumericValue": 150
+              }
+            ]
+          }
+        },
+        {
+          "matchingUrlPattern": "http://127\\.0\\.0\\.1:8787/managed-it-services$",
+          "assertions": {
+            "categories:performance": [
+              "warn",
+              {
+                "minScore": 0.97
+              }
+            ],
+            "categories:accessibility": [
+              "error",
+              {
+                "minScore": 0.97
+              }
+            ],
+            "categories:best-practices": [
+              "error",
+              {
+                "minScore": 0.93
+              }
+            ],
+            "categories:seo": [
+              "error",
+              {
+                "minScore": 0.97
+              }
+            ],
+            "largest-contentful-paint": [
+              "warn",
+              {
+                "maxNumericValue": 820
+              }
+            ],
+            "cumulative-layout-shift": [
+              "error",
+              {
+                "maxNumericValue": 0.03
+              }
+            ],
+            "total-blocking-time": [
+              "warn",
+              {
+                "maxNumericValue": 150
+              }
+            ]
+          }
+        },
+        {
+          "matchingUrlPattern": "http://127\\.0\\.0\\.1:8787/cybersecurity$",
+          "assertions": {
+            "categories:performance": [
+              "warn",
+              {
+                "minScore": 0.97
+              }
+            ],
+            "categories:accessibility": [
+              "error",
+              {
+                "minScore": 0.97
+              }
+            ],
+            "categories:best-practices": [
+              "error",
+              {
+                "minScore": 0.93
+              }
+            ],
+            "categories:seo": [
+              "error",
+              {
+                "minScore": 0.97
+              }
+            ],
+            "largest-contentful-paint": [
+              "warn",
+              {
+                "maxNumericValue": 780
+              }
+            ],
+            "cumulative-layout-shift": [
+              "error",
+              {
+                "maxNumericValue": 0.03
+              }
+            ],
+            "total-blocking-time": [
+              "warn",
+              {
+                "maxNumericValue": 150
+              }
+            ]
+          }
+        },
+        {
+          "matchingUrlPattern": "http://127\\.0\\.0\\.1:8787/cmmc-compliance$",
+          "assertions": {
+            "categories:performance": [
+              "warn",
+              {
+                "minScore": 0.97
+              }
+            ],
+            "categories:accessibility": [
+              "error",
+              {
+                "minScore": 0.97
+              }
+            ],
+            "categories:best-practices": [
+              "error",
+              {
+                "minScore": 0.93
+              }
+            ],
+            "categories:seo": [
+              "error",
+              {
+                "minScore": 0.97
+              }
+            ],
+            "largest-contentful-paint": [
+              "warn",
+              {
+                "maxNumericValue": 790
+              }
+            ],
+            "cumulative-layout-shift": [
+              "error",
+              {
+                "maxNumericValue": 0.03
+              }
+            ],
+            "total-blocking-time": [
+              "warn",
+              {
+                "maxNumericValue": 150
+              }
+            ]
+          }
+        },
+        {
+          "matchingUrlPattern": "http://127\\.0\\.0\\.1:8787/hipaa-it-compliance$",
+          "assertions": {
+            "categories:performance": [
+              "warn",
+              {
+                "minScore": 0.97
+              }
+            ],
+            "categories:accessibility": [
+              "error",
+              {
+                "minScore": 0.97
+              }
+            ],
+            "categories:best-practices": [
+              "error",
+              {
+                "minScore": 0.93
+              }
+            ],
+            "categories:seo": [
+              "error",
+              {
+                "minScore": 0.97
+              }
+            ],
+            "largest-contentful-paint": [
+              "warn",
+              {
+                "maxNumericValue": 750
+              }
+            ],
+            "cumulative-layout-shift": [
+              "error",
+              {
+                "maxNumericValue": 0.03
+              }
+            ],
+            "total-blocking-time": [
+              "warn",
+              {
+                "maxNumericValue": 150
+              }
+            ]
+          }
+        },
+        {
+          "matchingUrlPattern": "http://127\\.0\\.0\\.1:8787/ctpat$",
+          "assertions": {
+            "categories:performance": [
+              "warn",
+              {
+                "minScore": 0.74
+              }
+            ],
+            "categories:accessibility": [
+              "error",
+              {
+                "minScore": 0.93
+              }
+            ],
+            "categories:best-practices": [
+              "error",
+              {
+                "minScore": 0.93
+              }
+            ],
+            "categories:seo": [
+              "error",
+              {
+                "minScore": 0.97
+              }
+            ],
+            "largest-contentful-paint": [
+              "warn",
+              {
+                "maxNumericValue": 830
+              }
+            ],
+            "cumulative-layout-shift": [
+              "error",
+              {
+                "maxNumericValue": 0.03
+              }
+            ],
+            "total-blocking-time": [
+              "warn",
+              {
+                "maxNumericValue": 675
+              }
+            ]
+          }
+        },
+        {
+          "matchingUrlPattern": "http://127\\.0\\.0\\.1:8787/salinas$",
+          "assertions": {
+            "categories:performance": [
+              "warn",
+              {
+                "minScore": 0.97
+              }
+            ],
+            "categories:accessibility": [
+              "error",
+              {
+                "minScore": 0.97
+              }
+            ],
+            "categories:best-practices": [
+              "error",
+              {
+                "minScore": 0.93
+              }
+            ],
+            "categories:seo": [
+              "error",
+              {
+                "minScore": 0.97
+              }
+            ],
+            "largest-contentful-paint": [
+              "warn",
+              {
+                "maxNumericValue": 840
+              }
+            ],
+            "cumulative-layout-shift": [
+              "error",
+              {
+                "maxNumericValue": 0.03
+              }
+            ],
+            "total-blocking-time": [
+              "warn",
+              {
+                "maxNumericValue": 150
+              }
+            ]
+          }
+        },
+        {
+          "matchingUrlPattern": "http://127\\.0\\.0\\.1:8787/monterey-county$",
+          "assertions": {
+            "categories:performance": [
+              "warn",
+              {
+                "minScore": 0.97
+              }
+            ],
+            "categories:accessibility": [
+              "error",
+              {
+                "minScore": 0.97
+              }
+            ],
+            "categories:best-practices": [
+              "error",
+              {
+                "minScore": 0.93
+              }
+            ],
+            "categories:seo": [
+              "error",
+              {
+                "minScore": 0.89
+              }
+            ],
+            "largest-contentful-paint": [
+              "warn",
+              {
+                "maxNumericValue": 790
+              }
+            ],
+            "cumulative-layout-shift": [
+              "error",
+              {
+                "maxNumericValue": 0.03
+              }
+            ],
+            "total-blocking-time": [
+              "warn",
+              {
+                "maxNumericValue": 150
+              }
+            ]
+          }
+        },
+        {
+          "matchingUrlPattern": "http://127\\.0\\.0\\.1:8787/cybersecurity-monterey$",
+          "assertions": {
+            "categories:performance": [
+              "warn",
+              {
+                "minScore": 0.97
+              }
+            ],
+            "categories:accessibility": [
+              "error",
+              {
+                "minScore": 0.97
+              }
+            ],
+            "categories:best-practices": [
+              "error",
+              {
+                "minScore": 0.93
+              }
+            ],
+            "categories:seo": [
+              "error",
+              {
+                "minScore": 0.97
+              }
+            ],
+            "largest-contentful-paint": [
+              "warn",
+              {
+                "maxNumericValue": 760
+              }
+            ],
+            "cumulative-layout-shift": [
+              "error",
+              {
+                "maxNumericValue": 0.03
+              }
+            ],
+            "total-blocking-time": [
+              "warn",
+              {
+                "maxNumericValue": 150
+              }
+            ]
+          }
+        },
+        {
+          "matchingUrlPattern": "http://127\\.0\\.0\\.1:8787/it-help-aptos$",
+          "assertions": {
+            "categories:performance": [
+              "warn",
+              {
+                "minScore": 0.97
+              }
+            ],
+            "categories:accessibility": [
+              "error",
+              {
+                "minScore": 0.97
+              }
+            ],
+            "categories:best-practices": [
+              "error",
+              {
+                "minScore": 0.93
+              }
+            ],
+            "categories:seo": [
+              "error",
+              {
+                "minScore": 0.97
+              }
+            ],
+            "largest-contentful-paint": [
+              "warn",
+              {
+                "maxNumericValue": 740
+              }
+            ],
+            "cumulative-layout-shift": [
+              "error",
+              {
+                "maxNumericValue": 0.03
+              }
+            ],
+            "total-blocking-time": [
+              "warn",
+              {
+                "maxNumericValue": 150
+              }
+            ]
+          }
+        },
+        {
+          "matchingUrlPattern": "http://127\\.0\\.0\\.1:8787/about$",
+          "assertions": {
+            "categories:performance": [
+              "warn",
+              {
+                "minScore": 0.78
+              }
+            ],
+            "categories:accessibility": [
+              "error",
+              {
+                "minScore": 0.97
+              }
+            ],
+            "categories:best-practices": [
+              "error",
+              {
+                "minScore": 0.93
+              }
+            ],
+            "categories:seo": [
+              "error",
+              {
+                "minScore": 0.97
+              }
+            ],
+            "largest-contentful-paint": [
+              "warn",
+              {
+                "maxNumericValue": 1060
+              }
+            ],
+            "cumulative-layout-shift": [
+              "error",
+              {
+                "maxNumericValue": 0.03
+              }
+            ],
+            "total-blocking-time": [
+              "warn",
+              {
+                "maxNumericValue": 502
+              }
+            ]
+          }
+        },
+        {
+          "matchingUrlPattern": "http://127\\.0\\.0\\.1:8787/blog/$",
+          "assertions": {
+            "categories:performance": [
+              "warn",
+              {
+                "minScore": 0.97
+              }
+            ],
+            "categories:accessibility": [
+              "error",
+              {
+                "minScore": 0.97
+              }
+            ],
+            "categories:best-practices": [
+              "error",
+              {
+                "minScore": 0.93
+              }
+            ],
+            "categories:seo": [
+              "error",
+              {
+                "minScore": 0.97
+              }
+            ],
+            "largest-contentful-paint": [
+              "warn",
+              {
+                "maxNumericValue": 880
+              }
+            ],
+            "cumulative-layout-shift": [
+              "error",
+              {
+                "maxNumericValue": 0.03
+              }
+            ],
+            "total-blocking-time": [
+              "warn",
+              {
+                "maxNumericValue": 150
+              }
+            ]
+          }
+        },
+        {
+          "matchingUrlPattern": "http://127\\.0\\.0\\.1:8787/blog/password-expiration-policy-nist-small-business-2026$",
+          "assertions": {
+            "categories:performance": [
+              "warn",
+              {
+                "minScore": 0.97
+              }
+            ],
+            "categories:accessibility": [
+              "error",
+              {
+                "minScore": 0.97
+              }
+            ],
+            "categories:best-practices": [
+              "error",
+              {
+                "minScore": 0.93
+              }
+            ],
+            "categories:seo": [
+              "error",
+              {
+                "minScore": 0.97
+              }
+            ],
+            "largest-contentful-paint": [
+              "warn",
+              {
+                "maxNumericValue": 760
+              }
+            ],
+            "cumulative-layout-shift": [
+              "error",
+              {
+                "maxNumericValue": 0.03
+              }
+            ],
+            "total-blocking-time": [
+              "warn",
+              {
+                "maxNumericValue": 150
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "upload": {
+      "target": "filesystem",
+      "outputDir": "./lhci-desktop"
+    }
+  }
+}

@@ -15,7 +15,7 @@ says `local`. Mobile numbers come first everywhere. Nothing here is served to vi
 | `axe/<slug>.<mobile|desktop>.json`, `axe-summary.md`, `axe-summary.csv` | axe-core violations per page at 390x844 and 1366x768 | `tools/axe-run.mjs` |
 | `html/<slug>.html`, `html/index.json` | Rendered DOM after load at the mobile profile | `tools/snapshot-html.mjs` |
 | `html-raw/<slug>.html` | The HTML exactly as served | `tools/snapshot-html.mjs` |
-| `screenshots/<slug>.<mobile|desktop>.png` | Full-page screenshots of the representative pages, device scale factor 1 | `tools/screenshots.mjs` |
+| `screenshots/<slug>.<mobile|desktop>.png` | First-viewport screenshots (390x844 and 1366x768) of the representative pages, device scale factor 1. Full-page captures are kept out of git (`screenshots-fullpage/`, 44 MB) and regenerated on demand | `tools/screenshots.mjs --viewport-only` |
 | `../queries.md` | Target query panel with the pre-filled web-search column | hand |
 | `../ci/lighthouserc.mobile.json`, `../ci/lighthouserc.desktop.json`, `../ci/budgets-*.md` | Lighthouse CI budgets derived from `lighthouse-local/` | `tools/make-budgets.mjs` |
 | `../ci/known-*.txt` | Allowlists the crawl gate tolerates until the matching AUDIT.md finding is fixed | hand |
@@ -65,6 +65,16 @@ the visual-diff job is always the PR's base branch, so there is nothing to regen
 an intended visual change is approved by the owner with the `visual-change-approved`
 label on the PR.
 
+## Local baseline versus production
+
+The local static server sends no compression and no HTTP/2, so the local numbers are
+lower than production (home mobile performance 74 locally against 87 live; LCP 3.7 s
+against 2.1 s). That is fine for CI, which measures the same way every time; it is not a
+statement about the live site. One artefact to know about: `/pricing` measures CLS
+0.245 locally and 0.000 live, so its CLS budget is loose until the cause (hero subtitle
+and badge moving after the late font or script arrival on the slower local load) is
+removed by the A2 and A3 pull requests, after which the budget is regenerated.
+
 ## Variance note
 
 Lighthouse lab numbers move between runs. On this host the home page mobile performance
@@ -73,4 +83,5 @@ production baseline is one run per page and form factor (536 runs); use it to sp
 patterns (which audits fail where), not to gate. The CI budgets use the local-server
 baseline with 3 runs and the median, with a 3-point score tolerance, 15 percent LCP
 tolerance, 0.02 CLS slack and 100 ms TBT slack, and CI itself runs 3 times and asserts
-on the median. Field metrics (INP) need Search Console or CrUX and are not in this set.
+on the median. Performance score, LCP and TBT are asserted at warn level (they track the
+runner's CPU); accessibility, best practices, SEO and CLS are errors. Field metrics (INP) need Search Console or CrUX and are not in this set.

@@ -8,7 +8,9 @@
 #   links           local crawl of the built site: broken internal links, sitemap entries
 #                   that do not return 200, orphans, redirect chains.
 #   lighthouse      Lighthouse CI (mobile, then desktop) against the local static server
-#                   with per-page budgets from audit/ci/lighthouserc.<ff>.json.
+#                   with per-page budgets from audit/ci/lighthouserc.<ff>.json. Accessibility,
+#                   best practices, SEO and CLS fail the job; performance score, LCP and TBT
+#                   are warnings (they vary with the runner's CPU) and show in the job log.
 #   seo-checks      repo-level title, meta, JSON-LD, FAQ, entity and marker checks
 #                   (audit/tools/check-seo-meta.mjs); informational (continue-on-error)
 #                   until the AUDIT.md B and C pull requests land, then promoted to a gate.

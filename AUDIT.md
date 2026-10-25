@@ -368,7 +368,10 @@ wasted at the rendered size. Fix: add a 96 px variant for the nav (2x of 48) and
 Not a defect; the guardrail. `audit/ci/lighthouserc.mobile.json` and `.desktop.json`
 hold per-page floors and ceilings generated from the local-server baseline
 (`audit/baseline/lighthouse-local/`) for the 16 representative pages in
-`audit/ci/representative-pages.txt`. Loosening a budget needs a PR that says why.
+`audit/ci/representative-pages.txt`. Accessibility, best practices, SEO and CLS are hard
+gates; performance score, LCP and TBT are warnings because a two-page smoke run on this
+host under load measured TBT at three times the quiet baseline, and GitHub's runners are
+another machine again. Loosening a budget needs a PR that says why.
 Acceptance: the `lighthouse` jobs in `site-quality.yml` pass on `main`.
 
 ### T-15 P1: one internal link 404s and the service-area hub is unlinked

@@ -31,6 +31,19 @@ const CATEGORIES = ['performance', 'accessibility', 'best-practices', 'seo'];
 const CHROME_FLAGS = '--no-sandbox --headless=new';
 const METRIC_KEYS = ['perf', 'a11y', 'bp', 'seo', 'lcp', 'cls', 'tbt'];
 
+// Lighthouse CI assertion keys, in the order the budget entries list them.
+const ASSERT_KEYS = [
+  'categories:performance',
+  'categories:accessibility',
+  'categories:best-practices',
+  'categories:seo',
+  'largest-contentful-paint',
+  'cumulative-layout-shift',
+  'total-blocking-time',
+];
+// CPU-bound lab metrics that vary between machines. Emitted as warnings by default.
+const DEFAULT_WARN = 'categories:performance,largest-contentful-paint,total-blocking-time';
+
 // Rules that keep a budget from being tighter than the baseline allows.
 const LCP_MIN_GROWTH_MS = 250;
 const CLS_MIN_CEILING = 0.03;
@@ -49,8 +62,14 @@ const VALUE_FLAGS = {
   '--tbt-slack': 'tbtSlack',
   '--runs': 'runs',
   '--limit': 'limit',
+  '--warn': 'warn',
 };
-const FLAG_FLAGS = { '--force': 'force', '--help': 'help', '-h': 'help' };
+const FLAG_FLAGS = {
+  '--force': 'force',
+  '--error-all': 'errorAll',
+  '--help': 'help',
+  '-h': 'help',
+};
 
 const HELP = `Usage: node tools/make-budgets.mjs [options]
 
@@ -76,6 +95,17 @@ Options:
   --tbt-slack <ms>        Added to the baseline TBT, in ms (default: 100).
   --runs <n>              numberOfRuns in each collect block (default: 3).
   --limit <n>             Budget only the first n pages of the page list.
+  --warn <list>           Comma-separated assertion keys to emit as warnings
+                          (level "warn") instead of errors, in every budget
+                          entry. Default: categories:performance,
+                          largest-contentful-paint,total-blocking-time (the
+                          CPU-bound lab metrics that vary between machines).
+                          Keys: categories:performance,
+                          categories:accessibility, categories:best-practices,
+                          categories:seo, largest-contentful-paint,
+                          cumulative-layout-shift, total-blocking-time.
+  --error-all             Emit every assertion as an error (the old behaviour).
+                          Cannot be combined with --warn.
   --force                 Replace outputs that already exist (default: skip).
   -h, --help              Show this help and exit.
 
@@ -163,6 +193,23 @@ function parseOrigin(raw) {
   return parsed.origin;
 }
 
+// --warn value: comma-separated assertion keys. Empty lists and unknown keys
+// are setup errors.
+function parseWarnList(raw) {
+  const keys = String(raw)
+    .split(',')
+    .map((k) => k.trim())
+    .filter((k) => k !== '');
+  if (keys.length === 0) {
+    throw new Error('--warn needs at least one assertion key (use --error-all for none)');
+  }
+  const unknown = keys.filter((k) => !ASSERT_KEYS.includes(k));
+  if (unknown.length > 0) {
+    throw new Error(`--warn has unknown assertion key: ${unknown.join(', ')} (allowed: ${ASSERT_KEYS.join(', ')})`);
+  }
+  return [...new Set(keys)];
+}
+
 function parseArgs(argv) {
   const opts = {
     help: false,
@@ -177,6 +224,8 @@ function parseArgs(argv) {
     tbtSlack: 100,
     runs: 3,
     limit: null,
+    warn: null,
+    errorAll: false,
   };
   for (let i = 0; i < argv.length; i++) {
     const raw = argv[i];
@@ -208,6 +257,10 @@ function parseArgs(argv) {
   opts.tbtSlack = numberArg('--tbt-slack', opts.tbtSlack, 0);
   opts.runs = numberArg('--runs', opts.runs, 1, true);
   if (opts.limit !== null) opts.limit = numberArg('--limit', opts.limit, 1, true);
+  if (opts.errorAll && opts.warn !== null) {
+    throw new Error('--warn and --error-all cannot be used together');
+  }
+  opts.warn = opts.errorAll ? [] : parseWarnList(opts.warn ?? DEFAULT_WARN);
   return opts;
 }
 
@@ -410,19 +463,24 @@ function planFormFactor(ff, pages, groups, opts) {
 
 // ---------------------------------------------------------------- outputs
 
-function assertEntry(origin, row) {
+function assertEntry(origin, row, warnKeys) {
   const b = row.budget;
+  const rules = {
+    'categories:performance': { minScore: b.perf },
+    'categories:accessibility': { minScore: b.a11y },
+    'categories:best-practices': { minScore: b.bp },
+    'categories:seo': { minScore: b.seo },
+    'largest-contentful-paint': { maxNumericValue: b.lcp },
+    'cumulative-layout-shift': { maxNumericValue: b.cls },
+    'total-blocking-time': { maxNumericValue: b.tbt },
+  };
+  const assertions = {};
+  for (const key of ASSERT_KEYS) {
+    assertions[key] = [warnKeys.includes(key) ? 'warn' : 'error', rules[key]];
+  }
   return {
     matchingUrlPattern: `${escapeRegExp(origin + row.path)}$`,
-    assertions: {
-      'categories:performance': ['error', { minScore: b.perf }],
-      'categories:accessibility': ['error', { minScore: b.a11y }],
-      'categories:best-practices': ['error', { minScore: b.bp }],
-      'categories:seo': ['error', { minScore: b.seo }],
-      'largest-contentful-paint': ['error', { maxNumericValue: b.lcp }],
-      'cumulative-layout-shift': ['error', { maxNumericValue: b.cls }],
-      'total-blocking-time': ['error', { maxNumericValue: b.tbt }],
-    },
+    assertions,
   };
 }
 
@@ -439,7 +497,7 @@ function buildConfig(ff, opts, rows) {
         settings,
       },
       assert: {
-        assertMatrix: rows.map((row) => assertEntry(opts.origin, row)),
+        assertMatrix: rows.map((row) => assertEntry(opts.origin, row, opts.warn)),
       },
       upload: { target: 'filesystem', outputDir: `./lhci-${ff}` },
     },
@@ -464,6 +522,35 @@ function tableRow(row) {
 }
 
 const pct = (fraction) => `${Math.round(fraction * 100)}%`;
+
+const ASSERT_LABELS = {
+  'categories:performance': 'performance',
+  'categories:accessibility': 'accessibility',
+  'categories:best-practices': 'best practices',
+  'categories:seo': 'SEO',
+  'largest-contentful-paint': 'LCP',
+  'cumulative-layout-shift': 'CLS',
+  'total-blocking-time': 'TBT',
+};
+
+// "a", "a and b" or "a, b and c".
+function joinList(items) {
+  if (items.length <= 1) return items.join('');
+  return `${items.slice(0, -1).join(', ')} and ${items[items.length - 1]}`;
+}
+
+// The one sentence under the budget table: which assertions are warnings, why,
+// and which ones still fail the build.
+function warnNote(warnKeys) {
+  if (warnKeys.length === 0) return 'Every assertion is an error, so none is a warning.';
+  const warned = ASSERT_KEYS.filter((k) => warnKeys.includes(k)).map((k) => ASSERT_LABELS[k]);
+  const hard = ASSERT_KEYS.filter((k) => !warnKeys.includes(k)).map((k) => ASSERT_LABELS[k]);
+  const gates = hard.length > 0 ? `${joinList(hard)} are the hard gates` : 'no assertion is a hard gate';
+  return (
+    `Assertions at level warn (reported, not failing the build) are ${joinList(warned)}, ` +
+    `because they depend on the CI runner's CPU speed; ${gates}.`
+  );
+}
 
 function renderMarkdown(ff, plan, ctx) {
   const { opts, pageSource, pageCount, skipped } = ctx;
@@ -497,6 +584,8 @@ function renderMarkdown(ff, plan, ctx) {
     '| Page | Perf floor | A11y floor | BP floor | SEO floor | LCP max ms | CLS max | TBT max ms | Baseline perf | Baseline LCP |',
     '| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |',
     ...plan.rows.map(tableRow),
+    '',
+    warnNote(opts.warn),
     '',
   ];
   if (plan.excluded.length > 0) {
