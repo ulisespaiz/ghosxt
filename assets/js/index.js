@@ -1,5 +1,45 @@
 // GRID HERO
 
+// Canvas loops run only while their canvas is on screen and the tab is
+// visible, and draw a single still frame under prefers-reduced-motion. Both
+// grids used to animate forever, offscreen and in background tabs, with a
+// second timer spawning pulses every 50 ms: that was the home page's
+// main-thread cost on phones (AUDIT.md T-06). Spawning now happens inside
+// the frame loop, so nothing runs while a loop is paused.
+const REDUCED_MOTION = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+function runWhileVisible(el, frame, still) {
+    let active = false;
+    let visible = false;
+    let handle = 0;
+    const tick = () => {
+        if (!active) return;
+        frame();
+        handle = requestAnimationFrame(tick);
+    };
+    const sync = () => {
+        const shouldRun = visible && document.visibilityState === 'visible' && !REDUCED_MOTION;
+        if (shouldRun && !active) {
+            active = true;
+            handle = requestAnimationFrame(tick);
+        } else if (!shouldRun && active) {
+            active = false;
+            cancelAnimationFrame(handle);
+        }
+    };
+    if ('IntersectionObserver' in window) {
+        new IntersectionObserver((entries) => {
+            visible = entries.some((entry) => entry.isIntersecting);
+            sync();
+        }, { rootMargin: '100px 0px' }).observe(el);
+    } else {
+        visible = true;
+        sync();
+    }
+    document.addEventListener('visibilitychange', sync);
+    if (REDUCED_MOTION) still();
+}
+
 const canvas = document.getElementById('gridCanvas');
 const ctx = canvas.getContext('2d');
 let pulses = [];
@@ -156,19 +196,22 @@ function drawPulses() {
     });
 }
 
+// One spawn chance every 50 ms, as before, but inside the frame loop.
+let nextSpawn = 0;
+
 function animate() {
+    const now = performance.now();
+    if (now >= nextSpawn) {
+        nextSpawn = now + 50;
+        if (pulses.length < 50 && Math.random() > 0.2) {
+            createPulse();
+        }
+    }
     drawGrid();
     drawPulses();
-    requestAnimationFrame(animate);
 }
 
-setInterval(() => {
-    if (pulses.length < 50 && Math.random() > 0.2) {
-        createPulse();
-    }
-}, 50);
-
-animate();
+runWhileVisible(canvas, animate, drawGrid);
 
 
 // GRID CTA
@@ -330,19 +373,21 @@ function drawPulsesCTA() {
     });
 }
 
+let nextSpawnCTA = 0;
+
 function animateCTA() {
+    const now = performance.now();
+    if (now >= nextSpawnCTA) {
+        nextSpawnCTA = now + 50;
+        if (pulsesCTA.length < 50 && Math.random() > 0.2) {
+            createPulseCTA();
+        }
+    }
     drawGridCTA();
     drawPulsesCTA();
-    requestAnimationFrame(animateCTA);
 }
 
-setInterval(() => {
-    if (pulsesCTA.length < 50 && Math.random() > 0.2) {
-        createPulseCTA();
-    }
-}, 50);
-
-animateCTA();
+runWhileVisible(canvasCTA, animateCTA, drawGridCTA);
 
 
 function createParticles(box) {
