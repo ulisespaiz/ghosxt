@@ -132,8 +132,7 @@ block (wording identical to the JSON-LD), or remove the entry from the JSON-LD. 
 ten city hubs the missing questions are the local ones ("How fast can you get on-site to
 Seaside?"), which are worth keeping visible but must not promise a response time the
 owner has not confirmed (decision D4 of the prior pass).
-Acceptance: `node audit/tools/check-faq-visible.mjs` (to be written by the worker from the
-Python in this audit) reports 0 mismatches; Rich Results Test on `/salinas` shows the
+Acceptance: `node audit/tools/check-seo-meta.mjs --only faq-visible` reports PASS; Rich Results Test on `/salinas` shows the
 same question count as the visible FAQ.
 
 ### A-06 P0: the domain is absent from the non-Google index that AI assistants read
@@ -385,6 +384,16 @@ change is text only, within the same card; the diff job will flag it, so batch i
 PR C1 and have the owner approve. Acceptance: `link-text` passes on every vertical page;
 SEO score 100.
 
+### T-19 P2: 45 root pages have no `twitter:image`
+
+Pages: all 11 `web-design-<city>`, all 10 `it-help-<city>`, 6 `cloud-services-<city>`,
+6 `cybersecurity-<city>`, and 12 others including `break-fix-vs-managed-it`
+(`node audit/tools/check-seo-meta.mjs --only og-twitter` lists them). Evidence: the
+pages carry `og:image` and `twitter:card` but not `twitter:image`, so X and the apps
+that read the Twitter tags first fall back to no image. Fix: add
+`<meta name="twitter:image" content="<same as og:image>">` to each page. Acceptance:
+the check reports PASS.
+
 ## Structured data findings
 
 ### S-01 P1: the business entity has 15 different names and 4 incomplete copies
@@ -401,19 +410,22 @@ emitted identically by every page from `scripts/_chrome.py`, with the page-speci
 `Service` nodes referencing it by `@id`. Acceptance: a script asserts every
 `LocalBusiness` node equals the canonical body; `check-chrome-drift.py` is clean.
 
-### S-02 P1: 40 root pages have no business node at all, and 22 `Service` nodes have no `provider`
+### S-02 P1: 57 root pages have no business node at all, and 22 `Service` nodes have no `provider`
 
-Pages: all 11 `cybersecurity-<city>`, all 11 `cloud-services-<city>`, all 10
-`it-help-<city>`, plus `break-fix-vs-managed-it`, `cmmc-compliance`, `co-managed-it`,
-`cyber-insurance-compliance`, `hipaa-it-compliance`, `managed-detection-response`,
-`case-studies`, `404`. Evidence: JSON-LD type scan; these pages carry `Service`,
+Pages: all 11 `cybersecurity-<city>`, all 11 `cloud-services-<city>`, all 11
+`web-design-<city>`, all 10 `it-help-<city>`, plus `break-fix-vs-managed-it`,
+`cmmc-compliance`, `co-managed-it`, `cyber-insurance-compliance`, `hipaa-it-compliance`,
+`managed-detection-response`, `msp-partners`, `pci-compliance`, `penetration-testing`,
+`ransomware-recovery`, `service-area`, `services`, `voip-business-phone-systems`,
+`zero-trust-security` (57 of the 98 indexable root pages). Evidence:
+`node audit/tools/check-seo-meta.mjs --only business-node,service-provider`; these pages carry `Service`,
 `FAQPage` and `BreadcrumbList` but no `LocalBusiness` or `Organization`, so the
 `provider` either is missing (22 nodes) or points at an `@id` that is not defined on the
 page. An AI or search parser reading the page in isolation cannot tell who provides the
 service or where. Fix: every page emits the canonical business node from S-01, and every
 `Service` has `"provider": {"@id": "https://ghosxt.com/#business"}`, `serviceType`, and
-`areaServed`. Acceptance: the JSON-LD scan reports 0 root pages without a business node
-and 0 `Service` nodes without `provider`.
+`areaServed`. Acceptance: `node audit/tools/check-seo-meta.mjs --only business-node,service-provider`
+reports PASS for both.
 
 ### S-03 P1: BreadcrumbList is missing on six indexable root pages
 

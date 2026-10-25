@@ -167,7 +167,7 @@ jobs:
       - name: Run repo-level checks
         run: |
           node audit/tools/check-seo-meta.mjs --json /tmp/seo-check.json | tee /tmp/seo-check.md || status=$?
-          { echo '## SEO and structured-data checks'; echo; grep -E '^(## |- (PASS|FAIL))' /tmp/seo-check.md | head -60; } >> "$GITHUB_STEP_SUMMARY"
+          { echo '## SEO and structured-data checks'; echo; sed -n '/^## Summary/,/^## [a-z]/p' /tmp/seo-check.md | grep -E '^- ' | head -40; } >> "$GITHUB_STEP_SUMMARY"
           exit ${status:-0}
 
   lighthouse:

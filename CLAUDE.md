@@ -49,6 +49,8 @@ node audit/tools/crawl-live.mjs                         # crawl, links, redirect
 node audit/tools/axe-run.mjs                            # axe at mobile and desktop
 node audit/tools/screenshots.mjs --base http://127.0.0.1:8787
 node audit/tools/visual-diff.mjs --base <dirA> --head <dirB>
+node audit/tools/check-seo-meta.mjs           # repo-level SEO, JSON-LD, FAQ, entity, marker checks
+node audit/tools/ci-crawl-gate.mjs <crawl dir> # pass or fail a crawl (broken links, orphans, duplicates)
 ```
 
 CI: `.github/workflows/site-quality.yml` runs HTML validation, link and crawl checks,

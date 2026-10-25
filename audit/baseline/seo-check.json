@@ -1,0 +1,1322 @@
+{
+  "checks": [
+    {
+      "id": "title-unique",
+      "pass": false,
+      "count": 2,
+      "items": [
+        {
+          "title": "Penetration Testing for Small Business | Ghosxt",
+          "files": [
+            "penetration-testing.html",
+            "blog/penetration-testing-small-business-2026.html"
+          ]
+        },
+        {
+          "title": "Zero Trust Security for Small Business | Ghosxt",
+          "files": [
+            "zero-trust-security.html",
+            "blog/zero-trust-security-small-business-2026.html"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "title-length",
+      "pass": false,
+      "count": 13,
+      "items": [
+        {
+          "file": "blog/audit-logs-security-logging-small-business-2026.html",
+          "length": 64,
+          "title": "Audit Logs for Small Business: What to Turn On and Keep | Ghosxt"
+        },
+        {
+          "file": "blog/browser-in-the-browser-phishing-fake-login-popup-small-business-2026.html",
+          "length": 84,
+          "title": "Browser-in-the-Browser Phishing: The Login Popup That Isn't a Window (2026) | Ghosxt"
+        },
+        {
+          "file": "blog/callback-phishing-fake-invoice-remote-access-small-business-2026.html",
+          "length": 65,
+          "title": "Callback Phishing: The Invoice Email With No Link (2026) | Ghosxt"
+        },
+        {
+          "file": "blog/cybersecurity-awareness-month-2026-small-business-action-plan.html",
+          "length": 77,
+          "title": "Cybersecurity Awareness Month 2026: A 4-Week Plan for Small Business | Ghosxt"
+        },
+        {
+          "file": "blog/cybersecurity-risk-assessment-small-business-2026.html",
+          "length": 74,
+          "title": "How to Do a Cybersecurity Risk Assessment for Your Small Business | Ghosxt"
+        },
+        {
+          "file": "blog/cybersecurity-tabletop-exercise-small-business-2026.html",
+          "length": 77,
+          "title": "How to Run a Cybersecurity Tabletop Exercise for Your Small Business | Ghosxt"
+        },
+        {
+          "file": "blog/email-encryption-small-business-2026.html",
+          "length": 69,
+          "title": "Email Encryption for Small Business: What to Encrypt and How | Ghosxt"
+        },
+        {
+          "file": "blog/it-setup-checklist-new-small-business-2026.html",
+          "length": 96,
+          "title": "IT Setup for a New Small Business: The Founder's Checklist for the First 90 Days (2026) | Ghosxt"
+        },
+        {
+          "file": "blog/lost-stolen-laptop-first-hour-checklist-small-business-2026.html",
+          "length": 71,
+          "title": "Lost or Stolen Company Laptop: The First-Hour Checklist (2026) | Ghosxt"
+        },
+        {
+          "file": "blog/microsoft-365-copilot-oversharing-risk-small-business-2026.html",
+          "length": 86,
+          "title": "Microsoft 365 Copilot and the Oversharing Problem Nobody Checked First (2026) | Ghosxt"
+        },
+        {
+          "file": "blog/shared-logins-shared-mailboxes-small-business-2026.html",
+          "length": 70,
+          "title": "Shared Logins and Shared Mailboxes: Stop Sharing One Password | Ghosxt"
+        },
+        {
+          "file": "blog/single-sign-on-sso-small-business-2026.html",
+          "length": 65,
+          "title": "Single Sign-On (SSO) for Small Business: Is It Worth It? | Ghosxt"
+        },
+        {
+          "file": "blog/vulnerability-scanning-small-business-2026.html",
+          "length": 64,
+          "title": "How to Run a Vulnerability Scan for Your Small Business | Ghosxt"
+        }
+      ]
+    },
+    {
+      "id": "meta-length",
+      "pass": false,
+      "count": 9,
+      "items": [
+        {
+          "file": "cloud-services.html",
+          "length": 161,
+          "problem": "longer than 155",
+          "description": "Microsoft 365 hardening and hybrid cloud planning for California small business. Engineer with DoD infrastructure experience, hardened tenants, clean migrations."
+        },
+        {
+          "file": "blog/audit-logs-security-logging-small-business-2026.html",
+          "length": 158,
+          "problem": "longer than 155",
+          "description": "Without logs you cannot tell what an attacker touched. Which audit logs to turn on in Microsoft 365, Google Workspace, and Windows, and how long to keep them."
+        },
+        {
+          "file": "blog/conditional-access-microsoft-365-small-business-2026.html",
+          "length": 156,
+          "problem": "longer than 155",
+          "description": "Conditional Access decides who gets into Microsoft 365 and when. Five starter policies small businesses can turn on this week, plus common lockout mistakes."
+        },
+        {
+          "file": "blog/cybersecurity-awareness-month-2026-small-business-action-plan.html",
+          "length": 187,
+          "problem": "longer than 155",
+          "description": "October is Cybersecurity Awareness Month. A practical 4-week action plan for small business covering MFA, patching, training, and backup testing, not just a poster on the break room wall."
+        },
+        {
+          "file": "blog/cybersecurity-tabletop-exercise-small-business-2026.html",
+          "length": 164,
+          "problem": "longer than 155",
+          "description": "A tabletop exercise tests your incident response plan before a real attack does. A free 60-minute guide for small businesses, with scenarios and a simple scorecard."
+        },
+        {
+          "file": "blog/it-setup-checklist-new-small-business-2026.html",
+          "length": 188,
+          "problem": "longer than 155",
+          "description": "Starting a business? The IT and security decisions to get right before you hire: business email and MFA, device setup, backups, and who holds the keys. A practical first-90-days checklist."
+        },
+        {
+          "file": "blog/lost-stolen-laptop-first-hour-checklist-small-business-2026.html",
+          "length": 182,
+          "problem": "longer than 155",
+          "description": "A lost or stolen work laptop is a routine incident, not a catastrophe, if you act in the first hour. The exact steps to revoke access, confirm encryption, and document what happened."
+        },
+        {
+          "file": "blog/password-expiration-policy-nist-small-business-2026.html",
+          "length": 157,
+          "problem": "longer than 155",
+          "description": "Forced 90-day password changes weaken security. Use the modern NIST-based small business password policy: length, MFA, a password manager, and breach checks."
+        },
+        {
+          "file": "blog/video-conference-security-zoom-teams-meet-small-business-2026.html",
+          "length": 159,
+          "problem": "longer than 155",
+          "description": "Secure Zoom, Microsoft Teams, and Google Meet meetings. Lobby, passcodes, screen-share limits, recordings, and guest rules a small business can set in 3 steps."
+        }
+      ]
+    },
+    {
+      "id": "meta-unique",
+      "pass": true,
+      "count": 0,
+      "items": []
+    },
+    {
+      "id": "h1-single",
+      "pass": true,
+      "count": 0,
+      "items": []
+    },
+    {
+      "id": "canonical-self",
+      "pass": true,
+      "count": 0,
+      "items": []
+    },
+    {
+      "id": "og-twitter",
+      "pass": false,
+      "count": 45,
+      "items": [
+        {
+          "file": "break-fix-vs-managed-it.html",
+          "missing": [
+            "twitter:image"
+          ]
+        },
+        {
+          "file": "cloud-services-carmel.html",
+          "missing": [
+            "twitter:image"
+          ]
+        },
+        {
+          "file": "cloud-services-gilroy.html",
+          "missing": [
+            "twitter:image"
+          ]
+        },
+        {
+          "file": "cloud-services-hollister.html",
+          "missing": [
+            "twitter:image"
+          ]
+        },
+        {
+          "file": "cloud-services-marina.html",
+          "missing": [
+            "twitter:image"
+          ]
+        },
+        {
+          "file": "cloud-services-pacific-grove.html",
+          "missing": [
+            "twitter:image"
+          ]
+        },
+        {
+          "file": "cloud-services-seaside.html",
+          "missing": [
+            "twitter:image"
+          ]
+        },
+        {
+          "file": "cmmc-compliance.html",
+          "missing": [
+            "twitter:image"
+          ]
+        },
+        {
+          "file": "co-managed-it.html",
+          "missing": [
+            "twitter:image"
+          ]
+        },
+        {
+          "file": "cyber-insurance-compliance.html",
+          "missing": [
+            "twitter:image"
+          ]
+        },
+        {
+          "file": "cybersecurity-carmel.html",
+          "missing": [
+            "twitter:image"
+          ]
+        },
+        {
+          "file": "cybersecurity-gilroy.html",
+          "missing": [
+            "twitter:image"
+          ]
+        },
+        {
+          "file": "cybersecurity-hollister.html",
+          "missing": [
+            "twitter:image"
+          ]
+        },
+        {
+          "file": "cybersecurity-marina.html",
+          "missing": [
+            "twitter:image"
+          ]
+        },
+        {
+          "file": "cybersecurity-pacific-grove.html",
+          "missing": [
+            "twitter:image"
+          ]
+        },
+        {
+          "file": "cybersecurity-seaside.html",
+          "missing": [
+            "twitter:image"
+          ]
+        },
+        {
+          "file": "hipaa-it-compliance.html",
+          "missing": [
+            "twitter:image"
+          ]
+        },
+        {
+          "file": "it-help-aptos.html",
+          "missing": [
+            "twitter:image"
+          ]
+        },
+        {
+          "file": "it-help-capitola.html",
+          "missing": [
+            "twitter:image"
+          ]
+        },
+        {
+          "file": "it-help-carmel-valley.html",
+          "missing": [
+            "twitter:image"
+          ]
+        },
+        {
+          "file": "it-help-castroville.html",
+          "missing": [
+            "twitter:image"
+          ]
+        },
+        {
+          "file": "it-help-gonzales.html",
+          "missing": [
+            "twitter:image"
+          ]
+        },
+        {
+          "file": "it-help-greenfield.html",
+          "missing": [
+            "twitter:image"
+          ]
+        },
+        {
+          "file": "it-help-morgan-hill.html",
+          "missing": [
+            "twitter:image"
+          ]
+        },
+        {
+          "file": "it-help-prunedale.html",
+          "missing": [
+            "twitter:image"
+          ]
+        },
+        {
+          "file": "it-help-san-juan-bautista.html",
+          "missing": [
+            "twitter:image"
+          ]
+        },
+        {
+          "file": "it-help-scotts-valley.html",
+          "missing": [
+            "twitter:image"
+          ]
+        },
+        {
+          "file": "managed-detection-response.html",
+          "missing": [
+            "twitter:image"
+          ]
+        },
+        {
+          "file": "msp-partners.html",
+          "missing": [
+            "twitter:image"
+          ]
+        },
+        {
+          "file": "pci-compliance.html",
+          "missing": [
+            "twitter:image"
+          ]
+        },
+        {
+          "file": "penetration-testing.html",
+          "missing": [
+            "twitter:image"
+          ]
+        },
+        {
+          "file": "ransomware-recovery.html",
+          "missing": [
+            "twitter:image"
+          ]
+        },
+        {
+          "file": "voip-business-phone-systems.html",
+          "missing": [
+            "twitter:image"
+          ]
+        },
+        {
+          "file": "web-design-carmel.html",
+          "missing": [
+            "twitter:image"
+          ]
+        },
+        {
+          "file": "web-design-gilroy.html",
+          "missing": [
+            "twitter:image"
+          ]
+        },
+        {
+          "file": "web-design-hollister.html",
+          "missing": [
+            "twitter:image"
+          ]
+        },
+        {
+          "file": "web-design-marina.html",
+          "missing": [
+            "twitter:image"
+          ]
+        },
+        {
+          "file": "web-design-monterey.html",
+          "missing": [
+            "twitter:image"
+          ]
+        },
+        {
+          "file": "web-design-pacific-grove.html",
+          "missing": [
+            "twitter:image"
+          ]
+        },
+        {
+          "file": "web-design-salinas.html",
+          "missing": [
+            "twitter:image"
+          ]
+        },
+        {
+          "file": "web-design-san-jose.html",
+          "missing": [
+            "twitter:image"
+          ]
+        },
+        {
+          "file": "web-design-santa-cruz.html",
+          "missing": [
+            "twitter:image"
+          ]
+        },
+        {
+          "file": "web-design-seaside.html",
+          "missing": [
+            "twitter:image"
+          ]
+        },
+        {
+          "file": "web-design-watsonville.html",
+          "missing": [
+            "twitter:image"
+          ]
+        },
+        {
+          "file": "zero-trust-security.html",
+          "missing": [
+            "twitter:image"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "jsonld-parse",
+      "pass": true,
+      "count": 0,
+      "items": []
+    },
+    {
+      "id": "business-node",
+      "pass": false,
+      "count": 57,
+      "items": [
+        {
+          "file": "break-fix-vs-managed-it.html"
+        },
+        {
+          "file": "cloud-services-carmel.html"
+        },
+        {
+          "file": "cloud-services-gilroy.html"
+        },
+        {
+          "file": "cloud-services-hollister.html"
+        },
+        {
+          "file": "cloud-services-marina.html"
+        },
+        {
+          "file": "cloud-services-monterey.html"
+        },
+        {
+          "file": "cloud-services-pacific-grove.html"
+        },
+        {
+          "file": "cloud-services-salinas.html"
+        },
+        {
+          "file": "cloud-services-san-jose.html"
+        },
+        {
+          "file": "cloud-services-santa-cruz.html"
+        },
+        {
+          "file": "cloud-services-seaside.html"
+        },
+        {
+          "file": "cloud-services-watsonville.html"
+        },
+        {
+          "file": "cmmc-compliance.html"
+        },
+        {
+          "file": "co-managed-it.html"
+        },
+        {
+          "file": "cyber-insurance-compliance.html"
+        },
+        {
+          "file": "cybersecurity-carmel.html"
+        },
+        {
+          "file": "cybersecurity-gilroy.html"
+        },
+        {
+          "file": "cybersecurity-hollister.html"
+        },
+        {
+          "file": "cybersecurity-marina.html"
+        },
+        {
+          "file": "cybersecurity-monterey.html"
+        },
+        {
+          "file": "cybersecurity-pacific-grove.html"
+        },
+        {
+          "file": "cybersecurity-salinas.html"
+        },
+        {
+          "file": "cybersecurity-san-jose.html"
+        },
+        {
+          "file": "cybersecurity-santa-cruz.html"
+        },
+        {
+          "file": "cybersecurity-seaside.html"
+        },
+        {
+          "file": "cybersecurity-watsonville.html"
+        },
+        {
+          "file": "hipaa-it-compliance.html"
+        },
+        {
+          "file": "it-help-aptos.html"
+        },
+        {
+          "file": "it-help-capitola.html"
+        },
+        {
+          "file": "it-help-carmel-valley.html"
+        },
+        {
+          "file": "it-help-castroville.html"
+        },
+        {
+          "file": "it-help-gonzales.html"
+        },
+        {
+          "file": "it-help-greenfield.html"
+        },
+        {
+          "file": "it-help-morgan-hill.html"
+        },
+        {
+          "file": "it-help-prunedale.html"
+        },
+        {
+          "file": "it-help-san-juan-bautista.html"
+        },
+        {
+          "file": "it-help-scotts-valley.html"
+        },
+        {
+          "file": "managed-detection-response.html"
+        },
+        {
+          "file": "msp-partners.html"
+        },
+        {
+          "file": "pci-compliance.html"
+        },
+        {
+          "file": "penetration-testing.html"
+        },
+        {
+          "file": "ransomware-recovery.html"
+        },
+        {
+          "file": "service-area.html"
+        },
+        {
+          "file": "services.html"
+        },
+        {
+          "file": "voip-business-phone-systems.html"
+        },
+        {
+          "file": "web-design-carmel.html"
+        },
+        {
+          "file": "web-design-gilroy.html"
+        },
+        {
+          "file": "web-design-hollister.html"
+        },
+        {
+          "file": "web-design-marina.html"
+        },
+        {
+          "file": "web-design-monterey.html"
+        },
+        {
+          "file": "web-design-pacific-grove.html"
+        },
+        {
+          "file": "web-design-salinas.html"
+        },
+        {
+          "file": "web-design-san-jose.html"
+        },
+        {
+          "file": "web-design-santa-cruz.html"
+        },
+        {
+          "file": "web-design-seaside.html"
+        },
+        {
+          "file": "web-design-watsonville.html"
+        },
+        {
+          "file": "zero-trust-security.html"
+        }
+      ]
+    },
+    {
+      "id": "service-provider",
+      "pass": false,
+      "count": 22,
+      "items": [
+        {
+          "file": "cybersecurity.html",
+          "service": "Managed Detection and Response (MDR)"
+        },
+        {
+          "file": "cybersecurity.html",
+          "service": "Multi-Factor Authentication (MFA) and Identity Management"
+        },
+        {
+          "file": "cybersecurity.html",
+          "service": "Email Security and Anti-Phishing"
+        },
+        {
+          "file": "cybersecurity.html",
+          "service": "Cloud Backup and Disaster Recovery"
+        },
+        {
+          "file": "cybersecurity.html",
+          "service": "Vulnerability Management and Patching"
+        },
+        {
+          "file": "cybersecurity.html",
+          "service": "Security Awareness Training"
+        },
+        {
+          "file": "cybersecurity.html",
+          "service": "Network Security and Firewalls"
+        },
+        {
+          "file": "cybersecurity.html",
+          "service": "Cloud Security (Microsoft 365, Azure, AWS)"
+        },
+        {
+          "file": "cybersecurity.html",
+          "service": "Compliance Support (CMMC, HIPAA, PCI-DSS, NIST 800-171, C-TPAT)"
+        },
+        {
+          "file": "cybersecurity.html",
+          "service": "Incident Response and Recovery"
+        },
+        {
+          "file": "index.html",
+          "service": "Managed IT Services"
+        },
+        {
+          "file": "index.html",
+          "service": "Cybersecurity"
+        },
+        {
+          "file": "index.html",
+          "service": "Cloud Services"
+        },
+        {
+          "file": "index.html",
+          "service": "Web Development"
+        },
+        {
+          "file": "pricing.html",
+          "service": "Tiny Team Managed Security"
+        },
+        {
+          "file": "pricing.html",
+          "service": "Core Managed IT Services"
+        },
+        {
+          "file": "pricing.html",
+          "service": "Secure Growth Managed IT Services"
+        },
+        {
+          "file": "pricing.html",
+          "service": "Compliance & Continuity Managed IT Services"
+        },
+        {
+          "file": "salinas.html",
+          "service": "Tiny Team Managed Security"
+        },
+        {
+          "file": "salinas.html",
+          "service": "Core Managed IT"
+        },
+        {
+          "file": "salinas.html",
+          "service": "Secure Growth"
+        },
+        {
+          "file": "salinas.html",
+          "service": "Compliance &amp; Continuity"
+        }
+      ]
+    },
+    {
+      "id": "breadcrumbs",
+      "pass": false,
+      "count": 6,
+      "items": [
+        {
+          "file": "about.html"
+        },
+        {
+          "file": "contact.html"
+        },
+        {
+          "file": "ctpat.html"
+        },
+        {
+          "file": "ghosxt-cares.html"
+        },
+        {
+          "file": "pricing.html"
+        },
+        {
+          "file": "website-development.html"
+        }
+      ]
+    },
+    {
+      "id": "faq-visible",
+      "pass": false,
+      "count": 24,
+      "items": [
+        {
+          "file": "carmel.html",
+          "missing": 2,
+          "first": "Do you support real estate offices in Carmel and Carmel Valley?"
+        },
+        {
+          "file": "gilroy.html",
+          "missing": 2,
+          "first": "Do you handle PCI compliance for Gilroy retail and outlet stores?"
+        },
+        {
+          "file": "hollister.html",
+          "missing": 2,
+          "first": "Are you affordable for very small Hollister businesses?"
+        },
+        {
+          "file": "marina.html",
+          "missing": 2,
+          "first": "Do you support growing businesses in Marina?"
+        },
+        {
+          "file": "pacific-grove.html",
+          "missing": 3,
+          "first": "Do you support inns and B&Bs in Pacific Grove?"
+        },
+        {
+          "file": "salinas.html",
+          "missing": 2,
+          "first": "Can you handle backup and disaster recovery for our Salinas business?"
+        },
+        {
+          "file": "san-jose.html",
+          "missing": 1,
+          "first": "How fast can you get on-site to San Jose?"
+        },
+        {
+          "file": "santa-cruz.html",
+          "missing": 2,
+          "first": "Do you support tech startups in Santa Cruz?"
+        },
+        {
+          "file": "seaside.html",
+          "missing": 1,
+          "first": "How fast can you get on-site to Seaside?"
+        },
+        {
+          "file": "watsonville.html",
+          "missing": 1,
+          "first": "How fast can you respond to issues?"
+        },
+        {
+          "file": "blog/backup-disaster-recovery-small-business-2026.html",
+          "missing": 1,
+          "first": "What is immutable storage and why does it matter?"
+        },
+        {
+          "file": "blog/business-email-compromise-bec-prevention-small-business-2026.html",
+          "missing": 3,
+          "first": "What are the most common types of BEC attacks?"
+        },
+        {
+          "file": "blog/clicked-phishing-link-what-to-do-small-business-2026.html",
+          "missing": 5,
+          "first": "What should I do if I clicked a phishing link?"
+        },
+        {
+          "file": "blog/do-i-need-managed-it-services-signs-small-business.html",
+          "missing": 1,
+          "first": "We already have a 'computer guy.' Why would we need managed IT?"
+        },
+        {
+          "file": "blog/domain-name-security-small-business-2026.html",
+          "missing": 3,
+          "first": "What happens if my business domain name expires?"
+        },
+        {
+          "file": "blog/edr-vs-antivirus-small-business-2026.html",
+          "missing": 3,
+          "first": "Is EDR just a more expensive antivirus?"
+        },
+        {
+          "file": "blog/employee-offboarding-it-security-checklist-small-business.html",
+          "missing": 3,
+          "first": "How fast should IT access be revoked after an employee leaves?"
+        },
+        {
+          "file": "blog/identity-hardening-small-business-5-employees-microsoft-365.html",
+          "missing": 2,
+          "first": "What does 'identity hardening' actually mean?"
+        },
+        {
+          "file": "blog/incident-response-plan-small-business-2026.html",
+          "missing": 2,
+          "first": "How long should an incident response plan be for a small business?"
+        },
+        {
+          "file": "blog/it-support-vs-managed-it-services-difference.html",
+          "missing": 1,
+          "first": "What does 'MSP' mean and what's the difference from an MSSP?"
+        },
+        {
+          "file": "blog/microsoft-365-small-business-settings-to-turn-on-2026.html",
+          "missing": 1,
+          "first": "Do I need the more expensive Microsoft 365 Business Premium plan to be secure?"
+        },
+        {
+          "file": "blog/nightmare-eclipse-legacyhive-windows-zero-day-smb-2026.html",
+          "missing": 1,
+          "first": "What should a small business do this week?"
+        },
+        {
+          "file": "blog/phishing-simulation-security-awareness-training-small-business-2026.html",
+          "missing": 1,
+          "first": "What should I do if an employee keeps clicking on phishing simulation emails?"
+        },
+        {
+          "file": "blog/silent-ransom-group-fake-it-workers-in-person-access-smb-2026.html",
+          "missing": 1,
+          "first": "Someone from 'IT' we didn't recognize called or showed up. What should staff do?"
+        }
+      ]
+    },
+    {
+      "id": "localbusiness-consistent",
+      "pass": false,
+      "count": 21,
+      "items": [
+        {
+          "field": "name",
+          "value": "Ghosxt",
+          "pages": 27,
+          "example": "about.html"
+        },
+        {
+          "field": "name",
+          "value": "Ghosxt – Managed IT Services Carmel",
+          "pages": 1,
+          "example": "carmel.html"
+        },
+        {
+          "field": "name",
+          "value": "Ghosxt – Managed IT Services Gilroy",
+          "pages": 1,
+          "example": "gilroy.html"
+        },
+        {
+          "field": "name",
+          "value": "Ghosxt – Managed IT Services Hollister",
+          "pages": 1,
+          "example": "hollister.html"
+        },
+        {
+          "field": "name",
+          "value": "Ghosxt – Managed IT Services Marina",
+          "pages": 1,
+          "example": "marina.html"
+        },
+        {
+          "field": "name",
+          "value": "Ghosxt – Managed IT Services Monterey County",
+          "pages": 1,
+          "example": "monterey-county.html"
+        },
+        {
+          "field": "name",
+          "value": "Ghosxt – Managed IT Services Monterey",
+          "pages": 1,
+          "example": "monterey.html"
+        },
+        {
+          "field": "name",
+          "value": "Ghosxt – Managed IT Services Pacific Grove",
+          "pages": 1,
+          "example": "pacific-grove.html"
+        },
+        {
+          "field": "name",
+          "value": "Ghosxt – Managed IT Services San Benito County",
+          "pages": 1,
+          "example": "san-benito-county.html"
+        },
+        {
+          "field": "name",
+          "value": "Ghosxt – Managed IT Services San Jose",
+          "pages": 1,
+          "example": "san-jose.html"
+        },
+        {
+          "field": "name",
+          "value": "Ghosxt – Managed IT Services Santa Clara County",
+          "pages": 1,
+          "example": "santa-clara-county.html"
+        },
+        {
+          "field": "name",
+          "value": "Ghosxt – Managed IT Services Santa Cruz County",
+          "pages": 1,
+          "example": "santa-cruz-county.html"
+        },
+        {
+          "field": "name",
+          "value": "Ghosxt – Managed IT Services Santa Cruz",
+          "pages": 1,
+          "example": "santa-cruz.html"
+        },
+        {
+          "field": "name",
+          "value": "Ghosxt – Managed IT Services Seaside",
+          "pages": 1,
+          "example": "seaside.html"
+        },
+        {
+          "field": "name",
+          "value": "Ghosxt – Managed IT Services Watsonville",
+          "pages": 1,
+          "example": "watsonville.html"
+        },
+        {
+          "field": "telephone",
+          "value": "+18312040501",
+          "pages": 40,
+          "example": "about.html"
+        },
+        {
+          "field": "telephone",
+          "value": "(absent)",
+          "pages": 1,
+          "example": "website-development.html"
+        },
+        {
+          "field": "address",
+          "value": "(absent)",
+          "pages": 3,
+          "example": "about.html"
+        },
+        {
+          "field": "address",
+          "value": "{\"@type\":\"PostalAddress\",\"addressCountry\":\"US\",\"addressLocality\":\"Salinas\",\"addressRegion\":\"CA\",\"postalCode\":\"93901\"}",
+          "pages": 38,
+          "example": "agriculture-it-services.html"
+        },
+        {
+          "field": "email",
+          "value": "sales@ghosxt.com",
+          "pages": 40,
+          "example": "about.html"
+        },
+        {
+          "field": "email",
+          "value": "(absent)",
+          "pages": 1,
+          "example": "website-development.html"
+        }
+      ]
+    },
+    {
+      "id": "areaserved-consistent",
+      "pass": false,
+      "count": 23,
+      "items": [
+        {
+          "field": "areaServed",
+          "value": "[{\"@type\":\"State\",\"name\":\"California\"},{\"@type\":\"Country\",\"name\":\"United States\"}]",
+          "pages": 1,
+          "example": "about.html"
+        },
+        {
+          "field": "areaServed",
+          "value": "[{\"@type\":\"City\",\"name\":\"Salinas\"},{\"@type\":\"City\",\"name\":\"Monterey\"},{\"@type\":\"City\",\"name\":\"Watsonville\"},{\"@type\":\"City\",\"name\":\"Hollister\"},{\"@type\":\"City\",\"name\":\"Santa Cruz\"},{\"@type\":\"City\",\"name\":\"Gilroy\"},{\"@type\":\"City\",\"name\":\"San Jose\"},{\"@type\":\"City\",\"name\":\"Pacific Grove\"},{\"@type\":\"City\",\"name\":\"Carmel\"},{\"@type\":\"City\",\"name\":\"Seaside\"},{\"@type\":\"City\",\"name\":\"Marina\"}]",
+          "pages": 11,
+          "example": "agriculture-it-services.html"
+        },
+        {
+          "field": "areaServed",
+          "value": "[{\"@type\":\"City\",\"name\":\"Carmel-by-the-Sea\"},{\"@type\":\"City\",\"name\":\"Carmel Valley\"},{\"@type\":\"City\",\"name\":\"Pacific Grove\"},{\"@type\":\"City\",\"name\":\"Monterey\"}]",
+          "pages": 1,
+          "example": "carmel.html"
+        },
+        {
+          "field": "areaServed",
+          "value": "(absent)",
+          "pages": 7,
+          "example": "contact.html"
+        },
+        {
+          "field": "areaServed",
+          "value": "[{\"@type\":\"State\",\"name\":\"California\"},{\"@type\":\"City\",\"name\":\"Salinas\"},{\"@type\":\"City\",\"name\":\"Monterey\"},{\"@type\":\"City\",\"name\":\"Santa Cruz\"},{\"@type\":\"City\",\"name\":\"San Jose\"}]",
+          "pages": 1,
+          "example": "ctpat.html"
+        },
+        {
+          "field": "areaServed",
+          "value": "[{\"@type\":\"City\",\"name\":\"Gilroy\"},{\"@type\":\"City\",\"name\":\"Hollister\"},{\"@type\":\"City\",\"name\":\"Morgan Hill\"},{\"@type\":\"City\",\"name\":\"San Jose\"}]",
+          "pages": 1,
+          "example": "gilroy.html"
+        },
+        {
+          "field": "areaServed",
+          "value": "[{\"@type\":\"City\",\"name\":\"Salinas\"},{\"@type\":\"City\",\"name\":\"Monterey\"},{\"@type\":\"City\",\"name\":\"Carmel\"},{\"@type\":\"City\",\"name\":\"Santa Cruz\"},{\"@type\":\"City\",\"name\":\"Pacific Grove\"},{\"@type\":\"City\",\"name\":\"San Jose\"}]",
+          "pages": 3,
+          "example": "google-workspace-mac-it.html"
+        },
+        {
+          "field": "areaServed",
+          "value": "[{\"@type\":\"City\",\"name\":\"Hollister\"},{\"@type\":\"City\",\"name\":\"Salinas\"},{\"@type\":\"City\",\"name\":\"Gilroy\"},{\"@type\":\"City\",\"name\":\"San Juan Bautista\"}]",
+          "pages": 1,
+          "example": "hollister.html"
+        },
+        {
+          "field": "areaServed",
+          "value": "[{\"@type\":\"City\",\"name\":\"Salinas\"},{\"@type\":\"City\",\"name\":\"Monterey\"},{\"@type\":\"City\",\"name\":\"Carmel\"},{\"@type\":\"City\",\"name\":\"Pacific Grove\"},{\"@type\":\"City\",\"name\":\"Watsonville\"},{\"@type\":\"City\",\"name\":\"Santa Cruz\"},{\"@type\":\"City\",\"name\":\"Seaside\"},{\"@type\":\"City\",\"name\":\"Marina\"},{\"@type\":\"City\",\"name\":\"Soledad\"}]",
+          "pages": 1,
+          "example": "hospitality-it-services.html"
+        },
+        {
+          "field": "areaServed",
+          "value": "[{\"@type\":\"GeoCircle\",\"geoMidpoint\":{\"@type\":\"GeoCoordinates\",\"latitude\":36.6777,\"longitude\":-121.6555},\"geoRadius\":\"80000\"},{\"@type\":\"City\",\"name\":\"Salinas\"},{\"@type\":\"City\",\"name\":\"Monterey\"},{\"@type\":\"City\",\"name\":\"Watsonville\"},{\"@type\":\"City\",\"name\":\"Santa Cruz\"},{\"@type\":\"City\",\"name\":\"Hollister\"},{\"@type\":\"City\",\"name\":\"Gilroy\"},{\"@type\":\"City\",\"name\":\"San Jose\"},{\"@type\":\"City\",\"name\":\"Pacific Grove\"},{\"@type\":\"City\",\"name\":\"Carmel\"},{\"@type\":\"City\",\"name\":\"Seaside\"},{\"@type\":\"City\",\"name\":\"Marina\"},{\"@type\":\"State\",\"name\":\"California\"},{\"@type\":\"Country\",\"name\":\"United States\"}]",
+          "pages": 1,
+          "example": "index.html"
+        },
+        {
+          "field": "areaServed",
+          "value": "[{\"@type\":\"City\",\"name\":\"Marina\"},{\"@type\":\"City\",\"name\":\"Seaside\"},{\"@type\":\"City\",\"name\":\"Monterey\"},{\"@type\":\"City\",\"name\":\"Salinas\"}]",
+          "pages": 1,
+          "example": "marina.html"
+        },
+        {
+          "field": "areaServed",
+          "value": "{\"@type\":\"AdministrativeArea\",\"name\":\"Monterey County, California\"}",
+          "pages": 1,
+          "example": "monterey-county.html"
+        },
+        {
+          "field": "areaServed",
+          "value": "[{\"@type\":\"City\",\"name\":\"Monterey\"},{\"@type\":\"City\",\"name\":\"Pacific Grove\"},{\"@type\":\"City\",\"name\":\"Carmel\"},{\"@type\":\"City\",\"name\":\"Seaside\"}]",
+          "pages": 1,
+          "example": "monterey.html"
+        },
+        {
+          "field": "areaServed",
+          "value": "[{\"@type\":\"City\",\"name\":\"Pacific Grove\"},{\"@type\":\"City\",\"name\":\"Monterey\"},{\"@type\":\"City\",\"name\":\"Carmel\"}]",
+          "pages": 1,
+          "example": "pacific-grove.html"
+        },
+        {
+          "field": "areaServed",
+          "value": "[{\"@type\":\"City\",\"name\":\"Salinas\"},{\"@type\":\"City\",\"name\":\"Monterey\"},{\"@type\":\"City\",\"name\":\"Watsonville\"},{\"@type\":\"City\",\"name\":\"Castroville\"},{\"@type\":\"City\",\"name\":\"Marina\"},{\"@type\":\"City\",\"name\":\"Seaside\"},{\"@type\":\"City\",\"name\":\"Hollister\"},{\"@type\":\"City\",\"name\":\"Pacific Grove\"},{\"@type\":\"City\",\"name\":\"Carmel\"},{\"@type\":\"City\",\"name\":\"Santa Cruz\"},{\"@type\":\"City\",\"name\":\"Gilroy\"},{\"@type\":\"AdministrativeArea\",\"name\":\"Monterey County, CA\"},{\"@type\":\"AdministrativeArea\",\"name\":\"San Benito County, CA\"}]",
+          "pages": 1,
+          "example": "salinas.html"
+        },
+        {
+          "field": "areaServed",
+          "value": "{\"@type\":\"AdministrativeArea\",\"name\":\"San Benito County, California\"}",
+          "pages": 1,
+          "example": "san-benito-county.html"
+        },
+        {
+          "field": "areaServed",
+          "value": "[{\"@type\":\"City\",\"name\":\"San Jose\"},{\"@type\":\"City\",\"name\":\"Morgan Hill\"},{\"@type\":\"City\",\"name\":\"Gilroy\"},{\"@type\":\"City\",\"name\":\"Sunnyvale\"}]",
+          "pages": 1,
+          "example": "san-jose.html"
+        },
+        {
+          "field": "areaServed",
+          "value": "{\"@type\":\"AdministrativeArea\",\"name\":\"Santa Clara County, California\"}",
+          "pages": 1,
+          "example": "santa-clara-county.html"
+        },
+        {
+          "field": "areaServed",
+          "value": "{\"@type\":\"AdministrativeArea\",\"name\":\"Santa Cruz County, California\"}",
+          "pages": 1,
+          "example": "santa-cruz-county.html"
+        },
+        {
+          "field": "areaServed",
+          "value": "[{\"@type\":\"City\",\"name\":\"Santa Cruz\"},{\"@type\":\"City\",\"name\":\"Watsonville\"},{\"@type\":\"City\",\"name\":\"Capitola\"},{\"@type\":\"City\",\"name\":\"Aptos\"},{\"@type\":\"City\",\"name\":\"Scotts Valley\"}]",
+          "pages": 1,
+          "example": "santa-cruz.html"
+        },
+        {
+          "field": "areaServed",
+          "value": "[{\"@type\":\"City\",\"name\":\"Seaside\"},{\"@type\":\"City\",\"name\":\"Marina\"},{\"@type\":\"City\",\"name\":\"Monterey\"},{\"@type\":\"City\",\"name\":\"Sand City\"}]",
+          "pages": 1,
+          "example": "seaside.html"
+        },
+        {
+          "field": "areaServed",
+          "value": "[{\"@type\":\"City\",\"name\":\"Watsonville\"},{\"@type\":\"City\",\"name\":\"Salinas\"},{\"@type\":\"City\",\"name\":\"Santa Cruz\"},{\"@type\":\"City\",\"name\":\"Aptos\"}]",
+          "pages": 1,
+          "example": "watsonville.html"
+        },
+        {
+          "field": "areaServed",
+          "value": "[{\"@type\":\"State\",\"name\":\"California\"},{\"@type\":\"State\",\"name\":\"Texas\"},{\"@type\":\"State\",\"name\":\"Florida\"},{\"@type\":\"State\",\"name\":\"Nevada\"},{\"@type\":\"State\",\"name\":\"Arizona\"},{\"@type\":\"State\",\"name\":\"Oregon\"},{\"@type\":\"State\",\"name\":\"Washington\"},{\"@type\":\"Country\",\"name\":\"United States\"}]",
+          "pages": 1,
+          "example": "website-development.html"
+        }
+      ]
+    },
+    {
+      "id": "verify-markers",
+      "pass": false,
+      "count": 28,
+      "items": [
+        {
+          "file": "case-studies.html",
+          "count": 1
+        },
+        {
+          "file": "cloud-services.html",
+          "count": 5
+        },
+        {
+          "file": "cmmc-compliance.html",
+          "count": 4
+        },
+        {
+          "file": "contact.html",
+          "count": 4
+        },
+        {
+          "file": "engineering-it-services.html",
+          "count": 1
+        },
+        {
+          "file": "google-workspace-mac-it.html",
+          "count": 15,
+          "info": true,
+          "note": "allowed: noindex draft"
+        },
+        {
+          "file": "healthcare-it-services.html",
+          "count": 3
+        },
+        {
+          "file": "hospitality-it-services.html",
+          "count": 1
+        },
+        {
+          "file": "it-for-audited-companies.html",
+          "count": 17,
+          "info": true,
+          "note": "allowed: noindex draft"
+        },
+        {
+          "file": "it-support-nonprofits-google-workspace.html",
+          "count": 9
+        },
+        {
+          "file": "it-support-remote-mac-teams.html",
+          "count": 7
+        },
+        {
+          "file": "managed-detection-response.html",
+          "count": 3
+        },
+        {
+          "file": "managed-it-cost-monterey-county.html",
+          "count": 7
+        },
+        {
+          "file": "managed-it-services.html",
+          "count": 3
+        },
+        {
+          "file": "manufacturing-it-services.html",
+          "count": 1
+        },
+        {
+          "file": "network-design.html",
+          "count": 3
+        },
+        {
+          "file": "pci-compliance.html",
+          "count": 3
+        },
+        {
+          "file": "penetration-testing.html",
+          "count": 11
+        },
+        {
+          "file": "pricing.html",
+          "count": 5
+        },
+        {
+          "file": "salinas.html",
+          "count": 3
+        },
+        {
+          "file": "santa-cruz.html",
+          "count": 1
+        },
+        {
+          "file": "seaside.html",
+          "count": 1
+        },
+        {
+          "file": "services.html",
+          "count": 1
+        },
+        {
+          "file": "zero-trust-security.html",
+          "count": 4
+        },
+        {
+          "file": "blog/data-retention-destruction-policy-small-business-2026.html",
+          "count": 1
+        },
+        {
+          "file": "blog/hospitality-it-cybersecurity-monterey-bay.html",
+          "count": 1
+        },
+        {
+          "file": "blog/penetration-testing-small-business-2026.html",
+          "count": 1
+        },
+        {
+          "file": "blog/property-management-it-monterey-santa-cruz.html",
+          "count": 1
+        },
+        {
+          "file": "blog/trucking-logistics-it-services-salinas-owner-operator.html",
+          "count": 1
+        },
+        {
+          "file": "case-studies/remote-google-workspace-onboarding.html",
+          "count": 11
+        }
+      ]
+    },
+    {
+      "id": "em-dash",
+      "pass": true,
+      "count": 0,
+      "items": []
+    },
+    {
+      "id": "dental",
+      "pass": true,
+      "count": 0,
+      "items": []
+    },
+    {
+      "id": "key-facts",
+      "pass": true,
+      "count": 0,
+      "items": []
+    },
+    {
+      "id": "search-action",
+      "pass": false,
+      "count": 1,
+      "items": [
+        {
+          "file": "index.html",
+          "target": "https://ghosxt.com/?s={search_term_string}"
+        }
+      ]
+    }
+  ]
+}

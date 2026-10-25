@@ -18,6 +18,8 @@ says `local`. Mobile numbers come first everywhere. Nothing here is served to vi
 | `screenshots/<slug>.<mobile|desktop>.png` | Full-page screenshots of the representative pages, device scale factor 1 | `tools/screenshots.mjs` |
 | `../queries.md` | Target query panel with the pre-filled web-search column | hand |
 | `../ci/lighthouserc.mobile.json`, `../ci/lighthouserc.desktop.json`, `../ci/budgets-*.md` | Lighthouse CI budgets derived from `lighthouse-local/` | `tools/make-budgets.mjs` |
+| `../ci/known-*.txt` | Allowlists the crawl gate tolerates until the matching AUDIT.md finding is fixed | hand |
+| `seo-check.md` | Output of the repo-level checker on the audited commit | `tools/check-seo-meta.mjs` |
 
 ## How to regenerate (cd audit; npm install once; CHROME_PATH set to a Chromium binary)
 

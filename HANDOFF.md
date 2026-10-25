@@ -16,7 +16,7 @@ need an answer are marked "after Dn". Everything else can start now.
 | # | PR | Branch | Closes | Gate |
 |---|---|---|---|---|
 | 1 | A1 Routing and headers | seo/a1-routing-2026-10 | T-03, T-04, T-07, T-15 (the broken href) | none |
-| 2 | B1 Titles, metas, OG | seo/b1-titles-2026-10 | T-01, T-02, A-05, A-04 (title suffix) | none |
+| 2 | B1 Titles, metas, OG | seo/b1-titles-2026-10 | T-01, T-02, T-19, A-05, A-04 (title suffix) | none |
 | 3 | B2 One business entity | seo/b2-entity-2026-10 | S-01, S-02, S-03, S-05, S-06, L-02, L-04 | D3 for the name string (default "Ghosxt" until answered) |
 | 4 | B3 FAQ visibility | seo/b3-faq-2026-10 | S-04, A-03 (compliance pages) | none |
 | 5 | C1 Compliance front door | seo/c1-nav-2026-10 | C-05, T-15 (service-area links), T-18 | T-18 changes visible anchor text: label required |
@@ -105,11 +105,11 @@ pages and three cloud-services spokes are; trim per T-02).
 
 | ID | Test |
 |---|---|
-| A-01 | `grep -rl '\[VERIFY' --include='*.html' . \| grep -v -e google-workspace-mac-it -e it-for-audited-companies \| wc -l` prints 0 |
-| S-04 | `node audit/tools/check-faq-visible.mjs` prints 0 mismatches (write it from the Python in AUDIT.md) |
+| A-01 | `node audit/tools/check-seo-meta.mjs --only verify-markers` reports PASS; `grep -rl '\[VERIFY' --include='*.html' . \| grep -v -e google-workspace-mac-it -e it-for-audited-companies \| wc -l` prints 0 |
+| S-04 | `node audit/tools/check-seo-meta.mjs --only faq-visible` reports PASS |
 | A-06 | `site:ghosxt.com` on Bing lists the root pages; brand query in audit/queries.md returns ghosxt.com on every surface |
 | C-01 | `/managed-ai` returns 200 `index, follow`, is in sitemap.xml and llms.txt, visible FAQ equals FAQPage |
-| T-01 | title uniqueness scan prints 0 groups |
+| T-01 | `node audit/tools/check-seo-meta.mjs --only title-unique` reports PASS |
 | T-02 | `python3 scripts/check-title-meta-length.py` exits 0 |
 | T-03 | `curl -sI https://www.ghosxt.com/pricing` returns 301 to `https://ghosxt.com/pricing` |
 | T-04 | `curl -sI https://ghosxt.com/blog` returns 301 |
@@ -121,11 +121,12 @@ pages and three cloud-services spokes are; trim per T-02).
 | T-10 | regenerated OG card uses the brand font (label required) |
 | T-12 | html-validate with `no-implicit-button-type` and `heading-level` as `error` passes |
 | T-13 | Lighthouse image-delivery no longer lists the logo |
-| S-01 | every LocalBusiness node equals the canonical body (script) |
-| S-02 | JSON-LD scan: 0 root pages without a business node, 0 Service without provider |
-| S-03 | BreadcrumbList on every root page except index, 404, privacy-policy |
-| S-05 | every areaServed identical; key-facts phrase count equals 101 |
-| S-06 | no SearchAction on `/` |
+| T-19 | `node audit/tools/check-seo-meta.mjs --only og-twitter` reports PASS |
+| S-01 | `node audit/tools/check-seo-meta.mjs --only localbusiness-consistent` reports PASS (one variant) |
+| S-02 | `node audit/tools/check-seo-meta.mjs --only business-node,service-provider` reports PASS |
+| S-03 | `node audit/tools/check-seo-meta.mjs --only breadcrumbs` reports PASS |
+| S-05 | `node audit/tools/check-seo-meta.mjs --only areaserved-consistent` reports PASS; key-facts phrase count equals 101 |
+| S-06 | `node audit/tools/check-seo-meta.mjs --only search-action` reports PASS |
 | S-07 | sameAs URLs present and each returns 200 |
 | S-08 | WebPage with dateModified on every root page; visible date matches |
 | A-02 | first 70 words of each lead contain the service name, "Monterey County", and "pricing" or the audience |
