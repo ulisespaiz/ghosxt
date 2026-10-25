@@ -1053,10 +1053,42 @@ body:has(.top-banner.hidden) .hero-section {
   top: 6px;
 }
 
+/* Hamburger to X. The button's aria-expanded state (set by main.js) drives
+   it: the outer bars slide to the middle and rotate into a cross while the
+   middle bar fades. The site-wide reduced-motion rule shortens the
+   transitions to nothing. */
+.navbar-mobile-toggle i {
+  transition: background-color 0.18s ease;
+}
+
+.navbar-mobile-toggle i::before,
+.navbar-mobile-toggle i::after {
+  transition:
+    top 0.22s ease,
+    transform 0.22s ease;
+}
+
+.navbar-mobile-toggle[aria-expanded="true"] i {
+  background-color: transparent;
+}
+
+.navbar-mobile-toggle[aria-expanded="true"] i::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.navbar-mobile-toggle[aria-expanded="true"] i::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
 .navbar-mobile-menu {
   display: none;
-  position: fixed;
-  top: 72px;
+  /* Hangs from the sticky header, whatever its height on the page and
+     whatever sits above it (the blog top banner), so there is never a strip
+     of page between the two. The 1px keeps the header's bottom border. */
+  position: absolute;
+  top: calc(100% + 1px);
   left: 0;
   right: 0;
   background: var(--ghosxt-white);
@@ -1095,6 +1127,30 @@ body:has(.top-banner.hidden) .hero-section {
   }
 }
 
+/* The menu's eight entries settle one after another, 30 ms apart. */
+.navbar-mobile-menu.active > * {
+  animation: navItemIn 0.26s ease both;
+}
+
+.navbar-mobile-menu.active > :nth-child(2) { animation-delay: 30ms; }
+.navbar-mobile-menu.active > :nth-child(3) { animation-delay: 60ms; }
+.navbar-mobile-menu.active > :nth-child(4) { animation-delay: 90ms; }
+.navbar-mobile-menu.active > :nth-child(5) { animation-delay: 120ms; }
+.navbar-mobile-menu.active > :nth-child(6) { animation-delay: 150ms; }
+.navbar-mobile-menu.active > :nth-child(7) { animation-delay: 180ms; }
+.navbar-mobile-menu.active > :nth-child(n + 8) { animation-delay: 210ms; }
+
+@keyframes navItemIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 body.menu-open {
   overflow: hidden;
   position: fixed;
@@ -1102,12 +1158,15 @@ body.menu-open {
 }
 
 .navbar-overlay {
-  position: fixed;
-  top: 119px;
-  top: 0;
+  /* Like the menu, hangs from the header: it dims everything below the
+     header on every page, whatever sits above the header, and never the
+     header itself. The page is pinned while the menu is open, so a
+     viewport-tall box is always enough. */
+  position: absolute;
+  top: 100%;
   left: 0;
   right: 0;
-  bottom: 0;
+  height: 100vh;
   background: rgba(0, 0, 0, 0.5);
   z-index: 99;
   opacity: 0;
@@ -1122,19 +1181,7 @@ body.menu-open {
   visibility: visible;
 }
 
-.top-banner.hidden ~ .navbar-overlay {
-  top: 71px;
-}
 
-@media (max-width: 640px) {
-  .navbar-overlay {
-    top: 105px;
-  }
-
-  .top-banner.hidden ~ .navbar-overlay {
-    top: 61px;
-  }
-}
 
 .mobile-link {
   padding: 0.75rem 1rem;
@@ -1495,7 +1542,6 @@ footer {
   }
 
   .navbar-mobile-menu {
-    top: 62px;
     max-height: calc(100vh - 62px);
   }
 
@@ -1509,8 +1555,7 @@ footer {
   }
 
   .navbar-mobile-menu {
-    top: 109px;
-    max-height: calc(100vh - 109px);
+    max-height: calc(100vh - 62px);
     padding: 12px 24px 32px 24px;
   }
 
