@@ -76,15 +76,18 @@ jobs:
           if [ "$head_count" -gt "$base_count" ]; then
             echo "::error::New title or meta description length violations introduced"; exit 1
           fi
-      - name: No em dashes in changed files
+      - name: No em dashes in added lines
         run: |
-          changed=$(git diff --name-only "${{ steps.base.outputs.sha }}" HEAD -- '*.html' '*.md' '*.txt' '*.xml' '*.css' '*.js' '*.py' '*.mjs' '*.json' '*.yml' | grep -v '^audit/claims.md$' || true)
-          bad=0
-          for f in $changed; do
-            [ -f "$f" ] || continue
-            if grep -n $'\xe2\x80\x94' "$f" >/dev/null; then echo "::error file=$f::em dash found"; grep -n $'\xe2\x80\x94' "$f" | head -3; bad=1; fi
-          done
-          exit $bad
+          # Only lines this branch adds, in source and copy files; generated baseline
+          # output (Lighthouse and axe JSON, rendered snapshots) is excluded.
+          added=$(git diff --unified=0 "${{ steps.base.outputs.sha }}" HEAD -- \
+            '*.html' '*.md' '*.txt' '*.xml' '*.css' '*.js' '*.py' '*.mjs' '*.json' '*.yml' \
+            ':(exclude)audit/baseline/**' ':(exclude)audit/claims.md' ':(exclude)audit/package-lock.json' \
+            | grep -E '^\+' | grep -vE '^\+\+\+' | grep -n $'\xe2\x80\x94' || true)
+          if [ -n "$added" ]; then
+            echo "::error::em dash found in added lines"; echo "$added" | head -20; exit 1
+          fi
+          echo "no em dash in added lines"
       - name: No new [VERIFY] markers in served HTML (count versus base)
         run: |
           count() { grep -o '\[VERIFY' "$1"/*.html "$1"/blog/*.html "$1"/case-studies/*.html 2>/dev/null | wc -l; }

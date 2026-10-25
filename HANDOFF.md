@@ -26,7 +26,7 @@ need an answer are marked "after Dn". Everything else can start now.
 | 9 | C3 Answer-first leads, service pages | seo/c3-leads-services-2026-10 | A-02 (9 service pages) | none |
 | 10 | C4 Answer-first leads, verticals | seo/c4-leads-verticals-2026-10 | A-02 (10 vertical pages) | none |
 | 11 | D1 Accessibility: chrome and tables | seo/d1-a11y-chrome-2026-10 | X-02, X-04, X-05, X-06, X-09, T-12 | none |
-| 12 | D2 Accessibility: pricing calculator | seo/d2-a11y-pricing-2026-10 | X-03, X-07 | screenshot diff must be clean except the calculator text tone (label) |
+| 12 | D2 Accessibility: pricing calculator | seo/d2-a11y-pricing-2026-10 | X-03, X-07, T-23 | screenshot diff must be clean except the calculator text tone (label) |
 | 12b | D3 Accessibility: contrast on five pages | seo/d3-a11y-contrast-2026-10 | X-01, X-08, X-10 | visible: label required |
 | 13 | A3 Home main thread, inline scripts, image variants | seo/a3-home-perf-2026-10 | T-06, T-13, T-17, T-22 (/support part) | screenshot diff must be clean |
 | 13b | A6 Contact page third parties | seo/a6-contact-embeds-2026-10 | T-21 | placeholder box is a visible change: label required |
@@ -124,6 +124,7 @@ pages and three cloud-services spokes are; trim per T-02).
 | T-12 | html-validate with `no-implicit-button-type` and `heading-level` as `error` passes |
 | T-13 | Lighthouse image-delivery no longer lists the logo |
 | T-19 | `node audit/tools/check-seo-meta.mjs --only og-twitter` reports PASS |
+| T-23 | rendered snapshot of /pricing has no U+2014; assets/js/*.js contain none |
 | T-20 | mobile FCP under 2.0 s and LCP under 2.5 s on /contact, /ctpat, /website-development, /privacy-policy, /ghosxt-cares; perf 90 or better |
 | T-21 | no calendly.com or stripe.com request before interaction on /contact; third-party-cookies passes; weight under 1 MiB; BP 100 |
 | T-22 | desktop CLS under 0.05 on /support and /blog/all; no nav entry in layout-shifts on / |

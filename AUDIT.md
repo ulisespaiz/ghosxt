@@ -476,6 +476,18 @@ box size (fixed `width` and `height` on `.fi` in the nav, or inline SVG per T-05
 widget or an injected notice) and reserve its height. Acceptance: desktop CLS under 0.05
 on `/support` and `/blog/all`; nav shift absent from `layout-shifts` on `/`.
 
+### T-23 P2: the pricing calculator writes em dashes into the page from JavaScript
+
+Pages: `/pricing`. Evidence: the served HTML has no em dash, but `assets/js/pricing.js`
+sets `textContent = '—'` as the placeholder for an unused cost and for a zero savings
+percentage (lines 192, 208, 225), so the rendered DOM (`audit/baseline/html/pricing.html`)
+contains the character the house rules forbid; seven more sit in JS comments
+(`main.js:45`, `pricing.js` header and comments). Fix: use "n/a" or an empty string with
+the surrounding label for the placeholders (a visible change of one glyph, label
+required), and plain hyphens in comments; then re-minify and stamp. Acceptance: the
+rendered snapshot of `/pricing` contains no U+2014; `grep -c` for the character on
+`assets/js/*.js` returns 0.
+
 ## Structured data findings
 
 ### S-01 P1: the business entity has 15 different names and 4 incomplete copies
