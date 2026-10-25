@@ -111,6 +111,47 @@
   margin-bottom: 16px;
 }
 
+/* Hero entrance on first paint: the badge, subtitle, buttons and trust line
+   rise into place one after another. The H1 stays static on purpose: it is
+   the page's largest paint, and an animated opacity would move that metric.
+   Each rule animates from hidden to the element's own resting opacity (the
+   subtitle rests at 0.7), and the screenshot tool disables animations, so
+   captures show the settled page. */
+.hero-badge,
+.hero-subtitle,
+.hero-buttons,
+.hero-trust-callout {
+  animation: heroRise 0.55s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+}
+
+.hero-subtitle {
+  animation-delay: 0.12s;
+}
+
+.hero-buttons {
+  animation-delay: 0.22s;
+}
+
+.hero-trust-callout {
+  animation-delay: 0.32s;
+}
+
+@keyframes heroRise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-badge,
+  .hero-subtitle,
+  .hero-buttons,
+  .hero-trust-callout {
+    animation: none;
+  }
+}
+
 .hero-trust-callout {
   text-align: center;
   color: var(--ghosxt-black);
