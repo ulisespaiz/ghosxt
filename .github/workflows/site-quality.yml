@@ -28,6 +28,10 @@ on:
   pull_request:
     # Programme branches stack on seo/audit-2026-10 until it merges, so PRs
     # that target a seo/ branch get the same gates as PRs that target main.
+    # labeled and unlabeled are included because the screenshot gate reads
+    # the visual-change-approved label from the triggering event: applying
+    # the label after a run started must start a new run.
+    types: [opened, synchronize, reopened, labeled, unlabeled]
     branches: [main, "seo/**"]
   push:
     branches: [main]
