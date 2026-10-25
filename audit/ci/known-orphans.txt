@@ -1,0 +1,2 @@
+# Sitemap pages with no inbound internal link that the crawl gate tolerates. Remove when linked (AUDIT.md C-05).
+/service-area

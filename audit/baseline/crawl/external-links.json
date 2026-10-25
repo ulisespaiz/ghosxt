@@ -1,0 +1,2017 @@
+[
+  {
+    "url": "https://adaptiveis.net/",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/top-managed-it-providers-salinas-monterey-bay",
+        "raw": "https://adaptiveis.net/"
+      }
+    ]
+  },
+  {
+    "url": "https://adaptiveis.net/blog/managed-it-services-providers-near-me/",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/top-managed-it-providers-salinas-monterey-bay",
+        "raw": "https://adaptiveis.net/blog/managed-it-services-providers-near-me/"
+      }
+    ]
+  },
+  {
+    "url": "https://blog.cloudflare.com/php-vulnerabilities-waf-protection/",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/php2shell-php-vulnerability-cve-2026-109618-smb-website-2026",
+        "raw": "https://blog.cloudflare.com/php-vulnerabilities-waf-protection/"
+      }
+    ]
+  },
+  {
+    "url": "https://blog.qualys.com/vulnerabilities-threat-research/2026/10/20/php-announces-critical-security-release-for-two-vulnerabilities",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/php2shell-php-vulnerability-cve-2026-109618-smb-website-2026",
+        "raw": "https://blog.qualys.com/vulnerabilities-threat-research/2026/10/20/php-announces-critical-security-release-for-two-vulnerabilities"
+      }
+    ]
+  },
+  {
+    "url": "https://bushmanqc.com/",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/website-development",
+        "raw": "https://bushmanqc.com/"
+      }
+    ]
+  },
+  {
+    "url": "https://calendly.com/ulises-ghosxt",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 268,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/ada-website-accessibility-small-business-2026",
+        "raw": "https://calendly.com/ulises-ghosxt"
+      },
+      {
+        "from": "https://ghosxt.com/",
+        "raw": "https://calendly.com/ulises-ghosxt"
+      },
+      {
+        "from": "https://ghosxt.com/backup-disaster-recovery",
+        "raw": "https://calendly.com/ulises-ghosxt"
+      },
+      {
+        "from": "https://ghosxt.com/blog/",
+        "raw": "https://calendly.com/ulises-ghosxt"
+      },
+      {
+        "from": "https://ghosxt.com/agriculture-it-services",
+        "raw": "https://calendly.com/ulises-ghosxt"
+      }
+    ]
+  },
+  {
+    "url": "https://clearpathcompliance.net/",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/website-development",
+        "raw": "https://clearpathcompliance.net/"
+      }
+    ]
+  },
+  {
+    "url": "https://cloud.google.com/blog/products/identity-security/responding-to-core-php-vulnerabilities-cve-2026-109618-cve-2026-109619",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/php2shell-php-vulnerability-cve-2026-109618-smb-website-2026",
+        "raw": "https://cloud.google.com/blog/products/identity-security/responding-to-core-php-vulnerabilities-cve-2026-109618-cve-2026-109619"
+      }
+    ]
+  },
+  {
+    "url": "https://cmmachshop.com/",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/website-development",
+        "raw": "https://cmmachshop.com/"
+      }
+    ]
+  },
+  {
+    "url": "https://csrc.nist.gov/pubs/sp/800/171/r2/upd1/final",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/cmmc-compliance",
+        "raw": "https://csrc.nist.gov/pubs/sp/800/171/r2/upd1/final"
+      }
+    ]
+  },
+  {
+    "url": "https://cyberab.org/Member/RPO-10223-Alvarez-Technology-Group-Inc",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/top-managed-it-providers-salinas-monterey-bay",
+        "raw": "https://cyberab.org/Member/RPO-10223-Alvarez-Technology-Group-Inc"
+      }
+    ]
+  },
+  {
+    "url": "https://dodcio.defense.gov/CMMC/",
+    "status": 403,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/cmmc-compliance",
+        "raw": "https://dodcio.defense.gov/CMMC/"
+      }
+    ]
+  },
+  {
+    "url": "https://earthwisetransportation.com/",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/website-development",
+        "raw": "https://earthwisetransportation.com/"
+      }
+    ]
+  },
+  {
+    "url": "https://g.co/kgs/XEsFJm2",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/",
+        "raw": "https://g.co/kgs/XEsFJm2"
+      }
+    ]
+  },
+  {
+    "url": "https://github.com/Nightmare-Eclipse/GreenPlasma",
+    "status": 403,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/yellowkey-greenplasma-windows-bitlocker-bypass-privesc",
+        "raw": "https://github.com/Nightmare-Eclipse/GreenPlasma"
+      }
+    ]
+  },
+  {
+    "url": "https://github.com/Nightmare-Eclipse/YellowKey",
+    "status": 403,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/yellowkey-greenplasma-windows-bitlocker-bypass-privesc",
+        "raw": "https://github.com/Nightmare-Eclipse/YellowKey"
+      }
+    ]
+  },
+  {
+    "url": "https://heavyweightlineman.com/",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/website-development",
+        "raw": "https://heavyweightlineman.com/"
+      }
+    ]
+  },
+  {
+    "url": "https://huskylogic.com/",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/website-development",
+        "raw": "https://huskylogic.com/"
+      }
+    ]
+  },
+  {
+    "url": "https://knowledge.workspace.google.com/admin/apps/set-up-your-own-custom-saml-app",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/phishing-resistant-mfa-google-workspace-admin-guide",
+        "raw": "https://knowledge.workspace.google.com/admin/apps/set-up-your-own-custom-saml-app"
+      }
+    ]
+  },
+  {
+    "url": "https://knowledge.workspace.google.com/admin/devices/sign-a-user-out-of-a-managed-google-account",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/offboard-contractor-google-workspace-checklist",
+        "raw": "https://knowledge.workspace.google.com/admin/devices/sign-a-user-out-of-a-managed-google-account"
+      }
+    ]
+  },
+  {
+    "url": "https://knowledge.workspace.google.com/admin/drive/recover-deleted-files-and-folders-for-drive-users",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/google-workspace-backup-small-business-2026",
+        "raw": "https://knowledge.workspace.google.com/admin/drive/recover-deleted-files-and-folders-for-drive-users"
+      }
+    ]
+  },
+  {
+    "url": "https://knowledge.workspace.google.com/admin/security/about-2sv-enforcement-for-admins",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/phishing-resistant-mfa-google-workspace-admin-guide",
+        "raw": "https://knowledge.workspace.google.com/admin/security/about-2sv-enforcement-for-admins"
+      }
+    ]
+  },
+  {
+    "url": "https://knowledge.workspace.google.com/admin/security/deploy-2-step-verification",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/phishing-resistant-mfa-google-workspace-admin-guide",
+        "raw": "https://knowledge.workspace.google.com/admin/security/deploy-2-step-verification"
+      }
+    ]
+  },
+  {
+    "url": "https://knowledge.workspace.google.com/admin/security/protect-users-with-the-advanced-protection-program",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/phishing-resistant-mfa-google-workspace-admin-guide",
+        "raw": "https://knowledge.workspace.google.com/admin/security/protect-users-with-the-advanced-protection-program"
+      }
+    ]
+  },
+  {
+    "url": "https://learn.microsoft.com/en-us/defender-endpoint/attack-surface-reduction-rules-reference",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/windows-miniplasma-cve-2020-17103-system-privesc-smb",
+        "raw": "https://learn.microsoft.com/en-us/defender-endpoint/attack-surface-reduction-rules-reference"
+      }
+    ]
+  },
+  {
+    "url": "https://learn.microsoft.com/en-us/entra/identity/conditional-access/overview",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/microsoft-365-vs-google-workspace-small-business-2026",
+        "raw": "https://learn.microsoft.com/en-us/entra/identity/conditional-access/overview"
+      }
+    ]
+  },
+  {
+    "url": "https://learn.microsoft.com/en-us/exchange/new-features/build-numbers-and-release-dates",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/october-2026-patch-tuesday-record-1400-fixes-smb",
+        "raw": "https://learn.microsoft.com/en-us/exchange/new-features/build-numbers-and-release-dates"
+      }
+    ]
+  },
+  {
+    "url": "https://learn.microsoft.com/en-us/mem/intune/enrollment/device-enrollment-program-enroll-ios",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/microsoft-365-vs-google-workspace-small-business-2026",
+        "raw": "https://learn.microsoft.com/en-us/mem/intune/enrollment/device-enrollment-program-enroll-ios"
+      }
+    ]
+  },
+  {
+    "url": "https://learn.microsoft.com/en-us/office365/servicedescriptions/office-365-platform-service-description/office-365-plan-options",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/microsoft-365-vs-google-workspace-small-business-2026",
+        "raw": "https://learn.microsoft.com/en-us/office365/servicedescriptions/office-365-platform-service-description/office-365-plan-options"
+      }
+    ]
+  },
+  {
+    "url": "https://learn.microsoft.com/en-us/office365/servicedescriptions/office-365-platform-service-description/office-365-us-government/gcc-high-and-dod",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/microsoft-365-vs-google-workspace-small-business-2026",
+        "raw": "https://learn.microsoft.com/en-us/office365/servicedescriptions/office-365-platform-service-description/office-365-us-government/gcc-high-and-dod"
+      }
+    ]
+  },
+  {
+    "url": "https://learn.microsoft.com/en-us/windows-server/get-started/extended-security-updates-overview",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/october-2026-patch-tuesday-record-1400-fixes-smb",
+        "raw": "https://learn.microsoft.com/en-us/windows-server/get-started/extended-security-updates-overview"
+      }
+    ]
+  },
+  {
+    "url": "https://learn.microsoft.com/en-us/windows/release-health/status-windows-server-2022",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/october-2026-patch-tuesday-record-1400-fixes-smb",
+        "raw": "https://learn.microsoft.com/en-us/windows/release-health/status-windows-server-2022"
+      }
+    ]
+  },
+  {
+    "url": "https://learn.microsoft.com/en-us/windows/release-health/windows-message-center",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/october-2026-patch-tuesday-record-1400-fixes-smb",
+        "raw": "https://learn.microsoft.com/en-us/windows/release-health/windows-message-center"
+      }
+    ]
+  },
+  {
+    "url": "https://learn.microsoft.com/en-us/windows/release-health/windows11-release-information",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/october-2026-patch-tuesday-record-1400-fixes-smb",
+        "raw": "https://learn.microsoft.com/en-us/windows/release-health/windows11-release-information"
+      }
+    ]
+  },
+  {
+    "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1798.29.&lawCode=CIV",
+    "status": 403,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/canvas-data-breach-2026-what-to-do",
+        "raw": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1798.29.&lawCode=CIV"
+      }
+    ]
+  },
+  {
+    "url": "https://magonemedia.com/",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/top-website-design-companies-salinas-monterey-bay",
+        "raw": "https://magonemedia.com/"
+      }
+    ]
+  },
+  {
+    "url": "https://montereypremier.com/",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/top-website-design-companies-salinas-monterey-bay",
+        "raw": "https://montereypremier.com/"
+      }
+    ]
+  },
+  {
+    "url": "https://msrc.microsoft.com/update-guide/releaseNote/2026-Jul",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/july-2026-patch-tuesday-record-570-fixes-smb",
+        "raw": "https://msrc.microsoft.com/update-guide/releaseNote/2026-Jul"
+      }
+    ]
+  },
+  {
+    "url": "https://msrc.microsoft.com/update-guide/releaseNote/2026-Oct",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/october-2026-patch-tuesday-record-1400-fixes-smb",
+        "raw": "https://msrc.microsoft.com/update-guide/releaseNote/2026-Oct"
+      }
+    ]
+  },
+  {
+    "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-108398",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/october-2026-patch-tuesday-record-1400-fixes-smb",
+        "raw": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-108398"
+      }
+    ]
+  },
+  {
+    "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-21413",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/october-2026-patch-tuesday-record-1400-fixes-smb",
+        "raw": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-21413"
+      }
+    ]
+  },
+  {
+    "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50661",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/july-2026-patch-tuesday-record-570-fixes-smb",
+        "raw": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50661"
+      }
+    ]
+  },
+  {
+    "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-55007",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/september-2026-patch-tuesday-966-fixes-2-zero-days-smb",
+        "raw": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-55007"
+      }
+    ]
+  },
+  {
+    "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-56155",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/july-2026-patch-tuesday-record-570-fixes-smb",
+        "raw": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-56155"
+      }
+    ]
+  },
+  {
+    "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-56164",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/july-2026-patch-tuesday-record-570-fixes-smb",
+        "raw": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-56164"
+      }
+    ]
+  },
+  {
+    "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62832",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/august-2026-patch-tuesday-400-fixes-3-zero-days-smb",
+        "raw": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62832"
+      }
+    ]
+  },
+  {
+    "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62878",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/august-2026-patch-tuesday-400-fixes-3-zero-days-smb",
+        "raw": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62878"
+      }
+    ]
+  },
+  {
+    "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62911",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/august-2026-patch-tuesday-400-fixes-3-zero-days-smb",
+        "raw": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62911"
+      }
+    ]
+  },
+  {
+    "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-63520",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/august-2026-patch-tuesday-400-fixes-3-zero-days-smb",
+        "raw": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-63520"
+      }
+    ]
+  },
+  {
+    "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-66302",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/september-2026-patch-tuesday-966-fixes-2-zero-days-smb",
+        "raw": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-66302"
+      }
+    ]
+  },
+  {
+    "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-68820",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/august-2026-patch-tuesday-400-fixes-3-zero-days-smb",
+        "raw": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-68820"
+      }
+    ]
+  },
+  {
+    "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69465",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/september-2026-patch-tuesday-966-fixes-2-zero-days-smb",
+        "raw": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69465"
+      }
+    ]
+  },
+  {
+    "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69525",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/september-2026-patch-tuesday-966-fixes-2-zero-days-smb",
+        "raw": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69525"
+      }
+    ]
+  },
+  {
+    "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69678",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/september-2026-patch-tuesday-966-fixes-2-zero-days-smb",
+        "raw": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69678"
+      }
+    ]
+  },
+  {
+    "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69730",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/september-2026-patch-tuesday-966-fixes-2-zero-days-smb",
+        "raw": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69730"
+      }
+    ]
+  },
+  {
+    "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-70229",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/october-2026-patch-tuesday-record-1400-fixes-smb",
+        "raw": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-70229"
+      }
+    ]
+  },
+  {
+    "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-70242",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/october-2026-patch-tuesday-record-1400-fixes-smb",
+        "raw": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-70242"
+      }
+    ]
+  },
+  {
+    "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-70300",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/october-2026-patch-tuesday-record-1400-fixes-smb",
+        "raw": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-70300"
+      }
+    ]
+  },
+  {
+    "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-70352",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/september-2026-patch-tuesday-966-fixes-2-zero-days-smb",
+        "raw": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-70352"
+      }
+    ]
+  },
+  {
+    "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-70571",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/october-2026-patch-tuesday-record-1400-fixes-smb",
+        "raw": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-70571"
+      }
+    ]
+  },
+  {
+    "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-80083",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/september-2026-patch-tuesday-966-fixes-2-zero-days-smb",
+        "raw": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-80083"
+      }
+    ]
+  },
+  {
+    "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-81963",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/september-2026-patch-tuesday-966-fixes-2-zero-days-smb",
+        "raw": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-81963"
+      }
+    ]
+  },
+  {
+    "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-83711",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/september-2026-patch-tuesday-966-fixes-2-zero-days-smb",
+        "raw": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-83711"
+      }
+    ]
+  },
+  {
+    "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-85880",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/september-2026-patch-tuesday-966-fixes-2-zero-days-smb",
+        "raw": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-85880"
+      }
+    ]
+  },
+  {
+    "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-88178",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/october-2026-patch-tuesday-record-1400-fixes-smb",
+        "raw": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-88178"
+      }
+    ]
+  },
+  {
+    "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-92707",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/october-2026-patch-tuesday-record-1400-fixes-smb",
+        "raw": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-92707"
+      }
+    ]
+  },
+  {
+    "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-94510",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/october-2026-patch-tuesday-record-1400-fixes-smb",
+        "raw": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-94510"
+      }
+    ]
+  },
+  {
+    "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-96207",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/october-2026-patch-tuesday-record-1400-fixes-smb",
+        "raw": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-96207"
+      }
+    ]
+  },
+  {
+    "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-96934",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/october-2026-patch-tuesday-record-1400-fixes-smb",
+        "raw": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-96934"
+      }
+    ]
+  },
+  {
+    "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-96940",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/october-2026-patch-tuesday-record-1400-fixes-smb",
+        "raw": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-96940"
+      }
+    ]
+  },
+  {
+    "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-96951",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/october-2026-patch-tuesday-record-1400-fixes-smb",
+        "raw": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-96951"
+      }
+    ]
+  },
+  {
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-17103",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/windows-miniplasma-cve-2020-17103-system-privesc-smb",
+        "raw": "https://nvd.nist.gov/vuln/detail/CVE-2020-17103"
+      }
+    ]
+  },
+  {
+    "url": "https://pagespeed.web.dev/",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/website-redesign-signs-small-business-2026",
+        "raw": "https://pagespeed.web.dev/"
+      }
+    ]
+  },
+  {
+    "url": "https://pauldavispartnership.com/",
+    "status": 0,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/website-development",
+        "raw": "https://pauldavispartnership.com/"
+      }
+    ]
+  },
+  {
+    "url": "https://peakifymarketing.com/",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/top-website-design-companies-salinas-monterey-bay",
+        "raw": "https://peakifymarketing.com/"
+      }
+    ]
+  },
+  {
+    "url": "https://petersalinasmayor.com/",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/website-development",
+        "raw": "https://petersalinasmayor.com/"
+      }
+    ]
+  },
+  {
+    "url": "https://protectsalinasrenters.com/",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/website-development",
+        "raw": "https://protectsalinasrenters.com/"
+      }
+    ]
+  },
+  {
+    "url": "https://research.jfrog.com/post/php2shell-all-you-need-to-know-about-cve-2026-109618-and-cve-2026-109619/",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/php2shell-php-vulnerability-cve-2026-109618-smb-website-2026",
+        "raw": "https://research.jfrog.com/post/php2shell-all-you-need-to-know-about-cve-2026-109618-and-cve-2026-109619/"
+      }
+    ]
+  },
+  {
+    "url": "https://share.google/88vsSuams5s62RdPJ",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 59,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/",
+        "raw": "https://share.google/88vsSuams5s62RdPJ"
+      },
+      {
+        "from": "https://ghosxt.com/backup-disaster-recovery",
+        "raw": "https://share.google/88vsSuams5s62RdPJ"
+      },
+      {
+        "from": "https://ghosxt.com/agriculture-it-services",
+        "raw": "https://share.google/88vsSuams5s62RdPJ"
+      },
+      {
+        "from": "https://ghosxt.com/carmel",
+        "raw": "https://share.google/88vsSuams5s62RdPJ"
+      },
+      {
+        "from": "https://ghosxt.com/cloud-services-carmel",
+        "raw": "https://share.google/88vsSuams5s62RdPJ"
+      }
+    ]
+  },
+  {
+    "url": "https://support.ghosxt.com/",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/support",
+        "raw": "https://support.ghosxt.com/"
+      }
+    ]
+  },
+  {
+    "url": "https://support.google.com/a/answer/112445",
+    "status": 404,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/google-workspace-backup-small-business-2026",
+        "raw": "https://support.google.com/a/answer/112445"
+      }
+    ]
+  },
+  {
+    "url": "https://support.google.com/a/answer/1247799",
+    "status": 404,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/offboard-contractor-google-workspace-checklist",
+        "raw": "https://support.google.com/a/answer/1247799"
+      }
+    ]
+  },
+  {
+    "url": "https://support.google.com/a/answer/173390",
+    "status": 404,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/offboard-contractor-google-workspace-checklist",
+        "raw": "https://support.google.com/a/answer/173390"
+      }
+    ]
+  },
+  {
+    "url": "https://support.google.com/a/answer/175197",
+    "status": 404,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/microsoft-365-vs-google-workspace-small-business-2026",
+        "raw": "https://support.google.com/a/answer/175197"
+      }
+    ]
+  },
+  {
+    "url": "https://support.google.com/a/answer/2537800",
+    "status": 404,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/offboard-contractor-google-workspace-checklist",
+        "raw": "https://support.google.com/a/answer/2537800"
+      }
+    ]
+  },
+  {
+    "url": "https://support.google.com/a/answer/33312",
+    "status": 404,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/offboard-contractor-google-workspace-checklist",
+        "raw": "https://support.google.com/a/answer/33312"
+      }
+    ]
+  },
+  {
+    "url": "https://support.google.com/a/answer/33314",
+    "status": 404,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 2,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/google-workspace-backup-small-business-2026",
+        "raw": "https://support.google.com/a/answer/33314"
+      },
+      {
+        "from": "https://ghosxt.com/blog/offboard-contractor-google-workspace-checklist",
+        "raw": "https://support.google.com/a/answer/33314"
+      }
+    ]
+  },
+  {
+    "url": "https://support.google.com/a/answer/4579579",
+    "status": 404,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/offboard-contractor-google-workspace-checklist",
+        "raw": "https://support.google.com/a/answer/4579579"
+      }
+    ]
+  },
+  {
+    "url": "https://support.google.com/a/answer/6329207",
+    "status": 404,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/offboard-contractor-google-workspace-checklist",
+        "raw": "https://support.google.com/a/answer/6329207"
+      }
+    ]
+  },
+  {
+    "url": "https://support.google.com/a/answer/7281227",
+    "status": 404,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/offboard-contractor-google-workspace-checklist",
+        "raw": "https://support.google.com/a/answer/7281227"
+      }
+    ]
+  },
+  {
+    "url": "https://support.google.com/a/answer/9275380",
+    "status": 404,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/microsoft-365-vs-google-workspace-small-business-2026",
+        "raw": "https://support.google.com/a/answer/9275380"
+      }
+    ]
+  },
+  {
+    "url": "https://support.google.com/accounts/answer/185833",
+    "status": 404,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/offboard-contractor-google-workspace-checklist",
+        "raw": "https://support.google.com/accounts/answer/185833"
+      }
+    ]
+  },
+  {
+    "url": "https://support.google.com/drive/answer/2375102",
+    "status": 404,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/google-workspace-backup-small-business-2026",
+        "raw": "https://support.google.com/drive/answer/2375102"
+      }
+    ]
+  },
+  {
+    "url": "https://support.google.com/vault/answer/2462365",
+    "status": 404,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/google-workspace-backup-small-business-2026",
+        "raw": "https://support.google.com/vault/answer/2462365"
+      }
+    ]
+  },
+  {
+    "url": "https://support.microsoft.com/en-US/servicing/os/windows-10/2026/08/kb5120249-windows-10-21h2-22h2-security-update",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/august-2026-patch-tuesday-400-fixes-3-zero-days-smb",
+        "raw": "https://support.microsoft.com/en-US/servicing/os/windows-10/2026/08/kb5120249-windows-10-21h2-22h2-security-update"
+      }
+    ]
+  },
+  {
+    "url": "https://support.microsoft.com/en-us/servicing/os/windows-10/2026/09/kb5122878-windows-10-21h2-22h2-security-update",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/september-2026-patch-tuesday-966-fixes-2-zero-days-smb",
+        "raw": "https://support.microsoft.com/en-us/servicing/os/windows-10/2026/09/kb5122878-windows-10-21h2-22h2-security-update"
+      }
+    ]
+  },
+  {
+    "url": "https://support.microsoft.com/en-US/servicing/os/windows-11/2026/08/kb5121003-windows-11-24h2-25h2-security-update",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/august-2026-patch-tuesday-400-fixes-3-zero-days-smb",
+        "raw": "https://support.microsoft.com/en-US/servicing/os/windows-11/2026/08/kb5121003-windows-11-24h2-25h2-security-update"
+      }
+    ]
+  },
+  {
+    "url": "https://support.microsoft.com/en-us/servicing/os/windows-11/2026/09/kb5124008-windows-11-24h2-25h2-security-update",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/september-2026-patch-tuesday-966-fixes-2-zero-days-smb",
+        "raw": "https://support.microsoft.com/en-us/servicing/os/windows-11/2026/09/kb5124008-windows-11-24h2-25h2-security-update"
+      }
+    ]
+  },
+  {
+    "url": "https://support.microsoft.com/en-us/servicing/os/windows-server/2026/09/kb5122871-windows-server-2025-security-update",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/september-2026-patch-tuesday-966-fixes-2-zero-days-smb",
+        "raw": "https://support.microsoft.com/en-us/servicing/os/windows-server/2026/09/kb5122871-windows-server-2025-security-update"
+      }
+    ]
+  },
+  {
+    "url": "https://support.microsoft.com/en-us/topic/windows-secure-boot-certificate-expiration-and-ca-updates-7ff40d33-95dc-4c3c-8725-a9b95457578e",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/september-2026-patch-tuesday-966-fixes-2-zero-days-smb",
+        "raw": "https://support.microsoft.com/en-us/topic/windows-secure-boot-certificate-expiration-and-ca-updates-7ff40d33-95dc-4c3c-8725-a9b95457578e"
+      }
+    ]
+  },
+  {
+    "url": "https://techcommunity.microsoft.com/blog/exchange/addressing-exchange-server-may-2026-vulnerability-cve-2026-42897/4518498",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/exchange-server-zero-day-cve-2026-42897-may-2026-smb",
+        "raw": "https://techcommunity.microsoft.com/blog/exchange/addressing-exchange-server-may-2026-vulnerability-cve-2026-42897/4518498"
+      }
+    ]
+  },
+  {
+    "url": "https://ticket.ghosxt.com/",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 268,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/ada-website-accessibility-small-business-2026",
+        "raw": "https://ticket.ghosxt.com/"
+      },
+      {
+        "from": "https://ghosxt.com/",
+        "raw": "https://ticket.ghosxt.com/"
+      },
+      {
+        "from": "https://ghosxt.com/backup-disaster-recovery",
+        "raw": "https://ticket.ghosxt.com/"
+      },
+      {
+        "from": "https://ghosxt.com/blog/",
+        "raw": "https://ticket.ghosxt.com/"
+      },
+      {
+        "from": "https://ghosxt.com/agriculture-it-services",
+        "raw": "https://ticket.ghosxt.com/"
+      }
+    ]
+  },
+  {
+    "url": "https://ulisespaiz.com/",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 2,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/about",
+        "raw": "https://ulisespaiz.com/"
+      },
+      {
+        "from": "https://ghosxt.com/website-development",
+        "raw": "https://ulisespaiz.com/"
+      }
+    ]
+  },
+  {
+    "url": "https://villicanatransport.com/",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/website-development",
+        "raw": "https://villicanatransport.com/"
+      }
+    ]
+  },
+  {
+    "url": "https://watchtowr.com/intelligence/php-cve-2026-109618-faq/",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/php2shell-php-vulnerability-cve-2026-109618-smb-website-2026",
+        "raw": "https://watchtowr.com/intelligence/php-cve-2026-109618-faq/"
+      }
+    ]
+  },
+  {
+    "url": "https://wave.webaim.org/",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/ada-website-accessibility-small-business-2026",
+        "raw": "https://wave.webaim.org/"
+      }
+    ]
+  },
+  {
+    "url": "https://workspace.google.com/pricing.html",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/microsoft-365-vs-google-workspace-small-business-2026",
+        "raw": "https://workspace.google.com/pricing.html"
+      }
+    ]
+  },
+  {
+    "url": "https://www.action1.com/patch-tuesday/september-2026-patch-tuesday-brief-start-with-exposure-not-the-patch-count/",
+    "status": 403,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/september-2026-patch-tuesday-966-fixes-2-zero-days-smb",
+        "raw": "https://www.action1.com/patch-tuesday/september-2026-patch-tuesday-brief-start-with-exposure-not-the-patch-count/"
+      }
+    ]
+  },
+  {
+    "url": "https://www.alvareztg.com/",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/top-managed-it-providers-salinas-monterey-bay",
+        "raw": "https://www.alvareztg.com/"
+      }
+    ]
+  },
+  {
+    "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-august-2026-patch-tuesday-fixes-400-flaws-3-zero-days/",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/august-2026-patch-tuesday-400-fixes-3-zero-days-smb",
+        "raw": "https://www.bleepingcomputer.com/news/microsoft/microsoft-august-2026-patch-tuesday-fixes-400-flaws-3-zero-days/"
+      }
+    ]
+  },
+  {
+    "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-october-2026-patch-tuesday-fixes-1-411-flaws-3-zero-days/",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/october-2026-patch-tuesday-record-1400-fixes-smb",
+        "raw": "https://www.bleepingcomputer.com/news/microsoft/microsoft-october-2026-patch-tuesday-fixes-1-411-flaws-3-zero-days/"
+      }
+    ]
+  },
+  {
+    "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-september-2026-patch-tuesday-fixes-966-flaws-2-zero-days/",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/september-2026-patch-tuesday-966-fixes-2-zero-days-smb",
+        "raw": "https://www.bleepingcomputer.com/news/microsoft/microsoft-september-2026-patch-tuesday-fixes-966-flaws-2-zero-days/"
+      }
+    ]
+  },
+  {
+    "url": "https://www.bleepingcomputer.com/news/microsoft/new-windows-miniplasma-zero-day-exploit-gives-system-access-poc-released/",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/windows-miniplasma-cve-2020-17103-system-privesc-smb",
+        "raw": "https://www.bleepingcomputer.com/news/microsoft/new-windows-miniplasma-zero-day-exploit-gives-system-access-poc-released/"
+      }
+    ]
+  },
+  {
+    "url": "https://www.bleepingcomputer.com/news/security/windows-legacyhive-zero-day-flaw-gets-free-unofficial-patches/",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/august-2026-patch-tuesday-400-fixes-3-zero-days-smb",
+        "raw": "https://www.bleepingcomputer.com/news/security/windows-legacyhive-zero-day-flaw-gets-free-unofficial-patches/"
+      }
+    ]
+  },
+  {
+    "url": "https://www.bls.gov/oes/",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/break-fix-vs-managed-it",
+        "raw": "https://www.bls.gov/oes/"
+      }
+    ]
+  },
+  {
+    "url": "https://www.cbp.gov/border-security/ports-entry/cargo-security/ctpat",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/ctpat",
+        "raw": "https://www.cbp.gov/border-security/ports-entry/cargo-security/ctpat"
+      }
+    ]
+  },
+  {
+    "url": "https://www.cbp.gov/border-security/ports-entry/cargo-security/ctpat-customs-trade-partnership-against-terrorism/apply/security-criteria",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/ctpat",
+        "raw": "https://www.cbp.gov/border-security/ports-entry/cargo-security/ctpat-customs-trade-partnership-against-terrorism/apply/security-criteria"
+      }
+    ]
+  },
+  {
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/october-2026-patch-tuesday-record-1400-fixes-smb",
+        "raw": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+      }
+    ]
+  },
+  {
+    "url": "https://www.cpuc.ca.gov/firethreatmaps",
+    "status": 404,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/pge-psps-it-continuity-plan-central-coast",
+        "raw": "https://www.cpuc.ca.gov/firethreatmaps"
+      }
+    ]
+  },
+  {
+    "url": "https://www.facebook.com/GhosxtTech",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 268,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/ada-website-accessibility-small-business-2026",
+        "raw": "https://www.facebook.com/GhosxtTech"
+      },
+      {
+        "from": "https://ghosxt.com/",
+        "raw": "https://www.facebook.com/GhosxtTech"
+      },
+      {
+        "from": "https://ghosxt.com/backup-disaster-recovery",
+        "raw": "https://www.facebook.com/GhosxtTech"
+      },
+      {
+        "from": "https://ghosxt.com/blog/",
+        "raw": "https://www.facebook.com/GhosxtTech"
+      },
+      {
+        "from": "https://ghosxt.com/agriculture-it-services",
+        "raw": "https://www.facebook.com/GhosxtTech"
+      }
+    ]
+  },
+  {
+    "url": "https://www.ftc.gov/business-guidance/small-businesses/cybersecurity",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/cyber-insurance-compliance",
+        "raw": "https://www.ftc.gov/business-guidance/small-businesses/cybersecurity"
+      }
+    ]
+  },
+  {
+    "url": "https://www.helpnetsecurity.com/2026/07/10/microsoft-windows-update-deployment-timelines/",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/august-2026-patch-tuesday-400-fixes-3-zero-days-smb",
+        "raw": "https://www.helpnetsecurity.com/2026/07/10/microsoft-windows-update-deployment-timelines/"
+      }
+    ]
+  },
+  {
+    "url": "https://www.hhs.gov/hipaa/for-professionals/compliance-enforcement/agreements/index.html",
+    "status": 403,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/hipaa-compliant-it-medical-monterey-county",
+        "raw": "https://www.hhs.gov/hipaa/for-professionals/compliance-enforcement/agreements/index.html"
+      }
+    ]
+  },
+  {
+    "url": "https://www.hhs.gov/hipaa/for-professionals/security/guidance/guidance-risk-analysis/index.html",
+    "status": 403,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/hipaa-it-compliance",
+        "raw": "https://www.hhs.gov/hipaa/for-professionals/security/guidance/guidance-risk-analysis/index.html"
+      }
+    ]
+  },
+  {
+    "url": "https://www.hhs.gov/hipaa/for-professionals/security/index.html",
+    "status": 403,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/hipaa-it-compliance",
+        "raw": "https://www.hhs.gov/hipaa/for-professionals/security/index.html"
+      }
+    ]
+  },
+  {
+    "url": "https://www.huntress.com/blog/php2shell-leaked-critical-php-vulnerabilities",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/php2shell-php-vulnerability-cve-2026-109618-smb-website-2026",
+        "raw": "https://www.huntress.com/blog/php2shell-leaked-critical-php-vulnerabilities"
+      }
+    ]
+  },
+  {
+    "url": "https://www.instagram.com/ghosxttech/",
+    "status": 429,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 268,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/ada-website-accessibility-small-business-2026",
+        "raw": "https://www.instagram.com/ghosxttech/"
+      },
+      {
+        "from": "https://ghosxt.com/",
+        "raw": "https://www.instagram.com/ghosxttech/"
+      },
+      {
+        "from": "https://ghosxt.com/backup-disaster-recovery",
+        "raw": "https://www.instagram.com/ghosxttech/"
+      },
+      {
+        "from": "https://ghosxt.com/blog/",
+        "raw": "https://www.instagram.com/ghosxttech/"
+      },
+      {
+        "from": "https://ghosxt.com/agriculture-it-services",
+        "raw": "https://www.instagram.com/ghosxttech/"
+      }
+    ]
+  },
+  {
+    "url": "https://www.insureon.com/small-business-insurance/cyber-liability/cost",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/cyber-insurance-small-business-2026",
+        "raw": "https://www.insureon.com/small-business-insurance/cyber-liability/cost"
+      }
+    ]
+  },
+  {
+    "url": "https://www.lansweeper.com/blog/patch-tuesday/microsoft-patch-tuesday-august-2026/",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/august-2026-patch-tuesday-400-fixes-3-zero-days-smb",
+        "raw": "https://www.lansweeper.com/blog/patch-tuesday/microsoft-patch-tuesday-august-2026/"
+      }
+    ]
+  },
+  {
+    "url": "https://www.linkedin.com/company/ghosxt/",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 268,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/ada-website-accessibility-small-business-2026",
+        "raw": "https://www.linkedin.com/company/ghosxt/"
+      },
+      {
+        "from": "https://ghosxt.com/",
+        "raw": "https://www.linkedin.com/company/ghosxt/"
+      },
+      {
+        "from": "https://ghosxt.com/backup-disaster-recovery",
+        "raw": "https://www.linkedin.com/company/ghosxt/"
+      },
+      {
+        "from": "https://ghosxt.com/blog/",
+        "raw": "https://www.linkedin.com/company/ghosxt/"
+      },
+      {
+        "from": "https://ghosxt.com/agriculture-it-services",
+        "raw": "https://www.linkedin.com/company/ghosxt/"
+      }
+    ]
+  },
+  {
+    "url": "https://www.microsoft.com/windows/extended-security-updates",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/october-2026-patch-tuesday-record-1400-fixes-smb",
+        "raw": "https://www.microsoft.com/windows/extended-security-updates"
+      }
+    ]
+  },
+  {
+    "url": "https://www.onetonline.org/link/localwages/15-1232.00?st=CA",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/break-fix-vs-managed-it",
+        "raw": "https://www.onetonline.org/link/localwages/15-1232.00?st=CA"
+      }
+    ]
+  },
+  {
+    "url": "https://www.onetonline.org/link/localwages/15-1244.00?st=CA",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/break-fix-vs-managed-it",
+        "raw": "https://www.onetonline.org/link/localwages/15-1244.00?st=CA"
+      }
+    ]
+  },
+  {
+    "url": "https://www.pcisecuritystandards.org/document_library/",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/pci-compliance",
+        "raw": "https://www.pcisecuritystandards.org/document_library/"
+      }
+    ]
+  },
+  {
+    "url": "https://www.pcisecuritystandards.org/document_library/?category=saqs",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/pci-compliance",
+        "raw": "https://www.pcisecuritystandards.org/document_library/?category=saqs"
+      }
+    ]
+  },
+  {
+    "url": "https://www.pge.com/en/outages-and-safety/outages/maps-and-alerts/psps-map-and-alerts.html",
+    "status": 404,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/pge-psps-it-continuity-plan-central-coast",
+        "raw": "https://www.pge.com/en/outages-and-safety/outages/maps-and-alerts/psps-map-and-alerts.html"
+      }
+    ]
+  },
+  {
+    "url": "https://www.php.net/archive/2026.php",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/php2shell-php-vulnerability-cve-2026-109618-smb-website-2026",
+        "raw": "https://www.php.net/archive/2026.php"
+      }
+    ]
+  },
+  {
+    "url": "https://www.pts247.com/",
+    "status": 0,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/top-managed-it-providers-salinas-monterey-bay",
+        "raw": "https://www.pts247.com/"
+      }
+    ]
+  },
+  {
+    "url": "https://www.rapid7.com/blog/post/etr-cve-2026-63520-microsoft-sharepoint-remote-code-execution-fixed/",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/august-2026-patch-tuesday-400-fixes-3-zero-days-smb",
+        "raw": "https://www.rapid7.com/blog/post/etr-cve-2026-63520-microsoft-sharepoint-remote-code-execution-fixed/"
+      }
+    ]
+  },
+  {
+    "url": "https://www.securityweek.com/microsoft-patches-record-974-vulnerabilities-including-two-exploited-zero-days/",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/september-2026-patch-tuesday-966-fixes-2-zero-days-smb",
+        "raw": "https://www.securityweek.com/microsoft-patches-record-974-vulnerabilities-including-two-exploited-zero-days/"
+      }
+    ]
+  },
+  {
+    "url": "https://www.srsnetworks.net/",
+    "status": 403,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/top-managed-it-providers-salinas-monterey-bay",
+        "raw": "https://www.srsnetworks.net/"
+      }
+    ]
+  },
+  {
+    "url": "https://www.tenable.com/blog/php2shell-cve-2026-109618-cve-2026-109619-frequently-asked-questions-about-critical-php-remote",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/php2shell-php-vulnerability-cve-2026-109618-smb-website-2026",
+        "raw": "https://www.tenable.com/blog/php2shell-cve-2026-109618-cve-2026-109619-frequently-asked-questions-about-critical-php-remote"
+      }
+    ]
+  },
+  {
+    "url": "https://www.thezdi.com/blog/2026/10/13/the-october-2026-security-update-review",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/october-2026-patch-tuesday-record-1400-fixes-smb",
+        "raw": "https://www.thezdi.com/blog/2026/10/13/the-october-2026-security-update-review"
+      }
+    ]
+  },
+  {
+    "url": "https://www.thezdi.com/blog/2026/8/11/the-august-2026-security-update-review",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/august-2026-patch-tuesday-400-fixes-3-zero-days-smb",
+        "raw": "https://www.thezdi.com/blog/2026/8/11/the-august-2026-security-update-review"
+      }
+    ]
+  },
+  {
+    "url": "https://www.thezdi.com/blog/2026/9/8/the-september-2026-security-update-review",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/september-2026-patch-tuesday-966-fixes-2-zero-days-smb",
+        "raw": "https://www.thezdi.com/blog/2026/9/8/the-september-2026-security-update-review"
+      }
+    ]
+  },
+  {
+    "url": "https://www.verizon.com/business/resources/infographics/2026-dbir-bis-smb-revenue-losses.pdf",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/cyber-insurance-small-business-2026",
+        "raw": "https://www.verizon.com/business/resources/infographics/2026-dbir-bis-smb-revenue-losses.pdf"
+      }
+    ]
+  },
+  {
+    "url": "https://www.zestfulmediadesign.com/",
+    "status": 200,
+    "skipped": false,
+    "www": false,
+    "referrerCount": 1,
+    "referrers": [
+      {
+        "from": "https://ghosxt.com/blog/top-website-design-companies-salinas-monterey-bay",
+        "raw": "https://www.zestfulmediadesign.com/"
+      }
+    ]
+  }
+]

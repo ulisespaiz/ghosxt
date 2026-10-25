@@ -52,3 +52,9 @@ CLAUDE.md
 
 # Numbers data file read only by scripts/update-site-numbers.py at build time.
 site-config.json
+
+# Audit programme files at the repo root and CI config: never served.
+AUDIT.md
+HANDOFF.md
+.htmlvalidate.json
+.github/

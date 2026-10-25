@@ -1,0 +1,2 @@
+# Internal link targets the crawl gate tolerates. Remove a line when the link is fixed (AUDIT.md T-15).
+/microsoft-365-small-business-settings-to-turn-on-2026
