@@ -479,7 +479,7 @@ on `/support` and `/blog/all`; nav shift absent from `layout-shifts` on `/`.
 ### T-23 P2: the pricing calculator writes em dashes into the page from JavaScript
 
 Pages: `/pricing`. Evidence: the served HTML has no em dash, but `assets/js/pricing.js`
-sets `textContent = '—'` as the placeholder for an unused cost and for a zero savings
+sets `textContent` to the em dash character (U+2014) as the placeholder for an unused cost and for a zero savings
 percentage (lines 192, 208, 225), so the rendered DOM (`audit/baseline/html/pricing.html`)
 contains the character the house rules forbid; seven more sit in JS comments
 (`main.js:45`, `pricing.js` header and comments). Fix: use "n/a" or an empty string with
