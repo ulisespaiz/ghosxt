@@ -842,10 +842,14 @@ Folded into S-05 (drop the circle, use the county list).
 ## Accessibility findings
 
 Full axe results: `audit/baseline/axe-summary.md` (rules by impact and pages) and
-`audit/baseline/axe/<page>.<viewport>.json`. Lighthouse accessibility scores per page:
-`audit/baseline/lighthouse-summary.md`. The findings below are the ones confirmed from
-the homepage run, html-validate and the markup; the Opus session adds one finding per
-axe rule with serious or critical impact from the summary, using the same format.
+`audit/baseline/axe/<page>.<viewport>.json`; Lighthouse accessibility scores per page in
+`audit/baseline/lighthouse-summary.md`. axe-core 4.14 (WCAG 2.0 to 2.2 A and AA plus
+best practice) at 390x844 and 1366x768 on all 268 pages: no critical rule, 7 rules
+failing, 290 violations at mobile and 283 at desktop, no page with zero violations
+because one moderate rule (`region`) fires on every page. Serious rules: `color-contrast`
+(8 pages, 146 nodes), `scrollable-region-focusable` (8 pages), `label-content-name-mismatch`
+(3 pages), `aria-prohibited-attr` (1 page, 156 nodes), `link-in-text-block` (1 page).
+Every serious rule maps to a finding below.
 
 ### X-01 P1: green status text fails contrast on the light green card (4.45:1)
 
@@ -859,15 +863,18 @@ palette change and needs the approval label; alternative with no token change: r
 font weight or size of those three spans to large-text thresholds. Acceptance: Lighthouse
 `color-contrast` passes on `/` and axe reports 0 `color-contrast` nodes site-wide.
 
-### X-02 P1: the mobile CTA bar is a `div` with `aria-label` and no role (every page)
+### X-02 P1: the cookie banner and the mobile CTA bar sit outside any landmark (every page)
 
-Pages: all 269 (shared chrome, `scripts/_chrome_source.html:531`). Evidence:
-html-validate `aria-label-misuse` on `<div class="mobile-cta-bar" aria-label="Quick
-contact">`; `aria-label` on a generic `div` is ignored by assistive technology, so the
-bar has no accessible name. Fix: make it `<nav class="mobile-cta-bar" aria-label="Quick
-contact">` or add `role="region"`; apply through `apply-chrome.py`; no visual change.
-Acceptance: html-validate reports 0 `aria-label-misuse` for the bar; axe `landmark`
-rules clean; screenshot diff 0 changes.
+Pages: all 268. Evidence: axe `region` (moderate) on every page at both widths: the
+nodes are `.cookie-text` (the banner's message and link) and `.mobile-cta-bar`; html-validate
+`aria-label-misuse` on `<div class="mobile-cta-bar" aria-label="Quick contact">`
+(`scripts/_chrome_source.html:531`), since `aria-label` on a generic `div` is ignored by
+assistive technology and the bar has no accessible name. Fix: make the bar
+`<nav class="mobile-cta-bar" aria-label="Quick contact">` and wrap the banner in
+`<aside class="cookie-banner" aria-label="Cookie notice">` (or `role="region"` on the
+existing elements); apply through `apply-chrome.py`; no visual change. Acceptance: axe
+`region` reports 0 nodes site-wide; html-validate reports 0 `aria-label-misuse` on the
+bar; screenshot diff 0 changes.
 
 ### X-03 P1: the pricing calculator's labels wrap block content and share controls
 
@@ -910,7 +917,8 @@ Page: `/pricing`. Evidence (Lighthouse mobile and desktop): `aria-prohibited-att
 nodes, the `<i class="fi">` check-mark icons in the plan comparison table carry
 `aria-label`, which is not allowed on an element with no role; `color-contrast` on 16
 nodes inside the calculator card (`#calcCard` header span, the user stepper display);
-`label-content-name-mismatch` on 6 nodes in the hero badge. Fix: replace the icon
+`label-content-name-mismatch` on 6 nodes: the hero buttons (`.pricing-hero-btn-primary`,
+`.pricing-hero-btn-secondary`) and the badge. Fix: replace the icon
 `aria-label` with visually hidden text (`<span class="sr-only">Included</span>`, the
 utility already exists) and `aria-hidden="true"` on the icon; darken the calculator's
 secondary text to the site's `--text-secondary` token (a token already in use, so no new
@@ -929,6 +937,28 @@ the brand rules exclude ("no grey text"). Fix: use `--text-inverse` or `--text-p
 for the table and quote text and a white link on the dark band; `/blog/all` count to
 `--text-primary`. Visible change, label required. Acceptance: `color-contrast` passes on
 all four pages; axe reports 0 `color-contrast` nodes site-wide (with X-01).
+
+### X-09 P1: scrollable comparison tables cannot be reached with a keyboard
+
+Pages: 8 blog posts, for example `blog/it-support-vs-managed-it-services-difference`,
+`blog/microsoft-365-vs-google-workspace-small-business-2026`,
+`blog/onedrive-vs-sharepoint-vs-teams-files-small-business` and five CVE write-ups.
+Evidence: axe `scrollable-region-focusable` (serious) on `div.compare-table-wrap`, the
+horizontally scrolling wrapper around a comparison table; keyboard users cannot scroll
+it. Fix: add `tabindex="0"` and `role="region"` with an `aria-label` naming the table to
+the wrapper in `blog.css`'s markup pattern (and in the post template for future posts).
+Acceptance: axe `scrollable-region-focusable` reports 0 nodes.
+
+### X-10 P1: the website-development page has 19 low-contrast nodes and a mislabelled CTA
+
+Page: `/website-development`. Evidence: axe `color-contrast` on `.ipad-url-text` (the
+mock browser bar) and on every project option's price and description
+(`.project-option-price em`, `.project-option-desc`), 19 nodes; `label-content-name-mismatch`
+on `.webdev-hero-btn-primary` (its `aria-label` does not contain the visible text). Fix:
+move the option text to `--text-primary`, the mock URL to a readable tone, and make the
+hero button's accessible name start with its visible text. Visible change on the option
+cards: label required. Acceptance: axe clean on `/website-development`; Lighthouse
+accessibility 100.
 
 ## Mobile UI observations (proposals only, nothing changed)
 

@@ -25,9 +25,9 @@ need an answer are marked "after Dn". Everything else can start now.
 | 8 | B4 llms.txt and llms-full.txt | seo/b4-llms-2026-10 | A-07 | none (add /managed-ai line after C-01 merges) |
 | 9 | C3 Answer-first leads, service pages | seo/c3-leads-services-2026-10 | A-02 (9 service pages) | none |
 | 10 | C4 Answer-first leads, verticals | seo/c4-leads-verticals-2026-10 | A-02 (10 vertical pages) | none |
-| 11 | D1 Accessibility: chrome | seo/d1-a11y-chrome-2026-10 | X-02, X-04, X-05, X-06, T-12 | none |
+| 11 | D1 Accessibility: chrome and tables | seo/d1-a11y-chrome-2026-10 | X-02, X-04, X-05, X-06, X-09, T-12 | none |
 | 12 | D2 Accessibility: pricing calculator | seo/d2-a11y-pricing-2026-10 | X-03, X-07 | screenshot diff must be clean except the calculator text tone (label) |
-| 12b | D3 Accessibility: contrast on four pages | seo/d3-a11y-contrast-2026-10 | X-01, X-08 | visible: label required |
+| 12b | D3 Accessibility: contrast on five pages | seo/d3-a11y-contrast-2026-10 | X-01, X-08, X-10 | visible: label required |
 | 13 | A3 Home main thread, inline scripts, image variants | seo/a3-home-perf-2026-10 | T-06, T-13, T-17, T-22 (/support part) | screenshot diff must be clean |
 | 13b | A6 Contact page third parties | seo/a6-contact-embeds-2026-10 | T-21 | placeholder box is a visible change: label required |
 | 14 | C5 Salinas hub trim | seo/c5-salinas-2026-10 | C-06 | none |
@@ -129,6 +129,8 @@ pages and three cloud-services spokes are; trim per T-02).
 | T-22 | desktop CLS under 0.05 on /support and /blog/all; no nav entry in layout-shifts on / |
 | X-07 | Lighthouse accessibility 100 on /pricing at both widths; axe clean |
 | X-08 | color-contrast passes on /break-fix-vs-managed-it, /case-studies, /support, /blog/all |
+| X-09 | axe scrollable-region-focusable reports 0 nodes |
+| X-10 | axe clean on /website-development; Lighthouse accessibility 100 |
 | S-01 | `node audit/tools/check-seo-meta.mjs --only localbusiness-consistent` reports PASS (one variant) |
 | S-02 | `node audit/tools/check-seo-meta.mjs --only business-node,service-provider` reports PASS |
 | S-03 | `node audit/tools/check-seo-meta.mjs --only breadcrumbs` reports PASS |
@@ -154,7 +156,7 @@ pages and three cloud-services spokes are; trim per T-02).
 | L-01 | all owner-controlled listings show the contact.html NAP; 0 nodes without address or phone |
 | L-03 | each county page over 1,200 words with 3 unique facts; family similarity under 0.4; no new location URL |
 | X-01 | Lighthouse color-contrast passes on `/`; axe 0 color-contrast nodes |
-| X-02 | 0 aria-label-misuse on the bar; axe landmarks clean; visual diff 0 |
+| X-02 | axe region reports 0 nodes site-wide; 0 aria-label-misuse on the bar; visual diff 0 |
 | X-03 | html-validate pricing rules promoted to error pass; axe label rules clean; visual diff 0 |
 | X-04 | no-implicit-button-type as error passes |
 | X-05 | Lighthouse label-content-name-mismatch passes on /about |
