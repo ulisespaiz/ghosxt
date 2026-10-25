@@ -8,6 +8,23 @@ order and the PR split are in HANDOFF.md.
 Priorities: P0 blocks indexing, citation, or conversion. P1 has measurable ranking,
 AI-citation, or Core Web Vitals impact. P2 is polish.
 
+## Status log
+
+- 2026-10-25: PRs #268 (inner-page motion), #269 (home canvas grids run only while on
+  screen; the canvas-loop part of T-06), #270 (M-01, M-04, M-05) and #271 (A-02 on 23
+  pages) were merged into `seo/audit-2026-10` on the owner's instruction, with the two
+  integration fix commits 8a04613 and 16125c9 (described in the PR #266 body). The
+  verification pass of the merged branch added T-24, T-25, T-26, X-11, C-13, M-06 and
+  M-07; all are pre-existing on `main` (M-06 reaches more pages since the shorter leads;
+  see its entry). The `/contact` Lighthouse mobile TBT shift is explained, not a
+  regression: TBT reads 450 to 770 ms on the merged tree against 100 to 150 ms on `main`
+  because the page now paints earlier (FCP 1.35 s against 2.8 s, TTI 2.5 s against
+  5.1 s), so the third-party booking and form-challenge scripts boot after first paint,
+  inside the window TBT measures (long tasks between FCP and TTI). Service pages show no
+  change (TBT 0 ms on both). The warn-level `/contact` mobile TBT budget (246 ms) will
+  fire until the budgets are regenerated after merge (HANDOFF row 0); T-21 removes the
+  cost itself.
+
 ## Assumptions made because the owner was not available to answer
 
 1. The site stays on its current light theme (Roboto, dark red #b71c1c, white
@@ -491,6 +508,65 @@ required), and plain hyphens in comments; then re-minify and stamp. Acceptance: 
 rendered snapshot of `/pricing` contains no U+2014; `grep -c` for the character on
 `assets/js/*.js` returns 0.
 
+### T-24 P1: five blog posts never show the cookie notice and skip the shared script
+
+Pages: `blog/business-email-compromise-bec-prevention-small-business-2026`,
+`blog/cyber-insurance-small-business-2026`, `blog/dark-web-monitoring-small-business-2026`,
+`blog/incident-response-plan-small-business-2026` and
+`blog/phishing-simulation-security-awareness-training-small-business-2026`. Pre-existing
+on `main`. Evidence: `grep -L 'main.min.js' blog/*.html` lists exactly these five; the
+other 161 files under `blog/` load `../assets/js/main.min.js`. Each of the five runs the
+same inline copy of an older chrome script (nav toggle, scroll-to-top, cookie banner;
+`blog/dark-web-monitoring-small-business-2026.html:425`). Its banner code sets
+`display: flex` (line 470) but never adds the `visible` class that `assets/js/main.js:111`
+adds, so the banner keeps `transform: translateY(100%)` (`assets/css/main.css:493`). A
+probe at 390x844 with empty storage puts `#cookieBanner` at y 844 (off-screen) on these
+posts and at y 665 on a normal post: visitors never see the consent notice. The five also
+miss the `/api/track` click hook, the active-nav highlight and the PR #268 motion.
+Fix (one PR): replace the inline script in each post with the shared
+`<script src="../assets/js/main.min.js?v=<stamp>" defer></script>` line the other posts
+carry, then run `python3 scripts/compute-csp-hashes.py` so `_headers` drops the inline
+hash (the five copies are byte-identical, one hash). The banner and motion appearing on
+five pages is a visible change: label required.
+Acceptance: `grep -L 'main.min.js' blog/*.html` prints nothing; `grep -c '<script>'` on
+each of the five prints 0; `python3 scripts/compute-csp-hashes.py --check` exits 0; a
+Playwright probe at 390x844 with empty storage finds `#cookieBanner.visible` with its top
+above 844 px after 1.5 s on each of the five.
+
+### T-25 P2: the Permissions-Policy header names a feature Chromium does not recognise
+
+Pages: every response. Evidence: the `Permissions-Policy` line in `_headers` (line 26)
+includes `web-share=()`; Chromium logs "Error with Permissions-Policy header:
+Unrecognized feature: 'web-share'." as a console warning on every page load (probe on
+`/managed-it-services` and `/cmmc-compliance` at 390x844 against the local server, which
+applies `_headers`). Harmless to visitors and to the best-practices score, but it is
+noise on every page that buries real console warnings. Fix: delete the `web-share=()`
+token; nothing else in the header changes. Acceptance: `grep -c 'web-share' _headers`
+prints 0; loading `/` from `node audit/tools/static-server.mjs` in Chromium logs no
+"Unrecognized feature" warning.
+
+### T-26 P2: `check-chrome-drift.py` flags every page and cannot show where the drift is
+
+Pages: the 96 root pages built from the shared chrome. Evidence: `python3
+scripts/check-chrome-drift.py` prints "0 pages match the canonical chrome exactly" and
+"96 pages drifted", every one in `head_assets`, each as "similarity 1.000 (expected 1406
+chars, actual 1406 chars)". Two causes. (1) A reporting bug: line 49 stores
+`canonical[k]` in `diffs` and line 61 prints that value as the actual one, so every
+similarity reads 1.000 and every length matches; the real ratios run from 0.223 to 0.979.
+(2) The source can never match: the head-assets block of `scripts/_chrome_source.html`
+links `assets/css/main.css` and `locations.css` (line 32) and carries the `theme-color`
+meta (line 22), while served pages link the `.min.css` copies that `scripts/minify.py`
+rewrites them to and carry `theme-color` at the top of `<head>`, outside the block (73 of
+the 96 pages differ in exactly those lines). S-01's acceptance test and the HANDOFF
+after-merge routine both rely on this script, so today they cannot tell real drift from
+noise. Fix: store `actual[k]` in `diffs`; normalise `.min.css` and `.min.js` to their
+source names and strip `?v=` stamps before comparing (or make the source match the
+served form); move `theme-color` out of the compared block in the source; add a
+`--diff <page>` option that prints the unified diff. Acceptance: on an unchanged tree the
+73 pages whose only difference is the stylesheet names and `theme-color` are no longer
+reported; every remaining report prints a similarity below 1.000; a one-character edit to
+one page's nav (reverted afterwards) is reported for that page under `nav`.
+
 ## Structured data findings
 
 ### S-01 P1: the business entity has 15 different names and 4 incomplete copies
@@ -803,6 +879,25 @@ back, so it was written with no confidential content. Fix: make the repository p
 planning files to a private repository and leave only the tooling. Acceptance: the
 repository is private, or `audit/*.md` is no longer in the public tree.
 
+### C-13 P2: new blog posts arrive with no contextual inbound links
+
+Pages: 70 of the 164 posts have fewer than three in-body inbound links (24 have none, 22
+have one, 24 have two), counting links outside `<nav>` and `<footer>` from every root
+page, post and case study except the two generated indexes, `blog/index.html` and
+`blog/all.html`. Example: `blog/dormant-inactive-accounts-cleanup-small-business-2026`
+(PR #272) is linked only from those two indexes. Pre-existing on `main`. Evidence: HTML
+parse of every served file in this pass. CLAUDE.md asks for at least three contextual
+inbound links per page; the crawl gate passes these posts because the indexes count as
+inbound links, so nothing flags them. Fix: (1) add a step to the daily blog task: after
+writing a post, link to it in a sentence from three older posts on the same topic and
+from the matching service or compliance page where it fits; (2) add a `post-inbound`
+check to `audit/tools/check-seo-meta.mjs` with the same counting rules, informational in
+CI at first; (3) back-fill the 70 posts in PRs of about 25, the 24 unlinked posts first.
+Acceptance: `node audit/tools/check-seo-meta.mjs --only post-inbound` reports PASS;
+`grep -l 'dormant-inactive-accounts-cleanup' *.html blog/*.html case-studies/*.html |
+grep -v -e blog/index.html -e blog/all.html -e blog/dormant-inactive | wc -l` prints 3
+or more.
+
 ## Local findings
 
 ### L-01 P1: NAP is consistent on the site but incomplete off it, and the entity copies drift
@@ -975,6 +1070,45 @@ hero button's accessible name start with its visible text. Visible change on the
 cards: label required. Acceptance: axe clean on `/website-development`; Lighthouse
 accessibility 100.
 
+### X-11 P1: three templates scroll sideways or clip content on narrow phones
+
+Pages and evidence (Playwright probe against the local server, page scrolled through so
+every reveal settles, `document.documentElement.scrollWidth` against the viewport; same
+on `main`, checked on `/`, `/contact` and three of the verticals):
+- `/`: 374 at 320 px and at 360 px, a common Android width.
+- `/contact`: 332 at 320 px. Separately, the hero and form column is 342 px wide and
+  `.contact-section { overflow: hidden; }` (`assets/css/contact.css:11`) clips it: at
+  320 px up to 46 px of the hero text and 25 px of each form field and the submit button
+  are cut off at the right edge; at 360 px the form card loses 6 px.
+- Seven vertical pages, 344 at 320 px: `/agriculture-it-services`,
+  `/healthcare-it-services`, `/hospitality-it-services`, `/manufacturing-it-services`,
+  `/professional-services-it`, `/property-management-it-services`,
+  `/trucking-it-services`.
+
+The other 93 root pages fit at 320 px. WCAG 2.2 SC 1.4.10 (Reflow, AA) asks for content
+at 320 CSS px without scrolling in two dimensions or loss of content. Causes, each
+confirmed by overriding the one rule in the browser:
+- `/`: `.solution-box { min-width: 350px; }` inside `@media (max-width: 480px)`
+  (`assets/css/index.css:4064`).
+- Verticals: `.scenario-grid` uses `repeat(auto-fit, minmax(320px, 1fr))`
+  (`assets/css/verticals.css:113`), which cannot shrink below 320 px plus the page padding.
+- `/contact`: the inline booking widget carries `style="min-width:320px"` inside 12 px of
+  padding (`contact.html:459`); the one-column grid (`.contact-container`,
+  `grid-template-columns: 1fr` at `contact.css:367`) grows to the form card's 342 px
+  min-content, set by the form challenge widget's fixed 300 px plus the card's padding
+  and border.
+
+Fix: `min-width: 0` (or `min(350px, 100%)`) on `.solution-box` at that breakpoint;
+`minmax(min(320px, 100%), 1fr)` on `.scenario-grid`; no inline `min-width` on the booking
+widget (carry this into the T-21 placeholder if that PR lands first); `minmax(0, 1fr)` on
+`.contact-container` at 968 px and below, with the challenge widget in its compact size
+below 360 px, since 300 px cannot fit a 272 px column. The fixes target widths below
+375 px: the 390 px screenshot diff must stay clean, and the visible change at 320 and
+360 px needs the label. Acceptance: a Playwright probe at 320x640 and 360x640 over every
+root page, scrolled through, reports `scrollWidth` equal to the viewport width; on
+`/contact` at 320 px the right edges of `.contact-title`, `.contact-right` and
+`#form-submit` are at or under 320.
+
 ## Mobile UI observations (proposals only, nothing changed)
 
 Evidence: first-viewport captures at 390x844 in `audit/baseline/screenshots/<page>.mobile.png`
@@ -990,7 +1124,9 @@ proposal for the owner; none ships without the approval label.
    the banner to one line plus two buttons (about 90 px) or show it only on pages that
    set a third-party cookie (`/contact` with Calendly and Turnstile) since the analytics
    beacon is cookieless; whether a banner is needed at all on the other pages is a legal
-   call for the owner, not this audit.
+   call for the owner, not this audit. Done (PR #270, merged into the branch on
+   2026-10-25): one sentence plus two buttons, 118 px at 390 px; the wording stays the
+   owner's call.
 2. **Service and compliance pages open with a story, and nothing else fits.** On
    `/managed-it-services` and `/cmmc-compliance` the first screen is breadcrumb, H1 and
    eight lines of the 180-word lead; the CTA pair, the pricing pointer and the key-facts
@@ -998,6 +1134,8 @@ proposal for the owner; none ships without the approval label.
    first CTA and the "Pricing: published upfront" line into the first screen with no
    layout change. Proposal (M-02, P1): do A-02 first; then measure whether moving the
    key-facts block above the lead on mobile (a CSS order change, visual) is still worth it.
+   A-02 landed in PR #271 (2026-10-25): the first booking button is above the fold on
+   all 23 pages at 390 px; the key-facts measurement is still open.
 3. **The home subtitle says the wrong things first.** "Get government-grade IT and
    cybersecurity for less than one in-house hire ... Local managed IT services in Salinas
    and across Monterey County" is five lines on mobile before the first button. C-08
@@ -1006,12 +1144,15 @@ proposal for the owner; none ships without the approval label.
 4. **The "Existing client and need help right now? Get support." bar is inconsistent.**
    It appears on `/managed-it-services` and `/contact` but not on `/`, `/pricing` or
    `/cmmc-compliance`. Proposal (M-04, P2): either on every page through the shared
-   chrome or only on service pages, but decided, not accidental.
+   chrome or only on service pages, but decided, not accidental. Done (PR #270): on
+   every root page except the home page, 404, support and privacy policy; posts keep
+   their own banner, see M-07.
 5. **The contact page's first screen has no form and no booking button.** Heading,
    paragraph and the email card fill it; the form, Calendly and the hours sit below the
    banner. Proposal (M-05, P1, visual): a single "Book a free assessment" button directly
    under the H1 on mobile, and the form's three required fields within the first two
-   screens; pairs with C-04 and T-21.
+   screens; pairs with C-04 and T-21. Done (PR #270): booking button under the H1, the
+   form before the details box on phones, first required field at 685 px at 390x844.
 6. **Layout stability is already good on mobile.** CLS is 0.000 to 0.068 on all 268
    pages; the September bottom-bar and banner clearance fixes held; `tap-targets` passes
    everywhere. The remaining shifts are desktop-only (T-22).
@@ -1022,6 +1163,34 @@ proposal for the owner; none ships without the approval label.
    site-wide preview (PR #267) showed why a dark retheme would have needed its own pass:
    Michroma uppercase needs 26 px or less to fit a 390 px phone, and white on #ff1f3a
    passes AA only as large text.
+9. **On a first visit the cookie banner covers the hero booking button on service
+   pages.** At 390x844 before consent, the banner (118 px since PR #270) sits on the
+   call-and-book bar (61 px), so the bottom 179 px (y 665 to 844) is chrome. On 22 of
+   the 23 pages with the A-02 lead the first booking button in the page overlaps that
+   band: on `/managed-it-services` it sits at y 683 to 733, fully covered; on
+   `/managed-detection-response` and `/hipaa-it-compliance` the overlap is 4 px; only
+   `/zero-trust-security` clears it. The bar's own booking link stays visible, and the
+   button is uncovered once the visitor answers. Pre-existing on `main`, where the taller
+   banner covered the button on 14 of the same 23 pages; the shorter leads lifted eight
+   more buttons into the band. Proposal (M-06, P1, owner decision): (a) accept, since the
+   bar keeps a booking path on screen; (b) on phones, show the banner at the top of the
+   screen; or (c) shorten it further. (b) and (c) are visible changes and need the label.
+   Acceptance: the decision is recorded in the status log; for (b) or (c), a Playwright
+   probe at 390x844 with empty storage finds no overlap between the first booking link
+   inside `<main>` and `#cookieBanner` after 1.5 s on all 23 pages.
+10. **The blog's "Need Remote Support?" top banner is on 50 of 164 posts.** PR #270 put
+    the "Existing client and need help right now? Get support." callout on the root pages
+    and left posts with their own banner, but `grep -l 'class="top-banner"' blog/*.html`
+    finds it on 50 posts (the verification pass counted 116 of 168 rendered blog pages
+    without it); no root page carries it, and the other 114 posts have no support entry
+    at all. The banner links to the ticket portal; the root callout links to `/support`.
+    Pre-existing on `main`. Proposal (M-07, P2, owner decision): treat it as chrome (one
+    support entry on every post, applied through `scripts/_chrome_source.html` and
+    `apply-chrome.py`; the root callout is the natural candidate) or as legacy (remove it
+    from the 50). Either is a visible change and needs the label. Acceptance, legacy:
+    `grep -l 'class="top-banner"' blog/*.html` prints nothing; chrome: `grep -L -e
+    'top-banner' -e 'existing-client-callout' blog/*.html | grep -v -e blog/index.html -e
+    blog/all.html` prints nothing.
 
 ## Phase 3: positioning read
 

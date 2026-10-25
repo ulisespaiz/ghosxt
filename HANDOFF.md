@@ -15,29 +15,36 @@ need an answer are marked "after Dn". Everything else can start now.
 
 | # | PR | Branch | Closes | Gate |
 |---|---|---|---|---|
-| 1 | A1 Routing and headers | seo/a1-routing-2026-10 | T-03, T-04, T-07, T-15 (the broken href) | none |
+| 0 | A0 Budget refresh for /contact | seo/a0-budgets-2026-10 | T-14 (the /contact TBT budget; AUDIT.md status log, 2026-10-25) | after PR #266 merges to main |
+| 1 | A1 Routing and headers | seo/a1-routing-2026-10 | T-03, T-04, T-07, T-15 (the broken href), T-25 | none |
+| 1b | A7 Five posts onto the shared script | seo/a7-post-scripts-2026-10 | T-24 | banner and motion appear on five posts: label required |
 | 2 | B1 Titles, metas, OG | seo/b1-titles-2026-10 | T-01, T-02, T-19, A-05, A-04 (title suffix) | none |
+| 2b | A8 Chrome drift check | seo/a8-drift-check-2026-10 | T-26 | none; land before B2, whose S-01 test runs this script |
 | 3 | B2 One business entity | seo/b2-entity-2026-10 | S-01, S-02, S-03, S-05, S-06, L-02, L-04 | D3 for the name string (default "Ghosxt" until answered) |
 | 4 | B3 FAQ visibility | seo/b3-faq-2026-10 | S-04, A-03 (compliance pages) | none |
 | 5 | C1 Compliance front door | seo/c1-nav-2026-10 | C-05, T-15 (service-area links), T-18 | T-18 changes visible anchor text: label required |
-| 6 | C2 Answer-first leads, compliance pages | seo/c2-leads-compliance-2026-10 | A-02 (cmmc, hipaa, pci, ctpat, cyber-insurance) | none |
+| 6 | C2 Answer-first leads, compliance pages | seo/c2-leads-compliance-2026-10 | A-02 (cmmc, hipaa, pci, ctpat, cyber-insurance) | done: PR #271, merged into seo/audit-2026-10 on 2026-10-25 |
 | 7 | A2 Icon font to inline SVG | seo/a2-icons-2026-10 | T-05, T-20, T-22 (nav part) | screenshot diff must be clean |
 | 8 | B4 llms.txt and llms-full.txt | seo/b4-llms-2026-10 | A-07 | none (add /managed-ai line after C-01 merges) |
-| 9 | C3 Answer-first leads, service pages | seo/c3-leads-services-2026-10 | A-02 (9 service pages) | none |
-| 10 | C4 Answer-first leads, verticals | seo/c4-leads-verticals-2026-10 | A-02 (10 vertical pages) | none |
+| 9 | C3 Answer-first leads, service pages | seo/c3-leads-services-2026-10 | A-02 (10 service pages, zero-trust included) | done: PR #271, merged into seo/audit-2026-10 on 2026-10-25; the three D10 pages wait for that decision |
+| 10 | C4 Answer-first leads, verticals | seo/c4-leads-verticals-2026-10 | A-02 (8 vertical pages) | done: PR #271, merged into seo/audit-2026-10 on 2026-10-25; the nonprofits and remote-Mac pages already open with the answer and stay as they are |
 | 11 | D1 Accessibility: chrome and tables | seo/d1-a11y-chrome-2026-10 | X-02, X-04, X-05, X-06, X-09, T-12 | none |
 | 12 | D2 Accessibility: pricing calculator | seo/d2-a11y-pricing-2026-10 | X-03, X-07, T-23 | screenshot diff must be clean except the calculator text tone (label) |
 | 12b | D3 Accessibility: contrast on five pages | seo/d3-a11y-contrast-2026-10 | X-01, X-08, X-10 | visible: label required |
+| 12c | D4 Reflow on narrow phones | seo/d4-reflow-2026-10 | X-11 | 390 px diff must stay clean; the 320 and 360 px change needs the label; coordinate the /contact part with 13b |
 | 13 | A3 Home main thread, inline scripts, image variants | seo/a3-home-perf-2026-10 | T-06, T-13, T-17, T-22 (/support part) | screenshot diff must be clean |
 | 13b | A6 Contact page third parties | seo/a6-contact-embeds-2026-10 | T-21 | placeholder box is a visible change: label required |
 | 14 | C5 Salinas hub trim | seo/c5-salinas-2026-10 | C-06 | none |
 | 15 | C6 Cannibalization merges (one PR per pair) | seo/c6-merge-<pair>-2026-10 | C-02 | none |
+| 15b | C11 Inbound links to blog posts: the `post-inbound` check first, then back-fill PRs of about 25 posts | seo/c11-post-inbound-2026-10, then seo/c11-post-links-<n>-2026-10 | C-13 (plus the daily blog task step, outside the PR list) | none |
 | 16 | PR #260 Managed AI, restyled onto the light chrome | feature/managed-ai (existing) | C-01 | D1 decided (light); after D3 |
 | 17 | C7 Resolve [VERIFY] markers | seo/c7-verify-2026-10 | A-01, C-11 | after D4, D10 |
 | 18 | C8 Proof pages | seo/c8-proof-2026-10 | C-03 | after D2 |
 | 19 | C9 Launch the two draft verticals | seo/c9-launch-drafts-2026-10 | C-07 | after D4 |
 | 20 | C10 Voice: tagline, home subtitle, footer | seo/c10-voice-2026-10 | C-08, C-09 | after D8 and a Search Console baseline (D6) |
 | 21 | B5 sameAs and dates | seo/b5-sameas-dates-2026-10 | S-07, S-08, A-08, T-09 | after D7 |
+| 21b | U1 Cookie banner and the hero CTA on phones | seo/u1-banner-cta-2026-10 | M-06 | after the owner picks (a), (b) or (c); (b) and (c): label required |
+| 21c | U2 One support entry on blog posts | seo/u2-blog-support-2026-10 | M-07 | after the owner decides chrome or legacy; label required |
 | 22 | A4 Fonts and OG cards (Roboto stays, per D1) | seo/a4-fonts-2026-10 | T-08, T-10 | label required |
 | 23 | L1 County pages | seo/l1-counties-2026-10 | L-03 | none |
 | 24 | A5 Dead external links | seo/a5-external-links-2026-10 | T-16 | confirm each in a browser first |
@@ -52,9 +59,10 @@ the lead paragraph, the first H2 section (receives the story), and nothing else.
 should not).
 
 After every PR merges: regenerate `llms-full.txt`, `sitemap.xml`, `feed.xml` and
-`blog/all.html` with the scripts, run `python3 scripts/check-chrome-drift.py`, and if a
-page's title changed run `python3 scripts/generate-og-images.py` for that page (the
-regenerated card is a visual change to a social asset; the diff job does not cover it).
+`blog/all.html` with the scripts, run `python3 scripts/check-chrome-drift.py` (it flags
+every page until T-26 lands), and if a page's title changed run
+`python3 scripts/generate-og-images.py` for that page (the regenerated card is a visual
+change to a social asset; the diff job does not cover it).
 
 ## PR B1 spec table: titles, metas, Open Graph
 
@@ -128,10 +136,15 @@ pages and three cloud-services spokes are; trim per T-02).
 | T-20 | mobile FCP under 2.0 s and LCP under 2.5 s on /contact, /ctpat, /website-development, /privacy-policy, /ghosxt-cares; perf 90 or better |
 | T-21 | no calendly.com or stripe.com request before interaction on /contact; third-party-cookies passes; weight under 1 MiB; BP 100 |
 | T-22 | desktop CLS under 0.05 on /support and /blog/all; no nav entry in layout-shifts on / |
+| T-24 | `grep -L 'main.min.js' blog/*.html` prints nothing; `python3 scripts/compute-csp-hashes.py --check` exits 0; at 390x844 with empty storage `#cookieBanner.visible` is on screen on the five posts |
+| T-25 | `grep -c 'web-share' _headers` prints 0; no "Unrecognized feature" console warning on `/` |
+| T-26 | unchanged tree: the 73 stylesheet-name and theme-color pages are not reported; every report shows similarity below 1.000; a one-character nav edit is reported |
+| T-14 (row 0) | budgets regenerated with `node audit/tools/make-budgets.mjs`; the mobile `/contact` TBT assertion no longer warns on `main`; the PR body cites the 2026-10-25 status log |
 | X-07 | Lighthouse accessibility 100 on /pricing at both widths; axe clean |
 | X-08 | color-contrast passes on /break-fix-vs-managed-it, /case-studies, /support, /blog/all |
 | X-09 | axe scrollable-region-focusable reports 0 nodes |
 | X-10 | axe clean on /website-development; Lighthouse accessibility 100 |
+| X-11 | probe at 320x640 and 360x640 over every root page: `scrollWidth` equals the viewport; on /contact at 320 px `.contact-title`, `.contact-right` and `#form-submit` end at or under 320 |
 | S-01 | `node audit/tools/check-seo-meta.mjs --only localbusiness-consistent` reports PASS (one variant) |
 | S-02 | `node audit/tools/check-seo-meta.mjs --only business-node,service-provider` reports PASS |
 | S-03 | `node audit/tools/check-seo-meta.mjs --only breadcrumbs` reports PASS |
@@ -154,6 +167,7 @@ pages and three cloud-services spokes are; trim per T-02).
 | C-09 | footer has one service-area line; every CTA names Monterey County; city pages keep 4 or more in-body inbound links |
 | C-11 | no unconfirmed capability stated; no [VERIFY] on the five pages |
 | C-12 | repository private, or audit/*.md out of the public tree |
+| C-13 | `node audit/tools/check-seo-meta.mjs --only post-inbound` reports PASS; the dormant-accounts post has 3 or more in-body inbound links |
 | L-01 | all owner-controlled listings show the contact.html NAP; 0 nodes without address or phone |
 | L-03 | each county page over 1,200 words with 3 unique facts; family similarity under 0.4; no new location URL |
 | X-01 | Lighthouse color-contrast passes on `/`; axe 0 color-contrast nodes |
@@ -164,6 +178,8 @@ pages and three cloud-services spokes are; trim per T-02).
 | X-06 | Lighthouse link-in-text-block passes on /blog/all |
 | T-17 | uses-responsive-images lists neither ulises.avif nor ghosxt-cta.webp; visual diff 0 changed |
 | T-18 | Lighthouse link-text passes on every vertical page; SEO 100 |
+| M-06 | decision recorded in the AUDIT.md status log; for (b) or (c), no overlap between the first booking link and `#cookieBanner` at 390x844 on the 23 A-02 pages |
+| M-07 | legacy: `grep -l 'class="top-banner"' blog/*.html` prints nothing; chrome: every post carries one support entry |
 
 ## Regenerating the baseline and budgets
 
