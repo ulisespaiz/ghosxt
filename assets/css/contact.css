@@ -66,6 +66,40 @@
     opacity: 0.7;
 }
 
+/* Booking button under the lead: the one action that fits the first phone
+   screen (AUDIT.md M-05). Same hard-shadow button language as the site. */
+.contact-hero-cta {
+    margin: 0;
+}
+
+.contact-hero-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    min-height: 44px;
+    padding: 0.8rem 1.25rem;
+    background: var(--ghosxt-red-0, #b71c1c);
+    color: var(--ghosxt-white);
+    border: 1px solid var(--ghosxt-black);
+    border-radius: 8px;
+    font-family: var(--font-family-2);
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 3px 3px 0 0 var(--ghosxt-black);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.contact-hero-btn:hover {
+    transform: translate(-1px, -1px);
+    box-shadow: 4px 4px 0 0 var(--ghosxt-black);
+}
+
+.contact-hero-btn:active {
+    transform: translateY(1px);
+    box-shadow: 2px 2px 0 0 var(--ghosxt-black);
+}
+
 .contact-info-box {
     background: var(--ghosxt-white);
     border: 1px solid var(--ghosxt-black);
@@ -321,8 +355,44 @@
 @media (max-width: 968px) {
     .contact-container {
         grid-template-columns: 1fr;
-        gap: 3rem;
+        gap: 0;
         padding: 3rem 0;
+    }
+
+    /* One column: the form comes before the contact details so the three
+       required fields sit within the first two phone screens (AUDIT.md M-05).
+       The left column dissolves into the grid so its children can be ordered;
+       spacing moves from the grid gap to each block. */
+    .contact-left {
+        display: contents;
+    }
+
+    .contact-badge {
+        order: 1;
+        margin-bottom: 1.25rem;
+    }
+
+    .contact-title {
+        order: 2;
+        margin-bottom: 1rem;
+    }
+
+    .contact-subtitle {
+        order: 3;
+    }
+
+    .contact-hero-cta {
+        order: 4;
+        margin-bottom: 2rem;
+    }
+
+    .contact-right {
+        order: 5;
+        margin-bottom: 2rem;
+    }
+
+    .contact-info-box {
+        order: 6;
     }
 
     .contact-title {
