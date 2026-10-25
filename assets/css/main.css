@@ -2445,10 +2445,13 @@ body.no-mobile-cta-bar .mobile-cta-bar {
    The home page keeps its own animations and is excluded from the reveal. */
 
 /* 1. Scroll reveal. main.js adds .reveal only to blocks that start below the
-   first screen, then .is-visible as each enters the viewport. Without JS
-   nothing is ever hidden. Siblings get a short stagger from main.js. Uses the
-   translate property, not transform, so a block's own transform is untouched. */
-.reveal {
+   first screen, then .is-visible as each enters the viewport, and removes both
+   classes once the transition ends so the block returns to its own styles.
+   Without JS nothing is ever hidden. Siblings get a short stagger from
+   main.js. Uses the translate property, not transform, so a block's own
+   transform is untouched. The html prefix outranks the card rules in the
+   page stylesheets (which set their own transition) for the reveal's duration. */
+html .reveal {
   opacity: 0;
   translate: 0 14px;
   transition:
@@ -2456,7 +2459,7 @@ body.no-mobile-cta-bar .mobile-cta-bar {
     translate 0.5s ease;
 }
 
-.reveal.is-visible {
+html .reveal.is-visible {
   opacity: 1;
   translate: none;
 }
@@ -2468,8 +2471,9 @@ body.no-mobile-cta-bar .mobile-cta-bar {
 }
 
 /* 3. One hover and press language for every button family. Buttons that
-   already lift on hover (location, cookie primary) keep their own lift; the
-   press state is shared by all of them so taps on a phone give feedback. */
+   already lift on hover (header, mobile menu, location, cookie primary) keep
+   their own lift; the press state is shared by all of them so taps on a phone
+   give feedback. */
 .navbar-btn,
 .mobile-btn,
 .footer-cta-btn,
@@ -2493,8 +2497,6 @@ body.no-mobile-cta-bar .mobile-cta-bar {
     opacity 0.15s ease;
 }
 
-.navbar-btn:hover,
-.mobile-btn:hover,
 .footer-cta-btn:hover,
 .footer-subscribe-btn:hover,
 .button-primary:hover,
@@ -2523,11 +2525,13 @@ body.no-mobile-cta-bar .mobile-cta-bar {
   transition-duration: 0.05s;
 }
 
-/* Cards already lift on hover; this is the matching press state for taps. */
-.service-card:active,
-.icon-card:active,
-.scenario-card:active,
-.blog-card:active {
+/* Cards already lift on hover; this is the matching press state for taps.
+   Scoped to the inner pages (main.js sets body.motion-inner there): the home
+   page has its own service cards with no shadow. */
+.motion-inner .service-card:active,
+.motion-inner .icon-card:active,
+.motion-inner .scenario-card:active,
+.motion-inner .blog-card:active {
   transform: translate(1px, 1px);
   box-shadow: 2px 2px 0 0 var(--ghosxt-black);
 }
@@ -2583,7 +2587,7 @@ img.img-fade.is-loaded {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .reveal,
+  html .reveal,
   img.img-fade {
     opacity: 1;
     translate: none;
@@ -2591,7 +2595,7 @@ img.img-fade.is-loaded {
 }
 
 @media print {
-  .reveal,
+  html .reveal,
   img.img-fade {
     opacity: 1;
     translate: none;
