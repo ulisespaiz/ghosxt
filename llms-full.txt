@@ -41,7 +41,7 @@ Meta description: Managed IT for California small business: MDR, 24/7 remote mon
 
 # Managed IT Services for California Small Business
 Break-fix IT is cheap right up until the week a ransomware crew finds the file share nobody was watching. Ghosxt, run by an engineer with DoD infrastructure experience, provides managed IT services for small businesses across Monterey County and surrounding areas: a fixed monthly fee at published pricing, monitoring that catches problems before your staff notice, and an engineer who answers the call.
-★★★★★ Rated 5.0 across 26 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
+★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
 Transparent managed IT pricing is published upfront, so you know the range before booking.
 Managed IT Services for California Small Business: at a glance
 ## What managed IT actually means
@@ -116,7 +116,7 @@ Meta description: IT help desk & support for California small business: live US-
 
 # IT Help Desk & IT Support for California Small Business
 When a mailbox will not open or a laptop rejects the password, your team needs a person who picks up and fixes it, not a ticket number. Ghosxt, run by an engineer with DoD infrastructure experience, provides IT help desk and support for small businesses across Monterey County and surrounding areas: someone who already knows your network and your people, most issues fixed remotely, at published pricing.
-★★★★★ Rated 5.0 across 26 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
+★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
 Help desk is included in every managed plan: pricing is published upfront.
 IT Help Desk & IT Support for California Small Business: at a glance
 ## What a real IT help desk should feel like
@@ -180,7 +180,7 @@ Meta description: IT consulting & vCIO services for California small business: r
 
 # IT Consulting & vCIO Services for Small Business
 Nobody owns the IT roadmap, so renewals get signed, tools overlap and the budget is explained after it is spent. Ghosxt provides IT consulting and vCIO services for small businesses across Monterey County and surrounding areas: owner Ulises Paiz, an engineer with DoD infrastructure experience, as your part-time strategic IT lead for roadmap, budget, risk and vendor decisions, at published pricing.
-★★★★★ Rated 5.0 across 26 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
+★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
 Quarterly vCIO planning is included in every managed plan: see pricing.
 IT Consulting & vCIO Services for Small Business: at a glance
 ## What a vCIO actually does
@@ -244,7 +244,7 @@ Meta description: Cybersecurity services for California small business from an e
 
 # Cybersecurity Services for California Small Business
 The attacker does not need to beat your firewall; one reused password or one convincing invoice email walks straight past it. Ghosxt, run by an engineer with DoD infrastructure experience, provides cybersecurity services for small businesses across Monterey County and surrounding areas: government-grade controls sized to each client, at published pricing.
-★★★★★ Rated 5.0 across 26 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
+★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
 Transparent managed IT pricing is published upfront, so you know the range before booking.
 Cybersecurity Services for California Small Business: at a glance
 ## Why most small businesses get their cybersecurity wrong
@@ -356,7 +356,7 @@ Meta description: Microsoft 365 hardening and hybrid cloud planning for Californ
 
 # Cloud Services and Microsoft 365 for California Small Business
 A cloud tenant set up in an afternoon and never hardened is where most of the small-business breaches we see begin, and nobody can show what is locked down. Ghosxt, run by an engineer with DoD infrastructure experience, provides cloud services for small businesses across Monterey County and surrounding areas: Microsoft 365 management and baseline hardening in every managed IT plan at published pricing, migrations and projects quoted per scope.
-★★★★★ Rated 5.0 across 26 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
+★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
 Transparent managed IT pricing is published upfront, so you know the range before booking.
 Cloud Services and Microsoft 365 for California Small Business: at a glance
 ## What "cloud" actually means for a small business
@@ -415,7 +415,7 @@ Meta description: Cloud backup for Microsoft 365 and Google Workspace, plus busi
 
 # Backup and Disaster Recovery for California Small Business
 The question is not whether you have backups; it is when someone last restored from them and how long it took. Ghosxt, run by an engineer with DoD infrastructure experience, provides backup and disaster recovery for small businesses across Monterey County and surrounding areas, built the way that engineer would protect their own data, at published pricing.
-★★★★★ Rated 5.0 across 26 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
+★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
 Transparent managed IT pricing is published upfront, so you know the range before booking.
 Backup and Disaster Recovery for California Small Business: at a glance
 ## Why most small business backups are not backups
@@ -487,7 +487,7 @@ Meta description: Network design, VLAN segmentation, firewall & wireless for Cal
 
 # Network Design and Architecture for California Small Business
 A flat network behind the modem the cable company gave you means one phished laptop can reach everything. Ghosxt, run by an engineer with DoD infrastructure experience, provides network design and architecture for small businesses across Monterey County and surrounding areas: segmented, documented and vendor-neutral, quoted per project after a free assessment.
-★★★★★ Rated 5.0 across 26 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
+★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
 Transparent managed IT pricing is published upfront, so you know the range before booking.
 Network Design and Architecture for California Small Business: at a glance
 ## What a properly designed network actually looks like
@@ -1654,7 +1654,7 @@ Meta description: Managed IT in Monterey County costs $125 to $250 per user per 
 
 # What Managed IT Costs in Monterey County (Real Numbers)
 Managed IT in Monterey County costs $125 to $250 per user per month with Ghosxt, plus a one-time onboarding fee. A 5-person business pays $625 to $1,250 a month, a 10-person business $1,250 to $2,500, and a 25-person business $3,125 to $6,250. Teams of 1 to 4 pay a flat $600. Secure Growth ($175 per user), the tier we recommend for most businesses, comes to $875, $1,750, or $4,375 a month at those sizes. These are the published prices from our pricing page, not a starting-at teaser, and the math for three typical setups is below.
-★★★★★ Rated 5.0 across 26 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
+★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
 Managed IT cost in Monterey County: at a glance
 ## The short answer, by team size
 Managed IT is priced per person because people are what get phished, locked out, and onboarded. Here is what our three per-user tiers work out to at common team sizes, before any servers or network gear:
@@ -1737,7 +1737,7 @@ Meta description: Managed IT for Salinas Valley agriculture: FSMA traceability, 
 
 # Managed IT Services for Agriculture and Agribusiness in the Salinas Valley
 Harvest does not pause for an IT ticket, and the cooler, the pack line and the ERP all find out at once. Ghosxt provides managed IT and cybersecurity for growers, packers, processors and cooling and distribution operators across Monterey County and surrounding areas: federal-grade engineering, no outsourced helpdesk, at published pricing.
-★★★★★ Rated 5.0 across 26 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
+★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
 Transparent managed IT pricing is published upfront, so you know the range before booking.
 Managed IT Services for Agriculture and Agribusiness: at a glance
 ## What we do for growers, packers, and processors
@@ -1827,7 +1827,7 @@ Meta description: Managed IT, cybersecurity, and C-TPAT support for California t
 
 # Managed IT Services for Trucking and Logistics Companies in California
 A truck is parked the moment the driver cannot sign into the ELD, and the customer does not care whose fault that is. Ghosxt provides managed IT and cybersecurity for trucking, logistics and customs operators across Monterey County and surrounding areas, keeping dispatch, ELD and C-TPAT controls running and audit-ready: federal-grade engineering, no outsourced helpdesk, at published pricing.
-★★★★★ Rated 5.0 across 26 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
+★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
 Transparent managed IT pricing is published upfront, so you know the range before booking.
 Managed IT Services for Trucking and Logistics Companies: at a glance
 ## What we do for trucking and logistics companies
@@ -1912,7 +1912,7 @@ Meta description: Managed IT and OT/IT segmentation for California manufacturers
 
 # Managed IT Services for Manufacturing and Industrial Operations in California
 Ransomware that reaches an OT segment stops the shop floor, and the ERP outage that follows stops the office. Ghosxt provides managed IT, cybersecurity and OT/IT segmentation for machine shops, fabricators, contract manufacturers and small defense suppliers across Monterey County and surrounding areas, with CMMC preparation for defense subcontracts: federal-grade engineering, at published pricing.
-★★★★★ Rated 5.0 across 26 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
+★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
 Transparent managed IT pricing is published upfront, so you know the range before booking.
 Managed IT Services for Manufacturing and Industrial Operations: at a glance
 ## What we do for manufacturers
@@ -2002,7 +2002,7 @@ Meta description: HIPAA-aligned managed IT for California medical and behavioral
 
 # Managed IT Services for Healthcare Practices and Medical Offices in California
 An EHR outage in the middle of a clinic day costs revenue and trust, and a lost laptop without verified encryption starts a sixty-day breach-notification clock. Ghosxt provides HIPAA-aligned managed IT and cybersecurity for medical practices, behavioral health, physical therapy and optometry across Monterey County and surrounding areas: federal-grade engineering, signed BAAs, at published pricing.
-★★★★★ Rated 5.0 across 26 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
+★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
 Transparent managed IT pricing is published upfront, so you know the range before booking.
 Managed IT Services for Healthcare Practices and Medical Offices: at a glance
 ## What we do for healthcare practices
@@ -2092,7 +2092,7 @@ Meta description: Hospitality IT for Monterey Bay restaurants, hotels & wineries
 
 # IT Services for Restaurants, Hotels, and Wineries on the Monterey Bay
 One guest on the staff Wi-Fi or one skimmed card at the POS becomes a review-site story before the investigation is finished. Ghosxt provides PCI-aware managed IT and cybersecurity for restaurants, hotels, inns and wineries across Monterey County and surrounding areas: federal-grade engineering, no outsourced helpdesk, at published pricing.
-★★★★★ Rated 5.0 across 26 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
+★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
 Transparent managed IT pricing is published upfront, so you know the range before booking.
 Hospitality IT on the Monterey Bay: at a glance
 ## What we do for restaurants, hotels, and wineries
@@ -2184,7 +2184,7 @@ Meta description: Managed IT for California law firms, CPA practices, consultant
 
 # Managed IT Services for Small and Medium Business Offices
 A partner who leaves on Friday and still has access to every client file on Monday is the breach nobody budgets for. Ghosxt provides managed IT, cybersecurity and Microsoft 365 hardening for law offices, CPA firms, agencies and other professional offices across Monterey County and surrounding areas: federal-grade engineering, no outsourced helpdesk, at published pricing.
-★★★★★ Rated 5.0 across 26 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
+★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
 Transparent managed IT pricing is published upfront, so you know the range before booking.
 Managed IT Services for Small and Medium Business Offices: at a glance
 ## What we do for SMB offices and professional service firms
@@ -2275,7 +2275,7 @@ Meta description: Managed IT for California property managers, HOAs, and commerc
 
 # IT Services for Property Management and HOAs in California
 Tenant data, owner portals and rent payments sit behind the logins your leasing offices share, and one phished password reaches all of it. Ghosxt provides identity-first managed IT and cybersecurity for property managers, HOA management firms and commercial real estate operators across Monterey County and surrounding areas: federal-grade engineering, no outsourced helpdesk, at published pricing.
-★★★★★ Rated 5.0 across 26 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
+★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
 Transparent managed IT pricing is published upfront, so you know the range before booking.
 IT Services for Property Management and HOAs: at a glance
 ## What we do for property management companies
@@ -2367,7 +2367,7 @@ Meta description: Managed IT and CAD/PDM performance for California A/E firms. S
 
 # IT Services for Engineering and Architecture Firms in California
 Your project files are the business, and a BIM model that will not open over the VPN or a drawing set on a personal laptop takes the margin with it. Ghosxt provides managed IT, CAD performance and engineering data security for civil, structural, MEP and A/E firms across Monterey County and surrounding areas: federal-grade engineering, at published pricing.
-★★★★★ Rated 5.0 across 26 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
+★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
 Transparent managed IT pricing is published upfront, so you know the range before booking.
 IT Services for Engineering and Architecture Firms: at a glance
 ## What we do for engineering and architecture firms
@@ -2471,7 +2471,7 @@ Meta description: Managed IT for small nonprofits on Google Workspace: admin tak
 
 # IT Support for Nonprofits on Google Workspace
 Ghosxt provides managed IT for small nonprofits on Google Workspace at published prices: $125 to $250 per staff member per month, or $600 flat for teams of 1 to 4. A 9-person team on our recommended tier pays $1,575 a month for staff, plus $15 per Mac for device management. For that, we take over Google Workspace administration (or back up the ops director who has been running it on the side), watch every staff account for suspicious sign-ins, back up Gmail and Drive, and set up Macs through Apple Business Manager so a new hire's laptop configures itself on first boot (you buy the hardware; we coordinate delivery). Contractor accounts are covered too, quoted per identity.
-★★★★★ Rated 5.0 across 26 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
+★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
 Nonprofit IT on Google Workspace: at a glance
 ## The blind spot: one person holds every key
 In a lot of small nonprofits, Google Workspace is run by whoever set it up. Often that's the operations director, on top of a full-time job. That person is usually the only super admin. If they leave, lose their phone, or get phished, the organization can lose control of every inbox, shared drive, and donor spreadsheet at once.
@@ -2542,7 +2542,7 @@ Meta description: Managed IT for remote Mac teams: zero-touch Apple Business Man
 
 # Managed IT for Fully Remote, Mac-First Teams
 Managed IT for a fully remote team on Macs costs $125 to $250 per person per month with Ghosxt, plus $15 per Mac for device management. A 10-person team on our recommended tier pays $1,900 a month: 10 × $175 for the team and 10 × $15 for the Macs. Laptops ship from the store to each person's door and set themselves up on first boot, a departing employee's Mac can be locked or erased from anywhere, and every sign-in is watched, whichever country your team works from. You talk to the owner directly.
-★★★★★ Rated 5.0 across 26 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
+★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
 Remote Mac team IT: at a glance
 ## The day you find out you don't control your laptops
 Most remote teams discover the gap when someone quits. The Mac is three states away, and it was set up on the employee's personal Apple Account. If Find My was on, Activation Lock means that even once the Mac is back and erased, nobody can set it up again without that person's password. Getting Apple to remove the lock takes the original proof of purchase and a support request.
@@ -2635,7 +2635,7 @@ Meta description: Ghosxt provides managed IT, cybersecurity, and support across 
 
 # Service Area: Managed IT Across the Central Coast
 Ghosxt is based in Salinas, CA, and run by owner Ulises Paiz. We serve small businesses across Monterey, Santa Cruz, San Benito, and Santa Clara counties, with on-site visits scheduled to fit your business and remote support available everywhere else in the United States. Pricing is published upfront, with no surprise call-center layer between you and the engineer who does the work.
-★★★★★ Rated 5.0 across 26 Google reviews, trusted by businesses across the Central Coast since 2021 and beyond.
+★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across the Central Coast since 2021 and beyond.
 Service Area: Managed IT Across the Central Coast: at a glance
 ## Counties we serve
 Local pages for each county cover the industries, response commitments, and pricing specific to that area:
@@ -2693,7 +2693,7 @@ Meta description: Salinas managed IT & IT support from an engineer with DoD infr
 
 # Managed IT Services & IT Support in Salinas, California
 Ghosxt is a Salinas-based managed IT and cybersecurity provider for small businesses across Monterey County. Run by an engineer with DoD infrastructure experience, we deliver enterprise-grade managed IT, IT support, Microsoft 365 support, backup and disaster recovery, and network management to agriculture, food processing, logistics, professional services, and healthcare teams that need their IT to actually work.
-★★★★★ Rated 5.0 across 26 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
+★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
 Managed IT Services & IT Support: at a glance
 ## Salinas IT & cybersecurity at a glance
 The short version of what working with Ghosxt for IT in Salinas looks like, before you ever pick up the phone.
@@ -2877,7 +2877,7 @@ Meta description: Monterey IT support, managed IT & cybersecurity for hospitalit
 
 # Managed IT Services & IT Support in Monterey, California
 Monterey is a town of two extremes: hospitality businesses that cannot afford a single bad Friday night, and defense contractors who need controls that survive a CMMC audit. Ghosxt brings federal-grade engineering to both, plus everyone in between.
-★★★★★ Rated 5.0 across 26 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
+★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
 Managed IT Services & IT Support: at a glance
 ## What we do for Monterey businesses
 Whether you run a boutique hotel on Cannery Row, a defense subcontract near NPS, or a professional services office downtown, we cover the same five things every business needs.
@@ -2982,7 +2982,7 @@ Meta description: Watsonville IT support, managed IT, and cybersecurity from an 
 
 # Managed IT Services & IT Support in Watsonville, California
 The Pajaro Valley feeds a lot of people, and the businesses that make that happen run 24/7. Ghosxt brings federal-grade engineering to Watsonville growers, food processors, packers, and distributors with the uptime and security their customers and auditors expect.
-★★★★★ Rated 5.0 across 26 Google reviews, trusted by businesses across Santa Cruz County since 2021 and beyond.
+★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across Santa Cruz County since 2021 and beyond.
 Managed IT Services & IT Support: at a glance
 ## What we do for Watsonville businesses
 From a small family farm to a 200-employee processor on Riverside, the same fundamentals keep operations safe and running.
@@ -3088,7 +3088,7 @@ Meta description: Hollister IT support, managed IT, and cybersecurity from an en
 
 # Managed IT Services & IT Support in Hollister, California
 Hollister is a working town with shop floors, vineyards, and family businesses that have run for decades. Ghosxt brings federal-grade engineering to them at a price small business can actually afford, with the responsiveness that comes from being right next door.
-★★★★★ Rated 5.0 across 26 Google reviews, trusted by businesses across San Benito County since 2021 and beyond.
+★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across San Benito County since 2021 and beyond.
 Managed IT Services & IT Support: at a glance
 ## What we do for Hollister businesses
 Whether you run a small machine shop, a winery tasting room, or a back-office for the trades, the same fundamentals keep operations safe and running.
@@ -3194,7 +3194,7 @@ Meta description: Santa Cruz IT support, managed IT & cybersecurity for tech-for
 
 # Managed IT Services & IT Support in Santa Cruz, California
 Santa Cruz runs on small teams that punch above their weight: tech founders, agencies, healthcare practices, and the ecosystem that supports them. Ghosxt brings federal-grade engineering to those teams without the corporate-MSP overhead.
-★★★★★ Rated 5.0 across 26 Google reviews, trusted by businesses across Santa Cruz County since 2021 and beyond.
+★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across Santa Cruz County since 2021 and beyond.
 Managed IT Services & IT Support: at a glance
 ## What we do for Santa Cruz businesses
 Whether your team is fully remote, hybrid across Santa Cruz and Aptos, or all in one office, the core IT problem is the same: how do small teams get enterprise-grade security and uptime without hiring a full-time IT person?
@@ -3304,7 +3304,7 @@ Meta description: Gilroy IT support, managed IT & cybersecurity for distribution
 
 # Managed IT Services & IT Support in Gilroy, California
 Gilroy sits where the 101 meets the 152, which makes it a natural distribution hub and a town built on logistics, retail, and the agriculture that put it on the map. Ghosxt brings federal-grade engineering to the businesses that keep that machine running.
-★★★★★ Rated 5.0 across 26 Google reviews, trusted by businesses across Santa Clara County since 2021 and beyond.
+★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across Santa Clara County since 2021 and beyond.
 Managed IT Services & IT Support: at a glance
 ## What we do for Gilroy businesses
 From a single retail storefront to a 100,000-square-foot warehouse off Pacheco Pass, the same fundamentals keep operations safe, compliant, and online.
@@ -3410,7 +3410,7 @@ Meta description: San Jose IT support, managed IT, and cybersecurity from an eng
 
 # Managed IT Services & IT Support in San Jose, California
 San Jose has plenty of MSPs that can spell their own name. What it does not have a lot of is a small-business-priced option run by a senior engineer who actually returns calls. Ghosxt brings real Silicon Valley engineering to South Bay teams without the Silicon Valley invoice.
-★★★★★ Rated 5.0 across 26 Google reviews, trusted by businesses across Santa Clara County since 2021 and beyond.
+★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across Santa Clara County since 2021 and beyond.
 Managed IT Services & IT Support: at a glance
 ## What we do for San Jose businesses
 Whether you run a small SaaS, a real estate office, or a manufacturing shop, the same fundamentals keep operations safe, compliant, and online.
@@ -3516,7 +3516,7 @@ Meta description: Pacific Grove IT support, managed IT, and cybersecurity from a
 
 # Managed IT Services & IT Support in Pacific Grove, California
 Pacific Grove businesses are small, tight-knit, and built on hospitality. The technology behind them needs to disappear into the background, and that takes more engineering than most people think. Ghosxt brings the right kind of quiet IT to inns, restaurants, retreats, and offices in PG.
-★★★★★ Rated 5.0 across 26 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
+★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
 Managed IT Services & IT Support: at a glance
 ## What we do for Pacific Grove businesses
 Whether you run a 12-room inn on Lighthouse, a small restaurant, or a wellness practice, the same fundamentals keep everything safe and online.
@@ -3622,7 +3622,7 @@ Meta description: Carmel IT support, managed IT & cybersecurity for galleries, h
 
 # Managed IT Services & IT Support in Carmel, California
 Carmel businesses sell something most places do not: experience. The technology behind a gallery, a luxury inn, or a real estate office should never get in the way of that. Ghosxt brings federal-grade engineering to Carmel-by-the-Sea and Carmel Valley with the discretion the town expects.
-★★★★★ Rated 5.0 across 26 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
+★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
 Managed IT Services & IT Support: at a glance
 ## What we do for Carmel businesses
 Whether you run a gallery on Ocean Avenue, a brokerage in Carmel Valley, or a small luxury inn, the same fundamentals keep operations safe, smooth, and quietly excellent.
@@ -3728,7 +3728,7 @@ Meta description: Seaside IT support, managed IT, and cybersecurity from an engi
 
 # Managed IT Services & IT Support in Seaside, California
 Seaside is a working town in transition: military families, growing retail, and a small business community that keeps the daily life of the Monterey Peninsula moving. Ghosxt brings federal-grade engineering to the businesses building it.
-★★★★★ Rated 5.0 across 26 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
+★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
 Managed IT Services & IT Support: at a glance
 ## What we do for Seaside businesses
 From a sole proprietor on Broadway to a 30-person retailer near the freeway, the same fundamentals keep things running.
@@ -3833,7 +3833,7 @@ Meta description: Marina IT support, managed IT, and cybersecurity from an engin
 
 # Managed IT Services & IT Support in Marina, California
 Marina is the part of the Monterey Peninsula that is actually growing: new housing, new offices, new businesses opening every quarter. The IT options have not caught up yet. Ghosxt brings federal-grade engineering to the small businesses building the next chapter of this town.
-★★★★★ Rated 5.0 across 26 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
+★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
 Managed IT Services & IT Support: at a glance
 ## What we do for Marina businesses
 Whether you just signed a lease in Imjin Office Park or you have been running a shop near Reservation Road for a decade, the same fundamentals matter.
@@ -3937,7 +3937,7 @@ Meta description: Managed IT, IT support, and cybersecurity across Monterey Coun
 
 # Managed IT & IT Support Across Monterey County
 Monterey County is home base. Ghosxt is run from Salinas by an engineer with DoD infrastructure experience, and we deliver managed IT, IT support, and cybersecurity to businesses across the whole county: from the agriculture and food operations of the Salinas Valley, to the hospitality, defense, and healthcare businesses of the Monterey Peninsula, to the growers and ranchers of South County. Local, responsive, and priced for small business.
-★★★★★ Rated 5.0 across 26 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
+★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
 Managed IT & IT Support Across Monterey County: at a glance
 ## Cities we serve in Monterey County
 On-site IT support and managed services across the county, with local pages for each community:
@@ -4000,7 +4000,7 @@ Meta description: Managed IT and cybersecurity across Santa Cruz County (Santa C
 
 # Managed IT & IT Support Across Santa Cruz County
 From the tech and tourism economy of the city of Santa Cruz to the berry farms, food processors, and cold storage of the Pajaro Valley, Santa Cruz County businesses depend on technology that works wherever the team does. Ghosxt (based just over the hill in Salinas and run by an engineer with DoD infrastructure experience) delivers managed IT, IT support, and cybersecurity across the county, on-site and remote.
-★★★★★ Rated 5.0 across 26 Google reviews, trusted by businesses across Santa Cruz County since 2021 and beyond.
+★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across Santa Cruz County since 2021 and beyond.
 Managed IT & IT Support Across Santa Cruz County: at a glance
 ## Cities we serve in Santa Cruz County
 On-site IT support and managed services across the county, with local pages for each community:
@@ -4056,7 +4056,7 @@ Meta description: Managed IT, IT support, and cybersecurity across San Benito Co
 
 # Managed IT & IT Support Across San Benito County
 San Benito County gets overlooked by the big providers: too small for the enterprise MSPs, too far for most Bay Area shops to serve reliably. Ghosxt does not overlook it. Based right next door in Salinas and run by an engineer with DoD infrastructure experience, we bring managed IT, IT support, and cybersecurity to Hollister, San Juan Bautista, and the surrounding ranches and shops.
-★★★★★ Rated 5.0 across 26 Google reviews, trusted by businesses across San Benito County since 2021 and beyond.
+★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across San Benito County since 2021 and beyond.
 Managed IT & IT Support Across San Benito County: at a glance
 ## Cities we serve in San Benito County
 On-site IT support and managed services across the county, with local pages for each community:
@@ -4109,7 +4109,7 @@ Meta description: Managed IT, IT support, and cybersecurity for Santa Clara Coun
 
 # Managed IT & IT Support Across Santa Clara County
 Santa Clara County businesses sit in the most target-rich, most expensive IT market in the country. Ghosxt brings the same Silicon Valley standards (enterprise tooling, SOC 2-aware cloud, government-grade security) without Silicon Valley pricing or the call-center experience, from an engineer with DoD infrastructure experience. Serving San Jose, Gilroy, and the South Bay on-site, and the rest of the country remotely.
-★★★★★ Rated 5.0 across 26 Google reviews, trusted by businesses across Santa Clara County since 2021 and beyond.
+★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across Santa Clara County since 2021 and beyond.
 Managed IT & IT Support Across Santa Clara County: at a glance
 ## Cities we serve in Santa Clara County
 On-site IT support and managed services across the South Bay, with local pages for each community:
@@ -4162,7 +4162,7 @@ Meta description: Cybersecurity for Salinas businesses: MDR, MFA, cloud backup, 
 
 # Cybersecurity Services in Salinas, California
 Salinas runs on agriculture, food processing, and logistics: industries where a day of downtime during harvest or a missed freight window costs real money, and where attackers know it. That economic pressure is exactly why ransomware crews and fraudsters target Central Coast businesses, and why "we're too small to be a target" stopped being true years ago. Ghosxt brings government-grade cybersecurity, sized and priced for a Salinas small business, from an engineer with DoD infrastructure experience. On-site across the Salinas Valley and Monterey County; remote nationwide.
-★★★★★ Rated 5.0 across 26 Google reviews. Trusted by businesses across Monterey County and beyond.
+★★★★★ Rated 5.0 across 30 Google reviews. Trusted by businesses across Monterey County and beyond.
 Cybersecurity is built into every managed plan: pricing published upfront.
 Cybersecurity Services: at a glance
 ## Why Salinas businesses get targeted
@@ -4209,7 +4209,7 @@ Meta description: Cybersecurity for Monterey businesses: MDR, MFA, cloud backup,
 
 # Cybersecurity Services in Monterey, California
 Monterey packs an unusual mix into a small footprint: hospitality and tourism, a defense and language-training presence around NPS and DLI, healthcare, and the professional-services firms that support them. Each of those holds something attackers want: payment-card data, controlled defense information, patient records, client files, and each is a target. Ghosxt brings government-grade cybersecurity, sized and priced for a Monterey small business, from an engineer with DoD infrastructure experience who works with exactly these compliance regimes. On-site across the Monterey Peninsula; remote nationwide.
-★★★★★ Rated 5.0 across 26 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
+★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
 Cybersecurity is built into every managed plan: pricing published upfront.
 Cybersecurity Services: at a glance
 ## The Monterey threat picture
@@ -4256,7 +4256,7 @@ Meta description: Cybersecurity for Santa Cruz businesses: MDR, MFA, cloud backu
 
 # Cybersecurity Services in Santa Cruz, California
 Santa Cruz runs on an unusual blend: a growing technology and SaaS scene, the tourism and hospitality economy along the coast, healthcare, and the professional-services firms that support them. Tech companies hold customer data and face SOC 2 and enterprise security reviews; hospitality processes card payments with seasonal staff; clinics carry protected health information. Each is a target, and each needs more than antivirus. Ghosxt brings government-grade cybersecurity, sized and priced for a Santa Cruz small business, from an engineer with DoD infrastructure experience. On-site across Santa Cruz County; remote nationwide.
-★★★★★ Rated 5.0 across 26 Google reviews, trusted by businesses across Santa Cruz County since 2021 and beyond.
+★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across Santa Cruz County since 2021 and beyond.
 Cybersecurity is built into every managed plan, pricing published upfront.
 Cybersecurity Services: at a glance
 ## The Santa Cruz threat picture
@@ -4302,7 +4302,7 @@ Meta description: Cybersecurity for San Jose businesses: MDR, MFA, cloud backup,
 
 # Cybersecurity Services in San Jose, California
 San Jose businesses sit in the most target-rich environment in the country. Technology and SaaS companies hold valuable intellectual property and customer data and cannot close enterprise deals without passing SOC 2 audits and security reviews; distribution, manufacturing, and professional-services firms across the South Bay are squeezed between high-value data and the high cost of full-time security staff. Ghosxt brings the same class of controls used to protect government endpoints (Silicon Valley security standards without Silicon Valley pricing) from an engineer with DoD infrastructure experience. On-site in the South Bay; remote nationwide.
-★★★★★ Rated 5.0 across 26 Google reviews, trusted by businesses across Santa Clara County since 2021 and beyond.
+★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across Santa Clara County since 2021 and beyond.
 Cybersecurity is built into every managed plan: pricing published upfront.
 Cybersecurity Services: at a glance
 ## The San Jose threat picture
@@ -4349,7 +4349,7 @@ Meta description: Cybersecurity for Watsonville businesses: MDR, MFA, cloud back
 
 # Cybersecurity Services in Watsonville, California
 Watsonville and the Pajaro Valley run on berries, vegetables, food processing, cold storage, and the distribution that moves it all: time-critical operations where a day of downtime during harvest or a broken cold chain costs real money, and attackers know it. That economic pressure is exactly why ransomware crews and fraudsters target Central Coast food and ag businesses, and why "we're too small to be a target" stopped being true years ago. Ghosxt brings government-grade cybersecurity, sized and priced for a Watsonville small business, from an engineer with DoD infrastructure experience. On-site across the Pajaro Valley; remote nationwide.
-★★★★★ Rated 5.0 across 26 Google reviews, trusted by businesses across Santa Cruz County since 2021 and beyond.
+★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across Santa Cruz County since 2021 and beyond.
 Cybersecurity is built into every managed plan: pricing published upfront.
 Cybersecurity Services: at a glance
 ## Why Watsonville businesses get targeted
@@ -4396,7 +4396,7 @@ Meta description: Cybersecurity for Carmel-by-the-Sea galleries, inns & shops: M
 
 # Cybersecurity Services in Carmel, California
 Carmel businesses trade on reputation and discretion: galleries holding six-figure inventory, luxury inns and tasting rooms taking cards all day, and real estate offices moving large sums by wire. Each is a quiet, high-value target, and a breach here is not just downtime, it is a story that travels in a small town. Ghosxt brings government-grade cybersecurity, sized for a Carmel small business and delivered with the discretion the town expects, from an engineer with DoD infrastructure experience.
-★★★★★ Rated 5.0 across 26 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
+★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
 Cybersecurity is built into every managed plan: pricing published upfront.
 Cybersecurity Services: at a glance
 ## The Carmel threat picture
@@ -4442,7 +4442,7 @@ Meta description: Government-grade cybersecurity for Pacific Grove small busines
 
 # Cybersecurity Services in Pacific Grove, California
 Pacific Grove businesses are small, tight-knit, and built on hospitality: inns and B&Bs, restaurants and cafes, retreats, and the professional offices that serve them. The technology behind them is supposed to disappear, which is exactly why security often goes unaddressed until something breaks. Ghosxt brings government-grade cybersecurity, sized for a PG small business and delivered quietly, from an engineer with DoD infrastructure experience.
-★★★★★ Rated 5.0 across 26 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
+★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
 Cybersecurity is built into every managed plan: pricing published upfront.
 Cybersecurity Services: at a glance
 ## The Pacific Grove threat picture
@@ -4489,7 +4489,7 @@ Meta description: Government-grade cybersecurity for Seaside small business: MDR
 
 # Cybersecurity Services in Seaside, California
 Seaside is a working town in transition: military families, growing retail and restaurants, auto and repair shops, and the small businesses that keep daily life on the Peninsula moving. These are exactly the practical, busy businesses that attackers count on having no one watching their systems. Ghosxt brings government-grade cybersecurity, sized and priced for a Seaside small business, from an engineer with DoD infrastructure experience.
-★★★★★ Rated 5.0 across 26 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
+★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
 Cybersecurity is built into every managed plan, pricing published upfront.
 Cybersecurity Services: at a glance
 ## The Seaside threat picture
@@ -4537,7 +4537,7 @@ Meta description: Cybersecurity for Marina's fast-growing businesses: MDR, phish
 
 # Cybersecurity Services in Marina, California
 Marina is the fastest-growing part of the Monterey Peninsula: built on the old Fort Ord footprint, anchored by CSU Monterey Bay, and increasingly home to ag-tech and small startups. Growth means new networks, new hires, and new ways to get breached, usually faster than a young company's security keeps up. Ghosxt brings government-grade cybersecurity that scales with a growing Marina business, from an engineer with DoD infrastructure experience.
-★★★★★ Rated 5.0 across 26 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
+★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
 Cybersecurity is built into every managed plan: pricing published upfront.
 Cybersecurity Services: at a glance
 ## The Marina threat picture
@@ -4583,7 +4583,7 @@ Meta description: Cybersecurity for Gilroy warehouses, 3PLs, food processors & r
 
 # Cybersecurity Services in Gilroy, California
 Gilroy sits where US-101 meets State Route 152, which made it a distribution, logistics, and food-processing hub long before it was anything else. Warehouses, 3PLs, growers, and the retail outlets off the freeway all run on systems that cannot afford to stop. Ransomware crews know that a business losing money every hour it is down is a business that pays. Ghosxt brings government-grade cybersecurity, sized for a Gilroy small business, from an engineer with DoD infrastructure experience.
-★★★★★ Rated 5.0 across 26 Google reviews. Trusted by businesses across Santa Clara County and beyond.
+★★★★★ Rated 5.0 across 30 Google reviews. Trusted by businesses across Santa Clara County and beyond.
 Cybersecurity is built into every managed plan: pricing published upfront.
 Cybersecurity Services: at a glance
 ## The Gilroy threat picture
@@ -4629,7 +4629,7 @@ Meta description: Cybersecurity for Hollister machine shops, vineyards & family 
 
 # Cybersecurity Services in Hollister, California
 Hollister is a working town: machine shops and small manufacturers, vineyards and growers, and family businesses that have run for generations. Most assume they are too small or too out-of-the-way to be a target, which is exactly the assumption ransomware crews exploit, because automated attacks do not check your zip code. Ghosxt brings government-grade cybersecurity, sized for a Hollister small business and priced for one, from an engineer with DoD infrastructure experience right next door.
-★★★★★ Rated 5.0 across 26 Google reviews, trusted by businesses across San Benito County since 2021 and beyond.
+★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across San Benito County since 2021 and beyond.
 Cybersecurity is built into every managed plan: pricing published upfront.
 Cybersecurity Services: at a glance
 ## The Hollister threat picture
@@ -4675,7 +4675,7 @@ Meta description: Microsoft 365 & cloud for Salinas: M365 setup & hardening, no-
 
 # Cloud & Microsoft 365 Services in Salinas, California
 A lot of Salinas businesses are still running on an aging server in a back office or packing facility: the one nobody wants to touch because everything depends on it. Moving email, files, and applications to Microsoft 365 and the cloud removes that single point of failure, lets your team work from anywhere, and ends the cycle of replacing hardware every few years. Done wrong, a cloud move loses data and breaks workflows; done right, nobody loses a workday. Ghosxt handles Microsoft 365 and cloud migrations for Salinas small business, from an engineer with DoD infrastructure experience. On-site across the Salinas Valley; remote nationwide.
-★★★★★ Rated 5.0 across 26 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
+★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
 Cloud and Microsoft 365 management is part of every managed plan, pricing published upfront.
 Cloud & Microsoft 365 Services: at a glance
 ## What we do in the cloud
@@ -4722,7 +4722,7 @@ Meta description: Microsoft 365 & cloud for Monterey: hardened setup, no-downtim
 
 # Cloud & Microsoft 365 Services in Monterey, California
 Monterey businesses run on a mix the cloud suits well: hospitality teams that need access from the floor, professional-services firms with confidential client files, clinics under HIPAA, and defense contractors near NPS and DLI with controlled information and strict requirements. Microsoft 365 done right gives all of them mobility and collaboration without leaving the front door open; done wrong, it leaks data or breaks on migration day. Ghosxt handles Microsoft 365 and cloud work for Monterey small business (including GCC High for defense contractors) from an engineer with DoD infrastructure experience. On-site across the Peninsula; remote nationwide.
-★★★★★ Rated 5.0 across 26 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
+★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
 Cloud and Microsoft 365 management is part of every managed plan: pricing published upfront.
 Cloud & Microsoft 365 Services: at a glance
 ## What we do in the cloud
@@ -4769,7 +4769,7 @@ Meta description: Microsoft 365 & cloud for Santa Cruz: hardened setup, no-downt
 
 # Cloud & Microsoft 365 Services in Santa Cruz, California
 Santa Cruz works remotely more than almost anywhere: founders, technology teams, professional-services firms, and clinics that expect to reach their files and email from a home office, a co-working space, or the beach in between. Microsoft 365 is built for exactly that, but only when it is configured and secured properly; most tenants are wide open by default. Ghosxt sets up and hardens Microsoft 365 and cloud for Santa Cruz small business, from an engineer with DoD infrastructure experience. On-site across Santa Cruz County; remote nationwide.
-★★★★★ Rated 5.0 across 26 Google reviews, trusted by businesses across Santa Cruz County since 2021 and beyond.
+★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across Santa Cruz County since 2021 and beyond.
 Cloud and Microsoft 365 management is part of every managed plan: pricing published upfront.
 Cloud & Microsoft 365 Services: at a glance
 ## What we do in the cloud
@@ -4816,7 +4816,7 @@ Meta description: Microsoft 365 & cloud for San Jose: hardened setup, no-downtim
 
 # Cloud & Microsoft 365 Services in San Jose, California
 San Jose runs on the cloud: technology and SaaS companies, professional-services firms, and the distribution and manufacturing operations across the South Bay all depend on Microsoft 365 and Azure being configured right. Done wrong, a tenant leaks data, fails a SOC 2 review, or breaks on migration day. Done right, your team works securely from anywhere and your cloud passes the audit. Ghosxt brings Silicon Valley cloud standards without Silicon Valley pricing, from an engineer with DoD infrastructure experience. On-site in the South Bay; remote nationwide.
-★★★★★ Rated 5.0 across 26 Google reviews, trusted by businesses across Santa Clara County since 2021 and beyond.
+★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across Santa Clara County since 2021 and beyond.
 Cloud and Microsoft 365 management is part of every managed plan: pricing published upfront.
 Cloud & Microsoft 365 Services: at a glance
 ## What we do in the cloud
@@ -4863,7 +4863,7 @@ Meta description: Microsoft 365 & cloud for Watsonville: hardened setup, no-down
 
 # Cloud & Microsoft 365 Services in Watsonville, California
 A lot of Watsonville businesses still run on an aging server in a back office or cooler building: the one nobody wants to touch because the whole operation depends on it. Moving email, files, and applications to Microsoft 365 and the cloud removes that single point of failure, lets office and field staff work from anywhere, and ends the cycle of replacing hardware that always seems to fail mid-harvest. Done wrong, a cloud move loses data; done right, nobody loses a workday. Ghosxt handles Microsoft 365 and cloud migrations for Watsonville small business, from an engineer with DoD infrastructure experience. On-site across the Pajaro Valley; remote nationwide.
-★★★★★ Rated 5.0 across 26 Google reviews, trusted by businesses across Santa Cruz County since 2021 and beyond.
+★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across Santa Cruz County since 2021 and beyond.
 Cloud and Microsoft 365 management is part of every managed plan: pricing published upfront.
 Cloud & Microsoft 365 Services: at a glance
 ## What we do in the cloud
@@ -4910,7 +4910,7 @@ Meta description: Microsoft 365 & cloud for Carmel-by-the-Sea galleries, inns & 
 
 # Cloud & Microsoft 365 Services in Carmel, California
 Carmel runs on small, refined teams (galleries, inns, tasting rooms, real estate and law offices) that need their email, files, and booking systems to work from the floor, from home, and on the road without ever getting in the way. Microsoft 365 done right gives them that mobility with the security a high-value business needs; done wrong, it leaks client data or breaks on migration day. Ghosxt handles Microsoft 365 and cloud work for Carmel small business, from an engineer with DoD infrastructure experience, with the discretion the town expects.
-★★★★★ Rated 5.0 across 26 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
+★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
 Cloud and Microsoft 365 management is part of every managed plan: pricing published upfront.
 Cloud & Microsoft 365 Services: at a glance
 ## Microsoft 365 and cloud services we handle for Carmel
@@ -4959,7 +4959,7 @@ Meta description: Microsoft 365 & cloud for Pacific Grove: M365 setup & hardenin
 
 # Cloud & Microsoft 365 Services in Pacific Grove, California
 Pacific Grove runs on small hospitality and professional teams (inns, cafes, retreats, and offices) that need email, booking, and files to work quietly from the front desk, the floor, and home. Microsoft 365 done right gives that without a server to babysit or a setup that breaks on migration day. Ghosxt handles cloud and Microsoft 365 work for PG small business, from an engineer with DoD infrastructure experience, with the discretion the town expects.
-★★★★★ Rated 5.0 across 26 Google reviews. Trusted by businesses across Monterey County and beyond.
+★★★★★ Rated 5.0 across 30 Google reviews. Trusted by businesses across Monterey County and beyond.
 Cloud and Microsoft 365 management is part of every managed plan: pricing published upfront.
 Cloud & Microsoft 365 Services: at a glance
 ## Microsoft 365 and cloud services built for how PG businesses actually work
@@ -5008,7 +5008,7 @@ Meta description: Microsoft 365 & cloud for Seaside: M365 setup & hardening, no-
 
 # Cloud & Microsoft 365 Services in Seaside, California
 Seaside's retail, restaurants, shops, and offices mostly run on ad-hoc email and aging hardware that quietly costs time whenever something fails. Microsoft 365 and a clean cloud setup give a busy Seaside team reliable email, files, and point-of-sale-adjacent systems that just work, without a server to maintain. Ghosxt handles cloud and Microsoft 365 work for Seaside small business, from an engineer with DoD infrastructure experience based on the Central Coast.
-★★★★★ Rated 5.0 across 26 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
+★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
 Cloud and Microsoft 365 management is part of every managed plan, pricing published upfront.
 Cloud & Microsoft 365 Services: at a glance
 ## Cloud and Microsoft 365 work we do in Seaside
@@ -5057,7 +5057,7 @@ Meta description: Microsoft 365 & cloud for Marina's growing businesses: scalabl
 
 # Cloud & Microsoft 365 Services in Marina, California
 Marina is where the Peninsula is actually growing: new offices, ag-tech and tech startups, and teams that are hybrid from day one. A cloud-first foundation fits that perfectly: Microsoft 365 and Azure let a growing Marina company scale without re-buying everything at twenty people. Done right it scales cleanly; done wrong it has to be ripped out. Ghosxt handles cloud and Microsoft 365 work for Marina small business, from an engineer with DoD infrastructure experience.
-★★★★★ Rated 5.0 across 26 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
+★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
 Cloud and Microsoft 365 management is part of every managed plan: pricing published upfront.
 Cloud & Microsoft 365 Services: at a glance
 ## Microsoft 365 built for Marina from day one, not patched together after the fact
@@ -5106,7 +5106,7 @@ Meta description: Microsoft 365 & cloud for Gilroy distribution, logistics & foo
 
 # Cloud & Microsoft 365 Services in Gilroy, California
 Gilroy businesses move product: distribution, 3PL, food processing, growers, and the retail that lines the freeway. The back office that runs them needs email, files, and line-of-business apps available from the warehouse floor, the cab, and the office without breaking. Microsoft 365 and Azure done right give that reach with the security a logistics business needs. Ghosxt handles cloud and Microsoft 365 work for Gilroy small business, from an engineer with DoD infrastructure experience.
-★★★★★ Rated 5.0 across 26 Google reviews, trusted by businesses across Santa Clara County since 2021 and beyond.
+★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across Santa Clara County since 2021 and beyond.
 Cloud and Microsoft 365 management is part of every managed plan: pricing published upfront.
 Cloud & Microsoft 365 Services: at a glance
 ## Cloud and Microsoft 365, configured for the way Gilroy businesses actually work
@@ -5155,7 +5155,7 @@ Meta description: Microsoft 365 & cloud for Hollister machine shops, vineyards &
 
 # Cloud & Microsoft 365 Services in Hollister, California
 Hollister's machine shops, growers, and family businesses mostly still run on aging on-prem servers and ad-hoc email, setups that quietly cost a workday whenever hardware fails. Microsoft 365 and the right cloud foundation fix that, giving a small Hollister team reliable email, files, and remote access without a server in the closet to babysit. Ghosxt handles cloud and Microsoft 365 work for Hollister small business, from an engineer with DoD infrastructure experience right next door.
-★★★★★ Rated 5.0 across 26 Google reviews, trusted by businesses across San Benito County since 2021 and beyond.
+★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across San Benito County since 2021 and beyond.
 Cloud and Microsoft 365 management is part of every managed plan: pricing published upfront.
 Cloud & Microsoft 365 Services: at a glance
 ## Microsoft 365 and cloud services set up right for Hollister
@@ -5798,7 +5798,7 @@ Meta description: Get IT support from Ghosxt. Call, start a remote session, or o
 Systems down, locked files, or a breach in progress? Stop reading and call (831) 204-0501. Emergencies get triaged first. What to do in the first ten minutes
 # Get Support
 Something broken? Here is every way to reach us, ranked by how fast you need an answer. There is no phone tree, no tier-one script, and no queue of strangers. The person who picks up is the engineer who set up your systems, and it is the same person every time.
-★★★★★ Rated 5.0 across 26 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
+★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
 Get Support: at a glance
 ## Start a remote session
 When we are on the phone and the problem is on your screen, the fastest fix is to let us see it. Click the button below, enter the session code the engineer gives you, and we are on your machine in under a minute while you watch.
@@ -6089,7 +6089,7 @@ Meta description: Full IT service catalog for California small business: managed
 
 # IT Services for California Small Business
 Most California small businesses do not need every IT service under the sun. They need the few that match how their business actually runs. Below is the full Ghosxt service catalog. Pick what you came for, or read about how we work and reach out: we will tell you straight which ones you need and which you do not. On-site across Monterey County, remote across the United States.
-★★★★★ Rated 5.0 across 26 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
+★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
 IT Services for California Small Business: at a glance
 ## What we do
 ### Managed IT Services
