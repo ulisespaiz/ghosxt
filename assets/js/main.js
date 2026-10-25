@@ -251,3 +251,144 @@ document.addEventListener('DOMContentLoaded', function () {
         if (acc) acc.querySelector('.mobile-accordion-trigger')?.classList.add('active');
     });
 });
+
+// ------ Motion: scroll reveal, FAQ open animation, reading progress, lazy
+// image fade. Styles live in the MOTION section of main.css. Everything here
+// respects prefers-reduced-motion and degrades to the plain page without JS.
+(function () {
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const ready = (fn) => {
+        if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', fn);
+        else fn();
+    };
+
+    // Scroll reveal, inner pages only: the home page has its own animations.
+    ready(function () {
+        if (document.getElementById('gridCanvas')) return;
+        document.body.classList.add('motion-inner');
+        if (reducedMotion || !('IntersectionObserver' in window)) return;
+        const selector = [
+            '.key-facts', '.service-card', '.icon-card', '.scenario-card', '.location-cta',
+            '.location-faq details', '.faq-item', '.blog-card', '.blog-post-cta',
+            '.certification-card', '.portfolio-card', '.stripe-card',
+        ].join(', ');
+        const fold = window.innerHeight;
+        const items = [];
+        document.querySelectorAll(selector).forEach((el) => {
+            // Leave anything that touches the first screen alone so nothing flashes.
+            if (el.getBoundingClientRect().top < fold) return;
+            el.classList.add('reveal');
+            items.push(el);
+        });
+        if (!items.length) return;
+        // Short stagger between siblings in the same grid or list.
+        items.forEach((el) => {
+            const siblings = Array.from(el.parentElement.children).filter((c) => c.classList.contains('reveal'));
+            const i = siblings.indexOf(el);
+            if (i > 0) el.style.transitionDelay = Math.min(i, 4) * 60 + 'ms';
+        });
+        // Once revealed, hand the block back to its own styles: drop both
+        // classes and the stagger delay so later hover transitions are untouched.
+        const settle = (el) => {
+            el.classList.remove('reveal', 'is-visible');
+            el.style.transitionDelay = '';
+        };
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting) return;
+                const el = entry.target;
+                io.unobserve(el);
+                el.addEventListener('transitionend', () => settle(el), { once: true });
+                el.classList.add('is-visible');
+            });
+        }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
+        items.forEach((el) => io.observe(el));
+        // Safety net: nothing stays hidden if the observer never fires.
+        setTimeout(() => items.forEach(settle), 4000);
+    });
+
+    // FAQ open and close animation for the <details> accordions. The answer is
+    // the single element after the summary; anything else keeps native behaviour.
+    ready(function () {
+        if (reducedMotion) return;
+        document.querySelectorAll('.location-faq details, details.faq-item').forEach((details) => {
+            const summary = details.querySelector(':scope > summary');
+            const panel = summary && summary.nextElementSibling;
+            if (!summary || !panel || panel.nextElementSibling || typeof panel.animate !== 'function') return;
+            let running = null;
+            summary.addEventListener('click', (event) => {
+                event.preventDefault();
+                if (running) return;
+                // Padding tweens with the height so the answer never jumps by
+                // its own padding at either end.
+                const cs = getComputedStyle(panel);
+                const open = { height: panel.offsetHeight + 'px', paddingTop: cs.paddingTop, paddingBottom: cs.paddingBottom, opacity: 1 };
+                const shut = { height: '0px', paddingTop: '0px', paddingBottom: '0px', opacity: 0 };
+                panel.style.overflow = 'hidden';
+                if (details.open) {
+                    running = panel.animate([open, shut], { duration: 200, easing: 'ease' });
+                    running.onfinish = () => {
+                        details.open = false;
+                        panel.style.overflow = '';
+                        running = null;
+                    };
+                } else {
+                    details.open = true;
+                    const grown = getComputedStyle(panel);
+                    open.height = panel.offsetHeight + 'px';
+                    open.paddingTop = grown.paddingTop;
+                    open.paddingBottom = grown.paddingBottom;
+                    running = panel.animate([shut, open], { duration: 240, easing: 'ease' });
+                    running.onfinish = () => {
+                        panel.style.overflow = '';
+                        running = null;
+                    };
+                }
+            });
+        });
+    });
+
+    // Reading progress on blog posts: a thin line along the navbar's bottom
+    // edge that fills as the article scrolls past.
+    ready(function () {
+        const post = document.querySelector('main.blog-post');
+        const navbar = document.querySelector('.navbar');
+        if (!post || !navbar) return;
+        const bar = document.createElement('div');
+        bar.className = 'read-progress';
+        bar.setAttribute('aria-hidden', 'true');
+        navbar.appendChild(bar);
+        let queued = false;
+        const update = () => {
+            queued = false;
+            const total = post.offsetHeight - window.innerHeight;
+            if (total <= 0) {
+                bar.style.transform = 'scaleX(1)';
+                return;
+            }
+            const passed = Math.min(Math.max(-post.getBoundingClientRect().top, 0), total);
+            bar.style.transform = 'scaleX(' + (passed / total).toFixed(4) + ')';
+        };
+        window.addEventListener('scroll', () => {
+            if (queued) return;
+            queued = true;
+            requestAnimationFrame(update);
+        }, { passive: true });
+        window.addEventListener('resize', update);
+        update();
+    });
+
+    // Lazy images fade in. Only images still loading get the class, so cached
+    // images never flash.
+    ready(function () {
+        if (reducedMotion) return;
+        document.querySelectorAll('img[loading="lazy"]').forEach((img) => {
+            if (img.complete) return;
+            img.classList.add('img-fade');
+            const done = () => img.classList.add('is-loaded');
+            img.addEventListener('load', done, { once: true });
+            img.addEventListener('error', done, { once: true });
+            if (img.complete) done();
+        });
+    });
+})();

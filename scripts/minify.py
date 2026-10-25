@@ -56,7 +56,8 @@ REF_RE = re.compile(r'((?:href|src)="(?:\.\./)?assets/(?:css|js)/[a-zA-Z0-9_-]+)
 
 def rewrite_refs(check_only=False):
     changed = 0
-    for path in glob.glob(os.path.join(ROOT, "*.html")) + glob.glob(os.path.join(ROOT, "blog/*.html")):
+    for path in (glob.glob(os.path.join(ROOT, "*.html")) + glob.glob(os.path.join(ROOT, "blog/*.html"))
+                 + glob.glob(os.path.join(ROOT, "case-studies/*.html"))):
         s = open(path, encoding="utf-8").read()
         new = REF_RE.sub(lambda m: f"{m.group(1)}.min.{m.group(2)}{m.group(3)}", s)
         if new != s:
@@ -78,6 +79,7 @@ def stamp_refs(version):
         version = datetime.date.today().strftime("%Y-%m-%d") + "a"
     targets = (glob.glob(os.path.join(ROOT, "*.html"))
                + glob.glob(os.path.join(ROOT, "blog/*.html"))
+               + glob.glob(os.path.join(ROOT, "case-studies/*.html"))
                + [os.path.join(ROOT, "scripts/_chrome_source.html")])
     changed = 0
     for path in targets:
