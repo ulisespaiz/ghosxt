@@ -42,7 +42,7 @@
     document.addEventListener('calendly.event_scheduled', function () {
       send('calendly_booking_complete', {});
     });
-    /* Pricing calculator intent events — dispatched by pricing.js. The
+    /* Pricing calculator intent events, dispatched by pricing.js. The
        generic cta_calendly_click event above still fires for the
        calculator's Book-a-Call button (it matches any calendly.com
        href); pricing_book_call_click adds the tier/users/total/addons
@@ -289,7 +289,16 @@ document.addEventListener('DOMContentLoaded', function () {
         });
         // Once revealed, hand the block back to its own styles: drop both
         // classes and the stagger delay so later hover transitions are untouched.
+        // Each block settles on its own: when its own transition ends (a
+        // child's hover transition bubbling up must not count), or one second
+        // after it was shown, which covers a stylesheet that cancels the
+        // transition. There is no page-wide timer: an earlier version settled
+        // every block four seconds after load, so visitors who read the first
+        // screen for longer than that never saw the reveal at all.
+        const timers = new Map();
         const settle = (el) => {
+            clearTimeout(timers.get(el));
+            timers.delete(el);
             el.classList.remove('reveal', 'is-visible');
             el.style.transitionDelay = '';
         };
@@ -298,13 +307,20 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (!entry.isIntersecting) return;
                 const el = entry.target;
                 io.unobserve(el);
-                el.addEventListener('transitionend', () => settle(el), { once: true });
+                const onEnd = (event) => {
+                    if (event.target !== el) return;
+                    el.removeEventListener('transitionend', onEnd);
+                    settle(el);
+                };
+                el.addEventListener('transitionend', onEnd);
+                timers.set(el, setTimeout(() => {
+                    el.removeEventListener('transitionend', onEnd);
+                    settle(el);
+                }, 1000));
                 el.classList.add('is-visible');
             });
         }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
         items.forEach((el) => io.observe(el));
-        // Safety net: nothing stays hidden if the observer never fires.
-        setTimeout(() => items.forEach(settle), 4000);
     });
 
     // FAQ open and close animation for the <details> accordions. The answer is

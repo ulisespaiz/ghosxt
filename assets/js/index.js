@@ -54,6 +54,9 @@ resizeCanvas();
 window.addEventListener('resize', () => {
     resizeCanvas();
     pulses = [];
+    // Setting the canvas size clears it. The loop repaints on its next frame,
+    // but under reduced motion there is no loop, so paint the still frame again.
+    if (REDUCED_MOTION) drawGrid();
 });
 
 function drawGrid() {
@@ -231,6 +234,7 @@ resizeCanvasCTA();
 window.addEventListener('resize', () => {
     resizeCanvasCTA();
     pulsesCTA = [];
+    if (REDUCED_MOTION) drawGridCTA();
 });
 
 function drawGridCTA() {

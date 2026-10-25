@@ -120,7 +120,7 @@ def check(slug, lead):
         problems.append(f"{words(lead)} words")
     if "Monterey County and surrounding areas" not in plain:
         problems.append("service area wording missing")
-    if PRICING not in lead and not (slug in NO_PRICING_LINK and "pricing" in plain or "quoted" in plain):
+    if PRICING not in lead and not (slug in NO_PRICING_LINK and ("pricing" in plain or "quoted" in plain)):
         problems.append("pricing link missing")
     if chr(0x2014) in lead:
         problems.append("em dash")
