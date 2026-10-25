@@ -206,7 +206,7 @@ jobs:
     name: Screenshot diff versus base
     if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
-    timeout-minutes: 40
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
         with:
@@ -237,8 +237,8 @@ jobs:
           CHROME_PATH: /usr/bin/google-chrome
         run: |
           cd head/audit
-          node tools/screenshots.mjs --base http://127.0.0.1:8788 --urls /tmp/urls-base.txt --out /tmp/shots-base --hide .cookie-banner --concurrency 3
-          node tools/screenshots.mjs --base http://127.0.0.1:8787 --urls /tmp/urls-head.txt --out /tmp/shots-head --hide .cookie-banner --concurrency 3
+          node tools/screenshots.mjs --base http://127.0.0.1:8788 --urls /tmp/urls-base.txt --out /tmp/shots-base --hide .cookie-banner --concurrency 4
+          node tools/screenshots.mjs --base http://127.0.0.1:8787 --urls /tmp/urls-head.txt --out /tmp/shots-head --hide .cookie-banner --concurrency 4
       - name: Compare
         id: diff
         continue-on-error: true
