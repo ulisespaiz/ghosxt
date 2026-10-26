@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from an engineer with DoD infrastructure experience.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Sun, 25 Oct 2026 11:39:40 +0000</lastBuildDate>
-    <pubDate>Sun, 25 Oct 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Mon, 26 Oct 2026 11:15:25 +0000</lastBuildDate>
+    <pubDate>Mon, 26 Oct 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>How Often to Replace Business Computers</title>
+      <link>https://ghosxt.com/blog/computer-replacement-cycle-laptop-refresh-small-business-2026</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/computer-replacement-cycle-laptop-refresh-small-business-2026</guid>
+      <pubDate>Mon, 26 Oct 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Managed IT</category>
+      <description>Most business laptops and desktops last 4 to 5 years. Learn the signs it is time to replace, how to stagger a refresh, and what to budget per seat.</description>
+    </item>
     <item>
       <title>Dormant Account Cleanup for Small Business</title>
       <link>https://ghosxt.com/blog/dormant-inactive-accounts-cleanup-small-business-2026</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Managed IT</category>
       <description>Starting a business? The IT and security decisions to get right before you hire: business email and MFA, device setup, backups, and who holds the keys. A practical first-90-days checklist.</description>
-    </item>
-    <item>
-      <title>Microsoft 365 Copilot and the Oversharing Problem Nobody Checked First (2026)</title>
-      <link>https://ghosxt.com/blog/microsoft-365-copilot-oversharing-risk-small-business-2026</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/microsoft-365-copilot-oversharing-risk-small-business-2026</guid>
-      <pubDate>Fri, 25 Sep 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>Microsoft 365 Copilot surfaces whatever a user already has access to, oversharing included. What to check in SharePoint and OneDrive before turning it on.</description>
     </item>
   </channel>
 </rss>

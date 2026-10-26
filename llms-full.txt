@@ -5914,6 +5914,7 @@ Meta description: Notes from an engineer with DoD infrastructure experience on c
 Plain-talk writing on cybersecurity, managed IT, and the things that actually break in small business networks. No corporate speak, no fearmongering, no fluff.
 ## Latest
 The newest posts across every topic. Looking for something specific? Browse all posts in the file view.
+- [How Often Should a Small Business Replace Computers? (2026)](https://ghosxt.com/blog/computer-replacement-cycle-laptop-refresh-small-business-2026)
 - [Dormant Account Cleanup: Find and Disable Stale Logins (2026)](https://ghosxt.com/blog/dormant-inactive-accounts-cleanup-small-business-2026)
 - [Password Policy for Small Business: Stop Forcing Password Changes (2026)](https://ghosxt.com/blog/password-expiration-policy-nist-small-business-2026)
 - [Zoom, Teams & Google Meet Security for Small Business (2026)](https://ghosxt.com/blog/video-conference-security-zoom-teams-meet-small-business-2026)
