@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from an engineer with DoD infrastructure experience.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Mon, 26 Oct 2026 11:15:25 +0000</lastBuildDate>
-    <pubDate>Mon, 26 Oct 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Wed, 28 Oct 2026 11:21:58 +0000</lastBuildDate>
+    <pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>Break-Glass Admin Account for Microsoft 365</title>
+      <link>https://ghosxt.com/blog/break-glass-emergency-admin-account-microsoft-365-small-business-2026</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/break-glass-emergency-admin-account-microsoft-365-small-business-2026</guid>
+      <pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>A break-glass account keeps you from being locked out of Microsoft 365 when MFA fails. Learn how to create one, secure it, and test it every quarter.</description>
+    </item>
     <item>
       <title>How Often to Replace Business Computers</title>
       <link>https://ghosxt.com/blog/computer-replacement-cycle-laptop-refresh-small-business-2026</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Google Workspace</category>
       <description>Google Workspace keeps deleted files and users for a limited time, not forever. What Google actually retains, what it doesn't, and where backup fits in.</description>
-    </item>
-    <item>
-      <title>IT Setup for a New Small Business: The Founder's Checklist for the First 90 Days (2026)</title>
-      <link>https://ghosxt.com/blog/it-setup-checklist-new-small-business-2026</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/it-setup-checklist-new-small-business-2026</guid>
-      <pubDate>Sat, 26 Sep 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Managed IT</category>
-      <description>Starting a business? The IT and security decisions to get right before you hire: business email and MFA, device setup, backups, and who holds the keys. A practical first-90-days checklist.</description>
     </item>
   </channel>
 </rss>
