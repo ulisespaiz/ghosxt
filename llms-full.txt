@@ -5914,6 +5914,7 @@ Meta description: Notes from an engineer with DoD infrastructure experience on c
 Plain-talk writing on cybersecurity, managed IT, and the things that actually break in small business networks. No corporate speak, no fearmongering, no fluff.
 ## Latest
 The newest posts across every topic. Looking for something specific? Browse all posts in the file view.
+- [Remove Local Admin Rights on Employee Laptops (2026)](https://ghosxt.com/blog/remove-local-admin-rights-employee-laptops-small-business-2026)
 - [Break-Glass Admin Account for Microsoft 365: Set It Up (2026)](https://ghosxt.com/blog/break-glass-emergency-admin-account-microsoft-365-small-business-2026)
 - [How Often Should a Small Business Replace Computers? (2026)](https://ghosxt.com/blog/computer-replacement-cycle-laptop-refresh-small-business-2026)
 - [Dormant Account Cleanup: Find and Disable Stale Logins (2026)](https://ghosxt.com/blog/dormant-inactive-accounts-cleanup-small-business-2026)

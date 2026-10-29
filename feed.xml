@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from an engineer with DoD infrastructure experience.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Wed, 28 Oct 2026 11:21:58 +0000</lastBuildDate>
-    <pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Thu, 29 Oct 2026 11:21:25 +0000</lastBuildDate>
+    <pubDate>Thu, 29 Oct 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>Remove Local Admin Rights on Laptops (2026)</title>
+      <link>https://ghosxt.com/blog/remove-local-admin-rights-employee-laptops-small-business-2026</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/remove-local-admin-rights-employee-laptops-small-business-2026</guid>
+      <pubDate>Thu, 29 Oct 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>Local admin rights turn one bad click into a full compromise. See why to switch employees to standard accounts, how to roll it out, and what to expect.</description>
+    </item>
     <item>
       <title>Break-Glass Admin Account for Microsoft 365</title>
       <link>https://ghosxt.com/blog/break-glass-emergency-admin-account-microsoft-365-small-business-2026</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Managed IT</category>
       <description>A step-by-step Google Workspace checklist for offboarding contractors, including remote and overseas ones: access, devices, licenses, and shared logins.</description>
-    </item>
-    <item>
-      <title>Does Google Workspace Back Up Your Data?</title>
-      <link>https://ghosxt.com/blog/google-workspace-backup-small-business-2026</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/google-workspace-backup-small-business-2026</guid>
-      <pubDate>Mon, 28 Sep 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Google Workspace</category>
-      <description>Google Workspace keeps deleted files and users for a limited time, not forever. What Google actually retains, what it doesn't, and where backup fits in.</description>
     </item>
   </channel>
 </rss>
