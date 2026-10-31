@@ -42,7 +42,8 @@ const SCROLL_MAX_STEPS = 500;
 const STABILIZE_CSS =
   '*, *::before, *::after { animation: none !important; transition: none !important; ' +
   'caret-color: transparent !important; scroll-behavior: auto !important; } ' +
-  '.reveal { opacity: 1 !important; translate: none !important; } img.img-fade { opacity: 1 !important; }';
+  '.reveal { opacity: 1 !important; translate: none !important; } img.img-fade { opacity: 1 !important; } ' +
+  '.navbar { transform: none !important; }';
 const PNG_SIGNATURE = [0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a];
 
 const HELP = `Usage: node tools/screenshots.mjs [options]

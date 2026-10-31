@@ -219,15 +219,55 @@ document.addEventListener('DOMContentLoaded', function() {
     //     // You can add actual theme switching logic here if needed
     // });
 
-    // Sticky navbar: add a shadow once the page is scrolled so the header
-    // (and the red Call button) reads as a distinct, always-present bar.
+    // Sticky navbar: a shadow once the page is scrolled, and on phones and
+    // tablets the header slides away on scroll down and returns on scroll
+    // up (styles: .navbar.nav-hidden). It stays put near the top of the
+    // page, while the mobile menu is open, while keyboard focus is inside
+    // it, after an in-page anchor jump, and at desktop widths.
     const navbar = document.querySelector('.navbar');
     if (navbar) {
+        const narrow = window.matchMedia('(max-width: 968px)');
+        const SHOW_NEAR_TOP = 80;   // always visible this close to the top
+        const HIDE_AFTER = 120;     // never hide above this scroll position
+        const DOWN_SLACK = 24;      // scroll-down distance before hiding
+        const UP_SLACK = 8;         // scroll-up distance before showing
+        let lastY = window.pageYOffset;
+        let downFrom = -1;
+        let upFrom = -1;
+        let queued = false;
+        const show = () => navbar.classList.remove('nav-hidden');
+        const update = () => {
+            queued = false;
+            const y = window.pageYOffset;
+            navbar.classList.toggle('scrolled', y > 8);
+            const pinned = !narrow.matches
+                || document.body.classList.contains('menu-open')
+                || navbar.contains(document.activeElement);
+            if (pinned || y <= SHOW_NEAR_TOP) {
+                show();
+                downFrom = -1;
+                upFrom = -1;
+            } else if (y > lastY) {
+                if (downFrom < 0) downFrom = lastY;
+                upFrom = -1;
+                if (y > HIDE_AFTER && y - downFrom > DOWN_SLACK) navbar.classList.add('nav-hidden');
+            } else if (y < lastY) {
+                if (upFrom < 0) upFrom = lastY;
+                downFrom = -1;
+                if (upFrom - y > UP_SLACK) show();
+            }
+            lastY = y;
+        };
         const onScroll = () => {
-            navbar.classList.toggle('scrolled', window.pageYOffset > 8);
+            if (queued) return;
+            queued = true;
+            requestAnimationFrame(update);
         };
         window.addEventListener('scroll', onScroll, { passive: true });
-        onScroll();
+        navbar.addEventListener('focusin', show);
+        window.addEventListener('hashchange', show);
+        narrow.addEventListener('change', () => { show(); lastY = window.pageYOffset; });
+        update();
     }
 });
 

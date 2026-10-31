@@ -752,7 +752,30 @@ body:has(.top-banner.hidden) .hero-section {
 .navbar {
   transition:
     top 0.3s ease,
-    box-shadow 0.25s ease;
+    box-shadow 0.25s ease,
+    transform 0.28s ease;
+}
+
+/* On phones and tablets the header slides away as the visitor scrolls down
+   and returns the moment they scroll up, so the first screen is content.
+   The bottom call-and-book bar keeps the CTAs on screen the whole time.
+   Transform rather than top so nothing reflows (no layout shift), and no
+   will-change so the header never becomes a containing block for the menu.
+   main.js adds nav-hidden; it never does while the menu is open, while
+   focus is inside the header, near the top of the page, or on desktop. */
+@media (max-width: 968px) {
+  .navbar.nav-hidden {
+    transform: translateY(-100%);
+    box-shadow: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .navbar {
+    transition:
+      top 0.3s ease,
+      box-shadow 0.25s ease;
+  }
 }
 
 /* Subtle shadow once the page is scrolled, so the sticky header (and the
