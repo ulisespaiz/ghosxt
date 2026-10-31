@@ -128,6 +128,41 @@ html {
   animation: animateGrain 8s steps(10) infinite;
 }
 
+/* Page-to-page crossfade (cross-document view transitions). Same-origin
+   navigations between our own pages fade from the old page to the new one
+   over 0.18 s while the header and the phone call-and-book bar hold still.
+   Chrome, Edge and Safari do this; a browser without the feature simply
+   navigates as before. Off under reduced motion. */
+@view-transition {
+  navigation: auto;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.18s;
+}
+
+.navbar {
+  view-transition-name: site-header;
+}
+
+.mobile-cta-bar {
+  view-transition-name: site-cta-bar;
+}
+
+::view-transition-old(site-header),
+::view-transition-new(site-header),
+::view-transition-old(site-cta-bar),
+::view-transition-new(site-cta-bar) {
+  animation: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  @view-transition {
+    navigation: none;
+  }
+}
+
 /* The grain overlays above are decoration. They are position: fixed and 300
    percent wide, so without this they sit over every tap and click on content
    that is not stacked above them (the contact page's booking button and
