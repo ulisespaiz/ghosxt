@@ -134,10 +134,26 @@ document.addEventListener('DOMContentLoaded', function() {
     const body = document.body;
     if (!mobileToggle || !mobileMenu || !navbarOverlay) return;
 
+    // body.menu-open pins the page with position: fixed, which on its own
+    // throws the page to the top the moment the menu opens and leaves it
+    // there on close. Hold the page where it was and put it back after.
+    let lockedScrollY = 0;
+    const lockPage = () => {
+        lockedScrollY = window.pageYOffset;
+        body.style.top = -lockedScrollY + 'px';
+        body.classList.add('menu-open');
+    };
+    const unlockPage = () => {
+        if (!body.classList.contains('menu-open')) return;
+        body.classList.remove('menu-open');
+        body.style.top = '';
+        window.scrollTo(0, lockedScrollY);
+    };
+
     const closeMobileMenu = () => {
         mobileMenu.classList.remove('active');
         navbarOverlay.classList.remove('active');
-        body.classList.remove('menu-open');
+        unlockPage();
         mobileToggle.setAttribute('aria-expanded', 'false');
         mobileToggle.querySelector('i').className = 'fi fi-rs-burger-menu';
     };
@@ -146,16 +162,13 @@ document.addEventListener('DOMContentLoaded', function() {
         mobileMenu.classList.toggle('active');
         const isOpen = mobileMenu.classList.contains('active');
         mobileToggle.setAttribute('aria-expanded', String(isOpen));
-        
-        // Toggle overlay - ADD THIS
         if (isOpen) {
             navbarOverlay.classList.add('active');
-            body.classList.add('menu-open');
+            lockPage();
         } else {
             navbarOverlay.classList.remove('active');
-            body.classList.remove('menu-open');
+            unlockPage();
         }
-        
         mobileToggle.querySelector('i').className = isOpen ? 'fi fi-rs-cross' : 'fi fi-rs-burger-menu';
     });
 
