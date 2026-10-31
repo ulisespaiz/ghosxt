@@ -262,10 +262,11 @@ document.addEventListener('DOMContentLoaded', function () {
         else fn();
     };
 
-    // Scroll reveal, inner pages only: the home page has its own animations.
+    // Scroll reveal. The home page joins in for its cards below the fold;
+    // it keeps its own hero animations and its cards have no press state, so
+    // it does not get the motion-inner class.
     ready(function () {
-        if (document.getElementById('gridCanvas')) return;
-        document.body.classList.add('motion-inner');
+        if (!document.getElementById('gridCanvas')) document.body.classList.add('motion-inner');
         if (reducedMotion || !('IntersectionObserver' in window)) return;
         const selector = [
             '.key-facts', '.service-card', '.icon-card', '.scenario-card', '.location-cta',
