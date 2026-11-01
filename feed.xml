@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from an engineer with DoD infrastructure experience.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Sat, 31 Oct 2026 11:09:23 +0000</lastBuildDate>
-    <pubDate>Sat, 31 Oct 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Sun, 01 Nov 2026 11:09:34 +0000</lastBuildDate>
+    <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>Fake E-Signature Request Scams (2026)</title>
+      <link>https://ghosxt.com/blog/fake-esignature-request-docusign-phishing-small-business-2026</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/fake-esignature-request-docusign-phishing-small-business-2026</guid>
+      <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>Fake DocuSign-style e-signature emails steal Microsoft 365 and Google logins. Learn how to spot them and the 4 checks that keep your small business safe.</description>
+    </item>
     <item>
       <title>Tax Season Scams for Small Business (2026)</title>
       <link>https://ghosxt.com/blog/tax-season-scams-w2-payroll-fraud-small-business-2026</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Compliance</category>
       <description>Customers now send vendors security questionnaires before signing. How a small business can answer them honestly, quickly, and without stalling a deal.</description>
-    </item>
-    <item>
-      <title>Phishing-Resistant MFA in Google Workspace</title>
-      <link>https://ghosxt.com/blog/phishing-resistant-mfa-google-workspace-admin-guide</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/phishing-resistant-mfa-google-workspace-admin-guide</guid>
-      <pubDate>Mon, 28 Sep 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Google Workspace</category>
-      <description>A step-by-step Google Workspace Admin console plan to enforce security keys and passkeys, protect high-risk users, and extend SSO to other apps.</description>
     </item>
   </channel>
 </rss>
