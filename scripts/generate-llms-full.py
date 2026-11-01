@@ -41,6 +41,17 @@ Notes
   * Page order and page selection both come from llms.txt itself: this
     script does not scan the repo for HTML files independently. Re-run
     after llms.txt's page list changes.
+  * Size (AUDIT.md A-07, output under 200 KB so assistants fetch it whole):
+    the per-city matrix (links under the llms.txt headings in LOCAL_SECTIONS)
+    is left out unless --include-local is passed; each page is kept to about
+    4,500 bytes (--page-budget N, 0 = unlimited): every heading, the lead
+    paragraph and every FAQ Q/A line are always kept, then remaining
+    paragraphs and list items are added in document order while they fit;
+    the per-post link list is dropped from the /blog/ section unless
+    --blog-index-links is passed. The production command stays
+        python3 scripts/generate-llms-full.py --apply
+    and `--include-local --page-budget 0 --blog-index-links` reproduces the
+    old full-length file.
   * A link is skipped if it resolves to a non-HTML resource (sitemap.xml,
     feed.xml) or to a blog post other than the blog index (/blog/).
   * Idempotent: re-running with unchanged source pages and an unchanged
@@ -83,7 +94,7 @@ COMMENT_RE = re.compile(r"<!--.*?-->", re.DOTALL)
 CALLOUT_RE = re.compile(r'<p class="existing-client-callout">.*?</p>', re.DOTALL)
 NON_PAGE_SUFFIXES = (".xml", ".pdf", ".json", ".txt")
 
-WARN_BYTES = 400_000  # ~400KB target ceiling
+WARN_BYTES = 204_800  # AUDIT.md A-07 acceptance: wc -c llms-full.txt under 204800
 
 
 def normalize_ws(text: str) -> str:
@@ -263,16 +274,36 @@ def strip_blocks(html: str) -> str:
     return html
 
 
-def ordered_page_links(llms_text: str) -> list[str]:
+# llms.txt sections whose links are the per-city matrix. They stay in llms.txt
+# (a short index) but are left out of llms-full.txt unless --include-local is
+# passed, so the long-form file stays small enough for assistants to fetch.
+LOCAL_SECTIONS = {
+    "Service areas (city pages)",
+    "Service areas (by county)",
+    "Local service pages (service + city)",
+}
+SECTION_RE = re.compile(r"^## (.+?)\s*$", re.M)
+
+
+def ordered_page_links(llms_text: str, include_local: bool = False) -> list[str]:
     """Root-page URLs referenced in llms.txt, in first-seen order.
-    Blog posts are skipped except the blog index (https://ghosxt.com/blog/)."""
+    Blog posts are skipped except the blog index (https://ghosxt.com/blog/).
+    Links under a LOCAL_SECTIONS heading are skipped unless include_local."""
     seen: dict[str, None] = {}
-    for match in LINK_RE.finditer(llms_text):
-        url = match.group(1)
-        path = url[len(BASE_URL):]
-        if path.startswith("/blog/") and path != "/blog/":
+    section = ""
+    for line in llms_text.splitlines():
+        m = SECTION_RE.match(line)
+        if m:
+            section = m.group(1).strip()
             continue
-        seen.setdefault(url, None)
+        if not include_local and section in LOCAL_SECTIONS:
+            continue
+        for match in LINK_RE.finditer(line):
+            url = match.group(1)
+            path = url[len(BASE_URL):]
+            if path.startswith("/blog/") and path != "/blog/":
+                continue
+            seen.setdefault(url, None)
     return list(seen.keys())
 
 
@@ -334,8 +365,38 @@ def build_page_section(url: str, path: Path) -> str | None:
     if description:
         section.append(f"Meta description: {description}")
     section.append("")
-    section.extend(body_lines)
+    section.extend(apply_budget(body_lines, PAGE_BUDGET - len("\n".join(section).encode("utf-8"))))
     return "\n".join(section).rstrip() + "\n"
+
+
+PAGE_BUDGET = 4500  # per-page byte budget; 0 = unlimited (set from --page-budget)
+BLOG_INDEX_LINKS = False  # --blog-index-links restores the per-post link list in the /blog/ section
+INCLUDE_LOCAL = False
+
+
+def apply_budget(lines: list[str], budget: int) -> list[str]:
+    """Keep every heading, the lead paragraph, and every FAQ Q/A and Rate line;
+    then add the remaining paragraphs and list items in document order while the
+    section stays within budget. Order is preserved. budget <= 0 means no limit."""
+    if budget <= 0 or PAGE_BUDGET <= 0:
+        return lines
+    keep = [False] * len(lines)
+    lead_seen = False
+    for i, ln in enumerate(lines):
+        if ln.startswith(("# ", "## ", "### ", "Q: ", "A: ", "Rate: ")):
+            keep[i] = True
+        elif not lead_seen and not ln.startswith("- "):
+            keep[i] = True
+            lead_seen = True
+    used = sum(len(ln.encode("utf-8")) + 1 for i, ln in enumerate(lines) if keep[i])
+    for i, ln in enumerate(lines):
+        if keep[i]:
+            continue
+        cost = len(ln.encode("utf-8")) + 1
+        if used + cost <= budget:
+            keep[i] = True
+            used += cost
+    return [ln for i, ln in enumerate(lines) if keep[i]]
 
 
 class BlogIndexExtractor(HTMLParser):
@@ -438,6 +499,8 @@ def build_blog_index_section(url: str, path: Path) -> str | None:
         elif tag == "p":
             body_lines.append(value)
         elif tag == "link":
+            if not BLOG_INDEX_LINKS:
+                continue
             post_title, href = value
             post_url = href if href.startswith("http") else f"{BASE_URL}{href}"
             body_lines.append(f"- [{post_title}]({post_url})")
@@ -474,7 +537,7 @@ def build_llms_full() -> tuple[str, int, int]:
         "with each page's on-page text included in full instead of a one-line summary.\n"
     )
 
-    urls = ordered_page_links(llms_text)
+    urls = ordered_page_links(llms_text, include_local=INCLUDE_LOCAL)
     included = 0
     skipped: list[str] = []
     for url in urls:
@@ -506,7 +569,14 @@ def main() -> int:
         help="Actually write llms-full.txt. Without this flag the script ALWAYS runs as a dry run.",
     )
     parser.add_argument("--dry-run", action="store_true", help="Explicit dry-run flag (informational only).")
+    parser.add_argument("--include-local", action="store_true", help="Also include the per-city matrix sections of llms.txt.")
+    parser.add_argument("--page-budget", type=int, default=4500, help="Per-page byte budget (headings, lead and FAQ always kept). 0 = unlimited. Default 4500.")
+    parser.add_argument("--blog-index-links", action="store_true", help="Keep the per-post link list in the /blog/ index section (dropped by default).")
     args = parser.parse_args()
+    global PAGE_BUDGET, BLOG_INDEX_LINKS, INCLUDE_LOCAL
+    PAGE_BUDGET = args.page_budget
+    BLOG_INDEX_LINKS = args.blog_index_links
+    INCLUDE_LOCAL = args.include_local
 
     apply_changes = args.apply
 
