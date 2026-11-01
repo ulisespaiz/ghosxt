@@ -1,10 +1,13 @@
 #!/usr/bin/env python3
 """Submit the site's URLs to IndexNow (Bing, Yandex, Naver, Seznam, Yep share one endpoint).
 
-Why: AUDIT.md A-06. The Bing index feeds ChatGPT search and Microsoft Copilot, and
-ghosxt.com was absent from the non-Google index the AI assistants read. The IndexNow
-key file is already served at the site root (see audit/offsite-notes.md); this script
-sends the URL list that the key authorises. Nothing else about the site changes.
+Why: AUDIT.md A-06. ghosxt.com was absent from the non-Google web index on every
+query in the 2026-10-25 panel, including its own brand query. IndexNow feeds the Bing
+index, which grounds Microsoft Copilot and Microsoft's Web IQ API (ChatGPT search
+itself now leans on OpenAI's own index plus Google results, so Google indexing is the
+other half of that work). The IndexNow key file is already served at the site root
+(see audit/offsite-notes.md); this script sends the URL list that the key authorises.
+Nothing else about the site changes.
 
 Default is a dry run. It prints the key, the key location, the endpoint and the URL
 count, and writes nothing to the network.

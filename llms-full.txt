@@ -129,7 +129,7 @@ A: Yes. Remote support for non-managed clients is $180 per hour with a 30-minute
 Q: Can you see our screens or files without us knowing?
 A: No. Remote support sessions start with you on the call, using a short session code the engineer gives you, and they end when the call ends. You watch the whole thing.
 Q: Do you support Google Workspace, or only Microsoft 365?
-A: Both. Microsoft 365 tenants get Conditional Access, phishing-resistant MFA, and device management through Microsoft 365. Google Workspace shops get Workspace set up as the identity provider with phishing-resistant MFA, Gmail and Drive backup, and Mac management through Apple Business Manager. Onboarding for the Microsoft 365 default scope is priced on the pricing page; Google Workspace and Apple fleet onboarding are scoped and quoted separately.
+A: Both. Microsoft 365 tenants get Conditional Access, phishing-resistant MFA, and device management through Microsoft 365. Google Workspace shops get Workspace set up as the identity provider with phishing-resistant MFA, Gmail and Drive backup, and Mac management through Apple Business (formerly Apple Business Manager). Onboarding for the Microsoft 365 default scope is priced on the pricing page; Google Workspace and Apple fleet onboarding are scoped and quoted separately.
 Q: Do we need to be a certain size?
 A: No. Tiny Team covers 1 to 4 users at a flat $600 per month; the per-user tiers start at 5 users and run up through 50-plus employee operations.
 
