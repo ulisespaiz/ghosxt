@@ -133,51 +133,139 @@
 
     <nav class="navbar" aria-label="Main navigation">
       <div class="navbar-container">
-        <div class="navbar-left"><a href="/" class="navbar-logo"><img fetchpriority="high" loading="eager" src="../assets/img/ghosxt-logo-160.webp" alt="Ghosxt logo" width="48" height="48" /><span>GHOSXT</span></a></div>
+        <div class="navbar-left">
+          <a href="/" class="navbar-logo">
+            <img fetchpriority="high" loading="eager" src="../assets/img/ghosxt-logo-160.webp" alt="Ghosxt logo" width="48" height="48" />
+            <span>GHOSXT</span>
+          </a>
+        </div>
         <div class="navbar-right">
           <div class="navbar-menu">
-            <a href="/" class="navbar-link">Home</a>
-            <div class="navbar-dropdown"><a href="/about" class="navbar-link dropdown-trigger">About <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></a><div class="dropdown-menu"><a href="/about" class="dropdown-item">About Ghosxt</a><a href="/ghosxt-cares" class="dropdown-item">Ghosxt Cares</a></div></div>
-            <div class="navbar-dropdown"><a href="/services" class="navbar-link dropdown-trigger">Services <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></a><div class="dropdown-menu"><a href="/services" class="dropdown-item">All Services</a>
+            <div class="navbar-dropdown">
+              <a href="/about" class="navbar-link dropdown-trigger">About <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></a>
+              <div class="dropdown-menu">
+                <a href="/about" class="dropdown-item">About Ghosxt</a>
+                <a href="/ghosxt-cares" class="dropdown-item">Ghosxt Cares</a>
+                <a href="/support" class="dropdown-item">Get Support</a>
+              </div>
+            </div>
+            <div class="navbar-dropdown">
+              <a href="/services" class="navbar-link dropdown-trigger">Services <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></a>
+              <div class="dropdown-menu">
+                <a href="/services" class="dropdown-item">All Services</a>
                 <a href="/managed-it-services" class="dropdown-item">Managed IT Services</a>
                 <a href="/help-desk-it-support" class="dropdown-item">IT Help Desk &amp; Support</a>
                 <a href="/it-consulting-vcio" class="dropdown-item">IT Consulting &amp; vCIO</a>
                 <a href="/cybersecurity" class="dropdown-item">Cybersecurity</a>
+                <a href="/zero-trust-security" class="dropdown-item">Zero Trust Security</a>
                 <a href="/cloud-services" class="dropdown-item">Cloud Services</a>
                 <a href="/backup-disaster-recovery" class="dropdown-item">Backup &amp; Disaster Recovery</a>
                 <a href="/network-design" class="dropdown-item">Network Design</a>
                 <a href="/website-development" class="dropdown-item">Web Development</a>
                 <a href="/website-development#calculator" class="dropdown-item">Website Pricing</a>
-                <a href="/ctpat" class="dropdown-item">C-TPAT Compliance</a></div></div>
+              </div>
+            </div>
+            <div class="navbar-dropdown">
+              <a href="/cybersecurity" class="navbar-link dropdown-trigger">Compliance <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></a>
+              <div class="dropdown-menu">
+                <a href="/cmmc-compliance" class="dropdown-item">CMMC &amp; NIST 800-171</a>
+                <a href="/hipaa-it-compliance" class="dropdown-item">HIPAA IT Compliance</a>
+                <a href="/pci-compliance" class="dropdown-item">PCI DSS Compliance</a>
+                <a href="/ctpat" class="dropdown-item">C-TPAT Compliance</a>
+                <a href="/cyber-insurance-compliance" class="dropdown-item">Cyber Insurance</a>
+              </div>
+            </div>
+            <div class="navbar-dropdown">
+              <a href="/services" class="navbar-link dropdown-trigger">Industries <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></a>
+              <div class="dropdown-menu">
+                <a href="/agriculture-it-services" class="dropdown-item">Agriculture</a>
+                <a href="/trucking-it-services" class="dropdown-item">Trucking &amp; Logistics</a>
+                <a href="/manufacturing-it-services" class="dropdown-item">Manufacturing</a>
+                <a href="/healthcare-it-services" class="dropdown-item">Healthcare &amp; Medical</a>
+                <a href="/hospitality-it-services" class="dropdown-item">Hospitality</a>
+                <a href="/professional-services-it" class="dropdown-item">Professional Services</a>
+                <a href="/property-management-it-services" class="dropdown-item">Property Management</a>
+                <a href="/engineering-it-services" class="dropdown-item">Engineering Firms</a>
+                <a href="/it-support-nonprofits-google-workspace" class="dropdown-item">Nonprofits</a>
+                <a href="/it-support-remote-mac-teams" class="dropdown-item">Remote Mac Teams</a>
+              </div>
+            </div>
             <a href="/pricing" class="navbar-link">Pricing</a>
-            <a href="/support" class="navbar-link">Support</a>
             <a href="/blog/" class="navbar-link">Blog</a>
             <a href="/contact" class="navbar-link">Contact</a>
           </div>
-          <button class="navbar-mobile-toggle" id="mobileToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu"><i class="fi fi-rs-burger-menu" aria-hidden="true"></i></button>
-          <div class="navbar-buttons"><a class="navbar-btn navbar-phone" href="tel:+18312040501" aria-label="Call Ghosxt at (831) 204-0501"><i class="fi fi-rs-phone-call" aria-hidden="true"></i><span>(831)&nbsp;204-0501</span></a><a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer" class="navbar-btn btn-demo"><i class="fi fi-rs-calendar-day"></i><span>Book a Call</span></a></div>
+          <button class="navbar-mobile-toggle" id="mobileToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu">
+            <i class="fi fi-rs-burger-menu" aria-hidden="true"></i>
+          </button>
+          <div class="navbar-buttons"><a class="navbar-btn navbar-phone" href="tel:+18312040501" aria-label="Call Ghosxt at (831) 204-0501"><i class="fi fi-rs-phone-call" aria-hidden="true"></i><span>(831)&nbsp;204-0501</span></a>
+            <a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer" class="navbar-btn btn-demo">
+              <i class="fi fi-rs-calendar-day"></i>
+              <span>Book a Call</span>
+            </a>
+          </div>
         </div>
       </div>
       <div class="navbar-overlay" id="navbarOverlay"></div>
       <div class="navbar-mobile-menu" id="mobileMenu">
         <a href="/" class="mobile-link">Home</a>
-        <div class="mobile-accordion"><button class="mobile-accordion-trigger" aria-expanded="false">About <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></button><div class="mobile-accordion-content"><a href="/about" class="mobile-dropdown-item">About Ghosxt</a><a href="/ghosxt-cares" class="mobile-dropdown-item">Ghosxt Cares</a></div></div>
-        <div class="mobile-accordion"><button class="mobile-accordion-trigger" aria-expanded="false">Services <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></button><div class="mobile-accordion-content"><a href="/services" class="mobile-dropdown-item">All Services</a>
+        <div class="mobile-accordion">
+          <button class="mobile-accordion-trigger" aria-expanded="false">About <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></button>
+          <div class="mobile-accordion-content">
+            <a href="/about" class="mobile-dropdown-item">About Ghosxt</a>
+            <a href="/ghosxt-cares" class="mobile-dropdown-item">Ghosxt Cares</a>
+          </div>
+        </div>
+        <div class="mobile-accordion">
+          <button class="mobile-accordion-trigger" aria-expanded="false">Services <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></button>
+          <div class="mobile-accordion-content">
+            <a href="/services" class="mobile-dropdown-item">All Services</a>
             <a href="/managed-it-services" class="mobile-dropdown-item">Managed IT Services</a>
             <a href="/help-desk-it-support" class="mobile-dropdown-item">IT Help Desk &amp; Support</a>
             <a href="/it-consulting-vcio" class="mobile-dropdown-item">IT Consulting &amp; vCIO</a>
             <a href="/cybersecurity" class="mobile-dropdown-item">Cybersecurity</a>
+            <a href="/zero-trust-security" class="mobile-dropdown-item">Zero Trust Security</a>
             <a href="/cloud-services" class="mobile-dropdown-item">Cloud Services</a>
             <a href="/backup-disaster-recovery" class="mobile-dropdown-item">Backup &amp; Disaster Recovery</a>
             <a href="/network-design" class="mobile-dropdown-item">Network Design</a>
             <a href="/website-development" class="mobile-dropdown-item">Web Development</a>
             <a href="/website-development#calculator" class="mobile-dropdown-item">Website Pricing</a>
-            <a href="/ctpat" class="mobile-dropdown-item">C-TPAT Compliance</a></div></div>
+          </div>
+        </div>
+        <div class="mobile-accordion">
+          <button class="mobile-accordion-trigger" aria-expanded="false">Compliance <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></button>
+          <div class="mobile-accordion-content">
+            <a href="/cmmc-compliance" class="mobile-dropdown-item">CMMC &amp; NIST 800-171</a>
+            <a href="/hipaa-it-compliance" class="mobile-dropdown-item">HIPAA IT Compliance</a>
+            <a href="/pci-compliance" class="mobile-dropdown-item">PCI DSS Compliance</a>
+            <a href="/ctpat" class="mobile-dropdown-item">C-TPAT Compliance</a>
+            <a href="/cyber-insurance-compliance" class="mobile-dropdown-item">Cyber Insurance</a>
+          </div>
+        </div>
+        <div class="mobile-accordion">
+          <button class="mobile-accordion-trigger" aria-expanded="false">Industries <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></button>
+          <div class="mobile-accordion-content">
+            <a href="/agriculture-it-services" class="mobile-dropdown-item">Agriculture</a>
+            <a href="/trucking-it-services" class="mobile-dropdown-item">Trucking &amp; Logistics</a>
+            <a href="/manufacturing-it-services" class="mobile-dropdown-item">Manufacturing</a>
+            <a href="/healthcare-it-services" class="mobile-dropdown-item">Healthcare &amp; Medical</a>
+            <a href="/hospitality-it-services" class="mobile-dropdown-item">Hospitality</a>
+            <a href="/professional-services-it" class="mobile-dropdown-item">Professional Services</a>
+            <a href="/property-management-it-services" class="mobile-dropdown-item">Property Management</a>
+            <a href="/engineering-it-services" class="mobile-dropdown-item">Engineering Firms</a>
+            <a href="/it-support-nonprofits-google-workspace" class="mobile-dropdown-item">Nonprofits</a>
+            <a href="/it-support-remote-mac-teams" class="mobile-dropdown-item">Remote Mac Teams</a>
+          </div>
+        </div>
         <a href="/pricing" class="mobile-link">Pricing</a>
         <a href="/support" class="mobile-link">Support</a>
         <a href="/blog/" class="mobile-link">Blog</a>
         <a href="/contact" class="mobile-link">Contact</a>
-        <div class="mobile-actions"><a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer" class="mobile-btn btn-demo"><i class="fi fi-rs-calendar-day"></i><span>Book a Call</span></a></div>
+        <div class="mobile-actions">
+          <a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer" class="mobile-btn btn-demo">
+            <i class="fi fi-rs-calendar-day"></i>
+            <span>Book a Call</span>
+          </a>
+        </div>
       </div>
     </nav>
     <main id="main-content" class="blog-post">
@@ -511,6 +599,7 @@
             <ul class="footer-links">
               <li><a href="/">Home</a></li>
               <li><a href="/about">About</a></li>
+              <li><a href="/ghosxt-cares">Ghosxt Cares</a></li>
               <li><a href="/services">Services</a></li>
               <li><a href="/pricing">Pricing</a></li>
               <li>
@@ -532,7 +621,20 @@
               <li><a href="/backup-disaster-recovery">Backup &amp; Disaster Recovery</a></li>
               <li><a href="/network-design">Network Design</a></li>
               <li><a href="/website-development">Web Development</a></li>
+            </ul>
+            <h3 class="footer-column-title">Compliance</h3>
+            <ul class="footer-links">
+              <li><a href="/cmmc-compliance">CMMC &amp; NIST 800-171</a></li>
+              <li><a href="/hipaa-it-compliance">HIPAA IT Compliance</a></li>
+              <li><a href="/pci-compliance">PCI DSS Compliance</a></li>
               <li><a href="/ctpat">C-TPAT Compliance</a></li>
+              <li><a href="/cyber-insurance-compliance">Cyber Insurance</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-column-title">Industries</h3>
+            <ul class="footer-links">
               <li><a href="/trucking-it-services">Trucking &amp; Logistics IT</a></li>
               <li><a href="/agriculture-it-services">Agriculture &amp; Agribusiness IT</a></li>
               <li><a href="/manufacturing-it-services">Manufacturing &amp; Industrial IT</a></li>
@@ -541,30 +643,8 @@
               <li><a href="/property-management-it-services">Property Management IT</a></li>
               <li><a href="/engineering-it-services">Engineering &amp; Architecture IT</a></li>
               <li><a href="/hospitality-it-services">Hospitality &amp; Restaurants IT</a></li>
-            </ul>
-          </div>
-
-          <div class="footer-column">
-            <h3 class="footer-column-title">Resources</h3>
-            <ul class="footer-links">
-              <li><a href="/support">Get Support</a></li>
-              <li><a href="/privacy-policy">Privacy Policy</a></li>
-              <li>
-                <a
-                  href="https://ticket.ghosxt.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Client Portal</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://calendly.com/ulises-ghosxt"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Free IT Assessment</a
-                >
-              </li>
+              <li><a href="/it-support-nonprofits-google-workspace">Nonprofits (Google Workspace)</a></li>
+              <li><a href="/it-support-remote-mac-teams">Remote Mac Teams</a></li>
             </ul>
           </div>
 
@@ -602,6 +682,22 @@
                 <a href="mailto:sales@ghosxt.com"
                   ><i class="fi fi-rs-envelope" aria-hidden="true"></i>
                   sales@ghosxt.com</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://ticket.ghosxt.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Client Portal</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://calendly.com/ulises-ghosxt"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Free IT Assessment</a
                 >
               </li>
             </ul>
