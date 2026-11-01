@@ -466,3 +466,10 @@
     order: 4;
   }
 }
+
+/* The hero lead's inline links had no colour rule, so "published pricing" rendered
+   browser-default blue on the pages whose lead links to /pricing. Use the site's link
+   red, the same token the support callout and key-facts links use. */
+.location-hero .lead a {
+  color: var(--ghosxt-red-0, #b71c1c);
+}
