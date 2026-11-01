@@ -72,6 +72,11 @@ REVIEW_COUNT_RE = re.compile(r"(\d+)\+?(&nbsp;|\s+)Google reviews")
 # pair: the "<dt>Rated</dt><dd>...</dd>" key-facts block used on 54 pages.
 # It is not wrapped in the <!-- ghosxt:trust-reviews --> marker, but its
 # structure is consistent enough site-wide to update safely and directly.
+# A bare review-count figure (the home page "Trusted by Teams" stat card)
+# is marked with <!-- ghosxt:trust-count --> directly before the element
+# that holds the number, so it follows site-config.json too.
+COUNT_MARKER_RE = re.compile(r"(<!-- ghosxt:trust-count -->\s*<[a-z][^>]*>)(\d+)\+?(</)")
+
 KEY_FACTS_RE = re.compile(
     r'(<dt>Rated</dt><dd><span class="key-facts__stars"[^>]*>[^<]*</span>\s*)'
     r"(\d+(?:\.\d+)?)"
@@ -155,6 +160,14 @@ def update_blocks(text: str, rating: str, review_count) -> Tuple[str, int]:
         return f"{m.group(1)}{new_rating}{m.group(3)}{new_count}{m.group(5)}{m.group(6)}"
 
     full_text = KEY_FACTS_RE.sub(_key_facts_repl, full_text)
+
+    def _count_marker_repl(m: "re.Match[str]") -> str:
+        nonlocal changed
+        if m.group(2) != count_str:
+            changed += 1
+        return f"{m.group(1)}{count_str}{m.group(3)}"
+
+    full_text = COUNT_MARKER_RE.sub(_count_marker_repl, full_text)
 
     return full_text, changed
 
