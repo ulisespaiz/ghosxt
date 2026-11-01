@@ -650,7 +650,6 @@ Meta description: Microsoft 365 GCC High setup and hardening for small defense c
 
 # CMMC Compliance & NIST 800-171 for Defense Contractors
 A DoD contract or subcontract now comes with a CMMC requirement, and "we have antivirus" is not an answer an assessor accepts. Ghosxt, run by an engineer with DoD infrastructure experience who has lived inside these controls, prepares small defense contractors and subcontractors across Monterey County and surrounding areas for CMMC and NIST SP 800-171, including Microsoft 365 GCC High setup and hardening, with managed IT at published pricing.
-CMMC Compliance & NIST 800-171: at a glance
 ## Microsoft 365 GCC High for small defense contractors
 ## What CMMC is, and who it's for
 ## Why an engineer with DoD infrastructure experience is different here
@@ -667,7 +666,7 @@ CMMC Compliance & NIST 800-171: at a glance
 Q: Who actually needs CMMC?
 A: Any business in the defense supply chain that handles federal contract information (FCI) or controlled unclassified information (CUI), whether prime contractors or, increasingly, their subcontractors. If your DoD contracts include DFARS clause 252.204-7012, CMMC is coming for you. Level 1 covers FCI; Level 2 covers CUI and maps to the 110 controls of NIST SP 800-171.
 Q: What's the difference between CMMC Level 1 and Level 2?
-A: Level 1 is 17 basic safeguarding practices for FCI, met with an annual self-assessment. Level 2 is the full 110 controls of NIST 800-171 for CUI, and for most contracts requires a third-party (C3PAO) assessment every three years. We determine which applies to your contracts before doing anything else, so you are not over- or under-building.
+A: Level 1 is 17 basic safeguarding practices for FCI, met with an annual self-assessment. Level 2 is the full 110 controls of NIST 800-171 for CUI. The plan for most CUI contracts is a third-party (C3PAO) assessment every three years, but the DoD paused that Phase 2 requirement on July 13, 2026 with no new date set, so a Level 2 self-assessment is what most contracts require today. We determine which applies to your contracts before doing anything else, so you are not over- or under-building.
 Q: We're just a subcontractor: do we still need it?
 A: Very likely yes. Primes are required to flow CMMC requirements down to subcontractors who touch FCI or CUI. Many small subs are now being told by their prime that they need to show compliance to keep the work. Getting ahead of that is how you keep contracts instead of losing them to a compliant competitor.
 Q: Can you get us a SPRS score and write our SSP and POA&M?
