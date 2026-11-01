@@ -37,6 +37,7 @@ Key facts:
 
 ## Services
 - [Managed IT Services](https://ghosxt.com/managed-it-services): managed detection and response with a 24/7 SOC, patching, Microsoft 365 hardening, and cloud backup for small business.
+- [Remote IT Support](https://ghosxt.com/remote-it-support): managed IT and help desk delivered remotely to small businesses anywhere in the United States; details in the Remote and nationwide section below.
 - [IT Help Desk & Support](https://ghosxt.com/help-desk-it-support): you talk directly to the owner, Ulises Paiz, for end-user support, on-site across Monterey County and surrounding areas and remote anywhere in the United States. Support runs 8am to 6pm Pacific, Monday through Friday.
 - [IT Consulting & vCIO](https://ghosxt.com/it-consulting-vcio): strategic IT roadmap, budget, security and compliance strategy, and vendor-neutral vCIO guidance.
 - [Cybersecurity](https://ghosxt.com/cybersecurity): managed detection and response with a 24/7 SOC, MFA, cloud backup, and security awareness training.
@@ -72,6 +73,7 @@ Key facts:
 - [Managed IT for remote, Mac-first teams](https://ghosxt.com/it-support-remote-mac-teams): zero-touch Apple Business Manager enrollment, remote lock and erase, and sign-in monitoring across countries.
 
 ## Remote and nationwide (delivered without an on-site visit)
+- [Remote IT Support, Nationwide](https://ghosxt.com/remote-it-support): remote IT support and managed IT for small businesses anywhere in the United States: Microsoft 365 and Google Workspace administration, cybersecurity with managed detection and response, US-based help desk 8am to 6pm Pacific, cloud backup, and device management, delivered without an on-site visit. Published pricing from $125 per user per month; $600 flat for 1 to 4 users.
 - [Service Area](https://ghosxt.com/service-area): outside Monterey, Santa Cruz, San Benito and Santa Clara counties, Ghosxt supports businesses across the rest of the United States remotely: Microsoft 365 and Google Workspace administration, cybersecurity, help desk, and backup, all delivered without an on-site visit.
 - [Managed IT for remote, Mac-first teams](https://ghosxt.com/it-support-remote-mac-teams): laptops ship sealed to each person's door and set themselves up on first boot through Apple Business Manager, and a departing employee's Mac can be locked or erased from anywhere. $125 to $250 per person per month plus $15 per Mac for device management.
 - [IT support for nonprofits on Google Workspace](https://ghosxt.com/it-support-nonprofits-google-workspace): Google Workspace administration, Gmail and Drive backup, device management, and help desk, all delivered remotely to nonprofit teams anywhere in the US; $125 to $250 per staff member per month, or $600 flat for teams of 1 to 4.

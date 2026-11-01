@@ -82,6 +82,57 @@ Q: Who will I actually talk to?
 A: Ulises Paiz, the owner, directly. There is no tier-1 queue and no offshore call center: the engineer who knows your environment answers the phone, and critical incidents carry our 4-hour notification commitment.
 ## Ready to stop running IT on hope?
 
+## https://ghosxt.com/remote-it-support
+
+Title: Remote IT Support for Small Business, Nationwide | Ghosxt
+Meta description: Remote IT support and managed IT for small businesses anywhere in the US from an owner-run MSP in Salinas, CA. Published pricing from $125 per user.
+
+# Remote IT Support and Managed IT for Small Businesses Anywhere in the US
+Ghosxt delivers remote IT support and fully managed IT to small businesses anywhere in the United States from Salinas, California: Microsoft 365 and Google Workspace administration, cybersecurity, help desk, and backup, all without an on-site visit, at published pricing from $125 per user per month. You talk to the owner, 8am to 6pm Pacific. On-site work stays in Monterey County and surrounding areas.
+## Most small businesses still hire IT by zip code
+## What we deliver remotely
+### Microsoft 365 and Google Workspace administration
+### Cybersecurity and managed detection and response
+### US-based help desk
+### Cloud backup for Microsoft 365 and Google Workspace
+### Device management that does not need an engineer in the room
+### The written deliverables
+## What stays on-site, and what we do instead when you are far away
+## Hours, time zones, and what happens at 2am
+## What remote managed IT costs
+### Remote managed IT, priced
+## How a remote engagement starts
+### 1. A 30-minute call with the owner
+### 2. A written quote
+### 3. Remote onboarding
+## Who hires a Salinas MSP from the other side of the country
+### Fully remote, Mac-first teams
+### Nonprofits on Google Workspace
+### Teams spread across several states on Microsoft 365
+### Small defense subcontractors
+### Businesses that want backup proven, not promised
+### Other MSPs
+## See what remote managed IT would cost your team
+## Remote IT support: common questions
+Q: Can an IT company in California manage our IT if we're in another state?
+A: Yes. For US-based clients outside our drive radius we deliver the same managed service entirely remotely: onboarding, monitoring, patching, identity, and backup are identical whether your team sits in one office or is spread across the country. On-site visits are for Monterey County and surrounding areas.
+Q: What can't you do remotely?
+A: Anything physical: a failed workstation, a network drop, a new-hire desk setup, or an office move. Within Monterey County and surrounding areas we go on-site for that. Elsewhere, laptops ship sealed to the person and set themselves up on first boot, and a lost or departing employee's laptop is locked or erased remotely. If a job needs an engineer in your building and you are outside our on-site area, we say so up front.
+Q: What hours do you cover if we're on the East Coast?
+A: Routine help desk runs 8am to 6pm Pacific, Monday through Friday, which is 11am to 9pm Eastern. Routine requests filed overnight are picked up at the start of the next business day. Monitoring keeps running around the clock, and on an actual or reasonably suspected critical incident you hear from the owner within 4 hours. Compliance & Continuity includes after-hours support and 24/7 SOC threat monitoring and response; on the other tiers, after-hours help is available on request.
+Q: Who actually answers when we call?
+A: Ulises Paiz, the owner and the engineer who manages your environment. Support is US-based; there is no offshore tier-1 queue and no script.
+Q: How much does remote managed IT cost?
+A: $125, $175, or $250 per user per month depending on tier, with a 5-user minimum on a 12-month agreement; teams of 1 to 4 pay $600 per month flat. Onboarding is $1,000 for Tiny Team and $1,500 for 5 to 15 users on the Microsoft 365 default scope; Google Workspace and Apple fleet onboarding are scoped and quoted separately. Month-to-month is available at +15%.
+Q: Can we hire you for a one-time remote fix without a contract?
+A: Yes. Remote support for non-managed clients is $180 per hour with a 30-minute minimum, billed in 15-minute increments after that. Managed clients have business-hours help desk included in their plan.
+Q: Can you see our screens or files without us knowing?
+A: No. Remote support sessions start with you on the call, using a short session code the engineer gives you, and they end when the call ends. You watch the whole thing.
+Q: Do you support Google Workspace, or only Microsoft 365?
+A: Both. Microsoft 365 tenants get Conditional Access, phishing-resistant MFA, and device management through Microsoft 365. Google Workspace shops get Workspace set up as the identity provider with phishing-resistant MFA, Gmail and Drive backup, and Mac management through Apple Business Manager. Onboarding for the Microsoft 365 default scope is priced on the pricing page; Google Workspace and Apple fleet onboarding are scoped and quoted separately.
+Q: Do we need to be a certain size?
+A: No. Tiny Team covers 1 to 4 users at a flat $600 per month; the per-user tiers start at 5 users and run up through 50-plus employee operations.
+
 ## https://ghosxt.com/help-desk-it-support
 
 Title: IT Help Desk & IT Support | Ghosxt – California
@@ -1383,7 +1434,6 @@ Device management, with zero-touch enrollment through Apple Business Manager, cl
 ### 1. Set up Apple Business Manager
 ### 2. Buy through the right channel
 ### 3. Ship to the person
-The box goes straight to the employee's home, still sealed. Nobody opens it first.
 ### 4. First boot
 ### 5. Signed in and working
 ## What device management can and can't see
@@ -1406,6 +1456,7 @@ The box goes straight to the employee's home, still sealed. Nobody opens it firs
 ## See what a zero-touch setup would take
 ## Related
 ### Case study: a 5-person remote firm
+### Remote IT support, nationwide
 ### Nonprofits on Google Workspace
 ### What managed IT costs
 ### Remote work and travel security
@@ -1811,11 +1862,13 @@ C-TPAT cybersecurity for importers, carriers, freight forwarders, and 3PLs. CBP-
 ### Co-Managed IT
 Already have an IT person or team? We augment them (help-desk overflow, after-hours help on request, and cybersecurity and compliance depth) filling the gaps without replacing anyone. Enterprise tooling and a senior engineer behind your in-house IT.
 ### Incident Response & Emergency IT
-Systems locked or down right now? Containment, evidence preservation, restore of mail and files from cloud backup, and the cyber-insurance documentation your carrier asks for, led by an engineer with DoD infrastructure experience and backed by a 4-hour notification commitment on critical incidents. Call (831) 204-0501: the emergency line is answered, not queued.
 ### Break-Fix vs. Managed IT
+Not sure whether to just call someone when IT breaks or pay to have it managed? An honest, jargon-free comparison of cost, downtime, security, and which model actually fits your business.
 ### What Managed IT Costs
+Real numbers for Monterey County and the Central Coast: our published tiers, how MSPs price, and three worked examples with the arithmetic shown.
 ### IT for Nonprofits on Google Workspace
 ### Remote, Mac-First Teams
+### Remote IT Support, Nationwide
 ### CMMC & NIST 800-171
 ### HIPAA IT Compliance
 ### PCI DSS Compliance
