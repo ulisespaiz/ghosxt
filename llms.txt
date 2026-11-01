@@ -1,15 +1,18 @@
 # Ghosxt
 
-> Ghosxt provides managed IT services and cybersecurity for small businesses on
-> California's Central Coast and beyond. The company is run by a sole engineer with DoD
-> infrastructure experience and delivers managed detection and response with a 24/7 SOC
-> at small-business pricing. Based in Salinas, CA, Ghosxt serves the
-> Monterey Bay, Salinas Valley, San Benito County, and Silicon Valley.
+> Ghosxt provides managed IT services and cybersecurity for small businesses in
+> Monterey County and surrounding areas (Santa Cruz, San Benito and Santa Clara
+> counties), with remote support anywhere in the United States. The company is run by a
+> sole engineer with DoD infrastructure experience and delivers managed detection and
+> response with a 24/7 SOC at small-business pricing. Based in Salinas, CA.
 
 Key facts:
 - Business: Ghosxt (managed IT services provider / MSP)
 - Owner and sole engineer: Ulises Paiz, based in Salinas, CA
-- Location: Salinas, California, USA (serves the surrounding region)
+- Location: Salinas, California, USA
+- Service area: on-site in Monterey County and surrounding areas (Santa Cruz, San Benito
+  and Santa Clara counties); remote anywhere in the United States
+- Hours: Monday through Friday, 8am to 6pm Pacific; after-hours help on request
 - Phone: +1 (831) 204-0501
 - Email: sales@ghosxt.com
 - Differentiator: run by a DoD-cleared engineer with prior DoD and federal contractor
@@ -27,27 +30,32 @@ Key facts:
   retention and destruction, AI acceptable use)
 - Pricing (published): Core Managed IT $125/user/mo, Secure Growth $175/user/mo,
   Compliance & Continuity $250/user/mo; flat-rate Tiny Team Managed Security
-  $600/mo for teams of 1–4 users; onboarding $1,000 for Tiny Team, $1,500 for 5 to 15
+  $600/mo for teams of 1 to 4 users; onboarding $1,000 for Tiny Team, $1,500 for 5 to 15
   users on the Microsoft 365 default scope (Google Workspace and Apple fleet onboarding
   scoped and quoted separately)
 - Free 30-minute IT assessment with no obligation
 
 ## Services
 - [Managed IT Services](https://ghosxt.com/managed-it-services): managed detection and response with a 24/7 SOC, patching, Microsoft 365 hardening, and cloud backup for small business.
-- [IT Help Desk & Support](https://ghosxt.com/help-desk-it-support): you talk directly to the owner, Ulises Paiz, for end-user support, remote and on-site across the Central Coast. Support runs 8am to 6pm Pacific, Monday through Friday.
+- [Remote IT Support](https://ghosxt.com/remote-it-support): managed IT and help desk delivered remotely to small businesses anywhere in the United States; details in the Remote and nationwide section below.
+- [IT Help Desk & Support](https://ghosxt.com/help-desk-it-support): you talk directly to the owner, Ulises Paiz, for end-user support, on-site across Monterey County and surrounding areas and remote anywhere in the United States. Support runs 8am to 6pm Pacific, Monday through Friday.
 - [IT Consulting & vCIO](https://ghosxt.com/it-consulting-vcio): strategic IT roadmap, budget, security and compliance strategy, and vendor-neutral vCIO guidance.
 - [Cybersecurity](https://ghosxt.com/cybersecurity): managed detection and response with a 24/7 SOC, MFA, cloud backup, and security awareness training.
-- [Cloud Services & Microsoft 365](https://ghosxt.com/cloud-services): Microsoft 365 hardening with Intune, Defender for Business, and Conditional Access, plus Google Workspace as identity provider with phishing-resistant MFA.
+- [Managed Detection & Response (MDR)](https://ghosxt.com/managed-detection-response): a 24/7 SOC watching endpoints, network and cloud, human-reviewed alerts and containment when something is found, at published pricing.
+- [Penetration Testing](https://ghosxt.com/penetration-testing): scoped and coordinated manual, adversarial penetration testing for small business networks and web apps, overseen by an engineer with DoD infrastructure experience.
+- [Zero Trust Security](https://ghosxt.com/zero-trust-security): identity verification, least-privilege access, and segmentation for small business.
+- [VoIP & Business Phone Systems](https://ghosxt.com/voip-business-phone-systems): cloud VoIP and business phone systems: number porting, mobile integration, and failover.
+- [Cloud Services & Microsoft 365](https://ghosxt.com/cloud-services): Microsoft 365 hardening with Intune, Defender for Business, and Conditional Access, plus Google Workspace as identity provider with phishing-resistant MFA. Delivered remotely to clients across the United States.
 - [Backup & Disaster Recovery](https://ghosxt.com/backup-disaster-recovery): cloud backup for Microsoft 365 and Google Workspace.
 - [Network Design & Architecture](https://ghosxt.com/network-design): network design and deployment for small business offices: VLAN segmentation, firewalls, business wireless, and written documentation.
-- [Website Development](https://ghosxt.com/website-development): custom small-business websites and e-commerce that load fast and convert. City pages: [Salinas](https://ghosxt.com/web-design-salinas), [Monterey](https://ghosxt.com/web-design-monterey), [Santa Cruz](https://ghosxt.com/web-design-santa-cruz), [Watsonville](https://ghosxt.com/web-design-watsonville), [San Jose](https://ghosxt.com/web-design-san-jose), [Carmel](https://ghosxt.com/web-design-carmel), [Gilroy](https://ghosxt.com/web-design-gilroy), [Hollister](https://ghosxt.com/web-design-hollister), [Marina](https://ghosxt.com/web-design-marina), [Pacific Grove](https://ghosxt.com/web-design-pacific-grove), and [Seaside](https://ghosxt.com/web-design-seaside).
+- [Website Development](https://ghosxt.com/website-development): custom small-business websites and e-commerce that load fast and convert. Built remotely for clients across the United States.
 - [C-TPAT Compliance](https://ghosxt.com/ctpat): IT controls and documentation for supply-chain security certification.
 - [CMMC & NIST 800-171](https://ghosxt.com/cmmc-compliance): Microsoft 365 GCC High setup and hardening for defense contractors; the compliance assessment is arranged through a third-party assessor. From an engineer with DoD infrastructure experience.
 - [HIPAA IT Compliance](https://ghosxt.com/hipaa-it-compliance): HIPAA technical safeguards for medical practices, covering security risk analysis, access controls, encryption, BAAs, and backup.
 - [PCI DSS Compliance](https://ghosxt.com/pci-compliance): practical PCI compliance for retail, restaurants, and hospitality, covering segmentation, secure POS, and SAQ guidance.
 - [Cyber Insurance Compliance](https://ghosxt.com/cyber-insurance-compliance): cyber insurance readiness and questionnaire help, covering MFA, MDR, cloud backup, and the evidence carriers require at underwriting and claim time.
 - [Co-Managed IT](https://ghosxt.com/co-managed-it): augments an existing in-house IT team with managed detection and response with a 24/7 SOC and cybersecurity depth, without replacing anyone.
-- [Ransomware Recovery & Emergency IT](https://ghosxt.com/ransomware-recovery): for businesses that are down or under active attack: the 4-hour notification commitment on actual or reasonably suspected critical incidents, and restoration from cloud backup for Microsoft 365 and Google Workspace. Emergency line (831) 204-0501.
+- [Ransomware Recovery](https://ghosxt.com/ransomware-recovery): for businesses that are down or under active attack: 4-hour notification commitment on actual or reasonably suspected critical incidents, and restoration from cloud backup for Microsoft 365 and Google Workspace. Support hours 8am to 6pm Pacific, Monday through Friday; after-hours help on request.
 - [Break-Fix vs. Managed IT](https://ghosxt.com/break-fix-vs-managed-it): an honest comparison of the two IT support models on cost, downtime, and security.
 - [Pricing](https://ghosxt.com/pricing): transparent, published managed IT service plans.
 - [What managed IT costs in Monterey County](https://ghosxt.com/managed-it-cost-monterey-county): published prices ($125 to $250 per user per month, or $600 flat for 1 to 4 users), how MSPs price, and three worked examples with the arithmetic shown.
@@ -64,8 +72,21 @@ Key facts:
 - [IT support for nonprofits on Google Workspace](https://ghosxt.com/it-support-nonprofits-google-workspace): Google Workspace admin and backup, contractors covered per identity, and Mac onboarding through Apple Business Manager.
 - [Managed IT for remote, Mac-first teams](https://ghosxt.com/it-support-remote-mac-teams): zero-touch Apple Business Manager enrollment, remote lock and erase, and sign-in monitoring across countries.
 
+## Remote and nationwide (delivered without an on-site visit)
+- [Remote IT Support, Nationwide](https://ghosxt.com/remote-it-support): remote IT support and managed IT for small businesses anywhere in the United States: Microsoft 365 and Google Workspace administration, cybersecurity with managed detection and response, US-based help desk 8am to 6pm Pacific, cloud backup, and device management, delivered without an on-site visit. Published pricing from $125 per user per month; $600 flat for 1 to 4 users.
+- [Service Area](https://ghosxt.com/service-area): outside Monterey, Santa Cruz, San Benito and Santa Clara counties, Ghosxt supports businesses across the rest of the United States remotely: Microsoft 365 and Google Workspace administration, cybersecurity, help desk, and backup, all delivered without an on-site visit.
+- [Managed IT for remote, Mac-first teams](https://ghosxt.com/it-support-remote-mac-teams): laptops ship sealed to each person's door and set themselves up on first boot through Apple Business Manager, and a departing employee's Mac can be locked or erased from anywhere. $125 to $250 per person per month plus $15 per Mac for device management.
+- [IT support for nonprofits on Google Workspace](https://ghosxt.com/it-support-nonprofits-google-workspace): Google Workspace administration, Gmail and Drive backup, device management, and help desk, all delivered remotely to nonprofit teams anywhere in the US; $125 to $250 per staff member per month, or $600 flat for teams of 1 to 4.
+- [Cloud Services & Microsoft 365](https://ghosxt.com/cloud-services): cloud services delivered fully remotely to clients across the United States, for distributed teams that need identity and device management that follows the user.
+- [Backup & Disaster Recovery](https://ghosxt.com/backup-disaster-recovery): outside the drive radius, the same backup and DR program is delivered fully remotely to clients across the United States.
+- [IT Help Desk & Support](https://ghosxt.com/help-desk-it-support): for US-based teams outside the drive radius, the remote help desk delivers the same support; the engineer does not need to be in the room to fix most things. 8am to 6pm Pacific, Monday through Friday.
+- [IT Consulting & vCIO](https://ghosxt.com/it-consulting-vcio): for US-based businesses outside the drive radius, the vCIO relationship runs remotely: quarterly planning, roadmap reviews, and risk assessments delivered on video, with documentation you keep.
+- [MSP Partner Program](https://ghosxt.com/msp-partners): remote overflow support, cybersecurity assessments, and CMMC and compliance work for MSP partners anywhere in the U.S.; white-label, your brand and your client relationship.
+- [Website Development](https://ghosxt.com/website-development): custom small-business websites for clients across the entire United States; projects are managed remotely with video calls, shared project boards, and regular progress updates.
+- [Get Support](https://ghosxt.com/support): existing clients call (831) 204-0501, start a remote screen-share session with the engineer on the phone, or open a ticket in the client portal; remote support covers clients anywhere in the United States. Support hours 8am to 6pm Pacific, Monday through Friday.
+
 ## Service areas (city pages)
-- [Service Area](https://ghosxt.com/service-area): hub page listing every city, county, and town Ghosxt serves across the Central Coast, with remote support nationwide.
+- [Service Area](https://ghosxt.com/service-area): hub page listing every city, county, and town Ghosxt serves on-site across Monterey County and surrounding areas (Santa Cruz, San Benito and Santa Clara counties), with remote support anywhere in the United States.
 - [Salinas](https://ghosxt.com/salinas)
 - [Monterey](https://ghosxt.com/monterey)
 - [Watsonville](https://ghosxt.com/watsonville)
@@ -88,6 +109,8 @@ Key facts:
 Cybersecurity, by city: [Salinas](https://ghosxt.com/cybersecurity-salinas), [Monterey](https://ghosxt.com/cybersecurity-monterey), [Santa Cruz](https://ghosxt.com/cybersecurity-santa-cruz), [San Jose](https://ghosxt.com/cybersecurity-san-jose), [Watsonville](https://ghosxt.com/cybersecurity-watsonville), [Carmel](https://ghosxt.com/cybersecurity-carmel), [Pacific Grove](https://ghosxt.com/cybersecurity-pacific-grove), [Seaside](https://ghosxt.com/cybersecurity-seaside), [Marina](https://ghosxt.com/cybersecurity-marina), [Gilroy](https://ghosxt.com/cybersecurity-gilroy), and [Hollister](https://ghosxt.com/cybersecurity-hollister)
 
 Cloud & Microsoft 365, by city: [Salinas](https://ghosxt.com/cloud-services-salinas), [Monterey](https://ghosxt.com/cloud-services-monterey), [Santa Cruz](https://ghosxt.com/cloud-services-santa-cruz), [San Jose](https://ghosxt.com/cloud-services-san-jose), [Watsonville](https://ghosxt.com/cloud-services-watsonville), [Carmel](https://ghosxt.com/cloud-services-carmel), [Pacific Grove](https://ghosxt.com/cloud-services-pacific-grove), [Seaside](https://ghosxt.com/cloud-services-seaside), [Marina](https://ghosxt.com/cloud-services-marina), [Gilroy](https://ghosxt.com/cloud-services-gilroy), and [Hollister](https://ghosxt.com/cloud-services-hollister)
+
+Web design, by city: [Salinas](https://ghosxt.com/web-design-salinas), [Monterey](https://ghosxt.com/web-design-monterey), [Santa Cruz](https://ghosxt.com/web-design-santa-cruz), [Watsonville](https://ghosxt.com/web-design-watsonville), [San Jose](https://ghosxt.com/web-design-san-jose), [Carmel](https://ghosxt.com/web-design-carmel), [Gilroy](https://ghosxt.com/web-design-gilroy), [Hollister](https://ghosxt.com/web-design-hollister), [Marina](https://ghosxt.com/web-design-marina), [Pacific Grove](https://ghosxt.com/web-design-pacific-grove), and [Seaside](https://ghosxt.com/web-design-seaside)
 
 IT support & help desk, by city: [Morgan Hill](https://ghosxt.com/it-help-morgan-hill), [Capitola](https://ghosxt.com/it-help-capitola), [Scotts Valley](https://ghosxt.com/it-help-scotts-valley), [Aptos](https://ghosxt.com/it-help-aptos), [Castroville](https://ghosxt.com/it-help-castroville), [Greenfield](https://ghosxt.com/it-help-greenfield), [Gonzales](https://ghosxt.com/it-help-gonzales), [San Juan Bautista](https://ghosxt.com/it-help-san-juan-bautista), [Carmel Valley](https://ghosxt.com/it-help-carmel-valley), [Prunedale](https://ghosxt.com/it-help-prunedale)
 
