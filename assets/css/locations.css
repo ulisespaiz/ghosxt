@@ -440,3 +440,29 @@
 .compare-table tbody tr:last-child td {
   border-bottom: none;
 }
+
+/* Phones: on a first visit the cookie banner and the sticky call/book bar
+   cover roughly y 665 to 844 at 390x844, which is exactly where the hero CTA
+   pair landed under a 10 to 13 line lead (AUDIT.md M-06). Reorder the hero
+   visually so the booking button sits under the H1. DOM order is unchanged
+   (H1, then lead), so the answer-first opening is still what crawlers read.
+   Elements without an explicit order (breadcrumbs, a callout before the H1)
+   keep their place ahead of the H1. */
+@media (max-width: 640px) {
+  .location-hero .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .location-hero h1 {
+    order: 2;
+  }
+  .location-hero-ctas {
+    order: 3;
+    margin-bottom: 1.5rem;
+  }
+  .location-hero .lead,
+  .location-hero .pricing-trust-callout,
+  .location-hero .container > p {
+    order: 4;
+  }
+}
