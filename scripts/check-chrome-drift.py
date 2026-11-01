@@ -46,7 +46,7 @@ def main():
         except ValueError:
             skipped += 1
             continue
-        diffs = {k: canonical[k] for k in CHECK_KEYS if actual.get(k) != canonical[k]}
+        diffs = {k: actual.get(k) for k in CHECK_KEYS if actual.get(k) != canonical[k]}
         if diffs:
             drifted.append((path, diffs))
         else:
