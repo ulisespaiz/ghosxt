@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from an engineer with DoD infrastructure experience.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Wed, 04 Nov 2026 11:12:25 +0000</lastBuildDate>
-    <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Thu, 05 Nov 2026 11:09:57 +0000</lastBuildDate>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>Malicious Email Attachments: What to Block (2026)</title>
+      <link>https://ghosxt.com/blog/malicious-email-attachments-risky-file-types-small-business-2026</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/malicious-email-attachments-risky-file-types-small-business-2026</guid>
+      <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>Which email attachments are dangerous? See the risky file types, why a PDF or ZIP can still hurt you, and 5 steps a small business can take now.</description>
+    </item>
     <item>
       <title>Infostealer Malware: Stop Stolen Logins (2026)</title>
       <link>https://ghosxt.com/blog/infostealer-malware-saved-browser-passwords-small-business-2026</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>A lost laptop is only a breach if its data is readable. How to turn on BitLocker and FileVault, back up recovery keys, and prove it for insurers.</description>
-    </item>
-    <item>
-      <title>How to Run a Vulnerability Scan for Your Small Business</title>
-      <link>https://ghosxt.com/blog/vulnerability-scanning-small-business-2026</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/vulnerability-scanning-small-business-2026</guid>
-      <pubDate>Sun, 04 Oct 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>A vulnerability scan finds missing patches and risky settings before attackers do. How small businesses can scan, read the results, and fix what matters.</description>
     </item>
   </channel>
 </rss>
