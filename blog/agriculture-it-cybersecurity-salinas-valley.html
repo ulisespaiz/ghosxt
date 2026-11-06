@@ -48,7 +48,7 @@
             "author": { "@type": "Person", "name": "Ulises Paiz", "url": "https://ghosxt.com/about" },
             "publisher": { "@type": "Organization", "name": "Ghosxt", "logo": { "@type": "ImageObject", "url": "https://ghosxt.com/assets/img/ghosxt-logo-160.webp" } },
             "datePublished": "2026-06-02",
-            "dateModified": "2026-06-02",
+            "dateModified": "2026-11-06",
             "articleSection": "Industry IT",
             "keywords": "agriculture IT Salinas Valley, agribusiness IT, cold chain monitoring, cooler monitoring, produce ERP, FSMA 204 traceability, food traceability rule, PrimusGFS SQF GAP audit IT, food safety audit IT, agriculture ransomware, seasonal labor IT, Salinas managed IT, Watsonville agriculture IT, Central Coast cybersecurity"
           },
@@ -306,7 +306,7 @@
             <p>The full <a href="/agriculture-it-services">agriculture and agribusiness IT service page</a> covers the underlying program.</p>
           </aside>
 
-          <p>Monterey County grew nearly <strong>$5 billion</strong> of crops in 2024, with strawberries crossing a billion dollars on their own and leafy greens close behind. The Salinas Valley earns the "Salad Bowl of the World" name by turning two vegetable crops a season into product that has to be in a buyer's distribution center, cold and in spec, within days of leaving the field. That is an operations miracle, and almost none of the growers and packers I work with set out to build the IT that holds it together. They added a produce ERP because a retailer required traceability, a cooler monitoring system after a close call, a scale house, a food-safety binder, and a second cooler, one season at a time.</p>
+          <p>Monterey County runs on its crops, with strawberries and leafy greens leading the list. The Salinas Valley earns the "Salad Bowl of the World" name by turning two vegetable crops a season into product that has to be in a buyer's distribution center, cold and in spec, within days of leaving the field. That is an operations miracle, and almost none of the growers and packers I work with set out to build the IT that holds it together. They added a produce ERP because a retailer required traceability, a cooler monitoring system after a close call, a scale house, a food-safety binder, and a second cooler, one season at a time.</p>
 
           <p>This post is the version of the conversation I have over coffee with a Salinas Valley grower-packer-shipper. The framing I use, and the one I will use here, is six layers. You are already running most of them. The question is whether you are running them well enough to survive a harvest-timed ransomware attempt, a cooler that quietly stops paging in a heat wave, a PrimusGFS audit, a wire-fraud attempt during planting-season input buying, and a PG&amp;E shutoff in October.</p>
 
@@ -402,7 +402,7 @@
           <p>The baseline we recommend for the year-round side of a Salinas Valley grower-packer-shipper:</p>
 
           <ul>
-            <li><strong>Microsoft 365 Business Premium per user.</strong> Outlook, the Office apps, OneDrive, SharePoint, Teams, Defender for Business (EDR), Intune (MDM), and Entra ID P1 (identity hardening). At roughly $22 per user per month it is the most leveraged dollar in the stack. The <a href="/blog/microsoft-365-small-business-settings-to-turn-on-2026">Microsoft 365 settings post</a> covers what to turn on first.</li>
+            <li><strong>Microsoft 365 Business Premium per user.</strong> Outlook, the Office apps, OneDrive, SharePoint, Teams, Defender for Business (EDR), Intune (MDM), and Entra ID P1 (identity hardening). It is billed per user per month at <a href="https://www.microsoft.com/en-us/microsoft-365/business/microsoft-365-business-premium" target="_blank" rel="noopener noreferrer">Microsoft's published price</a> and is the most leveraged dollar in the stack. The <a href="/blog/microsoft-365-small-business-settings-to-turn-on-2026">Microsoft 365 settings post</a> covers what to turn on first.</li>
             <li><strong>Business-class internet with documented SLA</strong> at the office and the cooler, with cellular failover and a point-to-point link between sites where fiber will not reach.</li>
             <li><strong>Engineered pack-house Wi-Fi</strong> for handhelds and labeling, not a consumer router fighting the refrigeration.</li>
             <li><strong>Real firewalls with segmentation</strong> separating office, cooler OT, scale systems, and guest networks.</li>
@@ -426,18 +426,18 @@
 
           <h2>A realistic budget for a Salinas Valley grower-packer</h2>
 
-          <p>Numbers for a representative 25-person year-round operation across an office, a pack house, and two coolers, scaling to seasonal labor, running Microsoft 365 Business Premium and a produce ERP. Monthly, all-in, and excluding the ERP and the cold-chain sensors themselves:</p>
+          <p>Numbers for a representative 25-person year-round operation across an office, a pack house, and two coolers, scaling to seasonal labor, running Microsoft 365 Business Premium and a produce ERP. Monthly, excluding the ERP and the cold-chain sensors themselves. Only the lines Ghosxt publishes carry a dollar figure (see the <a href="/pricing">pricing page</a>); the rest is quoted per project or set by the carrier:</p>
 
           <ul>
-            <li><strong>Microsoft 365 Business Premium:</strong> 25 users &times; $22 = $550</li>
+            <li><strong>Microsoft 365 Business Premium:</strong> 25 users at <a href="https://www.microsoft.com/en-us/microsoft-365/business/microsoft-365-business-premium" target="_blank" rel="noopener noreferrer">Microsoft's published price</a></li>
             <li><strong>Managed IT &amp; security (Compliance &amp; Continuity: help desk, patching, backup, identity, seasonal account lifecycle, and managed detection &amp; response with a 24/7 SOC):</strong> 25 users &times; $250 = $6,250</li>
-            <li><strong>Cold-chain monitoring integration and alerting management:</strong> $500&ndash;$1,500</li>
-            <li><strong>Multi-site connectivity (office, pack house, two coolers; fiber + point-to-point + failover):</strong> $1,200&ndash;$2,500</li>
-            <li><strong>Managed firewalls and segmentation across sites:</strong> $500&ndash;$1,000</li>
-            <li><strong>Independent backup (Microsoft 365 + ERP export + food-safety docs):</strong> $250&ndash;$500</li>
+            <li><strong>Cold-chain monitoring integration and alerting management:</strong> quoted per project</li>
+            <li><strong>Multi-site connectivity (office, pack house, two coolers; fiber + point-to-point + failover):</strong> set by the carrier and the link design, quoted per project</li>
+            <li><strong>Managed firewalls and segmentation across sites:</strong> $50 per firewall per month, plus $25 per managed switch and $20 per wireless access point per month</li>
+            <li><strong>Cloud backup for Microsoft 365 and Google Workspace:</strong> included in Compliance &amp; Continuity</li>
           </ul>
 
-          <p>Total monthly IT spend lands roughly between <strong>$9,250 and $12,300 per month</strong> for a 25-person multi-site operation, before hardware and the sensors. The biggest mover is the per-user managed IT and security line, which scales with year-round headcount, not with how many seasonal hands pass through. For comparison: a single cooler excursion that totals a load of leafy greens or berries runs well into five figures, and a harvest-timed ransomware event that halts shipping costs that much per day in unshipped, perishing product. The IT budget pays for itself in one avoided bad week.</p>
+          <p>The managed IT line alone is <strong>$6,250 per month</strong> for a 25-person operation, before Microsoft 365 licenses, connectivity, hardware, and the sensors. The biggest mover is the per-user managed IT and security line, which scales with year-round headcount, not with how many seasonal hands pass through. For comparison: a single cooler excursion can total a load of leafy greens or berries, and a harvest-timed ransomware event that halts shipping costs you every day in unshipped, perishing product. The IT budget pays for itself in one avoided bad week.</p>
 
           <h2>Where this fits</h2>
 

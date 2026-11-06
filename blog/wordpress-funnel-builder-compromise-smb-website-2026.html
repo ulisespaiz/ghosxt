@@ -48,7 +48,7 @@
             "author": { "@type": "Person", "name": "Ulises Paiz", "url": "https://ghosxt.com/about" },
             "publisher": { "@type": "Organization", "name": "Ghosxt", "logo": { "@type": "ImageObject", "url": "https://ghosxt.com/assets/img/ghosxt-logo-160.webp" } },
             "datePublished": "2026-05-20",
-            "dateModified": "2026-05-20",
+            "dateModified": "2026-11-06",
             "articleSection": "Cybersecurity",
             "keywords": "Funnel Builder vulnerability, FunnelKit, WooCommerce card skimmer, Magecart, WordPress plugin compromise, e-skimmer, WordPress security, SMB website security, Salinas IT services, Monterey Bay managed IT, central coast cybersecurity, PCI DSS"
           },
@@ -92,7 +92,7 @@
                 "name": "How quickly do these card-skimming attacks get noticed?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Honestly, slowly. In the small-business breaches I have walked into, e-skimmer injections often run for weeks or months before anyone notices. The site loads normally. Checkout completes normally. Real orders go through and ship. The skimmer simply copies the card details on their way to the legitimate payment processor and sends them to an attacker-controlled domain. Detection usually comes from one of three places: the card brands flag the merchant as a common point of purchase for fraudulent cards, a customer complains about fraud after shopping with you, or a security scanner (Sucuri, Wordfence, PCI ASV) spots the unfamiliar script. By the time the merchant gets the call from their processor, the damage is several thousand customers deep."
+                  "text": "Honestly, slowly. In small-business breaches, e-skimmer injections often run for weeks or months before anyone notices. The site loads normally. Checkout completes normally. Real orders go through and ship. The skimmer simply copies the card details on their way to the legitimate payment processor and sends them to an attacker-controlled domain. Detection usually comes from one of three places: the card brands flag the merchant as a common point of purchase for fraudulent cards, a customer complains about fraud after shopping with you, or a security scanner (Sucuri, Wordfence, PCI ASV) spots the unfamiliar script. By the time the merchant gets the call from their processor, the damage is several thousand customers deep."
                 }
               },
               {
@@ -308,7 +308,7 @@
 
           <p>The bug, fixed in version <strong>3.15.0.3</strong>, allowed unauthenticated attackers to write arbitrary content into that External Scripts field. Once a script lands there, it executes in every visitor's browser on every checkout page. There is no authentication step. There is no admin involvement. The attacker writes, the customer's browser runs it.</p>
 
-          <p>The class of bug here is a classic "stored cross-site scripting via a sensitive configuration sink." It is the same shape we have seen many times in the WordPress plugin ecosystem over the years: a configuration write endpoint that the plugin author assumed only admins could reach, but which a missing capability check or a broken nonce allows anyone on the internet to call. The class is unglamorous and well understood; the consequences when a plugin sits on checkout pages are not.</p>
+          <p>The class of bug here is a classic "stored cross-site scripting via a sensitive configuration sink." It is a common shape in the WordPress plugin ecosystem over the years: a configuration write endpoint that the plugin author assumed only admins could reach, but which a missing capability check or a broken nonce allows anyone on the internet to call. The class is unglamorous and well understood; the consequences when a plugin sits on checkout pages are not.</p>
 
           <h3>What the payload does</h3>
 
@@ -377,7 +377,7 @@
 
           <h3>A web application firewall in front of the site</h3>
 
-          <p>Cloudflare Pro (around $25 per month per zone) or Wordfence Premium (around $150 per site per year) sits between the internet and your WordPress origin and blocks the bulk of automated exploit attempts before they reach the plugin. WAFs do not catch everything, but they catch the noisy mass-scan traffic that is responsible for the majority of opportunistic compromises. For an SMB, this is one of the highest-leverage $25-per-month decisions available.</p>
+          <p>A web application firewall such as Cloudflare Pro (<a href="https://www.cloudflare.com/plans/" target="_blank" rel="noopener noreferrer">$25 per month billed monthly</a>) or Wordfence Premium sits between the internet and your WordPress origin and blocks the bulk of automated exploit attempts before they reach the plugin. WAFs do not catch everything, but they catch the noisy mass-scan traffic that is responsible for the majority of opportunistic compromises. For an SMB, this is one of the highest-leverage low-cost decisions available.</p>
 
           <h3>MFA on wp-admin</h3>
 
@@ -405,13 +405,13 @@
 
           <h3>Hosting that supports the rest of the program</h3>
 
-          <p>Cheap shared hosting where dozens of sites share a single uid does not let you isolate a compromise. Managed WordPress hosting (Kinsta, WP Engine, Pressable, Rocket.net) gives you account isolation, automated daily backups at the platform level, staging environments, and a meaningful response if the host detects malware. The cost difference is usually $20-50 per month and is worth it for any site that takes payments. We cover hosting selection in our <a href="/cloud-services">cloud services</a> practice.</p>
+          <p>Cheap shared hosting where dozens of sites share a single uid does not let you isolate a compromise. Managed WordPress hosting (Kinsta, WP Engine, Pressable, Rocket.net) gives you account isolation, automated daily backups at the platform level, staging environments, and a meaningful response if the host detects malware. The extra monthly cost is worth it for any site that takes payments. We cover hosting selection in our <a href="/cloud-services">cloud services</a> practice.</p>
 
           <h2>Why this keeps happening to WordPress</h2>
 
           <p>An honest take, because most of the WordPress security commentary online is either marketing or doom-mongering.</p>
 
-          <p>WordPress runs roughly 40 percent of the public web. That alone makes it a target of disproportionate attention. The platform itself, meaning core WordPress, is reasonably well-maintained and has a credible security team. The vast majority of WordPress compromises do not exploit core; they exploit the plugin ecosystem layered on top.</p>
+          <p>WordPress runs <a href="https://w3techs.com/technologies/details/cm-wordpress" target="_blank" rel="noopener noreferrer">39.5 percent of all websites</a>, per W3Techs. That alone makes it a target of disproportionate attention. The platform itself, meaning core WordPress, is reasonably well-maintained and has a credible security team. The vast majority of WordPress compromises do not exploit core; they exploit the plugin ecosystem layered on top.</p>
 
           <p>The plugin ecosystem has structural problems that the WordPress.org plugin directory does not solve:</p>
 
@@ -450,7 +450,7 @@
           <p>Not by this specific vulnerability. Funnel Builder by FunnelKit is a WordPress plugin and only runs on WordPress sites with WooCommerce. Shopify, Squarespace, Wix, BigCommerce, and other hosted SaaS storefronts use entirely different codebases and are not exposed to this bug. That said, e-skimmer attacks against hosted platforms exist too. They typically come in through a compromised marketing tag, a malicious third-party script (a chat widget, an analytics plugin, a review widget), or a stolen admin credential. The same defensive baseline applies: MFA on admin accounts, minimize installed apps and tags, review what scripts run on your checkout.</p>
 
           <h3>How quickly do these card-skimming attacks get noticed?</h3>
-          <p>Honestly, slowly. In the small-business breaches I have walked into, e-skimmer injections often run for weeks or months before anyone notices. The site loads normally. Checkout completes normally. Real orders go through and ship. The skimmer simply copies the card details on their way to the legitimate payment processor and sends them to an attacker-controlled domain. Detection usually comes from one of three places: the card brands flag the merchant as a common point of purchase for fraudulent cards, a customer complains about fraud after shopping with you, or a security scanner (Sucuri, Wordfence, PCI ASV) spots the unfamiliar script. By the time the merchant gets the call from their processor, the damage is several thousand customers deep.</p>
+          <p>Honestly, slowly. In small-business breaches, e-skimmer injections often run for weeks or months before anyone notices. The site loads normally. Checkout completes normally. Real orders go through and ship. The skimmer simply copies the card details on their way to the legitimate payment processor and sends them to an attacker-controlled domain. Detection usually comes from one of three places: the card brands flag the merchant as a common point of purchase for fraudulent cards, a customer complains about fraud after shopping with you, or a security scanner (Sucuri, Wordfence, PCI ASV) spots the unfamiliar script. By the time the merchant gets the call from their processor, the damage is several thousand customers deep.</p>
 
           <h3>What does rotating WordPress salts actually do?</h3>
           <p>WordPress uses a set of secret keys (called salts) stored in wp-config.php to sign authentication cookies. If an attacker stole a session cookie or a copy of your database while they had access, rotating the salts invalidates every existing logged-in session on the site. Every user, including the attacker if they still have a foothold, is forced to re-authenticate. You generate new salts at the WordPress.org secret-key service URL, paste them into wp-config.php replacing the eight AUTH_KEY / SECURE_AUTH_KEY / etc. lines, save, and confirm the site still loads. It is a cheap, fast, high-value step after any suspected WordPress compromise.</p>

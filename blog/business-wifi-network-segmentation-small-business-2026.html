@@ -48,7 +48,7 @@
             "author": { "@type": "Person", "name": "Ulises Paiz", "url": "https://ghosxt.com/about" },
             "publisher": { "@type": "Organization", "name": "Ghosxt", "logo": { "@type": "ImageObject", "url": "https://ghosxt.com/assets/img/ghosxt-logo-160.webp" } },
             "datePublished": "2026-06-24",
-            "dateModified": "2026-06-24",
+            "dateModified": "2026-11-06",
             "articleSection": "Cybersecurity",
             "keywords": "business wifi security, network segmentation, flat network risk, guest wifi, IoT network isolation, rogue access point, small business cybersecurity, WPA3, VLAN, managed IT, Salinas, Monterey, Central Coast"
           },
@@ -68,7 +68,7 @@
                 "name": "What is a flat network and why is it dangerous for a small business?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "A flat network is one where every device (staff computers, guest laptops, printers, smart TVs, security cameras, and point-of-sale terminals) sits on the same network segment and can talk directly to every other device. It is dangerous because there is no internal boundary to stop a threat from spreading. If one device is compromised, an attacker on that device can probe, attack, or extract data from every other device on the network without crossing any security control. Flat networks are the default setup for most small businesses because it is the simplest configuration for a single consumer-grade router."
+                  "text": "A flat network is one where every device (staff computers, guest laptops, printers, smart TVs, security cameras, and point-of-sale terminals) sits on the same network segment and can talk directly to every other device. There is no internal boundary to stop a threat from spreading. If one device is compromised, an attacker on that device can probe, attack, or extract data from every other device on the network without crossing any security control. Flat networks are the default setup for most small businesses because it is the simplest configuration for a single consumer-grade router."
                 }
               },
               {
@@ -76,7 +76,7 @@
                 "name": "What is network segmentation and how does it work?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Network segmentation divides your single network into two or more isolated segments, sometimes called VLANs (Virtual Local Area Networks). Devices on one segment cannot reach devices on another segment unless traffic passes through a firewall or router that explicitly permits it. The most common segmentation for a small business creates three segments: a staff network for computers and business systems, a guest network for visitor devices and personal phones, and an IoT network for printers, cameras, smart TVs, and other connected hardware. A device compromised on the guest or IoT segment cannot reach your file server or accounting software because no traffic path exists between them."
+                  "text": "Network segmentation divides your single network into two or more isolated segments, sometimes called VLANs (Virtual Local Area Networks). Devices on one segment cannot reach devices on another unless traffic passes through a firewall that explicitly permits it. The most common segmentation for a small business creates three segments: a staff network for computers and business systems, a guest network for visitor devices, and an IoT network for printers, cameras, smart TVs, and other connected hardware. A device compromised on the guest or IoT segment cannot reach your file server because no traffic path exists between them."
                 }
               },
               {
@@ -84,7 +84,7 @@
                 "name": "What is a rogue access point and how does it put my business at risk?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "A rogue access point is any wireless router or hotspot connected to your network without your IT team's knowledge or approval. The most common source is an employee who plugs in a personal router or travel router for convenience: better signal in their office, easier connections for their devices. The problem is that the employee-added router typically has no security configuration: default admin passwords, no firewall rules, potentially open or weakly encrypted Wi-Fi. Any device connecting to it bypasses your network policy entirely and may be bridged directly onto your internal network. Rogue access points are a real-world problem: they are one of the easiest ways for someone, whether an outsider or a current employee, to create an unmonitored entry point into your environment."
+                  "text": "A rogue access point is any wireless router or hotspot connected to your network without your IT team's knowledge. The most common source is an employee who plugs in a personal router for better signal at their desk. That device is almost certainly running with default admin credentials and no firewall rules. Any device connecting to it bypasses your network policy and may be bridged directly onto your internal network. Rogue access points show up regularly in network assessments, including at businesses that have had IT support for years."
                 }
               },
               {
@@ -92,7 +92,7 @@
                 "name": "Do I need expensive equipment to properly segment my business network?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "No. Business-grade access points from Ubiquiti, Cisco Meraki, or Aruba cost between $150 and $400 per unit and natively support multiple SSIDs with VLAN tagging, which is the core capability you need to segment your network. A managed switch to enforce VLAN isolation costs $100 to $300 for most small-office deployments. If you are already on a managed IT plan, your provider can configure segmentation using the hardware you have or recommend appropriate replacements. The total cost for most five-to-twenty-employee offices is a few hundred dollars in hardware plus a few hours of configuration. Compare that to the average cost of a breach response, and it is not a hard decision."
+                  "text": "No. Business-grade access points from vendors such as Ubiquiti, Cisco Meraki, or Aruba natively support multiple SSIDs with VLAN tagging. A managed switch to enforce VLAN isolation is the other piece of hardware most small-office deployments need. Total cost for most five-to-twenty-employee offices is modest hardware plus a few hours of configuration. Compare that to the cost of responding to a breach and it is not a hard decision. Ghosxt publishes its managed network add-ons on the pricing page."
                 }
               },
               {
@@ -100,7 +100,7 @@
                 "name": "How do I know if my current Wi-Fi setup is a flat network?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "The simplest check: connect to your business Wi-Fi on a laptop and open a file manager or network browser. If you can see other computers, printers, or NAS devices on the network, you are on a flat network. A more precise test is to check the IP address your devices receive: if your staff computer, guest device, and printer all get addresses in the same range (for example, all 192.168.1.x), they are on the same segment. If you are unsure, an IT assessment will tell you in the first fifteen minutes. We do this as part of every new client onboarding and almost always find segmentation gaps, even at businesses that have had IT support before."
+                  "text": "The simplest check: connect to your business Wi-Fi on a laptop and open a file manager or network browser. If you can see other computers, printers, or NAS devices, you are on a flat network. A more precise test is to check whether your staff computer, guest device, and printer all get IP addresses in the same range: if so, they are on the same segment. If you are unsure, a network assessment will tell you in the first fifteen minutes. We find segmentation gaps at almost every business we onboard, including those with prior IT support."
                 }
               }
             ]
@@ -322,7 +322,7 @@
 
           <h2>What this actually costs to fix</h2>
 
-          <p>If you are starting from scratch with consumer-grade hardware, the upgrade to properly segmented business networking typically runs $300 to $800 in hardware for a single-location office: a managed switch and one or two business-grade access points. Ubiquiti's UniFi line, Cisco Meraki Go, and Aruba Instant are all solid choices at different price points. Configuration is a few hours of work. If you are already on a managed IT plan, the configuration cost is typically covered or minimal; it is a standard part of network setup.</p>
+          <p>If you are starting from scratch with consumer-grade hardware, the upgrade to properly segmented business networking means buying a managed switch and one or two business-grade access points for a single-location office. Ubiquiti's UniFi line, Cisco Meraki Go, and Aruba Instant are all solid choices at different price points. Configuration is a few hours of work. If you are already on a managed IT plan, ask your provider what is covered; it is a standard part of network setup. Ghosxt publishes its managed network add-ons ($25 per managed switch and $20 per wireless access point per month) on the <a href="/pricing">pricing page</a>.</p>
 
           <p>The result is a network where a compromised camera cannot reach your QuickBooks server, a guest laptop with malware cannot browse your internal file share, and an employee plugging in a rogue router generates an alert rather than a silent blind spot. That is not a complicated outcome. It is what a properly configured network should do from day one, and it is one of the higher-leverage security improvements available to a small business per dollar spent.</p>
 
@@ -338,7 +338,7 @@
           <p>A rogue access point is any wireless router or hotspot connected to your network without your IT team's knowledge. The most common source is an employee who plugs in a personal router for better signal at their desk. That device is almost certainly running with default admin credentials and no firewall rules. Any device connecting to it bypasses your network policy and may be bridged directly onto your internal network. Rogue access points show up regularly in network assessments, including at businesses that have had IT support for years.</p>
 
           <h3>Do I need expensive equipment to properly segment my business network?</h3>
-          <p>No. Business-grade access points from Ubiquiti, Cisco Meraki, or Aruba cost between $150 and $400 per unit and natively support multiple SSIDs with VLAN tagging. A managed switch to enforce VLAN isolation costs $100 to $300 for most small-office deployments. Total cost for most five-to-twenty-employee offices is a few hundred dollars in hardware plus a few hours of configuration. Compare that to the average cost of a breach response and it is not a hard decision.</p>
+          <p>No. Business-grade access points from vendors such as Ubiquiti, Cisco Meraki, or Aruba natively support multiple SSIDs with VLAN tagging. A managed switch to enforce VLAN isolation is the other piece of hardware most small-office deployments need. Total cost for most five-to-twenty-employee offices is modest hardware plus a few hours of configuration. Compare that to the cost of responding to a breach and it is not a hard decision. Ghosxt publishes its managed network add-ons on the <a href="/pricing">pricing page</a>.</p>
 
           <h3>How do I know if my current Wi-Fi setup is a flat network?</h3>
           <p>The simplest check: connect to your business Wi-Fi on a laptop and open a file manager or network browser. If you can see other computers, printers, or NAS devices, you are on a flat network. A more precise test is to check whether your staff computer, guest device, and printer all get IP addresses in the same range: if so, they are on the same segment. If you are unsure, a network assessment will tell you in the first fifteen minutes. We find segmentation gaps at almost every business we onboard, including those with prior IT support.</p>

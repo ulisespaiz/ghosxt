@@ -48,7 +48,7 @@
             "author": { "@type": "Person", "name": "Ulises Paiz", "url": "https://ghosxt.com/about" },
             "publisher": { "@type": "Organization", "name": "Ghosxt", "logo": { "@type": "ImageObject", "url": "https://ghosxt.com/assets/img/ghosxt-logo-160.webp" } },
             "datePublished": "2026-05-13",
-            "dateModified": "2026-05-13",
+            "dateModified": "2026-11-06",
             "articleSection": "Cybersecurity",
             "keywords": "identity hardening, small business cybersecurity, Microsoft 365 Business Premium, Conditional Access, phishing-resistant MFA, FIDO2, Windows Hello for Business, separated admin accounts, LAPS, Microsoft LAPS for Entra, no persistent local admins, legacy authentication, token theft, primary refresh token, MFA fatigue, push bombing"
           },
@@ -77,7 +77,7 @@
             "mainEntity": [
               {
                 "@type": "Question",
-                "name": "What does 'identity hardening' actually mean?",
+                "name": "What does \"identity hardening\" actually mean?",
                 "acceptedAnswer": {
                   "@type": "Answer",
                   "text": "Identity hardening is the practice of making it harder for an attacker to sign in as your users, and less rewarding when they do. In practical terms for a small business that means phishing-resistant multi-factor authentication, Conditional Access policies that gate sign-ins, separation between everyday accounts and admin accounts, no persistent local administrators on workstations, and legacy authentication protocols disabled across the tenant."
@@ -96,12 +96,12 @@
                 "name": "What does this cost for a 5-person business?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "The realistic floor is Microsoft 365 Business Premium at approximately 22 dollars per user per month, which bundles Entra ID Plan 1, Conditional Access, Defender for Business, and Intune. For 5 users that is about 1,320 dollars per year of licensing. Add 100 to 200 dollars one-time for FIDO2 keys on admin accounts. The labor to configure it well is the larger cost and is usually the reason it does not get done."
+                  "text": "The realistic floor is Microsoft 365 Business Premium, which bundles Entra ID Plan 1, Conditional Access, Defender for Business, and Intune. See Microsoft's current pricing for the per-user cost. Add a small one-time purchase of FIDO2 keys for admin accounts. The labor to configure it well is the larger cost and is usually the reason it does not get done."
                 }
               },
               {
                 "@type": "Question",
-                "name": "Why do you keep talking about 'no persistent local admins'?",
+                "name": "Why do you keep talking about \"no persistent local admins\"?",
                 "acceptedAnswer": {
                   "@type": "Answer",
                   "text": "Because almost every ransomware case study has the same step in it: an attacker lands code as a regular user, finds that user is also a local administrator on their workstation, and uses that local admin to dump credentials and move laterally. Removing standing local admin rights on user laptops is one of the highest-leverage controls a small business can put in place. Microsoft LAPS for Entra makes it manageable without breaking IT troubleshooting."
@@ -300,10 +300,10 @@
               <li><strong>No persistent local administrators</strong> on user workstations. Microsoft LAPS for Entra gives you a working alternative.</li>
               <li><strong>Legacy authentication off</strong> at the tenant level. Basic auth, IMAP, POP3, ActiveSync where unused: all disabled.</li>
             </ul>
-            <p>What this costs: roughly $1,320 per year of Microsoft 365 Business Premium licensing for 5 users, $100 to $200 one-time for FIDO2 keys on admin accounts, and one to two days of configuration. The labor is the part that does not happen on its own.</p>
+            <p>What this costs: Microsoft 365 Business Premium licensing for 5 users (see <a href="https://www.microsoft.com/en-us/microsoft-365/business/microsoft-365-business-premium" target="_blank" rel="noopener noreferrer">Microsoft's current pricing</a>), a small one-time purchase of FIDO2 keys for admin accounts, and configuration time. The labor is the part that does not happen on its own.</p>
           </aside>
 
-          <p>Most of the breaches I see in small business networks do not start with malware. They start with somebody signing in. An attacker types a stolen password, completes an MFA prompt the user did not pay attention to, and from inside the user's mailbox quietly sets up forwarding rules and goes looking for invoices to redirect. The technical story is unglamorous. The financial damage is real. The defenses are not exotic. They just require somebody to set them up.</p>
+          <p>Most breaches in small business networks do not start with malware. They start with somebody signing in. An attacker types a stolen password, completes an MFA prompt the user did not pay attention to, and from inside the user's mailbox quietly sets up forwarding rules and goes looking for invoices to redirect. The technical story is unglamorous. The financial damage is real. The defenses are not exotic. They just require somebody to set them up.</p>
 
           <p>This is the post I wish every small business owner I have ever sat across from had read before our first call. It is the identity-hardening floor for a 5-to-25-person business running on Microsoft 365 in 2026. None of it is novel. All of it is fixable in a week. If you are reading this and recognizing that some of these are not in place, that is the project to start on Monday.</p>
 
@@ -328,11 +328,11 @@
 
           <p>The fix for both is <strong>phishing-resistant MFA</strong>: hardware FIDO2 keys (YubiKey, Feitian, Token2) or Windows Hello for Business with PIN+biometric. These work by cryptographically tying the authentication to the specific domain the user is signing into. An adversary-in-the-middle proxy at a different domain cannot complete the challenge, no matter how convincingly it imitates Microsoft's login page. The user cannot accidentally approve the wrong sign-in, because there is no "Approve" button.</p>
 
-          <p>The realistic deployment for a 5-employee business is: phishing-resistant MFA on every admin account (Global Administrator, Exchange Administrator, anything privileged) and a phishing-resistant option offered to every regular user, with strong push MFA acceptable as a fallback. Hardware keys cost about $25 to $50 each. Buy two per admin account so a lost key is not a lockout event.</p>
+          <p>The realistic deployment for a 5-employee business is: phishing-resistant MFA on every admin account (Global Administrator, Exchange Administrator, anything privileged) and a phishing-resistant option offered to every regular user, with strong push MFA acceptable as a fallback. Hardware keys are a small one-time purchase. Buy two per admin account so a lost key is not a lockout event.</p>
 
           <h3>2. Separated admin accounts</h3>
 
-          <p>This is the one that gets the most resistance from owners and is one of the highest-impact changes. The pattern I see constantly is one account, owner@business.com, that is both the daily-driver mailbox and a tenant Global Administrator. The owner reads email from it. The owner clicks links from it. The owner runs PowerShell against the tenant from it.</p>
+          <p>This is the one that gets the most resistance from owners and is one of the highest-impact changes. A common pattern is one account, owner@business.com, that is both the daily-driver mailbox and a tenant Global Administrator. The owner reads email from it. The owner clicks links from it. The owner runs PowerShell against the tenant from it.</p>
 
           <p>The problem is that any phishing email that fools the owner has just compromised a tenant Global Admin. The blast radius is the entire Microsoft 365 environment: every user, every mailbox, every SharePoint site, every license. An attacker with a Global Admin token can disable MFA, create new accounts, mass-export mailboxes, and remove themselves from audit logs.</p>
 
@@ -354,7 +354,7 @@
             <li><strong>Sign-in risk and user risk policies.</strong> If Microsoft's threat intel flags a sign-in as high-risk (impossible travel, leaked credentials, anonymized IP), require MFA again or block. This is included in Entra ID P2 (Business Premium gives you P1; full risk policies need P2 or a step up to E5).</li>
           </ul>
 
-          <p>Conditional Access is also where I see the worst self-inflicted outages. A misconfigured policy can lock the entire tenant out, including the admin trying to fix it. Always create a <strong>break-glass account</strong> (a single non-MFA account with a long random password, monitored, used only in emergencies, excluded from all Conditional Access policies) before you start tightening policies. Anyone who has ever locked themselves out of their own tenant at 11pm understands why.</p>
+          <p>Conditional Access is also where the worst self-inflicted outages happen. A misconfigured policy can lock the entire tenant out, including the admin trying to fix it. Always create a <strong>break-glass account</strong> (a single non-MFA account with a long random password, monitored, used only in emergencies, excluded from all Conditional Access policies) before you start tightening policies. Anyone who has ever locked themselves out of their own tenant at 11pm understands why.</p>
 
           <h3>4. No persistent local administrators on workstations</h3>
 
@@ -375,12 +375,12 @@
           <p>Here is the rough math for a 5-person business that today has Microsoft 365 Business Basic or Business Standard and not much else:</p>
 
           <ul>
-            <li><strong>Microsoft 365 Business Premium upgrade:</strong> roughly $22 per user per month. For 5 users, about $1,320 per year. This gets you Entra ID Plan 1, Conditional Access, Intune, Defender for Business, and Defender for Office 365 Plan 1.</li>
-            <li><strong>FIDO2 hardware keys:</strong> $25-$50 per key. Buy two keys per admin account (lost-key insurance). For two admin accounts, four keys: $100-$200 one-time.</li>
+            <li><strong>Microsoft 365 Business Premium upgrade:</strong> priced per user per month (see <a href="https://www.microsoft.com/en-us/microsoft-365/business/microsoft-365-business-premium" target="_blank" rel="noopener noreferrer">Microsoft's current pricing</a>). This gets you Entra ID Plan 1, Conditional Access, Intune, Defender for Business, and Defender for Office 365 Plan 1.</li>
+            <li><strong>FIDO2 hardware keys:</strong> a small one-time purchase. Buy two keys per admin account (lost-key insurance). For two admin accounts, that is four keys.</li>
             <li><strong>Labor to configure:</strong> one to two engineer-days, depending on how messy the starting state is and how many shared mailboxes and legacy integrations are in scope.</li>
           </ul>
 
-          <p>For comparison, the median incident-response engagement for a small-business ransomware case I see runs $25,000 to $75,000, plus downtime, plus the chance of a breach notification that requires lawyers and customer letters. The math on prevention is not subtle.</p>
+          <p>For comparison, an incident-response engagement for a small-business ransomware case comes with downtime and the chance of a breach notification that requires lawyers and customer letters. The math on prevention is not subtle.</p>
 
           <p>What this <strong>does not</strong> solve: insider threats, supply-chain breaches at your vendors, malicious browser extensions, social-engineering attacks where the attacker calls your bookkeeper and convinces them to wire money. Identity hardening is necessary, not sufficient. It overlaps significantly with <a href="/blog/small-business-cybersecurity-mistakes">the cybersecurity mistakes I see in almost every small business</a>, and it is part of the broader posture covered in our <a href="/cybersecurity">cybersecurity services</a> page. If you want the recovery side of the plan, start with <a href="/backup-disaster-recovery">backup and disaster recovery</a>.</p>
 
@@ -412,7 +412,7 @@
           <p>Not by itself anymore. Push-notification MFA is increasingly bypassed by push bombing and adversary-in-the-middle phishing kits that proxy the legitimate sign-in and steal the session token. The defensible posture in 2026 is phishing-resistant MFA (FIDO2 hardware keys or Windows Hello for Business) on admin accounts at minimum, paired with Conditional Access that requires a compliant device and blocks legacy authentication.</p>
 
           <h3>What does this cost for a 5-person business?</h3>
-          <p>The realistic floor is Microsoft 365 Business Premium at approximately $22 per user per month, which bundles Entra ID Plan 1, Conditional Access, Defender for Business, and Intune. For 5 users that is about $1,320 per year of licensing. Add $100 to $200 one-time for FIDO2 keys on admin accounts. The labor to configure it well is the larger cost and is usually the reason it does not get done.</p>
+          <p>The realistic floor is Microsoft 365 Business Premium, which bundles Entra ID Plan 1, Conditional Access, Defender for Business, and Intune. See <a href="https://www.microsoft.com/en-us/microsoft-365/business/microsoft-365-business-premium" target="_blank" rel="noopener noreferrer">Microsoft's current pricing</a> for the per-user cost. Add a small one-time purchase of FIDO2 keys for admin accounts. The labor to configure it well is the larger cost and is usually the reason it does not get done.</p>
 
           <h3>Why do you keep talking about "no persistent local admins"?</h3>
           <p>Because almost every <a href="/blog/ransomware-2026-how-it-gets-in">ransomware case study</a> has the same step in it: an attacker lands code as a regular user, finds that user is also a local administrator on their workstation, and uses that local admin to dump credentials and move laterally. Removing standing local admin rights on user laptops is one of the highest-leverage controls a small business can put in place. Microsoft LAPS for Entra makes it manageable without breaking IT troubleshooting.</p>

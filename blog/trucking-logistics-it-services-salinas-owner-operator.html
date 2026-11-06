@@ -48,7 +48,7 @@
             "author": { "@type": "Person", "name": "Ulises Paiz", "url": "https://ghosxt.com/about" },
             "publisher": { "@type": "Organization", "name": "Ghosxt", "logo": { "@type": "ImageObject", "url": "https://ghosxt.com/assets/img/ghosxt-logo-160.webp" } },
             "datePublished": "2026-05-24",
-            "dateModified": "2026-05-24",
+            "dateModified": "2026-11-06",
             "articleSection": "Industry IT",
             "keywords": "trucking IT Salinas, logistics IT Central Coast, owner-operator IT, C-TPAT IT, ELD compliance, trucking cybersecurity, dispatch fraud, freight identity theft, Salinas managed IT"
           },
@@ -430,9 +430,9 @@
           <p>The yard office is where most of the dollars end up. The baseline we recommend for a 5-15 person Salinas trucking back office:</p>
 
           <ul>
-            <li><strong>Microsoft 365 Business Premium per user.</strong> Includes Outlook, the Office apps, OneDrive, SharePoint, Teams, Defender for Business (endpoint detection, paired with our MDR), Intune (MDM), and Entra ID P1 (identity hardening). At roughly $22 per user per month it is the most leveraged dollar in the stack.</li>
+            <li><strong>Microsoft 365 Business Premium per user.</strong> Includes Outlook, the Office apps, OneDrive, SharePoint, Teams, Defender for Business (endpoint detection, paired with our MDR), Intune (MDM), and Entra ID P1 (identity hardening). It is licensed per user per month (check <a href="https://www.microsoft.com/en-us/microsoft-365/business/microsoft-365-business-premium" target="_blank" rel="noopener noreferrer">Microsoft's current pricing</a>) and is the most leveraged dollar in the stack.</li>
             <li><strong>Business-class internet with documented SLA</strong> and an LTE or 5G failover on a different carrier.</li>
-            <li><strong>Real firewall</strong> (Fortinet, Sophos, Palo Alto, or a managed Meraki). Not a Linksys.<!-- [VERIFY: equipment we actually deploy] --></li>
+            <li><strong>A business-grade firewall.</strong> Not a Linksys.</li>
             <li><strong>VoIP for dispatch.</strong> A cloud-hosted phone system that can ring through to mobile when the office is empty. The dispatcher's number cannot be a personal cell.</li>
             <li><strong>Cabled to the desk, wireless for the laptop.</strong> Yard offices in metal buildings have lousy Wi-Fi. Run cable to the dispatcher and the accounting desk; reserve wireless for laptops and tablets.</li>
             <li><strong>Ruggedized devices where it matters.</strong> The yard supervisor's tablet should not be a consumer iPad in a plastic case. Panasonic Toughbook, Zebra rugged tablet, or equivalent.</li>
@@ -443,11 +443,11 @@
 
           <h2>Driver-facing tools that actually work</h2>
 
-          <p>The driver-facing side gets less attention than it deserves because the office staff are the ones complaining loudest. A few things we've seen work for small Central Coast carriers:</p>
+          <p>The driver-facing side gets less attention than it deserves because the office staff are the ones complaining loudest. A few things that work for small Central Coast carriers:</p>
 
           <ul>
             <li><strong>Pick the ELD vendor on the back-office integration, not the driver UX.</strong> The ELD is going to be the driver's least favorite piece of software no matter what. The real value is in how well it talks to your TMS and accounting.</li>
-            <li><strong>Dual-camera dashcams are now table stakes.</strong> Inward-facing plus road-facing. Insurers price them in. The footage settles roughly 80 percent of accident disputes in the carrier's favor, in our experience.</li>
+            <li><strong>Dual-camera dashcams are now table stakes.</strong> Inward-facing plus road-facing. Insurers price them in. The footage can settle accident disputes in the carrier's favor.</li>
             <li><strong>Driver tablets beat phones for ELD use,</strong> but only marginally. The hidden cost of a tablet is breakage. A ruggedized 8-inch Android tablet from Samsung or Zebra runs three to five times longer in service than a consumer iPad.</li>
             <li><strong>Cab Wi-Fi for sleeper drivers</strong> is a retention tool. A team-driver rig that gives the off-duty driver a usable connection for video calls home is a rig that keeps its drivers.</li>
             <li><strong>Personal phones with a managed work profile</strong> are a reasonable compromise for solo owner-operators. Just make sure the company apps are in the work profile and the offboarding wipe is configured.</li>
@@ -461,35 +461,34 @@
 
           <h2>What we are not recommending</h2>
 
-          <p>The patterns we see at small carriers that we steer clients away from:</p>
+          <p>Patterns small carriers should steer away from:</p>
 
           <ul>
-            <li><strong>Running dispatch on a single owner's laptop with no backup.</strong> When (not if) the laptop dies or gets ransomwared, the operation stops. We have seen this end a small carrier.</li>
+            <li><strong>Running dispatch on a single owner's laptop with no backup.</strong> When (not if) the laptop dies or gets ransomwared, the operation stops.</li>
             <li><strong>Shared logins across drivers or dispatchers.</strong> No audit trail, no offboarding control, no MFA story, automatic C-TPAT finding.</li>
             <li><strong>"Free" ELD providers that are not on the FMCSA registered list.</strong> The savings disappear the first time you get cited for a non-compliant device.</li>
             <li><strong>Putting BOL or manifest data in a personal Gmail.</strong> Personal Gmail does not meet C-TPAT criteria, does not have a business-grade audit trail, and is not covered by any cyber insurance policy I have read.</li>
             <li><strong>Letting the dispatcher's personal cell be the dispatch number.</strong> When the dispatcher leaves, the customers do too.</li>
-            <li><strong>Skipping cyber insurance because "we're too small."</strong> Premiums for a 5-truck operation are usually under $300 per month. The deductibles on a real claim are six figures.</li>
+            <li><strong>Skipping cyber insurance because "we're too small."</strong> Get a quote before assuming it is out of reach, and read the deductible before you sign.</li>
             <li><strong>Believing the TMS vendor's "we back you up" answer.</strong> The vendor backs up their platform, not your individual records.</li>
           </ul>
 
           <h2>A realistic budget for a 5-truck Salinas operation</h2>
 
-          <p>Numbers for a representative 5-truck Salinas carrier with 4 office users (owner, dispatcher, AP, and a part-time safety person), running Microsoft 365 Business Premium, Samsara for ELD and telematics, and a mid-tier TMS. Monthly, all-in:</p>
+          <p>Line items for a representative 5-truck Salinas carrier with 4 office users (owner, dispatcher, AP, and a part-time safety person), running Microsoft 365 Business Premium, an ELD and telematics platform, and a TMS. Ghosxt's managed IT and security price is published; the other lines depend on the vendor and plan you choose, so get quotes for each:</p>
 
           <ul>
-            <li><strong>Microsoft 365 Business Premium:</strong> 4 users x $22 = $88</li>
-            <li><strong>MDR / managed security:</strong> 4 users x $25 = $100</li>
-            <li><strong>Samsara or equivalent ELD/telematics:</strong> 5 trucks x $30-$45 = $150-$225</li>
-            <li><strong>TMS:</strong> $150-$400 depending on platform</li>
-            <li><strong>Managed IT (helpdesk, patching, backup, identity hardening):</strong> 4 users x $150-$200 = $600-$800</li>
-            <li><strong>Cab cellular (dual-SIM where needed):</strong> 5 trucks x $50 = $250</li>
-            <li><strong>Office internet + failover:</strong> $200-$350</li>
+            <li><strong>Microsoft 365 Business Premium:</strong> per user per month, billed by Microsoft (<a href="https://www.microsoft.com/en-us/microsoft-365/business/microsoft-365-business-premium" target="_blank" rel="noopener noreferrer">Microsoft's current pricing</a>).</li>
+            <li><strong>Managed IT and security (helpdesk, patching, managed detection and response, backup, identity hardening):</strong> Ghosxt's Tiny Team plan is $600 per month flat for 1 to 4 users, with a $1,000 one-time onboarding fee (see <a href="/pricing">pricing</a>).</li>
+            <li><strong>ELD/telematics:</strong> per truck per month, depending on vendor and plan.</li>
+            <li><strong>TMS:</strong> depends on platform.</li>
+            <li><strong>Cab cellular (dual-SIM where needed):</strong> per truck per month, depending on carrier.</li>
+            <li><strong>Office internet + failover:</strong> depends on the circuits available at your yard.</li>
           </ul>
 
-          <p>Total monthly IT spend lands roughly between <strong>$1,500 and $2,500 per month</strong> at 5 trucks, before equipment. That is real money, but it is also the number that keeps dispatch running, keeps drivers in compliance, keeps C-TPAT certification intact, and survives a ransomware attempt without paying the ransom. The cost scales close to linearly to 20-30 trucks, with the per-user managed IT line being the biggest mover.</p>
+          <p>Add the quotes together, before equipment, and you have your monthly IT spend. That is real money, but it is also the number that keeps dispatch running, keeps drivers in compliance, keeps C-TPAT certification intact, and survives a ransomware attempt without paying the ransom. As the fleet grows, the per-user managed IT line is usually the biggest mover.</p>
 
-          <p>For comparison: a single ransomware event at a small carrier (incident response, recovery, lost revenue, customer notifications, and possible ransom) typically lands between $80,000 and $250,000 in our recent IR work. The IT budget pays for itself in a single avoided incident.</p>
+          <p>For comparison: a single ransomware event at a small carrier means incident response, recovery, lost revenue, customer notifications, and possibly a ransom demand. Price those against your own revenue before deciding what the IT budget is worth.</p>
 
           <h2>Where this fits</h2>
 

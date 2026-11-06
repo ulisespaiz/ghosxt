@@ -48,7 +48,7 @@
             "author": { "@type": "Person", "name": "Ulises Paiz", "url": "https://ghosxt.com/about" },
             "publisher": { "@type": "Organization", "name": "Ghosxt", "logo": { "@type": "ImageObject", "url": "https://ghosxt.com/assets/img/ghosxt-logo-160.webp" } },
             "datePublished": "2026-05-30",
-            "dateModified": "2026-05-30",
+            "dateModified": "2026-11-06",
             "articleSection": "Cybersecurity",
             "keywords": "protect small business from cyberattack, small business cybersecurity checklist, MFA, EDR, backups, security awareness training, patching, least privilege, cyber insurance, managed IT, Salinas IT, Monterey County IT"
           },
@@ -68,7 +68,7 @@
                 "name": "What is the single most important thing to protect a small business from a cyberattack?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Phishing-resistant multi-factor authentication (MFA) on email and every important account. The large majority of small-business breaches start with a stolen or guessed password, and MFA is the one control that most reliably stops a working password from turning into a full account takeover. If you only do one thing this week, turn on MFA everywhere it is offered, and prefer an authenticator app or a hardware key over text-message codes."
+                  "text": "Phishing-resistant MFA on email and every important account. Most small-business breaches start with a stolen or guessed password, and MFA is the control that most reliably stops a working password from becoming a full account takeover. If you do one thing this week, turn on MFA everywhere it's offered, and prefer an authenticator app or hardware key over text-message codes."
                 }
               },
               {
@@ -76,7 +76,7 @@
                 "name": "How much does it cost a small business to be reasonably secure?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Far less than most owners expect, and far less than one incident. Many of the highest-impact controls, such as MFA, least-privilege accounts, and turning on automatic updates, cost little or nothing beyond the time to set them up. The paid layers, such as managed endpoint detection and response, monitored backups, and security-awareness training, typically run a modest per-user monthly fee. For most five-to-fifty-person businesses, a solid security baseline costs a small fraction of the average cost of a single ransomware event or a denied insurance claim."
+                  "text": "Less than most owners expect, and far less than one incident. Many high-impact controls (MFA, least-privilege accounts, automatic updates) cost little or nothing beyond setup time. The paid layers (managed EDR, monitored backups, security-awareness training) typically run a modest per-user monthly fee. For most small businesses, a solid baseline costs far less than recovering from a single ransomware event or a denied insurance claim."
                 }
               },
               {
@@ -84,7 +84,7 @@
                 "name": "We are too small to be a target. Why would anyone attack us?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Most attacks on small businesses are not personal; they are automated and opportunistic. Criminals scan the internet for any exposed weakness and any inbox they can phish, regardless of company size. Small businesses are attractive precisely because they often have weaker defenses, valuable data, and the ability to pay a ransom. Being small does not make you invisible; it usually makes you an easier target than a large enterprise with a security team."
+                  "text": "Most attacks on small businesses aren't personal. They're automated and opportunistic. Criminals scan the internet for any exposed weakness and any inbox they can phish, regardless of company size. Small businesses are attractive precisely because they often have weaker defenses, valuable data, and the ability to pay. Being small doesn't make you invisible; it usually makes you an easier target than a large enterprise with a security team."
                 }
               },
               {
@@ -92,7 +92,7 @@
                 "name": "Do backups protect me from ransomware?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Good backups are essential, but only if they are tested and isolated. Modern ransomware crews deliberately seek out and delete or encrypt the backups they can reach before they trigger the attack, so a backup sitting on the same network or in the same login is not safe. You want backups that are offline or separately credentialed, automatically monitored, and restore-tested on a schedule, so that recovery actually works on the day you need it. Note that backups do not protect against data theft and extortion, which is why they are one layer of several, not the whole plan."
+                  "text": "Good backups are essential, but only if they're tested and isolated. Modern ransomware crews seek out and delete or encrypt the backups they can reach before triggering the attack, so a backup on the same network or login isn't safe. You want backups that are offline or separately credentialed, automatically monitored, and restore-tested on a schedule. Note that backups don't protect against data theft and extortion, which is why they're one layer of several."
                 }
               },
               {
@@ -100,7 +100,7 @@
                 "name": "Isn't antivirus enough to protect my business?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "No. Traditional antivirus only catches known threats, and many modern attacks use stolen logins, social engineering, or living-off-the-land techniques that antivirus never sees. The current standard is endpoint detection and response (EDR) backed by 24/7 monitoring, which watches behavior rather than just matching signatures and can stop an intrusion in progress. Antivirus is one ingredient; it is not a security program by itself."
+                  "text": "No. Traditional antivirus only catches known threats, and many modern attacks use stolen logins, social engineering, or living-off-the-land techniques it never sees. The current standard is endpoint detection and response (EDR) backed by 24/7 monitoring, which watches behavior rather than just matching signatures and can stop an intrusion in progress. Antivirus is one ingredient, not a security program by itself."
                 }
               },
               {
@@ -108,7 +108,7 @@
                 "name": "Can a small business do this itself, or do we need a managed IT provider?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "A motivated owner can absolutely do the free and low-cost basics: turning on MFA, enabling automatic updates, removing local-admin rights, and setting up backups. The layers that need round-the-clock attention, such as monitoring, detection and response, patch enforcement across a whole fleet, and incident response, are where a managed IT provider earns its keep, because they require tools and staff watching outside business hours. Many small businesses do the basics themselves and bring in a provider for the always-on layers and to verify nothing important is missing."
+                  "text": "A motivated owner can absolutely do the free basics: turning on MFA, enabling automatic updates, removing local-admin rights, and setting up backups. The layers that need round-the-clock attention (monitoring, detection and response, fleet-wide patch enforcement, and incident response) are where a managed IT provider earns its keep, because they need tools and staff watching outside business hours. Many businesses do the basics themselves and bring in a provider for the always-on layers and to verify nothing important is missing."
                 }
               }
             ]
@@ -314,7 +314,7 @@
           <p>One nuance that matters in 2026: prefer an <strong>authenticator app or a hardware security key</strong> over text-message codes, and know that attackers now try to <em>trick</em> people into approving prompts or handing over codes. We wrote about exactly that in <a href="/blog/mfa-fatigue-push-bombing-smb-2026">MFA fatigue and push bombing</a>. "Phishing-resistant" MFA (app-based number matching or a physical key) is the version that holds up. Cost: usually $0. Impact: enormous. Start here today.</p>
 
           <h2>2. Patch fast: turn on automatic updates (free)</h2>
-          <p>A huge number of attacks simply walk through a known hole that a vendor already fixed, on a machine where nobody installed the update. Turn on <strong>automatic updates</strong> for Windows, your web browsers, and your applications, and don't ignore firmware and router updates. The monthly <a href="/blog/may-2026-patch-tuesday-windows-dns-word-rce-smb">Patch Tuesday</a> cycle exists for a reason, and the gap between "patch released" and "you installed it" is the window attackers race to exploit. If any machine is running an operating system that no longer gets updates at all, like an out-of-support <a href="/blog/windows-10-end-of-life-small-business-what-to-do-2026">Windows 10 box</a>, that is the first thing to fix. Cost: $0. It just requires that updates aren't being endlessly postponed.</p>
+          <p>Many attacks simply walk through a known hole that a vendor already fixed, on a machine where nobody installed the update. Turn on <strong>automatic updates</strong> for Windows, your web browsers, and your applications, and don't ignore firmware and router updates. The monthly <a href="/blog/may-2026-patch-tuesday-windows-dns-word-rce-smb">Patch Tuesday</a> cycle exists for a reason, and the gap between "patch released" and "you installed it" is the window attackers race to exploit. If any machine is running an operating system that no longer gets updates at all, like an out-of-support <a href="/blog/windows-10-end-of-life-small-business-what-to-do-2026">Windows 10 box</a>, that is the first thing to fix. Cost: $0. It just requires that updates aren't being endlessly postponed.</p>
 
           <h2>3. Remove everyday admin rights (free)</h2>
           <p>If the account your team uses all day can install software and change the whole system, then one bad click can too. Run daily work from <strong>standard user accounts</strong>, and keep a separate administrator account for when you genuinely need to install something. This single change (called least privilege) dramatically shrinks the damage of a phished login or a malicious download, because the malware inherits only the limited rights of a normal user. It is the quiet hero of <a href="/blog/identity-hardening-small-business-5-employees-microsoft-365">identity hardening</a>, and it costs nothing but a little setup.</p>
@@ -351,7 +351,7 @@
           <p>Phishing-resistant MFA on email and every important account. Most small-business breaches start with a stolen or guessed password, and MFA is the control that most reliably stops a working password from becoming a full account takeover. If you do one thing this week, turn on MFA everywhere it's offered, and prefer an authenticator app or hardware key over text-message codes.</p>
 
           <h3>How much does it cost a small business to be reasonably secure?</h3>
-          <p>Less than most owners expect, and far less than one incident. Many high-impact controls (MFA, least-privilege accounts, automatic updates) cost little or nothing beyond setup time. The paid layers (managed EDR, monitored backups, security-awareness training) typically run a modest per-user monthly fee. For most five-to-fifty-person businesses, a solid baseline costs a small fraction of a single ransomware event or a denied insurance claim.</p>
+          <p>Less than most owners expect, and far less than one incident. Many high-impact controls (MFA, least-privilege accounts, automatic updates) cost little or nothing beyond setup time. The paid layers (managed EDR, monitored backups, security-awareness training) typically run a modest per-user monthly fee. For most small businesses, a solid baseline costs far less than recovering from a single ransomware event or a denied insurance claim.</p>
 
           <h3>We are too small to be a target. Why would anyone attack us?</h3>
           <p>Most attacks on small businesses aren't personal. They're automated and opportunistic. Criminals scan the internet for any exposed weakness and any inbox they can phish, regardless of company size. Small businesses are attractive precisely because they often have weaker defenses, valuable data, and the ability to pay. Being small doesn't make you invisible; it usually makes you an easier target than a large enterprise with a security team.</p>

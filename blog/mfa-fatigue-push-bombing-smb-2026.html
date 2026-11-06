@@ -48,7 +48,7 @@
             "author": { "@type": "Person", "name": "Ulises Paiz", "url": "https://ghosxt.com/about" },
             "publisher": { "@type": "Organization", "name": "Ghosxt", "logo": { "@type": "ImageObject", "url": "https://ghosxt.com/assets/img/ghosxt-logo-160.webp" } },
             "datePublished": "2026-05-26",
-            "dateModified": "2026-05-26",
+            "dateModified": "2026-11-06",
             "articleSection": "Cybersecurity",
             "keywords": "MFA fatigue, push bombing, MFA bypass, adversary in the middle, AiTM phishing, phishing-resistant MFA, FIDO2, passkeys, number matching, Conditional Access, help desk social engineering, Microsoft 365 security, small business cybersecurity, Salinas IT services, Monterey Bay managed IT"
           },
@@ -108,7 +108,7 @@
                 "name": "Do passkeys cost anything and are they hard to roll out for a small business?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Passkeys themselves are free and built into Microsoft Entra, iOS, Android, Windows Hello, and modern browsers, so most employees can enroll one on a device they already own. FIDO2 hardware keys run roughly 25 to 70 dollars each and are worth it for administrators and finance staff. For a typical 15-to-50-person business the rollout is a one-to-two-week project: enable the methods in Entra, enroll users in waves, then tighten Conditional Access to require the phishing-resistant method. We do this routinely for Central Coast businesses."
+                  "text": "Passkeys themselves are free and built into Microsoft Entra, iOS, Android, Windows Hello, and modern browsers, so most employees can enroll one on a device they already own. FIDO2 hardware keys are inexpensive per unit and are worth it for administrators and finance staff. For a typical 15-to-50-person business the rollout is a one-to-two-week project: enable the methods in Entra, enroll users in waves, then tighten Conditional Access to require the phishing-resistant method. We do this routinely for Central Coast businesses."
                 }
               }
             ]
@@ -339,7 +339,7 @@
 
           <p>FIDO2 security keys (such as YubiKeys) and passkeys are <strong>phishing-resistant by design</strong>. The credential is cryptographically bound to the real website's domain. When the user lands on an adversary-in-the-middle proxy, the security key looks at the domain, sees it is not the real Microsoft, and silently refuses to authenticate. There is no code to read aloud, no prompt to approve by mistake, nothing to hand over. Push bombing and AiTM both fail against it.</p>
 
-          <p>Passkeys are free and built into Microsoft Entra, Windows Hello, iOS, Android, and modern browsers, so most employees can enroll one on a device they already own. Hardware keys run roughly $25 to $70 each and are worth buying for the accounts that matter most: administrators, finance, owners, and anyone who can move money or change payroll. Enforce them through <a href="/blog/identity-hardening-small-business-5-employees-microsoft-365">Microsoft Entra Conditional Access</a> so that those roles literally cannot sign in with a weaker method.</p>
+          <p>Passkeys are free and built into Microsoft Entra, Windows Hello, iOS, Android, and modern browsers, so most employees can enroll one on a device they already own. Hardware keys cost a modest amount each and are worth buying for the accounts that matter most: administrators, finance, owners, and anyone who can move money or change payroll. Enforce them through <a href="/blog/identity-hardening-small-business-5-employees-microsoft-365">Microsoft Entra Conditional Access</a> so that those roles literally cannot sign in with a weaker method.</p>
 
           <h3>If you cannot roll out keys this week, do these now</h3>
 
@@ -395,7 +395,7 @@
           <p>Yes, and it is one of the most exploited paths in 2026. Attackers call the help desk posing as an employee who is locked out and ask for an MFA reset or a new device enrollment. If the help desk resets the factor without strong identity verification, the attacker enrolls their own device. Every IT help desk, internal or outsourced, needs a written caller-verification procedure that does not rely on information an attacker can find on LinkedIn. We build this into the runbook for every client we manage.</p>
 
           <h3>Do passkeys cost anything and are they hard to roll out for a small business?</h3>
-          <p>Passkeys themselves are free and built into Microsoft Entra, iOS, Android, Windows Hello, and modern browsers, so most employees can enroll one on a device they already own. FIDO2 hardware keys run roughly $25 to $70 each and are worth it for administrators and finance staff. For a typical 15-to-50-person business the rollout is a one-to-two-week project: enable the methods in Entra, enroll users in waves, then tighten Conditional Access to require the phishing-resistant method. We do this routinely for Central Coast businesses.</p>
+          <p>Passkeys themselves are free and built into Microsoft Entra, iOS, Android, Windows Hello, and modern browsers, so most employees can enroll one on a device they already own. FIDO2 hardware keys are inexpensive per unit and are worth it for administrators and finance staff. For a typical 15-to-50-person business the rollout is a one-to-two-week project: enable the methods in Entra, enroll users in waves, then tighten Conditional Access to require the phishing-resistant method. We do this routinely for Central Coast businesses.</p>
 
           <div class="blog-post-cta">
             <h3>Want your MFA checked against these attacks?</h3>

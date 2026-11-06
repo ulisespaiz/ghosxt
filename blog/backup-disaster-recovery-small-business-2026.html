@@ -48,7 +48,7 @@
             "author": { "@type": "Person", "name": "Ulises Paiz", "url": "https://ghosxt.com/about" },
             "publisher": { "@type": "Organization", "name": "Ghosxt", "logo": { "@type": "ImageObject", "url": "https://ghosxt.com/assets/img/ghosxt-logo-160.webp" } },
             "datePublished": "2026-05-22",
-            "dateModified": "2026-05-22",
+            "dateModified": "2026-11-06",
             "articleSection": "Backup and Disaster Recovery",
             "keywords": "SMB backup, disaster recovery, 3-2-1-1-0 rule, immutable backup, Microsoft 365 backup, ransomware-proof backup, RPO RTO small business, Salinas managed IT, Monterey IT services"
           },
@@ -105,7 +105,7 @@
               },
               {
                 "@type": "Question",
-                "name": "What is immutable storage and why does it matter?",
+                "name": "What is \"immutable\" storage and why does it matter?",
                 "acceptedAnswer": {
                   "@type": "Answer",
                   "text": "Immutable storage is storage that cannot be modified or deleted for a defined retention period, by anyone, including the account owner. The mechanism varies by platform (S3 Object Lock in compliance mode, Azure Blob immutable policies, Wasabi Object Lock, Veeam hardened repositories with one-way credentials) but the property is the same: once a backup is written, it cannot be encrypted, altered, or deleted until the immutability clock expires. This matters because the dominant attacker playbook in 2026 includes a deliberate step to delete or encrypt the victim's backups before deploying the main ransomware payload. Immutable storage breaks that step. It is the single most important backup-side control against modern ransomware."
@@ -116,7 +116,7 @@
                 "name": "What is a reasonable backup budget for a 25-person business?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "For a 25-user firm running on Microsoft 365 with one on-prem server, a credible 2026 backup program lands in the range of $700 to $1,800 per month, all-in. That covers workstation backup at roughly $5 to $12 per user, Microsoft 365 backup at roughly $3 to $6 per user, on-prem server backup with offsite immutable copy at roughly $150 to $400, and the management and monitoring time to run it. Adding disaster-recovery-as-a-service with a tighter recovery time objective pushes the number into the $1,000 to $3,000 range depending on the SLA. The reference point for whether that is reasonable: a single ransomware event for a firm that size routinely costs $80,000 to $250,000 in recovery, lost revenue, and notification expense."
+                  "text": "Cost depends on how many users and servers you protect, how much data you keep, and how long you retain it. A credible program for a 25-user firm on Microsoft 365 with one on-prem server has four line items: workstation backup, Microsoft 365 backup, on-prem server backup with an offsite immutable copy, and the management and monitoring time to run it. Adding disaster-recovery-as-a-service with a tighter recovery time objective adds a fifth. Ask any provider to price each line separately, and see our published pricing on the pricing page for how we price managed IT."
                 }
               }
             ]
@@ -312,7 +312,7 @@
             </ol>
           </aside>
 
-          <p>I have walked into the aftermath of enough ransomware and accidental-deletion incidents to know what the common version of the conversation sounds like. The owner is calm at the start because the IT vendor has assured everyone that "we have backups." Two hours later we are looking at the backup share and the dates on the most recent good copy are from before the attacker was in the environment, or the backup software is happily logging successful jobs against an empty target, or the only restore the team has ever performed is the one happening right now.</p>
+          <p>The common version of the conversation after a ransomware or accidental-deletion incident goes like this. The owner is calm at the start because the IT vendor has assured everyone that "we have backups." Two hours later the team is looking at the backup share and the dates on the most recent good copy are from before the attacker was in the environment, or the backup software is happily logging successful jobs against an empty target, or the only restore the team has ever performed is the one happening right now.</p>
 
           <p>That is not a technology problem. The products are fine. The problem is that backup design for a small business has not kept up with the way attackers operate, and most SMB programs are still optimized for the 2018 threat model. This is the long read on what actually works in 2026 for a 15-to-100-person business, written without the marketing gloss. If your operation runs on Microsoft 365 and a couple of on-prem servers, this is for you. For the full service write-up see our <a href="/backup-disaster-recovery">backup and disaster recovery service page</a>.</p>
 
@@ -322,7 +322,7 @@
 
           <p>The first is the speed and automation of attacks. As covered in the post on <a href="/blog/ai-attack-speed-22-seconds-mdr-smb">AI-driven attacker handoff times</a>, the gap between an initial access broker landing a credential and a ransomware affiliate taking over has collapsed from hours to seconds. The attacker pipeline qualifies, prices, and routes accesses faster than any human defender can intervene. By the time a human IT contact reads a security alert, the secondary actor is already inside.</p>
 
-          <p>The second is that modern attackers explicitly target backup infrastructure first. This is the part that catches small businesses off guard. The playbook used by every major ransomware group in 2025 and 2026 looks the same: gain access, do reconnaissance, locate the backup server, delete or encrypt the backups, then deploy the encryptor against production. The whole point of compromising the backups before the production data is to remove the option of recovering without paying. CISA and the major IR firms (Mandiant, Unit 42, Sophos X-Ops, Coveware) have all published incident data showing this pattern in roughly 70 to 90 percent of ransomware events where the victim had any meaningful backup.</p>
+          <p>The second is that modern attackers explicitly target backup infrastructure first. This is the part that catches small businesses off guard. A common ransomware playbook in 2025 and 2026 looks like this: gain access, do reconnaissance, locate the backup server, delete or encrypt the backups, then deploy the encryptor against production. The whole point of compromising the backups before the production data is to remove the option of recovering without paying. This is why <a href="https://www.cisa.gov/stopransomware/ransomware-guide" target="_blank" rel="noopener noreferrer">CISA's ransomware guide</a> tells organizations to maintain offline, encrypted backups.</p>
 
           <p>The implication for an SMB is direct. A backup that lives on a Windows file share, joined to the same Active Directory as production, mounted with a service account that the attacker can reach, is not a recovery option. It is a slightly slower second copy of the data the attacker is about to encrypt. The question is not whether your backup product is good. The question is whether the backup is reachable from the production network using credentials that exist on the production domain.</p>
 
@@ -374,7 +374,7 @@
             <li>A point-in-time restore of a mailbox to a specific calendar date.</li>
           </ul>
 
-          <p>The correct answer is a third-party Microsoft 365 backup product: Veeam Backup for Microsoft 365, Datto SaaS Protection, Acronis Cyber Protect for M365, Afi, AvePoint Cloud Backup, or a similar tool. These products take regular snapshots of mailboxes, SharePoint sites, OneDrive accounts, and Teams channels (chat, files, and configuration), store them outside the Microsoft tenant, and offer point-in-time restore. Pricing is typically $3 to $6 per user per month for a 25-user firm. The line item is small. The data exposure without it is not.</p>
+          <p>The correct answer is a third-party Microsoft 365 backup product: Veeam Backup for Microsoft 365, Datto SaaS Protection, Acronis Cyber Protect for M365, Afi, AvePoint Cloud Backup, or a similar tool. These products take regular snapshots of mailboxes, SharePoint sites, OneDrive accounts, and Teams channels (chat, files, and configuration), store them outside the Microsoft tenant, and offer point-in-time restore. The line item is small. The data exposure without it is not.</p>
 
           <p>If the business uses other SaaS products that contain primary data (a CRM like Salesforce or HubSpot, a financial system like QuickBooks Online or NetSuite, a project tool like Asana or Monday with attachments), each of those needs its own backup story. Most major SaaS vendors offer some form of export; few of them offer real point-in-time restore for free. Treat each SaaS system the same way: assume the vendor is responsible for availability and you are responsible for recoverability.</p>
 
@@ -390,7 +390,7 @@
 
           <h2>The four failure modes I see in the field</h2>
 
-          <p>The five layers above are what good looks like. The next section is what bad looks like, which is what most of the field actually runs in 2026. These four failure modes account for roughly every restore I have walked into in the past two years.</p>
+          <p>The five layers above are what good looks like. The next section is what bad looks like, which is what most of the field actually runs in 2026. These four failure modes are the ones that most often break a restore.</p>
 
           <h3>Failure mode 1: production-reachable backups</h3>
 
@@ -450,16 +450,16 @@
 
           <h2>What costs what</h2>
 
-          <p>Realistic 2026 pricing for a representative 25-user SMB with one on-prem server, running on Microsoft 365 Business Premium. All numbers per month, all-in.</p>
+          <p>Prices vary widely by product, retention, and data volume, so this section lists the line items to ask any provider to price separately for a representative 25-user SMB with one on-prem server, running on Microsoft 365.</p>
 
           <ul>
-            <li><strong>Workstation backup:</strong> $5 to $12 per user, depending on the product and the retention. Datto Workplace, Carbonite Endpoint, and Acronis Cyber Protect cluster around this range. For a 25-user firm, roughly $125 to $300 per month.</li>
-            <li><strong>Server image backup (one physical server, local plus immutable offsite):</strong> $150 to $400 per month for the combination of local appliance amortization, cloud storage, and the management overhead. The cloud storage piece scales with the size of the backup set.</li>
-            <li><strong>Microsoft 365 backup (mailboxes, SharePoint, OneDrive, Teams):</strong> $3 to $6 per user per month. For 25 users, $75 to $150 per month. Veeam, Datto, Acronis, and Afi are all reasonable.</li>
-            <li><strong>Disaster-recovery-as-a-service with a tight RTO (hot standby in the cloud, 1-to-4-hour failover):</strong> $300 to $1,500 per month depending on the SLA and the size of the protected workload. This is the line item that handles the worst-case scenario without adding days to the recovery.</li>
+            <li><strong>Workstation backup:</strong> priced per user, depending on the product and the retention.</li>
+            <li><strong>Server image backup (one physical server, local plus immutable offsite):</strong> the combination of local appliance amortization, cloud storage, and the management overhead. The cloud storage piece scales with the size of the backup set.</li>
+            <li><strong>Microsoft 365 backup (mailboxes, SharePoint, OneDrive, Teams):</strong> priced per user per month. Veeam, Datto, Acronis, and Afi are all reasonable.</li>
+            <li><strong>Disaster-recovery-as-a-service with a tight RTO (hot standby in the cloud, 1-to-4-hour failover):</strong> priced by the SLA and the size of the protected workload. This is the line item that handles the worst-case scenario without adding days to the recovery.</li>
           </ul>
 
-          <p>For a 25-user firm without DR-as-a-service, total backup spend lands in the $700 to $1,800 per month range. Adding DR-as-a-service pushes it to $1,000 to $3,000 per month. The comparison point is the cost of a single ransomware event for a firm that size, which the IR firms put at $80,000 to $250,000 between recovery work, lost revenue, and notification. The math, even for the cost-sensitive SMB, is not subtle.</p>
+          <p>Add the line items up, then compare the total with the cost of a single ransomware event: recovery work, lost revenue, and notification. The math, even for the cost-sensitive SMB, is not subtle. Our <a href="/pricing">published pricing</a> shows how we price managed IT.</p>
 
           <h2>Ransomware-aware backup design</h2>
 
@@ -473,7 +473,7 @@
 
           <p><strong>Network segmentation.</strong> Production endpoints should not be able to reach the backup repository directly. The backup server pulls from production through a defined interface; production cannot push or write to the backup repository. The blast radius of a compromised production endpoint is the production network, not the backup network.</p>
 
-          <p><strong>Alerts on backup-chain anomalies.</strong> The backup console should generate alerts when a job fails, when retention drops below the configured threshold, when a chain breaks, or when an unexpected administrative action is taken. Those alerts should go somewhere a human reads them. Many of the worst restore-failure incidents I have walked into had perfectly good alerts firing for weeks into an empty mailbox.</p>
+          <p><strong>Alerts on backup-chain anomalies.</strong> The backup console should generate alerts when a job fails, when retention drops below the configured threshold, when a chain breaks, or when an unexpected administrative action is taken. Those alerts should go somewhere a human reads them. In many restore-failure incidents, perfectly good alerts fire for weeks into an empty mailbox.</p>
 
           <p>Backup is the last-resort control. Identity hardening and detection (covered in the <a href="/cybersecurity">cybersecurity service page</a> and the <a href="/blog/ai-attack-speed-22-seconds-mdr-smb">MDR post</a>) sit in front of it. But when those layers fail, backup is what is left between the business and the ransom note. It deserves the same hardening discipline.</p>
 
@@ -529,7 +529,7 @@
           <p>Immutable storage is storage that cannot be modified or deleted for a defined retention period, by anyone, including the account owner. The mechanism varies by platform (S3 Object Lock in compliance mode, Azure Blob immutable policies, Wasabi Object Lock, Veeam hardened repositories with one-way credentials) but the property is the same: once a backup is written, it cannot be encrypted, altered, or deleted until the immutability clock expires. This matters because the dominant attacker playbook in 2026 includes a deliberate step to delete or encrypt the victim's backups before deploying the main ransomware payload. Immutable storage breaks that step. It is the single most important backup-side control against modern ransomware.</p>
 
           <h3>What is a reasonable backup budget for a 25-person business?</h3>
-          <p>For a 25-user firm running on Microsoft 365 with one on-prem server, a credible 2026 backup program lands in the range of $700 to $1,800 per month, all-in. That covers workstation backup at roughly $5 to $12 per user, Microsoft 365 backup at roughly $3 to $6 per user, on-prem server backup with offsite immutable copy at roughly $150 to $400, and the management and monitoring time to run it. Adding disaster-recovery-as-a-service with a tighter recovery time objective pushes the number into the $1,000 to $3,000 range depending on the SLA. The reference point for whether that is reasonable: a single ransomware event for a firm that size routinely costs $80,000 to $250,000 in recovery, lost revenue, and notification expense.</p>
+          <p>Cost depends on how many users and servers you protect, how much data you keep, and how long you retain it. A credible program for a 25-user firm on Microsoft 365 with one on-prem server has four line items: workstation backup, Microsoft 365 backup, on-prem server backup with an offsite immutable copy, and the management and monitoring time to run it. Adding disaster-recovery-as-a-service with a tighter recovery time objective adds a fifth. Ask any provider to price each line separately, and see our published pricing on the pricing page for how we price managed IT.</p>
 
           <div class="blog-post-cta">
             <h3>Want a read on whether your backups would survive a real incident?</h3>

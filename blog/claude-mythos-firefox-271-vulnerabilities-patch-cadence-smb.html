@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#ffffff" />
     <title>Claude Mythos: 271 Firefox Bugs in One Run | Ghosxt</title>
-    <meta name="description" content="Anthropic's Claude Mythos found 271 Firefox 150 vulnerabilities in one eval and built working exploits for 181." />
+    <meta name="description" content="Anthropic's Claude Mythos found 271 Firefox 150 vulnerabilities in one eval, and built 181 working exploits in a separate Firefox benchmark." />
     <link rel="canonical" href="https://ghosxt.com/blog/claude-mythos-firefox-271-vulnerabilities-patch-cadence-smb" />
     <link rel="alternate" type="application/rss+xml" title="Ghosxt Blog" href="https://ghosxt.com/feed.xml" />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://ghosxt.com/blog/claude-mythos-firefox-271-vulnerabilities-patch-cadence-smb" />
     <meta property="og:title" content="Claude Mythos: 271 Firefox Bugs in One Run | Ghosxt" />
-    <meta property="og:description" content="Anthropic's Claude Mythos found 271 Firefox 150 vulnerabilities in one eval and built working exploits for 181." />
+    <meta property="og:description" content="Anthropic's Claude Mythos found 271 Firefox 150 vulnerabilities in one eval, and built 181 working exploits in a separate Firefox benchmark." />
     <meta property="og:image" content="https://ghosxt.com/assets/img/og/blog-claude-mythos-firefox-271-vulnerabilities-patch-cadence-smb.png" />
     <meta property="og:site_name" content="Ghosxt" />
     <meta property="article:published_time" content="2026-05-10" />
@@ -19,7 +19,7 @@
     <meta name="robots" content="index, follow" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Claude Mythos: 271 Firefox Bugs in One Run | Ghosxt" />
-    <meta name="twitter:description" content="Anthropic's Claude Mythos found 271 Firefox 150 vulnerabilities in one eval and built working exploits for 181." />
+    <meta name="twitter:description" content="Anthropic's Claude Mythos found 271 Firefox 150 vulnerabilities in one eval, and built 181 working exploits in a separate Firefox benchmark." />
     <meta name="twitter:image" content="https://ghosxt.com/assets/img/og/blog-claude-mythos-firefox-271-vulnerabilities-patch-cadence-smb.png" />
     <link rel="icon" href="../assets/img/favicon.ico" sizes="any" />
     <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml" />
@@ -43,12 +43,12 @@
             "@type": "BlogPosting",
             "mainEntityOfPage": { "@type": "WebPage", "@id": "https://ghosxt.com/blog/claude-mythos-firefox-271-vulnerabilities-patch-cadence-smb" },
             "headline": "Claude Mythos Found 271 Firefox Bugs in One Run: What the Patch-Cadence Shift Means for Small Business",
-            "description": "Anthropic's Claude Mythos found 271 vulnerabilities in Firefox 150 in a single eval, and built working exploits for 181. An engineer with DoD infrastructure experience on what the patch-cadence shift means for small business in 2026.",
+            "description": "Anthropic's Claude Mythos found 271 vulnerabilities in Firefox 150 in a single eval, and built 181 working exploits in a separate Firefox benchmark. An engineer with DoD infrastructure experience on what the patch-cadence shift means for small business in 2026.",
             "image": "https://ghosxt.com/assets/img/og/blog-claude-mythos-firefox-271-vulnerabilities-patch-cadence-smb.png",
             "author": { "@type": "Person", "name": "Ulises Paiz", "url": "https://ghosxt.com/about" },
             "publisher": { "@type": "Organization", "name": "Ghosxt", "logo": { "@type": "ImageObject", "url": "https://ghosxt.com/assets/img/ghosxt-logo-160.webp" } },
             "datePublished": "2026-05-10",
-            "dateModified": "2026-05-10",
+            "dateModified": "2026-11-06",
             "articleSection": "Cybersecurity",
             "keywords": "Claude Mythos, Anthropic Mythos, Firefox 150 vulnerabilities, CVE-2026-6746, CVE-2026-6757, CVE-2026-6758, Project Glasswing, patch management, vulnerability management, small business cybersecurity, patch cadence, MTTP, mean time to patch"
           },
@@ -282,8 +282,8 @@
             <span class="quickfix-label">TL;DR: What Changed</span>
             <h2>The new pace of vulnerability disclosure is here, and it does not fit a quarterly patch cycle</h2>
             <ul>
-              <li>Anthropic's <strong>Claude Mythos</strong> found <strong>271 sec-rated bugs in Firefox 150 in a single eval run</strong>, and built working exploits for 181 of them.</li>
-              <li>The previous flagship model surfaced 22 bugs on Firefox 148. Mythos hit roughly <strong>12 times that rate</strong>.</li>
+              <li>Anthropic's <strong>Claude Mythos</strong> found <strong>271 sec-rated bugs in Firefox 150 in a single eval run</strong>. In a separate Firefox benchmark it built 181 working exploits.</li>
+              <li>The previous flagship model surfaced 22 bugs fixed in Firefox 148; Mythos led to fixes for 271 in Firefox 150, roughly <strong>12 times</strong> as many (per <a href="https://blog.mozilla.org/en/firefox/privacy-security/ai-security-zero-day-vulnerabilities/" target="_blank" rel="noopener noreferrer">Mozilla</a>).</li>
               <li>Some flaws had survived in Firefox for <strong>15 to 20 years</strong>. Every prior human review missed them.</li>
             </ul>
             <p>What to do this week:</p>
@@ -310,18 +310,18 @@
           <ul>
             <li><strong>271 sec-rated bugs found in one eval run.</strong> Of those: 180 sec-high, 80 sec-moderate, 11 sec-low.</li>
             <li><strong>423 total security fixes shipped in Firefox 150.</strong> The other 152 came from existing Mozilla audits and external reports, but Mythos was the largest single contributor.</li>
-            <li><strong>Working exploits for 181 of the 271.</strong> Mythos did not just point at suspicious code. It produced runnable proof-of-concept exploits.</li>
+            <li><strong>181 working exploits in a separate benchmark.</strong> Re-running Anthropic's Firefox 147 exploit benchmark, Mythos did not just point at suspicious code. It produced runnable exploits.</li>
             <li><strong>Three CVEs are formally credited to Claude in the Firefox advisory:</strong> CVE-2026-6746, CVE-2026-6757, and CVE-2026-6758.</li>
-            <li><strong>83% first-attempt exploit reproduction rate</strong> on previously-unknown bugs in pre-release testing. That is a number that should focus the mind.</li>
+            <li><strong>Working exploits, not just bug reports.</strong> In the Firefox benchmark Anthropic re-ran, Mythos developed working exploits 181 times, where the previous model managed it twice out of several hundred attempts (<a href="https://red.anthropic.com/2026/mythos-preview/" target="_blank" rel="noopener noreferrer">Anthropic's Mythos Preview assessment</a>).</li>
           </ul>
 
           <p>The bugs themselves are not exotic. They are the kind of thing a thorough human audit could find given enough time. A 15-year-old issue in how Firefox parsed an HTML legend element. A 20-year-old XSLT bug involving reentrant key() calls. A race condition over IPC. A buffer over-read in HTTPS resource record and ECH parsing. None of these would shock a senior security engineer reading the patch notes. What is new is that one model, in one run, found all of them at once.</p>
 
           <h2>What actually changed under the hood</h2>
 
-          <p>Anthropic's previous flagship model, Opus 4.6, ran the same kind of analysis on Firefox 148 last month and surfaced 22 bugs. Mythos on Firefox 150 surfaced 271. That is not a 10% improvement. That is roughly twelve times the rate, in a release cycle that lasted weeks, not years.</p>
+          <p>Anthropic's previous flagship model, Opus 4.6, ran the same kind of analysis on Firefox and led to fixes for 22 security-sensitive bugs in Firefox 148. Mythos led to fixes for 271 vulnerabilities in Firefox 150 (both figures per <a href="https://blog.mozilla.org/en/firefox/privacy-security/ai-security-zero-day-vulnerabilities/" target="_blank" rel="noopener noreferrer">Mozilla</a>). That is not a 10% improvement. That is roughly twelve times as many, in a release cycle that lasted weeks, not years.</p>
 
-          <p>The other thing worth understanding is that Mythos does not just statically flag code patterns. It builds and tests exploits. In pre-release evaluation, Anthropic reported that Mythos reproduced previously-unknown vulnerabilities and developed working exploit code on the first attempt in over 83% of cases. In one documented test it reconstructed a 27-year-old vulnerability in OpenBSD, a system that prides itself on being the most security-hardened operating system in the world.</p>
+          <p>The other thing worth understanding is that Mythos does not just statically flag code patterns. It builds and tests exploits. In its own evaluation, Anthropic reported that Mythos turned vulnerabilities into working exploit code, in some cases without any human intervention after an initial prompt (<a href="https://red.anthropic.com/2026/mythos-preview/" target="_blank" rel="noopener noreferrer">Anthropic's Mythos Preview assessment</a>). Among its findings was a 27-year-old bug in OpenBSD, a system that prides itself on being the most security-hardened operating system in the world.</p>
 
           <p>Anthropic's CEO, Dario Amodei, put a number on the implication: there is a six-to-twelve month window during which defenders have an advantage, before adversaries running their own equivalent models catch up. After that, the same capability that found 271 bugs in Firefox is going to be available to people whose goal is the opposite of patching them.</p>
 
@@ -396,7 +396,7 @@
 
           <h3>Edge devices are the highest-leverage targets</h3>
 
-          <p>I have written before that <a href="/blog/ransomware-2026-how-it-gets-in">unpatched edge devices are one of the most common ransomware entry points</a> we see in small business networks. That has been true for years, and it is becoming more true. Mythos-class tools are going to surface a wave of long-buried bugs in firewall and VPN firmware over the next year. The vendors will ship fixes. The question for your business is whether the fix gets applied within a week, or whether it sits in a vendor newsletter your IT person scans on Monday mornings.</p>
+          <p>I have written before that <a href="/blog/ransomware-2026-how-it-gets-in">unpatched edge devices are one of the most common ransomware entry points</a> in small business networks. That has been true for years, and it is becoming more true. Mythos-class tools are going to surface a wave of long-buried bugs in firewall and VPN firmware over the next year. The vendors will ship fixes. The question for your business is whether the fix gets applied within a week, or whether it sits in a vendor newsletter your IT person scans on Monday mornings.</p>
 
           <h3>The in-house IT person can't keep up. This is now a 24/7 job.</h3>
 

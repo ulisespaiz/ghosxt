@@ -48,7 +48,7 @@
             "author": { "@type": "Person", "name": "Ulises Paiz", "url": "https://ghosxt.com/about" },
             "publisher": { "@type": "Organization", "name": "Ghosxt", "logo": { "@type": "ImageObject", "url": "https://ghosxt.com/assets/img/ghosxt-logo-160.webp" } },
             "datePublished": "2026-05-23",
-            "dateModified": "2026-05-23",
+            "dateModified": "2026-11-06",
             "articleSection": "Microsoft 365",
             "keywords": "OneDrive vs SharePoint, SharePoint vs Teams files, Microsoft 365 file storage, SMB file collaboration, Salinas managed IT, Monterey IT services"
           },
@@ -295,10 +295,10 @@
               <li><strong>Teams files</strong> = "SharePoint, but presented inside a Teams channel for live collaboration."</li>
             </ul>
             <p>Files moved between these surfaces are governed by where they live in SharePoint, <em>not</em> which app you opened them in. The same file inside the same SharePoint document library can be opened from the Teams Files tab, the SharePoint web UI, or as a OneDrive synced folder. Permissions follow the storage container, never the app icon.</p>
-            <p>Apply that mental model and 80% of the confusion goes away. The rest of this post covers the patterns, the five mistakes I keep cleaning up, and a reference org chart for a 25-person business.</p>
+            <p>Apply that mental model and most of the confusion goes away. The rest of this post covers the patterns, the five common mistakes, and a reference org chart for a 25-person business.</p>
           </aside>
 
-          <p>About once a week, a Central Coast business owner asks me a version of the same question. "We have OneDrive, we have SharePoint, we have Teams. We have files in all of them. Where are we supposed to put what?" It is a fair question, and the official Microsoft documentation does not always make it easier to answer. This post is the version I give to clients in plain English, with the trade-offs called out and a reference pattern for a 15-to-100 person business.</p>
+          <p>Central Coast business owners often ask a version of the same question. "We have OneDrive, we have SharePoint, we have Teams. We have files in all of them. Where are we supposed to put what?" It is a fair question, and the official Microsoft documentation does not always make it easier to answer. This post is the plain-English version, with the trade-offs called out and a reference pattern for a 15-to-100 person business.</p>
 
           <h2>The thing nobody tells you up front</h2>
 
@@ -505,7 +505,7 @@
             <li><strong>Junk</strong>: abandoned, duplicates, personal files that ended up on the share, screen recordings from 2017.</li>
           </ul>
 
-          <p>The junk bucket usually accounts for 30-60% of the file server. Do not migrate it. Delete it (or at least quarantine it).</p>
+          <p>The junk bucket is often a large share of the file server. Do not migrate it. Delete it (or at least quarantine it).</p>
 
           <h3>Step 2: Map to OneDrive or SharePoint</h3>
 
@@ -550,12 +550,12 @@
 
           <h2>What we are not recommending</h2>
 
-          <p>Three patterns I see and steer clients away from:</p>
+          <p>Three patterns to steer away from:</p>
 
           <ul>
             <li><strong>Personal OneDrive (the consumer product) for business files.</strong> The consumer OneDrive (signed in with a personal Microsoft account) is not part of your Microsoft 365 tenant. It has no admin visibility, no retention controls, no Conditional Access, and no DLP. Business files do not belong there, period.</li>
             <li><strong>Document libraries for structured data.</strong> If you find yourself building a 30-column Excel sheet to track customer records, support tickets, or asset inventories, that is a sign you want Microsoft Lists, Dataverse, or a real database, not a SharePoint document library. Lists is included with Microsoft 365 and is the right tool for structured data the team needs to query.</li>
-            <li><strong>Free-for-all link sharing.</strong> Some clients respond to the "where does this file live" question by enabling "anyone with the link can access" sharing across the tenant. This is the same as putting the file on a publicly indexable web server. Search engines find these links. Phishing pages clone them. The default-correct sharing posture is "specific people" or "people in your organization." Reserve "anyone with the link" for the occasional file you would not mind seeing on the front page of the local paper.</li>
+            <li><strong>Free-for-all link sharing.</strong> Some businesses respond to the "where does this file live" question by enabling "anyone with the link can access" sharing across the tenant. This is the same as putting the file on a publicly indexable web server. Search engines find these links. Phishing pages clone them. The default-correct sharing posture is "specific people" or "people in your organization." Reserve "anyone with the link" for the occasional file you would not mind seeing on the front page of the local paper.</li>
           </ul>
 
           <h2>Where this fits with the rest of the cluster</h2>

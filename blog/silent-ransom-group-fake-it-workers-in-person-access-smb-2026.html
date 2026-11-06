@@ -48,7 +48,7 @@
             "author": { "@type": "Person", "name": "Ulises Paiz", "url": "https://ghosxt.com/about" },
             "publisher": { "@type": "Organization", "name": "Ghosxt", "logo": { "@type": "ImageObject", "url": "https://ghosxt.com/assets/img/ghosxt-logo-160.webp" } },
             "datePublished": "2026-06-06",
-            "dateModified": "2026-06-06",
+            "dateModified": "2026-11-06",
             "articleSection": "Cybersecurity",
             "keywords": "Silent Ransom Group, Luna Moth, fake IT workers, in-person social engineering, physical access attack, IT impersonation, data extortion, ransomware, FBI warning, Mandiant, USB data theft, law firm cybersecurity, small business security, Salinas, Monterey, Central Coast managed IT"
           },
@@ -81,7 +81,7 @@
               },
               {
                 "@type": "Question",
-                "name": "Someone from 'IT' we didn't recognize called or showed up. What should staff do?",
+                "name": "Someone from \"IT\" we didn't recognize called or showed up. What should staff do?",
                 "acceptedAnswer": {
                   "@type": "Answer",
                   "text": "Stop, and verify through a known channel before doing anything they ask. Do not grant remote access, do not install software, do not start a screen-share, and do not let an unannounced visitor near a computer or plug anything in. Politely take their name and company, then independently call your actual IT provider or internal IT contact using the number you already have on file, never a number the visitor or caller gives you. A legitimate IT visit is always scheduled and announced through a channel you trust. If the contact cannot be confirmed, treat it as an attack: deny access, document what happened, and report it. No real technician will be offended by a verification call; an impostor will pressure you to skip it."
@@ -292,7 +292,7 @@
             <ul>
               <li><strong>The escalation:</strong> from remote calls to in-person impostors posing as IT support, walking into offices and stealing data directly.</li>
               <li><strong>It's theft, not encryption.</strong> They copy your sensitive files, contracts, SSNs, financial and tax records, and threaten to publish them. Backups restore loss; they cannot un-leak stolen data.</li>
-              <li><strong>Law firms first, but not only.</strong> Dozens of firms were hit from January through May 2026; any business with sensitive data and staff who can be socially engineered is in scope.</li>
+              <li><strong>Law firms first, but not only.</strong> Mandiant reported dozens of organizations targeted from January through May 2026. Any business with sensitive data and staff who can be socially engineered is in scope.</li>
               <li><strong>The fix is human and procedural:</strong> verify every IT contact out-of-band, never let an unannounced visitor near a computer, control USB and remote-access tools, and limit who can access what.</li>
             </ul>
             <p>The one rule to put in place this week:</p>
@@ -306,17 +306,17 @@
 
           <p>For most of the last decade, "the IT person is the attacker" meant a phone call or an email. The Silent Ransom Group built a profitable business doing exactly that: call an employee, claim to be IT support, manufacture a security problem, and talk them into granting remote access. We covered that version of the attack when the FBI first warned about it, in the <a href="/blog/fbi-silent-ransom-group-law-firms-2026">Silent Ransom Group post</a>. This week's warning from Google's Mandiant and Google Threat Intelligence Group, alongside the FBI, marks a genuinely new and more brazen chapter: the fake IT worker is no longer just on the phone. He is walking through your front door.</p>
 
-          <p>According to the reporting, the group has begun sending impostors posing as IT support staff into victims' physical offices, where they steal data directly, copying it onto USB drives or installing remote-access tools on machines they are given access to. Mandiant's CTO Charles Carmakal summarized the broader trend bluntly: investigators have seen adversaries "planted insiders, bribed employees, or physically entered buildings." The FBI confirmed "multiple instances of individuals impersonating IT support who have gained or attempted to gain physical access." This is social engineering crossing into the physical world, and it sidesteps almost every technical control a small business has bought.</p>
+          <p>The FBI's <a href="https://www.ic3.gov/CSA/2026/260526.pdf" target="_blank" rel="noopener noreferrer">May 26, 2026 FLASH advisory</a> warns that when remote social engineering fails, Silent Ransom Group actors may send someone to the victim's office posing as IT support, claiming they need to image the device or create a backup, and then copy data off the machine. Google's Mandiant reported that <a href="https://cloud.google.com/blog/topics/threat-intelligence/targeted-campaign-us-law-firms" target="_blank" rel="noopener noreferrer">from January through May 2026 it identified this campaign targeting dozens of organizations</a> in the United States. <a href="https://techcrunch.com/2026/06/05/google-and-fbi-warn-of-ransomware-group-that-sends-fake-it-workers-to-hack-victims-in-person/" target="_blank" rel="noopener noreferrer">TechCrunch</a> covers both reports. Our earlier post on the <a href="/blog/fbi-silent-ransom-group-law-firms-2026">FBI warning on the Silent Ransom Group</a> covers the remote version of the same pretext. This is social engineering crossing into the physical world, and it sidesteps almost every technical control a small business has bought.</p>
 
           <h2>What's new: from the phone to the front desk</h2>
 
           <p>The earlier campaigns were entirely remote. Someone called or emailed, built rapport and urgency, and steered the employee to a screen-sharing session on Zoom or Microsoft Teams to "fix" something, all of which gave the attacker hands on the system without ever leaving their own desk. That playbook still runs, and the in-person version typically starts the same way: a phishing email, a phone call, or some other social-engineering pretext that establishes the attacker as your IT support.</p>
 
-          <p>The escalation is the last step. Instead of, or in addition to, a remote session, a person shows up at the office, presents themselves as the IT technician there to "address a security issue" or "help with a data migration," and is shown to a computer. From there the theft is fast and low-tech: a USB drive copies files, or a remote-access tool is quietly installed so the data can be pulled later. There is no exotic malware to detect and no firewall to breach, because a human being held the door open.</p>
+          <p>The escalation is the last step. Instead of, or in addition to, a remote session, a person shows up at the office, presents themselves as the IT technician there to "address a security issue" or "help with a data migration," and is shown to a computer. From there the theft is fast and low-tech: a storage device plugged into the machine copies the files. There is no exotic malware to detect and no firewall to breach, because a human being held the door open.</p>
 
           <h2>It is data theft, not encryption, and that changes everything</h2>
 
-          <p>The most important thing to understand about this group is that it does not encrypt your files. Classic ransomware scrambles your data and sells you the key, which is why a tested backup is your escape hatch. The Silent Ransom Group skips encryption entirely. It steals copies of your most sensitive information, the reporting cites contracts, Social Security numbers, financial records, and tax documents, and then extorts you with the threat of publishing it on a leak site. One sample threat from the group puts it plainly: "In case of ignorance or no agreement, we will notify your employees, partners and customers."</p>
+          <p>The most important thing to understand about this group is that it does not encrypt your files. Classic ransomware scrambles your data and sells you the key, which is why a tested backup is your escape hatch. The Silent Ransom Group skips encryption entirely. It steals copies of your most sensitive information, examples include contracts, Social Security numbers, financial records, and tax documents, and then extorts you with the threat of publishing it on a leak site. One sample threat from the group puts it plainly: "In case of ignorance or no agreement, we will notify your employees, partners and customers."</p>
 
           <p>This is why I keep telling owners that their backups, as essential as they are, will not save them here. A backup lets you restore data you have lost. It does nothing about data that has already been copied out the door and is sitting on a criminal's server. You cannot restore your way out of a leak. Backups remain critical for the encryption-style attacks that still dominate, covered in the <a href="/blog/backup-disaster-recovery-small-business-2026">backup and disaster recovery post</a>, but against pure data-theft extortion the only winning move is to prevent the theft. Prevention, not recovery, is the whole game.</p>
 
@@ -334,7 +334,7 @@
 
           <h2>Not just law firms</h2>
 
-          <p>Law firms have borne the brunt, with dozens hit between January and May 2026, because they concentrate exactly what the group wants: privileged client data, sensitive financial information, and a strong incentive to make a quiet payment rather than face a public leak. The detailed law-firm guidance is in the <a href="/blog/professional-services-it-law-cpa-central-coast">professional services IT post</a>. But the technique is industry-agnostic. It targets people and process, and every business has both.</p>
+          <p>Law firms have borne the brunt, and Mandiant counted dozens of organizations targeted from January through May 2026, because they concentrate exactly what the group wants: privileged client data, sensitive financial information, and a strong incentive to make a quiet payment rather than face a public leak. The detailed law-firm guidance is in the <a href="/blog/professional-services-it-law-cpa-central-coast">professional services IT post</a>. But the technique is industry-agnostic. It targets people and process, and every business has both.</p>
 
           <p>On the Central Coast, the same exposure sits in medical practices, accounting and tax firms, property management offices, and any business holding customer financial or personal records. If you hold data worth ransoming and you employ humans who can be talked into something, you are a candidate. The reassuring corollary is that the defenses are also industry-agnostic: the controls below work the same whether you are a five-person CPA office in Salinas or a property management company in Santa Cruz.</p>
 
