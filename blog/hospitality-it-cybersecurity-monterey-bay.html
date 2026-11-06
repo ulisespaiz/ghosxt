@@ -48,7 +48,7 @@
             "author": { "@type": "Person", "name": "Ulises Paiz", "url": "https://ghosxt.com/about" },
             "publisher": { "@type": "Organization", "name": "Ghosxt", "logo": { "@type": "ImageObject", "url": "https://ghosxt.com/assets/img/ghosxt-logo-160.webp" } },
             "datePublished": "2026-06-19",
-            "dateModified": "2026-06-19",
+            "dateModified": "2026-11-06",
             "articleSection": "Industry IT",
             "keywords": "hospitality IT, restaurant IT support, hotel IT support, winery IT, tasting room POS, PCI DSS compliance restaurant, guest Wi-Fi segmentation, Toast POS security, OpenTable Resy SevenRooms, wine club ecommerce security, Monterey hospitality IT, Carmel restaurant IT, Salinas Valley winery IT, Central Coast managed IT, ransomware hospitality"
           },
@@ -386,7 +386,7 @@
 
           <h2>The attacks hitting hospitality right now</h2>
 
-          <p>Hospitality has its own threat ecosystem, and it targets the two things you have plenty of: card transactions and busy, distracted staff. Five patterns we see often in 2026:</p>
+          <p>Hospitality has its own threat ecosystem, and it targets the two things you have plenty of: card transactions and busy, distracted staff. Five common patterns in 2026:</p>
 
           <h3>Help-desk social engineering and ransomware</h3>
 
@@ -406,7 +406,7 @@
 
           <h3>Vendor invoice and banking-change fraud</h3>
 
-          <p>Restaurants and wineries pay a long list of suppliers: produce, beverage, linen, glass, distributors. Attackers, often from inside a compromised supplier mailbox, email "updated" ACH or banking details so the next payment lands with them. The defense is procedural and the same every time: no banking change is accepted from an email, every change is verified by phone against a number already on file, and a second person signs off before money moves. The <a href="/it-consulting-vcio">vCIO and IT consulting</a> engagement is where we usually write these payment controls down with a client.</p>
+          <p>Restaurants and wineries pay a long list of suppliers: produce, beverage, linen, glass, distributors. Attackers, often from inside a compromised supplier mailbox, email "updated" ACH or banking details so the next payment lands with them. The defense is procedural and the same every time: no banking change is accepted from an email, every change is verified by phone against a number already on file, and a second person signs off before money moves. The <a href="/it-consulting-vcio">vCIO and IT consulting</a> engagement is where these payment controls get written down.</p>
 
           <h2>Compliance frameworks hospitality operates inside</h2>
 
@@ -425,9 +425,9 @@
           <p>Behind the floor there is still a back office. The baseline we recommend for a single-location restaurant, inn, or winery with a back-office team:</p>
 
           <ul>
-            <li><strong>Microsoft 365 Business Premium per managed user.</strong> Includes Outlook, the Office apps, OneDrive, SharePoint, Teams, Defender for Business (EDR), Intune (MDM), and Entra ID P1 (identity hardening). At roughly $22 per user per month it is the most leveraged dollar in the stack. The <a href="/blog/microsoft-365-small-business-settings-to-turn-on-2026">Microsoft 365 settings post</a> covers what to turn on first.</li>
+            <li><strong>Microsoft 365 Business Premium per managed user.</strong> Includes Outlook, the Office apps, OneDrive, SharePoint, Teams, Defender for Business (EDR), Intune (MDM), and Entra ID P1 (identity hardening). See <a href="https://www.microsoft.com/en-us/microsoft-365/business/microsoft-365-business-premium" target="_blank" rel="noopener noreferrer">Microsoft's current pricing</a>; it is the most leveraged dollar in the stack. The <a href="/blog/microsoft-365-small-business-settings-to-turn-on-2026">Microsoft 365 settings post</a> covers what to turn on first.</li>
             <li><strong>Business-class internet with a documented SLA</strong> and an LTE or 5G failover, so cards keep clearing when the wired line drops.</li>
-            <li><strong>A real firewall</strong> (Fortinet, Sophos, Palo Alto, or a managed Meraki) with separated payment, back-office, guest, and IoT networks.<!-- [VERIFY: equipment we actually deploy] --></li>
+            <li><strong>A business-grade firewall</strong> with separated payment, back-office, guest, and IoT networks.</li>
             <li><strong><a href="/voip-business-phone-systems">VoIP</a> for the reservation and front-desk line,</strong> so calls can ring to a mobile after hours and the main number is never tied to a personal cell.</li>
             <li><strong>MDM on every company tablet and phone</strong> on the floor and in the field.</li>
             <li><strong>UPS on the network closet</strong> and a documented power-loss runbook for PSPS season.</li>
@@ -437,7 +437,7 @@
 
           <h2>What we steer hospitality businesses away from</h2>
 
-          <p>The patterns we see at places that have not had a fresh set of eyes on their IT, and that we move clients off of:</p>
+          <p>Common patterns at places that have not had a fresh set of eyes on their IT:</p>
 
           <ul>
             <li><strong>Guest Wi-Fi on the same network as the POS.</strong> The fastest path from a stranger in the dining room to your payment systems and your books.</li>
@@ -452,20 +452,18 @@
 
           <h2>A realistic IT budget for a Monterey Bay hospitality business</h2>
 
-          <p>Numbers for a representative single-location operation (a busy independent restaurant, a small inn, or a winery with a tasting room) with about 10 managed back-office and management users, a handful of POS terminals, guest Wi-Fi, and a website. Monthly, all-in, and excluding the POS, PMS, and club software itself, which you already pay per terminal or per order:</p>
+          <p>Numbers for a representative single-location operation (a busy independent restaurant, a small inn, or a winery with a tasting room) with about 10 managed back-office and management users, a handful of POS terminals, guest Wi-Fi, and a website. Ghosxt's lines are priced from the <a href="/pricing">published pricing</a>. Microsoft licensing, internet service, and phone service are billed by those providers, and the POS, PMS, and club software are what you already pay per terminal or per order:</p>
 
           <ul>
-            <li><strong>Microsoft 365 Business Premium:</strong> 10 users &times; $22 = $220</li>
+            <li><strong>Microsoft 365 Business Premium:</strong> 10 users at <a href="https://www.microsoft.com/en-us/microsoft-365/business/microsoft-365-business-premium" target="_blank" rel="noopener noreferrer">Microsoft's current pricing</a></li>
             <li><strong>Managed IT &amp; security (Compliance &amp; Continuity: help desk, patching, backup, identity hardening, and managed detection &amp; response with a 24/7 SOC):</strong> 10 users &times; $250 = $2,500</li>
-            <li><strong>Managed firewall and network segmentation, one site:</strong> $200&ndash;$400</li>
-            <li><strong>Business internet + LTE/5G failover:</strong> $300&ndash;$600</li>
-            <li><strong>VoIP for the reservation / front-desk line:</strong> $150&ndash;$300</li>
-            <li><strong>Independent backup (Microsoft 365 + platform exports):</strong> $100&ndash;$200</li>
+            <li><strong>Firewall management add-on, one firewall:</strong> $50</li>
+            <li><strong>Business internet with LTE/5G failover and VoIP for the reservation / front-desk line:</strong> quoted by the carrier</li>
           </ul>
 
-          <p>Total monthly IT spend lands roughly between <strong>$3,470 and $4,220 per month</strong> for one location, before hardware. The biggest mover is the per-user managed IT and security line, which scales with back-office headcount rather than the number of covers or rooms, so a winery or restaurant group that adds a second tasting room or location without much new office staff sees the per-site IT cost fall.</p>
+          <p>Ghosxt's published portion comes to <strong>$2,550 per month</strong> for one location ($2,500 plus $50), before Microsoft licensing, carrier services, and hardware. Cloud backup for Microsoft 365 and Google Workspace is part of the Compliance &amp; Continuity tier. The biggest mover is the per-user managed IT and security line, which scales with back-office headcount rather than the number of covers or rooms, so a winery or restaurant group that adds a second tasting room or location without much new office staff sees the per-site IT cost fall.</p>
 
-          <p>For comparison: a card-data breach brings forensics, card-brand fines, and reissuance costs that start in the tens of thousands; a ransomware event that locks the POS and PMS over a Car Week or harvest weekend costs far more in lost revenue alone than a year of managed IT; and a single successful gift-card or vendor-banking fraud runs from a few thousand dollars into five figures, usually unrecoverable. The IT budget pays for itself in a single avoided incident.</p>
+          <p>For comparison: a card-data breach brings forensics, card-brand fines, and reissuance costs; a ransomware event that locks the POS and PMS over a Car Week or harvest weekend costs far more in lost revenue alone than a year of managed IT; and a single successful gift-card or vendor-banking fraud is usually unrecoverable. The IT budget pays for itself in a single avoided incident.</p>
 
           <h2>Where this fits</h2>
 

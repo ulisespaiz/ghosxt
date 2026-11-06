@@ -48,7 +48,7 @@
             "author": { "@type": "Person", "name": "Ulises Paiz", "url": "https://ghosxt.com/about" },
             "publisher": { "@type": "Organization", "name": "Ghosxt", "logo": { "@type": "ImageObject", "url": "https://ghosxt.com/assets/img/ghosxt-logo-160.webp" } },
             "datePublished": "2026-06-02",
-            "dateModified": "2026-11-01",
+            "dateModified": "2026-11-06",
             "articleSection": "Industry IT",
             "keywords": "manufacturing IT, manufacturing cybersecurity, OT IT segmentation, shop floor network, ERP MES PLM uptime, CMMC 2.0 compliance, NIST 800-171, NIST 800-82, ITAR engineering data, CAD file management, manufacturing ransomware, Central Coast manufacturing IT, Salinas manufacturing, South Bay manufacturer IT"
           },
@@ -84,7 +84,7 @@
                 "name": "Why is manufacturing the number-one ransomware target?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Because the economics favor the attacker. Manufacturing has been the most-targeted sector for ransomware for several years running across multiple industry reports, and the reasons are structural: downtime tolerance is near zero because a stopped line means missed customer ship dates and contract penalties, legacy operational technology is hard to patch, networks are often flat, and shops have historically under-invested in security relative to the value at risk. An attacker who can halt production knows you are under intense pressure to pay. The defense is the same stack that protects any high-value target, but applied with OT in mind: segmentation, EDR on everything that can run it, monitored email, identity hardening, and 24/7 detection that catches the intrusion before it reaches the floor."
+                  "text": "Because the economics favor the attacker. Manufacturing is a frequent target for ransomware, and the reasons are structural: downtime tolerance is near zero because a stopped line means missed customer ship dates and contract penalties, legacy operational technology is hard to patch, networks are often flat, and shops have historically under-invested in security relative to the value at risk. An attacker who can halt production knows you are under intense pressure to pay. The defense is the same stack that protects any high-value target, but applied with OT in mind: segmentation, EDR on everything that can run it, monitored email, identity hardening, and 24/7 detection that catches the intrusion before it reaches the floor."
                 }
               },
               {
@@ -100,7 +100,7 @@
                 "name": "An engineer left and still had VPN access to the PLM and CAD vault. How bad is that?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Bad, and common. Your CAD models, fixtures, programs, and customer drawings are the company's intellectual property, and a departing engineer with lingering VPN and vault access can copy the entire project archive on the way out. We have been called in after exactly this. The fix is named accounts, no shared logins, a documented same-day offboarding checklist that revokes VPN and PLM access the moment employment ends, and monitoring that flags a large vault export before it becomes a problem. If you cannot say with certainty that every former engineer's access is closed, that is the first assessment we would run."
+                  "text": "Bad, and common. Your CAD models, fixtures, programs, and customer drawings are the company's intellectual property, and a departing engineer with lingering VPN and vault access can copy the entire project archive on the way out. The fix is named accounts, no shared logins, a documented same-day offboarding checklist that revokes VPN and PLM access the moment employment ends, and monitoring that flags a large vault export before it becomes a problem. If you cannot say with certainty that every former engineer's access is closed, that is the first assessment we would run."
                 }
               },
               {
@@ -288,7 +288,7 @@
         <div class="container">
           <aside class="blog-post-quickfix" aria-label="Summary and what to do today">
             <span class="quickfix-label">TL;DR: Manufacturing IT on the Central Coast comes down to six layers</span>
-            <h2>Manufacturing has been the most-targeted ransomware sector for years running, because a stopped line is leverage. Your shop floor is full of operational technology that cannot be patched like a laptop, and most of the real risk lives in the layers between the office and the machines.</h2>
+            <h2>Manufacturing is a frequent ransomware target, because a stopped line is leverage. Your shop floor is full of operational technology that cannot be patched like a laptop, and most of the real risk lives in the layers between the office and the machines.</h2>
             <ul>
               <li><strong>Layer 1:</strong> OT/IT segmentation and a shop-floor network that keeps the machines off the office wire.</li>
               <li><strong>Layer 2:</strong> ERP, MES, and PLM uptime: the systems that schedule, track, and define what you build.</li>
@@ -306,9 +306,9 @@
             <p>The full <a href="/manufacturing-it-services">manufacturing and industrial IT service page</a> covers the underlying program.</p>
           </aside>
 
-          <p>Most of the manufacturers I work with on the Central Coast and into the South Bay did not set out to build an IT department. They bought a CNC machine, then a second, added an ERP because a customer needed real lead times, brought CAD in house, added a MES to track jobs, and a decade later they have a shop floor full of networked machines, an engineering team sitting on terabytes of irreplaceable models, and a part-time IT person who is really the controls tech on Thursdays. The parts ship. The network mostly holds. Nobody has looked at the whole thing as one system that an attacker sees as one target.</p>
+          <p>Most manufacturers on the Central Coast and into the South Bay did not set out to build an IT department. They bought a CNC machine, then a second, added an ERP because a customer needed real lead times, brought CAD in house, added a MES to track jobs, and a decade later they have a shop floor full of networked machines, an engineering team sitting on terabytes of irreplaceable models, and a part-time IT person who is really the controls tech on Thursdays. The parts ship. The network mostly holds. Nobody has looked at the whole thing as one system that an attacker sees as one target.</p>
 
-          <p>This post is the version of the conversation I have with a Salinas, Gilroy, or South Bay shop owner. The framing is six layers, and the backdrop is a hard fact: across multiple 2025 industry reports, <strong>manufacturing is the single most-targeted sector for ransomware</strong>, and has been for several years. That is not because manufacturers are careless. It is because a stopped line is the best leverage an extortionist can ask for, and shop-floor technology is genuinely harder to defend than an office full of laptops. The good news is that the highest-impact fixes are structural and do not require replacing a single machine.</p>
+          <p>This post is written for a Salinas, Gilroy, or South Bay shop owner. The framing is six layers, and the backdrop is that <strong>manufacturing is a frequent ransomware target</strong>. That is not because manufacturers are careless. It is because a stopped line is the best leverage an extortionist can ask for, and shop-floor technology is genuinely harder to defend than an office full of laptops. The good news is that the highest-impact fixes are structural and do not require replacing a single machine.</p>
 
           <h2>Why manufacturing IT is different from generic SMB IT</h2>
 
@@ -334,7 +334,7 @@
 
           <h3>Layer 2: ERP, MES, and PLM uptime</h3>
 
-          <p>The ERP schedules and costs the work, the MES tracks it on the floor, and the PLM or PDM system holds the definition of what you build. Whether you run Epicor, Global Shop, JobBOSS, Fishbowl, ProShop, or a Dynamics build, the IT concerns are the same: these systems have to be reachable from the floor and the office, integrated rather than siloed, patched and maintained on a real schedule, and independently backed up. A MES that only the office server can reach is a MES that stops the floor when that server hiccups. Most of the avoidable downtime we see in shops traces back to one of these systems running on an aging server nobody owns.</p>
+          <p>The ERP schedules and costs the work, the MES tracks it on the floor, and the PLM or PDM system holds the definition of what you build. Whether you run Epicor, Global Shop, JobBOSS, Fishbowl, ProShop, or a Dynamics build, the IT concerns are the same: these systems have to be reachable from the floor and the office, integrated rather than siloed, patched and maintained on a real schedule, and independently backed up. A MES that only the office server can reach is a MES that stops the floor when that server hiccups. Much avoidable downtime in shops traces back to one of these systems running on an aging server nobody owns.</p>
 
           <h3>Layer 3: Engineering data and CAD file management</h3>
 
@@ -425,15 +425,13 @@
           <p>Numbers for a representative 40-person shop, roughly 25 office and engineering users plus shop-floor and kiosk accounts, running an ERP, a MES, and a CAD/PDM vault. Monthly, all-in, excluding CMMC remediation, which is a separate project:</p>
 
           <ul>
-            <li><strong>Microsoft 365 (Business Premium for office/engineering, lower tiers for floor):</strong> $700&ndash;$1,000</li>
-            <li><strong>Managed IT &amp; security (Compliance &amp; Continuity: help desk, patching, backup, identity, server care, and managed detection &amp; response with a 24/7 SOC):</strong> 25 core users &times; $250 = $6,250</li>
-            <li><strong>OT/shop-floor monitoring and segmentation management:</strong> $500&ndash;$1,500</li>
-            <li><strong>Connectivity + failover:</strong> $400&ndash;$800</li>
-            <li><strong>Managed firewalls and segmentation:</strong> $400&ndash;$800</li>
-            <li><strong>Tested backup (ERP, MES, CAD vault, Microsoft 365):</strong> $400&ndash;$900</li>
+            <li><strong><a href="https://www.microsoft.com/en-us/microsoft-365/business/compare-all-microsoft-365-business-products" target="_blank" rel="noopener noreferrer">Microsoft 365 licensing</a> (Business Premium for office/engineering, lower tiers for floor):</strong> billed by Microsoft at its current list prices</li>
+            <li><strong>Managed IT &amp; security (Compliance &amp; Continuity: help desk, patching, Microsoft 365 and Google Workspace cloud backup, identity, and managed detection &amp; response with a 24/7 SOC):</strong> 25 core users &times; $250 = $6,250</li>
+            <li><strong>Server and firewall add-ons:</strong> 1 server &times; $200 + 1 firewall &times; $50 = $250</li>
+            <li><strong>OT/shop-floor segmentation, connectivity and failover, and server image backup (ERP, MES, CAD vault):</strong> quoted per project</li>
           </ul>
 
-          <p>Total monthly IT spend lands roughly between <strong>$8,650 and $11,250 per month</strong> for a 40-person shop, before hardware and before CMMC remediation. The biggest mover is the per-user managed IT and security line. For comparison: industry reporting puts the median manufacturing ransomware breach around half a million dollars once downtime and recovery are counted, and a single missed aerospace or medical ship date can cost a contract. The IT budget is a fraction of one bad incident.</p>
+          <p>The Ghosxt-priced lines come to <strong>$6,500 per month</strong> for this shop (see <a href="/pricing">pricing</a> for the per-user tiers and device add-ons), before Microsoft licensing, shop-floor and connectivity work, server image backup, hardware, and CMMC remediation. The biggest mover is the per-user managed IT and security line. A single missed aerospace or medical ship date can cost a contract, and the IT budget is a fraction of one bad incident.</p>
 
           <h2>Where this fits</h2>
 
@@ -458,13 +456,13 @@
           <p>You isolate them. Legacy machine controllers that cannot be patched are the single most common serious risk we find on a shop floor, and the answer is not to replace a working machine, it is to put it on a segmented operational-technology network that cannot reach the internet or the office, with tightly controlled access for the one vendor laptop that needs it. NIST SP 800-82, the standard for industrial control system security, is built around exactly this: compensating controls and segmentation for systems you cannot harden directly. A flat network where an XP controller sits next to the accounting PC means one phishing click can reach the machine that makes your parts. Segmentation is the control that lets a 15-year-old controller keep running safely.</p>
 
           <h3>Why is manufacturing the number-one ransomware target?</h3>
-          <p>Because the economics favor the attacker. Manufacturing has been the most-targeted sector for ransomware for several years running across multiple industry reports, and the reasons are structural: downtime tolerance is near zero because a stopped line means missed customer ship dates and contract penalties, legacy operational technology is hard to patch, networks are often flat, and shops have historically under-invested in security relative to the value at risk. An attacker who can halt production knows you are under intense pressure to pay. The defense is the same stack that protects any high-value target, but applied with OT in mind: segmentation, EDR on everything that can run it, monitored email, identity hardening, and 24/7 detection that catches the intrusion before it reaches the floor.</p>
+          <p>Because the economics favor the attacker. Manufacturing is a frequent target for ransomware, and the reasons are structural: downtime tolerance is near zero because a stopped line means missed customer ship dates and contract penalties, legacy operational technology is hard to patch, networks are often flat, and shops have historically under-invested in security relative to the value at risk. An attacker who can halt production knows you are under intense pressure to pay. The defense is the same stack that protects any high-value target, but applied with OT in mind: segmentation, EDR on everything that can run it, monitored email, identity hardening, and 24/7 detection that catches the intrusion before it reaches the floor.</p>
 
           <h3>Our ERP and MES are hosted by the vendor. Do we still need our own backup?</h3>
           <p>Yes. Hosted and SaaS vendors back up their platform for their own resilience, not for your accidental deletion, a bad data import, or a compromised admin account. If someone corrupts a bill of materials or an attacker deletes production records, the vendor restores the platform, not your specific data, and rarely on the timeline a stopped line demands. Independent backup of your ERP and MES exports, your Microsoft 365, and especially your CAD and PDM vault is a separate control. The CAD vault matters most: it is often terabytes of irreplaceable engineering work, and we routinely find shops whose vault backup has never once been test-restored.</p>
 
           <h3>An engineer left and still had VPN access to the PLM and CAD vault. How bad is that?</h3>
-          <p>Bad, and common. Your CAD models, fixtures, programs, and customer drawings are the company's intellectual property, and a departing engineer with lingering VPN and vault access can copy the entire project archive on the way out. We have been called in after exactly this. The fix is named accounts, no shared logins, a documented same-day offboarding checklist that revokes VPN and PLM access the moment employment ends, and monitoring that flags a large vault export before it becomes a problem. If you cannot say with certainty that every former engineer's access is closed, that is the first assessment we would run.</p>
+          <p>Bad, and common. Your CAD models, fixtures, programs, and customer drawings are the company's intellectual property, and a departing engineer with lingering VPN and vault access can copy the entire project archive on the way out. The fix is named accounts, no shared logins, a documented same-day offboarding checklist that revokes VPN and PLM access the moment employment ends, and monitoring that flags a large vault export before it becomes a problem. If you cannot say with certainty that every former engineer's access is closed, that is the first assessment we would run.</p>
 
           <h3>Is our shop-floor firewall enough cybersecurity for a manufacturer?</h3>
           <p>No. A firewall at the internet edge does nothing about the flat network behind it, where an infected office laptop can reach a CNC controller, the ERP server, and the CAD vault on the same wire. Modern manufacturing security is segmentation plus identity: an operational-technology network separated from the office, MFA on every account, EDR on every device that can run it, monitored email security, and 24/7 detection and response. The edge firewall is one control among many, and on a flat shop network it is the one that gives the most false comfort.</p>

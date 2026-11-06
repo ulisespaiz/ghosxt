@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#ffffff" />
     <title>May 2026 Patch Tuesday: What to Patch This Week | Ghosxt</title>
-    <meta name="description" content="Microsoft's May 2026 Patch Tuesday fixed about 120 flaws, 17 critical. The Word flaw (CVE-2026-40361) and DNS flaw (CVE-2026-41096) top the list." />
+    <meta name="description" content="Microsoft's May 2026 Patch Tuesday included critical Word and Windows DNS fixes. The Word flaw (CVE-2026-40361) and DNS flaw (CVE-2026-41096) top the list." />
     <link rel="canonical" href="https://ghosxt.com/blog/may-2026-patch-tuesday-windows-dns-word-rce-smb" />
     <link rel="alternate" type="application/rss+xml" title="Ghosxt Blog" href="https://ghosxt.com/feed.xml" />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://ghosxt.com/blog/may-2026-patch-tuesday-windows-dns-word-rce-smb" />
     <meta property="og:title" content="May 2026 Patch Tuesday: What to Patch This Week | Ghosxt" />
-    <meta property="og:description" content="120 fixes, 17 critical, no zero-days. The Word RCE that fires via Preview Pane and the unauthenticated Windows DNS Client RCE are the two SMBs should patch first." />
+    <meta property="og:description" content="Two critical fixes lead the month. The Word RCE that fires via Preview Pane and the unauthenticated Windows DNS Client RCE are the two SMBs should patch first." />
     <meta property="og:image" content="https://ghosxt.com/assets/img/og/blog-may-2026-patch-tuesday-windows-dns-word-rce-smb.png" />
     <meta property="og:site_name" content="Ghosxt" />
     <meta property="article:published_time" content="2026-05-14" />
@@ -19,7 +19,7 @@
     <meta name="robots" content="index, follow" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="May 2026 Patch Tuesday: What to Patch This Week | Ghosxt" />
-    <meta name="twitter:description" content="Microsoft fixed about 120 flaws this month, 17 critical, no zero-days. Here's what an SMB should patch first." />
+    <meta name="twitter:description" content="Two of the critical fixes in Microsoft's May Patch Tuesday are the ones small businesses should patch first." />
     <meta name="twitter:image" content="https://ghosxt.com/assets/img/og/blog-may-2026-patch-tuesday-windows-dns-word-rce-smb.png" />
     <link rel="icon" href="../assets/img/favicon.ico" sizes="any" />
     <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml" />
@@ -43,12 +43,12 @@
             "@type": "BlogPosting",
             "mainEntityOfPage": { "@type": "WebPage", "@id": "https://ghosxt.com/blog/may-2026-patch-tuesday-windows-dns-word-rce-smb" },
             "headline": "May 2026 Patch Tuesday: What an SMB Should Patch This Week",
-            "description": "Microsoft's May 2026 Patch Tuesday fixed about 120 flaws, 17 critical, with no zero-days. The Microsoft Word use-after-free (CVE-2026-40361, CVSS 8.4) and the Windows DNS Client heap overflow (CVE-2026-41096) are the two small businesses should patch first. Plain-talk explainer on what to do this week from an engineer with DoD infrastructure experience.",
+            "description": "Microsoft's May 2026 Patch Tuesday included critical fixes across Windows and Office. The Microsoft Word use-after-free (CVE-2026-40361, CVSS 8.4) and the Windows DNS Client heap overflow (CVE-2026-41096) are the two small businesses should patch first. Plain-talk explainer on what to do this week from an engineer with DoD infrastructure experience.",
             "image": "https://ghosxt.com/assets/img/og/blog-may-2026-patch-tuesday-windows-dns-word-rce-smb.png",
             "author": { "@type": "Person", "name": "Ulises Paiz", "url": "https://ghosxt.com/about" },
             "publisher": { "@type": "Organization", "name": "Ghosxt", "logo": { "@type": "ImageObject", "url": "https://ghosxt.com/assets/img/ghosxt-logo-160.webp" } },
             "datePublished": "2026-05-14",
-            "dateModified": "2026-09-28",
+            "dateModified": "2026-11-06",
             "articleSection": "Cybersecurity",
             "keywords": "Microsoft Patch Tuesday May 2026, CVE-2026-40361, CVE-2026-41096, CVE-2026-35421, Word remote code execution, Windows DNS Client, NetLogon, Windows GDI, Outlook Preview Pane, MDASH, Anthropic Mythos, small business patching, patch management, mean time to patch, SMB cybersecurity"
           },
@@ -76,7 +76,7 @@
                 "name": "Are there any zero-days in May 2026 Patch Tuesday?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "No. Microsoft reported no actively exploited zero-day vulnerabilities in this month's release. That is the first zero-day-free Patch Tuesday in a while and is good news, with caveats: working exploits for several of the critical bugs will likely surface in the days and weeks after the patches drop, since the patches themselves often hint at the bug class. Patch on the new cadence regardless."
+                  "text": "Yes, one. Microsoft's update guide marks the Exchange Server spoofing flaw CVE-2026-42897 as exploited. See our write-up of the Exchange zero-day and the Microsoft update guide entry for CVE-2026-42897. Patch on the new cadence regardless, since working exploits for the critical bugs often surface within days of the patches dropping."
                 }
               },
               {
@@ -84,7 +84,7 @@
                 "name": "How many vulnerabilities did Microsoft fix in May 2026?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Approximately 120 CVEs. Of those, 17 are rated Critical (14 remote code execution, 2 elevation of privilege, 1 information disclosure), and the rest are rated Important, Moderate, or Low. Microsoft's MDASH multi-model agentic scanning harness was credited with discovering 16 of the fixed vulnerabilities."
+                  "text": "Microsoft's full list, with counts by severity, is in the MSRC release notes. The critical Word, DNS Client and GDI fixes are covered above. Microsoft's MDASH multi-model agentic scanning harness was credited with discovering some of the fixed vulnerabilities."
                 }
               },
               {
@@ -92,7 +92,7 @@
                 "name": "What is MDASH and why does it matter?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "MDASH is Microsoft's multi-model agentic scanning harness: more than 100 specialized AI agents that discover, debate, and prove exploitable bugs across Microsoft's own code. It is Microsoft's analog to Anthropic's Claude Mythos. The reason it matters for a small business is the rate: between MDASH on the Microsoft side and Mythos on the third-party side, vulnerability disclosure volume is climbing fast enough that any patching cadence slower than 'days' is going to fall behind."
+                  "text": "MDASH is Microsoft's multi-model agentic scanning harness: specialized AI agents that discover, debate, and prove exploitable bugs across Microsoft's own code. It is Microsoft's analog to Anthropic's Claude Mythos. The reason it matters for a small business is the rate: between MDASH on the Microsoft side and Mythos on the third-party side, vulnerability disclosure volume is climbing fast enough that any patching cadence slower than \"days\" is going to fall behind."
                 }
               },
               {
@@ -280,12 +280,12 @@
         <div class="container">
           <aside class="blog-post-quickfix" aria-label="Summary and priorities for this week">
             <span class="quickfix-label">TL;DR: The two CVEs to patch first</span>
-            <h2>120 fixes, 17 critical, no zero-days. Two of them deserve your full attention this week.</h2>
+            <h2>Two of this month's fixes deserve your full attention this week.</h2>
             <ul>
               <li><strong>CVE-2026-40361</strong>: Microsoft Word use-after-free, CVSS 8.4. Critical RCE. Fires through the Outlook Preview Pane, so the user does not have to open the attachment. Anyone with a mailbox is exposed.</li>
               <li><strong>CVE-2026-41096</strong>: Windows DNS Client heap-based buffer overflow. Critical RCE. <em>Unauthenticated</em> attacker can take over a target by responding to a DNS query. Every Windows machine resolves DNS.</li>
               <li><strong>CVE-2026-35421</strong>: Windows GDI heap overflow, CVSS 7.8. Critical RCE in the graphics subsystem. Sits behind every Office, PDF reader, and browser document preview.</li>
-              <li><strong>Zero-days this month: zero.</strong> First clean-deck Patch Tuesday in a while. The patches still get reverse-engineered; the window between patch release and proof-of-concept is short.</li>
+              <li><strong>Exploited this month:</strong> Microsoft's update guide marks the <a href="/blog/exchange-server-zero-day-cve-2026-42897-may-2026-smb">Exchange Server spoofing flaw CVE-2026-42897</a> as exploited. The patches still get reverse-engineered; the window between patch release and proof-of-concept is short.</li>
             </ul>
             <p>What to do this week:</p>
             <ol>
@@ -296,21 +296,20 @@
             </ol>
           </aside>
 
-          <p>Yesterday was Microsoft's May 2026 Patch Tuesday. About 120 CVEs got fixed, 17 of them rated Critical, no zero-days this month. The release itself is the kind of thing that used to be a Monday-morning newsletter item. The reason it deserves its own post in 2026 is that the cadence I wrote about in the <a href="/blog/claude-mythos-firefox-271-vulnerabilities-patch-cadence-smb">Claude Mythos post</a> last week is now visibly playing out: a large share of this month's fixes were found by Microsoft's own MDASH agentic scanner, the rest are showing up faster than they used to, and the realistic window between patch release and working exploit is days, not months.</p>
+          <p>Yesterday was Microsoft's May 2026 Patch Tuesday. A long list of CVEs got fixed, several of them rated Critical (full counts in the <a href="https://msrc.microsoft.com/update-guide/releaseNote/2026-May" target="_blank" rel="noopener noreferrer">MSRC release notes</a>). The release itself is the kind of thing that used to be a Monday-morning newsletter item. The reason it deserves its own post in 2026 is that the cadence I wrote about in the <a href="/blog/claude-mythos-firefox-271-vulnerabilities-patch-cadence-smb">Claude Mythos post</a> last week is now visibly playing out: some of this month's fixes were found by Microsoft's own MDASH agentic scanner, the rest are showing up faster than they used to, and the realistic window between patch release and working exploit is days, not months.</p>
 
           <p>I will keep this short and operational. Here is what an SMB owner needs to know, what to push out this week, and why these specific CVEs deserve the front of the line.</p>
 
           <h2>The shape of this month</h2>
 
           <ul>
-            <li><strong>Roughly 120 CVEs</strong> addressed across Windows, Office, Azure, and supporting components.</li>
-            <li><strong>17 Critical</strong>: 14 remote code execution, 2 elevation of privilege, 1 information disclosure.</li>
-            <li><strong>Zero zero-days</strong>: nothing in this batch was being actively exploited at the time of disclosure.</li>
+            <li><strong>Full CVE list and severity counts</strong> are in the <a href="https://msrc.microsoft.com/update-guide/releaseNote/2026-May" target="_blank" rel="noopener noreferrer">MSRC release notes</a>.</li>
+            <li><strong>Critical fixes</strong> include remote code execution flaws in Word, the Windows DNS Client and Windows GDI.</li>
+            <li><strong>Exploited</strong>: Microsoft's update guide marks the <a href="/blog/exchange-server-zero-day-cve-2026-42897-may-2026-smb">Exchange Server spoofing flaw CVE-2026-42897</a> as exploited.</li>
             <li><strong>16 CVEs credited to MDASH</strong>, Microsoft's multi-model agentic scanner. More on that below.</li>
             <li><strong>Several more credited indirectly to Anthropic's Claude Mythos</strong> via Palo Alto Networks' research, which has been using Mythos to triage Microsoft attack surface.</li>
           </ul>
 
-          <p>Microsoft's MSRC blog described the release as sitting "on the larger side of a hotpatch month," with "a greater share of the issues addressed [...] discovered by Microsoft." Translation: the AI-assisted scanning programs at Microsoft are now contributing meaningful chunks of every monthly release, and the public Patch Tuesday list is going to get longer on average from here.</p>
 
           <h2>The CVEs that actually matter for a small business</h2>
 
@@ -343,15 +342,15 @@
 
           <h2>MDASH: the new defender in the loop</h2>
 
-          <p>The other story this month is who found the bugs. Microsoft introduced <strong>MDASH</strong>, a multi-model agentic scanning harness that orchestrates more than 100 specialized AI agents across an ensemble of frontier and distilled models to discover, debate, and prove exploitable bugs end-to-end. Microsoft credited MDASH with 16 of this month's Patch Tuesday CVEs.</p>
+          <p>The other story this month is who found the bugs. Microsoft introduced <strong>MDASH</strong>, a multi-model agentic scanning harness that orchestrates specialized AI agents across an ensemble of frontier and distilled models to discover, debate, and prove exploitable bugs end-to-end. Microsoft credited MDASH with some of this month's Patch Tuesday CVEs.</p>
 
-          <p>The shorthand: <strong>MDASH is Microsoft's version of Anthropic's Claude Mythos.</strong> Mythos showed up in the <a href="/blog/claude-mythos-firefox-271-vulnerabilities-patch-cadence-smb">Firefox audit</a> last month and surfaced 271 sec-rated bugs in a single run. MDASH is the same idea applied to Microsoft's own codebase by Microsoft's own team. The implication is the same as it was for Mozilla: vendors are now hooked up to AI scanners that find more bugs per release than human reviewers do, and the public Patch Tuesday volume is going to climb on average for the foreseeable future.</p>
+          <p>The shorthand: <strong>MDASH is Microsoft's version of Anthropic's Claude Mythos.</strong> Mythos showed up in the <a href="/blog/claude-mythos-firefox-271-vulnerabilities-patch-cadence-smb">Firefox audit</a> last month and surfaced a large batch of security-rated bugs in a single run. MDASH is the same idea applied to Microsoft's own codebase by Microsoft's own team. The implication is the same as it was for Mozilla: vendors are now hooked up to AI scanners that find more bugs per release than human reviewers do, and the public Patch Tuesday volume is going to climb on average for the foreseeable future.</p>
 
-          <p>This is good news for defenders, with one caveat. The patches still ship publicly. As soon as they ship, a second set of researchers reverse-engineers them and writes proof-of-concept exploits for the half-dozen bugs that look most dangerous. The window between "Patch Tuesday released" and "working exploit on a public repo" used to be weeks. It has been shrinking. In several recent cases it has been measured in hours. The defender that pushes the patch in 24 to 72 hours is well ahead. The defender that pushes it in 30 to 60 days is exposed for almost all of that window.</p>
+          <p>The patches still ship publicly. As soon as they ship, a second set of researchers reverse-engineers them and writes proof-of-concept exploits for the half-dozen bugs that look most dangerous. The window between "Patch Tuesday released" and "working exploit on a public repo" used to be weeks. It has been shrinking. In several recent cases it has been measured in hours. The defender that pushes the patch in 24 to 72 hours is well ahead. The defender that pushes it in 30 to 60 days is exposed for almost all of that window.</p>
 
-          <h2>What "no zero-days" means and what it does not</h2>
+          <h2>Exploited flaws and the patch-to-exploit window</h2>
 
-          <p>It is genuinely a quieter month. No actively exploited zero-day means no attacker had a head start. That is unusual lately and worth noting. What it does not mean is that the bugs in this batch are safe to wait on. Several of them are the kind of thing that turns into a working public exploit within days of patch release, particularly the Office RCEs that fire through Preview Pane. The lesson from the last few years is that "no zero-days" tells you about the past two weeks, not the next two.</p>
+          <p>The Exchange flaw is the one marked as exploited, so patch or mitigate it first if you run on-prem Exchange. For the rest of the batch, the absence of an exploited mark does not mean the bugs are safe to wait on. Several of them are the kind of thing that turns into a working public exploit within days of patch release, particularly the Office RCEs that fire through Preview Pane. The lesson from the last few years is that an unexploited mark tells you about the past two weeks, not the next two.</p>
 
           <h2>What to do this week, in order</h2>
 
@@ -386,13 +385,13 @@
           <p>Two are tied for first place for a typical small business. CVE-2026-40361 is a critical use-after-free in Microsoft Word with a CVSS of 8.4 that can be triggered through the Outlook Preview Pane, meaning a user does not have to open the attachment for the exploit to fire. CVE-2026-41096 is a heap-based buffer overflow in the Windows DNS Client that allows an unauthenticated attacker to take over a target by sending a crafted DNS response. Office is everywhere; DNS resolution happens on every machine continuously. Both should be patched in the next 72 hours.</p>
 
           <h3>Are there any zero-days in May 2026 Patch Tuesday?</h3>
-          <p>No. Microsoft reported no actively exploited zero-day vulnerabilities in this month's release. That is the first zero-day-free Patch Tuesday in a while and is good news, with caveats: working exploits for several of the critical bugs will likely surface in the days and weeks after the patches drop, since the patches themselves often hint at the bug class. Patch on the new cadence regardless.</p>
+          <p>Yes, one. Microsoft's update guide marks the Exchange Server spoofing flaw CVE-2026-42897 as exploited. See our <a href="/blog/exchange-server-zero-day-cve-2026-42897-may-2026-smb">write-up of the Exchange zero-day</a> and the <a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42897" target="_blank" rel="noopener noreferrer">Microsoft update guide entry for CVE-2026-42897</a>. Patch on the new cadence regardless, since working exploits for the critical bugs often surface within days of the patches dropping.</p>
 
           <h3>How many vulnerabilities did Microsoft fix in May 2026?</h3>
-          <p>Approximately 120 CVEs. Of those, 17 are rated Critical (14 remote code execution, 2 elevation of privilege, 1 information disclosure), and the rest are rated Important, Moderate, or Low. Microsoft's MDASH multi-model agentic scanning harness was credited with discovering 16 of the fixed vulnerabilities.</p>
+          <p>Microsoft's full list, with counts by severity, is in the <a href="https://msrc.microsoft.com/update-guide/releaseNote/2026-May" target="_blank" rel="noopener noreferrer">MSRC release notes</a>. The critical Word, DNS Client and GDI fixes are covered above. Microsoft's MDASH multi-model agentic scanning harness was credited with discovering some of the fixed vulnerabilities.</p>
 
           <h3>What is MDASH and why does it matter?</h3>
-          <p>MDASH is Microsoft's multi-model agentic scanning harness: more than 100 specialized AI agents that discover, debate, and prove exploitable bugs across Microsoft's own code. It is Microsoft's analog to <a href="/blog/claude-mythos-firefox-271-vulnerabilities-patch-cadence-smb">Anthropic's Claude Mythos</a>. The reason it matters for a small business is the rate: between MDASH on the Microsoft side and Mythos on the third-party side, vulnerability disclosure volume is climbing fast enough that any patching cadence slower than "days" is going to fall behind.</p>
+          <p>MDASH is Microsoft's multi-model agentic scanning harness: specialized AI agents that discover, debate, and prove exploitable bugs across Microsoft's own code. It is Microsoft's analog to <a href="/blog/claude-mythos-firefox-271-vulnerabilities-patch-cadence-smb">Anthropic's Claude Mythos</a>. The reason it matters for a small business is the rate: between MDASH on the Microsoft side and Mythos on the third-party side, vulnerability disclosure volume is climbing fast enough that any patching cadence slower than "days" is going to fall behind.</p>
 
           <h3>How fast does a small business need to patch this month's fixes?</h3>
           <p>Targets: 24 to 72 hours for endpoints to apply the cumulative update with a reboot. 7 days for servers, scheduled around a maintenance window. Same week for any critical RCE on internet-reachable infrastructure. If your fleet is on auto-patch through an endpoint management tool, this is happening already and your job is verification. If it is not, this is the project to start on Monday.</p>

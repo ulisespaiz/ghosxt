@@ -19,7 +19,7 @@
     <meta name="robots" content="index, follow" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="PG&amp;E PSPS IT Continuity on the Central Coast" />
-    <meta name="twitter:description" content="Practical 48-hour PSPS playbook for small businesses across the Central Coast and South Bay." />
+    <meta name="twitter:description" content="Practical pre-outage PSPS playbook for small businesses across the Central Coast and South Bay." />
     <meta name="twitter:image" content="https://ghosxt.com/assets/img/og/blog-pge-psps-it-continuity-plan-central-coast.png" />
     <link rel="icon" href="../assets/img/favicon.ico" sizes="any" />
     <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml" />
@@ -43,12 +43,12 @@
             "@type": "BlogPosting",
             "mainEntityOfPage": { "@type": "WebPage", "@id": "https://ghosxt.com/blog/pge-psps-it-continuity-plan-central-coast" },
             "headline": "PG&E PSPS Preparedness: An IT Continuity Plan for Central Coast and South Bay Small Businesses",
-            "description": "A practical IT continuity plan for PG&E Public Safety Power Shutoff events on the Central Coast and South Bay. Covers the four-layer continuity stack (power, network, cloud-first apps, people), UPS and generator sizing for SMB offices, cellular failover, the 48-hour notice playbook, and the specific risk profile for Monterey, Santa Cruz, San Benito, and Santa Clara counties.",
+            "description": "A practical IT continuity plan for PG&E Public Safety Power Shutoff events on the Central Coast and South Bay. Covers the four-layer continuity stack (power, network, cloud-first apps, people), UPS and generator sizing for SMB offices, cellular failover, the pre-outage notice playbook, and the specific risk profile for Monterey, Santa Cruz, San Benito, and Santa Clara counties.",
             "image": "https://ghosxt.com/assets/img/og/blog-pge-psps-it-continuity-plan-central-coast.png",
             "author": { "@type": "Person", "name": "Ulises Paiz", "url": "https://ghosxt.com/about" },
             "publisher": { "@type": "Organization", "name": "Ghosxt", "logo": { "@type": "ImageObject", "url": "https://ghosxt.com/assets/img/ghosxt-logo-160.webp" } },
             "datePublished": "2026-05-16",
-            "dateModified": "2026-05-16",
+            "dateModified": "2026-11-06",
             "articleSection": "Industry IT",
             "keywords": "PG&E PSPS small business, Public Safety Power Shutoff IT plan, business continuity Central Coast, Santa Cruz County PSPS, Monterey County PSPS, Santa Clara County PSPS, San Benito County PSPS, wildfire IT preparedness California, UPS battery backup business, generator sizing office, cellular failover SMB, cloud-first business continuity"
           },
@@ -68,7 +68,7 @@
                 "name": "What is a PG&E PSPS event and why does it affect my business?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "PSPS stands for Public Safety Power Shutoff. PG&E proactively cuts power in areas at high wildfire risk when conditions (high winds, low humidity, dry fuel) make energized power lines a significant ignition threat. Started in 2019, PSPS events have happened every fall since. They typically last 24 to 72 hours but can extend longer. If your business or your employees' homes are in a Tier 2 or Tier 3 High Fire Threat District, the power can be shut off with as little as 48 hours of notice."
+                  "text": "PSPS stands for Public Safety Power Shutoff. PG&E proactively cuts power in areas at high wildfire risk when conditions (high winds, low humidity, dry fuel) make energized power lines a significant ignition threat. How long an event lasts depends on the weather and on how quickly PG&E can inspect and re-energize lines. If your business or your employees' homes are in a Tier 2 or Tier 3 High Fire Threat District, the power can be shut off with limited notice."
                 }
               },
               {
@@ -84,7 +84,7 @@
                 "name": "What's the minimum IT continuity setup for a small business in PSPS country?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Four layers. Power: a UPS on every critical box plus a generator if you have an on-prem server. Network: cellular failover (Cradlepoint, Peplink, or a configured LTE/5G hotspot) for the office firewall, and Wi-Fi hotspot capability for remote workers. Cloud-first apps: Microsoft 365 or Google Workspace for email, files, and collaboration so the office going dark does not mean the business going dark. People: a written communication plan and a designated backup work location. Total cost for a 10-person business is typically $1,500 to $5,000 one-time plus the cellular failover monthly."
+                  "text": "Four layers. Power: a UPS on every critical box plus a generator if you have an on-prem server. Network: cellular failover (Cradlepoint, Peplink, or a configured LTE/5G hotspot) for the office firewall, and Wi-Fi hotspot capability for remote workers. Cloud-first apps: Microsoft 365 or Google Workspace for email, files, and collaboration so the office going dark does not mean the business going dark. People: a written communication plan and a designated backup work location. Total cost depends mostly on whether you already run cloud-first, so get current quotes for the hardware you need."
                 }
               },
               {
@@ -92,7 +92,7 @@
                 "name": "How much UPS battery time do I actually need?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "For an office where the goal is graceful shutdown and a few minutes of warning, 15 to 30 minutes per critical device is the floor. For an office where you want to keep working through a 1 to 2 hour outage, 2 hours of runtime is the target, which means a 1500 to 2000 VA UPS for a workstation and monitor or a 3000 VA unit for a small server. For PSPS events that last 24 to 72 hours, UPS alone is not the answer; you need either a generator or a cloud-first architecture that lets the office close while the business continues."
+                  "text": "For an office where the goal is graceful shutdown and a few minutes of warning, 15 to 30 minutes per critical device is the floor. For an office where you want to keep working through a 1 to 2 hour outage, 2 hours of runtime is the target, which means a 1500 to 2000 VA UPS for a workstation and monitor or a 3000 VA unit for a small server. For multi-day PSPS events, UPS alone is not the answer; you need either a generator or a cloud-first architecture that lets the office close while the business continues."
                 }
               },
               {
@@ -100,7 +100,7 @@
                 "name": "Do I need a generator?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "If you have an on-prem server, line-of-business equipment that does not run on battery, or refrigeration / cold-chain operations (produce, packing, ag, food service, healthcare), yes. A portable generator in the 5 to 8 kW range runs $800 to $1,800 and covers a typical small office. A natural-gas standby generator in the 14 to 22 kW range that auto-starts on power loss runs $5,000 to $12,000 installed and is the right answer for any business that cannot afford a 72-hour outage. If your business runs entirely on laptops, cloud apps, and cellular, you can usually skip the generator."
+                  "text": "If you have an on-prem server, line-of-business equipment that does not run on battery, or refrigeration / cold-chain operations (produce, packing, ag, food service, healthcare), yes. A portable generator in the 5 to 8 kW range covers a typical small office. A natural-gas standby generator in the 14 to 22 kW range that auto-starts on power loss is the right answer for any business that cannot afford a 72-hour outage. If your business runs entirely on laptops, cloud apps, and cellular, you can usually skip the generator."
                 }
               }
             ]
@@ -287,30 +287,30 @@
               <li><strong>Cloud-first apps:</strong> Microsoft 365 or Google Workspace for email, files, and collaboration. The office going dark should not mean the business going dark.</li>
               <li><strong>People:</strong> A written communication plan, a designated backup work location, and a roster of which employees live in PSPS-exposed areas. Practice the plan once a year, ideally in August.</li>
             </ul>
-            <p>Realistic total cost for a 10-person business: <strong>$1,500 to $5,000 one-time</strong> plus the cellular failover monthly. Compared to the cost of a 48-hour outage (lost revenue, missed customer commitments, refrigeration loss, payroll for staff that cannot work), the math is straightforward.</p>
+            <p>Total cost depends mostly on whether you already run cloud-first, so get current quotes for the hardware you need. Compared to the cost of a multi-day outage (lost revenue, missed customer commitments, refrigeration loss, payroll for staff that cannot work), the math is straightforward.</p>
           </aside>
 
           <p>Public Safety Power Shutoff events are part of running a business on the Central Coast and in the South Bay now. PG&amp;E began the program in 2019 after the Camp Fire and the 2017 North Bay fires made it clear that energized power lines in dry, windy conditions had become a major wildfire ignition risk. The trade is straightforward: cut the power proactively, lose a few days of normal operations, prevent the fire. Five years in, PSPS events are an annual fact of life for any business operating in PG&amp;E territory, especially in the mountains and foothills.</p>
 
-          <p>This article is the operational version of the conversation I have with every new client whose office or staff sit inside a Tier 2 or Tier 3 High Fire Threat District. The plan is not complicated. It does require deciding on it in advance, because the 48-hour notice window is not enough time to design a continuity plan from scratch. Below is the four-layer stack, what each layer costs, and how to make the decisions for a small business in Salinas, Monterey, Santa Cruz, San Jose, Gilroy, Hollister, or anywhere else on the Central Coast or South Bay.</p>
+          <p>This article is the operational version of the conversation to have if your office or staff sit inside a Tier 2 or Tier 3 High Fire Threat District. The plan is not complicated. It does require deciding on it in advance, because the notice window may not be enough time to design a continuity plan from scratch. Below is the four-layer stack, what each layer involves, and how to make the decisions for a small business in Salinas, Monterey, Santa Cruz, San Jose, Gilroy, Hollister, or anywhere else on the Central Coast or South Bay.</p>
 
           <h2>What PSPS actually is, in plain English</h2>
 
-          <p>A Public Safety Power Shutoff is a preventive de-energization. When PG&amp;E's meteorologists and fire-risk models detect a combination of high winds (typically sustained above ~25 mph with gusts higher), low humidity (below ~20 percent), and dry vegetation in a specific service area, PG&amp;E can choose to shut off power to that area to prevent a fire ignition from a downed or sparking line. The shutoff is targeted to the affected circuits, not the entire region. A business in downtown Salinas might keep power while a business in Carmel Valley loses it on the same day.</p>
+          <p>A Public Safety Power Shutoff is a preventive de-energization. When PG&amp;E's meteorologists and fire-risk models detect a combination of high winds, low humidity, and dry vegetation in a specific service area, PG&amp;E can choose to shut off power to that area to prevent a fire ignition from a downed or sparking line. The shutoff is targeted to the affected circuits, not the entire region. A business in downtown Salinas might keep power while a business in Carmel Valley loses it on the same day.</p>
 
           <p>The relevant facts for planning:</p>
 
           <ul>
-            <li><strong>Notice:</strong> PG&amp;E targets 48 hours of advance notice. In practice, notice has been as short as 12 hours during fast-moving weather events.</li>
-            <li><strong>Duration:</strong> typically 24 to 72 hours. Has extended to a week in extreme cases. Power is restored only after PG&amp;E physically inspects the lines, which takes longer in hard-to-reach mountain areas.</li>
-            <li><strong>Affected areas:</strong> Tier 2 and Tier 3 High Fire Threat Districts. <a href="https://www.cpuc.ca.gov/firethreatmaps" target="_blank" rel="noopener noreferrer">California Public Utilities Commission publishes the official map</a>. <a href="https://www.pge.com/en/outages-and-safety/outages/maps-and-alerts/psps-map-and-alerts.html" target="_blank" rel="noopener noreferrer">PG&amp;E's PSPS event map</a> shows live and recent events.</li>
+            <li><strong>Notice:</strong> PG&amp;E aims to give advance notice, but notice can be short during fast-moving weather events.</li>
+            <li><strong>Duration:</strong> it varies with the weather. Power is restored only after PG&amp;E physically inspects the lines, which takes longer in hard-to-reach mountain areas.</li>
+            <li><strong>Affected areas:</strong> Tier 2 and Tier 3 High Fire Threat Districts. The California Public Utilities Commission publishes the official fire-threat map. <a href="https://www.pge.com/en/outages-and-safety/safety/community-wildfire-safety-program/public-safety-power-shutoffs.html" target="_blank" rel="noopener noreferrer">PG&amp;E's PSPS event map</a> shows live and recent events.</li>
             <li><strong>Frequency:</strong> events have happened every fall since 2019. Some years see multiple events; some years one. Spring events are rarer but not unknown.</li>
             <li><strong>Notification:</strong> PG&amp;E sends notifications to the billing email and phone on file. If your business address is not on PG&amp;E's notification list, you will hear about the event from the news, not from PG&amp;E.</li>
           </ul>
 
           <h2>Who's actually exposed on the Central Coast and South Bay</h2>
 
-          <p>The misconception I see most often is that PSPS is a Sierra Nevada problem and that the Monterey Bay is too coastal to worry about it. The fire-threat map says otherwise. The specific local exposure:</p>
+          <p>A common misconception is that PSPS is a Sierra Nevada problem and that the Monterey Bay is too coastal to worry about it. The fire-threat map says otherwise. The specific local exposure:</p>
 
           <h3>Santa Cruz County</h3>
 
@@ -352,8 +352,8 @@
           <p>The goal of a UPS is to give the box enough runtime to either (a) shut down gracefully if the outage will be long, or (b) ride through a brief outage and keep working. For PSPS events, "brief" is the wrong target; the goal is graceful shutdown plus enough warning for users to save their work.</p>
 
           <ul>
-            <li><strong>Per workstation:</strong> 850 to 1500 VA UPS. About $100 to $250. Gives 15 to 45 minutes of runtime for a typical desktop and monitor. Brands: APC, CyberPower, Eaton.</li>
-            <li><strong>Per server:</strong> 1500 to 3000 VA UPS with extended battery option if available. About $400 to $1,200. Critical: configure the UPS to signal a graceful shutdown to the server when battery hits 20 percent. A server that dies during an unceremonious power loss can corrupt the filesystem.</li>
+            <li><strong>Per workstation:</strong> 850 to 1500 VA UPS. Runtime depends on the load and the battery, so check the manufacturer's runtime chart for your desktop and monitor. Brands: APC, CyberPower, Eaton.</li>
+            <li><strong>Per server:</strong> 1500 to 3000 VA UPS with extended battery option if available. Critical: configure the UPS to signal a graceful shutdown to the server when battery hits 20 percent. A server that dies during an unceremonious power loss can corrupt the filesystem.</li>
             <li><strong>Per firewall / switch / wireless access point:</strong> these often draw 30-60 watts each and can run for hours on a single 1500 VA UPS. Put the firewall, the core switch, and the wireless controller on a UPS together so the network stays up during the brief gap before the generator kicks in (or stays up entirely if you skip the generator).</li>
             <li><strong>Voice systems:</strong> if you have a desk-phone VoIP system, the phones and the switch they connect to need UPS coverage. Most modern small businesses have shifted to softphones (Microsoft Teams Phone, Zoom Phone, RingCentral on the laptop), which solves this problem because the phone is wherever the laptop is.</li>
           </ul>
@@ -363,9 +363,9 @@
           <p>If you have an on-prem server, line-of-business equipment that cannot run on battery, refrigeration, or cold-chain operations, a generator is the practical answer for PSPS events.</p>
 
           <ul>
-            <li><strong>Portable generator (5-8 kW):</strong> $800 to $1,800. Runs on gasoline or propane. Manual start, must be wheeled out and connected via an extension cord or a transfer switch. Right for a small office that wants to keep one or two critical circuits running.</li>
-            <li><strong>Standby generator (14-22 kW):</strong> $5,000 to $12,000 installed. Runs on natural gas or propane. Auto-starts on power loss, switches over within 10 to 30 seconds via a transfer switch. Right for any business that cannot afford to be without power for 72 hours and is willing to invest once.</li>
-            <li><strong>Battery-based whole-building (Tesla Powerwall, Enphase, Generac PWRcell):</strong> $15,000 to $40,000 installed depending on capacity. Runs silently, integrates with solar. Right for businesses that want a more permanent continuity solution and have solar capacity to charge it.</li>
+            <li><strong>Portable generator (5-8 kW):</strong> Runs on gasoline or propane. Manual start, must be wheeled out and connected via an extension cord or a transfer switch. Right for a small office that wants to keep one or two critical circuits running.</li>
+            <li><strong>Standby generator (14-22 kW):</strong> Installed by a licensed electrician. Runs on natural gas or propane. Auto-starts on power loss and switches over via a transfer switch. Right for any business that cannot afford to be without power for 72 hours and is willing to invest once.</li>
+            <li><strong>Battery-based whole-building (Tesla Powerwall, Enphase, Generac PWRcell):</strong> Installed, sized to your load. Runs silently, integrates with solar. Right for businesses that want a more permanent continuity solution and have solar capacity to charge it.</li>
           </ul>
 
           <p>Sizing rule of thumb: add up the wattage of everything you want to keep running (server, firewall, switch, a few workstations, lights, refrigeration). A 14 kW standby generator handles roughly 50 to 70 amps of load, which covers a small office with refrigeration. A 22 kW unit handles 80 to 90 amps and covers a medium office with light commercial refrigeration.</p>
@@ -376,17 +376,17 @@
 
           <h4>Cellular failover on the firewall</h4>
 
-          <p>Modern small-business firewalls (Sophos, Fortinet, SonicWall, Meraki, Ubiquiti UDM) support cellular failover via a USB modem or a dedicated cellular WAN appliance. When the primary internet connection drops, the firewall automatically switches to cellular and traffic keeps flowing. Cost: $200 to $600 for the modem, plus $30 to $100 per month for the cellular data plan. Brands: Cradlepoint, Peplink, Pepwave, or the modem option that ships with your specific firewall.</p>
+          <p>Modern small-business firewalls (Sophos, Fortinet, SonicWall, Meraki, Ubiquiti UDM) support cellular failover via a USB modem or a dedicated cellular WAN appliance. When the primary internet connection drops, the firewall automatically switches to cellular and traffic keeps flowing. Cost is the modem plus a monthly cellular data plan; get current quotes from your carrier. Brands: Cradlepoint, Peplink, Pepwave, or the modem option that ships with your specific firewall.</p>
 
-          <p>Critical: test the failover before you need it. The most common failure mode I see in the field is a cellular failover that was installed three years ago, has a deactivated SIM, and only gets discovered when the primary internet drops.</p>
+          <p>Critical: test the failover before you need it. A common failure mode is a cellular failover that was installed three years ago, has a deactivated SIM, and only gets discovered when the primary internet drops.</p>
 
           <h4>Mobile hotspots for remote workers</h4>
 
-          <p>Any employee in a PSPS zone needs the ability to keep working from a coffee shop, a relative's house, or their car if needed. A 5G/LTE hotspot (Verizon Jetpack, T-Mobile 5G Home Internet, AT&amp;T Nighthawk) is $200 to $400 one-time and $30 to $60 per month. For 5 remote workers, that is $1,000 to $2,000 one-time and $150 to $300 per month for the data plans. Most small businesses do not pre-provision these; they should.</p>
+          <p>Any employee in a PSPS zone needs the ability to keep working from a coffee shop, a relative's house, or their car if needed. A 5G/LTE hotspot (Verizon Jetpack, T-Mobile 5G Home Internet, AT&amp;T Nighthawk) is a one-time hardware purchase plus a monthly data plan, so check your carrier's current pricing. Most small businesses do not pre-provision these; they should.</p>
 
           <h4>Backup ISP</h4>
 
-          <p>If your business depends on internet uptime more than a typical office does (anything cloud-first, anything customer-facing, any e-commerce, any VoIP-heavy operation), consider a second ISP from a different infrastructure. Fixed wireless (Razzolink on the Central Coast, Etheric in some areas), Starlink for $99 to $250 per month, or a second wireline provider on a different rack and route. The firewall handles the failover automatically once both connections are configured.</p>
+          <p>If your business depends on internet uptime more than a typical office does (anything cloud-first, anything customer-facing, any e-commerce, any VoIP-heavy operation), consider a second ISP from a different infrastructure. Fixed wireless (Razzolink on the Central Coast, Etheric in some areas), Starlink, or a second wireline provider on a different rack and route. The firewall handles the failover automatically once both connections are configured.</p>
 
           <h3>Layer 3: Cloud-first applications</h3>
 
@@ -422,16 +422,16 @@
 
           <h4>Annual practice</h4>
 
-          <p>Once a year, ideally in August before fire season starts, simulate a PSPS day. Turn off the main breaker for an hour. See what works and what does not. Update the plan based on what you learn. Most small businesses I have worked with skip this step the first year and learn the hard way in October.</p>
+          <p>Once a year, ideally in August before fire season starts, simulate a PSPS day. Turn off the main breaker for an hour. See what works and what does not. Update the plan based on what you learn. Many small businesses skip this step the first year and learn the hard way in October.</p>
 
-          <h2>The 48-hour notice playbook</h2>
+          <h2>The pre-outage notice playbook</h2>
 
-          <p>When PG&amp;E sends a PSPS notification, you have roughly 48 hours (sometimes less) to execute. The playbook:</p>
+          <p>When PG&amp;E sends a PSPS notification, you may have limited time to execute. The playbook:</p>
 
           <h3>Hour 0: Notice received</h3>
 
           <ul>
-            <li>Confirm the affected zones include any of your locations or staff homes via the <a href="https://www.pge.com/en/outages-and-safety/outages/maps-and-alerts/psps-map-and-alerts.html" target="_blank" rel="noopener noreferrer">PG&amp;E PSPS map</a>.</li>
+            <li>Confirm the affected zones include any of your locations or staff homes via the <a href="https://www.pge.com/en/outages-and-safety/safety/community-wildfire-safety-program/public-safety-power-shutoffs.html" target="_blank" rel="noopener noreferrer">PG&amp;E PSPS map</a>.</li>
             <li>Activate the communication plan. Email and call all staff. Brief leadership.</li>
             <li>Confirm the generator (if you have one) has fuel. Order more if needed.</li>
             <li>Pre-position any portable equipment (hotspots, portable generators, fuel cans) before stores close.</li>
@@ -481,22 +481,22 @@
           <p>Rough numbers for a typical 10-person Salinas-area office that wants full PSPS coverage:</p>
 
           <ul>
-            <li><strong>UPS units</strong> (10 workstations + 1 server + network rack): $1,500 to $3,000 one-time.</li>
-            <li><strong>Cellular failover on the firewall:</strong> $300 to $600 hardware + $40 to $80 per month data plan.</li>
-            <li><strong>Mobile hotspots</strong> (3 to 5 for at-risk staff): $600 to $2,000 hardware + $100 to $300 per month data plans.</li>
-            <li><strong>Portable generator (5-8 kW):</strong> $1,000 to $1,800 one-time. Or skip if cloud-first.</li>
-            <li><strong>Standby generator (14-22 kW):</strong> $7,000 to $12,000 installed. Or skip if cloud-first and no refrigeration.</li>
-            <li><strong>Cloud migration project</strong> (if needed): $3,000 to $15,000 depending on scope. Usually a separate decision that pays for itself in many other ways.</li>
-            <li><strong>Annual planning and practice:</strong> 4 to 8 hours of professional services + 2 hours of staff time once a year.</li>
+            <li><strong>UPS units</strong> (10 workstations + 1 server + network rack): one-time hardware purchase.</li>
+            <li><strong>Cellular failover on the firewall:</strong> modem hardware plus a monthly data plan.</li>
+            <li><strong>Mobile hotspots</strong> (3 to 5 for at-risk staff): hardware plus monthly data plans.</li>
+            <li><strong>Portable generator (5-8 kW):</strong> one-time purchase. Or skip if cloud-first.</li>
+            <li><strong>Standby generator (14-22 kW):</strong> installed cost quoted by an electrician. Or skip if cloud-first and no refrigeration.</li>
+            <li><strong>Cloud migration project</strong> (if needed): quoted per project. Usually a separate decision that pays for itself in many other ways.</li>
+            <li><strong>Annual planning and practice:</strong> a short professional-services review plus staff time once a year.</li>
           </ul>
 
-          <p>For a business that already runs cloud-first (Microsoft 365, cloud accounting, no on-prem server), the floor cost is roughly $2,500 one-time and $200 per month. For a business that still depends on on-prem infrastructure, the floor is closer to $15,000 with a standby generator.</p>
+          <p>For a business that already runs cloud-first (Microsoft 365, cloud accounting, no on-prem server), the floor cost is modest: UPS units, cellular failover, and hotspots. A business that still depends on on-prem infrastructure should expect to add a generator on top.</p>
 
-          <p>For comparison: a typical 48-hour outage costs a 10-person Salinas service business between $5,000 and $20,000 in lost revenue, staff time, and recovery work. The math on prevention is not subtle.</p>
+          <p>For comparison, add up what a multi-day outage costs your own business in lost revenue, staff time, and recovery work. The math on prevention is not subtle.</p>
 
           <h2>The cloud-first conclusion</h2>
 
-          <p>The cheapest, most resilient PSPS plan for a small business in 2026 is to run as much of the business in the cloud as you can, then add modest power and network resilience on top. An office that can pick up its laptops and continue operations from anywhere with cellular service does not need a $12,000 standby generator. An office that depends on an on-prem server, on-prem phone system, and on-prem file storage needs the full hardware stack.</p>
+          <p>The cheapest, most resilient PSPS plan for a small business in 2026 is to run as much of the business in the cloud as you can, then add modest power and network resilience on top. An office that can pick up its laptops and continue operations from anywhere with cellular service does not need a standby generator. An office that depends on an on-prem server, on-prem phone system, and on-prem file storage needs the full hardware stack.</p>
 
           <p>If your business has been waiting for a reason to migrate off the on-prem server, the annual PSPS event is the reason. We covered the broader migration scope in <a href="/blog/exchange-server-zero-day-cve-2026-42897-may-2026-smb">the on-prem Exchange post</a> and the <a href="/cloud-services">cloud services page</a>. The PSPS angle is one of the strongest cost-justification arguments.</p>
 
@@ -507,7 +507,7 @@
           <ul>
             <li><strong>July:</strong> annual review of the continuity plan with the owner. Update the staff PSPS-exposure roster, refresh hotspot inventory, verify cellular failover SIM status.</li>
             <li><strong>August:</strong> simulated PSPS day. Turn off the main breaker for an hour. Identify and fix any gaps.</li>
-            <li><strong>September to November:</strong> active monitoring. Subscribe to PG&amp;E PSPS notifications on the client's behalf. When notice comes in, run the 48-hour playbook with the client.</li>
+            <li><strong>September to November:</strong> active monitoring. Subscribe to PG&amp;E PSPS notifications on the client's behalf. When notice comes in, run the pre-outage playbook with the client.</li>
             <li><strong>December:</strong> post-season review. Document what worked, what to invest in next year.</li>
           </ul>
 
@@ -516,25 +516,25 @@
           <h2>FAQs about PSPS preparedness for Central Coast and South Bay small businesses</h2>
 
           <h3>What is a PG&amp;E PSPS event and why does it affect my business?</h3>
-          <p>PSPS stands for Public Safety Power Shutoff. PG&amp;E proactively cuts power in areas at high wildfire risk when conditions (high winds, low humidity, dry fuel) make energized power lines a significant ignition threat. Started in 2019, PSPS events have happened every fall since. They typically last 24 to 72 hours but can extend longer. If your business or your employees' homes are in a Tier 2 or Tier 3 High Fire Threat District, the power can be shut off with as little as 48 hours of notice.</p>
+          <p>PSPS stands for Public Safety Power Shutoff. PG&amp;E proactively cuts power in areas at high wildfire risk when conditions (high winds, low humidity, dry fuel) make energized power lines a significant ignition threat. How long an event lasts depends on the weather and on how quickly PG&amp;E can inspect and re-energize lines. If your business or your employees' homes are in a Tier 2 or Tier 3 High Fire Threat District, the power can be shut off with limited notice.</p>
 
           <h3>Which Central Coast and South Bay areas are most exposed to PSPS?</h3>
           <p>Santa Cruz County (the San Lorenzo Valley, Scotts Valley hills, Bonny Doon), the mountain areas of Monterey County (Carmel Valley, Big Sur, Cachagua), the eastern and southern hills of Santa Clara County (Morgan Hill, Gilroy, San Martin foothills), and parts of San Benito County (Hollister hills, San Juan Bautista hills) all sit inside PG&amp;E's Tier 2 or Tier 3 High Fire Threat Districts. Downtown Salinas, downtown Monterey, and central San Jose are generally not on the PSPS map, but supply chains and remote workers in your business probably are.</p>
 
           <h3>What's the minimum IT continuity setup for a small business in PSPS country?</h3>
-          <p>Four layers. <strong>Power:</strong> a UPS on every critical box plus a generator if you have an on-prem server. <strong>Network:</strong> cellular failover (Cradlepoint, Peplink, or a configured LTE/5G hotspot) for the office firewall, and Wi-Fi hotspot capability for remote workers. <strong>Cloud-first apps:</strong> Microsoft 365 or Google Workspace for email, files, and collaboration so the office going dark does not mean the business going dark. <strong>People:</strong> a written communication plan and a designated backup work location. Total cost for a 10-person business is typically $1,500 to $5,000 one-time plus the cellular failover monthly.</p>
+          <p>Four layers. <strong>Power:</strong> a UPS on every critical box plus a generator if you have an on-prem server. <strong>Network:</strong> cellular failover (Cradlepoint, Peplink, or a configured LTE/5G hotspot) for the office firewall, and Wi-Fi hotspot capability for remote workers. <strong>Cloud-first apps:</strong> Microsoft 365 or Google Workspace for email, files, and collaboration so the office going dark does not mean the business going dark. <strong>People:</strong> a written communication plan and a designated backup work location. Total cost depends mostly on whether you already run cloud-first, so get current quotes for the hardware you need.</p>
 
           <h3>How much UPS battery time do I actually need?</h3>
-          <p>For an office where the goal is graceful shutdown and a few minutes of warning, <strong>15 to 30 minutes per critical device</strong> is the floor. For an office where you want to keep working through a 1 to 2 hour outage, 2 hours of runtime is the target, which means a 1500 to 2000 VA UPS for a workstation and monitor or a 3000 VA unit for a small server. For PSPS events that last 24 to 72 hours, UPS alone is not the answer; you need either a generator or a cloud-first architecture that lets the office close while the business continues.</p>
+          <p>For an office where the goal is graceful shutdown and a few minutes of warning, <strong>15 to 30 minutes per critical device</strong> is the floor. For an office where you want to keep working through a 1 to 2 hour outage, 2 hours of runtime is the target, which means a 1500 to 2000 VA UPS for a workstation and monitor or a 3000 VA unit for a small server. For multi-day PSPS events, UPS alone is not the answer; you need either a generator or a cloud-first architecture that lets the office close while the business continues.</p>
 
           <h3>Do I need a generator?</h3>
-          <p>If you have an on-prem server, line-of-business equipment that does not run on battery, or refrigeration / cold-chain operations (produce, packing, ag, food service, healthcare), yes. A portable generator in the 5 to 8 kW range runs $800 to $1,800 and covers a typical small office. A natural-gas standby generator in the 14 to 22 kW range that auto-starts on power loss runs $5,000 to $12,000 installed and is the right answer for any business that cannot afford a 72-hour outage. If your business runs entirely on laptops, cloud apps, and cellular, you can usually skip the generator.</p>
+          <p>If you have an on-prem server, line-of-business equipment that does not run on battery, or refrigeration / cold-chain operations (produce, packing, ag, food service, healthcare), yes. A portable generator in the 5 to 8 kW range covers a typical small office. A natural-gas standby generator in the 14 to 22 kW range that auto-starts on power loss is the right answer for any business that cannot afford a 72-hour outage. If your business runs entirely on laptops, cloud apps, and cellular, you can usually skip the generator.</p>
 
           <h3>Does business interruption insurance cover PSPS losses?</h3>
-          <p>It depends on the policy. Some policies explicitly exclude utility shutoffs as a covered cause of loss; others include them, sometimes with a "civil authority" or "service interruption" rider. Read your policy or ask your broker before the next event. Even if you have coverage, the typical waiting period (24 to 72 hours) means most PSPS events fall below the deductible threshold; the policy matters most for longer events.</p>
+          <p>It depends on the policy. Some policies explicitly exclude utility shutoffs as a covered cause of loss; others include them, sometimes with a "civil authority" or "service interruption" rider. Read your policy or ask your broker before the next event. Even if you have coverage, check the waiting period and deductible in your policy, because shorter events may fall below them; the policy matters most for longer events.</p>
 
           <h3>What about Starlink or other satellite internet?</h3>
-          <p>Starlink works well as a primary or backup ISP for offices and homes in PSPS zones, particularly in the San Lorenzo Valley, Carmel Valley, and the Santa Clara County hills where wireline service is unreliable. Hardware: $349 to $599. Monthly: $99 to $250 depending on plan. The dish needs clear sky and power (so it needs to be on a UPS or generator), but for businesses in coverage-poor areas, it has changed the math on whether a remote-work plan is realistic.</p>
+          <p>Starlink works well as a primary or backup ISP for offices and homes in PSPS zones, particularly in the San Lorenzo Valley, Carmel Valley, and the Santa Clara County hills where wireline service is unreliable. Check Starlink's current hardware and plan pricing. The dish needs clear sky and power (so it needs to be on a UPS or generator), but for businesses in coverage-poor areas, it has changed the math on whether a remote-work plan is realistic.</p>
 
           <h3>Should I move my server to the cloud just because of PSPS?</h3>
           <p>PSPS by itself usually does not justify a server migration in dollar terms. PSPS plus the security and patching reality of running an on-prem server (covered in <a href="/blog/exchange-server-zero-day-cve-2026-42897-may-2026-smb">the Exchange post</a>) plus the operational cost of maintaining hardware in a small office usually does. Most small businesses that have retired their on-prem servers in the last three years cite PSPS as one of the three reasons; the others are security and maintenance burden.</p>

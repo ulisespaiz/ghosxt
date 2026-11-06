@@ -48,7 +48,7 @@
             "author": { "@type": "Person", "name": "Ulises Paiz", "url": "https://ghosxt.com/about" },
             "publisher": { "@type": "Organization", "name": "Ghosxt", "logo": { "@type": "ImageObject", "url": "https://ghosxt.com/assets/img/ghosxt-logo-160.webp" } },
             "datePublished": "2026-06-30",
-            "dateModified": "2026-06-30",
+            "dateModified": "2026-11-06",
             "articleSection": "Cybersecurity",
             "keywords": "dark web monitoring small business, dark web credential monitoring, is my business on the dark web, dark web scan business, stolen credentials dark web, employee credentials dark web, dark web monitoring cost, managed IT, Salinas, Monterey, Central Coast"
           },
@@ -68,7 +68,7 @@
                 "name": "What is the difference between HaveIBeenPwned and commercial dark web monitoring?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "HaveIBeenPwned is a free tool that checks your email address against a database of publicly disclosed breaches, data dumps that have already been published and indexed. It is useful for personal awareness but limited for business use because it only covers breaches that have been made public, it does not alert you in real time, and it cannot monitor your entire domain automatically. Commercial dark web monitoring services do all three: they watch criminal forums, Telegram channels, stealer malware log marketplaces, and paste sites that are never publicly disclosed, they send real-time alerts when your domain's credentials appear, and they monitor every address under your domain continuously. The difference is breadth and speed. Free tools catch historic breaches after the fact; commercial monitoring catches fresh credential theft while you still have time to act."
+                  "text": "HaveIBeenPwned checks a specific email address against publicly disclosed breach databases after the fact and requires manual lookups. Commercial monitoring watches criminal forums, stealer malware marketplaces, and private paste sites continuously, sends real-time alerts, and covers your entire domain automatically. The coverage and speed gap between the two is significant for business use."
                 }
               },
               {
@@ -76,7 +76,7 @@
                 "name": "How quickly does dark web monitoring detect a stolen credential?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "It depends on what type of theft occurred and which monitoring service you use. For large third-party breaches (a vendor or SaaS platform your employee used their work email on), monitoring tools typically surface the credential within 24 to 72 hours of the dump appearing on criminal forums, compared to weeks or months for public disclosure. For stealer malware logs (where malware on an endpoint captures credentials directly), detection can be near-real-time if the monitoring service has access to those specific marketplaces. The important caveat: there is always a gap between when the credential was stolen and when it appears for sale. The monitoring alert means the credential is already in criminal hands; the question is whether an attacker has used it yet. Acting within hours of an alert is almost always fast enough, since most credential buyers do not deploy them immediately."
+                  "text": "For third-party breaches appearing on criminal forums, typically 24 to 72 hours after the dump surfaces, far faster than public disclosure, which often takes weeks or months. For stealer malware logs, detection can be near-real-time if the monitoring service has access to those specific marketplaces. In both cases, the credential was already stolen before the alert; the question is whether you rotate it before an attacker uses it."
                 }
               },
               {
@@ -84,7 +84,7 @@
                 "name": "Does dark web monitoring tell me if my business was directly hacked?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "No. Dark web monitoring detects credentials associated with your domain appearing on criminal marketplaces. It does not detect intrusion into your own systems. Most dark web alerts involve credentials stolen from third-party services (a cloud app, a personal account your employee used their work email on, or a data broker breach) rather than a direct breach of your network. If you want to detect activity inside your own environment, that requires endpoint detection and response (EDR) and ideally a managed detection and response (MDR) service that monitors your network, logs, and endpoints in real time. Dark web monitoring and MDR are complementary: one watches what criminals are selling, the other watches what is happening inside your walls."
+                  "text": "No. Dark web monitoring detects credentials from your domain appearing on criminal markets. Most of these come from third-party breaches or malware on an employee's personal device, not a direct attack on your network. To detect activity inside your own environment, you need endpoint detection and response (EDR) or a managed detection and response (MDR) service. Dark web monitoring and MDR are complementary: one watches what criminals are selling, the other watches what is happening inside your walls."
                 }
               }
             ]
@@ -305,7 +305,7 @@
 
           <h2>Is dark web monitoring worth the cost for a small business?</h2>
 
-          <p>Commercial dark web monitoring runs roughly $5 to $20 per user per month as a managed service add-on, or is bundled into some MDR platforms at no additional charge. At the low end, for a 10-person business that is $600 to $1,200 a year, less than a single hour of incident response from a forensic firm.</p>
+          <p>Dark web monitoring is sold as a managed service add-on, and some security platforms bundle it. At Ghosxt it is included in the Secure Growth tier ($175 per user per month) and the Compliance &amp; Continuity tier ($250 per user per month), with no separate line item; see the <a href="/pricing">pricing page</a>.</p>
 
           <p>The honest answer on value depends on two factors: your risk profile and whether you will actually act on alerts.</p>
 

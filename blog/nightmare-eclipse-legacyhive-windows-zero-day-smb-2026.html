@@ -48,7 +48,7 @@
             "author": { "@type": "Person", "name": "Ulises Paiz", "url": "https://ghosxt.com/about" },
             "publisher": { "@type": "Organization", "name": "Ghosxt", "logo": { "@type": "ImageObject", "url": "https://ghosxt.com/assets/img/ghosxt-logo-160.webp" } },
             "datePublished": "2026-07-15",
-            "dateModified": "2026-07-15",
+            "dateModified": "2026-11-06",
             "articleSection": "Cybersecurity",
             "keywords": "LegacyHive, Nightmare-Eclipse, Windows zero-day, User Profile Service, profsvc, registry hive privilege escalation, local privilege escalation, LPE, Windows 10, Windows 11, RoguePlanet, CVE-2026-50656, July 2026 Patch Tuesday, CVE-2026-56155, CVE-2026-56164, least privilege, EDR, MDR, small business cybersecurity, Salinas IT, Monterey County IT"
           },
@@ -68,7 +68,7 @@
                 "name": "What is LegacyHive?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "LegacyHive is a Windows local privilege-escalation zero-day disclosed by the researcher Nightmare-Eclipse around July 14 to 15, 2026. It abuses the Windows User Profile Service and the way Windows loads per-user registry hives, so that a standard user can mount another user's registry hive, potentially an administrator's, into their own view and gain privileged read and write access to it. That is a stepping stone toward taking over the machine. It was the larger disclosure Nightmare-Eclipse had threatened for July 14."
+                  "text": "A Windows local privilege-escalation zero-day disclosed by Nightmare-Eclipse around July 14–15, 2026. It abuses the Windows User Profile Service and per-user registry-hive loading so a standard user can mount another user's hive (potentially an administrator's) into their own view and gain privileged read/write to it, a stepping stone toward taking over the machine. It was the larger release the researcher had threatened for July 14."
                 }
               },
               {
@@ -76,7 +76,7 @@
                 "name": "Is there a patch or a CVE for LegacyHive yet?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Not as of July 15, 2026. No CVE identifier has been assigned, and Microsoft has not shipped a fix or committed publicly to an emergency out-of-band update before the August 2026 Patch Tuesday. Treat it as an open, unpatched issue and rely on mitigations: least privilege, monitoring, and identity controls."
+                  "text": "Not as of July 15, 2026. No CVE has been assigned, and Microsoft has not shipped a fix or publicly committed to an emergency update before the August 2026 Patch Tuesday. Treat it as open and rely on mitigations."
                 }
               },
               {
@@ -84,7 +84,7 @@
                 "name": "Is LegacyHive being exploited in the wild?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "There is no evidence of active exploitation as of July 15, 2026. Importantly, the public proof-of-concept is deliberately incomplete. Reporting notes it is a stripped-down version that needs additional credentials and only touches a limited part of the registry, so it is not a turnkey attack. That lowers the immediate risk compared with Nightmare-Eclipse's earlier Defender bugs, but a capable attacker could still build on the idea, which is why the mitigations still matter."
+                  "text": "No evidence of active exploitation as of July 15, 2026. The public proof-of-concept is also deliberately incomplete (a stripped-down version that needs extra credentials and touches only a limited part of the registry), so it isn't turnkey. That lowers the immediate risk versus the earlier Defender bugs, though a capable attacker could still build on the idea."
                 }
               },
               {
@@ -92,15 +92,7 @@
                 "name": "Does this affect small businesses on ordinary Windows laptops?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Yes, in principle. LegacyHive is a flaw in core Windows components on standard Windows 10 and 11 machines, and the researcher claims it works on systems that are fully patched with the July 2026 updates. Like other privilege-escalation bugs, it does not break in by itself; an attacker needs an initial foothold first. But footholds are cheap, so a five-to-fifty-person business running normal Windows laptops is in scope and should not treat this as an enterprise-only problem."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "What should a small business do this week?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "First, finish the July 2026 Patch Tuesday rollout, especially the two actively exploited zero-days it fixed: CVE-2026-56155 in AD FS and CVE-2026-56164 in SharePoint. Confirm the Microsoft Defender engine is current, which closes the earlier RoguePlanet bug, CVE-2026-50656. Then reduce what a LegacyHive-style escalation could do: make sure no everyday user is a local administrator, keep EDR and 24/7 monitoring running, harden identity with phishing-resistant MFA, and watch MSRC for an official LegacyHive advisory or fix."
+                  "text": "Yes, in principle. It's a flaw in core Windows on standard Windows 10 and 11 machines, and the researcher claims it works on fully patched systems. Like any LPE bug it needs an initial foothold first, but footholds are cheap, so a small business running normal Windows laptops is in scope."
                 }
               },
               {
@@ -108,7 +100,7 @@
                 "name": "How does LegacyHive connect to RoguePlanet and the July Patch Tuesday?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "They are all part of the same story. RoguePlanet (CVE-2026-50656) was Nightmare-Eclipse's seventh public Windows drop, a Microsoft Defender race condition that Microsoft closed with an out-of-band engine update around July 9, 2026. Days later, on July 14, Microsoft shipped its largest-ever Patch Tuesday, 570 fixes including three zero-days. LegacyHive dropped right after that, continuing the researcher's pattern of releasing unpatched bugs to maximize the exposure window."
+                  "text": "Same story. RoguePlanet (CVE-2026-50656) was the researcher's seventh public drop, a Defender race condition Microsoft closed out-of-band around July 9. Days later Microsoft shipped its largest-ever Patch Tuesday (570 fixes, three zero-days) on July 14, and LegacyHive dropped right after, continuing the pattern of releasing unpatched bugs to maximize the exposure window."
                 }
               }
             ]
@@ -292,7 +284,7 @@
             <ul>
               <li><strong>What dropped:</strong> LegacyHive, a local privilege-escalation (LPE) bug. A standard user can mount another user's registry hive (potentially an administrator's) into their own view and get privileged read/write to it.</li>
               <li><strong>Status:</strong> no CVE assigned, <strong>unpatched</strong> as of July 15, 2026, and <strong>no known exploitation in the wild</strong>. The public proof-of-concept is stripped down and needs extra conditions, so it is not turnkey.</li>
-              <li><strong>Context:</strong> this follows RoguePlanet (CVE-2026-50656, a Defender bug Microsoft patched out-of-band around July 9) and the record <a href="/blog/july-2026-patch-tuesday-record-570-fixes-smb">July 14 Patch Tuesday</a> (570 fixes, three zero-days).</li>
+              <li><strong>Context:</strong> this follows RoguePlanet (CVE-2026-50656, a Defender bug Microsoft patched out-of-band around July 9) and the record <a href="/blog/july-2026-patch-tuesday-record-570-fixes-smb">July 14 Patch Tuesday</a> (570 fixes, three zero-days, per the <a href="https://msrc.microsoft.com/update-guide/releaseNote/2026-Jul" target="_blank" rel="noopener noreferrer">MSRC July 2026 release notes</a>).</li>
               <li><strong>The honest read:</strong> reporters called it "not the haymaker that was promised." Lower urgency than the earlier Defender exploits, but still a reminder to keep the fundamentals tight.</li>
             </ul>
             <p>What to do this week (any business running Windows):</p>

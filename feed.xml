@@ -7,7 +7,7 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from an engineer with DoD infrastructure experience.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Fri, 06 Nov 2026 11:12:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 06 Nov 2026 23:46:13 +0000</lastBuildDate>
     <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
     <item>
@@ -125,7 +125,7 @@
       <pubDate>Sat, 24 Oct 2026 00:00:00 +0000</pubDate>
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Security</category>
-      <description>Forced 90-day password changes weaken security. Use the modern NIST-based small business password policy: length, MFA, a password manager, and breach checks.</description>
+      <description>Forced 90-day password changes weaken security. A modern NIST-based small business password policy: length, MFA, a password manager, breach checks.</description>
     </item>
     <item>
       <title>Video Conference Security for Small Business</title>
@@ -134,7 +134,7 @@
       <pubDate>Fri, 23 Oct 2026 00:00:00 +0000</pubDate>
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Security</category>
-      <description>Secure Zoom, Microsoft Teams, and Google Meet meetings. Lobby, passcodes, screen-share limits, recordings, and guest rules a small business can set in 3 steps.</description>
+      <description>Secure Zoom, Teams, and Google Meet meetings: lobby, passcodes, screen-share limits, recordings, and guest rules a small business can set in 3 steps.</description>
     </item>
     <item>
       <title>Microsoft 365 Backup for Small Business</title>
@@ -191,7 +191,7 @@
       <description>Is the router from your internet provider enough? Learn what a business firewall adds, what to look for, and how to set one up without slowing your team.</description>
     </item>
     <item>
-      <title>Shared Logins and Shared Mailboxes: Stop Sharing One Password</title>
+      <title>Shared Logins and Shared Mailboxes: Small Business</title>
       <link>https://ghosxt.com/blog/shared-logins-shared-mailboxes-small-business-2026</link>
       <guid isPermaLink="true">https://ghosxt.com/blog/shared-logins-shared-mailboxes-small-business-2026</guid>
       <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
@@ -224,7 +224,7 @@
       <pubDate>Mon, 12 Oct 2026 00:00:00 +0000</pubDate>
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
-      <description>Conditional Access decides who gets into Microsoft 365 and when. Five starter policies small businesses can turn on this week, plus common lockout mistakes.</description>
+      <description>Conditional Access decides who gets into Microsoft 365 and when. Five starter policies small businesses can turn on this week, plus lockout mistakes.</description>
     </item>
     <item>
       <title>Network Closet and Server Room Security</title>
@@ -254,7 +254,7 @@
       <description>Hacked IP cameras and NVRs are an easy way into your network. How small businesses secure cameras: passwords, updates, VLANs, remote access.</description>
     </item>
     <item>
-      <title>Email Encryption for Small Business: What to Encrypt and How</title>
+      <title>Email Encryption for Small Business: What and How</title>
       <link>https://ghosxt.com/blog/email-encryption-small-business-2026</link>
       <guid isPermaLink="true">https://ghosxt.com/blog/email-encryption-small-business-2026</guid>
       <pubDate>Thu, 08 Oct 2026 00:00:00 +0000</pubDate>
@@ -263,7 +263,7 @@
       <description>Email is not private by default. When small businesses need email encryption, TLS vs message encryption, and setup in Microsoft 365 or Google Workspace.</description>
     </item>
     <item>
-      <title>Single Sign-On (SSO) for Small Business: Is It Worth It?</title>
+      <title>Single Sign-On (SSO) for Small Business: Worth It?</title>
       <link>https://ghosxt.com/blog/single-sign-on-sso-small-business-2026</link>
       <guid isPermaLink="true">https://ghosxt.com/blog/single-sign-on-sso-small-business-2026</guid>
       <pubDate>Wed, 07 Oct 2026 00:00:00 +0000</pubDate>
@@ -272,13 +272,13 @@
       <description>Single sign-on gives employees one secured login for every app. How SSO works, what it costs, and how to roll it out in Microsoft 365 or Google Workspace.</description>
     </item>
     <item>
-      <title>Audit Logs for Small Business: What to Turn On and Keep</title>
+      <title>Audit Logs for Small Business: What to Turn On</title>
       <link>https://ghosxt.com/blog/audit-logs-security-logging-small-business-2026</link>
       <guid isPermaLink="true">https://ghosxt.com/blog/audit-logs-security-logging-small-business-2026</guid>
       <pubDate>Tue, 06 Oct 2026 00:00:00 +0000</pubDate>
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
-      <description>Without logs you cannot tell what an attacker touched. Which audit logs to turn on in Microsoft 365, Google Workspace, and Windows, and how long to keep them.</description>
+      <description>Without logs you cannot tell what an attacker touched. Audit logs to turn on in Microsoft 365, Google Workspace and Windows, and how long to keep them.</description>
     </item>
   </channel>
 </rss>
