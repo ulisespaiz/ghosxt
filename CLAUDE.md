@@ -122,6 +122,24 @@ budgets are regenerated.
   the fold, modern formats (webp or avif) for photos.
 - No render-blocking third-party CSS; fonts preloaded or swapped.
 
+## Blog posts (the daily post routine reads this too)
+
+- Slug: no year. `blog/conditional-access-small-business.html`, not
+  `...-small-business-2026.html` (AUDIT.md C-10). A year belongs in the slug and title only
+  for time-bound posts: Patch Tuesday roundups, a named CVE or breach, a dated deadline.
+  Never rename an existing slug; old posts keep theirs.
+- Every statistic, percentage, dollar figure, or "studies show" claim links to the primary
+  source that states it (government, vendor research report, standards body, court
+  record), in the same paragraph. If no source can be found, write the point without the
+  number. Never estimate or round a figure into existence.
+- Ghosxt prices come only from `site-config.json`; capabilities only from what is on the
+  live service pages. A post never promises response times, after-hours coverage, or a
+  service that the service pages do not.
+- Platform facts (Microsoft 365, Google Workspace, Apple) are checked against the vendor's
+  own documentation the day the post is written, and linked.
+- Title under 60 characters and meta under 155 (`scripts/check-title-meta-length.py`
+  must pass), unique against every existing post and service page.
+
 ## Commit and PR conventions
 
 - Branch names: `seo/<topic>-<yyyy-mm>` for this programme; never commit to `main`.
