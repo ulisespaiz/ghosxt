@@ -628,6 +628,7 @@ def build_page(chrome, service, slug, city):
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="{og_title}" />
     <meta name="twitter:description" content="{og_desc}" />
+    <meta name="twitter:image" content="{og_image}" />
 {chrome['head_assets']}
 {jsonld}
 {chrome['cf_analytics']}
