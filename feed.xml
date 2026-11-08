@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from an engineer with DoD infrastructure experience.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Sat, 07 Nov 2026 11:08:25 +0000</lastBuildDate>
-    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Sun, 08 Nov 2026 12:02:10 +0000</lastBuildDate>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>Out-of-Office Reply Security: What to Omit (2026)</title>
+      <link>https://ghosxt.com/blog/out-of-office-auto-reply-security-risks-small-business-2026</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/out-of-office-auto-reply-security-risks-small-business-2026</guid>
+      <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>Your out-of-office reply can help scammers. Learn what to leave out, how to set separate internal and external messages, and a safe template.</description>
+    </item>
     <item>
       <title>Report Phishing Email: Set Up a Report Habit (2026)</title>
       <link>https://ghosxt.com/blog/report-suspicious-email-phishing-report-button-small-business-2026</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>Email is not private by default. When small businesses need email encryption, TLS vs message encryption, and setup in Microsoft 365 or Google Workspace.</description>
-    </item>
-    <item>
-      <title>Single Sign-On (SSO) for Small Business: Is It Worth It?</title>
-      <link>https://ghosxt.com/blog/single-sign-on-sso-small-business-2026</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/single-sign-on-sso-small-business-2026</guid>
-      <pubDate>Wed, 07 Oct 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>Single sign-on gives employees one secured login for every app. How SSO works, what it costs, and how to roll it out in Microsoft 365 or Google Workspace.</description>
     </item>
   </channel>
 </rss>
