@@ -1385,6 +1385,7 @@ Ghosxt provides managed IT for small nonprofits on Google Workspace at published
 Nonprofit IT on Google Workspace: at a glance
 ## The blind spot: one person holds every key
 In a lot of small nonprofits, Google Workspace is run by whoever set it up. Often that's the operations director, on top of a full-time job. That person is usually the only super admin. If they leave, lose their phone, or get phished, the organization can lose control of every inbox, shared drive, and donor spreadsheet at once.
+We fix that first. There's a second super admin account that nobody uses for daily email, 2-step verification is enforced on every account, and there's a written record of who holds admin rights and why.
 ## Google Workspace administration, taken over or backed up
 ### Accounts, arrivals, and departures
 ### 2-step verification, enforced
@@ -1401,7 +1402,6 @@ In a lot of small nonprofits, Google Workspace is run by whoever set it up. Ofte
 ## Talk to the owner, not a queue
 ## Related
 ### What managed IT costs
-Published tiers, how MSPs price, and three worked examples with the arithmetic shown.
 ### Fully remote, Mac-first teams
 ### Case study: a 5-person remote firm
 ### Google Workspace security settings
@@ -1415,7 +1415,7 @@ A: Not in the way most people assume. Google keeps deleted items for a limited t
 Q: Do contractors and volunteers need a company laptop?
 A: No. People on their own laptops are covered per identity: 2-step verification, identity monitoring, access limited to what they need, and the account suspended when their work with you ends. We don't manage their personal devices.
 Q: Do you offer a nonprofit discount?
-A: Ongoing managed IT is billed at the published rates on our pricing page. What we donate is setup: Ghosxt Cares covers Microsoft 365, domain, email, website, and DNS setup for one Monterey County 501(c)(3) per quarter. The bigger savings usually come from Google for Nonprofits and TechSoup, and we help you use both.
+A: Ongoing managed IT is billed at the published rates on our pricing page. The bigger savings usually come from Google for Nonprofits and TechSoup, and we help you use both.
 Q: Can you support staff who work from home in different states?
 A: Yes. Everything on this page works remotely: Google Workspace administration, identity monitoring, device management, and help desk. Macs ship to staff homes and enroll themselves, and a departing staffer's laptop can be locked or erased from anywhere.
 
@@ -1756,57 +1756,6 @@ Q: What if we just need help with a specific project?
 A: We're happy to discuss project work (network redesign, cloud migration, etc.) separate from ongoing managed services. Some projects lead to managed service relationships, others don't. We're comfortable with both.
 Q: How do you handle after-hours emergencies?
 A: Critical incidents get a 4-hour notification commitment, with a direct line to the owner. Our monitoring systems watch 24/7 for critical issues. For planned after-hours work (infrastructure upgrades, migrations), we schedule in advance to minimize business disruption.
-
-## https://ghosxt.com/ghosxt-cares
-
-Title: Ghosxt Cares – Free IT for Monterey County Nonprofits
-Meta description: Free IT setup for Monterey County 501(c)(3) nonprofits. Microsoft 365, custom domain and email, basic website, DNS, and onboarding. Zero labor cost.
-
-# Ghosxt Cares
-Free IT foundations for Monterey County nonprofits. We donate our time and expertise to help local 501(c)(3) organizations build a modern IT foundation: at no cost for our labor.
-100% free labor · For Monterey County 501(c)(3) nonprofits
-Ghosxt Cares: at a glance
-## Good IT shouldn't be a luxury for nonprofits.
-Ghosxt was built by an engineer who spent years securing systems where the stakes were high and the standards were higher. The same care that protects a business shouldn't be out of reach for the organizations doing the hard work in our community.
-Too many Monterey County nonprofits run on a personal Gmail, a forgotten domain, and a website nobody can update, not because they don't care, but because real IT help has always cost money they'd rather spend on their mission. Ghosxt Cares is our way of closing that gap: we donate the setup so the technology fades into the background and the work can come first.
-## Everything to get your org online: done right.
-Ghosxt is a Salinas-based managed IT provider. Through Ghosxt Cares, we set your organization up with the tools it needs from day one.
-We walk you through Microsoft's Nonprofit program and configure your tenant, admin accounts, and security defaults.
-Professional email on your domain (e.g., you@yourorg.org). We handle DNS records and mail flow configuration.
-A clean single-page website deployed on your hosting: enough to establish your online presence.
-Domain routing, MX records, SPF/DKIM/DMARC: configured correctly from day one.
-A 1-hour walkthrough so your team knows how to use what we built.
-A plain-language record of your accounts, domains, and settings, so you own your setup and are never locked in.
-## Three simple steps.
-No long forms. No commitment. Just a short conversation to see if we're a fit.
-### Reach out
-Email us or book a quick call and tell us a little about your organization.
-### We confirm eligibility
-We verify your 501(c)(3) status and Monterey County base, then map out what you need.
-### We schedule & build
-We set everything up, walk your team through it, and hand over the documentation.
-## Your costs, kept minimal.
-Our labor is free. You only cover the third-party costs we have no control over.
-## Do you qualify?
-Ghosxt Cares is limited to keep quality high. Here's what's required.
-- Active 501(c)(3) organization based in Monterey County
-- Limited to 1 organization per quarter
-## Ready to get your org online?
-Send us an email and we'll follow up to confirm eligibility and schedule your setup. Spots are limited to one organization per quarter.
-Questions first? Email cares@ghosxt.com.
-## Questions, answered.
-Q: Is it really free?
-A: Our labor is 100% donated: you pay nothing for the setup work. The only costs are third-party fees we can't waive, like domain registration (about $12/year) and any hosting. Microsoft 365 is free or deeply discounted for eligible nonprofits.
-Q: What's the catch?
-A: There's no catch. We're a local managed IT provider giving back to the community that supports us, and there's no obligation to ever become a paying client.
-Q: Who qualifies?
-A: Active 501(c)(3) organizations based in Monterey County. We take one organization per quarter so each one gets our full attention.
-Q: How long does setup take?
-A: Most setups are completed within a couple of weeks of our kickoff call, depending on domain registration and Microsoft's nonprofit approval timelines.
-Q: Do you support us after setup?
-A: Setup includes a one-hour onboarding session and handover documentation so your team is self-sufficient. If you ever want ongoing managed support, it's available separately, but it's never required.
-Q: We're a nonprofit outside Monterey County. Can you help?
-A: Ghosxt Cares is focused on Monterey County for now, but reach out anyway. Depending on your needs we may be able to help remotely or point you to the right resource.
 
 ## https://ghosxt.com/blog/
 
