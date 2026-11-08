@@ -3540,7 +3540,7 @@ a.reset-btn {
 
 
 /* ═══════════════════════════════════════════════════════
-   NEW INDEX SECTIONS — C-TPAT & GHOSXT CARES
+   NEW INDEX SECTIONS: C-TPAT
    Paste at the bottom of assets/css/index.css
    ═══════════════════════════════════════════════════════ */
 
@@ -3831,82 +3831,7 @@ a.reset-btn {
   align-items: center;
 }
 
-/* ── GHOSXT CARES PROMO SECTION ────────────────── */
-.cares-promo-section {
-  padding: 0 24px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.cares-promo-container {
-  padding: 5rem 0;
-  max-width: 1200px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 /* RIGHT — text */
-.cares-promo-right {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  align-items: center;
-  z-index: 100;
-  max-width: 1000px;
-}
-
-.cares-promo-title {
-  font-size: 3.5rem;
-  font-weight: 700;
-  color: var(--ghosxt-red-0);
-  line-height: 1.15;
-  letter-spacing: -0.02em;
-  text-align: center;
-}
-
-.cares-promo-text {
-  font-size: 1rem;
-  color: var(--ghosxt-black);
-  font-family: var(--font-family-2);
-  line-height: 1.65;
-  opacity: 0.72;
-  text-align: center;
-}
-
-.cares-promo-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: var(--ghosxt-red-0);
-  color: var(--ghosxt-white);
-  font-family: var(--font-family-2);
-  font-size: 0.95rem;
-  font-weight: 600;
-  padding: 0.75rem 1.5rem;
-  border-radius: 4px;
-  border: 1px solid var(--ghosxt-black);
-  box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.12);
-  text-decoration: none;
-  transition: all 0.2s ease;
-  width: fit-content;
-}
-
-.cares-promo-btn:hover {
-  box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.15);
-  transform: translateY(-2px);
-}
-
-.cares-promo-btn i {
-  display: flex;
-  font-size: 0.9rem;
-  color: var(--ghosxt-white);
-}
-
 /* ── RESPONSIVE ─────────────────────────────────── */
 
 
@@ -4626,14 +4551,7 @@ a.reset-btn {
   .ctpat-promo-container {
     padding: 2.5rem 0;
   }
-  .cares-promo-container {
-    padding: 2.5rem 0;
-  }
-
   .ctpat-promo-title {
-    font-size: 1.625rem;
-  }
-  .cares-promo-title {
     font-size: 1.625rem;
   }
 }
@@ -4681,8 +4599,7 @@ main > div:not(.hero-section) .problem-badge .badge-container,
 
 .solutions-main-title,
 .comparison-main-title,
-.ctpat-promo-title,
-.cares-promo-title {
+.ctpat-promo-title {
   font-size: clamp(2.2rem, 4.2vw, 3.25rem);
 }
 
@@ -4700,8 +4617,7 @@ main > div:not(.hero-section) .problem-badge .badge-container,
 .services-section,
 .why-section,
 .comparison-section,
-.ctpat-promo-section,
-.cares-promo-section {
+.ctpat-promo-section {
   border-top: 1px solid rgba(0, 0, 0, 0.06);
 }
 
@@ -4712,8 +4628,7 @@ main > div:not(.hero-section) .problem-badge .badge-container,
 .services-container,
 .comparison-container,
 .testimonials-container,
-.ctpat-promo-container,
-.cares-promo-container {
+.ctpat-promo-container {
   padding-block: clamp(4rem, 8vw, 6rem);
 }
 
@@ -4788,24 +4703,6 @@ main > div:not(.hero-section) .problem-badge .badge-container,
 
 .read-more-reviews-btn {
   align-self: flex-start;
-}
-
-.cares-promo-section {
-  background:
-    linear-gradient(135deg, rgba(183, 28, 28, 0.08), transparent 38%),
-    var(--ghosxt-white);
-}
-
-.cares-promo-container {
-  max-width: 1100px;
-}
-
-.cares-promo-right {
-  border: 1px solid var(--ghosxt-black);
-  border-radius: 24px;
-  padding: clamp(2rem, 5vw, 4rem);
-  background: rgba(255, 255, 255, 0.9);
-  box-shadow: 10px 10px 0 0 rgba(0, 0, 0, 0.06);
 }
 
 .cta-section {
@@ -5257,16 +5154,6 @@ main > div:not(.hero-section) .problem-badge .badge-container,
   }
 
   .ctpat-promo-title {
-    font-size: 2.25rem;
-  }
-
-  .cares-promo-container {
-    grid-template-columns: 1fr;
-    gap: 3rem;
-    padding: 3rem 0;
-  }
-
-  .cares-promo-title {
     font-size: 2.25rem;
   }
 
@@ -6155,16 +6042,9 @@ main > div:not(.hero-section) .problem-badge .badge-container,
   .ctpat-promo-title {
     font-size: 1.875rem;
   }
-  .cares-promo-title {
-    font-size: 1.875rem;
-  }
-
   main > div:not(.hero-section) .hero-badge,
   main > div:not(.hero-section) .problem-badge {
     align-self: center;
   }
 
-  .cares-promo-right {
-    padding: 1.5rem;
-  }
 }
