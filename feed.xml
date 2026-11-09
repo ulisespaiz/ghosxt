@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from an engineer with DoD infrastructure experience.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Sun, 08 Nov 2026 19:00:50 +0000</lastBuildDate>
-    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Mon, 09 Nov 2026 12:15:51 +0000</lastBuildDate>
+    <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>Calendar Invite Phishing: Fake Meetings</title>
+      <link>https://ghosxt.com/blog/calendar-invite-phishing-fake-meeting-requests-small-business-2026</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/calendar-invite-phishing-fake-meeting-requests-small-business-2026</guid>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>Fake calendar invites land in your inbox and calendar without a click. Learn how the scam works and three settings that stop it.</description>
+    </item>
     <item>
       <title>Out-of-Office Reply Security: What to Omit (2026)</title>
       <link>https://ghosxt.com/blog/out-of-office-auto-reply-security-risks-small-business-2026</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>Hacked IP cameras and NVRs are an easy way into your network. How small businesses secure cameras: passwords, updates, VLANs, remote access.</description>
-    </item>
-    <item>
-      <title>Email Encryption for Small Business: What to Encrypt and How</title>
-      <link>https://ghosxt.com/blog/email-encryption-small-business-2026</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/email-encryption-small-business-2026</guid>
-      <pubDate>Thu, 08 Oct 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>Email is not private by default. When small businesses need email encryption, TLS vs message encryption, and setup in Microsoft 365 or Google Workspace.</description>
     </item>
   </channel>
 </rss>
