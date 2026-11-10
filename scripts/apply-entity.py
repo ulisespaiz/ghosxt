@@ -15,8 +15,10 @@ Steps (--only, comma separated):
                  per-page "#business" references are retargeted to the one global @id
   search-action  WebSite.potentialAction of type SearchAction is removed (no site search)
   breadcrumbs    BreadcrumbList is added on the pages listed in _entity.BREADCRUMB_EXTRA
-  faq            opt-in: FAQPage Questions whose full name is not in the visible text are
-                 dropped (CLAUDE.md rule 8); a FAQPage left with no Question is dropped
+  faq            opt-in (CLAUDE.md rule 8): a FAQPage Question whose name is in the visible
+                 text is kept; one that matches only after folding quote style and case is
+                 renamed to the visible wording (name value only); any other is dropped, and
+                 a FAQPage left with no Question is dropped. acceptedAnswer is never touched
 
 Default is the first four. JSON-LD is never re-serialised: only the touched values are
 spliced, and four gates run before any write (every block parses; the parsed result
@@ -100,6 +102,23 @@ class _Visible(HTMLParser):
 
 def norm(s):
     return re.sub(r"\s+", " ", s).strip()
+
+
+_QUOTES = {c: "'" for c in "'\"\u2018\u2019\u201c\u201d"}
+
+
+def fold(s):
+    """Quote-style and case fold, one output character per input character."""
+    out = []
+    for c in s:
+        c = _QUOTES.get(c, c)
+        low = c.lower()
+        out.append(low if len(low) == 1 else c)
+    return "".join(out)
+
+
+# (page, action, old name, new name) for each Question the faq step changed on its first pass
+FAQ_LOG = []
 
 
 def visible_text(text):
@@ -254,17 +273,31 @@ def transform(rel, text, canon, steps, verify=True):
             if vis is None:
                 vis = visible_text(text)
             drops = []
+            renames = []
+            fvis = fold(vis)
             for i, q in enumerate(me["items"]):
                 qv = E.value(text, q)
                 if not isinstance(qv, dict) or not isinstance(qv.get("name"), str):
                     continue  # not a plain Question object: leave it alone
-                if norm(html.unescape(qv["name"])) not in vis:
+                name = norm(html.unescape(qv["name"]))
+                if name in vis:
+                    continue
+                at = fvis.find(fold(name)) if name else -1
+                if at >= 0:
+                    renames.append((i, q, vis[at:at + len(name)], qv["name"]))
+                else:
                     drops.append(i)
+            for i, q, wording, old_name in renames:
+                ed.set(q, "name", wording)
+                note("faq-renamed")
+                FAQ_LOG.append((rel, "renamed", old_name, wording))
             if not drops:
                 continue
             if len(drops) < len(me["items"]):
                 ed.drop_items(me, drops)
                 note("faq", len(drops))
+                for i in drops:
+                    FAQ_LOG.append((rel, "dropped", E.value(text, me["items"][i])["name"], None))
                 continue
             # no Question survives: drop the whole FAQPage node
             holder = None
@@ -276,6 +309,8 @@ def transform(rel, text, canon, steps, verify=True):
             if holder is not None and len(holder["items"]) > 1:
                 ed.drop_items(holder, [holder["items"].index(n)])
                 note("faq", len(drops))
+                for i in drops:
+                    FAQ_LOG.append((rel, "dropped", E.value(text, me["items"][i])["name"], None))
             else:
                 warnings.append("FAQPage has no visible Question and cannot be dropped without removing its script tag")
 
