@@ -1,8 +1,9 @@
 # Site quality gates for ghosxt.com.
 #
 # Jobs (all run on pull requests to main; the first three also run on push to main):
-#   static-checks   title and meta length, CSP hash drift, em dashes, [VERIFY] markers,
-#                   dental targeting, all gated as "no worse than the base branch" where
+#   static-checks   title and meta length, CSP hash drift, business entity JSON-LD drift
+#                   (scripts/apply-entity.py --check), em dashes, [VERIFY] markers,
+#                   dental targeting, gated as "no worse than the base branch" where
 #                   main is not yet clean.
 #   html-validate   html-validate over every served page with .htmlvalidate.json.
 #   links           local crawl of the built site: broken internal links, sitemap entries
@@ -11,9 +12,13 @@
 #                   with per-page budgets from audit/ci/lighthouserc.<ff>.json. Accessibility,
 #                   best practices, SEO and CLS fail the job; performance score, LCP and TBT
 #                   are warnings (they vary with the runner's CPU) and show in the job log.
-#   seo-checks      repo-level title, meta, JSON-LD, FAQ, entity and marker checks
-#                   (audit/tools/check-seo-meta.mjs); informational (continue-on-error)
-#                   until the AUDIT.md B and C pull requests land, then promoted to a gate.
+#   structured-data blocking: the audit/tools/check-seo-meta.mjs checks that have reached
+#                   zero (business node, Service provider, breadcrumbs, entity and area
+#                   consistency, JSON-LD parse, one h1, canonical, unique metas, key
+#                   facts, em dash, dental) must stay at zero.
+#   seo-checks      the full check-seo-meta.mjs report (title, meta, JSON-LD, FAQ, entity
+#                   and marker checks); informational (continue-on-error). A check moves
+#                   to structured-data once it reaches zero.
 #   visual-diff     Playwright screenshots of every page at mobile and desktop widths for
 #                   the base branch and the PR head, compared with pixelmatch. Any change
 #                   fails unless the PR carries the label "visual-change-approved".
