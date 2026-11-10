@@ -32,6 +32,11 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from _chrome import extract_chrome  # noqa: E402
+import _entity  # noqa: E402
+
+# Canonical business node (single source: contact.html + footer list), emitted
+# as the first @graph element of every generated page. See _entity.py.
+BUSINESS_LINE = _entity.business_line(10)
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -439,6 +444,7 @@ def build_page(chrome, slug, city):
       {{
         "@context": "https://schema.org",
         "@graph": [
+{BUSINESS_LINE},
           {{
             "@type": "Service",
             "@id": "{url}#service",

@@ -113,67 +113,17 @@
               "longitude": -121.6555
             },
             "areaServed": [
-              {
-                "@type": "GeoCircle",
-                "geoMidpoint": {
-                  "@type": "GeoCoordinates",
-                  "latitude": 36.6777,
-                  "longitude": -121.6555
-                },
-                "geoRadius": "80000"
-              },
-              {
-                "@type": "City",
-                "name": "Salinas"
-              },
-              {
-                "@type": "City",
-                "name": "Monterey"
-              },
-              {
-                "@type": "City",
-                "name": "Watsonville"
-              },
-              {
-                "@type": "City",
-                "name": "Santa Cruz"
-              },
-              {
-                "@type": "City",
-                "name": "Hollister"
-              },
-              {
-                "@type": "City",
-                "name": "Gilroy"
-              },
-              {
-                "@type": "City",
-                "name": "San Jose"
-              },
-              {
-                "@type": "City",
-                "name": "Pacific Grove"
-              },
-              {
-                "@type": "City",
-                "name": "Carmel"
-              },
-              {
-                "@type": "City",
-                "name": "Seaside"
-              },
-              {
-                "@type": "City",
-                "name": "Marina"
-              },
-              {
-                "@type": "State",
-                "name": "California"
-              },
-              {
-                "@type": "Country",
-                "name": "United States"
-              }
+              { "@type": "City", "name": "Salinas" },
+              { "@type": "City", "name": "Monterey" },
+              { "@type": "City", "name": "Watsonville" },
+              { "@type": "City", "name": "Hollister" },
+              { "@type": "City", "name": "Santa Cruz" },
+              { "@type": "City", "name": "Gilroy" },
+              { "@type": "City", "name": "San Jose" },
+              { "@type": "City", "name": "Pacific Grove" },
+              { "@type": "City", "name": "Carmel" },
+              { "@type": "City", "name": "Seaside" },
+              { "@type": "City", "name": "Marina" }
             ],
             "sameAs": [
               "https://share.google/88vsSuams5s62RdPJ",
@@ -203,25 +153,28 @@
                   "@type": "Offer",
                   "itemOffered": {
                     "@type": "Service",
-                    "name": "Managed IT Services"
+                    "name": "Managed IT Services",
+                    "provider": { "@id": "https://ghosxt.com/#business" }
                   }
                 },
                 {
                   "@type": "Offer",
-                  "itemOffered": { "@type": "Service", "name": "Cybersecurity" }
+                  "itemOffered": { "@type": "Service", "name": "Cybersecurity", "provider": { "@id": "https://ghosxt.com/#business" } }
                 },
                 {
                   "@type": "Offer",
                   "itemOffered": {
                     "@type": "Service",
-                    "name": "Cloud Services"
+                    "name": "Cloud Services",
+                    "provider": { "@id": "https://ghosxt.com/#business" }
                   }
                 },
                 {
                   "@type": "Offer",
                   "itemOffered": {
                     "@type": "Service",
-                    "name": "Web Development"
+                    "name": "Web Development",
+                    "provider": { "@id": "https://ghosxt.com/#business" }
                   }
                 }
               ]
@@ -232,12 +185,7 @@
             "@id": "https://ghosxt.com/#website",
             "url": "https://ghosxt.com",
             "name": "Ghosxt",
-            "publisher": { "@id": "https://ghosxt.com/#business" },
-            "potentialAction": {
-              "@type": "SearchAction",
-              "target": "https://ghosxt.com/?s={search_term_string}",
-              "query-input": "required name=search_term_string"
-            }
+            "publisher": { "@id": "https://ghosxt.com/#business" }
           },
           {
             "@type": "WebPage",

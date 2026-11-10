@@ -82,10 +82,10 @@
         "@graph": [
           {
             "@type": "LocalBusiness",
-            "@id": "https://ghosxt.com/ctpat#business",
+            "@id": "https://ghosxt.com/#business",
             "name": "Ghosxt",
             "description": "Managed IT services and C-TPAT-aligned cybersecurity compliance for California importers, carriers, and logistics companies.",
-            "url": "https://ghosxt.com/ctpat",
+            "url": "https://ghosxt.com",
             "image": "https://ghosxt.com/assets/img/ghosxt-logo-160.webp",
             "telephone": "+18312040501",
             "email": "sales@ghosxt.com",
@@ -93,11 +93,17 @@
             "address": { "@type": "PostalAddress", "addressLocality": "Salinas", "addressRegion": "CA", "postalCode": "93901", "addressCountry": "US" },
             "geo": { "@type": "GeoCoordinates", "latitude": 36.6777, "longitude": -121.6555 },
             "areaServed": [
-              { "@type": "State", "name": "California" },
               { "@type": "City", "name": "Salinas" },
               { "@type": "City", "name": "Monterey" },
+              { "@type": "City", "name": "Watsonville" },
+              { "@type": "City", "name": "Hollister" },
               { "@type": "City", "name": "Santa Cruz" },
-              { "@type": "City", "name": "San Jose" }
+              { "@type": "City", "name": "Gilroy" },
+              { "@type": "City", "name": "San Jose" },
+              { "@type": "City", "name": "Pacific Grove" },
+              { "@type": "City", "name": "Carmel" },
+              { "@type": "City", "name": "Seaside" },
+              { "@type": "City", "name": "Marina" }
             ]
           },
           {
@@ -106,8 +112,8 @@
             "name": "C-TPAT Cybersecurity Compliance | Ghosxt",
             "url": "https://ghosxt.com/ctpat",
             "description": "Ghosxt provides C-TPAT-aligned IT security and cybersecurity compliance services for California importers, carriers, and logistics companies.",
-            "isPartOf": { "@id": "https://ghosxt.com/ctpat#business" },
-            "about": { "@id": "https://ghosxt.com/ctpat#business" },
+            "isPartOf": { "@id": "https://ghosxt.com/#business" },
+            "about": { "@id": "https://ghosxt.com/#business" },
             "inLanguage": "en-US"
           },
           {
@@ -170,6 +176,14 @@
                 }
               }
             ]
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ghosxt.com/" },
+              { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://ghosxt.com/services" },
+              { "@type": "ListItem", "position": 3, "name": "C-TPAT Compliance", "item": "https://ghosxt.com/ctpat" }
+            ]
           }
         ]
       }
@@ -187,7 +201,7 @@
           "name": "C-TPAT Compliance",
           "url": "https://ghosxt.com/ctpat",
           "provider": {
-            "@id": "https://ghosxt.com/ctpat#business"
+            "@id": "https://ghosxt.com/#business"
           },
           "areaServed": [
             {
