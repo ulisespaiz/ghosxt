@@ -71,6 +71,8 @@ jobs:
           fi
       - name: CSP hash allowlist matches inline scripts
         run: python3 scripts/compute-csp-hashes.py --check
+      - name: Business entity JSON-LD matches its source (contact.html)
+        run: python3 scripts/apply-entity.py --check
       - name: Title and meta length (no new violations versus base)
         run: |
           set -e
@@ -161,8 +163,33 @@ jobs:
           name: crawl-report
           path: /tmp/crawl/report.md
 
+  # Blocking gate for the structured data layer: the thirteen checks below pass on the
+  # branch today and must keep passing. Still informational, in the seo-checks job below:
+  # faq-visible, title-unique, title-length, meta-length and og-twitter (they move to this
+  # list after PR #295 merges) and verify-markers (moves after the owner answers
+  # audit/VERIFY-LIST.md).
+  structured-data:
+    name: Structured data gate
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+          cache-dependency-path: audit/package-lock.json
+      - run: npm ci --no-audit --no-fund
+        working-directory: audit
+      - name: Run blocking structured-data checks
+        run: |
+          set -o pipefail
+          node audit/tools/check-seo-meta.mjs --quiet --only meta-unique,h1-single,canonical-self,jsonld-parse,business-node,service-provider,breadcrumbs,localbusiness-consistent,areaserved-consistent,search-action,em-dash,dental,key-facts | tee /tmp/structured-data.md || status=$?
+          { echo '## Structured data gate'; echo; grep -E '^- ' /tmp/structured-data.md || true; } >> "$GITHUB_STEP_SUMMARY"
+          exit ${status:-0}
+
   seo-checks:
-    name: SEO and structured-data checks (informational until AUDIT.md B and C land)
+    name: SEO checks, full report (informational)
     runs-on: ubuntu-latest
     timeout-minutes: 10
     continue-on-error: true
