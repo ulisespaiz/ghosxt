@@ -24,6 +24,24 @@ AI-citation, or Core Web Vitals impact. P2 is polish.
   change (TBT 0 ms on both). The warn-level `/contact` mobile TBT budget (246 ms) will
   fire until the budgets are regenerated after merge (HANDOFF row 0); T-21 removes the
   cost itself.
+- 2026-11-10: PR #300 adds the single-source business entity module
+  (`scripts/_entity.py`, `scripts/apply-entity.py`, a blocking CI gate) and applies it.
+  Closed: S-02, S-03 (five pages; `ghosxt-cares` is retired), S-06, T-15. Partly closed:
+  S-01 (one `@id`, name, url, phone, email, address and area served on every
+  LocalBusiness node; description, hours, sameAs and price range still vary by page, so
+  the "one body" acceptance does not pass yet) and S-04 (faq-visible went from 24 pages to
+  11; the 11 left are the blog posts PR #295 fixes; the city hubs now carry fewer schema
+  questions than visible ones, so adding the visible-only questions to the schema is the
+  follow-up). S-05 and L-04 are closed for JSON-LD with the footer city list, not the
+  county list in the finding, because the counties are not visible on every page (rule
+  8); the owner decides whether to switch (edit the `contact.html` node, run `--apply`).
+  Evidence corrections found on the way: S-01 said every business node shared one `@id`,
+  but 17 pages minted their own; S-07 is mostly moot, since the business node on `/`,
+  `/about`, `/contact`, `/pricing` and `/support` already carries four `sameAs` URLs;
+  A-07 is done except the `/managed-ai` line (`llms.txt` has no "Emergency line" and
+  `llms-full.txt` is 187 KB); the worker fixes proposed in T-03 and T-07 would not run,
+  because `wrangler.jsonc` serves a matching static asset before `src/worker.js` is
+  invoked (use a Cloudflare redirect rule for the www host, or set `run_worker_first`).
 
 ## Assumptions made because the owner was not available to answer
 

@@ -115,7 +115,7 @@
           "@type": "LocalBusiness",
           "@id": "https://ghosxt.com/#business",
           "name": "Ghosxt",
-          "url": "https://ghosxt.com/",
+          "url": "https://ghosxt.com",
           "logo": "https://ghosxt.com/assets/img/ghosxt-logo-160.webp",
           "telephone": "+18312040501",
           "email": "sales@ghosxt.com",
@@ -123,8 +123,17 @@
           "founder": {"@id": "https://ghosxt.com/#ulises-paiz"},
           "employee": {"@id": "https://ghosxt.com/#ulises-paiz"},
           "areaServed": [
-            {"@type": "State", "name": "California"},
-            {"@type": "Country", "name": "United States"}
+            { "@type": "City", "name": "Salinas" },
+            { "@type": "City", "name": "Monterey" },
+            { "@type": "City", "name": "Watsonville" },
+            { "@type": "City", "name": "Hollister" },
+            { "@type": "City", "name": "Santa Cruz" },
+            { "@type": "City", "name": "Gilroy" },
+            { "@type": "City", "name": "San Jose" },
+            { "@type": "City", "name": "Pacific Grove" },
+            { "@type": "City", "name": "Carmel" },
+            { "@type": "City", "name": "Seaside" },
+            { "@type": "City", "name": "Marina" }
           ],
           "sameAs": [
             "https://share.google/88vsSuams5s62RdPJ",
@@ -138,7 +147,15 @@
             "email": "sales@ghosxt.com",
             "contactType": "Customer Support",
             "url": "https://calendly.com/ulises-ghosxt"
-          }
+          },
+          "address": { "@type": "PostalAddress", "addressLocality": "Salinas", "addressRegion": "CA", "postalCode": "93901", "addressCountry": "US" }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ghosxt.com/" },
+            { "@type": "ListItem", "position": 2, "name": "About", "item": "https://ghosxt.com/about" }
+          ]
         }
       ]
     }

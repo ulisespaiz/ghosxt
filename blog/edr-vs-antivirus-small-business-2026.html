@@ -59,35 +59,6 @@
               { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://ghosxt.com/blog/" },
               { "@type": "ListItem", "position": 3, "name": "EDR vs. Antivirus for Small Business", "item": "https://ghosxt.com/blog/edr-vs-antivirus-small-business-2026" }
             ]
-          },
-          {
-            "@type": "FAQPage",
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "Is EDR just a more expensive antivirus?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "No. Antivirus decides whether to allow a file to run. EDR assumes some threats will get past that first decision and instead watches what happens after a program is already running (process launches, script execution, credential access, lateral movement) so it can catch attacks that never use a malicious file at all. Most modern EDR products include antivirus-style scanning as one layer, not a replacement for it."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Do I need EDR if I only have 5 or 10 employees?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Attackers do not scale their tactics down for small targets: the same fileless techniques and human-operated ransomware playbooks used against large companies are run against 5-person businesses, often because they are easier to breach and less likely to notice. The honest answer is that business size affects how you buy EDR (bundled into a managed detection service rather than run in-house), not whether you need the visibility it provides."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "What is the difference between EDR and MDR?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "EDR is the software agent installed on each device that collects activity data and can take action, like isolating a machine from the network. MDR (Managed Detection and Response) is a service where a security team watches the alerts that EDR generates around the clock and responds to real threats. Most small businesses need both: the tool and someone actually watching what it reports, since an EDR alert nobody reads at 2 a.m. does not stop an attack."
-                }
-              }
-            ]
           }
         ]
       }

@@ -1,8 +1,9 @@
 # Site quality gates for ghosxt.com.
 #
 # Jobs (all run on pull requests to main; the first three also run on push to main):
-#   static-checks   title and meta length, CSP hash drift, em dashes, [VERIFY] markers,
-#                   dental targeting, all gated as "no worse than the base branch" where
+#   static-checks   title and meta length, CSP hash drift, business entity JSON-LD drift
+#                   (scripts/apply-entity.py --check), em dashes, [VERIFY] markers,
+#                   dental targeting, gated as "no worse than the base branch" where
 #                   main is not yet clean.
 #   html-validate   html-validate over every served page with .htmlvalidate.json.
 #   links           local crawl of the built site: broken internal links, sitemap entries
@@ -11,9 +12,13 @@
 #                   with per-page budgets from audit/ci/lighthouserc.<ff>.json. Accessibility,
 #                   best practices, SEO and CLS fail the job; performance score, LCP and TBT
 #                   are warnings (they vary with the runner's CPU) and show in the job log.
-#   seo-checks      repo-level title, meta, JSON-LD, FAQ, entity and marker checks
-#                   (audit/tools/check-seo-meta.mjs); informational (continue-on-error)
-#                   until the AUDIT.md B and C pull requests land, then promoted to a gate.
+#   structured-data blocking: the audit/tools/check-seo-meta.mjs checks that have reached
+#                   zero (business node, Service provider, breadcrumbs, entity and area
+#                   consistency, JSON-LD parse, one h1, canonical, unique metas, key
+#                   facts, em dash, dental) must stay at zero.
+#   seo-checks      the full check-seo-meta.mjs report (title, meta, JSON-LD, FAQ, entity
+#                   and marker checks); informational (continue-on-error). A check moves
+#                   to structured-data once it reaches zero.
 #   visual-diff     Playwright screenshots of every page at mobile and desktop widths for
 #                   the base branch and the PR head, compared with pixelmatch. Any change
 #                   fails unless the PR carries the label "visual-change-approved".
@@ -71,6 +76,8 @@ jobs:
           fi
       - name: CSP hash allowlist matches inline scripts
         run: python3 scripts/compute-csp-hashes.py --check
+      - name: Business entity JSON-LD matches its source (contact.html)
+        run: python3 scripts/apply-entity.py --check
       - name: Title and meta length (no new violations versus base)
         run: |
           set -e
@@ -161,8 +168,33 @@ jobs:
           name: crawl-report
           path: /tmp/crawl/report.md
 
+  # Blocking gate for the structured data layer: the thirteen checks below pass on the
+  # branch today and must keep passing. Still informational, in the seo-checks job below:
+  # faq-visible, title-unique, title-length, meta-length and og-twitter (they move to this
+  # list after PR #295 merges) and verify-markers (moves after the owner answers
+  # audit/VERIFY-LIST.md).
+  structured-data:
+    name: Structured data gate
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+          cache-dependency-path: audit/package-lock.json
+      - run: npm ci --no-audit --no-fund
+        working-directory: audit
+      - name: Run blocking structured-data checks
+        run: |
+          set -o pipefail
+          node audit/tools/check-seo-meta.mjs --quiet --only meta-unique,h1-single,canonical-self,jsonld-parse,business-node,service-provider,breadcrumbs,localbusiness-consistent,areaserved-consistent,search-action,em-dash,dental,key-facts | tee /tmp/structured-data.md || status=$?
+          { echo '## Structured data gate'; echo; grep -E '^- ' /tmp/structured-data.md || true; } >> "$GITHUB_STEP_SUMMARY"
+          exit ${status:-0}
+
   seo-checks:
-    name: SEO and structured-data checks (informational until AUDIT.md B and C land)
+    name: SEO checks, full report (informational)
     runs-on: ubuntu-latest
     timeout-minutes: 10
     continue-on-error: true
