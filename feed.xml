@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from an engineer with DoD infrastructure experience.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Tue, 10 Nov 2026 12:13:55 +0000</lastBuildDate>
-    <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Wed, 11 Nov 2026 12:13:25 +0000</lastBuildDate>
+    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>Email Bombing: Why Your Inbox Is Flooding</title>
+      <link>https://ghosxt.com/blog/email-bombing-inbox-flooded-spam-small-business-2026</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/email-bombing-inbox-flooded-spam-small-business-2026</guid>
+      <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>Hundreds of spam emails in minutes is often cover for fraud. See what email bombing hides, what to check first, and how to stop it.</description>
+    </item>
     <item>
       <title>External Email Warning Banner: Set It Up</title>
       <link>https://ghosxt.com/blog/external-sender-warning-banner-email-small-business-2026</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>Unlocked network closets invite tampering and theft. How small businesses secure server rooms: locks, access logs, cooling, cabling, and backups.</description>
-    </item>
-    <item>
-      <title>Secure File Sharing for Small Business</title>
-      <link>https://ghosxt.com/blog/secure-file-sharing-external-links-small-business-2026</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/secure-file-sharing-external-links-small-business-2026</guid>
-      <pubDate>Sat, 10 Oct 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>Email attachments and open links leak data. How small businesses share files securely with clients using expiring links and named-person access.</description>
     </item>
   </channel>
 </rss>
