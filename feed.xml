@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from an engineer with DoD infrastructure experience.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Thu, 12 Nov 2026 12:13:19 +0000</lastBuildDate>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Fri, 13 Nov 2026 12:13:00 +0000</lastBuildDate>
+    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>Got a Verification Code You Did Not Request?</title>
+      <link>https://ghosxt.com/blog/verification-code-you-did-not-request-small-business-2026</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/verification-code-you-did-not-request-small-business-2026</guid>
+      <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>A login code or password reset you did not request means someone tried your account. Here is what each one means, what to do, and when to worry.</description>
+    </item>
     <item>
       <title>Fake Virus Alert Pop-Up? What to Do Next</title>
       <link>https://ghosxt.com/blog/tech-support-scam-fake-virus-popup-small-business-2026</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>Clicked a phishing link or opened a bad attachment? The first-hour steps to contain it: disconnect, change passwords, revoke sessions, and report.</description>
-    </item>
-    <item>
-      <title>Conditional Access in Microsoft 365</title>
-      <link>https://ghosxt.com/blog/conditional-access-microsoft-365-small-business-2026</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/conditional-access-microsoft-365-small-business-2026</guid>
-      <pubDate>Mon, 12 Oct 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>Conditional Access decides who gets into Microsoft 365 and when. Five starter policies small businesses can turn on this week, plus common lockout mistakes.</description>
     </item>
   </channel>
 </rss>
