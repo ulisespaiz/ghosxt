@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from an engineer with DoD infrastructure experience.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Sat, 14 Nov 2026 12:09:33 +0000</lastBuildDate>
-    <pubDate>Sat, 14 Nov 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Sun, 15 Nov 2026 12:10:05 +0000</lastBuildDate>
+    <pubDate>Sun, 15 Nov 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>Employees Using Personal Email for Work?</title>
+      <link>https://ghosxt.com/blog/personal-email-for-work-small-business-2026</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/personal-email-for-work-small-business-2026</guid>
+      <pubDate>Sun, 15 Nov 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>Staff sending work files from personal Gmail or Yahoo puts client data where you cannot see, back up, or remove it. Here is the risk and how to fix it.</description>
+    </item>
     <item>
       <title>Bounce-Back Emails You Did Not Send?</title>
       <link>https://ghosxt.com/blog/bounce-back-emails-you-did-not-send-small-business-2026</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>Sharing one password across the team is risky. Learn how shared mailboxes, delegated access, and a password manager keep accounts secure and auditable.</description>
-    </item>
-    <item>
-      <title>October 2026 Patch Tuesday: Record 1,400 Fixes, 3 Zero-Days</title>
-      <link>https://ghosxt.com/blog/october-2026-patch-tuesday-record-1400-fixes-smb</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/october-2026-patch-tuesday-record-1400-fixes-smb</guid>
-      <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>October 2026 Patch Tuesday: a record 1,400-plus fixes, one exploited Windows Shell zero-day, and what a Salinas small business should do this week.</description>
     </item>
   </channel>
 </rss>
