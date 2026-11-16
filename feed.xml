@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from an engineer with DoD infrastructure experience.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Sun, 15 Nov 2026 12:10:05 +0000</lastBuildDate>
-    <pubDate>Sun, 15 Nov 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Mon, 16 Nov 2026 12:13:32 +0000</lastBuildDate>
+    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>Sign-In Alert You Don't Recognize? What to Do</title>
+      <link>https://ghosxt.com/blog/unrecognized-sign-in-alert-what-to-do-small-business-2026</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/unrecognized-sign-in-alert-what-to-do-small-business-2026</guid>
+      <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>Got a new sign-in or unusual activity alert on your work account? How to tell if it is real, what to do in the first 15 minutes, and how to stop repeats.</description>
+    </item>
     <item>
       <title>Employees Using Personal Email for Work?</title>
       <link>https://ghosxt.com/blog/personal-email-for-work-small-business-2026</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>Is the router from your internet provider enough? Learn what a business firewall adds, what to look for, and how to set one up without slowing your team.</description>
-    </item>
-    <item>
-      <title>Shared Logins and Shared Mailboxes: Stop Sharing One Password</title>
-      <link>https://ghosxt.com/blog/shared-logins-shared-mailboxes-small-business-2026</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/shared-logins-shared-mailboxes-small-business-2026</guid>
-      <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>Sharing one password across the team is risky. Learn how shared mailboxes, delegated access, and a password manager keep accounts secure and auditable.</description>
     </item>
   </channel>
 </rss>
