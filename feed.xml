@@ -7,9 +7,18 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from an engineer with DoD infrastructure experience.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Mon, 16 Nov 2026 12:13:32 +0000</lastBuildDate>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Tue, 17 Nov 2026 12:12:13 +0000</lastBuildDate>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
+    <item>
+      <title>Direct Deposit Change Scam: Stop Payroll Diversion</title>
+      <link>https://ghosxt.com/blog/payroll-diversion-direct-deposit-change-scam-small-business-2026</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/payroll-diversion-direct-deposit-change-scam-small-business-2026</guid>
+      <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>An employee emails asking to change their direct deposit? It may be payroll diversion. How to spot the scam and verify bank changes before payday.</description>
+    </item>
     <item>
       <title>Sign-In Alert You Don't Recognize? What to Do</title>
       <link>https://ghosxt.com/blog/unrecognized-sign-in-alert-what-to-do-small-business-2026</link>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>Throwing out old PCs and drives can leak customer data. Learn how to wipe, destroy, and document disposal of business computers the right way.</description>
-    </item>
-    <item>
-      <title>Business Firewall vs ISP Router for Small Business</title>
-      <link>https://ghosxt.com/blog/business-firewall-vs-isp-router-small-business-2026</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/business-firewall-vs-isp-router-small-business-2026</guid>
-      <pubDate>Thu, 15 Oct 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>Is the router from your internet provider enough? Learn what a business firewall adds, what to look for, and how to set one up without slowing your team.</description>
     </item>
   </channel>
 </rss>
