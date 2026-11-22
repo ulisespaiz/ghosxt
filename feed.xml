@@ -7,17 +7,17 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from an engineer with DoD infrastructure experience.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Sun, 22 Nov 2026 19:27:14 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 22 Nov 2026 19:31:07 +0000</lastBuildDate>
     <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
     <item>
-      <title>NAS Flaw Under Attack: What a Small Office Should Check</title>
+      <title>Synology NAS Flaw Under Attack: What to Check Today</title>
       <link>https://ghosxt.com/blog/nas-flaw-cisa-exploited-network-storage-small-business-2026</link>
       <guid isPermaLink="true">https://ghosxt.com/blog/nas-flaw-cisa-exploited-network-storage-small-business-2026</guid>
       <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
-      <description>CISA says a 2024 network storage (NAS) flaw is being exploited. What a small office should check today, and why a NAS on its own is not a backup.</description>
+      <description>CISA says a 2024 Synology NAS flaw (CVE-2024-10441) is being exploited. What a small office should check today, and why a NAS is not a backup.</description>
     </item>
     <item>
       <title>Direct Deposit Change Scam: Stop Payroll Diversion</title>
