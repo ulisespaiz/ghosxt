@@ -1,0 +1,736 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#ffffff" />
+    <title>November 2026 Patch Tuesday: Outlook Zero-Day, 1,000+ Fixes</title>
+    <meta name="description" content="November 2026 Patch Tuesday: an Outlook zero-day is under attack, and Windows Update alone will not fix it. What to check first and what staff should do." />
+    <link rel="canonical" href="https://ghosxt.com/blog/november-2026-patch-tuesday-outlook-zero-day-smb" />
+    <link rel="alternate" type="application/rss+xml" title="Ghosxt Blog" href="https://ghosxt.com/feed.xml" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://ghosxt.com/blog/november-2026-patch-tuesday-outlook-zero-day-smb" />
+    <meta property="og:title" content="November 2026 Patch Tuesday: Outlook Zero-Day, 1,000+ Fixes" />
+    <meta property="og:description" content="Microsoft's November 2026 Patch Tuesday fixed more than 1,000 flaws, and one of them is already being exploited: an Outlook flaw that can leak a person's Windows password hash when they open a crafted file. The fix ships through Office, not Windows Update, so a PC can look fully patched and still be exposed. What it means for a small business, the handful of fixes that matter, how we roll out patches, and what your staff should do." />
+    <meta property="og:image" content="https://ghosxt.com/assets/img/og/blog-november-2026-patch-tuesday-outlook-zero-day-smb.png" />
+    <meta property="og:site_name" content="Ghosxt" />
+    <meta property="article:published_time" content="2026-11-10" />
+    <meta property="article:author" content="Ulises Paiz" />
+    <meta name="robots" content="index, follow" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="November 2026 Patch Tuesday: Outlook Zero-Day, 1,000+ Fixes" />
+    <meta name="twitter:description" content="One Outlook zero-day is already under attack, and Windows Update will not fix it. The plain-English plan for a small business." />
+    <meta name="twitter:image" content="https://ghosxt.com/assets/img/og/blog-november-2026-patch-tuesday-outlook-zero-day-smb.png" />
+    <link rel="icon" href="../assets/img/favicon.ico" sizes="any" />
+    <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- ghosxt:roboto-preload -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" />
+    <link rel="preconnect" href="https://cdn-uicons.flaticon.com" />
+    <link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" /></noscript>
+    <link rel="stylesheet" href="../assets/css/main.min.css?v=2026-11-08a" />
+    <link rel="stylesheet" href="../assets/css/blog.min.css?v=2026-11-08a" />
+    <link rel="stylesheet" media="print" onload="this.media='all'" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" />
+    <noscript><link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" /></noscript>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "BlogPosting",
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://ghosxt.com/blog/november-2026-patch-tuesday-outlook-zero-day-smb"
+            },
+            "headline": "November 2026 Patch Tuesday: One Outlook Zero-Day, Over 1,000 Fixes, and What a Small Business Needs to Do",
+            "description": "Microsoft's November 2026 Patch Tuesday fixed more than 1,000 flaws, and one of them is already being exploited: an Outlook flaw that can leak a person's Windows password hash when they open a crafted file. The fix ships through Office, not Windows Update, so a PC can look fully patched and still be exposed. What it means for a small business, the handful of fixes that matter, how we roll out patches, and what your staff should do.",
+            "image": "https://ghosxt.com/assets/img/og/blog-november-2026-patch-tuesday-outlook-zero-day-smb.png",
+            "author": {
+              "@type": "Person",
+              "name": "Ulises Paiz",
+              "url": "https://ghosxt.com/about"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Ghosxt",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://ghosxt.com/assets/img/ghosxt-logo-160.webp"
+              }
+            },
+            "datePublished": "2026-11-10",
+            "dateModified": "2026-11-22",
+            "articleSection": "Cybersecurity",
+            "keywords": "November 2026 Patch Tuesday, Microsoft security updates, Outlook zero-day, CVE-2026-124194, NTLMv2 hash leak, Windows Search Exchange CVE-2026-116928, Exchange Server Subscription Edition KB5133453, CVE-2026-118207, LDAP CVE-2026-119958, SharePoint Server CVE-2026-120002, KB5132061, KB5131087, KB5131096, Office update small business, patch management small business, Monterey County, Central Coast managed IT"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://ghosxt.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Blog",
+                "item": "https://ghosxt.com/blog/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "November 2026 Patch Tuesday",
+                "item": "https://ghosxt.com/blog/november-2026-patch-tuesday-outlook-zero-day-smb"
+              }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "How many vulnerabilities did the November 2026 Patch Tuesday fix?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "It depends on what you count, which is why the headlines disagree. Microsoft's release notes list 1,094 CVEs for November 10, 2026, and trackers that count differently land between 1,090 and 1,093. One outlet reported as many as 1,235. Of the Microsoft items, 63 are rated Critical, and Microsoft flagged 42 more as more likely to be exploited. It is the second month in a row above 1,000, a little under October's record of more than 1,400. Only one of the flaws is confirmed to be under attack."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the Outlook zero-day, and does it affect us?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "CVE-2026-124194 is a spoofing flaw in Outlook, rated Moderate with a CVSS score of 6.5. Microsoft marks it as exploitation detected, meaning attackers are already using it. It works when a person opens a crafted file: Outlook connects to a server the attacker controls without showing the usual external-content warning, and that connection can hand over the person's NTLMv2 hash, a scrambled form of their Windows password. An attacker can replay the hash to sign in as that person elsewhere, or crack it to recover the password. Reports say Microsoft does not treat the Preview Pane as an attack vector, so the file has to be opened. Microsoft 365 Apps, Office LTSC 2021 and Office LTSC 2024 are listed as affected, so if your team uses desktop Outlook, assume it applies to you. CISA added the flaw to its Known Exploited Vulnerabilities catalog on November 10, 2026, with a federal deadline of November 24."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does Windows Update fix the Outlook flaw?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. The fix for this flaw ships through Office, which updates on its own channel, separate from the Windows cumulative update. A PC can show that Windows is fully up to date and still be running a vulnerable Outlook. To check one machine, open Outlook, go to File, Office Account, Update Options, then Update Now. The patched builds are 16.0.14334.21048 for Office LTSC 2021 and 16.0.17932.21140 for Office LTSC 2024. The reports we read do not give a build number for Microsoft 365 Apps, so confirm the update applied rather than comparing numbers. Managed clients do not need to do anything, because we run Office as its own pass and verify the installed version on each machine."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "We still run Exchange on-premises. What should happen first?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Three things. First, a Windows Search flaw, CVE-2026-116928, rated 9.8, can be triggered by an email attachment that Exchange indexes automatically, so nobody has to open it. It is fixed in the Windows Server cumulative update, not the Exchange update, so the Exchange server needs both. Second, Exchange Server Subscription Edition has its own update, KB5133453, for CVE-2026-118207, which lets a logged-in attacker with a low-level account run code. Third, the November Windows Server updates also fix the problem that broke Outlook on the web and email sending after October's Windows Server updates. Exchange 2016 and 2019 do not appear in this month's Exchange update list, so if you still run one, ask what is protecting it."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do we need to do anything about the Entra flaw with the perfect 10 score?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Probably nothing you install. CVE-2026-109469 affects Entra Device Registration, a cloud service Microsoft runs itself, and it is rated CVSS 10.0, which is why it tops any list sorted by score. It is not reported as exploited. The reports we read do not identify a step for customers, and Microsoft's advisory is where any required step would be spelled out, so have your IT provider read it rather than assuming."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "When will our machines be patched, and will it interrupt work?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "For managed clients, workstations get the monthly update on the Thursday after Patch Tuesday, after hours, with reboots scheduled for early the next morning before the first shift. Leave the computer on, or plugged in and asleep, Thursday night. Servers are patched in their normal after-hours maintenance window. Office updates ship on their own channel, so they go out as a separate pass and we verify the installed version on each machine afterward. Laptops that are off the network catch up the next time they connect, and we track the stragglers. The gap of about 48 hours between release and rollout is deliberate: it lets the first wave of installs surface any bad patch before it reaches your fleet."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+    <!-- ghosxt:cf-web-analytics -->
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"f3ce7e0e17f54050845d52d7f355cd98"}'></script>
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top"><i class="fi fi-rs-angle-up" aria-hidden="true"></i></button>
+
+    <nav class="navbar" aria-label="Main navigation">
+      <div class="navbar-container">
+        <div class="navbar-left">
+          <a href="/" class="navbar-logo">
+            <img fetchpriority="high" loading="eager" src="../assets/img/ghosxt-logo-160.webp" alt="Ghosxt logo" width="48" height="48" />
+            <span>GHOSXT</span>
+          </a>
+        </div>
+        <div class="navbar-right">
+          <div class="navbar-menu">
+            <div class="navbar-dropdown">
+              <a href="/about" class="navbar-link dropdown-trigger">About <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></a>
+              <div class="dropdown-menu">
+                <a href="/about" class="dropdown-item">About Ghosxt</a>
+                <a href="/support" class="dropdown-item">Get Support</a>
+              </div>
+            </div>
+            <div class="navbar-dropdown">
+              <a href="/services" class="navbar-link dropdown-trigger">Services <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></a>
+              <div class="dropdown-menu">
+                <a href="/services" class="dropdown-item">All Services</a>
+                <a href="/managed-it-services" class="dropdown-item">Managed IT Services</a>
+                <a href="/help-desk-it-support" class="dropdown-item">IT Help Desk &amp; Support</a>
+                <a href="/it-consulting-vcio" class="dropdown-item">IT Consulting &amp; vCIO</a>
+                <a href="/cybersecurity" class="dropdown-item">Cybersecurity</a>
+                <a href="/zero-trust-security" class="dropdown-item">Zero Trust Security</a>
+                <a href="/cloud-services" class="dropdown-item">Cloud Services</a>
+                <a href="/backup-disaster-recovery" class="dropdown-item">Backup &amp; Disaster Recovery</a>
+                <a href="/network-design" class="dropdown-item">Network Design</a>
+                <a href="/website-development" class="dropdown-item">Web Development</a>
+                <a href="/website-development#calculator" class="dropdown-item">Website Pricing</a>
+              </div>
+            </div>
+            <div class="navbar-dropdown">
+              <a href="/cybersecurity" class="navbar-link dropdown-trigger">Compliance <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></a>
+              <div class="dropdown-menu">
+                <a href="/cmmc-compliance" class="dropdown-item">CMMC &amp; NIST 800-171</a>
+                <a href="/hipaa-it-compliance" class="dropdown-item">HIPAA IT Compliance</a>
+                <a href="/pci-compliance" class="dropdown-item">PCI DSS Compliance</a>
+                <a href="/ctpat" class="dropdown-item">C-TPAT Compliance</a>
+                <a href="/cyber-insurance-compliance" class="dropdown-item">Cyber Insurance</a>
+              </div>
+            </div>
+            <div class="navbar-dropdown">
+              <a href="/services" class="navbar-link dropdown-trigger">Industries <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></a>
+              <div class="dropdown-menu">
+                <a href="/agriculture-it-services" class="dropdown-item">Agriculture</a>
+                <a href="/trucking-it-services" class="dropdown-item">Trucking &amp; Logistics</a>
+                <a href="/manufacturing-it-services" class="dropdown-item">Manufacturing</a>
+                <a href="/healthcare-it-services" class="dropdown-item">Healthcare &amp; Medical</a>
+                <a href="/hospitality-it-services" class="dropdown-item">Hospitality</a>
+                <a href="/professional-services-it" class="dropdown-item">Professional Services</a>
+                <a href="/property-management-it-services" class="dropdown-item">Property Management</a>
+                <a href="/engineering-it-services" class="dropdown-item">Engineering Firms</a>
+                <a href="/it-support-nonprofits-google-workspace" class="dropdown-item">Nonprofits</a>
+                <a href="/it-support-remote-mac-teams" class="dropdown-item">Remote Mac Teams</a>
+              </div>
+            </div>
+            <a href="/pricing" class="navbar-link">Pricing</a>
+            <a href="/blog/" class="navbar-link">Blog</a>
+            <a href="/contact" class="navbar-link">Contact</a>
+          </div>
+          <button class="navbar-mobile-toggle" id="mobileToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu">
+            <i class="fi fi-rs-burger-menu" aria-hidden="true"></i>
+          </button>
+          <div class="navbar-buttons"><a class="navbar-btn navbar-phone" href="tel:+18312040501" aria-label="Call Ghosxt at (831) 204-0501"><i class="fi fi-rs-phone-call" aria-hidden="true"></i><span>(831)&nbsp;204-0501</span></a>
+            <a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer" class="navbar-btn btn-demo">
+              <i class="fi fi-rs-calendar-day"></i>
+              <span>Book a Call</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="navbar-overlay" id="navbarOverlay"></div>
+      <div class="navbar-mobile-menu" id="mobileMenu">
+        <a href="/" class="mobile-link">Home</a>
+        <div class="mobile-accordion">
+          <button class="mobile-accordion-trigger" aria-expanded="false">About <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></button>
+          <div class="mobile-accordion-content">
+            <a href="/about" class="mobile-dropdown-item">About Ghosxt</a>
+          </div>
+        </div>
+        <div class="mobile-accordion">
+          <button class="mobile-accordion-trigger" aria-expanded="false">Services <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></button>
+          <div class="mobile-accordion-content">
+            <a href="/services" class="mobile-dropdown-item">All Services</a>
+            <a href="/managed-it-services" class="mobile-dropdown-item">Managed IT Services</a>
+            <a href="/help-desk-it-support" class="mobile-dropdown-item">IT Help Desk &amp; Support</a>
+            <a href="/it-consulting-vcio" class="mobile-dropdown-item">IT Consulting &amp; vCIO</a>
+            <a href="/cybersecurity" class="mobile-dropdown-item">Cybersecurity</a>
+            <a href="/zero-trust-security" class="mobile-dropdown-item">Zero Trust Security</a>
+            <a href="/cloud-services" class="mobile-dropdown-item">Cloud Services</a>
+            <a href="/backup-disaster-recovery" class="mobile-dropdown-item">Backup &amp; Disaster Recovery</a>
+            <a href="/network-design" class="mobile-dropdown-item">Network Design</a>
+            <a href="/website-development" class="mobile-dropdown-item">Web Development</a>
+            <a href="/website-development#calculator" class="mobile-dropdown-item">Website Pricing</a>
+          </div>
+        </div>
+        <div class="mobile-accordion">
+          <button class="mobile-accordion-trigger" aria-expanded="false">Compliance <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></button>
+          <div class="mobile-accordion-content">
+            <a href="/cmmc-compliance" class="mobile-dropdown-item">CMMC &amp; NIST 800-171</a>
+            <a href="/hipaa-it-compliance" class="mobile-dropdown-item">HIPAA IT Compliance</a>
+            <a href="/pci-compliance" class="mobile-dropdown-item">PCI DSS Compliance</a>
+            <a href="/ctpat" class="mobile-dropdown-item">C-TPAT Compliance</a>
+            <a href="/cyber-insurance-compliance" class="mobile-dropdown-item">Cyber Insurance</a>
+          </div>
+        </div>
+        <div class="mobile-accordion">
+          <button class="mobile-accordion-trigger" aria-expanded="false">Industries <i class="fi fi-rs-angle-small-down" aria-hidden="true"></i></button>
+          <div class="mobile-accordion-content">
+            <a href="/agriculture-it-services" class="mobile-dropdown-item">Agriculture</a>
+            <a href="/trucking-it-services" class="mobile-dropdown-item">Trucking &amp; Logistics</a>
+            <a href="/manufacturing-it-services" class="mobile-dropdown-item">Manufacturing</a>
+            <a href="/healthcare-it-services" class="mobile-dropdown-item">Healthcare &amp; Medical</a>
+            <a href="/hospitality-it-services" class="mobile-dropdown-item">Hospitality</a>
+            <a href="/professional-services-it" class="mobile-dropdown-item">Professional Services</a>
+            <a href="/property-management-it-services" class="mobile-dropdown-item">Property Management</a>
+            <a href="/engineering-it-services" class="mobile-dropdown-item">Engineering Firms</a>
+            <a href="/it-support-nonprofits-google-workspace" class="mobile-dropdown-item">Nonprofits</a>
+            <a href="/it-support-remote-mac-teams" class="mobile-dropdown-item">Remote Mac Teams</a>
+          </div>
+        </div>
+        <a href="/pricing" class="mobile-link">Pricing</a>
+        <a href="/support" class="mobile-link">Support</a>
+        <a href="/blog/" class="mobile-link">Blog</a>
+        <a href="/contact" class="mobile-link">Contact</a>
+        <div class="mobile-actions">
+          <a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer" class="mobile-btn btn-demo">
+            <i class="fi fi-rs-calendar-day"></i>
+            <span>Book a Call</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+    <main id="main-content" class="blog-post">
+      <header class="blog-post-header">
+        <div class="container">
+          <nav class="blog-post-breadcrumbs" aria-label="Breadcrumb">
+            <a href="/">Home</a><span class="sep">&rsaquo;</span><a href="/blog/">Blog</a><span class="sep">&rsaquo;</span><span aria-current="page">November 2026 Patch Tuesday</span>
+          </nav>
+          <div class="blog-post-meta">
+            <time datetime="2026-11-10">November 10, 2026</time>
+            <span>&middot;</span>
+            <span>16 min read</span>
+            <span>&middot;</span>
+            <span class="blog-card-tag">Cybersecurity</span>
+          </div>
+          <h1>November 2026 Patch Tuesday: One Outlook Zero-Day, Over 1,000 Fixes, and What a Small Business Needs to Do</h1>
+          <div class="blog-post-author">
+            <strong>Ulises Paiz</strong>, Owner, Ghosxt
+          </div>
+          <div class="author-bio-box">
+            <!-- ghosxt:author-bio -->
+            <img src="../assets/img/ulises.avif" alt="Ulises Paiz" width="56" height="56" loading="lazy" />
+            <p>Ulises Paiz is the owner and sole engineer at Ghosxt, a Salinas, CA managed IT and cybersecurity provider. He holds an M.S. in Cybersecurity and Information Assurance (WGU, 2026) and nine industry certifications including CompTIA SecurityX, CySA+, and Microsoft AZ-104, with prior DoD and federal contractor infrastructure experience. <a href="/about">More about Ulises &rarr;</a></p>
+          </div>
+        </div>
+      </header>
+      <div class="blog-post-body">
+        <div class="container">
+          <aside class="blog-post-quickfix" aria-label="Summary and what to do now">
+            <span class="quickfix-label">TL;DR: one Outlook flaw is already in use, and Windows Update alone does not fix it</span>
+            <h2>Microsoft's November security release fixed more than 1,000 flaws, the second month in a row above that mark. One is already being used in real attacks: an Outlook flaw that can leak a person's Windows password hash when they open a crafted file. The fix ships through Office, not through the Windows update, so a PC can show fully patched and still be exposed.</h2>
+            <ul>
+              <li><strong>What dropped:</strong> Microsoft's release notes list 1,094 CVEs, 63 of them rated Critical. Trackers that count differently land between 1,090 and 1,093. October's record was above 1,400.</li>
+              <li><strong>What is being exploited:</strong> <a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-124194" target="_blank" rel="noopener noreferrer">CVE-2026-124194</a>, a spoofing flaw in Outlook rated Moderate, CVSS 6.5. Microsoft marks it exploitation detected. CISA added it to its Known Exploited Vulnerabilities catalog on November 10 with a federal deadline of Tuesday, November 24.</li>
+              <li><strong>The easy miss:</strong> the Windows cumulative update does not contain this fix. It arrives through the Office update, which runs on its own channel.</li>
+            </ul>
+            <p>Do this now:</p>
+            <ol>
+              <li>In Outlook, go to File, Office Account, Update Options, then Update Now. Restart Outlook when it asks.</li>
+              <li>Do not open unexpected message files or Office attachments from outside your company until Office is updated.</li>
+              <li>If anyone already opened something strange, tell us today. The first-hour steps are in the <a href="/blog/clicked-phishing-link-what-to-do-small-business-2026">clicked-a-phishing-link post</a>.</li>
+            </ol>
+            <p>This continues the <a href="/blog/october-2026-patch-tuesday-record-1400-fixes-smb">October 2026 Patch Tuesday post</a>; the <a href="/managed-it-services">managed IT page</a> covers how we run patching so it is verified, not just hoped.</p>
+          </aside>
+
+          <p>Microsoft released its November security updates on Tuesday, November 10, and one of the flaws in them is already being used in real attacks. It is not the biggest bug of the month and it does not carry the scariest score. It is a moderate-rated Outlook flaw that can leak a person's Windows password hash, and the fix reaches a PC through Office, not through Windows Update. Here is what shipped, what is being exploited, the short list of fixes that matter in an office, how we patch, and what your staff should do. CISA's deadline for federal agencies to patch the Outlook flaw is Tuesday, November 24, which is a good date to borrow for your own.</p>
+
+          <h2>What this month means for a small business</h2>
+
+          <p>The blind spot this month is the green checkmark. Windows Update says the computer is up to date, and an owner reasonably concludes it is patched. But the one flaw being exploited lives in Outlook, and Outlook gets its fixes through the Office update channel. <a href="https://www.digitalcitizen.life/microsoft-november-2026-patch-tuesday-outlook-zero-day-kb5132061/" target="_blank" rel="noopener noreferrer">Digital Citizen's write-up</a> is explicit that Office updates separately from the Windows cumulative update, and that is where this fix lives. A machine can be fully current on Windows and still be running the vulnerable Outlook.</p>
+
+          <p>The second blind spot is the size. This is the second four-digit Patch Tuesday in a row, and a 1,000-fix month sounds like a 1,000-alarm month. It is not. Of everything Microsoft published, one flaw is confirmed to be under attack, and it needs a person to open a file. Another 42 are flagged as more likely to be exploited, which is the list to work from. The rest are bugs in corners of Windows and Office that nobody in a packing shed, a clinic, or a dispatch office will ever touch directly.</p>
+
+          <p>The third is the word "hash." Most owners have never heard it, and it is the whole story this month. When you sign in to a Windows computer, the machine does not pass your password around. It uses a scrambled version of it, called an NTLMv2 hash, to prove who you are on the network. Anyone who captures that hash can do one of two things, as <a href="https://darkreading.com/vulnerabilities-threats/november-patch-tuesday-cornucopia-cves" target="_blank" rel="noopener noreferrer">Dark Reading's analysis</a> lays out: replay it to sign in as you somewhere else, or crack it offline to recover the password itself. Short or reused passwords crack quickly. That is why a flaw rated only Moderate is still worth acting on.</p>
+
+          <h2>The one flaw being exploited: an Outlook file that leaks your password hash</h2>
+
+          <p><a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-124194" target="_blank" rel="noopener noreferrer">CVE-2026-124194</a> is a spoofing flaw in Outlook. Microsoft rates it Moderate with a CVSS score of 6.5, and its own exploitability field reads "Exploitation Detected." The attack is ordinary phishing with an unusual payload. An attacker sends a crafted file and persuades someone to open it. When it opens, Outlook reaches out to a location the attacker controls without showing the usual external-content warning, and that connection can leak the person's NTLMv2 hash. <a href="https://darkreading.com/vulnerabilities-threats/november-patch-tuesday-cornucopia-cves" target="_blank" rel="noopener noreferrer">Dark Reading</a> notes it may not allow code execution on its own, which is why the score is modest. The consequence is not modest: a captured hash is a path to a real account.</p>
+
+          <p>Two details worth knowing. First, <a href="https://www.digitalcitizen.life/microsoft-november-2026-patch-tuesday-outlook-zero-day-kb5132061/" target="_blank" rel="noopener noreferrer">Digital Citizen</a> reports that Microsoft says the Preview Pane is not an attack vector for this flaw, so the file has to be opened rather than merely viewed. Second, the affected products listed are Microsoft 365 Apps, Office LTSC 2021, and Office LTSC 2024. The reports we read do not break out which Outlook apps are covered, so if your team uses desktop Outlook, assume this applies to you and check.</p>
+
+          <p>CISA added the flaw to its <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" target="_blank" rel="noopener noreferrer">Known Exploited Vulnerabilities catalog</a> on November 10, with a November 24 deadline for federal agencies. That deadline does not bind a small business, but it is a useful yardstick: CISA gave federal agencies two weeks for this one.</p>
+
+          <p>The fix comes through Office. In Outlook, go to File, Office Account, Update Options, then Update Now. For the person who looks after your systems, the patched builds are 16.0.14334.21048 for Office LTSC 2021 and 16.0.17932.21140 for Office LTSC 2024, per <a href="https://www.it-connect.tech/patch-tuesday-november-2026-microsoft-fixes-1093-vulnerabilities-including-an-exploited-outlook-zero-day/" target="_blank" rel="noopener noreferrer">IT-Connect</a> and Digital Citizen. Neither report gives a build for Microsoft 365 Apps, so verify that the update applied rather than comparing numbers.</p>
+
+          <h2>The fixes that matter, at a glance</h2>
+
+          <p>Out of more than 1,000 items, this is the short list we are actually working from. CVSS is the industry's 0-to-10 severity score; "exploited" is whether Microsoft confirms real-world attacks.</p>
+
+          <div class="compare-table-wrap">
+            <table class="compare-table">
+              <caption>Key November 2026 fixes for a small business, from Microsoft's Security Update Guide as reported by the sources listed below.</caption>
+              <thead>
+                <tr>
+                  <th scope="col">CVE</th>
+                  <th scope="col">Product</th>
+                  <th scope="col">Why it matters</th>
+                  <th scope="col">Exploited?</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row"><a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-124194" target="_blank" rel="noopener noreferrer">CVE-2026-124194</a></th>
+                  <td>Outlook (Microsoft 365 Apps, Office LTSC 2021 and 2024)</td>
+                  <td>Leaks the user's Windows password hash when a crafted file is opened. Moderate, CVSS 6.5. Fixed through the Office update, not Windows Update.</td>
+                  <td><strong>Yes.</strong> On CISA's KEV list.</td>
+                </tr>
+                <tr>
+                  <th scope="row"><a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-116928" target="_blank" rel="noopener noreferrer">CVE-2026-116928</a></th>
+                  <td>Windows Search (reached through on-premises Exchange)</td>
+                  <td>CVSS 9.8. A crafted email attachment triggers code execution when Exchange indexes it, so nobody has to open it. Fixed in the Windows cumulative update, not the Exchange update.</td>
+                  <td>No</td>
+                </tr>
+                <tr>
+                  <th scope="row"><a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-118207" target="_blank" rel="noopener noreferrer">CVE-2026-118207</a></th>
+                  <td>Exchange Server Subscription Edition</td>
+                  <td>CVSS 8.8. A logged-in attacker with a low-level account can run code with no user action. Exchange often holds broad rights in Active Directory, so a foothold here reaches well past mailboxes. Update KB5133453.</td>
+                  <td>No</td>
+                </tr>
+                <tr>
+                  <th scope="row"><a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-119958" target="_blank" rel="noopener noreferrer">CVE-2026-119958</a></th>
+                  <td>Windows LDAP (domain controllers)</td>
+                  <td>CVSS 9.8. Crafted network requests can run code with no login and no user action. Microsoft rates exploitation less likely, but it is the one to push to domain controllers first.</td>
+                  <td>No</td>
+                </tr>
+                <tr>
+                  <th scope="row"><a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-118146" target="_blank" rel="noopener noreferrer">CVE-2026-118146</a> and <a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-118148" target="_blank" rel="noopener noreferrer">CVE-2026-118148</a></th>
+                  <td>Active Directory</td>
+                  <td>CVSS 8.8 and 7.5. A logged-in, low-privilege user can run code or gain SYSTEM rights on a domain controller. Microsoft rates both exploitation more likely.</td>
+                  <td>No</td>
+                </tr>
+                <tr>
+                  <th scope="row"><a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-120002" target="_blank" rel="noopener noreferrer">CVE-2026-120002</a></th>
+                  <td>SharePoint Server (on-premises)</td>
+                  <td>CVSS 9.9. A low-privileged account can gain higher privileges over the network with no user interaction. Matters only if you run SharePoint on your own server.</td>
+                  <td>No</td>
+                </tr>
+                <tr>
+                  <th scope="row"><a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-85844" target="_blank" rel="noopener noreferrer">CVE-2026-85844</a>, <a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-88218" target="_blank" rel="noopener noreferrer">88218</a>, <a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-88243" target="_blank" rel="noopener noreferrer">88243</a>, <a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-88234" target="_blank" rel="noopener noreferrer">88234</a>, <a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-116945" target="_blank" rel="noopener noreferrer">116945</a></th>
+                  <td>Kerberos, DNS, DHCP Server, iSCSI, SQL Server</td>
+                  <td>Five more server-role flaws, each rated 9.8. Reachable over the network, which puts domain controllers and any server running these roles at the front of the line.</td>
+                  <td>No</td>
+                </tr>
+                <tr>
+                  <th scope="row"><a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-109469" target="_blank" rel="noopener noreferrer">CVE-2026-109469</a></th>
+                  <td>Entra Device Registration (cloud service)</td>
+                  <td>CVSS 10.0, the score that will top any list sorted by severity. It is a service Microsoft runs, so there is no installer. The reports we read do not identify a customer step; any step would be in Microsoft's advisory.</td>
+                  <td>No</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2>How many fixes, and why the number keeps changing</h2>
+
+          <p>Microsoft's release notes list 1,094 CVEs for November 10. <a href="https://www.it-connect.tech/patch-tuesday-november-2026-microsoft-fixes-1093-vulnerabilities-including-an-exploited-outlook-zero-day/" target="_blank" rel="noopener noreferrer">IT-Connect</a> and <a href="https://securityonline.info/november-2026-patch-tuesday/" target="_blank" rel="noopener noreferrer">SecurityOnline</a> report 1,093, other trackers land at 1,090 to 1,092, and one outlet reported 1,235. Outlets count differently, so the headlines do not match. We lean on the lower, conservative figure and say "more than 1,000," because the exact count does not change what anyone should do. Sixty-three are rated Critical, and Microsoft flagged 42 others as more likely to be exploited, per SecurityOnline. Elevation of privilege bugs lead the breakdown by a wide margin.</p>
+
+          <p>The volume keeps climbing for the reason we covered when <a href="/blog/claude-mythos-firefox-271-vulnerabilities-patch-cadence-smb">an AI model found 271 vulnerabilities in Firefox</a>: automated bug-hunting finds flaws in bulk, mostly in deep, rarely used code. <a href="/blog/july-2026-patch-tuesday-record-570-fixes-smb">July hit 570</a>, <a href="/blog/august-2026-patch-tuesday-400-fixes-3-zero-days-smb">August 400</a>, <a href="/blog/september-2026-patch-tuesday-966-fixes-2-zero-days-smb">September 966</a>, and <a href="/blog/october-2026-patch-tuesday-record-1400-fixes-smb">October cleared 1,400</a>. The count of flaws actually being used in attacks is the number that matters, and it is one this month.</p>
+
+          <p>Our own filter is the one the table above follows. Exploited first. Then anything Microsoft rates more likely to be exploited. Then anything reachable from the internet with no login. Then anything that fires without a click. Everything else gets installed on schedule and verified, which is what a <a href="/blog/patch-management-small-business-2026">patch management process</a> is for.</p>
+
+          <h2>Support dates that moved this month</h2>
+
+          <ul>
+            <li><strong>Windows 11 version 23H2, Enterprise and Education editions, got its final update.</strong> The November update is the last one for those editions; Home and Pro editions of 23H2 were already out of support. If a PC is still on 23H2, the fix is a free move to Windows 11 version 25H2 or 26H2. We schedule feature upgrades as their own pass so they never land on a workday.</li>
+            <li><strong>.NET 8 and PowerShell 7.4 LTS moved past their end-of-support date this month.</strong> This matters if a line-of-business application or an in-house script was built on them. Ask the vendor or developer for the upgrade plan before an unsupported runtime becomes the weakest part of the stack.</li>
+            <li><strong>The next Patch Tuesday is December 8, 2026.</strong> That is the last one of the year.</li>
+          </ul>
+
+          <p>For machines still on Windows 10, the same rule from last month holds: the monthly update only reaches those enrolled in Extended Security Updates. The <a href="/blog/windows-10-esu-deadline-october-2026-small-business">Windows 10 ESU post</a> lays out the options.</p>
+
+          <h2>How we roll out patches</h2>
+
+          <p>We do not push a monthly release to production the day it ships. Patches occasionally break things, and when they do, the industry finds out within a day or two as millions of machines install them. This month that is not hypothetical: the October Windows Server updates broke Outlook on the web and email sending for some on-premises Exchange servers, and the November updates are what fix it, per <a href="https://www.it-connect.tech/patch-tuesday-november-2026-microsoft-fixes-1093-vulnerabilities-including-an-exploited-outlook-zero-day/" target="_blank" rel="noopener noreferrer">IT-Connect</a>. A short soak period before rollout is the reason you hear about a problem from the news instead of from your own office.</p>
+
+          <p><strong>Workstations: the Thursday after Patch Tuesday, after hours.</strong> The cumulative update goes to every managed PC once the first wave of installs looks clean. Reboots are scheduled for early the next morning, before the first shift, so nobody loses work to an "installing updates" screen. Machines need to be on, or plugged in and asleep, Thursday night. Laptops that are off the network pick up the update the next time they connect, and we track the stragglers by name.</p>
+
+          <p><strong>Servers: the normal after-hours maintenance window.</strong> In a month like this one, domain controllers and any on-premises Exchange server go first, for the LDAP, Active Directory, Windows Search and Exchange fixes above. Servers reboot one at a time, so a file share or a line-of-business application is not down in the middle of an invoice run or a shift change.</p>
+
+          <p><strong>Office: its own pass.</strong> This is the pass that closes the exploited Outlook flaw. Office updates ship on their own channel, so a machine can be fully current on Windows and still be running vulnerable Outlook. After the pass we verify the installed Office version on each machine instead of trusting the Windows Update checkmark.</p>
+
+          <p><strong>Verification, not assumption.</strong> After the reboot, our management tools confirm per machine that the update applied, the build number moved, and the machine came back healthy. For the person who looks after your systems, these are the November builds, compiled from <a href="https://www.it-connect.tech/patch-tuesday-november-2026-microsoft-fixes-1093-vulnerabilities-including-an-exploited-outlook-zero-day/" target="_blank" rel="noopener noreferrer">IT-Connect</a> and <a href="https://www.digitalcitizen.life/microsoft-november-2026-patch-tuesday-outlook-zero-day-kb5132061/" target="_blank" rel="noopener noreferrer">Digital Citizen</a>:</p>
+
+          <ul>
+            <li>Windows 11 versions 25H2 and 26H2, and 24H2 Enterprise and Education: KB5132061, builds 26200.9974 and 26300.9974 (and 26100.9974 for 24H2). Windows 11 26H1: KB5132059, build 28000.3501.</li>
+            <li>Windows 11 23H2: KB5131087, build 22631.7711. Windows 10 22H2 with ESU: KB5131096, build 19045.7846.</li>
+            <li>Windows Server 2025: KB5131080, build 26100.33822. Server 2022: KB5131090, build 20348.5870. Server 2019: KB5131085, build 17763.9487. Server 2016: KB5131291, build 14393.9688.</li>
+            <li>Exchange Server Subscription Edition: KB5133453. Office LTSC 2021: 16.0.14334.21048 or later. Office LTSC 2024: 16.0.17932.21140 or later.</li>
+          </ul>
+
+          <h2>What your staff should do now</h2>
+
+          <ol>
+            <li><strong>Update Office today if nobody has done it for you.</strong> In Outlook, File, Office Account, Update Options, Update Now. Restart Outlook when it asks.</li>
+            <li><strong>Do not open unexpected message files or Office attachments from outside the company.</strong> The exploited flaw needs a file to be opened. If a file arrives from someone you do not know, or from someone you know but did not expect, call them before you open it. The <a href="/blog/malicious-email-attachments-risky-file-types-small-business-2026">risky attachments post</a> covers which file types to be wary of.</li>
+            <li><strong>Use the report button.</strong> If you are unsure, report the message instead of opening it. The <a href="/blog/report-suspicious-email-phishing-report-button-small-business-2026">report-a-phish habit post</a> explains how to set that up.</li>
+            <li><strong>If a document asks you to "enable content" or "enable editing," stop and call.</strong> That request has been the start of more incidents than any other single click.</li>
+            <li><strong>If you already opened something strange, say so immediately.</strong> Because the risk here is a captured password hash, the safe response is to change that password and have someone check the account's recent sign-ins. Nobody has ever been in trouble for reporting early.</li>
+            <li><strong>Restart when prompted.</strong> A Windows fix is not live until the machine reboots.</li>
+          </ol>
+
+          <h2>For whoever manages your IT</h2>
+
+          <p>Three controls reduce the damage from any password-hash leak, this one included. First, outbound SMB (TCP port 445) to the internet should be blocked at the firewall. The public write-ups do not say which protocol this flaw's outbound connection uses, so treat this as belt and suspenders, but blocking it is the long-standing defense against hash leaks of this kind and costs an ordinary office nothing. The <a href="/blog/business-firewall-vs-isp-router-small-business-2026">business firewall post</a> covers what a small office firewall should be doing.</p>
+
+          <p>Second, long passwords. A hash cracks in proportion to how weak the password behind it is, which is the practical argument for length over forced changes; the <a href="/blog/password-expiration-policy-nist-small-business-2026">password policy post</a> covers the current guidance. Third, <a href="/blog/multi-factor-authentication-small-business-2026">multi-factor authentication</a> on Microsoft 365, so a cracked password alone does not open email. Note the limit: MFA protects cloud sign-ins, and it does not stop a hash being replayed against other systems inside the network.</p>
+
+          <h2>Where this fits</h2>
+
+          <ul>
+            <li>The <a href="/blog/october-2026-patch-tuesday-record-1400-fixes-smb">October 2026 Patch Tuesday post</a>, the <a href="/blog/september-2026-patch-tuesday-966-fixes-2-zero-days-smb">September post</a>, and the <a href="/blog/august-2026-patch-tuesday-400-fixes-3-zero-days-smb">August post</a>, for the three previous releases and the patch-cadence habit.</li>
+            <li>The <a href="/blog/clicked-phishing-link-what-to-do-small-business-2026">clicked-a-phishing-link post</a>, for the first hour after the one click this month's exploited flaw depends on.</li>
+            <li>The <a href="/blog/ai-written-phishing-emails-small-business-2026">AI-written phishing post</a> and the <a href="/blog/phishing-simulation-security-awareness-training-small-business-2026">security awareness training post</a>, for why the person at the keyboard is still the first layer.</li>
+            <li>The <a href="/blog/edr-vs-antivirus-small-business-2026">EDR versus antivirus post</a> and the <a href="/managed-detection-response">managed detection and response page</a>, for catching what a stolen credential does next.</li>
+            <li>The <a href="/blog/patch-management-small-business-2026">patch management post</a>, for the ownership and verification structure that makes a 1,000-fix month routine.</li>
+            <li>The <a href="/managed-it-services">managed IT page</a> and the <a href="/pricing">pricing page</a>, for patch management that is verified across every device and what it costs.</li>
+          </ul>
+
+          <p>We run monthly patch management for small businesses in Monterey County and surrounding areas. This is the kind of thing we watch so you do not have to.</p>
+
+          <h2>FAQs about the November 2026 Patch Tuesday</h2>
+
+          <h3>How many vulnerabilities did the November 2026 Patch Tuesday fix?</h3>
+          <p>It depends on what you count, which is why the headlines disagree. Microsoft's release notes list 1,094 CVEs for November 10, 2026, and trackers that count differently land between 1,090 and 1,093. One outlet reported as many as 1,235. Of the Microsoft items, 63 are rated Critical, and Microsoft flagged 42 more as more likely to be exploited. It is the second month in a row above 1,000, a little under October's record of more than 1,400. Only one of the flaws is confirmed to be under attack.</p>
+
+          <h3>What is the Outlook zero-day, and does it affect us?</h3>
+          <p>CVE-2026-124194 is a spoofing flaw in Outlook, rated Moderate with a CVSS score of 6.5. Microsoft marks it as exploitation detected, meaning attackers are already using it. It works when a person opens a crafted file: Outlook connects to a server the attacker controls without showing the usual external-content warning, and that connection can hand over the person's NTLMv2 hash, a scrambled form of their Windows password. An attacker can replay the hash to sign in as that person elsewhere, or crack it to recover the password. Reports say Microsoft does not treat the Preview Pane as an attack vector, so the file has to be opened. Microsoft 365 Apps, Office LTSC 2021 and Office LTSC 2024 are listed as affected, so if your team uses desktop Outlook, assume it applies to you. CISA added the flaw to its Known Exploited Vulnerabilities catalog on November 10, 2026, with a federal deadline of November 24.</p>
+
+          <h3>Does Windows Update fix the Outlook flaw?</h3>
+          <p>No. The fix for this flaw ships through Office, which updates on its own channel, separate from the Windows cumulative update. A PC can show that Windows is fully up to date and still be running a vulnerable Outlook. To check one machine, open Outlook, go to File, Office Account, Update Options, then Update Now. The patched builds are 16.0.14334.21048 for Office LTSC 2021 and 16.0.17932.21140 for Office LTSC 2024. The reports we read do not give a build number for Microsoft 365 Apps, so confirm the update applied rather than comparing numbers. Managed clients do not need to do anything, because we run Office as its own pass and verify the installed version on each machine.</p>
+
+          <h3>We still run Exchange on-premises. What should happen first?</h3>
+          <p>Three things. First, a Windows Search flaw, CVE-2026-116928, rated 9.8, can be triggered by an email attachment that Exchange indexes automatically, so nobody has to open it. It is fixed in the Windows Server cumulative update, not the Exchange update, so the Exchange server needs both. Second, Exchange Server Subscription Edition has its own update, KB5133453, for CVE-2026-118207, which lets a logged-in attacker with a low-level account run code. Third, the November Windows Server updates also fix the problem that broke Outlook on the web and email sending after October's Windows Server updates. Exchange 2016 and 2019 do not appear in this month's Exchange update list, so if you still run one, ask what is protecting it.</p>
+
+          <h3>Do we need to do anything about the Entra flaw with the perfect 10 score?</h3>
+          <p>Probably nothing you install. CVE-2026-109469 affects Entra Device Registration, a cloud service Microsoft runs itself, and it is rated CVSS 10.0, which is why it tops any list sorted by score. It is not reported as exploited. The reports we read do not identify a step for customers, and Microsoft's advisory is where any required step would be spelled out, so have your IT provider read it rather than assuming.</p>
+
+          <h3>When will our machines be patched, and will it interrupt work?</h3>
+          <p>For managed clients, workstations get the monthly update on the Thursday after Patch Tuesday, after hours, with reboots scheduled for early the next morning before the first shift. Leave the computer on, or plugged in and asleep, Thursday night. Servers are patched in their normal after-hours maintenance window. Office updates ship on their own channel, so they go out as a separate pass and we verify the installed version on each machine afterward. Laptops that are off the network catch up the next time they connect, and we track the stragglers. The gap of about 48 hours between release and rollout is deliberate: it lets the first wave of installs surface any bad patch before it reaches your fleet.</p>
+
+          <p style="margin-top: 2rem; font-size: 0.9rem; color: rgba(0,0,0,0.7); overflow-wrap: anywhere;">
+            <strong>Sources:</strong>
+            <a href="https://msrc.microsoft.com/update-guide/releaseNote/2026-Nov" target="_blank" rel="noopener noreferrer">Microsoft Security Update Guide, November 2026</a> &middot;
+            <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" target="_blank" rel="noopener noreferrer">CISA Known Exploited Vulnerabilities catalog</a> &middot;
+            <a href="https://darkreading.com/vulnerabilities-threats/november-patch-tuesday-cornucopia-cves" target="_blank" rel="noopener noreferrer">Dark Reading</a> &middot;
+            <a href="https://www.digitalcitizen.life/microsoft-november-2026-patch-tuesday-outlook-zero-day-kb5132061/" target="_blank" rel="noopener noreferrer">Digital Citizen</a> &middot;
+            <a href="https://www.it-connect.tech/patch-tuesday-november-2026-microsoft-fixes-1093-vulnerabilities-including-an-exploited-outlook-zero-day/" target="_blank" rel="noopener noreferrer">IT-Connect</a> &middot;
+            <a href="https://securityonline.info/november-2026-patch-tuesday/" target="_blank" rel="noopener noreferrer">SecurityOnline</a> &middot;
+            <a href="https://blog.qualys.com/vulnerabilities-threat-research/2026/11/10/microsoft-patch-tuesday-november-2026-security-update-review" target="_blank" rel="noopener noreferrer">Qualys</a>
+          </p>
+
+          <div class="blog-post-cta">
+            <h3>One Outlook flaw is already being used, and Windows Update will not fix it. Is Office current on every machine?</h3>
+            <p>30 minutes with the engineer who runs patching for small businesses in Monterey County and surrounding areas. We'll check whether this month's release (the exploited Outlook flaw, your Office installs, your domain controllers and any on-premises Exchange) has truly applied across your machines, and set up patch management you can prove. No jargon, no obligation.</p>
+            <a href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer">
+              <i class="fi fi-rs-calendar-day" aria-hidden="true"></i>
+              Book your free assessment
+            </a>
+          </div>
+
+          <p style="margin-top: 1.5rem; font-size: 0.95rem; color: rgba(0,0,0,0.7);">
+            Prefer to talk first? Email <a href="mailto:sales@ghosxt.com">sales@ghosxt.com</a> or call <a href="tel:+18312040501">(831) 204-0501</a>.
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <div class="cookie-banner" id="cookieBanner">
+      <div class="cookie-banner-container">
+        <div class="cookie-content">
+          <div class="cookie-icon"><i class="fi fi-rs-cookie"></i></div>
+          <div class="cookie-text">
+            <p class="cookie-message">We use cookies to measure traffic and improve the site. Choose Accept All to consent. <a href="/privacy-policy" class="cookie-link">Privacy Policy</a></p>
+          </div>
+        </div>
+        <div class="cookie-actions">
+          <button class="cookie-btn cookie-btn-secondary" id="cookieDecline">Decline</button>
+          <button class="cookie-btn cookie-btn-primary" id="cookieAccept">Accept All</button>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer" id="footerSection">
+      <div class="footer-container">
+        <div class="footer-brand-row">
+          <div class="footer-brand">
+            <img
+              src="../assets/img/ghosxt-logo-160.webp"
+              alt="Ghosxt logo"
+              width="80"
+              height="80"
+              loading="lazy"
+            />
+            <div class="footer-brand-text">
+              <span class="footer-brand-name">GHOSXT</span>
+              <span class="footer-brand-tagline"
+                >Government-grade IT for small business.</span
+              >
+            </div>
+          </div>
+          <div class="footer-cta-block">
+            <a
+              href="https://calendly.com/ulises-ghosxt"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="footer-cta-btn"
+            >
+              <i class="fi fi-rs-calendar-day" aria-hidden="true"></i>
+              Schedule Free Assessment
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-grid">
+          <div class="footer-column">
+            <h3 class="footer-column-title">Company</h3>
+            <ul class="footer-links">
+              <li><a href="/">Home</a></li>
+              <li><a href="/about">About</a></li>
+              <li><a href="/services">Services</a></li>
+              <li><a href="/pricing">Pricing</a></li>
+              <li>
+                <a href="/website-development">Website Development</a>
+              </li>
+              <li><a href="/msp-partners">MSP Partners</a></li>
+              <li><a href="/contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-column-title">Services</h3>
+            <ul class="footer-links">
+              <li><a href="/managed-it-services">Managed IT Services</a></li>
+              <li><a href="/help-desk-it-support">IT Help Desk &amp; Support</a></li>
+              <li><a href="/it-consulting-vcio">IT Consulting &amp; vCIO</a></li>
+              <li><a href="/cybersecurity">Cybersecurity</a></li>
+              <li><a href="/cloud-services">Cloud Services</a></li>
+              <li><a href="/backup-disaster-recovery">Backup &amp; Disaster Recovery</a></li>
+              <li><a href="/network-design">Network Design</a></li>
+              <li><a href="/website-development">Web Development</a></li>
+            </ul>
+            <h3 class="footer-column-title">Compliance</h3>
+            <ul class="footer-links">
+              <li><a href="/cmmc-compliance">CMMC &amp; NIST 800-171</a></li>
+              <li><a href="/hipaa-it-compliance">HIPAA IT Compliance</a></li>
+              <li><a href="/pci-compliance">PCI DSS Compliance</a></li>
+              <li><a href="/ctpat">C-TPAT Compliance</a></li>
+              <li><a href="/cyber-insurance-compliance">Cyber Insurance</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-column-title">Industries</h3>
+            <ul class="footer-links">
+              <li><a href="/trucking-it-services">Trucking &amp; Logistics IT</a></li>
+              <li><a href="/agriculture-it-services">Agriculture &amp; Agribusiness IT</a></li>
+              <li><a href="/manufacturing-it-services">Manufacturing &amp; Industrial IT</a></li>
+              <li><a href="/professional-services-it">SMB Office &amp; Professional Services IT</a></li>
+              <li><a href="/healthcare-it-services">Healthcare &amp; Medical IT</a></li>
+              <li><a href="/property-management-it-services">Property Management IT</a></li>
+              <li><a href="/engineering-it-services">Engineering &amp; Architecture IT</a></li>
+              <li><a href="/hospitality-it-services">Hospitality &amp; Restaurants IT</a></li>
+              <li><a href="/it-support-nonprofits-google-workspace">Nonprofits (Google Workspace)</a></li>
+              <li><a href="/it-support-remote-mac-teams">Remote Mac Teams</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-column-title">Connect</h3>
+            <ul class="footer-links footer-social-links">
+              <li>
+                <a
+                  href="https://www.linkedin.com/company/ghosxt/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.063 2.063 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                  LinkedIn</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.facebook.com/GhosxtTech"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg>
+                  Facebook</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/ghosxttech/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+                  Instagram</a
+                >
+              </li>
+              <li>
+                <a href="mailto:sales@ghosxt.com"
+                  ><i class="fi fi-rs-envelope" aria-hidden="true"></i>
+                  sales@ghosxt.com</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://ticket.ghosxt.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Client Portal</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://calendly.com/ulises-ghosxt"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Free IT Assessment</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <div class="footer-bottom">
+          <p class="footer-copyright">
+            &copy; 2026 Ghosxt. All rights reserved. Built by an engineer from the federal contracting world.
+          </p>
+          <div class="footer-bottom-links">
+            <a href="/privacy-policy">Privacy Policy</a>
+            <span aria-hidden="true">&middot;</span>
+            <a href="/support">Support</a>
+            <span aria-hidden="true">&middot;</span>
+            <a
+              href="https://ticket.ghosxt.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Client Portal</a
+            >
+          </div>
+        </div>
+
+        <div class="service-areas-footer">
+          <h3>Service Areas</h3>
+          <ul>
+            <li><a href="/salinas">Salinas</a></li>
+            <li><a href="/monterey">Monterey</a></li>
+            <li><a href="/watsonville">Watsonville</a></li>
+            <li><a href="/hollister">Hollister</a></li>
+            <li><a href="/santa-cruz">Santa Cruz</a></li>
+            <li><a href="/gilroy">Gilroy</a></li>
+            <li><a href="/san-jose">San Jose</a></li>
+            <li><a href="/pacific-grove">Pacific Grove</a></li>
+            <li><a href="/carmel">Carmel</a></li>
+            <li><a href="/seaside">Seaside</a></li>
+            <li><a href="/marina">Marina</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="../assets/js/main.min.js?v=2026-11-08a" defer></script>
+    <!-- ghosxt:mobile-cta-bar -->
+    <div class="mobile-cta-bar" aria-label="Quick contact">
+      <a class="mcta-primary" href="tel:+18312040501">Call (831) 204-0501</a>
+      <a class="mcta-secondary" href="https://calendly.com/ulises-ghosxt" target="_blank" rel="noopener noreferrer">Book free assessment</a>
+    </div>
+  </body>
+</html>
