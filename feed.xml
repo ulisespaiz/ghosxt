@@ -7,18 +7,9 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from an engineer with DoD infrastructure experience.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Sun, 22 Nov 2026 18:51:12 +0000</lastBuildDate>
-    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
+    <lastBuildDate>Sun, 22 Nov 2026 18:54:14 +0000</lastBuildDate>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
-    <item>
-      <title>November 2026 Patch Tuesday: Outlook Zero-Day, 1,000+ Fixes</title>
-      <link>https://ghosxt.com/blog/november-2026-patch-tuesday-outlook-zero-day-smb</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/november-2026-patch-tuesday-outlook-zero-day-smb</guid>
-      <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>November 2026 Patch Tuesday: an Outlook zero-day is under attack, and Windows Update alone will not fix it. What to check first and what staff should do.</description>
-    </item>
     <item>
       <title>Direct Deposit Change Scam: Stop Payroll Diversion</title>
       <link>https://ghosxt.com/blog/payroll-diversion-direct-deposit-change-scam-small-business-2026</link>
@@ -81,6 +72,15 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>Hundreds of spam emails in minutes is often cover for fraud. See what email bombing hides, what to check first, and how to stop it.</description>
+    </item>
+    <item>
+      <title>November 2026 Patch Tuesday: Outlook Zero-Day, 1,000+ Fixes</title>
+      <link>https://ghosxt.com/blog/november-2026-patch-tuesday-outlook-zero-day-smb</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/november-2026-patch-tuesday-outlook-zero-day-smb</guid>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>November 2026 Patch Tuesday: an Outlook zero-day is under attack, and Windows Update alone will not fix it. What to check first and what staff should do.</description>
     </item>
     <item>
       <title>External Email Warning Banner: Set It Up</title>
