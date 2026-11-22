@@ -119,7 +119,6 @@ IT support & help desk, by city: [Morgan Hill](https://ghosxt.com/it-help-morgan
 - [Client Stories](https://ghosxt.com/case-studies): real Ghosxt clients in their own words, from transportation/logistics, manufacturing, and local projects.
 - [Contact / Free IT Assessment](https://ghosxt.com/contact): schedule a no-obligation 30-minute assessment.
 - [Get Support](https://ghosxt.com/support): how existing clients reach the engineer. Call, remote session, or ticket portal. Support hours 8am to 6pm Pacific, Monday through Friday.
-- [Ghosxt Cares](https://ghosxt.com/ghosxt-cares): community work and discounted IT for nonprofits.
 
 ## Blog (selected guides)
 - [What managed IT actually costs (Salinas, 2026)](https://ghosxt.com/blog/managed-it-services-cost-salinas-2026)
@@ -145,6 +144,17 @@ IT support & help desk, by city: [Morgan Hill](https://ghosxt.com/it-help-morgan
 - [Remove local admin rights on employee laptops](https://ghosxt.com/blog/remove-local-admin-rights-employee-laptops-small-business-2026): why standard accounts limit one bad click, how to roll them out, and how to handle exceptions.
 - [Vendor bank detail change scams](https://ghosxt.com/blog/vendor-bank-detail-change-payment-redirect-fraud-small-business-2026): how fake "we changed banks" emails redirect vendor payments, and four checks that stop payment redirect fraud.
 - [Malicious email attachments: what to block](https://ghosxt.com/blog/malicious-email-attachments-risky-file-types-small-business-2026): the risky file types, why PDFs and ZIPs can still hurt, and five controls for a small business.
+- [Reporting suspicious emails at work](https://ghosxt.com/blog/report-suspicious-email-phishing-report-button-small-business-2026): why reporting beats deleting, how to set up a report habit, and what should happen after a report.
+- [Fake virus alert pop-ups and tech support scams](https://ghosxt.com/blog/tech-support-scam-fake-virus-popup-small-business-2026): why a full-screen virus warning is a scam page, how to close it safely, and what to do if someone called the number.
+- [Email bombing and inbox floods](https://ghosxt.com/blog/email-bombing-inbox-flooded-spam-small-business-2026): why a sudden flood of spam is often cover for fraud, what to check in the first hour, and how to harden email.
+- [External email warning banner](https://ghosxt.com/blog/external-sender-warning-banner-email-small-business-2026): why tagging outside email works against fake boss messages, what the banner should say, and how to turn it on.
+- [Direct deposit change request scams](https://ghosxt.com/blog/payroll-diversion-direct-deposit-change-scam-small-business-2026): how payroll diversion works, the red flags in an employee bank change email, and a two-minute verification process that stops it.
+- [Unrecognized sign-in alerts](https://ghosxt.com/blog/unrecognized-sign-in-alert-what-to-do-small-business-2026): how to tell a real new sign-in alert from a phishing copy, what to do in the first 15 minutes, and how to stop repeat attempts.
+- [Employees using personal email for work](https://ghosxt.com/blog/personal-email-for-work-small-business-2026): why work mail in personal Gmail or Yahoo accounts is data you cannot secure or recover, and how to move everyone onto company email.
+- [Bounce-back emails you did not send](https://ghosxt.com/blog/bounce-back-emails-you-did-not-send-small-business-2026): why failure notices arrive for mail you never sent, how to tell spoofing from a compromised mailbox, and how SPF, DKIM and DMARC stop it.
+- [Verification codes you did not request](https://ghosxt.com/blog/verification-code-you-did-not-request-small-business-2026): what an unrequested login code or password reset means, what to do in the next ten minutes, and how to make the attempts pointless.
+- [Calendar invite phishing](https://ghosxt.com/blog/calendar-invite-phishing-fake-meeting-requests-small-business-2026): how fake meeting invites reach your calendar, the warning signs, and three settings that stop them.
+- [Out-of-office reply security](https://ghosxt.com/blog/out-of-office-auto-reply-security-risks-small-business-2026): what your auto-reply tells scammers, what to leave out, and a safe template for inside and outside senders.
 - [Fake boss text and gift card scams](https://ghosxt.com/blog/boss-impersonation-text-gift-card-scam-small-business-2026): how scammers pose as the owner by text, why staff fall for it, and five rules that stop it.
 - [Infostealer malware and saved browser passwords](https://ghosxt.com/blog/infostealer-malware-saved-browser-passwords-small-business-2026): how stealers take saved logins and session cookies, how they spread, and five controls that limit the damage.
 - [Fake password reset call scams](https://ghosxt.com/blog/help-desk-password-reset-social-engineering-small-business-2026): how attackers pose as staff to get passwords and MFA reset, and four verification steps that stop it.

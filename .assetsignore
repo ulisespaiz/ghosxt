@@ -28,6 +28,9 @@ scripts/
 # Internal site-audit harness: tooling and reports, never served to visitors.
 audit/
 
+# Retired pages and assets kept in git history, never served.
+archive/
+
 # VCS
 .git/
 .gitignore

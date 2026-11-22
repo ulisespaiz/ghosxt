@@ -17,6 +17,12 @@ the business come from the owner or from what is already visible on the live sit
   production. Merging to `main` is a deploy.
 - Shared chrome (head assets, nav, cookie banner, footer, mobile CTA bar) lives in
   `scripts/_chrome_source.html` and is applied with `scripts/apply-chrome.py`.
+- The business entity in JSON-LD has one source: the `#business` node in `contact.html`
+  (name, url, image, phone, email, address) plus the footer "Service Areas" list in
+  `scripts/_chrome_source.html` (area served). `scripts/apply-entity.py` copies it into
+  every page and points each `Service` at it. Never hand-edit a business node, a
+  `Service` provider or a LocalBusiness field on a page: edit the source, then run
+  `python3 scripts/apply-entity.py --apply`.
 - CSS and JS source is `assets/css/*.css` and `assets/js/*.js`; the site serves the
   `.min.*` copies. Generated files: `sitemap.xml`, `feed.xml`, `blog/all.html`,
   `llms-full.txt`, `assets/img/og/*.png`.
@@ -32,6 +38,7 @@ node audit/tools/static-server.mjs    # dependency-free local server used by CI 
 python3 scripts/check-title-meta-length.py     # titles <= 60, metas <= 155 (exit 1 on violation)
 python3 scripts/compute-csp-hashes.py --check  # CSP hash allowlist matches inline scripts
 python3 scripts/check-chrome-drift.py          # shared chrome identical across pages
+python3 scripts/apply-entity.py --check        # business entity JSON-LD matches contact.html (CI gate)
 cd audit && npx html-validate ../index.html    # HTML validation (config: .htmlvalidate.json)
 npx wrangler deploy --dry-run
 
@@ -41,6 +48,7 @@ python3 scripts/generate-feed.py
 python3 scripts/generate-blog-explorer.py
 python3 scripts/generate-og-images.py
 python3 scripts/generate-llms-full.py --apply
+python3 scripts/apply-entity.py --apply        # after adding a root page, or editing the contact.html business node or the footer area list
 python3 scripts/minify.py && python3 scripts/minify.py --stamp   # after any CSS or JS edit
 
 # Audit tooling (cd audit && npm install once; CHROME_PATH points at a Chromium binary)
@@ -57,7 +65,11 @@ CI: `.github/workflows/site-quality.yml` runs HTML validation, link and crawl ch
 Lighthouse CI with per-page budgets from `audit/ci/` (accessibility, best practices, SEO
 and CLS are hard gates; performance score, LCP and TBT are warnings because they move
 with the runner's CPU), and a Playwright screenshot diff against the base branch on
-every pull request. See `audit/baseline/README.md` for how baselines and
+every pull request. The "Structured data gate" job is a hard gate: the
+`check-seo-meta.mjs` checks that have reached zero (business node, `Service` provider,
+breadcrumbs, entity and area consistency, JSON-LD parse, one h1, canonical, unique
+metas, key facts) must stay at zero; the rest stay in the informational full report
+until they reach zero too. See `audit/baseline/README.md` for how baselines and
 budgets are regenerated.
 
 ## Hard rules

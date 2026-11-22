@@ -18,9 +18,12 @@
 /web-design-soledad                 /web-design-salinas   301
 /web-design-soledad.html            /web-design-salinas   301
 
-# Legacy URL fix: ghosxt-cares page was previously linked as /cares.html and /cares
-/cares.html   /ghosxt-cares   301
-/cares        /ghosxt-cares   301
+# Ghosxt Cares program retired and archived under archive/ (not served).
+# Old URLs go to the nonprofit IT page, the nearest live equivalent.
+/ghosxt-cares        /it-support-nonprofits-google-workspace   301
+/ghosxt-cares.html   /it-support-nonprofits-google-workspace   301
+/cares.html          /it-support-nonprofits-google-workspace   301
+/cares               /it-support-nonprofits-google-workspace   301
 
 # Renamed Salinas IT support post to a cleaner slug
 /blog/best-it-support-small-businesses-salinas-ca.html   /blog/best-it-support-in-salinas   301
