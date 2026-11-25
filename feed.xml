@@ -7,7 +7,7 @@
     <description>Practical IT, cybersecurity, and compliance guidance for small businesses on California's Central Coast, from an engineer with DoD infrastructure experience.</description>
     <language>en-us</language>
     <copyright>Ghosxt</copyright>
-    <lastBuildDate>Wed, 25 Nov 2026 20:26:18 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 25 Nov 2026 21:12:17 +0000</lastBuildDate>
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
     <ttl>1440</ttl>
     <item>
@@ -18,6 +18,15 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>Got an email saying you have a new voicemail? It may be phishing. How to tell a real voicemail from a fake one, and what to do if someone clicked.</description>
+    </item>
+    <item>
+      <title>Synology NAS Flaw Under Attack: What to Check Today</title>
+      <link>https://ghosxt.com/blog/nas-flaw-cisa-exploited-network-storage-small-business-2026</link>
+      <guid isPermaLink="true">https://ghosxt.com/blog/nas-flaw-cisa-exploited-network-storage-small-business-2026</guid>
+      <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Ulises Paiz</dc:creator>
+      <category>Cybersecurity</category>
+      <description>CISA says a 2024 Synology NAS flaw (CVE-2024-10441) is being exploited. What a small office should check today, and why a NAS is not a backup.</description>
     </item>
     <item>
       <title>Direct Deposit Change Scam: Stop Payroll Diversion</title>
@@ -270,15 +279,6 @@
       <dc:creator>Ulises Paiz</dc:creator>
       <category>Cybersecurity</category>
       <description>Unused software seats waste money and leave live logins behind. A 4-step SaaS audit to find, cut, and secure every subscription your business pays for.</description>
-    </item>
-    <item>
-      <title>PHP2Shell: Critical PHP Flaw Puts Websites at Risk</title>
-      <link>https://ghosxt.com/blog/php2shell-php-vulnerability-cve-2026-109618-smb-website-2026</link>
-      <guid isPermaLink="true">https://ghosxt.com/blog/php2shell-php-vulnerability-cve-2026-109618-smb-website-2026</guid>
-      <pubDate>Wed, 21 Oct 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Ulises Paiz</dc:creator>
-      <category>Cybersecurity</category>
-      <description>PHP2Shell (CVE-2026-109618, CVE-2026-109619) lets attackers take over PHP websites with no login. The fixed versions and what to check today.</description>
     </item>
   </channel>
 </rss>
