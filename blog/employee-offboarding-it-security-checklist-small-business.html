@@ -36,75 +36,99 @@
     <link rel="stylesheet" media="print" onload="this.media='all'" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" />
     <noscript><link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" /></noscript>
     <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "BlogPosting",
-            "mainEntityOfPage": { "@type": "WebPage", "@id": "https://ghosxt.com/blog/employee-offboarding-it-security-checklist-small-business" },
-            "headline": "Employee Offboarding IT Checklist: Closing the Security Gaps When Someone Leaves",
-            "description": "Former employees keep access to email, cloud files, and business apps far longer than owners realize. The same-day IT offboarding checklist that closes the gap: accounts, devices, shared logins, and forwarding rules.",
-            "image": "https://ghosxt.com/assets/img/og/blog-employee-offboarding-it-security-checklist-small-business.png",
-            "author": { "@type": "Person", "name": "Ulises Paiz", "url": "https://ghosxt.com/about" },
-            "publisher": { "@type": "Organization", "name": "Ghosxt", "logo": { "@type": "ImageObject", "url": "https://ghosxt.com/assets/img/ghosxt-logo-160.webp" } },
-            "datePublished": "2026-07-01",
-            "dateModified": "2026-07-01",
-            "articleSection": "Cybersecurity",
-            "keywords": "employee offboarding checklist, IT offboarding process, revoke employee access, offboarding security risks, departing employee IT checklist, employee termination IT checklist, small business IT offboarding, managed IT, Salinas, Monterey, Central Coast"
-          },
-          {
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ghosxt.com/" },
-              { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://ghosxt.com/blog/" },
-              { "@type": "ListItem", "position": 3, "name": "Employee Offboarding IT Checklist", "item": "https://ghosxt.com/blog/employee-offboarding-it-security-checklist-small-business" }
-            ]
-          },
-          {
-            "@type": "HowTo",
-            "name": "The same-day employee offboarding IT checklist",
-            "description": "A working offboarding process that runs the same way every time, on the day employment ends.",
-            "step": [
-              { "@type": "HowToStep", "name": "Disable identity first", "text": "Turn off the employee's primary directory account (Microsoft 365, Google Workspace, or on-prem Active Directory) immediately. Because most other business apps use single sign-on tied to that identity, this one step closes a large share of the total access footprint in a single action." },
-              { "@type": "HowToStep", "name": "Revoke MFA and active sessions", "text": "Disabling the account is not enough on its own: existing login sessions and app passwords can remain valid until they are explicitly revoked. Force a sign-out of all active sessions and remove any registered MFA devices." },
-              { "@type": "HowToStep", "name": "Reassign, don't delete, the mailbox and files", "text": "Convert email to a shared mailbox or forward it to a manager for a transition period, and transfer ownership of any cloud files, shared drives, and CRM records the employee owned to someone still on the team, before the account is removed." },
-              { "@type": "HowToStep", "name": "Pull the device", "text": "Recover any company laptop, phone, or hardware token. If the employee used a personal device for email or Slack, remotely wipe the company data and confirm the device is removed from your mobile device management enrollment." },
-              { "@type": "HowToStep", "name": "Rotate shared and vendor credentials", "text": "Any login the employee knew that is not tied to their personal identity (a shared social media account, a vendor portal, a shared password vault entry) needs its password changed, not just their individual access removed." },
-              { "@type": "HowToStep", "name": "Remove them from every third-party app", "text": "Check your password manager and any SaaS admin console for standalone logins that were never connected to the main directory account: the accounts that get missed most often because they live outside the systems IT normally watches." }
-            ]
-          },
-          {
-            "@type": "FAQPage",
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "How fast should IT access be revoked after an employee leaves?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Same day, and ideally before the termination conversation happens for involuntary departures. Access to email, cloud file storage, VPN, and business applications should be disabled the moment employment ends, not at the end of the pay period or whenever IT gets around to it. Voluntary departures with a notice period still warrant disabling access the day they physically leave, since a two-week notice period is exactly when a departing employee has both motive and opportunity to copy files."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "What happens to a former employee's email and files?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "The account should be converted to a shared mailbox or have its email forwarded to a manager, then licensed, disabled, or deleted according to your retention policy, not left active. Files owned by that employee in cloud storage need their ownership transferred to a manager or a team library before the account is removed, or the files can become orphaned or automatically deleted depending on the platform's account-closure rules."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Do I need to worry about offboarding if the employee left on good terms?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Yes. Most offboarding gaps are not caused by malicious former employees; they are caused by an account nobody remembered to disable. An amicable departure with a lingering active account is still a live credential an attacker can phish, buy on the dark web if reused elsewhere, or simply find still working six months later. The checklist should be run the same way regardless of how the employee left."
-                }
-              }
-            ]
-          }
-        ]
-      }
-    </script>
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://ghosxt.com/blog/employee-offboarding-it-security-checklist-small-business"
+      },
+      "headline": "Employee Offboarding IT Checklist: Closing the Security Gaps When Someone Leaves",
+      "description": "Former employees keep access to email, cloud files, and business apps far longer than owners realize. The same-day IT offboarding checklist that closes the gap: accounts, devices, shared logins, and forwarding rules.",
+      "image": "https://ghosxt.com/assets/img/og/blog-employee-offboarding-it-security-checklist-small-business.png",
+      "author": {
+        "@type": "Person",
+        "name": "Ulises Paiz",
+        "url": "https://ghosxt.com/about"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Ghosxt",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://ghosxt.com/assets/img/ghosxt-logo-160.webp"
+        }
+      },
+      "datePublished": "2026-07-01",
+      "dateModified": "2026-11-06",
+      "articleSection": "Cybersecurity",
+      "keywords": "employee offboarding checklist, IT offboarding process, revoke employee access, offboarding security risks, departing employee IT checklist, employee termination IT checklist, small business IT offboarding, managed IT, Salinas, Monterey, Central Coast"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://ghosxt.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://ghosxt.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Employee Offboarding IT Checklist",
+          "item": "https://ghosxt.com/blog/employee-offboarding-it-security-checklist-small-business"
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "The same-day employee offboarding IT checklist",
+      "description": "A working offboarding process that runs the same way every time, on the day employment ends.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "Disable identity first",
+          "text": "Turn off the employee's primary directory account (Microsoft 365, Google Workspace, or on-prem Active Directory) immediately. Because most other business apps use single sign-on tied to that identity, this one step closes a large share of the total access footprint in a single action."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Revoke MFA and active sessions",
+          "text": "Disabling the account is not enough on its own: existing login sessions and app passwords can remain valid until they are explicitly revoked. Force a sign-out of all active sessions and remove any registered MFA devices."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Reassign, don't delete, the mailbox and files",
+          "text": "Convert email to a shared mailbox or forward it to a manager for a transition period, and transfer ownership of any cloud files, shared drives, and CRM records the employee owned to someone still on the team, before the account is removed."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Pull the device",
+          "text": "Recover any company laptop, phone, or hardware token. If the employee used a personal device for email or Slack, remotely wipe the company data and confirm the device is removed from your mobile device management enrollment."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Rotate shared and vendor credentials",
+          "text": "Any login the employee knew that is not tied to their personal identity (a shared social media account, a vendor portal, a shared password vault entry) needs its password changed, not just their individual access removed."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Remove them from every third-party app",
+          "text": "Check your password manager and any SaaS admin console for standalone logins that were never connected to the main directory account: the accounts that get missed most often because they live outside the systems IT normally watches."
+        }
+      ]
+    }
+  ]
+}
+      </script>
     <!-- ghosxt:cf-web-analytics -->
     <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"f3ce7e0e17f54050845d52d7f355cd98"}'></script>
   </head>
