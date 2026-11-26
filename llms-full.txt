@@ -44,7 +44,7 @@ Meta description: Managed IT for California small business: MDR, 24/7 remote mon
 
 # Managed IT Services for California Small Business
 Break-fix IT is cheap right up until the week a ransomware crew finds the file share nobody was watching. Ghosxt, run by an engineer with DoD infrastructure experience, provides managed IT services for small businesses across Monterey County and surrounding areas: a fixed monthly fee at published pricing, monitoring that catches problems before your staff notice, and an engineer who answers the call.
-★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
+★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across Monterey County since 2022 and beyond.
 Transparent managed IT pricing is published upfront, so you know the range before booking.
 Managed IT Services for California Small Business: at a glance
 ## What managed IT actually means
@@ -141,7 +141,7 @@ Meta description: IT help desk & support for California small business: live US-
 
 # IT Help Desk & IT Support for California Small Business
 When a mailbox will not open or a laptop rejects the password, your team needs a person who picks up and fixes it, not a ticket number. Ghosxt, run by an engineer with DoD infrastructure experience, provides IT help desk and support for small businesses across Monterey County and surrounding areas: someone who already knows your network and your people, most issues fixed remotely, at published pricing.
-★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
+★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across Monterey County since 2022 and beyond.
 Help desk is included in every managed plan: pricing is published upfront.
 IT Help Desk & IT Support for California Small Business: at a glance
 ## What a real IT help desk should feel like
@@ -179,7 +179,7 @@ Meta description: IT consulting & vCIO services for California small business: r
 
 # IT Consulting & vCIO Services for Small Business
 Nobody owns the IT roadmap, so renewals get signed, tools overlap and the budget is explained after it is spent. Ghosxt provides IT consulting and vCIO services for small businesses across Monterey County and surrounding areas: owner Ulises Paiz, an engineer with DoD infrastructure experience, as your part-time strategic IT lead for roadmap, budget, risk and vendor decisions, at published pricing.
-★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
+★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across Monterey County since 2022 and beyond.
 Quarterly vCIO planning is included in every managed plan: see pricing.
 IT Consulting & vCIO Services for Small Business: at a glance
 ## What a vCIO actually does
@@ -425,7 +425,7 @@ Meta description: Microsoft 365 hardening and hybrid cloud planning for Californ
 
 # Cloud Services and Microsoft 365 for California Small Business
 A cloud tenant set up in an afternoon and never hardened is where most of the small-business breaches we see begin, and nobody can show what is locked down. Ghosxt, run by an engineer with DoD infrastructure experience, provides cloud services for small businesses across Monterey County and surrounding areas: Microsoft 365 management and baseline hardening in every managed IT plan at published pricing, migrations and projects quoted per scope.
-★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
+★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across Monterey County since 2022 and beyond.
 Transparent managed IT pricing is published upfront, so you know the range before booking.
 Cloud Services and Microsoft 365 for California Small Business: at a glance
 ## What "cloud" actually means for a small business
@@ -465,7 +465,7 @@ Meta description: Cloud backup for Microsoft 365 and Google Workspace, plus busi
 
 # Backup and Disaster Recovery for California Small Business
 The question is not whether you have backups; it is when someone last restored from them and how long it took. Ghosxt, run by an engineer with DoD infrastructure experience, provides backup and disaster recovery for small businesses across Monterey County and surrounding areas, built the way that engineer would protect their own data, at published pricing.
-★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
+★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across Monterey County since 2022 and beyond.
 Transparent managed IT pricing is published upfront, so you know the range before booking.
 Backup and Disaster Recovery for California Small Business: at a glance
 ## Why most small business backups are not backups
@@ -507,7 +507,7 @@ Meta description: Network design, VLAN segmentation, firewall & wireless for Cal
 
 # Network Design and Architecture for California Small Business
 A flat network behind the modem the cable company gave you means one phished laptop can reach everything. Ghosxt, run by an engineer with DoD infrastructure experience, provides network design and architecture for small businesses across Monterey County and surrounding areas: segmented, documented and vendor-neutral, quoted per project after a free assessment.
-★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
+★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across Monterey County since 2022 and beyond.
 Transparent managed IT pricing is published upfront, so you know the range before booking.
 Network Design and Architecture for California Small Business: at a glance
 ## What a properly designed network actually looks like
@@ -1014,7 +1014,7 @@ Meta description: Managed IT for Salinas Valley agriculture: FSMA traceability, 
 
 # Managed IT Services for Agriculture and Agribusiness in the Salinas Valley
 Harvest does not pause for an IT ticket, and the cooler, the pack line and the ERP all find out at once. Ghosxt provides managed IT and cybersecurity for growers, packers, processors and cooling and distribution operators across Monterey County and surrounding areas: federal-grade engineering, no outsourced helpdesk, at published pricing.
-★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
+★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across Monterey County since 2022 and beyond.
 Managed IT Services for Agriculture and Agribusiness: at a glance
 ## What we do for growers, packers, and processors
 ### Managed IT for growing operations and pack houses
@@ -1061,7 +1061,7 @@ Meta description: Managed IT, cybersecurity, and C-TPAT support for California t
 
 # Managed IT Services for Trucking and Logistics Companies in California
 A truck is parked the moment the driver cannot sign into the ELD, and the customer does not care whose fault that is. Ghosxt provides managed IT and cybersecurity for trucking, logistics and customs operators across Monterey County and surrounding areas, keeping dispatch, ELD and C-TPAT controls running and audit-ready: federal-grade engineering, no outsourced helpdesk, at published pricing.
-★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
+★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across Monterey County since 2022 and beyond.
 Transparent managed IT pricing is published upfront, so you know the range before booking.
 ## What we do for trucking and logistics companies
 ### Managed IT for dispatch and back office
@@ -1381,7 +1381,7 @@ Meta description: Managed IT for small nonprofits on Google Workspace: admin tak
 
 # IT Support for Nonprofits on Google Workspace
 Ghosxt provides managed IT for small nonprofits on Google Workspace at published prices: $125 to $250 per staff member per month, or $600 flat for teams of 1 to 4. A 9-person team on our recommended tier pays $1,575 a month for staff, plus $15 per Mac for device management. For that, we take over Google Workspace administration (or back up the ops director who has been running it on the side), watch every staff account for suspicious sign-ins, back up Gmail and Drive, and set up Macs through Apple Business Manager so a new hire's laptop configures itself on first boot (you buy the hardware; we coordinate delivery). Contractor accounts are covered too, quoted per identity.
-★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
+★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across Monterey County since 2022 and beyond.
 Nonprofit IT on Google Workspace: at a glance
 ## The blind spot: one person holds every key
 In a lot of small nonprofits, Google Workspace is run by whoever set it up. Often that's the operations director, on top of a full-time job. That person is usually the only super admin. If they leave, lose their phone, or get phished, the organization can lose control of every inbox, shared drive, and donor spreadsheet at once.
@@ -1426,7 +1426,7 @@ Meta description: Managed IT for remote Mac teams: zero-touch Apple Business Man
 
 # Managed IT for Fully Remote, Mac-First Teams
 Managed IT for a fully remote team on Macs costs $125 to $250 per person per month with Ghosxt, plus $15 per Mac for device management. A 10-person team on our recommended tier pays $1,900 a month: 10 × $175 for the team and 10 × $15 for the Macs. Laptops ship from the store to each person's door and set themselves up on first boot, a departing employee's Mac can be locked or erased from anywhere, and every sign-in is watched, whichever country your team works from. You talk to the owner directly.
-★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
+★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across Monterey County since 2022 and beyond.
 Remote Mac team IT: at a glance
 ## The day you find out you don't control your laptops
 Device management, with zero-touch enrollment through Apple Business Manager, closes that gap before it opens. So does watching sign-ins, because on a remote team the laptop and the login are the whole office.
@@ -1481,7 +1481,7 @@ Meta description: Ghosxt provides managed IT, cybersecurity, and support across 
 
 # Service Area: Managed IT Across the Central Coast
 Ghosxt is based in Salinas, CA, and run by owner Ulises Paiz. We serve small businesses across Monterey, Santa Cruz, San Benito, and Santa Clara counties, with on-site visits scheduled to fit your business and remote support available everywhere else in the United States. Pricing is published upfront, with no surprise call-center layer between you and the engineer who does the work.
-★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across the Central Coast since 2021 and beyond.
+★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across the Central Coast since 2022 and beyond.
 Service Area: Managed IT Across the Central Coast: at a glance
 ## Counties we serve
 Local pages for each county cover the industries, response commitments, and pricing specific to that area:
@@ -1582,7 +1582,7 @@ Meta description: Get IT support from Ghosxt. Call, start a remote session, or o
 Systems down, locked files, or a breach in progress? Stop reading and call (831) 204-0501. Emergencies get triaged first. What to do in the first ten minutes
 # Get Support
 Something broken? Here is every way to reach us, ranked by how fast you need an answer. There is no phone tree, no tier-one script, and no queue of strangers. The person who picks up is the engineer who set up your systems, and it is the same person every time.
-★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
+★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across Monterey County since 2022 and beyond.
 Get Support: at a glance
 ## Start a remote session
 When we are on the phone and the problem is on your screen, the fastest fix is to let us see it. Click the button below, enter the session code the engineer gives you, and we are on your machine in under a minute while you watch.
@@ -1787,7 +1787,7 @@ Meta description: Full IT service catalog for California small business: managed
 
 # IT Services for California Small Business
 Most California small businesses do not need every IT service under the sun. They need the few that match how their business actually runs. Below is the full Ghosxt service catalog. Pick what you came for, or read about how we work and reach out: we will tell you straight which ones you need and which you do not. On-site across Monterey County, remote across the United States.
-★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across Monterey County since 2021 and beyond.
+★★★★★ Rated 5.0 across 30 Google reviews, trusted by businesses across Monterey County since 2022 and beyond.
 IT Services for California Small Business: at a glance
 ## What we do
 ### Managed IT Services
